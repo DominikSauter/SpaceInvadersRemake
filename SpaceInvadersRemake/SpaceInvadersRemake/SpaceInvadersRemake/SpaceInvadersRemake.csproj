@@ -114,6 +114,7 @@
     <Compile Include="Alien.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="Collider.cs" />
+    <Compile Include="UserInput.cs" />
     <Compile Include="Credits.cs" />
     <Compile Include="Deflector.cs" />
     <Compile Include="EndHighscore.cs" />
@@ -121,9 +122,14 @@
     <Compile Include="EnemyWave.cs" />
     <Compile Include="Highscore.cs" />
     <Compile Include="HUD.cs" />
+    <Compile Include="IState.cs" />
+    <Compile Include="StateIntro.cs" />
+    <Compile Include="StateIngame.cs" />
     <Compile Include="MainMenu.cs" />
     <Compile Include="Menu.cs" />
+    <Compile Include="StateMenu.cs" />
     <Compile Include="Miniboss.cs" />
+    <Compile Include="MinibossWave.cs" />
     <Compile Include="Mothership.cs" />
     <Compile Include="MultiShot.cs" />
     <Compile Include="MusicManager.cs" />
@@ -133,10 +139,11 @@
     <Compile Include="PiercingShot.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PowerUp.cs" />
+    <Compile Include="PowerUpGenerator.cs" />
     <Compile Include="Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
-    <Compile Include="Game1.cs" />
+    <Compile Include="GameManager.cs" />
     <Compile Include="Rapidfire.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Shield.cs" />
@@ -145,6 +152,8 @@
     <Compile Include="SlowMotion.cs" />
     <Compile Include="SoundManager.cs" />
     <Compile Include="Speedboost.cs" />
+    <Compile Include="Wave.cs" />
+    <Compile Include="WaveGenerator.cs" />
     <Compile Include="Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
