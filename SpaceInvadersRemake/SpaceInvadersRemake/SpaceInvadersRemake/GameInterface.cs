@@ -3,13 +3,22 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-using Microsoft.Xna.Framework.Graphics;
-
 namespace SpaceInvadersRemake
 {
-    public class Background
+    public class GameInterface
     {
-        public Texture2D backgroundImage
+        public Background Background
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public HUD HUD
         {
             get
             {

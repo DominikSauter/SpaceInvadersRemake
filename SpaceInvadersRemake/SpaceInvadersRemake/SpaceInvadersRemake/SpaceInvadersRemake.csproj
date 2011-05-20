@@ -113,12 +113,20 @@
   <ItemGroup>
     <Compile Include="Alien.cs" />
     <Compile Include="Background.cs" />
+    <Compile Include="BackgroundMusic.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Control.cs" />
+    <Compile Include="GameInterface.cs" />
     <Compile Include="GameItem.cs" />
     <Compile Include="KI.cs" />
     <Compile Include="MinibossKI.cs" />
+    <Compile Include="GameItemRepresentation.cs" />
+    <Compile Include="PowerUpRepresentation.cs" />
+    <Compile Include="ProjectileRepresentation.cs" />
+    <Compile Include="ShieldRepresentation.cs" />
+    <Compile Include="ShipRepresentation.cs" />
     <Compile Include="SingleAlienKI.cs" />
+    <Compile Include="SoundEffects.cs" />
     <Compile Include="WaveKI.cs" />
     <Compile Include="UserInput.cs" />
     <Compile Include="Credits.cs" />
@@ -153,7 +161,7 @@
     <Compile Include="Rapidfire.cs" />
     <Compile Include="Settings.cs" />
     <Compile Include="Shield.cs" />
-    <Compile Include="ShieldItem.cs" />
+    <Compile Include="StaticShield.cs" />
     <Compile Include="Ship.cs" />
     <Compile Include="SlowMotion.cs" />
     <Compile Include="SoundManager.cs" />
