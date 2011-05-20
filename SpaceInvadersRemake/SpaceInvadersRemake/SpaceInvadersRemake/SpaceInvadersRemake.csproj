@@ -114,6 +114,12 @@
     <Compile Include="Alien.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="Collider.cs" />
+    <Compile Include="Control.cs" />
+    <Compile Include="GameItem.cs" />
+    <Compile Include="KI.cs" />
+    <Compile Include="MinibossKI.cs" />
+    <Compile Include="SingleAlienKI.cs" />
+    <Compile Include="WaveKI.cs" />
     <Compile Include="UserInput.cs" />
     <Compile Include="Credits.cs" />
     <Compile Include="Deflector.cs" />
