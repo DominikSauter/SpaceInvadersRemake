@@ -114,11 +114,14 @@
     <Compile Include="Alien.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="BackgroundMusic.cs" />
+    <Compile Include="ButtonRepresentation.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Control.cs" />
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameItem.cs" />
+    <Compile Include="HighscoreInterface.cs" />
     <Compile Include="KI.cs" />
+    <Compile Include="MenuInterface.cs" />
     <Compile Include="MinibossKI.cs" />
     <Compile Include="GameItemRepresentation.cs" />
     <Compile Include="PowerUpRepresentation.cs" />
@@ -127,6 +130,7 @@
     <Compile Include="ShipRepresentation.cs" />
     <Compile Include="SingleAlienKI.cs" />
     <Compile Include="SoundEffects.cs" />
+    <Compile Include="View.cs" />
     <Compile Include="WaveKI.cs" />
     <Compile Include="UserInput.cs" />
     <Compile Include="Credits.cs" />
