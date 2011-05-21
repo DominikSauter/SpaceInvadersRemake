@@ -5,7 +5,11 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public abstract class GameItemRepresentation
+    public abstract class GameItemRepresentation : View
     {
+        public void show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

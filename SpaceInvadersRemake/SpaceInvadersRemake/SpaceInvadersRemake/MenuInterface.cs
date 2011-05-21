@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class GameInterface : View
+    public class MenuInterface : View
     {
         public Background Background
         {
@@ -18,7 +18,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public HUD HUD
+        public ButtonRepresentation ButtonRepresentation
         {
             get
             {
@@ -28,7 +28,7 @@ namespace SpaceInvadersRemake
             {
             }
         }
-
+    
         public void show()
         {
             throw new NotImplementedException();
