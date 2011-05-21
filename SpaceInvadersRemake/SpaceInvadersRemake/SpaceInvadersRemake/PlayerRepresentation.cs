@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class ShieldRepresentation : GameItemRepresentation
+    public class PlayerRepresentation : ShipRepresentation
     {
-        public Matrix World
+        public Matrix Camera
         {
             get
             {

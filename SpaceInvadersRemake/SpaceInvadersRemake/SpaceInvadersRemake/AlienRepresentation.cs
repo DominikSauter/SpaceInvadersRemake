@@ -5,8 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class ParticleEmitter : Effects
+    public class AlienRepresentation : ShipRepresentation
     {
-        private Particle[] particles;
     }
 }
