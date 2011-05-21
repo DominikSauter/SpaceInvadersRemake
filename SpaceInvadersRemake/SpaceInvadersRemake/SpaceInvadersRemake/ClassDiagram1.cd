@@ -186,7 +186,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Background">
-    <Position X="17.5" Y="5" Width="1.5" />
+    <Position X="20.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Background.cs</FileName>
@@ -214,21 +214,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ParticleEmitter">
-    <Position X="24.75" Y="4.25" Width="1.5" />
+    <Position X="29.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ParticleEmitter.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Particle">
-    <Position X="24.75" Y="5.5" Width="1.5" />
+    <Position X="29.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Particle.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.HUD">
-    <Position X="19.5" Y="5" Width="1.5" />
+    <Position X="18.5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAACA=</HashCode>
       <FileName>HUD.cs</FileName>
@@ -351,63 +351,119 @@
   </Class>
   <Class Name="SpaceInvadersRemake.BackgroundMusic">
     <Position X="15.75" Y="3.25" Width="1.5" />
-    <InheritanceLine Type="SpaceInvadersRemake.SoundManager" FixedFromPoint="true">
-      <Path>
-        <Point X="15.5" Y="2.618" />
-        <Point X="15.5" Y="2.875" />
-        <Point X="16.5" Y="2.875" />
-        <Point X="16.5" Y="3.25" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BackgroundMusic.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.GameInterface">
-    <Position X="18.5" Y="3.5" Width="1.5" />
+    <Position X="19.25" Y="3" Width="1.5" />
+    <AssociationLine Name="Background" Type="SpaceInvadersRemake.Background">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.071" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAABAAgAAAAAAA=</HashCode>
       <FileName>GameInterface.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Background" />
       <Property Name="HUD" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.GameItemRepresentation">
-    <Position X="24.75" Y="0.5" Width="1.5" />
+    <Position X="23.5" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>GameItemRepresentation.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ShipRepresentation">
-    <Position X="21.75" Y="2" Width="1.5" />
+    <Position X="20.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ShipRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ShieldRepresentation">
-    <Position X="23.75" Y="2" Width="1.5" />
+    <Position X="22.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ShieldRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ProjectileRepresentation">
-    <Position X="25.75" Y="2" Width="1.5" />
+    <Position X="24.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ProjectileRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUpRepresentation">
-    <Position X="27.75" Y="2" Width="1.5" />
+    <Position X="26.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PowerUpRepresentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.MenuInterface">
+    <Position X="24.75" Y="3" Width="1.5" />
+    <AssociationLine Name="ButtonRepresentation" Type="SpaceInvadersRemake.ButtonRepresentation">
+      <MemberNameLabel ManuallyPlaced="true" ManuallySized="true">
+        <Position X="0.207" Y="-0.584" Height="0.182" Width="1.568" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAgA=</HashCode>
+      <FileName>MenuInterface.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Background" />
+      <Property Name="ButtonRepresentation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.HighscoreInterface">
+    <Position X="22" Y="3" Width="2" />
+    <AssociationLine Name="Background" Type="SpaceInvadersRemake.Background" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="23.031" Y="4.103" />
+        <Point X="23.031" Y="5.938" />
+        <Point X="22" Y="5.938" />
+      </Path>
+    </AssociationLine>
+    <AssociationLine Name="ButtonRepresentation" Type="SpaceInvadersRemake.ButtonRepresentation" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="22.484" Y="4.103" />
+        <Point X="22.484" Y="5.438" />
+        <Point X="22.948" Y="5.437" Type="JumpStart" />
+        <Point X="23.115" Y="5.438" Type="JumpEnd" />
+        <Point X="25.569" Y="5.437" Type="JumpStart" />
+        <Point X="25.736" Y="5.438" Type="JumpEnd" />
+        <Point X="26" Y="5.438" />
+      </Path>
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="-1.715" Y="1.016" />
+      </MemberNameLabel>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAgAAAAAgA=</HashCode>
+      <FileName>HighscoreInterface.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Background" />
+      <Property Name="ButtonRepresentation" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.ButtonRepresentation">
+    <Position X="26" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ButtonRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IState">
@@ -415,6 +471,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>IState.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SpaceInvadersRemake.View">
+    <Position X="22.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>View.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
