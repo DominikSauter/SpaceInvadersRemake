@@ -112,11 +112,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Alien.cs" />
+    <Compile Include="AlienRepresentation.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="BackgroundMusic.cs" />
     <Compile Include="ButtonRepresentation.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Control.cs" />
+    <Compile Include="Effects.cs" />
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameItem.cs" />
     <Compile Include="HighscoreInterface.cs" />
@@ -124,6 +126,8 @@
     <Compile Include="MenuInterface.cs" />
     <Compile Include="MinibossKI.cs" />
     <Compile Include="GameItemRepresentation.cs" />
+    <Compile Include="PlayerCamera.cs" />
+    <Compile Include="PlayerRepresentation.cs" />
     <Compile Include="PowerUpRepresentation.cs" />
     <Compile Include="ProjectileRepresentation.cs" />
     <Compile Include="ShieldRepresentation.cs" />

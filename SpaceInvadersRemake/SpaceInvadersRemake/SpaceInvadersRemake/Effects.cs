@@ -5,8 +5,11 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class ParticleEmitter : Effects
+    public abstract class Effects : View
     {
-        private Particle[] particles;
+        public void show()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
