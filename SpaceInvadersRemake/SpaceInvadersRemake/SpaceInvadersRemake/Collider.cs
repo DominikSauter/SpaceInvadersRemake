@@ -7,5 +7,9 @@ namespace SpaceInvadersRemake
 {
     public class Collider
     {
+        public void CheckCollision()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

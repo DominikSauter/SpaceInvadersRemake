@@ -122,6 +122,7 @@
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameItem.cs" />
     <Compile Include="HighscoreInterface.cs" />
+    <Compile Include="IGameItem.cs" />
     <Compile Include="KI.cs" />
     <Compile Include="MenuInterface.cs" />
     <Compile Include="MinibossKI.cs" />
