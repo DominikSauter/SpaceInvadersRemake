@@ -165,7 +165,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Weapon">
-    <Position X="6" Y="9.25" Width="1.5" />
+    <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Weapon.cs</FileName>
@@ -235,9 +235,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Collider">
-    <Position X="15.5" Y="5" Width="1.5" />
+    <Position X="8.75" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
       <FileName>Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -294,9 +294,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUpGenerator">
-    <Position X="7.25" Y="15.25" Width="1.5" />
+    <Position X="8.5" Y="15.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>PowerUpGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -306,6 +306,7 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameItem.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.648" />
   </Class>
   <Class Name="SpaceInvadersRemake.KI">
     <Position X="21.25" Y="16.75" Width="1.5" />
@@ -439,10 +440,10 @@
       <Path>
         <Point X="22.484" Y="4.103" />
         <Point X="22.484" Y="5.438" />
-        <Point X="22.948" Y="5.437" Type="JumpStart" />
-        <Point X="23.115" Y="5.438" Type="JumpEnd" />
-        <Point X="25.569" Y="5.437" Type="JumpStart" />
-        <Point X="25.736" Y="5.438" Type="JumpEnd" />
+        <Point X="22.948" Y="5.438" Type="JumpStart" />
+        <Point X="23.114" Y="5.438" Type="JumpEnd" />
+        <Point X="25.26" Y="5.438" Type="JumpStart" />
+        <Point X="25.427" Y="5.438" Type="JumpEnd" />
         <Point X="26" Y="5.438" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
@@ -500,6 +501,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>View.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SpaceInvadersRemake.IGameItem">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <FileName>IGameItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public abstract class GameItem
+    public abstract class GameItem : IGameItem
     {
     }
 }

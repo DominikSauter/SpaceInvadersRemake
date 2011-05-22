@@ -7,5 +7,9 @@ namespace SpaceInvadersRemake
 {
     public class PowerUpGenerator
     {
+        public void GeneratePowerUp()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
