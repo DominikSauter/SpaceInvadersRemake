@@ -7,5 +7,9 @@ namespace SpaceInvadersRemake
 {
     public abstract class GameItem : IGameItem
     {
+        public GameItem(Vector2 Position, Vector2 Velocity)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
