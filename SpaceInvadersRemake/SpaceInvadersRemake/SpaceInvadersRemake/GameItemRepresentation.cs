@@ -7,6 +7,39 @@ namespace SpaceInvadersRemake
 {
     public abstract class GameItemRepresentation : View
     {
+        public Matrix Projection
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Matrix Camera
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public Matrix World
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+    
         public void show()
         {
             throw new NotImplementedException();

@@ -117,6 +117,7 @@
     <Compile Include="BackgroundMusic.cs" />
     <Compile Include="ButtonRepresentation.cs" />
     <Compile Include="Collider.cs" />
+    <Compile Include="ViewConstants.cs" />
     <Compile Include="Control.cs" />
     <Compile Include="Effects.cs" />
     <Compile Include="GameInterface.cs" />
