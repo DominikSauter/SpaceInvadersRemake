@@ -230,7 +230,7 @@
   <Class Name="SpaceInvadersRemake.Collider">
     <Position X="8.75" Y="11" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAA=</HashCode>
       <FileName>Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -503,9 +503,9 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceInvadersRemake.IGameItem">
-    <Position X="4" Y="6.5" Width="1.5" />
+    <Position X="4" Y="6.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AgAAAAAAAIAAAAAgAAAAAAAAAAQAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>IGameItem.cs</FileName>
     </TypeIdentifier>
   </Interface>

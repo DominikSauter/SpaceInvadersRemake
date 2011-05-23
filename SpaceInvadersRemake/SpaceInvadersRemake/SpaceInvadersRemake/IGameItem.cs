@@ -7,18 +7,26 @@ namespace SpaceInvadersRemake
 {
     public interface IGameItem
     {
-        int Position
+        Vector2 Position
         {
             get;
             set;
         }
 
-        int Velocity
+        Vector2 Velocity
         {
             get;
             set;
         }
 
-        void Move();
+        int Hitpoints
+        {
+            get;
+            set;
+        }
+
+        void Move(Vector2 Direction);
+
+        void IsCollidedWith(IGameItem CollisionPartner);
     }
 }
