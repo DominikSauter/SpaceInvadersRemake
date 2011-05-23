@@ -111,12 +111,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="AlienRepresentation.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="BackgroundMusic.cs" />
     <Compile Include="ButtonRepresentation.cs" />
     <Compile Include="Collider.cs" />
+    <Compile Include="Controller.cs" />
+    <Compile Include="KeyboardController.cs" />
+    <Compile Include="PlayerController.cs" />
     <Compile Include="ViewConstants.cs" />
     <Compile Include="Control.cs" />
     <Compile Include="Effects.cs" />
