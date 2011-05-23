@@ -7,6 +7,11 @@ namespace SpaceInvadersRemake
 {
     public class HighscoreInterface : View
     {
+        public HighscoreInterface(string[] buttonLabels)
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public Background Background
         {
             get

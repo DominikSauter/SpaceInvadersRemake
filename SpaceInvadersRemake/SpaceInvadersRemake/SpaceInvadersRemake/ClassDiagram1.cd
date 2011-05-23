@@ -227,13 +227,6 @@
       <FileName>Particle.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.HUD">
-    <Position X="18.5" Y="5.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAACA=</HashCode>
-      <FileName>HUD.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.Collider">
     <Position X="8.75" Y="11" Width="1.5" />
     <TypeIdentifier>
@@ -365,12 +358,11 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAACAAAAAABAAgAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAABCAgAAAAACA=</HashCode>
       <FileName>GameInterface.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Background" />
-      <Property Name="HUD" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -431,23 +423,23 @@
     <Position X="22" Y="3" Width="2" />
     <AssociationLine Name="Background" Type="SpaceInvadersRemake.Background" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.031" Y="4.103" />
+        <Point X="23.031" Y="4.295" />
         <Point X="23.031" Y="5.938" />
         <Point X="22" Y="5.938" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="ButtonRepresentation" Type="SpaceInvadersRemake.ButtonRepresentation" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="22.484" Y="4.103" />
-        <Point X="22.484" Y="5.438" />
-        <Point X="22.948" Y="5.438" Type="JumpStart" />
-        <Point X="23.114" Y="5.438" Type="JumpEnd" />
-        <Point X="25.26" Y="5.438" Type="JumpStart" />
-        <Point X="25.427" Y="5.438" Type="JumpEnd" />
-        <Point X="26" Y="5.438" />
+        <Point X="22.484" Y="4.295" />
+        <Point X="22.484" Y="5.625" />
+        <Point X="22.948" Y="5.625" Type="JumpStart" />
+        <Point X="23.114" Y="5.625" Type="JumpEnd" />
+        <Point X="25.26" Y="5.625" Type="JumpStart" />
+        <Point X="25.427" Y="5.625" Type="JumpEnd" />
+        <Point X="26" Y="5.625" />
       </Path>
       <MemberNameLabel ManuallyPlaced="true">
-        <Position X="-1.715" Y="1.016" />
+        <Position X="-1.981" Y="0.902" />
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
@@ -463,7 +455,7 @@
   <Class Name="SpaceInvadersRemake.ButtonRepresentation">
     <Position X="26" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
       <FileName>ButtonRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -499,7 +491,7 @@
   <Interface Name="SpaceInvadersRemake.View">
     <Position X="22.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
       <FileName>View.cs</FileName>
     </TypeIdentifier>
   </Interface>
