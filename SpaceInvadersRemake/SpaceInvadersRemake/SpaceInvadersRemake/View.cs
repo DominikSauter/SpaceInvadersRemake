@@ -7,6 +7,12 @@ namespace SpaceInvadersRemake
 {
     public interface View
     {
+        SpriteFont font
+        {
+            get;
+            set;
+        }
+    
         void show();
     }
 }

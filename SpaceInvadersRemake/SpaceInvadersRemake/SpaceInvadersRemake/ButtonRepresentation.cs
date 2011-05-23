@@ -7,5 +7,15 @@ namespace SpaceInvadersRemake
 {
     public class ButtonRepresentation
     {
+        public Texture2D buttonTexture
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

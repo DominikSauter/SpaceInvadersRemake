@@ -7,6 +7,11 @@ namespace SpaceInvadersRemake
 {
     public class MenuInterface : View
     {
+        public MenuInterface(string[] buttonLabels)
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public Background Background
         {
             get
@@ -18,7 +23,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public ButtonRepresentation ButtonRepresentation
+        public SpaceInvadersRemake.ButtonRepresentation[] ButtonRepresentation
         {
             get
             {
