@@ -7,15 +7,5 @@ namespace SpaceInvadersRemake
 {
     public class ShieldRepresentation : GameItemRepresentation
     {
-        public Matrix World
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
     }
 }

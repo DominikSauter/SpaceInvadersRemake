@@ -7,15 +7,5 @@ namespace SpaceInvadersRemake
 {
     public class PlayerRepresentation : ShipRepresentation
     {
-        public Matrix Camera
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
     }
 }
