@@ -7,7 +7,12 @@ namespace SpaceInvadersRemake
 {
     public class Collider
     {
-        public void CheckCollision()
+        public void CheckCollision(IGameItem CollisionPartner1, IGameItem CollisionPartner2)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CheckAllCollisions(List<IGameItem> GameItemList)
         {
             throw new System.NotImplementedException();
         }
