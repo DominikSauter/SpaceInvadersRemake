@@ -7,5 +7,31 @@ namespace SpaceInvadersRemake
 {
     public class Weapon
     {
+        public Weapon(Projectile Projectile, int Cooldown)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public Projectile Projectile
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Cooldown
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }
