@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class ShipRepresentation : GameItemRepresentation
+    public abstract class ShipRepresentation : GameItemRepresentation
     {
     }
 }

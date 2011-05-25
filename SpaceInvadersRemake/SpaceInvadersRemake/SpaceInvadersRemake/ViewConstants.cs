@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class ViewConstants
+    public abstract class ViewConstants
     {
-        public SpriteFont font
+        public SpriteFont Font
         {
             get
             {
@@ -16,6 +16,55 @@ namespace SpaceInvadersRemake
             set
             {
             }
+        }
+
+        public SpriteFont GameBackgroundImage
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SpriteFont MenuBackgroundImage
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SpriteFont HUDBackgroundTexture
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SpriteFont ButtonBackgroundTexture
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public void loadContent()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
