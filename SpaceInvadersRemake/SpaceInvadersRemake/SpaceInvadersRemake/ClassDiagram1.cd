@@ -493,7 +493,7 @@
   <Class Name="SpaceInvadersRemake.Controller">
     <Position X="18.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAgIAAABAAAAAAAAAEAAAAAACAABACACAIAABAAI=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAEAAAAAACAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -522,6 +522,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AIController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.DirectionsConstants">
+    <Position X="10.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAEAICAAAAAAAAAAAAAAAIAAAAAAAAAgAAgCA=</HashCode>
+      <FileName>DirectionsConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IState">
