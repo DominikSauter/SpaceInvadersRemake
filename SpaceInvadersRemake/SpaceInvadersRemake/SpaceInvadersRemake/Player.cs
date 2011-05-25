@@ -7,5 +7,26 @@ namespace SpaceInvadersRemake
 {
     public class Player : Ship
     {
+        public int Score
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Lifes
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }
