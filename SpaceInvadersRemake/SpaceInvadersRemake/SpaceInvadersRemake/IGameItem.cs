@@ -26,8 +26,10 @@ namespace SpaceInvadersRemake
             set;
         }
 
-        void Move(Vector2 Direction);
+        void Move(Vector2 direction);
 
-        void IsCollidedWith(IGameItem CollisionPartner);
+        void IsCollidedWith(IGameItem collisionPartner);
+
+        void Update(GameTime gameTime);
     }
 }

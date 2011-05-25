@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public abstract class PowerUp : GameItem
+    public class StaticHighscoreEntry : HighscoreEntry
     {
-        public void Apply(Player player)
+        public StaticHighscoreEntry(string name, int score)
         {
             throw new System.NotImplementedException();
         }

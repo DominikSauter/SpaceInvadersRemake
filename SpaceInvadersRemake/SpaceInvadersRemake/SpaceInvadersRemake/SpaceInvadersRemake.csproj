@@ -116,10 +116,14 @@
     <Compile Include="AlienRepresentation.cs" />
     <Compile Include="Background.cs" />
     <Compile Include="BackgroundMusic.cs" />
+    <Compile Include="Button.cs" />
     <Compile Include="ButtonRepresentation.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="DirectionsConstants.cs" />
+    <Compile Include="DynamicHighscoreEntry.cs" />
+    <Compile Include="HighscoreEntry.cs" />
+    <Compile Include="StaticHighscoreEntry.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerController.cs" />
     <Compile Include="ViewConstants.cs" />

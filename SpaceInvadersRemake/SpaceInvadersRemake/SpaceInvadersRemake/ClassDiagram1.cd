@@ -68,7 +68,7 @@
   <Class Name="SpaceInvadersRemake.PowerUp">
     <Position X="5.75" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PowerUp.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -296,12 +296,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUpGenerator">
-    <Position X="8.5" Y="15.25" Width="2" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
+    <Position X="8.5" Y="14.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>PowerUpGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -530,8 +527,36 @@
   <Class Name="SpaceInvadersRemake.DirectionsConstants">
     <Position X="10.75" Y="6.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAEAICAAAAAAAAAAAAAAAIAAAAAAAAAgAAgCA=</HashCode>
+      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
       <FileName>DirectionsConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.Button">
+    <Position X="14.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAACAAAAAA=</HashCode>
+      <FileName>Button.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.StaticHighscoreEntry">
+    <Position X="12.5" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StaticHighscoreEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.HighscoreEntry">
+    <Position X="14.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HighscoreEntry.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.DynamicHighscoreEntry">
+    <Position X="15.5" Y="10.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DynamicHighscoreEntry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IState">
@@ -551,7 +576,7 @@
   <Interface Name="SpaceInvadersRemake.IGameItem">
     <Position X="4" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAIAAAAAgAAAAAAAAAAQAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AgQAAAAAAIAAAAAgAAAAAAAAAAQAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>IGameItem.cs</FileName>
     </TypeIdentifier>
   </Interface>

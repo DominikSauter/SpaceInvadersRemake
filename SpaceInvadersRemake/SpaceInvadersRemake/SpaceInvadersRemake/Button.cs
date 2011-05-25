@@ -5,9 +5,14 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class Player : Ship
+    public class Button
     {
-        public int Score
+        public Button(string text)
+        {
+            throw new System.NotImplementedException();
+        }
+    
+        public string Text
         {
             get
             {
@@ -18,7 +23,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public int Lives
+        public bool Active
         {
             get
             {
