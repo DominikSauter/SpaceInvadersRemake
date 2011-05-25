@@ -119,6 +119,7 @@
     <Compile Include="ButtonRepresentation.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Controller.cs" />
+    <Compile Include="DirectionsConstants.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerController.cs" />
     <Compile Include="ViewConstants.cs" />
