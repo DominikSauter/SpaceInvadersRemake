@@ -7,7 +7,7 @@ namespace SpaceInvadersRemake
 {
     public abstract class PlayerController : Controller
     {
-        public UserInput UserInput
+        public KeyConfiguration UserInput
         {
             get
             {

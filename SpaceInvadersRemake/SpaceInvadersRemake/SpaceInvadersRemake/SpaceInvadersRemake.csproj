@@ -143,7 +143,7 @@
     <Compile Include="SoundEffects.cs" />
     <Compile Include="View.cs" />
     <Compile Include="WaveKI.cs" />
-    <Compile Include="UserInput.cs" />
+    <Compile Include="KeyConfiguration.cs" />
     <Compile Include="Credits.cs" />
     <Compile Include="Deflector.cs" />
     <Compile Include="EndHighscore.cs" />
