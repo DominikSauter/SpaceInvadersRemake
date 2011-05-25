@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class PowerUp : GameItem
+    public abstract class PowerUp : GameItem
     {
     }
 }

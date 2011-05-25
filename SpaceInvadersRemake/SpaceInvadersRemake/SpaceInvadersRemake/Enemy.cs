@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class Enemy : Ship
+    public abstract class Enemy : Ship
     {
     }
 }
