@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public abstract class GameItemRepresentation : View
+    public abstract class GameItemRepresentation : IView
     {
         public Matrix Projection
         {
@@ -39,10 +39,7 @@ namespace SpaceInvadersRemake
             {
             }
         }
-    
-        public void show()
-        {
-            throw new NotImplementedException();
-        }
+
+        public void Show(GameTime gameTime);
     }
 }

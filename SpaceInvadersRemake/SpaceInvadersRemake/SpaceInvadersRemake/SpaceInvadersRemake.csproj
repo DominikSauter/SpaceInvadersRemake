@@ -114,7 +114,6 @@
     <Compile Include="AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="AlienRepresentation.cs" />
-    <Compile Include="Background.cs" />
     <Compile Include="BackgroundMusic.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="ButtonRepresentation.cs" />
@@ -145,7 +144,7 @@
     <Compile Include="ShipRepresentation.cs" />
     <Compile Include="SingleAlienKI.cs" />
     <Compile Include="SoundEffects.cs" />
-    <Compile Include="View.cs" />
+    <Compile Include="IView.cs" />
     <Compile Include="WaveKI.cs" />
     <Compile Include="KeyConfiguration.cs" />
     <Compile Include="Credits.cs" />

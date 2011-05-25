@@ -5,22 +5,11 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class HighscoreInterface : View
+    public class HighscoreInterface : IView
     {
         public HighscoreInterface(string[] buttonLabels)
         {
             throw new System.NotImplementedException();
-        }
-    
-        public Background Background
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
         }
 
         public ButtonRepresentation ButtonRepresentation
@@ -33,10 +22,12 @@ namespace SpaceInvadersRemake
             {
             }
         }
-    
-        public void show()
+
+        public void Show(GameTime gameTime);
+
+        public void AddButton(Button button)
         {
-            throw new NotImplementedException();
+            throw new System.NotImplementedException();
         }
     }
 }

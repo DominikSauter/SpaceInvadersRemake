@@ -7,6 +7,15 @@ namespace SpaceInvadersRemake
 {
     public class ParticleEmitter : Effects
     {
-        private Particle[] particles;
+        public SpaceInvadersRemake.Particle[] Particles
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

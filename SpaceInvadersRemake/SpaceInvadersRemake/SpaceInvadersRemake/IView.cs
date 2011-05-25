@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public interface View
+    public interface IView
     {
-    
-        void show();
+
+        void Show(GameTime gameTime);
     }
 }
