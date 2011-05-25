@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class Player : Ship
+    public abstract class HighscoreEntry
     {
-        public int Score
+        public string Name
         {
             get
             {
@@ -18,7 +18,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public int Lives
+        public int Score
         {
             get
             {

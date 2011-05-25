@@ -7,12 +7,14 @@ namespace SpaceInvadersRemake
 {
     public class PowerUpGenerator
     {
-        public PowerUpGenerator()
+        private List<IGameItem> gameItemList;
+    
+        public PowerUpGenerator(List<IGameItem> gameItemList)
         {
             throw new System.NotImplementedException();
         }
     
-        public void GeneratePowerUp(int Type)
+        public void GeneratePowerUp(int type)
         {
             throw new System.NotImplementedException();
         }

@@ -9,15 +9,35 @@ namespace SpaceInvadersRemake
     public static class DirectionsConstants
     {
         //Directions Definitions
-        public static Vector2 right = new Vector2(1, 0);
-        public static Vector2 up = new Vector2(0, 1);
-        public static Vector2 upRight = new Vector2(1, 1);
-        public static Vector2 left = new Vector2(-1, 0);
-        public static Vector2 down = new Vector2(0, -1);
-        public static Vector2 downLeft = new Vector2(-1, -1);
-        public static Vector2 downRight = new Vector2(1, -1);
-        public static Vector2 upLeft = new Vector2(-1, 1);
-  
 
+
+        public static Vector2 Up
+        {
+            public get
+            {
+                return new Vector2(0.0f, 1.0f);
+            }
+        }
+        public static Vector2 Down
+            {
+            public get
+            {
+                return new Vector2(0.0f, -1.0f);
+            }
+        }
+        public static Vector2 Right
+            {
+            public get
+            {
+                return new Vector2(1.0f, 0.0f);
+            }
+        }
+        public static Vector2 Left
+        {
+            public get
+            {
+                return new Vector2(-1.0f, 0.0f);
+            }
+        }
     }
 }

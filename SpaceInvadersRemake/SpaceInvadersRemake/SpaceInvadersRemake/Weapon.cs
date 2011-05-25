@@ -7,7 +7,7 @@ namespace SpaceInvadersRemake
 {
     public class Weapon
     {
-        public Weapon(Projectile Projectile, int Cooldown)
+        public Weapon(Projectile projectile, int cooldown)
         {
             throw new System.NotImplementedException();
         }
