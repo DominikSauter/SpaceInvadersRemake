@@ -26,7 +26,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public void GetAction()
+        public void Update()
         {
 
         

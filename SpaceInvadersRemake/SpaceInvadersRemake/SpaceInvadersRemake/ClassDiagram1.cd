@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Config File">
+    <Position X="12.906" Y="13.229" Height="0.75" Width="1.7" />
+  </Comment>
   <Class Name="SpaceInvadersRemake.GameManager" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -240,11 +243,11 @@
       <Property Name="GameItem" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SpaceInvadersRemake.UserInput">
+  <Class Name="SpaceInvadersRemake.KeyConfiguration">
     <Position X="12.5" Y="12.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>UserInput.cs</FileName>
+      <FileName>KeyConfiguration.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateIngame">
@@ -311,7 +314,7 @@
     <Lollipop Position="0.648" />
   </Class>
   <Class Name="SpaceInvadersRemake.KI">
-    <Position X="21.25" Y="16.75" Width="1.5" />
+    <Position X="22" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>KI.cs</FileName>
@@ -493,7 +496,7 @@
   <Class Name="SpaceInvadersRemake.Controller">
     <Position X="18.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAAAAAEAAAAAACAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAEAAAAAACAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -518,14 +521,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.AIController">
-    <Position X="21" Y="12.5" Width="1.5" />
+    <Position X="20.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>AIController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.DirectionsConstants">
-    <Position X="10.75" Y="6.75" Width="1.5" />
+    <Position X="10.75" Y="6.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAEAAAAAEAICAAAAAAAAAAAAAAAIAAAAAAAAAgAAgCA=</HashCode>
       <FileName>DirectionsConstants.cs</FileName>
