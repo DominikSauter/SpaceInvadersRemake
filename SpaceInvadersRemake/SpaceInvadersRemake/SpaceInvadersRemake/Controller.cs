@@ -30,7 +30,7 @@ namespace SpaceInvadersRemake
         {
 
         
-            Vector2 dada = this.
+            // Vector2 dada = this. // STST: Fehler
 
             throw new System.NotImplementedException();
         }
