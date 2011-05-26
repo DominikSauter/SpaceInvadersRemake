@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class SingleAlienKI : KI
+    public class WaveAI : AIController
     {
     }
 }

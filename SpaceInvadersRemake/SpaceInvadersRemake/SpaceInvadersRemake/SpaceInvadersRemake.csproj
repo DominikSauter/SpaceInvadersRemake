@@ -139,7 +139,7 @@
     <Compile Include="IGameItem.cs" />
     <Compile Include="KI.cs" />
     <Compile Include="MenuInterface.cs" />
-    <Compile Include="MinibossKI.cs" />
+    <Compile Include="MinibossAI.cs" />
     <Compile Include="GameItemRepresentation.cs" />
     <Compile Include="PlayerCamera.cs" />
     <Compile Include="PlayerRepresentation.cs" />
@@ -147,10 +147,10 @@
     <Compile Include="ProjectileRepresentation.cs" />
     <Compile Include="ShieldRepresentation.cs" />
     <Compile Include="ShipRepresentation.cs" />
-    <Compile Include="SingleAlienKI.cs" />
+    <Compile Include="SingleAlienAI.cs" />
     <Compile Include="SoundEffects.cs" />
     <Compile Include="IView.cs" />
-    <Compile Include="WaveKI.cs" />
+    <Compile Include="WaveAI.cs" />
     <Compile Include="KeyConfiguration.cs" />
     <Compile Include="Credits.cs" />
     <Compile Include="Deflector.cs" />

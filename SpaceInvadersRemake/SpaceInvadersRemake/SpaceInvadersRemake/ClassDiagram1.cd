@@ -303,32 +303,25 @@
     </TypeIdentifier>
     <Lollipop Position="0.648" />
   </Class>
-  <Class Name="SpaceInvadersRemake.KI">
-    <Position X="22.25" Y="11.25" Width="1.5" />
+  <Class Name="SpaceInvadersRemake.MinibossAI">
+    <Position X="21.25" Y="14.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KI.cs</FileName>
+      <FileName>MinibossAI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.MinibossKI">
-    <Position X="21.25" Y="18.25" Width="1.5" />
+  <Class Name="SpaceInvadersRemake.WaveAI">
+    <Position X="19.5" Y="14.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MinibossKI.cs</FileName>
+      <FileName>WaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.WaveKI">
-    <Position X="19.5" Y="18.25" Width="1.5" />
+  <Class Name="SpaceInvadersRemake.SingleAlienAI">
+    <Position X="23" Y="14.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WaveKI.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.SingleAlienKI">
-    <Position X="23" Y="18.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SingleAlienKI.cs</FileName>
+      <FileName>SingleAlienAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.SoundEffects">
