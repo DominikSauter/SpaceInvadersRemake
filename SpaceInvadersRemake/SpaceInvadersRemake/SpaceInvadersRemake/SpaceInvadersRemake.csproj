@@ -116,9 +116,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AIController.cs" />
+    <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="AlienRepresentation.cs" />
+    <Compile Include="Settings\Keyboard1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Keyboard.settings</DependentUpon>
+    </Compile>
     <Compile Include="StateMachine\AudioOptionsState.cs" />
     <Compile Include="BackgroundMusic.cs" />
     <Compile Include="BreakState.cs" />
@@ -129,7 +134,7 @@
     <Compile Include="OptionsState.cs" />
     <Compile Include="RapidfireWeapon.cs" />
     <Compile Include="Collider.cs" />
-    <Compile Include="Controller.cs" />
+    <Compile Include="Controller\Controller.cs" />
     <Compile Include="DirectionsConstants.cs" />
     <Compile Include="DynamicHighscoreEntry.cs" />
     <Compile Include="HighscoreEntry.cs" />
@@ -146,29 +151,26 @@
     <Compile Include="StateMachine\StateManager.cs" />
     <Compile Include="StateMachine\VideoOptionsState.cs" />
     <Compile Include="StaticHighscoreEntry.cs" />
-    <Compile Include="KeyboardController.cs" />
-    <Compile Include="PlayerController.cs" />
+    <Compile Include="Controller\KeyboardController.cs" />
+    <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="ViewConstants.cs" />
-    <Compile Include="Control.cs" />
     <Compile Include="Effects.cs" />
     <Compile Include="GameInterface.cs" />
     <Compile Include="GameItem.cs" />
     <Compile Include="HighscoreInterface.cs" />
     <Compile Include="IGameItem.cs" />
     <Compile Include="MenuInterface.cs" />
-    <Compile Include="MinibossAI.cs" />
+    <Compile Include="Controller\MinibossAI.cs" />
     <Compile Include="GameItemRepresentation.cs" />
-    <Compile Include="PlayerCamera.cs" />
     <Compile Include="PlayerRepresentation.cs" />
     <Compile Include="PowerUpRepresentation.cs" />
     <Compile Include="ProjectileRepresentation.cs" />
     <Compile Include="ShieldRepresentation.cs" />
     <Compile Include="ShipRepresentation.cs" />
-    <Compile Include="SingleAlienAI.cs" />
+    <Compile Include="Controller\SingleAlienAI.cs" />
     <Compile Include="SoundEffects.cs" />
     <Compile Include="IView.cs" />
-    <Compile Include="WaveAI.cs" />
-    <Compile Include="KeyConfiguration.cs" />
+    <Compile Include="Controller\WaveAI.cs" />
     <Compile Include="Credits.cs" />
     <Compile Include="Deflector.cs" />
     <Compile Include="EndHighscore.cs" />
@@ -193,7 +195,6 @@
     <Compile Include="Program.cs" />
     <Compile Include="GameManager.cs" />
     <Compile Include="Rapidfire.cs" />
-    <Compile Include="Settings.cs" />
     <Compile Include="Shield.cs" />
     <Compile Include="StaticShield.cs" />
     <Compile Include="Ship.cs" />
@@ -242,11 +243,15 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="ClassDiagram.cd" />
+    <None Include="Settings\Keyboard.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Keyboard1.Designer.cs</LastGenOutput>
+    </None>
     <None Include="StateMachine\StateMachine.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Controller\" />
     <Folder Include="Model\" />
     <Folder Include="View\" />
   </ItemGroup>
