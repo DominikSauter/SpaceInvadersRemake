@@ -64,6 +64,7 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
       <Private>False</Private>
     </Reference>
@@ -97,6 +98,8 @@
     <Reference Include="System">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml">
       <Private>False</Private>
     </Reference>
@@ -122,6 +125,8 @@
     <Compile Include="DirectionsConstants.cs" />
     <Compile Include="DynamicHighscoreEntry.cs" />
     <Compile Include="HighscoreEntry.cs" />
+    <Compile Include="State.cs" />
+    <Compile Include="StateManager.cs" />
     <Compile Include="StaticHighscoreEntry.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerController.cs" />
@@ -153,7 +158,6 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyWave.cs" />
     <Compile Include="Highscore.cs" />
-    <Compile Include="IState.cs" />
     <Compile Include="StateIntro.cs" />
     <Compile Include="StateIngame.cs" />
     <Compile Include="MainMenu.cs" />

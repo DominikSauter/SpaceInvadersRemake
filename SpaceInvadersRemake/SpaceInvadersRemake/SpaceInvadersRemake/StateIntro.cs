@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class StateIntro : IState
+    public class StateIntro : State
     {
     }
 }
