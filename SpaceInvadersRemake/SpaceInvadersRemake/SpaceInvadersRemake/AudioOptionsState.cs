@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class AudioOptionsState
+    public class AudioOptionsState : State
     {
     }
 }

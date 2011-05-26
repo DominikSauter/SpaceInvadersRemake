@@ -598,13 +598,6 @@
       <FileName>Control.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.KI" Collapsed="true">
-    <Position X="2.75" Y="0.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KI.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.PlayerCamera" Collapsed="true">
     <Position X="0.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
