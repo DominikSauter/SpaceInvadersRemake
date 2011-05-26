@@ -493,15 +493,18 @@
   <Class Name="SpaceInvadersRemake.StateManager">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAgABAAAAAA=</HashCode>
       <FileName>StateMachine\StateManager.cs</FileName>
       <NewMemberFileName>StateManager.cs</NewMemberFileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="State" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.State">
     <Position X="4.25" Y="2.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQACAAAAAAAAAAAAAAAJAAAAAAgAAAAAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
   </Class>

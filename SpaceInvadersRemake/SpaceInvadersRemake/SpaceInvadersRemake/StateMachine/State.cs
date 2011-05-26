@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake
 {
@@ -24,16 +25,25 @@ namespace SpaceInvadersRemake
         /// <remarks>Zur Verwendung <code>this.stateManager = this.previousState</code> verwenden.</remarks>
         protected readonly State previousState = null;
 
-
-        public State(StateManager stateManager)
-        {
-            this.stateManager = stateManager;
-        }
-
-        public State(StateManager stateManager, State previousState)
+        public State(StateManager stateManager, State previousState, Game gameManager)
         {
             this.stateManager = stateManager;
             this.previousState = previousState;
+        }
+
+        public void Controller(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void Model(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void View(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
         }
 
     }
