@@ -32,11 +32,189 @@
           <initialNode
             Id="f3c2caf3-1fe4-446c-bb09-fc02e2dc1fc0"
             name="Initial1"
-            isLeaf="false" />
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5bc8b2d1-1937-42a4-aef6-702b5b33c987"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="1447e107-1454-4c49-9581-df11f17fda7c"
+                  LastKnownName="Intro"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
           <opaqueAction
             Id="1447e107-1454-4c49-9581-df11f17fda7c"
-            name="IntroState"
+            name="Intro"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7fbdeac0-63ad-488c-9717-e1d6f5f47d5a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3ff6c154-9aaf-4f5e-aafc-eb22bdd5620f"
+                  LastKnownName="MainMenu"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="72554544-902c-456a-9eb3-f1726e5e75aa"
+            name="Credits"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2cf3feb7-b474-47d9-a17a-c8fc00032097"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3ff6c154-9aaf-4f5e-aafc-eb22bdd5620f"
+                  LastKnownName="MainMenu"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="d437a7c7-d585-4f90-9090-fcb22263cb5c"
+            name="Highscore"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="24cf44ee-324a-4653-abdd-90431b425756"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3ff6c154-9aaf-4f5e-aafc-eb22bdd5620f"
+                  LastKnownName="MainMenu"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="3ff6c154-9aaf-4f5e-aafc-eb22bdd5620f"
+            name="MainMenu"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="82fcf90e-2f78-4c7f-977a-1db1e4370fad"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="c94eaa58-532c-48a2-85b2-fe512c9349c4"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="b5853de3-2da4-4afb-8a18-c5fbd8c0c63c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d437a7c7-d585-4f90-9090-fcb22263cb5c"
+                  LastKnownName="Highscore"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="423a642a-656a-4cdd-8007-575158dd9332"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="72554544-902c-456a-9eb3-f1726e5e75aa"
+                  LastKnownName="Credits"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="8f77e2a0-57d6-4cd6-8f63-536947b35f24"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6c86ceeb-b963-4622-8533-fda4176878fd"
+                  LastKnownName="Game"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="531d989b-c654-42c8-8786-af0ab4782ece"
+                isLeaf="false">
+                <callBehaviorActionMoniker
+                  Id="147e7b84-390b-4669-8b45-05c4ec9039fb"
+                  LastKnownName="Options"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="bbcea62d-363c-418b-b358-722280d380c4"
+            name="Break"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="fe9e02f4-d748-4438-9fcd-4764e8da077d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6c86ceeb-b963-4622-8533-fda4176878fd"
+                  LastKnownName="Game"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="d3f41751-97fa-4553-a27c-9d38cbfac339"
+                isLeaf="false">
+                <callBehaviorActionMoniker
+                  Id="147e7b84-390b-4669-8b45-05c4ec9039fb"
+                  LastKnownName="Options"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="c94eaa58-532c-48a2-85b2-fe512c9349c4"
+            name="ActivityFinal1"
             isLeaf="false" />
+          <opaqueAction
+            Id="6c86ceeb-b963-4622-8533-fda4176878fd"
+            name="Game"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ab123d95-9f23-4223-8389-bee94d41fefd"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bbcea62d-363c-418b-b358-722280d380c4"
+                  LastKnownName="Break"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="fa177340-2e81-45cb-ada4-83d1b16036b2"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="d437a7c7-d585-4f90-9090-fcb22263cb5c"
+                  LastKnownName="Highscore"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <callBehaviorAction
+            Id="147e7b84-390b-4669-8b45-05c4ec9039fb"
+            name="Options"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b4c382b5-6432-4b2c-97b0-677a980f8ce0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bbcea62d-363c-418b-b358-722280d380c4"
+                  LastKnownName="Break"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="71687d9b-65d0-4fba-99e8-2829693a2ed1"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3ff6c154-9aaf-4f5e-aafc-eb22bdd5620f"
+                  LastKnownName="MainMenu"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+            <behavior>
+              <activityMoniker
+                Id="51bf8bed-9bd7-480c-895d-5653c04ea60d"
+                LastKnownName="States"
+                LastKnownLocation="ModelingProject.uml" />
+            </behavior>
+          </callBehaviorAction>
         </nodes>
       </activity>
     </packageHasNamedElement>

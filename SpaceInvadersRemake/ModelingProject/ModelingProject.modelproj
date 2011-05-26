@@ -18,9 +18,9 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
   <ItemGroup>
-    <Content Include="States.activitydiagram">
+    <EmbeddedResource Include="States.activitydiagram">
       <SubType>Content</SubType>
-    </Content>
+    </EmbeddedResource>
     <Content Include="States.activitydiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>States.activitydiagram</DependentUpon>
