@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpaceInvadersRemake.Settings" GeneratedClassName="KeyBoard">
+  <Profiles />
+  <Settings>
+    <Setting Name="Left" Type="Microsoft.Xna.Framework.Input.Keys" Scope="User">
+      <Value Profile="(Default)">Left</Value>
+    </Setting>
+    <Setting Name="Right" Type="Microsoft.Xna.Framework.Input.Keys" Scope="User">
+      <Value Profile="(Default)">Right</Value>
+    </Setting>
+    <Setting Name="Fire" Type="Microsoft.Xna.Framework.Input.Keys" Scope="User">
+      <Value Profile="(Default)">Space</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

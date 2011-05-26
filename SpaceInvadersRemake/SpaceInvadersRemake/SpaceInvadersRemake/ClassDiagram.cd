@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="Config File">
-    <Position X="12.906" Y="13.229" Height="0.75" Width="1.7" />
+  <Comment CommentText="Settings Files&#xD;&#xA;--&gt; Im Settings Ordner">
+    <Position X="18.083" Y="12.416" Height="0.75" Width="1.7" />
   </Comment>
   <Comment CommentText="Klassen mit Konstanten sind in der Regel static, aber eigentlich nicht abstract.&#xD;&#xA;&#xD;&#xA;Vielleicht verwirrende Namensgebung?&#xD;&#xA;&#xD;&#xA;STST">
     <Position X="25.144" Y="0.704" Height="1.636" Width="1.7" />
+  </Comment>
+  <Comment CommentText="To be Deleted as soon as Steffen is finished with the State Maschine&#xD;&#xA;(this is redundant info and soon unneccesairy">
+    <Position X="24.035" Y="20.524" Height="1.703" Width="1.7" />
   </Comment>
   <Class Name="SpaceInvadersRemake.GameManager" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
@@ -122,42 +125,42 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MainMenu">
-    <Position X="20.25" Y="20.75" Width="1.5" />
+    <Position X="25.75" Y="22.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PauseMenu">
-    <Position X="22" Y="20.75" Width="1.5" />
+    <Position X="26.25" Y="21.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PauseMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Settings">
-    <Position X="23.75" Y="20.75" Width="1.5" />
+    <Position X="26.5" Y="20" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Settings.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Highscore">
-    <Position X="25.5" Y="20.75" Width="1.5" />
+    <Position X="28.25" Y="21" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Highscore.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Credits">
-    <Position X="27.25" Y="20.75" Width="1.5" />
+    <Position X="30" Y="21" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Credits.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.EndHighscore">
-    <Position X="25.5" Y="22" Width="1.5" />
+    <Position X="28.25" Y="22.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EndHighscore.cs</FileName>
@@ -226,13 +229,6 @@
       <FileName>Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.KeyConfiguration">
-    <Position X="12.5" Y="12.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KeyConfiguration.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.Wave">
     <Position X="17.5" Y="19" Width="1.5" />
     <TypeIdentifier>
@@ -272,22 +268,22 @@
   <Class Name="SpaceInvadersRemake.MinibossAI">
     <Position X="21.25" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MinibossAI.cs</FileName>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\MinibossAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.WaveAI">
     <Position X="19.5" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WaveAI.cs</FileName>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\WaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.SingleAlienAI">
     <Position X="23" Y="14.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SingleAlienAI.cs</FileName>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\SingleAlienAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.SoundEffects">
@@ -424,35 +420,32 @@
   <Class Name="SpaceInvadersRemake.Controller">
     <Position X="18.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAEAAAAAACAABAAAAAAAAAAAA=</HashCode>
-      <FileName>Controller.cs</FileName>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="IGameItem" />
+      <Property Name="Controllee" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.PlayerController">
     <Position X="16.5" Y="12.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PlayerController.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\PlayerController.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="UserInput" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.KeyboardController">
-    <Position X="14.75" Y="14" Width="1.5" />
+    <Position X="14.75" Y="14" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KeyboardController.cs</FileName>
+      <HashCode>AAQAAABAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\KeyboardController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.AIController">
     <Position X="20.5" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>AIController.cs</FileName>
+      <FileName>Controller\AIController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.DirectionsConstants">
@@ -594,20 +587,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StateMachine\VideoOptionsState.cs</FileName>
       <NewMemberFileName>VideoOptionsState.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.Control" Collapsed="true">
-    <Position X="0.5" Y="2.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Control.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.PlayerCamera" Collapsed="true">
-    <Position X="0.75" Y="1.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PlayerCamera.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IView">
