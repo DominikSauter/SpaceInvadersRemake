@@ -120,11 +120,14 @@
     <Compile Include="BackgroundMusic.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="ButtonRepresentation.cs" />
+    <Compile Include="RapidfireWeapon.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Controller.cs" />
     <Compile Include="DirectionsConstants.cs" />
     <Compile Include="DynamicHighscoreEntry.cs" />
     <Compile Include="HighscoreEntry.cs" />
+    <Compile Include="MultiShotWeapon.cs" />
+    <Compile Include="PiercingShotWeapon.cs" />
     <Compile Include="State.cs" />
     <Compile Include="StateManager.cs" />
     <Compile Include="StaticHighscoreEntry.cs" />

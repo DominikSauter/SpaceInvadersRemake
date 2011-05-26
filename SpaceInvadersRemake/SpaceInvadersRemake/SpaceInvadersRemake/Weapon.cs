@@ -5,23 +5,11 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class Weapon
+    public abstract class Weapon
     {
-        public Weapon(Projectile projectile, int cooldown)
-        {
-            throw new System.NotImplementedException();
-        }
+        private int projectileType;
 
-        public Projectile Projectile
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public event EventHandler WeaponFired;
 
         public int Cooldown
         {
@@ -32,6 +20,11 @@ namespace SpaceInvadersRemake
             set
             {
             }
+        }
+
+        public void Fire(Vector2 position)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
