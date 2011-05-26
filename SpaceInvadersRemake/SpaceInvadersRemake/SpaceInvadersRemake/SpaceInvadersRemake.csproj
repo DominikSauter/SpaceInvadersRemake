@@ -135,6 +135,7 @@
     <Compile Include="HighscoreEntry.cs" />
     <Compile Include="MultiShotWeapon.cs" />
     <Compile Include="PiercingShotWeapon.cs" />
+    <Compile Include="StateMachine\ModelBuilder.cs" />
     <Compile Include="StateMachine\OptionsState.cs" />
     <Compile Include="StateMachine\State.cs" />
     <Compile Include="StateMachine\BreakState.cs" />
