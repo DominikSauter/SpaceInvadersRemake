@@ -3,8 +3,11 @@
   <Comment CommentText="Config File">
     <Position X="12.906" Y="13.229" Height="0.75" Width="1.7" />
   </Comment>
-  <Comment CommentText="kein Interface; allerdings keine Zyklen">
+  <Comment CommentText="kein Interface; allerdings keine Zyklen; IState darüber?">
     <Position X="3.958" Y="2.573" Height="0.75" Width="1.7" />
+  </Comment>
+  <Comment CommentText="Klassen mit Konstanten sind in der Regel static, aber eigentlich nicht abstract.&#xD;&#xA;&#xD;&#xA;Vielleicht verwirrende Namensgebung?&#xD;&#xA;&#xD;&#xA;STST">
+    <Position X="25.144" Y="0.704" Height="1.636" Width="1.7" />
   </Comment>
   <Class Name="SpaceInvadersRemake.GameManager" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
