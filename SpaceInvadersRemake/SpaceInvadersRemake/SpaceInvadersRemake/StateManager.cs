@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake
     public class StateManager
     {
         /// <summary>
-        /// Speichert den aktuellen Zustand
+        /// Ist der aktuelle Zustand.
         /// </summary>
         public State State
         {

@@ -18,6 +18,11 @@
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
     <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccAuxPath>Svn</SccAuxPath>
+    <SccProvider>SubversionScc</SccProvider>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -30,13 +35,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <SccProjectName>Svn</SccProjectName>
-    <SccLocalPath>Svn</SccLocalPath>
-    <SccAuxPath>Svn</SccAuxPath>
-    <SccProvider>SubversionScc</SccProvider>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,6 +50,8 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <PlatformTarget>x86</PlatformTarget>
     <XnaCompressContent>false</XnaCompressContent>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
     <DebugType>pdbonly</DebugType>
@@ -117,9 +119,17 @@
     <Compile Include="AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="AlienRepresentation.cs" />
+    <Compile Include="AudioOptionsState.cs" />
     <Compile Include="BackgroundMusic.cs" />
+    <Compile Include="BreakState.cs" />
     <Compile Include="Button.cs" />
     <Compile Include="ButtonRepresentation.cs" />
+    <Compile Include="CreditsState.cs" />
+    <Compile Include="HighscoreState.cs" />
+    <Compile Include="InGameState.cs" />
+    <Compile Include="IntroState.cs" />
+    <Compile Include="MainMenuState.cs" />
+    <Compile Include="OptionsState.cs" />
     <Compile Include="RapidfireWeapon.cs" />
     <Compile Include="Collider.cs" />
     <Compile Include="Controller.cs" />
@@ -133,6 +143,7 @@
     <Compile Include="StaticHighscoreEntry.cs" />
     <Compile Include="KeyboardController.cs" />
     <Compile Include="PlayerController.cs" />
+    <Compile Include="VideoOptionsState.cs" />
     <Compile Include="ViewConstants.cs" />
     <Compile Include="Control.cs" />
     <Compile Include="Effects.cs" />
@@ -161,11 +172,7 @@
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyWave.cs" />
     <Compile Include="Highscore.cs" />
-    <Compile Include="StateIntro.cs" />
-    <Compile Include="StateIngame.cs" />
     <Compile Include="MainMenu.cs" />
-    <Compile Include="Menu.cs" />
-    <Compile Include="StateMenu.cs" />
     <Compile Include="Miniboss.cs" />
     <Compile Include="MinibossWave.cs" />
     <Compile Include="Mothership.cs" />
@@ -233,6 +240,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
+    <None Include="StateMachine.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
