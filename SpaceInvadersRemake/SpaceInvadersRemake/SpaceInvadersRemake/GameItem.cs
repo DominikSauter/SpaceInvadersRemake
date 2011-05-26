@@ -7,5 +7,9 @@ namespace SpaceInvadersRemake
 {
     public abstract class GameItem : IGameItem
     {
+        private void Destroy()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

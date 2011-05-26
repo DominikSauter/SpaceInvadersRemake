@@ -17,10 +17,5 @@ namespace SpaceInvadersRemake
             {
             }
         }
-
-        public void FireWeapon()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

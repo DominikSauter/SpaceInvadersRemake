@@ -7,5 +7,10 @@ namespace SpaceInvadersRemake
 {
     public class Projectile : GameItem
     {
+    
+        public Projectile(Vector2 position, int projectileType)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

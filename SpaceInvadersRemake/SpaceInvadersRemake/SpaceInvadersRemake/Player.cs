@@ -28,5 +28,10 @@ namespace SpaceInvadersRemake
             {
             }
         }
+
+        public void Reset()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

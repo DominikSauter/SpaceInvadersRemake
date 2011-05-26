@@ -8,6 +8,10 @@ namespace SpaceInvadersRemake
 {
     public interface IGameItem
     {
+        event EventHandler Hit;
+
+        event EventHandler Destroyed;
+    
         Vector2 Position
         {
             get;
@@ -26,10 +30,18 @@ namespace SpaceInvadersRemake
             set;
         }
 
+        bool IsAlive
+        {
+            get;
+            set;
+        }
+
         void Move(Vector2 direction);
 
         void IsCollidedWith(IGameItem collisionPartner);
 
         void Update(GameTime gameTime);
+
+        void Shoot();
     }
 }
