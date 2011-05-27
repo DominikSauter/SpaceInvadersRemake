@@ -190,7 +190,6 @@
     <Compile Include="View\Effects.cs" />
     <Compile Include="View\GameItemRepresentation.cs" />
     <Compile Include="View\IView.cs" />
-    <Compile Include="View\MusicManager.cs" />
     <Compile Include="View\Particle.cs" />
     <Compile Include="View\ParticleEmitter.cs" />
     <Compile Include="View\PlayerRepresentation.cs" />
