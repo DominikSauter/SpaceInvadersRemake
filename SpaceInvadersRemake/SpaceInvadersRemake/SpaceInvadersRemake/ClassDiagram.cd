@@ -144,13 +144,6 @@
       <FileName>PauseMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.Settings">
-    <Position X="56.25" Y="38.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Settings.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.Highscore">
     <Position X="58" Y="38.5" Width="1.5" />
     <TypeIdentifier>
