@@ -8,21 +8,12 @@ namespace SpaceInvadersRemake
     public abstract class Weapon
     {
         private int projectileType;
+        private int cooldown;
+        private Vector2 velocity;
 
         public event EventHandler WeaponFired;
 
-        public int Cooldown
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public void Fire(Vector2 position)
+        public void Fire(Vector2 position, Vector2 shootingDirection)
         {
             throw new System.NotImplementedException();
         }
