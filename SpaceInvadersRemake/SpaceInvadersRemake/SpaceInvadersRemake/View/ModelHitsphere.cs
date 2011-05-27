@@ -5,9 +5,20 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class ParticleEmitter : Effects
+    public class ModelHitsphere
     {
-        public SpaceInvadersRemake.Particle[] Particles
+        public System.Collections.Generic.List<ModelHitsphere> Hitspheres
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Radius
         {
             get
             {

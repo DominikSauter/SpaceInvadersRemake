@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class ButtonRepresentation
+    public class ParticleEmitter : Effects
     {
-        public Texture2D buttonTexture
+        public SpaceInvadersRemake.Particle[] Particles
         {
             get
             {
@@ -16,6 +16,11 @@ namespace SpaceInvadersRemake
             set
             {
             }
+        }
+
+        public override void Show(GameTime gameTime)
+        {
+            throw new NotImplementedException();
         }
     }
 }

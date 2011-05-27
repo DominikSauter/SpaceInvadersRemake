@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class MenuInterface : IView
+    public class MenuUI : IView
     {
-        public MenuInterface(string[] buttonLabels)
+        public MenuUI(string[] buttonLabels)
         {
             throw new System.NotImplementedException();
         }
