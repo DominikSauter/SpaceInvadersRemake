@@ -244,7 +244,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram.cd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Settings\Keyboard.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Keyboard1.Designer.cs</LastGenOutput>

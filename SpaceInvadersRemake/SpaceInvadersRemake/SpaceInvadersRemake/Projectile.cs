@@ -7,10 +7,27 @@ namespace SpaceInvadersRemake
 {
     public class Projectile : GameItem
     {
-    
-        public Projectile(Vector2 position, int projectileType)
+
+        public Vector2 FlightDirection
         {
-            throw new System.NotImplementedException();
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int ProjectileType
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
     }
 }
