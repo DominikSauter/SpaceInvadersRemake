@@ -177,9 +177,7 @@
     <Compile Include="Controller\WaveAI.cs" />
     <Compile Include="Deflector.cs" />
     <Compile Include="Enemy.cs" />
-    <Compile Include="EnemyWave.cs" />
     <Compile Include="Miniboss.cs" />
-    <Compile Include="MinibossWave.cs" />
     <Compile Include="Mothership.cs" />
     <Compile Include="MultiShot.cs" />
     <Compile Include="MusicManager.cs" />
@@ -200,7 +198,6 @@
     <Compile Include="SlowMotion.cs" />
     <Compile Include="SoundManager.cs" />
     <Compile Include="Speedboost.cs" />
-    <Compile Include="Wave.cs" />
     <Compile Include="WaveGenerator.cs" />
     <Compile Include="Weapon.cs" />
   </ItemGroup>

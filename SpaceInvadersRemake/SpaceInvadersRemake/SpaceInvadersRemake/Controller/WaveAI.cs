@@ -7,7 +7,7 @@ namespace SpaceInvadersRemake
 {
     public class WaveAI : AIController
     {
-        public override IGameItem Controllee
+        public override SpaceInvadersRemake.IGameItem[] Controllee
         {
             get
             {
