@@ -132,7 +132,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.MainMenu">
     <Position X="52.75" Y="38.5" Width="1.5" />
-    <Position X="25.75" Y="22.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MainMenu.cs</FileName>
@@ -140,7 +139,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.PauseMenu">
     <Position X="54.5" Y="38.5" Width="1.5" />
-    <Position X="26.25" Y="21.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>PauseMenu.cs</FileName>
@@ -148,7 +146,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.Settings">
     <Position X="56.25" Y="38.5" Width="1.5" />
-    <Position X="26.5" Y="20" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Settings.cs</FileName>
@@ -156,7 +153,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.Highscore">
     <Position X="58" Y="38.5" Width="1.5" />
-    <Position X="28.25" Y="21" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Highscore.cs</FileName>
@@ -164,7 +160,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.Credits">
     <Position X="59.75" Y="38.5" Width="1.5" />
-    <Position X="30" Y="21" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Credits.cs</FileName>
@@ -172,7 +167,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.EndHighscore">
     <Position X="58" Y="39.75" Width="1.5" />
-    <Position X="28.25" Y="22.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>EndHighscore.cs</FileName>
@@ -239,13 +233,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAA=</HashCode>
       <FileName>Collider.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.KeyConfiguration">
-    <Position X="44" Y="31" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>KeyConfiguration.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Wave">
@@ -455,7 +442,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.KeyboardController">
     <Position X="46.25" Y="33" Width="1.5" />
-    <Position X="14.75" Y="14" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAABAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\KeyboardController.cs</FileName>
@@ -607,34 +593,6 @@
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StateMachine\VideoOptionsState.cs</FileName>
       <NewMemberFileName>VideoOptionsState.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.PlayerNormalWeapon">
-    <Position X="0.75" Y="26.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PlayerNormalWeapon.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.EnemyNormalWeapon">
-    <Position X="2.5" Y="26.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EnemyNormalWeapon.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.MothershipWeapon">
-    <Position X="9.5" Y="26.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MothershipWeapon.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.MinibossWeapon">
-    <Position X="11.25" Y="26.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MinibossWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IView">
