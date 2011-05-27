@@ -120,6 +120,7 @@
     <Compile Include="Alien.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
     <Compile Include="MinibossWeapon.cs" />
+    <Compile Include="ModelHitsphere.cs" />
     <Compile Include="MothershipWeapon.cs" />
     <Compile Include="PlayerNormalWeapon.cs" />
     <Compile Include="Settings\Keyboard1.Designer.cs">
@@ -189,7 +190,6 @@
     <Compile Include="View\HighscoreUI.cs" />
     <Compile Include="View\IView.cs" />
     <Compile Include="View\MenuUI.cs" />
-    <Compile Include="View\ModelHitsphere.cs" />
     <Compile Include="View\MusicManager.cs" />
     <Compile Include="View\Particle.cs" />
     <Compile Include="View\ParticleEmitter.cs" />
