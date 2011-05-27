@@ -157,6 +157,7 @@
     <Compile Include="StaticHighscoreEntry.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
+    <Compile Include="StaticShieldWeapon.cs" />
     <Compile Include="ViewConstants.cs" />
     <Compile Include="Effects.cs" />
     <Compile Include="GameInterface.cs" />
