@@ -3,9 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework.Graphics;
+
 namespace SpaceInvadersRemake
 {
-    public abstract class ViewConstants
+    public static class ViewConstants
     {
         public SpriteFont Font
         {
@@ -18,7 +20,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public SpriteFont GameBackgroundImage
+        public Texture2D GameBackgroundImage
         {
             get
             {
@@ -29,7 +31,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public SpriteFont MenuBackgroundImage
+        public Texture2D MenuBackgroundImage
         {
             get
             {
@@ -40,7 +42,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public SpriteFont HUDBackgroundTexture
+        public Texture2D HUDBackgroundTexture
         {
             get
             {
@@ -51,7 +53,18 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public SpriteFont ButtonBackgroundTexture
+        public Texture2D ButtonBackgroundTexture
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static ModelHitsphere PlayerHitsphere
         {
             get
             {
@@ -63,6 +76,11 @@ namespace SpaceInvadersRemake
         }
 
         public void loadContent()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public static void ComputeHitspheres()
         {
             throw new System.NotImplementedException();
         }

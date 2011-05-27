@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework;
+
 namespace SpaceInvadersRemake
 {
     public abstract class GameItemRepresentation : IView
     {
-        public Matrix Projection
+        abstract public Matrix Projection
         {
             get
             {
@@ -18,7 +20,13 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public Matrix Camera
+        public abstract Matrix Camera
+        {
+            get;
+            set;
+        }
+
+        abstract public Matrix World
         {
             get
             {
@@ -29,17 +37,6 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public Matrix World
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public void Show(GameTime gameTime);
+        abstract public void Show(GameTime gameTime);
     }
 }

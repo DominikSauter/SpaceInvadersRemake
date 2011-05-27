@@ -118,7 +118,6 @@
   <ItemGroup>
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
-    <Compile Include="AlienRepresentation.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
     <Compile Include="MinibossWeapon.cs" />
     <Compile Include="MothershipWeapon.cs" />
@@ -129,10 +128,8 @@
       <DependentUpon>Keyboard.settings</DependentUpon>
     </Compile>
     <Compile Include="StateMachine\AudioOptionsState.cs" />
-    <Compile Include="BackgroundMusic.cs" />
     <Compile Include="BreakState.cs" />
     <Compile Include="Button.cs" />
-    <Compile Include="ButtonRepresentation.cs" />
     <Compile Include="StateMachine\HighscoreState.cs" />
     <Compile Include="InGameState.cs" />
     <Compile Include="OptionsState.cs" />
@@ -158,32 +155,16 @@
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="StaticShieldWeapon.cs" />
-    <Compile Include="ViewConstants.cs" />
-    <Compile Include="Effects.cs" />
-    <Compile Include="GameInterface.cs" />
     <Compile Include="GameItem.cs" />
-    <Compile Include="HighscoreInterface.cs" />
     <Compile Include="IGameItem.cs" />
-    <Compile Include="MenuInterface.cs" />
     <Compile Include="Controller\MinibossAI.cs" />
-    <Compile Include="GameItemRepresentation.cs" />
-    <Compile Include="PlayerRepresentation.cs" />
-    <Compile Include="PowerUpRepresentation.cs" />
-    <Compile Include="ProjectileRepresentation.cs" />
-    <Compile Include="ShieldRepresentation.cs" />
-    <Compile Include="ShipRepresentation.cs" />
     <Compile Include="Controller\SingleAlienAI.cs" />
-    <Compile Include="SoundEffects.cs" />
-    <Compile Include="IView.cs" />
     <Compile Include="Controller\WaveAI.cs" />
     <Compile Include="Deflector.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Miniboss.cs" />
     <Compile Include="Mothership.cs" />
     <Compile Include="MultiShot.cs" />
-    <Compile Include="MusicManager.cs" />
-    <Compile Include="Particle.cs" />
-    <Compile Include="ParticleEmitter.cs" />
     <Compile Include="PiercingShot.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PowerUp.cs" />
@@ -199,6 +180,27 @@
     <Compile Include="SlowMotion.cs" />
     <Compile Include="SoundManager.cs" />
     <Compile Include="Speedboost.cs" />
+    <Compile Include="View\AlienRepresentation.cs" />
+    <Compile Include="View\BackgroundMusic.cs" />
+    <Compile Include="View\ButtonRepresentation.cs" />
+    <Compile Include="View\Effects.cs" />
+    <Compile Include="View\GameItemRepresentation.cs" />
+    <Compile Include="View\GameUI.cs" />
+    <Compile Include="View\HighscoreUI.cs" />
+    <Compile Include="View\IView.cs" />
+    <Compile Include="View\MenuUI.cs" />
+    <Compile Include="View\ModelHitsphere.cs" />
+    <Compile Include="View\MusicManager.cs" />
+    <Compile Include="View\Particle.cs" />
+    <Compile Include="View\ParticleEmitter.cs" />
+    <Compile Include="View\PlayerRepresentation.cs" />
+    <Compile Include="View\PowerUpRepresentation.cs" />
+    <Compile Include="View\ProjectileRepresentation.cs" />
+    <Compile Include="View\ShieldRepresentation.cs" />
+    <Compile Include="View\ShipRepresentation.cs" />
+    <Compile Include="View\SoundEffects.cs" />
+    <Compile Include="View\SoundManager.cs" />
+    <Compile Include="View\ViewConstants.cs" />
     <Compile Include="WaveGenerator.cs" />
     <Compile Include="Weapon.cs" />
   </ItemGroup>
@@ -252,7 +254,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Model\" />
-    <Folder Include="View\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />

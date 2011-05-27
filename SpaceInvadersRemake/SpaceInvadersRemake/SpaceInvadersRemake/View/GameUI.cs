@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class GameInterface : IView
+    public class GameUI : IView
     {
-        public GameInterface()
+        public GameUI()
         {
             throw new System.NotImplementedException();
         }
