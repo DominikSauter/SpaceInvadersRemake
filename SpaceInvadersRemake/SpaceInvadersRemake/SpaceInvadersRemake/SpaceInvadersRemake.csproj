@@ -119,6 +119,10 @@
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="AlienRepresentation.cs" />
+    <Compile Include="EnemyNormalWeapon.cs" />
+    <Compile Include="MinibossWeapon.cs" />
+    <Compile Include="MothershipWeapon.cs" />
+    <Compile Include="PlayerNormalWeapon.cs" />
     <Compile Include="Settings\Keyboard1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
