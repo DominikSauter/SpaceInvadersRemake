@@ -538,14 +538,14 @@
     <Position X="24.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModelHitsphere.cs</FileName>
+      <FileName>View\ModelHitsphere.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.GameUI">
     <Position X="29.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>GameUI.cs</FileName>
+      <FileName>View\GameUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -553,7 +553,7 @@
     <Position X="31.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAIAAAgA=</HashCode>
-      <FileName>MenuUI.cs</FileName>
+      <FileName>View\MenuUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -561,7 +561,7 @@
     <Position X="33.75" Y="1" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>HighscoreUI.cs</FileName>
+      <FileName>View\HighscoreUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

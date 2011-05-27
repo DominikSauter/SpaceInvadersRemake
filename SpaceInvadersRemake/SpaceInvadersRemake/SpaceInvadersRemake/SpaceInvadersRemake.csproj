@@ -119,11 +119,11 @@
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
-    <Compile Include="GameUI.cs" />
-    <Compile Include="HighscoreUI.cs" />
-    <Compile Include="MenuUI.cs" />
+    <Compile Include="View\GameUI.cs" />
+    <Compile Include="View\HighscoreUI.cs" />
+    <Compile Include="View\MenuUI.cs" />
     <Compile Include="MinibossWeapon.cs" />
-    <Compile Include="ModelHitsphere.cs" />
+    <Compile Include="View\ModelHitsphere.cs" />
     <Compile Include="MothershipWeapon.cs" />
     <Compile Include="PlayerNormalWeapon.cs" />
     <Compile Include="Settings\Keyboard1.Designer.cs">
