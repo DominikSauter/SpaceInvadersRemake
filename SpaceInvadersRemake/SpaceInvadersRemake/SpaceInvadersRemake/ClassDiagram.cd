@@ -1,19 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Comment CommentText="Config File">
-    <Position X="44" Y="31.916" Height="0.75" Width="1.7" />
-  </Comment>
   <Comment CommentText="Settings Files&#xD;&#xA;--&gt; Im Settings Ordner">
-    <Position X="18.083" Y="12.416" Height="0.75" Width="1.7" />
+    <Position X="44.361" Y="31.195" Height="0.75" Width="1.7" />
   </Comment>
   <Comment CommentText="Klassen mit Konstanten sind in der Regel static, aber eigentlich nicht abstract.&#xD;&#xA;&#xD;&#xA;Vielleicht verwirrende Namensgebung?&#xD;&#xA;&#xD;&#xA;STST">
     <Position X="25.144" Y="0.704" Height="1.636" Width="1.7" />
   </Comment>
   <Comment CommentText="ProjectileType für View für unterschiedliches Aussehen:&#xD;&#xA;1 für PlayerNormalProjectile&#xD;&#xA;2 für EnemyNormalProjectile&#xD;&#xA;3 für PiercingProjectile&#xD;&#xA;4 für MothershipProjectile&#xD;&#xA;5 für MinibossProjectile">
     <Position X="5.837" Y="29.199" Height="1.506" Width="2.254" />
-  </Comment>
-  <Comment CommentText="To be Deleted as soon as Steffen is finished with the State Maschine&#xD;&#xA;(this is redundant info and soon unneccesairy">
-    <Position X="24.035" Y="20.524" Height="1.703" Width="1.7" />
   </Comment>
   <Class Name="SpaceInvadersRemake.GameManager" Collapsed="true">
     <Position X="2.5" Y="0.5" Width="1.5" />
@@ -128,41 +122,6 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StaticShield.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.MainMenu">
-    <Position X="52.75" Y="38.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MainMenu.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.PauseMenu">
-    <Position X="54.5" Y="38.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>PauseMenu.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.Highscore">
-    <Position X="58" Y="38.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Highscore.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.Credits">
-    <Position X="59.75" Y="38.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Credits.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.EndHighscore">
-    <Position X="58" Y="39.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EndHighscore.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Weapon">

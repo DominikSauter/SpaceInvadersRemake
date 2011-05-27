@@ -175,13 +175,9 @@
     <Compile Include="SoundEffects.cs" />
     <Compile Include="IView.cs" />
     <Compile Include="Controller\WaveAI.cs" />
-    <Compile Include="Credits.cs" />
     <Compile Include="Deflector.cs" />
-    <Compile Include="EndHighscore.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyWave.cs" />
-    <Compile Include="Highscore.cs" />
-    <Compile Include="MainMenu.cs" />
     <Compile Include="Miniboss.cs" />
     <Compile Include="MinibossWave.cs" />
     <Compile Include="Mothership.cs" />
@@ -189,7 +185,6 @@
     <Compile Include="MusicManager.cs" />
     <Compile Include="Particle.cs" />
     <Compile Include="ParticleEmitter.cs" />
-    <Compile Include="PauseMenu.cs" />
     <Compile Include="PiercingShot.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PowerUp.cs" />
