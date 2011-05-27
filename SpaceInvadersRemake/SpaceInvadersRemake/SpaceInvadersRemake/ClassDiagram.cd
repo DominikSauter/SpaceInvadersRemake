@@ -145,13 +145,6 @@
       <FileName>Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.EnemyWave">
-    <Position X="49" Y="38" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>EnemyWave.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.SoundManager">
     <Position X="15.5" Y="2" Width="1.5" />
     <TypeIdentifier>
@@ -187,22 +180,8 @@
       <FileName>Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.Wave">
-    <Position X="50" Y="36.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Wave.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.MinibossWave">
-    <Position X="51" Y="38" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MinibossWave.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.WaveGenerator">
-    <Position X="50" Y="35.5" Width="1.5" />
+    <Position X="48" Y="36.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WaveGenerator.cs</FileName>
