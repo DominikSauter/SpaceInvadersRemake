@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public abstract class AIController : Controller
+    public class BlockWaveAI : WaveAI
     {
-        public override IGameItem Controllee
+        public override IGameItem[] Controllee
         {
             get
             {

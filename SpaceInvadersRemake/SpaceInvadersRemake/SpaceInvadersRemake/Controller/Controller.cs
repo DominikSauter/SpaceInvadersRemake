@@ -10,7 +10,9 @@ namespace SpaceInvadersRemake
     /// <summary>
     /// Die abstrakte Controller Klasse dafür zuständig die verschiedenen <c>GameItem</c> zu kontrollieren.
     /// </summary>
-    /// <remarks> Um dies zutun benutzt sie das GameItem Interface
+    /// <remarks> 
+    /// Sie abstrahiert von den Controllerverhaltensweisen Benutzer und Künstliche Intelligenz
+    /// Um dies zutun benutzt sie das GameItem Interface
     /// Im Architekturstil MVC fungiert sie als Controller
     /// </remarks>
     public abstract class Controller
@@ -41,7 +43,7 @@ namespace SpaceInvadersRemake
 
     
         /// <summary>
-        /// Entscheided in welche Richtung sich das Controllee soll
+        /// Entscheided in welche Richtung sich das Controllee bewegen soll
         /// </summary>
         /// <returns>2D Richtungsvektor</returns>
         protected abstract Vector2 CheckMovement();
@@ -49,7 +51,7 @@ namespace SpaceInvadersRemake
         /// <summary>
         /// Entscheided ob Controllee schießen soll
         /// </summary>
-        /// <returns>true = schießen</returns>
+        /// <c>true</c> = schießen andererseits <c>false</c>
         protected abstract bool CheckShooting();
     
     }

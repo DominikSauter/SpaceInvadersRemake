@@ -172,13 +172,6 @@
       <FileName>Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.WaveGenerator">
-    <Position X="42.5" Y="29" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>WaveGenerator.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.PowerUpGenerator">
     <Position X="22.5" Y="24.75" Width="2" />
     <TypeIdentifier>
@@ -189,7 +182,7 @@
   <Class Name="SpaceInvadersRemake.GameItem">
     <Position X="15" Y="18.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AwQAAAAAAIAABAAgAAIAAAAAAARAAAAAAAAAAAAEAIA=</HashCode>
       <FileName>GameItem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.648" />
@@ -282,14 +275,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.PlayerRepresentation">
     <Position X="22.5" Y="7.5" Width="1.75" />
-    <InheritanceLine Type="SpaceInvadersRemake.ShipRepresentation" FixedFromPoint="true">
-      <Path>
-        <Point X="24.875" Y="5.997" />
-        <Point X="24.875" Y="7.125" />
-        <Point X="23.375" Y="7.125" />
-        <Point X="23.375" Y="7.5" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAA=</HashCode>
       <FileName>View\PlayerRepresentation.cs</FileName>
@@ -298,14 +283,6 @@
   </Class>
   <Class Name="SpaceInvadersRemake.AlienRepresentation">
     <Position X="24.75" Y="7.5" Width="1.75" />
-    <InheritanceLine Type="SpaceInvadersRemake.ShipRepresentation" FixedFromPoint="true">
-      <Path>
-        <Point X="24.875" Y="5.997" />
-        <Point X="24.875" Y="7.125" />
-        <Point X="25.625" Y="7.125" />
-        <Point X="25.625" Y="7.5" />
-      </Path>
-    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAA=</HashCode>
       <FileName>View\AlienRepresentation.cs</FileName>
@@ -342,12 +319,12 @@
   <Class Name="SpaceInvadersRemake.PlayerController">
     <Position X="41" Y="23.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\PlayerController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.KeyboardController">
-    <Position X="40.75" Y="25.75" Width="1.5" />
+    <Position X="40.75" Y="26.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAABAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\KeyboardController.cs</FileName>
@@ -356,7 +333,7 @@
   <Class Name="SpaceInvadersRemake.AIController">
     <Position X="45" Y="22.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\AIController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -572,6 +549,27 @@
       <FileName>View\HighscoreUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.BlockWaveAI">
+    <Position X="42.75" Y="29" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <FileName>BlockWaveAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.BlockWave">
+    <Position X="39.25" Y="30.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BlockWave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.WaveGenerator">
+    <Position X="38" Y="29" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>WaveGenerator.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IView">
     <Position X="27" Y="0.5" Width="1.5" />
