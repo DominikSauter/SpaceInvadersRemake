@@ -5,8 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public abstract class Effects : IView
+    public class IntroManager
     {
-        public abstract void Show(GameTime gameTime);
     }
 }
