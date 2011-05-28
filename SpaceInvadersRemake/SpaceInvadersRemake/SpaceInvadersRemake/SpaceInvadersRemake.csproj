@@ -116,6 +116,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlockWave.cs" />
+    <Compile Include="BlockWaveAI.cs" />
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
