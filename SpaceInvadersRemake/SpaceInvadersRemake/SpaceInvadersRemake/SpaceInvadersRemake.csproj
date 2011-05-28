@@ -121,7 +121,7 @@
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
-    <Compile Include="SoundManager2.cs" />
+    <Compile Include="View\SoundManager.cs" />
     <Compile Include="View\IntroManager.cs" />
     <Compile Include="View\ParticleEngine.cs" />
     <Compile Include="View\GameUI.cs" />
