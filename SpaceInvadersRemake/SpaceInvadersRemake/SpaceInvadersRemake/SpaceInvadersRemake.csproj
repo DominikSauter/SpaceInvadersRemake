@@ -199,7 +199,7 @@
     <Compile Include="View\ProjectileRepresentation.cs" />
     <Compile Include="View\ShieldRepresentation.cs" />
     <Compile Include="View\ShipRepresentation.cs" />
-    <Compile Include="View\SoundEffect.cs" />
+    <Compile Include="View\SoundEffects.cs" />
     <Compile Include="View\SoundManager.cs" />
     <Compile Include="View\ViewConstants.cs" />
     <Compile Include="WaveGenerator.cs" />
