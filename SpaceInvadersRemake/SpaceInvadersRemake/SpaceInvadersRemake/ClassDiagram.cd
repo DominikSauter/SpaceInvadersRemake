@@ -200,13 +200,13 @@
       <FileName>Controller\SingleAlienAI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.SoundEffects">
+  <Class Name="SpaceInvadersRemake.SoundEffect">
     <Position X="36.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>View\SoundEffects.cs</FileName>
-      <NewMemberFileName>SoundEffects.cs</NewMemberFileName>
+      <FileName>View\SoundEffect.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.BackgroundMusic">
     <Position X="39.25" Y="8.75" Width="1.5" />
@@ -547,7 +547,6 @@
       <FileName>View\ParticleEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
-=======
   <Class Name="SpaceInvadersRemake.BlockWaveAI">
     <Position X="42.75" Y="29" Width="1.5" />
     <TypeIdentifier>
@@ -569,7 +568,6 @@
       <FileName>WaveGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
->>>>>>> .r57
   <Interface Name="SpaceInvadersRemake.IView">
     <Position X="27" Y="0.5" Width="1.5" />
     <TypeIdentifier>
