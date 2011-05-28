@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class SoundEffects : SoundManager
+    public class SoundEffect : SoundManager
     {
     }
 }
