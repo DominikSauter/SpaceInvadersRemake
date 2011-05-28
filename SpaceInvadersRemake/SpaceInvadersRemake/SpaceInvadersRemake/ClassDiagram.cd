@@ -142,13 +142,6 @@
       <FileName>Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.SoundManager">
-    <Position X="38" Y="6.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>SoundManager.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.Particle">
     <Position X="20" Y="6.75" Width="1.5" />
     <TypeIdentifier>
@@ -200,21 +193,23 @@
       <FileName>Controller\SingleAlienAI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.SoundEffects">
-    <Position X="36.75" Y="8.75" Width="1.5" />
+  <Class Name="SpaceInvadersRemake.SoundEffect">
+    <Position X="38.75" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>View\SoundEffects.cs</FileName>
       <NewMemberFileName>SoundEffects.cs</NewMemberFileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.BackgroundMusic">
-    <Position X="39.25" Y="8.75" Width="1.5" />
+    <Position X="41.25" Y="9" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAgAAACAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>View\BackgroundMusic.cs</FileName>
       <NewMemberFileName>BackgroundMusic.cs</NewMemberFileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.GameItemRepresentation">
     <Position X="27" Y="2.5" Width="1.75" />
@@ -284,7 +279,7 @@
   <Class Name="SpaceInvadersRemake.ViewConstants">
     <Position X="37" Y="1.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAABAAAACAAAAAQAAAAAAAIAAAAIAACAAAAAAACAAE=</HashCode>
+      <HashCode>AAAABgAAACAAAgAQAAQAIEAIAAAAIAACAAAAAAACAAE=</HashCode>
       <FileName>View\ViewConstants.cs</FileName>
       <NewMemberFileName>ViewConstants.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -503,7 +498,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelHitsphere">
-    <Position X="39.25" Y="1.25" Width="1.5" />
+    <Position X="40" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ModelHitsphere.cs</FileName>
@@ -534,7 +529,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.IntroManager">
-    <Position X="38" Y="4.75" Width="1.5" />
+    <Position X="40" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\IntroManager.cs</FileName>
@@ -547,7 +542,6 @@
       <FileName>View\ParticleEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
-=======
   <Class Name="SpaceInvadersRemake.BlockWaveAI">
     <Position X="42.75" Y="29" Width="1.5" />
     <TypeIdentifier>
@@ -569,7 +563,6 @@
       <FileName>WaveGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
->>>>>>> .r57
   <Interface Name="SpaceInvadersRemake.IView">
     <Position X="27" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -583,6 +576,13 @@
     <TypeIdentifier>
       <HashCode>AwQAAAAAAIAABAAgAAIAAAAAAAQAAAAAAAAAAAAEAIA=</HashCode>
       <FileName>IGameItem.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SpaceInvadersRemake.SoundManager2">
+    <Position X="40" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>SoundManager2.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
