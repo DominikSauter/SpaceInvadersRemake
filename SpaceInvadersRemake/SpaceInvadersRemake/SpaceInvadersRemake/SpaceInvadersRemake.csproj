@@ -121,6 +121,7 @@
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
+    <Compile Include="SoundManager2.cs" />
     <Compile Include="View\IntroManager.cs" />
     <Compile Include="View\ParticleEngine.cs" />
     <Compile Include="View\GameUI.cs" />
@@ -186,7 +187,6 @@
     <Compile Include="StaticShield.cs" />
     <Compile Include="Ship.cs" />
     <Compile Include="SlowMotion.cs" />
-    <Compile Include="SoundManager.cs" />
     <Compile Include="Speedboost.cs" />
     <Compile Include="View\AlienRepresentation.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
@@ -200,7 +200,6 @@
     <Compile Include="View\ShieldRepresentation.cs" />
     <Compile Include="View\ShipRepresentation.cs" />
     <Compile Include="View\SoundEffects.cs" />
-    <Compile Include="View\SoundManager.cs" />
     <Compile Include="View\ViewConstants.cs" />
     <Compile Include="WaveGenerator.cs" />
     <Compile Include="Weapon.cs" />
