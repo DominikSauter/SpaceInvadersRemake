@@ -7,9 +7,6 @@ namespace SpaceInvadersRemake
 {
     public abstract class PowerUp : GameItem
     {
-        public void Apply(Player player)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Apply(Player player);
     }
 }

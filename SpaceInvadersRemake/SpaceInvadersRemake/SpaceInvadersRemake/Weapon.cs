@@ -11,11 +11,8 @@ namespace SpaceInvadersRemake
         private int cooldown;
         private Vector2 velocity;
 
-        public event EventHandler WeaponFired;
+        public abstract event EventHandler WeaponFired;
 
-        public void Fire(Vector2 position, Vector2 shootingDirection)
-        {
-            throw new System.NotImplementedException();
-        }
+        public abstract void Fire(Vector2 position, Vector2 shootingDirection);
     }
 }
