@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceInvadersRemake
 {
-    public class Intro : Mediaplayer2
+    public class Intro : Mediaplayer
     {
         private Video intro;
 

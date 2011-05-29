@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceInvadersRemake
 {
-    public class SoundEffects : Mediaplayer2
+    public class SoundEffects : Mediaplayer
     {
         private SoundEffects effect;
 

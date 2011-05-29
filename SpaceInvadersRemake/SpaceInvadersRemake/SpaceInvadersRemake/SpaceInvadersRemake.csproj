@@ -116,7 +116,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="View\Mediaplayer2.cs" />
+    <Compile Include="View\Mediaplayer.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
     <Compile Include="BlockWave.cs" />
     <Compile Include="BlockWaveAI.cs" />
