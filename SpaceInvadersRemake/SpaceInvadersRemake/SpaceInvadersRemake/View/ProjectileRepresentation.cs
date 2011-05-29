@@ -4,11 +4,14 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
     public class ProjectileRepresentation : GameItemRepresentation
     {
+        private Texture2D texture;
+    
         public override Matrix Projection
         {
             get
@@ -48,6 +51,11 @@ namespace SpaceInvadersRemake
         public override void Show(GameTime gameTime)
         {
             throw new NotImplementedException();
+        }
+
+        public void ProjectilePresentation()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

@@ -8,13 +8,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
-    public class Explosion : ParticleEngine
+    public class PlayerShipEngine : ParticleEngine
     {
         private Random random;
         private List<Particle> particles;
         private List<Texture2D> textures;
 
-        public Explosion(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
+        public PlayerShipEngine(Microsoft.Xna.Framework.Graphics.Texture2D texture, Vector2 location, float size)
         {
             throw new System.NotImplementedException();
         }
@@ -31,7 +31,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        private override Particle GenerateNewParticle()
+        private abstract Particle GenerateNewParticle()
         {
             throw new System.NotImplementedException();
         }
@@ -45,5 +45,6 @@ namespace SpaceInvadersRemake
         {
             throw new NotImplementedException();
         }
+
     }
 }

@@ -11,6 +11,11 @@ namespace SpaceInvadersRemake
     {
         private SoundEffects effect;
 
+        public SoundEffects()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public float Volume
         {
             get

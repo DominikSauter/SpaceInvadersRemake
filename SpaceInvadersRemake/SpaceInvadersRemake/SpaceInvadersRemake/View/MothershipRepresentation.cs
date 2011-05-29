@@ -3,10 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework.Graphics;
+
 namespace SpaceInvadersRemake
 {
     public class MothershipRepresentation : ShipRepresentation
     {
+        private Texture2D explosionTexture;
+        private Texture2D engineTexture;
+        private Model model;
+    
+        public MothershipRepresentation()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public override Microsoft.Xna.Framework.Matrix Projection
         {
             get

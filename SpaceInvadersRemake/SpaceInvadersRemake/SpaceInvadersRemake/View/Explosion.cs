@@ -8,13 +8,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
-    public class PowerUpGlow : ParticleEngine
+    public class Explosion : ParticleEngine
     {
         private Random random;
         private List<Particle> particles;
         private List<Texture2D> textures;
 
-        public PowerUpGlow(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
+        public Explosion(Microsoft.Xna.Framework.Graphics.Texture2D texture, Vector2 location, float size)
         {
             throw new System.NotImplementedException();
         }

@@ -4,11 +4,20 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
     public class AlienRepresentation : ShipRepresentation
     {
+        private Texture2D explosionTexture;
+        private Model model;
+
+        public AlienRepresentation()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public override Matrix Projection
         {
             get

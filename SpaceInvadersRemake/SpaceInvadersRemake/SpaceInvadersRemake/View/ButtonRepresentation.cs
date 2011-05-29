@@ -12,6 +12,11 @@ namespace SpaceInvadersRemake
         private Texture2D buttonTexture;
         private SpriteFont font;
 
+        public ButtonRepresentation()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public void labelButton(string buttonLabel)
         {
             throw new System.NotImplementedException();

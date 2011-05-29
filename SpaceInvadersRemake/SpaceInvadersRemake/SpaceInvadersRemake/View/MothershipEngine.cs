@@ -14,7 +14,7 @@ namespace SpaceInvadersRemake
         private List<Particle> particles;
         private List<Texture2D> textures;
 
-        public MothershipEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
+        public MothershipEngine(Microsoft.Xna.Framework.Graphics.Texture2D texture, Vector2 location, float size)
         {
             throw new System.NotImplementedException();
         }
