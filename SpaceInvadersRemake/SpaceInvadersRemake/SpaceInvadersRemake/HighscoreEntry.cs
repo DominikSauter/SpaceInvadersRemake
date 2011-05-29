@@ -7,26 +7,16 @@ namespace SpaceInvadersRemake
 {
     public abstract class HighscoreEntry
     {
-        public string Name
+        public abstract string Name
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
-        public int Score
+        public abstract int Score
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
     }
 }
