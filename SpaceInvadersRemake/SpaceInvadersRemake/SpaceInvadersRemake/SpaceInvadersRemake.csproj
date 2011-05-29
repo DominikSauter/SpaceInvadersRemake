@@ -120,7 +120,7 @@
     <Compile Include="View\MothershipEngine.cs" />
     <Compile Include="View\PlayerShipEngine.cs" />
     <Compile Include="View\PowerUpGlow.cs" />
-    <Compile Include="View\Mediaplayer.cs" />
+    <Compile Include="View\IMediaplayer.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
     <Compile Include="BlockWave.cs" />
     <Compile Include="BlockWaveAI.cs" />

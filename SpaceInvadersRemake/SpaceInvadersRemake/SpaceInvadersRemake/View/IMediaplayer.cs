@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public interface Mediaplayer
+    public interface IMediaplayer
     {
         float Volume
         {
