@@ -11,6 +11,11 @@ namespace SpaceInvadersRemake
     {
         private Video intro;
 
+        public Intro()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public float Volume
         {
             get

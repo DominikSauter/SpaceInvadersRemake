@@ -3,10 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework.Graphics;
+
 namespace SpaceInvadersRemake
 {
     public class MinibossRepresentation : ShipRepresentation
     {
+        private Texture2D explosionTexture;
+        private Model model;
+    
+        public MinibossRepresentation()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public override Microsoft.Xna.Framework.Matrix Projection
         {
             get

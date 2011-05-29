@@ -395,6 +395,39 @@ namespace SpaceInvadersRemake
             }
         }
 
+        public static Microsoft.Xna.Framework.Graphics.Texture2D ExplosionTextures
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static Texture2D PowerUpGlowTexture
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static Texture2D EngineTexture
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public void loadContent()
         {
             throw new System.NotImplementedException();

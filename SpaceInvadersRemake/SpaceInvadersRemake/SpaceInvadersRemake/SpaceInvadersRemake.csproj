@@ -116,10 +116,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Explosion.cs" />
-    <Compile Include="MothershipEngine.cs" />
-    <Compile Include="PlayerShipEngine.cs" />
-    <Compile Include="PowerUpGlow.cs" />
+    <Compile Include="View\Explosion.cs" />
+    <Compile Include="View\MothershipEngine.cs" />
+    <Compile Include="View\PlayerShipEngine.cs" />
+    <Compile Include="View\PowerUpGlow.cs" />
     <Compile Include="View\Mediaplayer.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
     <Compile Include="BlockWave.cs" />
@@ -130,7 +130,7 @@
     <Compile Include="View\Intro.cs" />
     <Compile Include="View\MinibossRepresentation.cs" />
     <Compile Include="View\MothershipRepresentation.cs" />
-    <Compile Include="SoundEffects.cs" />
+    <Compile Include="View\SoundEffects.cs" />
     <Compile Include="View\ParticleEngine.cs" />
     <Compile Include="View\GameUI.cs" />
     <Compile Include="View\HighscoreUI.cs" />

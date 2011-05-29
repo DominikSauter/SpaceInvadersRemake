@@ -11,6 +11,11 @@ namespace SpaceInvadersRemake
     {
         private Song song;
 
+        public BackgroundMusic()
+        {
+            throw new System.NotImplementedException();
+        }
+
         public float Volume
         {
             get

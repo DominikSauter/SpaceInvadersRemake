@@ -3,15 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework.Media;
+
 namespace SpaceInvadersRemake
 {
-    public class SoundEffect : SoundManager2
+    public class SoundEffects : Mediaplayer
     {
-        public SoundEffect(SoundEffect effect)
-        {
-            throw new System.NotImplementedException();
-        }
-    
+        private SoundEffects effect;
+
         public float Volume
         {
             get
@@ -24,18 +23,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public SoundEffect Effect
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public void play(float volume)
+        public void play()
         {
             throw new NotImplementedException();
         }

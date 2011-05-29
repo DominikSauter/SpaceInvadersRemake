@@ -4,11 +4,19 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
     public class PowerUpRepresentation : GameItemRepresentation
     {
+        private Texture2D texture;
+    
+        public PowerUpRepresentation()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public override Matrix Projection
         {
             get

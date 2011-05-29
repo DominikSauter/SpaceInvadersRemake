@@ -7,6 +7,11 @@ namespace SpaceInvadersRemake
 {
     public class ModelHitsphere
     {
+        public ModelHitsphere()
+        {
+            throw new System.NotImplementedException();
+        }
+    
         public System.Collections.Generic.List<ModelHitsphere> Hitspheres
         {
             get
