@@ -116,16 +116,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BackgroundMusic.cs" />
+    <Compile Include="View\Mediaplayer2.cs" />
+    <Compile Include="View\BackgroundMusic.cs" />
     <Compile Include="BlockWave.cs" />
     <Compile Include="BlockWaveAI.cs" />
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
-    <Compile Include="IntroUI.cs" />
-    <Compile Include="Mediaplayer.cs" />
-    <Compile Include="MinibossRepresentation.cs" />
-    <Compile Include="MothershipRepresentation.cs" />
+    <Compile Include="View\Intro.cs" />
+    <Compile Include="View\MinibossRepresentation.cs" />
+    <Compile Include="View\MothershipRepresentation.cs" />
     <Compile Include="SoundEffects.cs" />
     <Compile Include="View\ParticleEngine.cs" />
     <Compile Include="View\GameUI.cs" />

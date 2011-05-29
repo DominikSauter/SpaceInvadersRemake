@@ -542,7 +542,7 @@
     <Position X="37" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAABAAAA=</HashCode>
-      <FileName>IntroUI.cs</FileName>
+      <FileName>View\Intro.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -550,14 +550,14 @@
     <Position X="26.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAA=</HashCode>
-      <FileName>MothershipRepresentation.cs</FileName>
+      <FileName>View\MothershipRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MinibossRepresentation">
     <Position X="28" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAAAAAAAAAAAAAAAEAAAAAAAAAAAQAAA=</HashCode>
-      <FileName>MinibossRepresentation.cs</FileName>
+      <FileName>View\MinibossRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.SoundEffects">
@@ -572,7 +572,7 @@
     <Position X="40.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>BackgroundMusic.cs</FileName>
+      <FileName>View\BackgroundMusic.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -591,11 +591,11 @@
       <FileName>IGameItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.Mediaplayer">
-    <Position X="38.25" Y="2.5" Width="1.5" />
+  <Interface Name="SpaceInvadersRemake.Mediaplayer2">
+    <Position X="38" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>Mediaplayer.cs</FileName>
+      <FileName>View\Mediaplayer2.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
