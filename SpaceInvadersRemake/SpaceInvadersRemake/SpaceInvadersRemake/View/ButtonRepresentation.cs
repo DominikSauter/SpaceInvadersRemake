@@ -11,7 +11,7 @@ namespace SpaceInvadersRemake
     {
         private Texture2D buttonTexture;
 
-        public void writeButtonLabel(string buttonLabel)
+        public void labelButton(string buttonLabel)
         {
             throw new System.NotImplementedException();
         }

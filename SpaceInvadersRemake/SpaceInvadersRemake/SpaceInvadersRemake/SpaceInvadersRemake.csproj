@@ -116,13 +116,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BackgroundMusic.cs" />
     <Compile Include="BlockWave.cs" />
     <Compile Include="BlockWaveAI.cs" />
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="Alien.cs" />
     <Compile Include="EnemyNormalWeapon.cs" />
-    <Compile Include="View\SoundManager.cs" />
-    <Compile Include="View\IntroManager.cs" />
+    <Compile Include="IntroUI.cs" />
+    <Compile Include="Mediaplayer.cs" />
+    <Compile Include="MinibossRepresentation.cs" />
+    <Compile Include="MothershipRepresentation.cs" />
+    <Compile Include="SoundEffects.cs" />
     <Compile Include="View\ParticleEngine.cs" />
     <Compile Include="View\GameUI.cs" />
     <Compile Include="View\HighscoreUI.cs" />
@@ -189,7 +193,6 @@
     <Compile Include="SlowMotion.cs" />
     <Compile Include="Speedboost.cs" />
     <Compile Include="View\AlienRepresentation.cs" />
-    <Compile Include="View\BackgroundMusic.cs" />
     <Compile Include="View\ButtonRepresentation.cs" />
     <Compile Include="View\GameItemRepresentation.cs" />
     <Compile Include="View\IView.cs" />
@@ -199,7 +202,6 @@
     <Compile Include="View\ProjectileRepresentation.cs" />
     <Compile Include="View\ShieldRepresentation.cs" />
     <Compile Include="View\ShipRepresentation.cs" />
-    <Compile Include="View\SoundEffects.cs" />
     <Compile Include="View\ViewConstants.cs" />
     <Compile Include="WaveGenerator.cs" />
     <Compile Include="Weapon.cs" />

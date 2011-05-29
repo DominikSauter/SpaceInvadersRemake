@@ -98,7 +98,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffect WeaponEffectPlayer
+        public static SoundEffects WeaponEffectPlayer
         {
             get
             {
@@ -109,7 +109,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffect ExplosionEffect
+        public static SoundEffects ExplosionEffect
         {
             get
             {
@@ -120,7 +120,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffect PowerUpEffect
+        public static SoundEffects PowerUpEffect
         {
             get
             {
@@ -374,6 +374,17 @@ namespace SpaceInvadersRemake
         }
 
         public static int ShieldHitsphere
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static Video IntroVideo
         {
             get
             {
