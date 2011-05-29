@@ -668,7 +668,7 @@
     <Position X="38.75" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>View\Mediaplayer.cs</FileName>
+      <FileName>View\IMediaplayer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />
