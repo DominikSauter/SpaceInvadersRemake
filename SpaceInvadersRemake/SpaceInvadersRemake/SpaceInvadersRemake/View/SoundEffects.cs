@@ -27,5 +27,18 @@ namespace SpaceInvadersRemake
         {
             throw new NotImplementedException();
         }
+
+
+        public bool Repeat
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
     }
 }

@@ -13,6 +13,12 @@ namespace SpaceInvadersRemake
             set;
         }
 
+        bool Repeat
+        {
+            get;
+            set;
+        }
+
         void play();
     }
 }
