@@ -591,11 +591,11 @@
       <FileName>IGameItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.Mediaplayer2">
+  <Interface Name="SpaceInvadersRemake.Mediaplayer">
     <Position X="38" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
-      <FileName>View\Mediaplayer2.cs</FileName>
+      <FileName>View\Mediaplayer.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

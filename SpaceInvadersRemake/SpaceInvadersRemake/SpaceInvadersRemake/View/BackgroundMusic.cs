@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Media;
 
 namespace SpaceInvadersRemake
 {
-    public class BackgroundMusic : Mediaplayer2
+    public class BackgroundMusic : Mediaplayer
     {
         private Song song;
 
