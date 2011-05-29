@@ -4,11 +4,15 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
     public class MenuUI : IView
     {
+        private Texture2D menuBackgroundImage;
+        private SpriteFont font;
+    
         public MenuUI(string[] buttonLabels)
         {
             throw new System.NotImplementedException();
