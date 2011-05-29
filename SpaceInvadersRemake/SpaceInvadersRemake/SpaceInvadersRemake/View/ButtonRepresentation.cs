@@ -10,6 +10,7 @@ namespace SpaceInvadersRemake
     public class ButtonRepresentation
     {
         private Texture2D buttonTexture;
+        private SpriteFont font;
 
         public void labelButton(string buttonLabel)
         {
