@@ -11,7 +11,6 @@ namespace SpaceInvadersRemake
     public class MenuUI : IView
     {
         private Texture2D menuBackgroundImage;
-        private SpriteFont font;
     
         public MenuUI(string[] buttonLabels)
         {
