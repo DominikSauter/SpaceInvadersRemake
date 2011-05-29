@@ -116,6 +116,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Explosion.cs" />
+    <Compile Include="MothershipEngine.cs" />
+    <Compile Include="PlayerShipEngine.cs" />
+    <Compile Include="PowerUpGlow.cs" />
     <Compile Include="View\Mediaplayer.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
     <Compile Include="BlockWave.cs" />
