@@ -8,18 +8,13 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
-    public class ParticleEngine
+    public abstract class ParticleEngine
     {
         private Random random;
         private List<Particle> particles;
         private List<Texture2D> textures;
 
-        public ParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location)
-        {
-            throw new System.NotImplementedException();
-        }
-
-        public Vector2 EmitterLocation
+        abstract public Vector2 EmitterLocation
         {
             get
             {
@@ -30,17 +25,17 @@ namespace SpaceInvadersRemake
             }
         }
 
-        private Particle GenerateNewParticle()
+        private abstract Particle GenerateNewParticle()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Update()
+        abstract public void Update()
         {
             throw new System.NotImplementedException();
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        abstract public void Draw(SpriteBatch spriteBatch)
         {
             throw new System.NotImplementedException();
         }

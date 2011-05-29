@@ -45,9 +45,25 @@ namespace SpaceInvadersRemake
             }
         }
 
+        public PowerUpGlow PowerUpGlow
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Show(GameTime gameTime)
         {
             throw new NotImplementedException();
+        }
+
+        private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
