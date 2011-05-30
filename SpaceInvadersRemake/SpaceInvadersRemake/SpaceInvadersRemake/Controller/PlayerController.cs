@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake
     /// <summary>
     /// Diese Klasse abstrahiert  von den verschiedenen Benutzereingaben
     /// </summary>
-    /// <remarks>Verhalten des Controllers wird durch Benutzereingabe bestimmt</remarks>
+    /// <remarks>In den Abgeleiteten Klassen wird das Verhalten des Controllers durch Benutzereingabe bestimmt</remarks>
     public abstract class PlayerController : Controller
     {
         /// <summary>
@@ -16,6 +16,7 @@ namespace SpaceInvadersRemake
         /// </summary>
         public override IGameItem Controllee
         {
+            
             get
             {
                 throw new NotImplementedException();
