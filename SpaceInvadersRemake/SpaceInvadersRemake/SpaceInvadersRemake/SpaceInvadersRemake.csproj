@@ -125,8 +125,8 @@
     <Compile Include="BlockWave.cs" />
     <Compile Include="BlockWaveAI.cs" />
     <Compile Include="Controller\AIController.cs" />
-    <Compile Include="Alien.cs" />
-    <Compile Include="EnemyNormalWeapon.cs" />
+    <Compile Include="Model\Alien.cs" />
+    <Compile Include="Model\EnemyNormalWeapon.cs" />
     <Compile Include="View\Intro.cs" />
     <Compile Include="View\MinibossRepresentation.cs" />
     <Compile Include="View\MothershipRepresentation.cs" />
@@ -135,10 +135,10 @@
     <Compile Include="View\GameUI.cs" />
     <Compile Include="View\HighscoreUI.cs" />
     <Compile Include="View\MenuUI.cs" />
-    <Compile Include="MinibossWeapon.cs" />
+    <Compile Include="Model\MinibossWeapon.cs" />
     <Compile Include="View\ModelHitsphere.cs" />
-    <Compile Include="MothershipWeapon.cs" />
-    <Compile Include="PlayerNormalWeapon.cs" />
+    <Compile Include="Model\MothershipWeapon.cs" />
+    <Compile Include="Model\PlayerNormalWeapon.cs" />
     <Compile Include="Settings\Keyboard1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
@@ -146,18 +146,18 @@
     </Compile>
     <Compile Include="StateMachine\AudioOptionsState.cs" />
     <Compile Include="BreakState.cs" />
-    <Compile Include="Button.cs" />
+    <Compile Include="Model\Button.cs" />
     <Compile Include="StateMachine\HighscoreState.cs" />
     <Compile Include="InGameState.cs" />
     <Compile Include="OptionsState.cs" />
-    <Compile Include="RapidfireWeapon.cs" />
-    <Compile Include="Collider.cs" />
+    <Compile Include="Model\RapidfireWeapon.cs" />
+    <Compile Include="Model\Collider.cs" />
     <Compile Include="Controller\Controller.cs" />
-    <Compile Include="DirectionsConstants.cs" />
-    <Compile Include="DynamicHighscoreEntry.cs" />
-    <Compile Include="HighscoreEntry.cs" />
-    <Compile Include="MultiShotWeapon.cs" />
-    <Compile Include="PiercingShotWeapon.cs" />
+    <Compile Include="Model\DirectionsConstants.cs" />
+    <Compile Include="Model\DynamicHighscoreEntry.cs" />
+    <Compile Include="Model\HighscoreEntry.cs" />
+    <Compile Include="Model\MultiShotWeapon.cs" />
+    <Compile Include="Model\PiercingShotWeapon.cs" />
     <Compile Include="StateMachine\ModelBuilder.cs" />
     <Compile Include="StateMachine\OptionsState.cs" />
     <Compile Include="StateMachine\State.cs" />
@@ -168,34 +168,34 @@
     <Compile Include="StateMachine\MainMenuState.cs" />
     <Compile Include="StateMachine\StateManager.cs" />
     <Compile Include="StateMachine\VideoOptionsState.cs" />
-    <Compile Include="StaticHighscoreEntry.cs" />
+    <Compile Include="Model\StaticHighscoreEntry.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
-    <Compile Include="StaticShieldWeapon.cs" />
-    <Compile Include="GameItem.cs" />
-    <Compile Include="IGameItem.cs" />
+    <Compile Include="Model\StaticShieldWeapon.cs" />
+    <Compile Include="Model\GameItem.cs" />
+    <Compile Include="Model\IGameItem.cs" />
     <Compile Include="Controller\MinibossAI.cs" />
     <Compile Include="Controller\SingleAlienAI.cs" />
     <Compile Include="Controller\WaveAI.cs" />
-    <Compile Include="Deflector.cs" />
-    <Compile Include="Enemy.cs" />
-    <Compile Include="Miniboss.cs" />
-    <Compile Include="Mothership.cs" />
-    <Compile Include="MultiShot.cs" />
-    <Compile Include="PiercingShot.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="PowerUp.cs" />
-    <Compile Include="PowerUpGenerator.cs" />
-    <Compile Include="Projectile.cs" />
+    <Compile Include="Model\Deflector.cs" />
+    <Compile Include="Model\Enemy.cs" />
+    <Compile Include="Model\Miniboss.cs" />
+    <Compile Include="Model\Mothership.cs" />
+    <Compile Include="Model\MultiShot.cs" />
+    <Compile Include="Model\PiercingShot.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\PowerUp.cs" />
+    <Compile Include="Model\PowerUpGenerator.cs" />
+    <Compile Include="Model\Projectile.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="GameManager.cs" />
-    <Compile Include="Rapidfire.cs" />
-    <Compile Include="Shield.cs" />
-    <Compile Include="StaticShield.cs" />
-    <Compile Include="Ship.cs" />
-    <Compile Include="SlowMotion.cs" />
-    <Compile Include="Speedboost.cs" />
+    <Compile Include="Model\Rapidfire.cs" />
+    <Compile Include="Model\Shield.cs" />
+    <Compile Include="Model\StaticShield.cs" />
+    <Compile Include="Model\Ship.cs" />
+    <Compile Include="Model\SlowMotion.cs" />
+    <Compile Include="Model\Speedboost.cs" />
     <Compile Include="View\AlienRepresentation.cs" />
     <Compile Include="View\ButtonRepresentation.cs" />
     <Compile Include="View\GameItemRepresentation.cs" />
@@ -208,7 +208,7 @@
     <Compile Include="View\ShipRepresentation.cs" />
     <Compile Include="View\ViewConstants.cs" />
     <Compile Include="WaveGenerator.cs" />
-    <Compile Include="Weapon.cs" />
+    <Compile Include="Model\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Game.ico" />
@@ -258,9 +258,7 @@
     </None>
     <None Include="StateMachine\StateMachine.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Model\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--
