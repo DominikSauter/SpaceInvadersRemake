@@ -19,12 +19,12 @@ namespace SpaceInvadersRemake
             set;
         }
 
-        void play();
+        void Play();
 
-        void stop();
+        void Stop();
 
-        void pause();
+        void Pause();
 
-        void resume();
+        void Resume();
     }
 }

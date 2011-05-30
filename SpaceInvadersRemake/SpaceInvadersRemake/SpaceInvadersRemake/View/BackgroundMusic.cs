@@ -28,7 +28,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public void play()
+        public void Play()
         {
             throw new NotImplementedException();
         }
@@ -59,27 +59,27 @@ namespace SpaceInvadersRemake
         }
 
 
-        public void stop()
+        public void Stop()
         {
             throw new NotImplementedException();
         }
 
-        public void pause()
+        public void Pause()
         {
             throw new NotImplementedException();
         }
 
-        public void resume()
+        public void Resume()
         {
             throw new NotImplementedException();
         }
 
-        public void fadeIn()
+        public void FadeIn()
         {
             throw new System.NotImplementedException();
         }
 
-        public void fadeOut()
+        public void FadeOut()
         {
             throw new System.NotImplementedException();
         }

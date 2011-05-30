@@ -17,7 +17,7 @@ namespace SpaceInvadersRemake
             throw new System.NotImplementedException();
         }
 
-        public void labelButton(string buttonLabel)
+        private void labelButton(string buttonLabel)
         {
             throw new System.NotImplementedException();
         }

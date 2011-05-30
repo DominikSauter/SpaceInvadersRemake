@@ -233,12 +233,6 @@
         <Point X="32.25" Y="8.703" />
         <Point X="32.5" Y="8.703" />
         <Point X="32.5" Y="12.375" />
-        <Point X="32.542" Y="12.375" Type="JumpStart" />
-        <Point X="32.708" Y="12.375" Type="JumpEnd" />
-        <Point X="34.542" Y="12.375" Type="JumpStart" />
-        <Point X="34.708" Y="12.375" Type="JumpEnd" />
-        <Point X="36.542" Y="12.375" Type="JumpStart" />
-        <Point X="36.708" Y="12.375" Type="JumpEnd" />
         <Point X="39.135" Y="12.375" />
         <Point X="39.135" Y="12.75" />
       </Path>
@@ -299,7 +293,7 @@
   <Class Name="SpaceInvadersRemake.ViewConstants">
     <Position X="42.75" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AgIDRgBBACAAAgAUAAQAIEAoRAQAIACCAEgCACALALM=</HashCode>
+      <HashCode>AgIDQgBBACAAAgAUAAQAIEAoRAQAIACCAEgCACALALc=</HashCode>
       <FileName>View\ViewConstants.cs</FileName>
       <NewMemberFileName>ViewConstants.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -466,7 +460,7 @@
   <Class Name="SpaceInvadersRemake.ParticleEngine">
     <Position X="33.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAEAAAgAAAAgBAAAAAAAEAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAEAAAgAAAAgAAAAAAQAEAAAAAAQAAAAAAAA=</HashCode>
       <FileName>View\ParticleEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -494,7 +488,7 @@
   <Class Name="SpaceInvadersRemake.Intro">
     <Position X="37" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAAAIAAABAIAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAhAAAA=</HashCode>
       <FileName>View\Intro.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -531,7 +525,7 @@
   <Class Name="SpaceInvadersRemake.SoundEffects">
     <Position X="38.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAQAAAAAAAAAAAQAACAAAAEAgACgBAAAAAIAAAAAIAA=</HashCode>
+      <HashCode>AAQgAAAAAAAAAAQAACAAAAEAgAAABAAAoAIAAAgAAAA=</HashCode>
       <FileName>View\SoundEffects.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -539,7 +533,7 @@
   <Class Name="SpaceInvadersRemake.BackgroundMusic">
     <Position X="40.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAgAAAAAAAgAIAAQAAAAKgAAAAAAIAAAAAIAI=</HashCode>
+      <HashCode>AACgAAAAAACAAAAAAAIAAQAAAAIAAAAAoAIAAAgAAAI=</HashCode>
       <FileName>View\BackgroundMusic.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -561,14 +555,14 @@
   <Class Name="SpaceInvadersRemake.Explosion">
     <Position X="31.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\Explosion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUpGlow">
     <Position X="37.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\PowerUpGlow.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -681,7 +675,7 @@
   <Interface Name="SpaceInvadersRemake.IMediaplayer">
     <Position X="38.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAACgAAAAAAIAAAAAIAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAgAAAA=</HashCode>
       <FileName>View\IMediaplayer.cs</FileName>
     </TypeIdentifier>
   </Interface>
