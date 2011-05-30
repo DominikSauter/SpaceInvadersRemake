@@ -73,5 +73,15 @@ namespace SpaceInvadersRemake
         {
             throw new NotImplementedException();
         }
+
+        public void fadeIn()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void fadeOut()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

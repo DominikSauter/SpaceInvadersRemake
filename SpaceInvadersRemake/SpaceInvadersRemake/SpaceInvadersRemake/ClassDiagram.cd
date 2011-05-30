@@ -626,28 +626,28 @@
   <Class Name="SpaceInvadersRemake.PlayerShipEngine">
     <Position X="33.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAEAAAgAAAAgBAAAAAAAEAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\PlayerShipEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MothershipEngine">
     <Position X="35.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAEAAAgAAAAgBAAAAAAAEAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\MothershipEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Explosion">
     <Position X="31.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAEAAAgAAAAgBAAAAAAAEAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\Explosion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUpGlow">
     <Position X="37.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAEAAAgAAAAgBAAAAAAAEAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\PowerUpGlow.cs</FileName>
     </TypeIdentifier>
   </Class>

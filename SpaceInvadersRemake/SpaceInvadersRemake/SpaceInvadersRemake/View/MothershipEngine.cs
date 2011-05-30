@@ -12,7 +12,7 @@ namespace SpaceInvadersRemake
     {
         private Random random;
         private List<Particle> particles;
-        private List<Texture2D> textures;
+        private Texture2D texture;
 
         public MothershipEngine(Microsoft.Xna.Framework.Graphics.Texture2D texture, Vector2 location, float size)
         {
