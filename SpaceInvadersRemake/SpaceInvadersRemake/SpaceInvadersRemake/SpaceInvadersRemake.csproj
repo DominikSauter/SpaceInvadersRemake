@@ -147,7 +147,7 @@
       <DependentUpon>Keyboard.settings</DependentUpon>
     </Compile>
     <Compile Include="StateMachine\AudioOptionsState.cs" />
-    <Compile Include="BreakState.cs" />
+    <Compile Include="StateMachine\BreakState.cs" />
     <Compile Include="Model\Button.cs" />
     <Compile Include="StateMachine\HighscoreState.cs" />
     <Compile Include="InGameState.cs" />
@@ -163,7 +163,6 @@
     <Compile Include="StateMachine\ModelBuilder.cs" />
     <Compile Include="StateMachine\OptionsState.cs" />
     <Compile Include="StateMachine\State.cs" />
-    <Compile Include="StateMachine\BreakState.cs" />
     <Compile Include="StateMachine\CreditsState.cs" />
     <Compile Include="StateMachine\InGameState.cs" />
     <Compile Include="StateMachine\IntroState.cs" />

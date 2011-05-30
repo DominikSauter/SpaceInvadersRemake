@@ -19,7 +19,7 @@
     <Position X="12.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
-      <FileName>BreakState.cs</FileName>
+      <FileName>StateMachine\BreakState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.CreditsState">
