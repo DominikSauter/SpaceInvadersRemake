@@ -33,7 +33,7 @@ namespace SpaceInvadersRemake
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            // TODO: Apply your initialization logic here
 
             base.Initialize();
         }
@@ -70,7 +70,7 @@ namespace SpaceInvadersRemake
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Add your update logic here
+            // TODO: Apply your update logic here
 
             base.Update(gameTime);
         }
@@ -83,7 +83,7 @@ namespace SpaceInvadersRemake
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Add your drawing code here
+            // TODO: Apply your drawing code here
 
             base.Draw(gameTime);
         }
