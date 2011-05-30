@@ -428,6 +428,61 @@ namespace SpaceInvadersRemake
             }
         }
 
+        public static SoundEffects WeaponEffectPiercingshot
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static SoundEffects WeaponEffectMultishot
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static SoundEffects AlienKamikazeEffect
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static SoundEffects AlienMothershipEffect
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static SoundEffects ActiveButtonEffect
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public void loadContent()
         {
             throw new System.NotImplementedException();
