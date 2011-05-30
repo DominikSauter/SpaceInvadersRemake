@@ -541,14 +541,14 @@
   <Class Name="SpaceInvadersRemake.PlayerShipEngine">
     <Position X="33.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\PlayerShipEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MothershipEngine">
     <Position X="35.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgBAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\MothershipEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
