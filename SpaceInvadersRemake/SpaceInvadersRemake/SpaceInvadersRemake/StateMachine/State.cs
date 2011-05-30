@@ -69,10 +69,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <summary>
         /// Initialisierungsmethode für das Model.
         /// </summary>
-        protected void ModelInitialize()
-        {
-            throw new System.NotImplementedException();
-        }
+        protected abstract void ModelInitialize();
 
         /// <summary>
         /// Initialisierungsmethode für die View.

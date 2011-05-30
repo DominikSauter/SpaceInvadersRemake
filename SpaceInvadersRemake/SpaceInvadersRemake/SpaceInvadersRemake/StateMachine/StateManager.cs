@@ -14,10 +14,17 @@ namespace SpaceInvadersRemake.StateMachine
     /// </remarks>
     public class StateManager
     {
+        /// <summary>
+        /// Erstellt einen StateManager.
+        /// </summary>
+        /// <param name="gameManager">Weiterreichung der Game-Klasse</param>
         public StateManager(Game gameManager)
         {
         }
 
+        /// <summary>
+        /// Hält den aktuellen State.
+        /// </summary>
         public State State
         {
             get;

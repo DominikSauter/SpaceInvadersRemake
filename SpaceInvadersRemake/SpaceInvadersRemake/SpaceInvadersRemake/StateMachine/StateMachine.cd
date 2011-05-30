@@ -15,17 +15,17 @@
       <NewMemberFileName>VideoOptionsState.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.StateMachine.BreakState" Collapsed="true">
+  <Class Name="SpaceInvadersRemake.StateMachine.BreakState">
     <Position X="12.75" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>BreakState.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.StateMachine.CreditsState" Collapsed="true">
+  <Class Name="SpaceInvadersRemake.StateMachine.CreditsState">
     <Position X="17.25" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\CreditsState.cs</FileName>
       <NewMemberFileName>CreditsState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -44,18 +44,18 @@
       <FileName>InGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.StateMachine.IntroState" Collapsed="true">
+  <Class Name="SpaceInvadersRemake.StateMachine.IntroState">
     <Position X="15" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\IntroState.cs</FileName>
       <NewMemberFileName>IntroState.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.StateMachine.MainMenuState" Collapsed="true">
+  <Class Name="SpaceInvadersRemake.StateMachine.MainMenuState">
     <Position X="19.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\MainMenuState.cs</FileName>
       <NewMemberFileName>MainMenuState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -76,6 +76,11 @@
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.StateManager">
     <Position X="6.75" Y="2.75" Width="1.5" />
+    <AssociationLine Name="State" Type="SpaceInvadersRemake.StateMachine.State">
+      <MemberNameLabel ManuallyPlaced="true">
+        <Position X="0.141" Y="0.06" />
+      </MemberNameLabel>
+    </AssociationLine>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAgABAAAAAA=</HashCode>
       <FileName>StateMachine\StateManager.cs</FileName>
