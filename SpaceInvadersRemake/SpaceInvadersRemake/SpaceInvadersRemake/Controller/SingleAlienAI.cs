@@ -24,7 +24,7 @@ namespace SpaceInvadersRemake
             throw new NotImplementedException();
         }
 
-        protected override Microsoft.Xna.Framework.Vector2 CheckMovement()
+        protected override Microsoft.Xna.Framework.Vector2 Movement()
         {
             throw new NotImplementedException();
         }

@@ -35,9 +35,8 @@ namespace SpaceInvadersRemake
         }
 
         /// <summary>
-        /// <c>Update</c>ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
+        /// 	<c>Update</c> ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
         /// </summary>
-        /// 
         public abstract void Update();
 
 
@@ -46,7 +45,7 @@ namespace SpaceInvadersRemake
         /// Entscheided in welche Richtung sich das Controllee bewegen soll
         /// </summary>
         /// <returns>2D Richtungsvektor</returns>
-        protected abstract Vector2 CheckMovement();
+        protected abstract Vector2 Movement();
 
         /// <summary>
         /// Entscheided ob Controllee schießen soll

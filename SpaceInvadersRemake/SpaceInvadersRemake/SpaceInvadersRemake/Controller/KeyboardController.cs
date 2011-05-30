@@ -67,7 +67,7 @@ namespace SpaceInvadersRemake
         /// <returns>
         /// 2D Richtungsvektor
         /// </returns>
-        protected override Microsoft.Xna.Framework.Vector2 CheckMovement()
+        protected override Microsoft.Xna.Framework.Vector2 Movement()
         {
             throw new NotImplementedException();
         }
