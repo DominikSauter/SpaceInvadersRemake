@@ -483,7 +483,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public void loadContent()
+        public void LoadContent()
         {
             throw new System.NotImplementedException();
         }
