@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
-    public class PlayerRepresentation : ShipRepresentation
+    public class PlayerRepresentation : GameItemRepresentation
     {
         private List<Texture2D> explosionTextures;
         private List<Texture2D> engineTextures;

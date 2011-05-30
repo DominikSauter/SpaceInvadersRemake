@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake
 {
-    public class MinibossRepresentation : ShipRepresentation
+    public class MinibossRepresentation : GameItemRepresentation
     {
         private Texture2D explosionTexture;
         private Model model;
