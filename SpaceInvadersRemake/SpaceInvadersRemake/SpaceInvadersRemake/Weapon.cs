@@ -7,9 +7,9 @@ namespace SpaceInvadersRemake
 {
     public abstract class Weapon
     {
-        private int projectileType;
-        private int cooldown;
-        private Vector2 velocity;
+        protected int projectileType;
+        protected int cooldown;
+        protected Vector2 velocity;
 
         public abstract event EventHandler WeaponFired;
 

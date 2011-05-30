@@ -11,29 +11,5 @@ namespace SpaceInvadersRemake
         {
             throw new System.NotImplementedException();
         }
-
-        public override string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override int Score
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
     }
 }
