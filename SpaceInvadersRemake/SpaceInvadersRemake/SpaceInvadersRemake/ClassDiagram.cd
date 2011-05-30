@@ -291,7 +291,7 @@
   <Class Name="SpaceInvadersRemake.ViewConstants">
     <Position X="42.75" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AgICRgABACAAAgAUAAQAIEAIRAAAIACCAEgCACALAKM=</HashCode>
+      <HashCode>AgIDRgBBACAAAgAUAAQAIEAoRAQAIACCAEgCACALALM=</HashCode>
       <FileName>View\ViewConstants.cs</FileName>
       <NewMemberFileName>ViewConstants.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -510,7 +510,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelHitsphere">
-    <Position X="42.75" Y="10.25" Width="1.5" />
+    <Position X="42.75" Y="11.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ModelHitsphere.cs</FileName>
@@ -608,7 +608,7 @@
   <Class Name="SpaceInvadersRemake.SoundEffects">
     <Position X="38.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAACAAAAAAAAAAAAAAAAAAAAACAAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAQAACAAAAEAgACABAAAAAIAAAAAAAA=</HashCode>
       <FileName>View\SoundEffects.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -616,7 +616,7 @@
   <Class Name="SpaceInvadersRemake.BackgroundMusic">
     <Position X="40.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAACIAAAAAAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAIAAQAAAAKAAAAAAAIAAAAAAAI=</HashCode>
       <FileName>View\BackgroundMusic.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
