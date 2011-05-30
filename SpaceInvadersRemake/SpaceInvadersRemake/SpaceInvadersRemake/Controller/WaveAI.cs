@@ -5,15 +5,11 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
+    /// <summary>
+    /// Diese Klasse abstrahiert von den verschiedenen KIs zur Steurerung einer Welle von Gegnern
+    /// </summary>
     public abstract class WaveAI : AIController
     {
-        public override abstract SpaceInvadersRemake.IGameItem[] Controllee
-        {
-            get;
-
-            set;
-
-        }
 
     }
 }

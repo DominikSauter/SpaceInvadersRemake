@@ -5,9 +5,15 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
+    /// <summary>
+    /// 
+    /// </summary>
     public class BlockWaveAI : WaveAI
     {
-        public override IGameItem[] Controllee
+        /// <summary>
+        /// Eigenschaft Controllee (kontrollierte Objekt)
+        /// </summary>
+        public override IGameItem Controllee
         {
             get
             {
@@ -19,16 +25,32 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        ///   <c>Update</c>ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
+        /// </summary>
         public override void Update()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Entscheided in welche Richtung sich das Controllee bewegen soll
+        /// </summary>
+        /// <returns>
+        /// 2D Richtungsvektor
+        /// </returns>
         protected override Microsoft.Xna.Framework.Vector2 CheckMovement()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Entscheided ob Controllee schießen soll
+        /// </summary>
+        /// <returns></returns>
+        /// <c>true</c>
+        ///  = schießen andererseits 
+        /// <c>false</c>
         protected override bool CheckShooting()
         {
             throw new NotImplementedException();
