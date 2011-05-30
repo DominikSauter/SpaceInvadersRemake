@@ -202,14 +202,6 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SpaceInvadersRemake.ShipRepresentation">
-    <Position X="24" Y="6.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>View\ShipRepresentation.cs</FileName>
-      <NewMemberFileName>ShipRepresentation.cs</NewMemberFileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.ShieldRepresentation">
     <Position X="26" Y="6.5" Width="1.75" />
     <TypeIdentifier>
@@ -258,13 +250,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PlayerRepresentation">
-    <Position X="22.25" Y="10.25" Width="1.75" />
+    <Position X="18.75" Y="10.25" Width="1.75" />
     <AssociationLine Name="PlayerShipEngine" Type="SpaceInvadersRemake.PlayerShipEngine" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.594" Y="13.539" />
-        <Point X="23.594" Y="16.223" />
-        <Point X="27.323" Y="16.223" Type="JumpStart" />
-        <Point X="27.489" Y="16.223" Type="JumpEnd" />
+        <Point X="20.094" Y="13.539" />
+        <Point X="20.094" Y="16.223" />
+        <Point X="23.823" Y="16.223" Type="JumpStart" />
+        <Point X="23.989" Y="16.223" Type="JumpEnd" />
         <Point X="34.26" Y="16.223" />
         <Point X="34.26" Y="15.848" />
       </Path>
@@ -280,7 +272,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.AlienRepresentation">
-    <Position X="24.25" Y="10.25" Width="1.75" />
+    <Position X="20.75" Y="10.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AgACAAAAABAAAAAAAAAAAAAEAAAEACAAAAAAAAAYAAA=</HashCode>
       <FileName>View\AlienRepresentation.cs</FileName>
@@ -494,11 +486,11 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.MothershipRepresentation">
-    <Position X="26.25" Y="10.25" Width="1.5" />
+    <Position X="22.75" Y="10.25" Width="1.5" />
     <AssociationLine Name="MothershipEngine" Type="SpaceInvadersRemake.MothershipEngine" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="27.406" Y="13.539" />
-        <Point X="27.406" Y="16.479" />
+        <Point X="23.906" Y="13.539" />
+        <Point X="23.906" Y="16.479" />
         <Point X="36.625" Y="16.479" />
         <Point X="36.625" Y="15.848" />
       </Path>
@@ -513,7 +505,7 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.MinibossRepresentation">
-    <Position X="28" Y="10.25" Width="1.5" />
+    <Position X="24.5" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgACAAAAABAAAAAAAAAAAAAEAAAEACAAAAAAAAAYAAA=</HashCode>
       <FileName>View\MinibossRepresentation.cs</FileName>

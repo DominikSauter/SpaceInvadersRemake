@@ -31,7 +31,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        private abstract Particle generateNewParticle()
+        private override Particle generateNewParticle()
         {
             throw new System.NotImplementedException();
         }
