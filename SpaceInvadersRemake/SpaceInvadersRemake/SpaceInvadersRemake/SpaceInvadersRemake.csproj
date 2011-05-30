@@ -117,7 +117,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivePowerUp.cs" />
+    <Compile Include="Controller\IController.cs" />
     <Compile Include="PowerUpAction.cs" />
+    <Compile Include="StateMachine\IMVCHelper.cs" />
     <Compile Include="View\Explosion.cs" />
     <Compile Include="View\MothershipEngine.cs" />
     <Compile Include="View\PlayerShipEngine.cs" />
@@ -211,6 +213,7 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
+    <Content Include="StateMachine\Idee.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceInvadersRemakeContent\SpaceInvadersRemakeContent.contentproj">
@@ -251,7 +254,7 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Settings\Keyboard.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Keyboard1.Designer.cs</LastGenOutput>
     </None>
     <None Include="StateMachine\StateMachine.cd" />

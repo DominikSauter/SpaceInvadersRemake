@@ -23,7 +23,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <summary>
         /// Zur Speicherung vom vorherigen Zustand.
         /// </summary>
-        /// <remarks>Falls ein Memento Implementiert werden soll, wird zur Verwendung <code>this.stateManager = this.previousState</code> genutzt.</remarks>
+        /// <remarks>Falls ein Memento Implementiert werden soll, wird zur Verwendung <code>this.stateManager = this.previousState</code> genutzt oder es wird null für keinen vorherigen State verwendet.</remarks>
         protected readonly State previousState = null;
         /// <summary>
         /// Durchreichung der Game-Klasse
@@ -31,7 +31,7 @@ namespace SpaceInvadersRemake.StateMachine
         protected readonly Game game;
 
         /// <summary>
-        /// Erstellt einen neuen Zustand.
+        /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
         /// </summary>
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="previousState">Vorheriger State oder null, falls keiner vorhanden oder nicht gespeichert werden soll.</param>
@@ -44,22 +44,43 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
+        /// Erstellt einen neuen Zustand ohne vorherigen State.
+        /// </summary>
+        /// <param name="stateManager">Referenz zum StateManager</param>
+        /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
+        public State(StateManager stateManager, Game gameManager)
+        {
+            this.stateManager = stateManager;
+            this.previousState = null;
+            this.game = gameManager;
+        }
+
+        /// <summary>
         /// Spricht den Controller im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public abstract void Controller(GameTime gameTime);
+        public void Controller(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+}
 
         /// <summary>
         /// Spricht das Model im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public abstract void Model(GameTime gameTime);
+        public void Model(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+}
 
         /// <summary>
         /// Spricht das Model im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public abstract void View(GameTime gameTime);
+        public void View(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+}
 
         /// <summary>
         /// Initialisierungsmethode für den Controller.
