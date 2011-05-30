@@ -20,5 +20,11 @@ namespace SpaceInvadersRemake
         }
 
         void play();
+
+        void stop();
+
+        void pause();
+
+        void resume();
     }
 }
