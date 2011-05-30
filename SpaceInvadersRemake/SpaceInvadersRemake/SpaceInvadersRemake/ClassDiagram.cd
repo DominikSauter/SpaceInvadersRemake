@@ -203,7 +203,15 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ShieldRepresentation">
-    <Position X="26" Y="6.5" Width="1.75" />
+    <Position X="26" Y="8.25" Width="1.75" />
+    <InheritanceLine Type="SpaceInvadersRemake.GameItemRepresentation" ManuallyRouted="true">
+      <Path>
+        <Point X="27.875" Y="4.44" />
+        <Point X="27.875" Y="7.897" />
+        <Point X="26.875" Y="7.897" />
+        <Point X="26.875" Y="8.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAAAAAAAAAAAAAAAEAgAAAAAAAAAQAAA=</HashCode>
       <FileName>View\ShieldRepresentation.cs</FileName>
@@ -211,7 +219,15 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ProjectileRepresentation">
-    <Position X="28" Y="6.5" Width="2" />
+    <Position X="28" Y="8.25" Width="2" />
+    <InheritanceLine Type="SpaceInvadersRemake.GameItemRepresentation" ManuallyRouted="true">
+      <Path>
+        <Point X="27.875" Y="4.44" />
+        <Point X="27.875" Y="7.875" />
+        <Point X="29" Y="7.875" />
+        <Point X="29" Y="8.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAAABAAAAAAAAAAAEAgAAAAAAAAAQAAA=</HashCode>
       <FileName>View\ProjectileRepresentation.cs</FileName>
@@ -219,12 +235,24 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUpRepresentation">
-    <Position X="30.25" Y="6.5" Width="2" />
+    <Position X="30.25" Y="8.25" Width="2" />
+    <InheritanceLine Type="SpaceInvadersRemake.GameItemRepresentation" ManuallyRouted="true">
+      <Path>
+        <Point X="27.875" Y="4.44" />
+        <Point X="27.875" Y="7.894" />
+        <Point X="31.25" Y="7.894" />
+        <Point X="31.25" Y="8.25" />
+      </Path>
+    </InheritanceLine>
     <AssociationLine Name="PowerUpGlow" Type="SpaceInvadersRemake.PowerUpGlow" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="32.25" Y="8.703" />
-        <Point X="32.5" Y="8.703" />
+        <Point X="32.25" Y="10.453" />
+        <Point X="32.5" Y="10.453" />
         <Point X="32.5" Y="12.375" />
+        <Point X="34.542" Y="12.375" Type="JumpStart" />
+        <Point X="34.708" Y="12.375" Type="JumpEnd" />
+        <Point X="36.542" Y="12.375" Type="JumpStart" />
+        <Point X="36.708" Y="12.375" Type="JumpEnd" />
         <Point X="39.135" Y="12.375" />
         <Point X="39.135" Y="12.75" />
       </Path>
@@ -250,13 +278,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PlayerRepresentation">
-    <Position X="18.75" Y="10.25" Width="1.75" />
+    <Position X="18.5" Y="8.25" Width="1.75" />
+    <InheritanceLine Type="SpaceInvadersRemake.GameItemRepresentation" ManuallyRouted="true">
+      <Path>
+        <Point X="27.875" Y="4.44" />
+        <Point X="27.875" Y="7.889" />
+        <Point X="19.375" Y="7.889" />
+        <Point X="19.375" Y="8.25" />
+      </Path>
+    </InheritanceLine>
     <AssociationLine Name="PlayerShipEngine" Type="SpaceInvadersRemake.PlayerShipEngine" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="20.094" Y="13.539" />
-        <Point X="20.094" Y="16.223" />
-        <Point X="23.823" Y="16.223" Type="JumpStart" />
-        <Point X="23.989" Y="16.223" Type="JumpEnd" />
+        <Point X="19.844" Y="11.539" />
+        <Point X="19.844" Y="16.223" />
+        <Point X="23.573" Y="16.223" Type="JumpStart" />
+        <Point X="23.739" Y="16.223" Type="JumpEnd" />
         <Point X="34.26" Y="16.223" />
         <Point X="34.26" Y="15.848" />
       </Path>
@@ -272,7 +308,15 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.AlienRepresentation">
-    <Position X="20.75" Y="10.25" Width="1.75" />
+    <Position X="20.5" Y="8.25" Width="1.75" />
+    <InheritanceLine Type="SpaceInvadersRemake.GameItemRepresentation" ManuallyRouted="true">
+      <Path>
+        <Point X="27.875" Y="4.44" />
+        <Point X="27.875" Y="7.885" />
+        <Point X="21.375" Y="7.885" />
+        <Point X="21.375" Y="8.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AgACAAAAABAAAAAAAAAAAAAEAAAEACAAAAAAAAAYAAA=</HashCode>
       <FileName>View\AlienRepresentation.cs</FileName>
@@ -486,11 +530,19 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.MothershipRepresentation">
-    <Position X="22.75" Y="10.25" Width="1.5" />
+    <Position X="22.5" Y="8.25" Width="1.5" />
+    <InheritanceLine Type="SpaceInvadersRemake.GameItemRepresentation" ManuallyRouted="true">
+      <Path>
+        <Point X="27.875" Y="4.44" />
+        <Point X="27.875" Y="7.881" />
+        <Point X="23.25" Y="7.881" />
+        <Point X="23.25" Y="8.25" />
+      </Path>
+    </InheritanceLine>
     <AssociationLine Name="MothershipEngine" Type="SpaceInvadersRemake.MothershipEngine" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.906" Y="13.539" />
-        <Point X="23.906" Y="16.479" />
+        <Point X="23.656" Y="11.539" />
+        <Point X="23.656" Y="16.479" />
         <Point X="36.625" Y="16.479" />
         <Point X="36.625" Y="15.848" />
       </Path>
@@ -505,7 +557,15 @@
     </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.MinibossRepresentation">
-    <Position X="24.5" Y="10.25" Width="1.5" />
+    <Position X="24.25" Y="8.25" Width="1.5" />
+    <InheritanceLine Type="SpaceInvadersRemake.GameItemRepresentation" ManuallyRouted="true">
+      <Path>
+        <Point X="27.875" Y="4.44" />
+        <Point X="27.875" Y="7.898" />
+        <Point X="25" Y="7.898" />
+        <Point X="25" Y="8.25" />
+      </Path>
+    </InheritanceLine>
     <TypeIdentifier>
       <HashCode>AgACAAAAABAAAAAAAAAAAAAEAAAEACAAAAAAAAAYAAA=</HashCode>
       <FileName>View\MinibossRepresentation.cs</FileName>
