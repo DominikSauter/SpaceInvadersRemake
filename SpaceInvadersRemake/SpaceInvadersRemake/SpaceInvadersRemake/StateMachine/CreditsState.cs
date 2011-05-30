@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    /// <summary>
+    /// Stellt den Credits-Screen dar.
+    /// </summary>
     public class CreditsState : State
     {
         public override void Controller(Microsoft.Xna.Framework.GameTime gameTime)
