@@ -9,7 +9,7 @@ namespace SpaceInvadersRemake
 {
     public class SoundEffects : IMediaplayer
     {
-        private SoundEffects effect;
+        private SoundEffects explosion;
 
         public float Volume
         {
@@ -39,6 +39,24 @@ namespace SpaceInvadersRemake
             {
                 throw new NotImplementedException();
             }
+        }
+
+        private SoundEffects fireWeapon;
+        private SoundEffects dropPowerUp;
+
+        private void playPowerUp()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void playExplosion()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void playWeapon()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

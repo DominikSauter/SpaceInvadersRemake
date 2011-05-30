@@ -9,7 +9,7 @@ namespace SpaceInvadersRemake
 {
     public class BackgroundMusic : IMediaplayer
     {
-        private Song song;
+        private Song menuSong;
 
         public BackgroundMusic()
         {
@@ -44,6 +44,18 @@ namespace SpaceInvadersRemake
             {
                 throw new NotImplementedException();
             }
+        }
+
+        private Song gameSong;
+
+        private void playGameSong()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        private void playMenuSong()
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
