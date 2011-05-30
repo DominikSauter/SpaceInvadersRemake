@@ -175,7 +175,7 @@
   <Class Name="SpaceInvadersRemake.MinibossAI">
     <Position X="45.75" Y="33" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAABAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\MinibossAI.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -189,7 +189,7 @@
   <Class Name="SpaceInvadersRemake.SingleAlienAI">
     <Position X="47.5" Y="33" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAABAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\SingleAlienAI.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -307,7 +307,7 @@
   <Class Name="SpaceInvadersRemake.Controller">
     <Position X="43" Y="26" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAABAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\Controller.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -317,14 +317,14 @@
   <Class Name="SpaceInvadersRemake.PlayerController">
     <Position X="36.75" Y="29.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAABAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\PlayerController.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.KeyboardController">
     <Position X="34.5" Y="32" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAABAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAABAAIAAAAAABAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\KeyboardController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -370,7 +370,7 @@
       <FileName>Model\DynamicHighscoreEntry.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.StateManager">
+  <Class Name="SpaceInvadersRemake.StateMachine.StateManager">
     <Position X="5.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAABAAAAAAgABAAAAAA=</HashCode>
@@ -558,7 +558,7 @@
   <Class Name="SpaceInvadersRemake.BlockWaveAI">
     <Position X="42.75" Y="37" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAAAAAAAEAAAAAAAAABAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAIAAAAAABAAAAAAAAAAAAABAAAAAAAAAAAA=</HashCode>
       <FileName>BlockWaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
