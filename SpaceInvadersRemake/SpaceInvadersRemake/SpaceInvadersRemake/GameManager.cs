@@ -9,6 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 
+using SpaceInvadersRemake.StateMachine;
+
+
 namespace SpaceInvadersRemake
 {
     /// <summary>
@@ -23,6 +26,15 @@ namespace SpaceInvadersRemake
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+        }
+
+        /// <summary>
+        /// Hält eine Instanz zur StateMachine
+        /// </summary>
+        public SpaceInvadersRemake.StateMachine.StateManager StateManager
+        {
+            get;
+            set;
         }
 
         /// <summary>
@@ -71,6 +83,12 @@ namespace SpaceInvadersRemake
                 this.Exit();
 
             // TODO: Apply your update logic here
+            
+            
+            // <STST>
+            //this.StateManager.Controller(gameTime); // TODO: Reihenfolge überdenken
+            //this.StateManager.Model(gameTime);
+            // </STST>
 
             base.Update(gameTime);
         }
@@ -84,6 +102,10 @@ namespace SpaceInvadersRemake
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Apply your drawing code here
+
+            // <STST>
+            //this.StateManager.View(gameTime);
+            // </STST>
 
             base.Draw(gameTime);
         }
