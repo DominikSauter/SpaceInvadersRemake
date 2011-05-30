@@ -10,20 +10,6 @@ namespace SpaceInvadersRemake
     /// </summary>
     public class BlockWaveAI : WaveAI
     {
-        /// <summary>
-        /// Eigenschaft Controllee (kontrollierte Objekt)
-        /// </summary>
-        public override IGameItem Controllee
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         /// <summary>
         ///   <c>Update</c>ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
@@ -54,6 +40,21 @@ namespace SpaceInvadersRemake
         protected override bool CheckShooting()
         {
             throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Eigenschaft Controllee Liste (kontrollierte Objekt)
+        /// </summary>
+        public override List<IGameItem> Controllee
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
         }
     }
 }

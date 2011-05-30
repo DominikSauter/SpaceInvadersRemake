@@ -11,5 +11,13 @@ namespace SpaceInvadersRemake
     public abstract class WaveAI : AIController
     {
 
+        /// <summary>
+        /// Eigenschaft Controllee Liste (kontrollierte Objekt)
+        /// </summary>
+        public abstract override List<IGameItem> Controllee
+        {
+            get;
+            set;
+        }
     }
 }
