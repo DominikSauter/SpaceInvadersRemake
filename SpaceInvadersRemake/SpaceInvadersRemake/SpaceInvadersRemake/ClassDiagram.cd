@@ -33,7 +33,7 @@
   <Class Name="SpaceInvadersRemake.Player">
     <Position X="12.5" Y="30.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAABAgAAAIAAAAAAABAAAQCAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAIAABAgAAAIAAAAAAABAAAQCAAAIAAQAAIA=</HashCode>
       <FileName>Model\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -182,7 +182,7 @@
   <Class Name="SpaceInvadersRemake.WaveAI">
     <Position X="44" Y="33" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\WaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -657,6 +657,17 @@
       <FileName>View\PowerUpGlow.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SpaceInvadersRemake.ActivePowerUp">
+    <Position X="28.75" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAABAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ActivePowerUp.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Add" />
+      <Property Name="Remove" />
+    </ShowAsAssociation>
+  </Class>
   <Interface Name="SpaceInvadersRemake.IView">
     <Position X="27" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -682,5 +693,12 @@
       <FileName>View\IMediaplayer.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Delegate Name="SpaceInvadersRemake.PowerUpAction">
+    <Position X="31.25" Y="28" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PowerUpAction.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -42,5 +42,10 @@ namespace SpaceInvadersRemake
         }
 
         public override event EventHandler Created;
+
+        public override void Remove(Player player)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

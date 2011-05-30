@@ -64,5 +64,21 @@ namespace SpaceInvadersRemake
         }
 
         public override event EventHandler Created;
+
+        public void AddPowerUp(ActivePowerUp powerUp)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public List<ActivePowerUp> ActivePowerUps
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }
