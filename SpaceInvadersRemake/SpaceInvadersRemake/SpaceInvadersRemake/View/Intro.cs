@@ -45,5 +45,21 @@ namespace SpaceInvadersRemake
                 throw new NotImplementedException();
             }
         }
+
+
+        public void stop()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void pause()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void resume()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

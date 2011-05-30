@@ -58,5 +58,21 @@ namespace SpaceInvadersRemake
         {
             throw new System.NotImplementedException();
         }
+
+
+        public void stop()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void pause()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void resume()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
