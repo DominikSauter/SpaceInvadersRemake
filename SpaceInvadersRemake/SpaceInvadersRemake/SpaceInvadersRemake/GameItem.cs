@@ -14,33 +14,45 @@ namespace SpaceInvadersRemake
 
         public abstract event EventHandler Destroyed;
 
-        public abstract Microsoft.Xna.Framework.Vector2 Position
+        public Microsoft.Xna.Framework.Vector2 Position
         {
-            get;
-           
-            set;
+            get
+            {
+                throw new System.NotImplementedException();
+}
+
+            set { }
           }
 
-        public abstract Microsoft.Xna.Framework.Vector2 Velocity
+        public Microsoft.Xna.Framework.Vector2 Velocity
         {
-            get;
- 
-            set;
+            get
+            {
+                throw new System.NotImplementedException();
+}
+
+            set { }
         }
 
-        public abstract int Hitpoints
+        public int Hitpoints
         {
-            get;
+            get
+            {
+                throw new System.NotImplementedException();
+}
 
-            set;
+            set { }
 
         }
 
-        public abstract bool IsAlive
+        public bool IsAlive
         {
-            get;
+            get
+            {
+                throw new System.NotImplementedException();
+}
 
-            set;
+            set { }
         }
 
         public abstract void Move(Microsoft.Xna.Framework.Vector2 direction);
@@ -50,6 +62,19 @@ namespace SpaceInvadersRemake
         public abstract void Update(Microsoft.Xna.Framework.GameTime gameTime);
 
         public abstract void Shoot();
+
+        public static List<IGameItem> GameItemList
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public abstract event EventHandler Created;
 
     }
 }

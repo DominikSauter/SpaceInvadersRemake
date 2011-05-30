@@ -665,6 +665,9 @@
       <HashCode>AwQAAAAAAIAABAAgAAIAAAAAAAQAAAAAAAAAAAAEAIA=</HashCode>
       <FileName>IGameItem.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="ModelHitsphere" />
+    </ShowAsAssociation>
   </Interface>
   <Interface Name="SpaceInvadersRemake.IMediaplayer">
     <Position X="38.75" Y="2.5" Width="1.5" />

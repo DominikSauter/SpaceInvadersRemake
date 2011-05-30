@@ -16,54 +16,6 @@ namespace SpaceInvadersRemake
 
         public override event EventHandler Destroyed;
 
-        public override Microsoft.Xna.Framework.Vector2 Position
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override Microsoft.Xna.Framework.Vector2 Velocity
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override int Hitpoints
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override bool IsAlive
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
         public override void Move(Microsoft.Xna.Framework.Vector2 direction)
         {
             throw new NotImplementedException();
@@ -83,5 +35,7 @@ namespace SpaceInvadersRemake
         {
             throw new NotImplementedException();
         }
+
+        public override event EventHandler Created;
     }
 }

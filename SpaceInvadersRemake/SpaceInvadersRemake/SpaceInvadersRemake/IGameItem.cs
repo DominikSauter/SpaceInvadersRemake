@@ -11,6 +11,8 @@ namespace SpaceInvadersRemake
         event EventHandler Hit;
 
         event EventHandler Destroyed;
+
+        event EventHandler Created;
     
         Vector2 Position
         {
@@ -31,6 +33,12 @@ namespace SpaceInvadersRemake
         }
 
         bool IsAlive
+        {
+            get;
+            set;
+        }
+
+        ModelHitsphere ModelHitsphere
         {
             get;
             set;
