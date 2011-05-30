@@ -150,8 +150,8 @@
     <Compile Include="StateMachine\BreakState.cs" />
     <Compile Include="Model\Button.cs" />
     <Compile Include="StateMachine\HighscoreState.cs" />
-    <Compile Include="InGameState.cs" />
-    <Compile Include="OptionsState.cs" />
+    <Compile Include="StateMachine\InGameState.cs" />
+    <Compile Include="StateMachine\OptionsState.cs" />
     <Compile Include="Model\RapidfireWeapon.cs" />
     <Compile Include="Model\Collider.cs" />
     <Compile Include="Controller\Controller.cs" />
@@ -160,11 +160,8 @@
     <Compile Include="Model\HighscoreEntry.cs" />
     <Compile Include="Model\MultiShotWeapon.cs" />
     <Compile Include="Model\PiercingShotWeapon.cs" />
-    <Compile Include="StateMachine\ModelBuilder.cs" />
-    <Compile Include="StateMachine\OptionsState.cs" />
     <Compile Include="StateMachine\State.cs" />
     <Compile Include="StateMachine\CreditsState.cs" />
-    <Compile Include="StateMachine\InGameState.cs" />
     <Compile Include="StateMachine\IntroState.cs" />
     <Compile Include="StateMachine\MainMenuState.cs" />
     <Compile Include="StateMachine\StateManager.cs" />
