@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    /// <summary>
+    /// Stellt das Intro dar.
+    /// </summary>
     public class IntroState : State
     {
         public override void Controller(Microsoft.Xna.Framework.GameTime gameTime)

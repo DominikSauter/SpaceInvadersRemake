@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    /// <summary>
+    /// Stellt das Hauptmenü dar.
+    /// </summary>
     public class MainMenuState : State
     {
         public override void Controller(Microsoft.Xna.Framework.GameTime gameTime)
