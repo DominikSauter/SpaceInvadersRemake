@@ -37,7 +37,7 @@ namespace SpaceInvadersRemake
         /// <summary>
         /// 	<c>Update</c> ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
         /// </summary>
-        public abstract void Update();
+        public  void Update();
 
 
     

@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake
         /// Generiert eine Welle von Gegnern 
        /// </summary>
        /// <returns></returns>
-        protected abstract SpaceInvadersRemake.IGameItem[] GetWave();
+        protected abstract List<IGameItem> GetWave();
  
     }
 }
