@@ -122,6 +122,7 @@
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="EasyDifficulty.cs" />
     <Compile Include="Formation.cs" />
+    <Compile Include="GameCourseManager.cs" />
     <Compile Include="HardDifficulty.cs" />
     <Compile Include="MediumDifficulty.cs" />
     <Compile Include="MotherShipAI.cs" />

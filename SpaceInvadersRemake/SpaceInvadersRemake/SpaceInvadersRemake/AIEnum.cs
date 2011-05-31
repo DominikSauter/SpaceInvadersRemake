@@ -10,5 +10,6 @@ namespace SpaceInvadersRemake
         BlockSwarmAI,
         MinibossAI,
         SingleAlienAI,
+        MothershipAI,
     }
 }
