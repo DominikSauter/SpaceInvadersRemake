@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake
     /// <summary>
     /// 
     /// </summary>
-    public class BlockWaveAI : WaveAI
+    public class BlockSwarmAI : SwarmAI
     {
 
         /// <summary>
@@ -37,24 +37,9 @@ namespace SpaceInvadersRemake
         /// <c>true</c>
         ///  = schießen andererseits 
         /// <c>false</c>
-        protected override bool CheckShooting()
+        protected override bool Shooting()
         {
             throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Eigenschaft Controllee Liste (kontrollierte Objekt)
-        /// </summary>
-        public override List<IGameItem> Controllee
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
         }
     }
 }

@@ -5,14 +5,8 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class SingleAlienAI : AIController
+    public class MothershipAI : AIController
     {
-
-        public override void Update()
-        {
-            throw new NotImplementedException();
-        }
-
         protected override Microsoft.Xna.Framework.Vector2 Movement()
         {
             throw new NotImplementedException();

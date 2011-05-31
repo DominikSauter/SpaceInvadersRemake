@@ -32,27 +32,8 @@ namespace SpaceInvadersRemake
             }
         }
 
-       
-        
-        
-
         /// <summary>
-        /// Eigenschaft Controllee (kontrollierte Objekt)
-        /// </summary>
-        public override IGameItem Controllee
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        /// <summary>
-        ///   <c>Update</c>ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
+        ///   <c>Update</c> ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
         /// </summary>
         public override void Update()
         {
@@ -81,7 +62,7 @@ namespace SpaceInvadersRemake
         /// <returns>
         ///   <c>true</c> = schießen andererseits <c>false</c>
         /// </returns>
-        protected override bool CheckShooting()
+        protected override bool Shooting()
         {
             throw new NotImplementedException();
         }
