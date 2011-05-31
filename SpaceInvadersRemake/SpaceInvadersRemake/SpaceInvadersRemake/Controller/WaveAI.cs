@@ -8,16 +8,20 @@ namespace SpaceInvadersRemake
     /// <summary>
     /// Diese Klasse abstrahiert von den verschiedenen KIs zur Steurerung einer Welle von Gegnern
     /// </summary>
-    public abstract class WaveAI : AIController
+    public abstract class SwarmAI : AIController
     {
 
         /// <summary>
         /// Eigenschaft Controllee Liste (kontrollierte Objekt)
         /// </summary>
-        public abstract override List<IGameItem> Controllee
+        public override List<IGameItem> Controllee
         {
-            get;
-            set;
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set { 
+            }
         }
     }
 }

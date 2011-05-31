@@ -12,5 +12,15 @@ namespace SpaceInvadersRemake
     public abstract class AIController : Controller
     {
 
+        public int ShootingFrequency
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

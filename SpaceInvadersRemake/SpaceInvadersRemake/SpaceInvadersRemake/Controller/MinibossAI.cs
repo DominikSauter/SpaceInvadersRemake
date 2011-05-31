@@ -7,17 +7,6 @@ namespace SpaceInvadersRemake
 {
     public class MinibossAI : AIController
     {
-        public override IGameItem Controllee
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public override void Update()
         {
@@ -29,7 +18,7 @@ namespace SpaceInvadersRemake
             throw new NotImplementedException();
         }
 
-        protected override bool CheckShooting()
+        protected override bool Shooting()
         {
             throw new NotImplementedException();
         }

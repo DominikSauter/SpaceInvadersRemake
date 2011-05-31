@@ -26,11 +26,14 @@ namespace SpaceInvadersRemake
        /// <remarks>Eigenschaft in der das kontrollierte GameItem gespeichert ist.
        /// <c>get</c>
        /// <c>set</c>setzt ein IGameItem als kontrolliertes GameItem ein.</remarks>
-        public abstract IGameItem Controllee
+        public IGameItem Controllee
         {
-            get;
+            get
+            {
+                throw new System.NotImplementedException();
+}
 
-            set;
+            set { }
            
         }
 
@@ -51,7 +54,7 @@ namespace SpaceInvadersRemake
         /// Entscheided ob Controllee schießen soll
         /// </summary>
         /// <c>true</c> = schießen andererseits <c>false</c>
-        protected abstract bool CheckShooting();
+        protected abstract bool Shooting();
     
     }
 }

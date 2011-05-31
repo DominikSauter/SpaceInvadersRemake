@@ -11,21 +11,6 @@ namespace SpaceInvadersRemake
     /// <remarks>In den Abgeleiteten Klassen wird das Verhalten des Controllers durch Benutzereingabe bestimmt</remarks>
     public abstract class PlayerController : Controller
     {
-        /// <summary>
-        /// Eigenschaft Controllee (kontrollierte Objekt)
-        /// </summary>
-        public override IGameItem Controllee
-        {
-            
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         /// <summary>
         ///   <c>Update</c>ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
@@ -52,7 +37,7 @@ namespace SpaceInvadersRemake
         /// <returns>
         /// <c>true</c> = schießen andererseits <c>false</c>
         /// </returns>
-        protected override bool CheckShooting()
+        protected override bool Shooting()
         {
             throw new NotImplementedException();
         }

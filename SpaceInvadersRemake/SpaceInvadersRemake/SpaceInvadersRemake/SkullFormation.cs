@@ -5,20 +5,14 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class SingleAlienAI : AIController
+    public class SkullFormation : FormationGenerator
     {
-
-        public override void Update()
+        protected override List<IGameItem> CreateFormation()
         {
             throw new NotImplementedException();
         }
 
-        protected override Microsoft.Xna.Framework.Vector2 Movement()
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override bool Shooting()
+        protected override List<IGameItem> CreateFormation(int hitpoints, Microsoft.Xna.Framework.Vector2 velocity)
         {
             throw new NotImplementedException();
         }

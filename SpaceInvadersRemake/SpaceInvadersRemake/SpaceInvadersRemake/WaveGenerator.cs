@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake
 {
@@ -9,14 +10,22 @@ namespace SpaceInvadersRemake
     /// Die Klasse dient dazu sich Gegner (<c>GameItem</c>) generieren zu lassen
     /// </summary>
     /// <remarks>Abstrakte Fabrik</remarks>
-    public abstract class WaveGenerator
+    public abstract class FormationGenerator
     {
 
        /// <summary>
-        /// Generiert eine Welle von Gegnern 
+        /// Generiert eine FormationEnum von Gegnern 
        /// </summary>
        /// <returns></returns>
-        protected abstract List<IGameItem> GetWave();
+        protected abstract List<IGameItem> CreateFormation(int hitpoints, Vector2 velocity);
  
+    }
+
+    public static class WaveGenerator
+    {
+        public static Controller CreateWave(DifficultyLevel difficulty, FormationEnum formation, AIEnum AI)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
