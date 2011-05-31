@@ -66,7 +66,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUp">
-    <Position X="19" Y="27.25" Width="1.5" />
+    <Position X="26" Y="27.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\PowerUp.cs</FileName>
@@ -297,7 +297,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Controller">
-    <Position X="43" Y="26" Width="1.5" />
+    <Position X="43" Y="27" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAIAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\Controller.cs</FileName>
@@ -314,7 +314,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.KeyboardController">
-    <Position X="34.5" Y="32" Width="1.5" />
+    <Position X="36" Y="32.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAABAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\KeyboardController.cs</FileName>
@@ -463,21 +463,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.BlockSwarmAI">
-    <Position X="42.75" Y="37" Width="1.5" />
+    <Position X="42.75" Y="36.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>BlockWaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.BlockFormation">
-    <Position X="32.75" Y="23.75" Width="1.5" />
+    <Position X="32.25" Y="24.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>BlockWave.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.FormationGenerator">
-    <Position X="34" Y="21.75" Width="1.5" />
+    <Position X="33.25" Y="22.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>WaveGenerator.cs</FileName>
@@ -589,14 +589,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.BreakState">
-    <Position X="9.5" Y="7" Width="1.5" />
+    <Position X="7.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\BreakState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.CreditsState">
-    <Position X="16.25" Y="7" Width="1.5" />
+    <Position X="12.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\CreditsState.cs</FileName>
@@ -604,21 +604,21 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.HighscoreState">
-    <Position X="2.75" Y="7" Width="1.5" />
+    <Position X="2.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAAAAAAA=</HashCode>
       <FileName>StateMachine\HighscoreState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.InGameState">
-    <Position X="7.25" Y="7" Width="1.5" />
+    <Position X="5.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAAAAAAA=</HashCode>
       <FileName>StateMachine\InGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.IntroState">
-    <Position X="11.75" Y="7" Width="1.5" />
+    <Position X="9.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\IntroState.cs</FileName>
@@ -626,7 +626,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.MainMenuState">
-    <Position X="18.5" Y="7" Width="1.5" />
+    <Position X="14.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\MainMenuState.cs</FileName>
@@ -634,7 +634,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.OptionsState">
-    <Position X="5" Y="7" Width="1.5" />
+    <Position X="4" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAAAAAAA=</HashCode>
       <FileName>StateMachine\OptionsState.cs</FileName>
@@ -649,7 +649,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.VideoOptionsState">
-    <Position X="14" Y="7" Width="1.5" />
+    <Position X="11" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAFQAAAAAgAAAAAAAA=</HashCode>
       <FileName>StateMachine\VideoOptionsState.cs</FileName>
@@ -657,52 +657,59 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.SkullFormation">
-    <Position X="35.25" Y="23.75" Width="1.5" />
+    <Position X="34.25" Y="24.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>SkullFormation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.DifficultyLevel">
-    <Position X="39.5" Y="21.5" Width="1.5" />
+    <Position X="38.5" Y="21.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>DifficultyLevel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.EasyDifficulty">
-    <Position X="37.75" Y="23.75" Width="1.5" />
+    <Position X="36.75" Y="24" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>EasyDifficulty.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MediumDifficulty">
-    <Position X="39.5" Y="23.75" Width="1.5" />
+    <Position X="38.5" Y="24" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>MediumDifficulty.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.HardDifficulty">
-    <Position X="41.25" Y="23.75" Width="1.5" />
+    <Position X="40.25" Y="24" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>HardDifficulty.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.WaveGenerator">
-    <Position X="36.5" Y="20.25" Width="1.5" />
+    <Position X="35.25" Y="20.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WaveGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MothershipAI">
-    <Position X="49.5" Y="33" Width="1.5" />
+    <Position X="49.25" Y="33" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MotherShipAI.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.GameCourseManager">
+    <Position X="11" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAAAEAAAAQAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>GameCourseManager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IView">
@@ -731,16 +738,16 @@
     </TypeIdentifier>
   </Interface>
   <Enum Name="SpaceInvadersRemake.FormationEnum">
-    <Position X="42.25" Y="20" Width="1.5" />
+    <Position X="39.25" Y="19.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAgAA=</HashCode>
       <FileName>Formation.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="SpaceInvadersRemake.AIEnum">
-    <Position X="42.5" Y="21.5" Width="1.5" />
+    <Position X="41" Y="19.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAABAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAABAABAAA=</HashCode>
       <FileName>AIEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
