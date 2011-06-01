@@ -5,10 +5,16 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Representation einen sichtbaren Gegenstands für den Benutzer, welche auf den Bildschirm gezeichnet werden kann.
+    /// </summary>
     public abstract class GameItemRepresentation : IView
     {
+        /// <summary>
+        /// Projektionsmatrix, welche die 3D-Darstellung auf den 2D-Bildschirm projiziert.
+        /// </summary>
         abstract public Matrix Projection
         {
             get
@@ -20,12 +26,18 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kameramatrix, welche die Kameraposition sowie Sichtweite und Blickrichtung festlegt.
+        /// </summary>
         public abstract Matrix Camera
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Positionsmatrix, welche die Position des 3D Models im Raum festlegt.
+        /// </summary>
         abstract public Matrix World
         {
             get
@@ -37,6 +49,10 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Zeichnet das Objekt auf den Bildschirm
+        /// </summary>
+        /// <param name="gameTime"></param>
         abstract public void Show(GameTime gameTime);
     }
 }

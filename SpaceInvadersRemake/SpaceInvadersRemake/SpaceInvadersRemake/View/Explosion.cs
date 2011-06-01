@@ -6,7 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class Explosion : ParticleEngine
     {
@@ -14,6 +14,12 @@ namespace SpaceInvadersRemake
         private List<Particle> particles;
         private Texture2D texture;
 
+        /// <summary>
+        /// Erstellt eine Partikel Engine für einen Explosionseffekt.
+        /// </summary>
+        /// <param name="texture">Grafische Darstellung der Partikel</param>
+        /// <param name="location">Position des Partikel Emitters</param>
+        /// <param name="size">Größe der dargestellten Partikel</param>
         public Explosion(Microsoft.Xna.Framework.Graphics.Texture2D texture, Vector2 location, float size)
         {
             throw new System.NotImplementedException();

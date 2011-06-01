@@ -6,7 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class PlayerRepresentation : GameItemRepresentation
     {
@@ -14,6 +14,9 @@ namespace SpaceInvadersRemake
         private List<Texture2D> engineTextures;
         private Model model;
     
+        /// <summary>
+        /// Erstellt eine Representation der Spielerfigur.
+        /// </summary>
         public PlayerRepresentation()
         {
             throw new System.NotImplementedException();
