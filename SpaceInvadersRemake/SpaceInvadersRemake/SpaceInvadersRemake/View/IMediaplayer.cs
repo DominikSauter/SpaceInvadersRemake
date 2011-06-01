@@ -3,8 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Interface für Sound- und Videowiedergabe.
+    /// </summary>
     public interface IMediaplayer
     {
         float Volume
@@ -19,12 +22,14 @@ namespace SpaceInvadersRemake
             set;
         }
 
+        /// <summary>
+        /// Spielt Sound ab
+        /// </summary>
         void Play();
 
+        /// <summary>
+        /// Stoppt die Soundwiedergabe
+        /// </summary>
         void Stop();
-
-        void Pause();
-
-        void Resume();
     }
 }

@@ -79,7 +79,7 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        public override void Show(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();
         }

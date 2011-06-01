@@ -5,12 +5,19 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Media;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Diese Klasse kümmert sich um die Wiedergabe der Sound Effekte.
+    /// </summary>
     public class SoundEffects : IMediaplayer
     {
         private SoundEffects explosion;
 
+        /// <summary>
+        /// Lautstärkeregelung
+        /// Bei 0 lautlos
+        /// </summary>
         public float Volume
         {
             get
@@ -23,12 +30,19 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Wiedergabe des Effekts
+        /// </summary>
         public void Play()
         {
             throw new NotImplementedException();
         }
 
-
+        /// <summary>
+        /// Wahrheitswert, der festlegt ob ein Effekt wiederholt werden soll.
+        /// true: Effekt wird wiederholt
+        /// false: Effekt wird einmalig wiedergegeben
+        /// </summary>
         public bool Repeat
         {
             get
@@ -59,17 +73,25 @@ namespace SpaceInvadersRemake
             throw new System.NotImplementedException();
         }
 
-
+        /// <summary>
+        /// Stoppt die Wiedergabe eines Sound Effekts
+        /// </summary>
         public void Stop()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Pausiert die Wiedergabe eines Sound Effekts
+        /// </summary>
         public void Pause()
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Setzt die Wiedergabe des Sound Effekts fort 
+        /// </summary>
         public void Resume()
         {
             throw new NotImplementedException();
