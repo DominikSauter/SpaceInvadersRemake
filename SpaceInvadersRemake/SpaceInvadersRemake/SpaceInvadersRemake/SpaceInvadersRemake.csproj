@@ -119,7 +119,6 @@
     <Compile Include="ActivePowerUp.cs" />
     <Compile Include="AIEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
-    <Compile Include="Controller\IController.cs" />
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="EasyDifficulty.cs" />
     <Compile Include="Formation.cs" />

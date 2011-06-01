@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.Controller
 {
     /// <summary>
     /// Diese Klasse abstrahiert von den verschiedenen Steuerungen durch die KI

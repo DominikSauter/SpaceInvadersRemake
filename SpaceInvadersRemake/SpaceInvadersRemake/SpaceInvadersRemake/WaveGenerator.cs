@@ -23,7 +23,7 @@ namespace SpaceInvadersRemake
 
     public static class WaveGenerator
     {
-        public static Controller CreateWave(DifficultyLevel difficulty, FormationEnum formation, AIEnum AI)
+        public static Controller CreateWave(DifficultyLevel difficulty, FormationEnum formation, ControllerEnum AI)
         {
             throw new System.NotImplementedException();
             //SwitchCase über "Bestellung" 
