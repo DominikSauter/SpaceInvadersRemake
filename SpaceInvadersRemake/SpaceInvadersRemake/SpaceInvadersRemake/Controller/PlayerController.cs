@@ -9,7 +9,7 @@ namespace SpaceInvadersRemake
     /// Diese Klasse abstrahiert  von den verschiedenen Benutzereingaben
     /// </summary>
     /// <remarks>In den Abgeleiteten Klassen wird das Verhalten des Controllers durch Benutzereingabe bestimmt</remarks>
-    public abstract class PlayerController : Controller
+    public abstract class PlayerController : SpaceInvadersRemake.Controller.Controller
     {
 
         /// <summary>

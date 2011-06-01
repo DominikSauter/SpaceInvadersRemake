@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.Controller
 {
 
     /// <summary>
@@ -34,7 +34,7 @@ namespace SpaceInvadersRemake
 }
 
             set { }
-           
+
         }
 
         /// <summary>
