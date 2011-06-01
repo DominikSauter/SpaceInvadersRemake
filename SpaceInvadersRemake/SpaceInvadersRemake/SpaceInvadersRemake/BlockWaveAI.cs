@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake
         }
 
         /// <summary>
-        /// Entscheided in welche Richtung sich das Controllee bewegen soll
+        /// Entscheidet in welche Richtung sich das Controllee bewegen soll
         /// </summary>
         /// <returns>
         /// 2D Richtungsvektor
@@ -31,7 +31,7 @@ namespace SpaceInvadersRemake
         }
 
         /// <summary>
-        /// Entscheided ob Controllee schießen soll
+        /// Entscheidet ob Controllee schießen soll
         /// </summary>
         /// <returns></returns>
         /// <c>true</c>

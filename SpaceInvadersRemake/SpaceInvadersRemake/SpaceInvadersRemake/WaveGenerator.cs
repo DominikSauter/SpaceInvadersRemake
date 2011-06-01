@@ -26,6 +26,8 @@ namespace SpaceInvadersRemake
         public static Controller CreateWave(DifficultyLevel difficulty, FormationEnum formation, AIEnum AI)
         {
             throw new System.NotImplementedException();
+            //SwitchCase über "Bestellung" 
+            //Private Methoden für konkrete Creatings um swichcase übersichtlich zu halten
         }
     }
 }

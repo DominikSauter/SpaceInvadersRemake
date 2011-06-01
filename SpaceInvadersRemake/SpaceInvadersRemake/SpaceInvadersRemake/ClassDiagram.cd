@@ -692,7 +692,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.WaveGenerator">
-    <Position X="35.25" Y="20.5" Width="1.5" />
+    <Position X="34" Y="20.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WaveGenerator.cs</FileName>

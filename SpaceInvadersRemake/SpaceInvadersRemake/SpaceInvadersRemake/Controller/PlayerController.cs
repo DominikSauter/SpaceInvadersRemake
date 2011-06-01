@@ -21,7 +21,7 @@ namespace SpaceInvadersRemake
         }
 
         /// <summary>
-        /// Entscheided in welche Richtung sich das Controllee bewegen soll
+        /// Entscheidet in welche Richtung sich das Controllee bewegen soll
         /// </summary>
         /// <returns>
         /// 2D Richtungsvektor
@@ -32,10 +32,10 @@ namespace SpaceInvadersRemake
         }
 
         /// <summary>
-        /// Entscheided ob Controllee schießen soll
+        /// Entscheidet ob Controllee schießen soll
         /// </summary>
         /// <returns>
-        /// <c>true</c> = schießen andererseits <c>false</c>
+        /// 	<c>true</c> = schießen andererseits <c>false</c>
         /// </returns>
         protected override bool Shooting()
         {
