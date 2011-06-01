@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake
 
     
         /// <summary>
-        /// Entscheided in welche Richtung sich das Controllee bewegen soll
+        /// Entscheidet in welche Richtung sich das Controllee bewegen soll
         /// </summary>
         /// <returns>2D Richtungsvektor</returns>
         protected abstract Vector2 Movement();
