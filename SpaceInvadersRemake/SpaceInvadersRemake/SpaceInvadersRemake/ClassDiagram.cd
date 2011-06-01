@@ -296,16 +296,6 @@
       <NewMemberFileName>ViewConstants.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.Controller">
-    <Position X="43" Y="27" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controller\Controller.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Controllee" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="SpaceInvadersRemake.PlayerController">
     <Position X="36.75" Y="29.5" Width="1.5" />
     <TypeIdentifier>
@@ -731,6 +721,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ControlerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.Controller.Controller">
+    <Position X="42.75" Y="26" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.IView">
