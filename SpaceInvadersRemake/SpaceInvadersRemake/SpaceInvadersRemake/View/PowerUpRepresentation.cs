@@ -19,42 +19,7 @@ namespace SpaceInvadersRemake.View
         {
             throw new System.NotImplementedException();
         }
-    
-        public override Matrix Projection
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override Matrix Camera
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override Matrix World
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        
 
         public PowerUpGlow PowerUpGlow
         {

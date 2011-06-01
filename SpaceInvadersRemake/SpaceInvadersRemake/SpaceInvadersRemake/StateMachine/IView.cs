@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt der View implementiert werden.
     /// </summary>
-     public interface IView
+     public interface IStateView
     {
         /// <summary>
         /// Erlaubt die Ausführung der in der View enthalten Spielmechanik.

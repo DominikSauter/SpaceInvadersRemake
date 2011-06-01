@@ -11,42 +11,6 @@ namespace SpaceInvadersRemake.View
     public class ProjectileRepresentation : GameItemRepresentation
     {
         private Texture2D texture;
-    
-        public override Matrix Projection
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override Matrix Camera
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override Matrix World
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public override void Draw(GameTime gameTime)
         {

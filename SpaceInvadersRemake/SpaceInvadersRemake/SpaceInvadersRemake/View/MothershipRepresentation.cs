@@ -20,42 +20,6 @@ namespace SpaceInvadersRemake.View
         {
             throw new System.NotImplementedException();
         }
-    
-        public override Microsoft.Xna.Framework.Matrix Projection
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override Microsoft.Xna.Framework.Matrix Camera
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public override Microsoft.Xna.Framework.Matrix World
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
 
         public Explosion Explosion
         {
