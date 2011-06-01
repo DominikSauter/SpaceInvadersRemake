@@ -1,1 +1,0 @@
-﻿StateMachine.IMVCHelper ist INterface für ICollection (wobei State-Klasse dieses iteriert)

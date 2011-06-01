@@ -130,7 +130,6 @@
     <Compile Include="MotherShipAI.cs" />
     <Compile Include="PowerUpAction.cs" />
     <Compile Include="SkullFormation.cs" />
-    <Compile Include="StateMachine\IMVCHelper.cs" />
     <Compile Include="View\Explosion.cs" />
     <Compile Include="View\MothershipEngine.cs" />
     <Compile Include="View\PlayerShipEngine.cs" />
@@ -224,7 +223,6 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
-    <Content Include="StateMachine\Idee.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceInvadersRemakeContent\SpaceInvadersRemakeContent.contentproj">
