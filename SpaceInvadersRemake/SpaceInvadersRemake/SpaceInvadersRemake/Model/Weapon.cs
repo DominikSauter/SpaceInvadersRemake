@@ -7,7 +7,7 @@ namespace SpaceInvadersRemake
 {
     public abstract class Weapon
     {
-        protected int projectileType;
+        protected ProjectileTypeEnum projectileType;
         protected int cooldown;
         protected Vector2 velocity;
 
