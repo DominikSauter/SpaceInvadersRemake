@@ -712,6 +712,27 @@
       <FileName>GameCourseManager.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SpaceInvadersRemake.View.ViewManager" Collapsed="true">
+    <Position X="25.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>View\ViewManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.Model.ModelManager" Collapsed="true">
+    <Position X="18.75" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\ModelManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.Controller.ControlerManager" Collapsed="true">
+    <Position X="18.75" Y="22.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\ControlerManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Interface Name="SpaceInvadersRemake.IView">
     <Position X="27" Y="0.5" Width="1.5" />
     <TypeIdentifier>
