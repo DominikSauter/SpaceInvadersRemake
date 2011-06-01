@@ -279,7 +279,7 @@
       <Property Name="Explosion" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="SpaceInvadersRemake.ViewContent">
+  <Class Name="SpaceInvadersRemake.View.ViewContent">
     <Position X="42.75" Y="0.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AgIDQgBBACAAAgAUAAQAIEAoRAQAIACCAEgCACALALc=</HashCode>
