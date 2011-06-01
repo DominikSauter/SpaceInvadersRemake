@@ -118,7 +118,7 @@
   <ItemGroup>
     <Compile Include="ActivePowerUp.cs" />
     <Compile Include="AIEnum.cs" />
-    <Compile Include="Controller\ControlerManager.cs" />
+    <Compile Include="Controller\ControllerManager.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="EasyDifficulty.cs" />
@@ -130,6 +130,10 @@
     <Compile Include="MotherShipAI.cs" />
     <Compile Include="PowerUpAction.cs" />
     <Compile Include="SkullFormation.cs" />
+    <Compile Include="StateMachine\IController.cs" />
+    <Compile Include="StateMachine\IMVCHelper.cs" />
+    <Compile Include="StateMachine\IModel.cs" />
+    <Compile Include="StateMachine\IView.cs" />
     <Compile Include="View\Explosion.cs" />
     <Compile Include="View\MothershipEngine.cs" />
     <Compile Include="View\PlayerShipEngine.cs" />
