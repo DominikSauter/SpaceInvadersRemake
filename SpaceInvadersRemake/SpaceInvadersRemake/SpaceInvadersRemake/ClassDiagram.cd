@@ -24,7 +24,7 @@
     <Position X="13.5" Y="27.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Ship.cs</FileName>
+      <FileName>ModelF\Ship.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Weapon" />
@@ -34,112 +34,112 @@
     <Position X="12.5" Y="30.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAIAABAgAAAIAAAAAAABAAAQCAAAIAAQAAIA=</HashCode>
-      <FileName>Model\Player.cs</FileName>
+      <FileName>ModelF\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Enemy">
     <Position X="14.5" Y="30.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Enemy.cs</FileName>
+      <FileName>ModelF\Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Alien">
     <Position X="12.75" Y="35.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Alien.cs</FileName>
+      <FileName>ModelF\Alien.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Mothership">
     <Position X="14.5" Y="35.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Mothership.cs</FileName>
+      <FileName>ModelF\Mothership.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Miniboss">
     <Position X="16.25" Y="35.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Miniboss.cs</FileName>
+      <FileName>ModelF\Miniboss.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUp">
     <Position X="26" Y="27.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAABACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\PowerUp.cs</FileName>
+      <FileName>ModelF\PowerUp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MultiShot">
     <Position X="24.25" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\MultiShot.cs</FileName>
+      <FileName>ModelF\MultiShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PiercingShot">
     <Position X="20.75" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\PiercingShot.cs</FileName>
+      <FileName>ModelF\PiercingShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Rapidfire">
     <Position X="22.5" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Rapidfire.cs</FileName>
+      <FileName>ModelF\Rapidfire.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Speedboost">
     <Position X="26" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Speedboost.cs</FileName>
+      <FileName>ModelF\Speedboost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Deflector">
     <Position X="27.75" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Deflector.cs</FileName>
+      <FileName>ModelF\Deflector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.SlowMotion">
     <Position X="31.25" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\SlowMotion.cs</FileName>
+      <FileName>ModelF\SlowMotion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StaticShield">
     <Position X="29.5" Y="29.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\StaticShield.cs</FileName>
+      <FileName>ModelF\StaticShield.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Weapon">
     <Position X="5.75" Y="19.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAACAAAAAAAAAAACAEAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Model\Weapon.cs</FileName>
+      <FileName>ModelF\Weapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Projectile">
     <Position X="8" Y="27.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAIABBAEAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Projectile.cs</FileName>
+      <FileName>ModelF\Projectile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Shield">
     <Position X="17.5" Y="27.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
-      <FileName>Model\Shield.cs</FileName>
+      <FileName>ModelF\Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.Particle">
@@ -154,21 +154,21 @@
     <Position X="20" Y="19.75" Width="2.25" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAA=</HashCode>
-      <FileName>Model\Collider.cs</FileName>
+      <FileName>ModelF\Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PowerUpGenerator">
     <Position X="25.75" Y="25.25" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\PowerUpGenerator.cs</FileName>
+      <FileName>ModelF\PowerUpGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.GameItem">
     <Position X="16.5" Y="22.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AwQAAAAAAIAABAAgAAJAAAAAAARAAAQAAAAAAAAEAIA=</HashCode>
-      <FileName>Model\GameItem.cs</FileName>
+      <FileName>ModelF\GameItem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.648" />
   </Class>
@@ -312,91 +312,91 @@
     <Position X="30.5" Y="19.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
-      <FileName>Model\DirectionsConstants.cs</FileName>
+      <FileName>ModelF\DirectionsConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Button">
     <Position X="23.75" Y="19.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAACAAAAAA=</HashCode>
-      <FileName>Model\Button.cs</FileName>
+      <FileName>ModelF\Button.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StaticHighscoreEntry">
     <Position X="25.5" Y="21.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\StaticHighscoreEntry.cs</FileName>
+      <FileName>ModelF\StaticHighscoreEntry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.HighscoreEntry">
     <Position X="27" Y="19.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\HighscoreEntry.cs</FileName>
+      <FileName>ModelF\HighscoreEntry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.DynamicHighscoreEntry">
     <Position X="28" Y="21.75" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\DynamicHighscoreEntry.cs</FileName>
+      <FileName>ModelF\DynamicHighscoreEntry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MultiShotWeapon">
     <Position X="7.5" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\MultiShotWeapon.cs</FileName>
+      <FileName>ModelF\MultiShotWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PiercingShotWeapon">
     <Position X="4" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\PiercingShotWeapon.cs</FileName>
+      <FileName>ModelF\PiercingShotWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.RapidfireWeapon">
     <Position X="5.75" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\RapidfireWeapon.cs</FileName>
+      <FileName>ModelF\RapidfireWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PlayerNormalWeapon">
     <Position X="0.5" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\PlayerNormalWeapon.cs</FileName>
+      <FileName>ModelF\PlayerNormalWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.EnemyNormalWeapon">
     <Position X="2.25" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\EnemyNormalWeapon.cs</FileName>
+      <FileName>ModelF\EnemyNormalWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MothershipWeapon">
     <Position X="9.25" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\MothershipWeapon.cs</FileName>
+      <FileName>ModelF\MothershipWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MinibossWeapon">
     <Position X="11" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\MinibossWeapon.cs</FileName>
+      <FileName>ModelF\MinibossWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StaticShieldWeapon">
     <Position X="12.75" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\StaticShieldWeapon.cs</FileName>
+      <FileName>ModelF\StaticShieldWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Settings.Keyboard">
@@ -700,11 +700,11 @@
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.Model.ModelManager" Collapsed="true">
+  <Class Name="SpaceInvadersRemake.ModelF.ModelManager" Collapsed="true">
     <Position X="13.5" Y="18" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\ModelManager.cs</FileName>
+      <FileName>ModelF\ModelManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="GameCourseManager" />
@@ -748,7 +748,7 @@
     <Position X="16.5" Y="18.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AwQAAAAAAIAABAAgAAIAAAAAAAQAAAQAAAAAAAAEAIA=</HashCode>
-      <FileName>Model\IGameItem.cs</FileName>
+      <FileName>ModelF\IGameItem.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ModelHitsphere" />
