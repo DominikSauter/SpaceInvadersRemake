@@ -68,7 +68,7 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        public override void Show(GameTime gameTime)
+        public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();
         }
