@@ -3,6 +3,9 @@
   <Comment CommentText="Settings Files&#xD;&#xA;--&gt; Im Settings Ordner">
     <Position X="38.476" Y="29.539" Height="0.75" Width="1.7" />
   </Comment>
+  <Comment CommentText="Benötigt ??">
+    <Position X="50.177" Y="23.28" Height="0.75" Width="1.7" />
+  </Comment>
   <Class Name="SpaceInvadersRemake.GameManager">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -169,35 +172,26 @@
     </TypeIdentifier>
     <Lollipop Position="0.648" />
   </Class>
-  <Class Name="SpaceInvadersRemake.MinibossAI">
+  <Class Name="SpaceInvadersRemake.Controller.MinibossAI">
     <Position X="45.75" Y="33" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\MinibossAI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.SwarmAI">
+  <Class Name="SpaceInvadersRemake.Controller.SwarmAI">
     <Position X="44" Y="33" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\WaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.SingleAlienAI">
+  <Class Name="SpaceInvadersRemake.Controller.SingleAlienAI">
     <Position X="47.5" Y="33" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\SingleAlienAI.cs</FileName>
     </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.View.GameItemRepresentation">
-    <Position X="27" Y="2.5" Width="1.75" />
-    <TypeIdentifier>
-      <HashCode>AAACAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
-      <FileName>View\GameItemRepresentation.cs</FileName>
-      <NewMemberFileName>GameItemRepresentation.cs</NewMemberFileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.ShieldRepresentation">
     <Position X="26" Y="8.25" Width="1.75" />
@@ -210,11 +204,7 @@
   <Class Name="SpaceInvadersRemake.View.ProjectileRepresentation">
     <Position X="28" Y="8.25" Width="2" />
     <TypeIdentifier>
-<<<<<<< .mine
-      <HashCode>AAACAAAAABAAAgABAAAAAAAAAAAAAgAAAAAAAAAQAAA=</HashCode>
-=======
-      <HashCode>AAACAAEAABAAAAAAAAAAAAAAAAAEAgAAAAAAAAAQAAA=</HashCode>
->>>>>>> .r108
+      <HashCode>AAACAAEAABAAAgAAAAAAAAAAAAAAAgAAAAAAAAAQAAA=</HashCode>
       <FileName>View\ProjectileRepresentation.cs</FileName>
       <NewMemberFileName>ProjectileRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -226,13 +216,12 @@
         <Point X="32.25" Y="10.453" />
         <Point X="32.5" Y="10.453" />
         <Point X="32.5" Y="12.375" />
-<<<<<<< .mine
+        <Point X="32.542" Y="12.375" Type="JumpStart" />
+        <Point X="32.708" Y="12.375" Type="JumpEnd" />
         <Point X="34.542" Y="12.375" Type="JumpStart" />
         <Point X="34.708" Y="12.375" Type="JumpEnd" />
         <Point X="36.542" Y="12.375" Type="JumpStart" />
         <Point X="36.708" Y="12.375" Type="JumpEnd" />
-=======
->>>>>>> .r108
         <Point X="39.135" Y="12.375" />
         <Point X="39.135" Y="12.75" />
       </Path>
@@ -298,21 +287,21 @@
       <NewMemberFileName>ViewConstants.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.PlayerController">
+  <Class Name="SpaceInvadersRemake.Controller.PlayerController">
     <Position X="40.25" Y="29.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\PlayerController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.KeyboardController">
-    <Position X="36" Y="32.5" Width="1.5" />
+  <Class Name="SpaceInvadersRemake.Controller.KeyboardController">
+    <Position X="36.75" Y="32" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAABAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\KeyboardController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.AIController">
+  <Class Name="SpaceInvadersRemake.Controller.AIController">
     <Position X="45" Y="29.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -426,7 +415,7 @@
   <Class Name="SpaceInvadersRemake.View.GameUI">
     <Position X="29.5" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <HashCode>CAoAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
       <FileName>View\GameUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -434,7 +423,7 @@
   <Class Name="SpaceInvadersRemake.View.MenuUI">
     <Position X="34.25" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAIAAAgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAIAAAgA=</HashCode>
       <FileName>View\MenuUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -442,7 +431,7 @@
   <Class Name="SpaceInvadersRemake.View.HighscoreUI">
     <Position X="31.75" Y="2.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
       <FileName>View\HighscoreUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -462,14 +451,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.BlockFormation">
-    <Position X="32.25" Y="24.5" Width="1.5" />
+    <Position X="49.25" Y="24.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>BlockWave.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.FormationGenerator">
-    <Position X="33.25" Y="22.5" Width="1.5" />
+    <Position X="48.75" Y="22" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>WaveGenerator.cs</FileName>
@@ -649,7 +638,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.SkullFormation">
-    <Position X="34.25" Y="24.5" Width="1.5" />
+    <Position X="51.25" Y="25.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
       <FileName>SkullFormation.cs</FileName>
@@ -684,7 +673,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.WaveGenerator">
-    <Position X="34" Y="20.5" Width="1.5" />
+    <Position X="51" Y="21.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>WaveGenerator.cs</FileName>
@@ -724,9 +713,10 @@
   <Class Name="SpaceInvadersRemake.Controller.ControllerManager">
     <Position X="43.75" Y="23.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ControllerManager.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.Controller.Controller">
     <Position X="44" Y="26" Width="1.5" />
@@ -735,13 +725,21 @@
       <FileName>Controller\Controller.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SpaceInvadersRemake.View.GameItemRepresentation">
+    <Position X="27" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>View\GameItemRepresentation.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="27" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Methods" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\IView.cs</FileName>
       <NewMemberFileName>IView.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -791,10 +789,10 @@
       <FileName>Formation.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="SpaceInvadersRemake.AIEnum">
-    <Position X="41" Y="19.5" Width="1.5" />
+  <Enum Name="SpaceInvadersRemake.Controller.ControllerEnum">
+    <Position X="46.25" Y="23.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAgAABAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAgAABAABAAA=</HashCode>
       <FileName>AIEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
