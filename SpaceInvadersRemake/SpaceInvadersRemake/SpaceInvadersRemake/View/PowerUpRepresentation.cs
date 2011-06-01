@@ -6,12 +6,15 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class PowerUpRepresentation : GameItemRepresentation
     {
         private Texture2D texture;
     
+        /// <summary>
+        /// Erstellt eine Representation eines PowerUps.
+        /// </summary>
         public PowerUpRepresentation()
         {
             throw new System.NotImplementedException();

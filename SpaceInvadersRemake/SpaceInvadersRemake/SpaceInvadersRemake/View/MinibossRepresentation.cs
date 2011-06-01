@@ -5,13 +5,17 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class MinibossRepresentation : GameItemRepresentation
     {
         private Texture2D explosionTexture;
         private Model model;
     
+
+        /// <summary>
+        /// Erstellt eine Representation eines Minibosses
+        /// </summary>
         public MinibossRepresentation()
         {
             throw new System.NotImplementedException();

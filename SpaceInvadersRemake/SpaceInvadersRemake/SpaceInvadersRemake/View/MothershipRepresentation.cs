@@ -5,7 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class MothershipRepresentation : GameItemRepresentation
     {
@@ -13,6 +13,9 @@ namespace SpaceInvadersRemake
         private Texture2D engineTexture;
         private Model model;
     
+        /// <summary>
+        /// Erstellt eine Representation des Mutterschiff-Aliens.
+        /// </summary>
         public MothershipRepresentation()
         {
             throw new System.NotImplementedException();

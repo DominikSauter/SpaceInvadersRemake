@@ -6,7 +6,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class ProjectileRepresentation : GameItemRepresentation
     {
@@ -53,7 +53,10 @@ namespace SpaceInvadersRemake
             throw new NotImplementedException();
         }
 
-        public void ProjectilePresentation()
+        /// <summary>
+        /// Erstellt eine Representation eines Projektils.
+        /// </summary>
+        public void ProjectileRepresentation()
         {
             throw new System.NotImplementedException();
         }

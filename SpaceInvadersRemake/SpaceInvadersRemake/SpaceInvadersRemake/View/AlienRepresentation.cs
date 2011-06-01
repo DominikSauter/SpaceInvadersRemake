@@ -6,13 +6,16 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class AlienRepresentation : GameItemRepresentation
     {
         private Texture2D explosionTexture;
         private Model model;
 
+        /// <summary>
+        /// Erstellt eine Representation eines Aliens.
+        /// </summary>
         public AlienRepresentation()
         {
             throw new System.NotImplementedException();
