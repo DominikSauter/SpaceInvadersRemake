@@ -7,5 +7,15 @@ namespace SpaceInvadersRemake.Model
 {
     class ModelManager
     {
+        public SpaceInvadersRemake.GameCourseManager GameCourseManager
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

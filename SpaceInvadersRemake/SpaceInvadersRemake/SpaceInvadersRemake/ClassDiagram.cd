@@ -693,7 +693,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.GameCourseManager">
-    <Position X="11" Y="17.5" Width="1.5" />
+    <Position X="10" Y="17.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAgAAAAAAAAAAAAEAAAAQAAAAAAAAAAAIAAAAAAAA=</HashCode>
       <FileName>GameCourseManager.cs</FileName>
@@ -707,11 +707,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Model.ModelManager" Collapsed="true">
-    <Position X="18.75" Y="21.5" Width="1.5" />
+    <Position X="13.5" Y="18" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\ModelManager.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="GameCourseManager" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.Controller.ControllerManager">
     <Position X="43.75" Y="23.25" Width="1.75" />
