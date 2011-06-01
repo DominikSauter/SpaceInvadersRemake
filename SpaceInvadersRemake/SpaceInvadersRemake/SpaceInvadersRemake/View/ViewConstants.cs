@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 using SpaceInvadersRemake.View;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Die ViewContent Klasse beinhaltet den für die View benötigten Content.
