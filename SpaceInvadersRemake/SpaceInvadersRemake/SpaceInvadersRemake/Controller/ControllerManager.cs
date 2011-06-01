@@ -5,7 +5,8 @@ using System.Text;
 
 namespace SpaceInvadersRemake.Controller
 {
-    class ControlerManager
+    
+class ControllerManager
     {
     }
 }
