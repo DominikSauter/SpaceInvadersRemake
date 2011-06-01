@@ -7,12 +7,12 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.StateMachine
 {
     /// <summary>
-    /// Stellt einen Programmzustand dar.
+    /// Stellt einen Programmzustand dar und tauscht dabei das MVC aus und hält die Bereiche ModelUpdate, ViewUpdate und ControllerUpdate zusammen.
     /// </summary>
     /// <remarks>
     /// Alle Programmzustände müssen von dieser Klasse ableiten.
     /// Diese Unterklasse implementieren dann ihr eigenes MVC-Muster.
-    /// <code>this.stateManager = newState</code> verwenden um einen neuen State zu implementieren.
+    /// Um ein Zustandswechsel vorzunehmen wird <c>this.stateManager = newState</c> verwenden. Dieser Code kommt in eine extra Methode und kann dann vom MVC aufgerufen werden.
     /// </remarks>
     public abstract class State
     {
@@ -56,46 +56,66 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
-        /// Spricht den Controller im vorgegebenen Takt an.
+        /// Spricht den ControllerUpdate im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public void Controller(GameTime gameTime)
+        public void ControllerUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
 }
 
         /// <summary>
-        /// Spricht das Model im vorgegebenen Takt an.
+        /// Spricht das ModelUpdate im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public void Model(GameTime gameTime)
+        public void ModelUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
 }
 
         /// <summary>
-        /// Spricht das Model im vorgegebenen Takt an.
+        /// Spricht das ModelUpdate im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public void View(GameTime gameTime)
+        public void ViewUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
 }
 
         /// <summary>
-        /// Initialisierungsmethode für den Controller.
+        /// Initialisierungsmethode für den ControllerUpdate.
         /// </summary>
         protected abstract void ControllerInitialize();
 
         /// <summary>
-        /// Initialisierungsmethode für das Model.
+        /// Initialisierungsmethode für das ModelUpdate.
         /// </summary>
         protected abstract void ModelInitialize();
 
         /// <summary>
-        /// Initialisierungsmethode für die View.
+        /// Initialisierungsmethode für die ViewUpdate.
         /// </summary>
         protected abstract void ViewInitialize();
+
+        protected void ViewExit()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected void ControllerExit()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected void ModelExit()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        protected void Exit()
+        {
+            throw new System.NotImplementedException();
+        }
 
     }
 }
