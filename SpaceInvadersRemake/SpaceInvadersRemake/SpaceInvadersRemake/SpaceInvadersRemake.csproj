@@ -131,7 +131,6 @@
     <Compile Include="PowerUpAction.cs" />
     <Compile Include="SkullFormation.cs" />
     <Compile Include="StateMachine\IController.cs" />
-    <Compile Include="StateMachine\IMVCHelper.cs" />
     <Compile Include="StateMachine\IModel.cs" />
     <Compile Include="StateMachine\IView.cs" />
     <Compile Include="View\Explosion.cs" />
