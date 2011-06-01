@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt des Controllers implementiert werden.
     /// </summary>
-     public interface IController
+     public interface IStateController
     {
 
         /// <summary>

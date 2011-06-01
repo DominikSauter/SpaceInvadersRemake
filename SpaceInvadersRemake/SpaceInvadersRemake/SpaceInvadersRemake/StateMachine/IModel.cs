@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt des Models implementiert werden.
     /// </summary>
-    public interface IModel
+    public interface IStateModel
     {
 
   
