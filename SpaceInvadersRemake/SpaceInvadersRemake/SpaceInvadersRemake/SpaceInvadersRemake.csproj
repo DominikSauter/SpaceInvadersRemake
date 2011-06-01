@@ -129,6 +129,7 @@
     <Compile Include="Model\ModelManager.cs" />
     <Compile Include="MotherShipAI.cs" />
     <Compile Include="PowerUpAction.cs" />
+    <Compile Include="ProjectileTypeEnum.cs" />
     <Compile Include="SkullFormation.cs" />
     <Compile Include="StateMachine\IController.cs" />
     <Compile Include="StateMachine\IModel.cs" />

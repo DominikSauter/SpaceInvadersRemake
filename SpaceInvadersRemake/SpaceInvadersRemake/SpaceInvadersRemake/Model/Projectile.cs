@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public int ProjectileType
+        public ProjectileTypeEnum ProjectileType
         {
             get
             {
