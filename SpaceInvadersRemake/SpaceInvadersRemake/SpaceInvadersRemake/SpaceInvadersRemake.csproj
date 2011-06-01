@@ -118,6 +118,7 @@
   <ItemGroup>
     <Compile Include="ActivePowerUp.cs" />
     <Compile Include="AIEnum.cs" />
+    <Compile Include="Controller\ControlerManager.cs" />
     <Compile Include="Controller\IController.cs" />
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="EasyDifficulty.cs" />
@@ -125,6 +126,7 @@
     <Compile Include="GameCourseManager.cs" />
     <Compile Include="HardDifficulty.cs" />
     <Compile Include="MediumDifficulty.cs" />
+    <Compile Include="Model\ModelManager.cs" />
     <Compile Include="MotherShipAI.cs" />
     <Compile Include="PowerUpAction.cs" />
     <Compile Include="SkullFormation.cs" />
@@ -215,6 +217,7 @@
     <Compile Include="View\ProjectileRepresentation.cs" />
     <Compile Include="View\ShieldRepresentation.cs" />
     <Compile Include="View\ViewConstants.cs" />
+    <Compile Include="View\ViewManager.cs" />
     <Compile Include="WaveGenerator.cs" />
     <Compile Include="Model\Weapon.cs" />
   </ItemGroup>
