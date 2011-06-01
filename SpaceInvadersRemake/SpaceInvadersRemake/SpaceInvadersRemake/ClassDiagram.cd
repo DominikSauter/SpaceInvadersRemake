@@ -216,6 +216,8 @@
         <Point X="32.25" Y="9.819" />
         <Point X="32.5" Y="9.819" />
         <Point X="32.5" Y="12.375" />
+        <Point X="32.542" Y="12.375" Type="JumpStart" />
+        <Point X="32.708" Y="12.375" Type="JumpEnd" />
         <Point X="34.542" Y="12.375" Type="JumpStart" />
         <Point X="34.708" Y="12.375" Type="JumpEnd" />
         <Point X="36.542" Y="12.375" Type="JumpStart" />
@@ -757,7 +759,7 @@
       <FileName>View\IMediaplayer.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IModel">
+  <Interface Name="SpaceInvadersRemake.StateMachine.IStateModel">
     <Position X="11.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -771,7 +773,7 @@
       <FileName>StateMachine\IView.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IController">
+  <Interface Name="SpaceInvadersRemake.StateMachine.IStateController">
     <Position X="11.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
