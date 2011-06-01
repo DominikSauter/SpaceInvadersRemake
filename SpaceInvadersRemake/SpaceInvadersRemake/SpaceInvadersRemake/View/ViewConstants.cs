@@ -15,6 +15,9 @@ namespace SpaceInvadersRemake
     /// </summary>
     public static class ViewContent
     {
+        /// <summary>
+        /// Schriftart
+        /// </summary>
         public SpriteFont Font
         {
             get
@@ -26,6 +29,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Spiel Hintergrund
+        /// </summary>
         public Texture2D GameBackgroundImage
         {
             get
@@ -37,6 +43,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Menü Hintergrund
+        /// </summary>
         public Texture2D MenuBackgroundImage
         {
             get
@@ -48,6 +57,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// HUD Hintergrund
+        /// </summary>
         public Texture2D HUDBackgroundTexture
         {
             get
@@ -59,6 +71,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Button Hintergrund
+        /// </summary>
         public Texture2D ButtonBackgroundTexture
         {
             get
@@ -70,6 +85,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox des 3D Spielermodels
+        /// </summary>
         public static ModelHitsphere PlayerHitsphere
         {
             get
@@ -81,6 +99,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Menu Hintergrundmusik
+        /// </summary>
         public static Song MenuSong
         {
             get
@@ -92,6 +113,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Hintergrundmusik im Spiel
+        /// </summary>
         public static Song GameSong
         {
             get
@@ -103,6 +127,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Sound Effekt für die Waffe des Spielers
+        /// </summary>
         public static SoundEffect WeaponEffectPlayer
         {
             get
@@ -114,6 +141,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Explosion Sound Effekt
+        /// </summary>
         public static SoundEffect ExplosionEffect
         {
             get
@@ -125,6 +155,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Sound Effekt für den PowerUP
+        /// </summary>
         public static SoundEffect PowerUpEffect
         {
             get
@@ -136,6 +169,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model des Spielers
+        /// </summary>
         public static Model PlayerModel
         {
             get
@@ -147,6 +183,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model des Gegner Bosses
+        /// </summary>
         public static Model BossModel
         {
             get
@@ -158,6 +197,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model der gegnerischen Alienschiffe
+        /// </summary>
         public static Model Alien1Model
         {
             get
@@ -169,6 +211,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model der gegnerischen Alienschiffe
+        /// </summary>
         public static Model Alien2Model
         {
             get
@@ -180,6 +225,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model der gegnerischen Alienschiffe
+        /// </summary>
         public static Model Alien3Model
         {
             get
@@ -191,6 +239,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model der gegnerischen Alienschiffe
+        /// </summary>
         public static Model Alien4Model
         {
             get
@@ -202,6 +253,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model der gegnerischen Alienschiffe
+        /// </summary>
         public static Model Alien5Model
         {
             get
@@ -213,6 +267,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// 3D Model des Mutterschiffes
+        /// </summary>
         public static Model MothershipModel
         {
             get
@@ -224,6 +281,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox des 3D Alienschiffes
+        /// </summary>
         public static ModelHitsphere Alien1Hitsphere
         {
             get
@@ -235,6 +295,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// </summary>
         public static ModelHitsphere Alien2Hitsphere
         {
             get
@@ -246,6 +309,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// </summary>
         public static ModelHitsphere Alien3Hitsphere
         {
             get
@@ -257,6 +323,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// </summary>
         public static ModelHitsphere Alien4Hitsphere
         {
             get
@@ -268,6 +337,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// </summary>
         public static ModelHitsphere Alien5Hitsphere
         {
             get
@@ -279,6 +351,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox des 3D Mutterschiffs
+        /// </summary>
         public static ModelHitsphere MothershipHitsphere
         {
             get
@@ -290,6 +365,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox des 3D Gegner Bosses
+        /// </summary>
         public static ModelHitsphere BossHitsphere
         {
             get
@@ -301,6 +379,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur des Standardprojektils des Spielers
+        /// </summary>
         public static Texture2D PlayerProjectileNormal
         {
             get
@@ -312,6 +393,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur des Alienprojektils
+        /// </summary>
         public static Texture2D AlienProjectile
         {
             get
@@ -323,6 +407,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur des PowerUps
+        /// </summary>
         public static Texture2D PowerUp
         {
             get
@@ -334,6 +421,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur der Schilde
+        /// </summary>
         public static Texture2D ShieldTexture
         {
             get
@@ -345,6 +435,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur des PiercingShot Projektils des Spielers
+        /// </summary>
         public static Texture2D PlayerProjectilePiercing
         {
             get
@@ -356,6 +449,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur des Mutterschiffprojektils
+        /// </summary>
         public static Texture2D MothershipProjectile
         {
             get
@@ -367,6 +463,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur des Projektils vom gegnerischen Boss
+        /// </summary>
         public static Texture2D BossProjectile
         {
             get
@@ -378,6 +477,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Kugelförmige Hitbox der 3D Schilde
+        /// </summary>
         public static int ShieldHitsphere
         {
             get
@@ -389,6 +491,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Introvideo
+        /// </summary>
         public static Video IntroVideo
         {
             get
@@ -400,6 +505,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur der Explosion
+        /// </summary>
         public static Texture2D ExplosionTextures
         {
             get
@@ -411,6 +519,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Glanztextur des PowerUps
+        /// </summary>
         public static Texture2D PowerUpGlowTexture
         {
             get
@@ -422,6 +533,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Textur für den Antrieb der Raumschiffe
+        /// </summary>
         public static Texture2D EngineTexture
         {
             get
@@ -433,6 +547,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Sound Effekt der PiercingShot Waffe des Spielers
+        /// </summary>
         public static SoundEffect WeaponEffectPiercingshot
         {
             get
@@ -444,6 +561,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Sound der Multishot Waffe des Spielers
+        /// </summary>
         public static SoundEffect WeaponEffectMultishot
         {
             get
@@ -455,6 +575,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Sound Effekt des vorbeifliegenden Kamikaze Aliens
+        /// </summary>
         public static SoundEffect AlienKamikazeEffect
         {
             get
@@ -466,6 +589,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Sound Effekt des vorbeifliegenden Mutterschiffs
+        /// </summary>
         public static SoundEffect AlienMothershipEffect
         {
             get
@@ -477,6 +603,9 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Sound Effekt beim aktivieren eines Menübuttons
+        /// </summary>
         public static SoundEffect ActiveButtonEffect
         {
             get
@@ -488,11 +617,17 @@ namespace SpaceInvadersRemake
             }
         }
 
+        /// <summary>
+        /// Lädt den Content aus der GameManager Klasse in die ViewContent Klasse
+        /// </summary>
         public void LoadContent()
         {
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Berechnet die kugelförmigen Hitboxen der 3D Modelle
+        /// </summary>
         public static void ComputeHitspheres()
         {
             throw new System.NotImplementedException();
