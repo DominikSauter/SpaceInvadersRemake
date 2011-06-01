@@ -10,7 +10,7 @@ namespace SpaceInvadersRemake.View
     /// Die Ezeugung der Objekte wird durch Events gesteuert. Sobald die <c>draw()</c> Methode in der State Machine aufgerufen
     /// wird, wird die Liste mit den View Objekten durchgegangen und bei jedem Objekt die <c>draw()</c> Methode aufgerufen.
     /// </summary>
-    class ViewManager
+    class ViewManager : SpaceInvadersRemake.StateMachine.IStateView
     {
         /// <summary>
         /// Liste mit den View Objekten
@@ -24,6 +24,11 @@ namespace SpaceInvadersRemake.View
             set
             {
             }
+        }
+
+        public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
+        {
+            throw new NotImplementedException();
         }
     }
 }

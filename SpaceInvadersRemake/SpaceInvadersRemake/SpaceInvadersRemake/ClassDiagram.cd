@@ -196,7 +196,7 @@
   <Class Name="SpaceInvadersRemake.View.ShieldRepresentation">
     <Position X="26" Y="8.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAACAAAAABAAAgAAAAAAAAAAAAAAAgAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ShieldRepresentation.cs</FileName>
       <NewMemberFileName>ShieldRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -204,7 +204,7 @@
   <Class Name="SpaceInvadersRemake.View.ProjectileRepresentation">
     <Position X="28" Y="8.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAACAAEAABAAAgAAAAAAAAAAAAAAAgAAAAAAAAAQAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ProjectileRepresentation.cs</FileName>
       <NewMemberFileName>ProjectileRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -213,11 +213,9 @@
     <Position X="30.25" Y="8.25" Width="2" />
     <AssociationLine Name="PowerUpGlow" Type="SpaceInvadersRemake.View.PowerUpGlow" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="32.25" Y="10.453" />
-        <Point X="32.5" Y="10.453" />
+        <Point X="32.25" Y="9.819" />
+        <Point X="32.5" Y="9.819" />
         <Point X="32.5" Y="12.375" />
-        <Point X="32.542" Y="12.375" Type="JumpStart" />
-        <Point X="32.708" Y="12.375" Type="JumpEnd" />
         <Point X="34.542" Y="12.375" Type="JumpStart" />
         <Point X="34.708" Y="12.375" Type="JumpEnd" />
         <Point X="36.542" Y="12.375" Type="JumpStart" />
@@ -230,7 +228,7 @@
       </MemberNameLabel>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAABAAAgAAAAAAAAAAAAAAAiAAAAAAAAAQgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAiAAAAAAAAAAgAA=</HashCode>
       <FileName>View\PowerUpRepresentation.cs</FileName>
       <NewMemberFileName>PowerUpRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -250,7 +248,7 @@
     <Position X="18.5" Y="8.25" Width="1.75" />
     <AssociationLine Name="PlayerShipEngine" Type="SpaceInvadersRemake.View.PlayerShipEngine" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="19.844" Y="11.539" />
+        <Point X="19.844" Y="10.703" />
         <Point X="19.844" Y="16.223" />
         <Point X="23.573" Y="16.223" Type="JumpStart" />
         <Point X="23.739" Y="16.223" Type="JumpEnd" />
@@ -259,7 +257,7 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAACAAAAQBAAAgAAAAAAAAAEIAAAACAAAAAAAAAYQAA=</HashCode>
+      <HashCode>AAAAAAAAQAAAAgAAAAAAAAAEIAAAACAAAAAAAAAIQAA=</HashCode>
       <FileName>View\PlayerRepresentation.cs</FileName>
       <NewMemberFileName>PlayerRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -271,7 +269,7 @@
   <Class Name="SpaceInvadersRemake.View.AlienRepresentation">
     <Position X="20.5" Y="8.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgACAAAAABAAAgAAAAAAAAAEAAAAACAAAAAAAAAYAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAgAAAAAAAAAEAAAAACAAAAAAAAAIAAA=</HashCode>
       <FileName>View\AlienRepresentation.cs</FileName>
       <NewMemberFileName>AlienRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -476,14 +474,14 @@
     <Position X="22.5" Y="8.25" Width="1.5" />
     <AssociationLine Name="MothershipEngine" Type="SpaceInvadersRemake.View.MothershipEngine" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="23.656" Y="11.539" />
+        <Point X="23.656" Y="10.703" />
         <Point X="23.656" Y="16.479" />
         <Point X="36.625" Y="16.479" />
         <Point X="36.625" Y="15.848" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AgACAAAAABAACwAAAAAAAAAEAAAAACAAAAAAAAAYAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAACwAAAAAAAAAEAAAAACAAAAAAAAAIAAA=</HashCode>
       <FileName>View\MothershipRepresentation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -494,7 +492,7 @@
   <Class Name="SpaceInvadersRemake.View.MinibossRepresentation">
     <Position X="24.25" Y="8.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgACAAAAABAAAgAAAAAAAAAEAAAAACAAAAAAAAAYAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAgAAAAAAAAAEAAAAACAAAAAAAAAIAAA=</HashCode>
       <FileName>View\MinibossRepresentation.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -694,11 +692,12 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.ViewManager">
-    <Position X="25.25" Y="0.5" Width="1.5" />
+    <Position X="24.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ModelF.ModelManager" Collapsed="true">
     <Position X="13.5" Y="18" Width="1.5" />
@@ -735,9 +734,6 @@
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="27" Y="0.5" Width="1.5" />
-    <Compartments>
-      <Compartment Name="Methods" Collapsed="true" />
-    </Compartments>
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>View\IView.cs</FileName>
@@ -768,7 +764,7 @@
       <FileName>StateMachine\IModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IView">
+  <Interface Name="SpaceInvadersRemake.StateMachine.IStateView">
     <Position X="11.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
