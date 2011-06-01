@@ -5,10 +5,15 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
+using SpaceInvadersRemake.View;
 
 namespace SpaceInvadersRemake
 {
-    public static class ViewConstants
+    /// <summary>
+    /// Die ViewContent Klasse beinhaltet den für die View benötigten Content.
+    /// </summary>
+    public static class ViewContent
     {
         public SpriteFont Font
         {
@@ -98,7 +103,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects WeaponEffectPlayer
+        public static SoundEffect WeaponEffectPlayer
         {
             get
             {
@@ -109,7 +114,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects ExplosionEffect
+        public static SoundEffect ExplosionEffect
         {
             get
             {
@@ -120,7 +125,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects PowerUpEffect
+        public static SoundEffect PowerUpEffect
         {
             get
             {
@@ -362,7 +367,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static Microsoft.Xna.Framework.Graphics.Texture2D BossProjectile
+        public static Texture2D BossProjectile
         {
             get
             {
@@ -395,7 +400,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static Microsoft.Xna.Framework.Graphics.Texture2D ExplosionTextures
+        public static Texture2D ExplosionTextures
         {
             get
             {
@@ -428,7 +433,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects WeaponEffectPiercingshot
+        public static SoundEffect WeaponEffectPiercingshot
         {
             get
             {
@@ -439,7 +444,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects WeaponEffectMultishot
+        public static SoundEffect WeaponEffectMultishot
         {
             get
             {
@@ -450,7 +455,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects AlienKamikazeEffect
+        public static SoundEffect AlienKamikazeEffect
         {
             get
             {
@@ -461,7 +466,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects AlienMothershipEffect
+        public static SoundEffect AlienMothershipEffect
         {
             get
             {
@@ -472,7 +477,7 @@ namespace SpaceInvadersRemake
             }
         }
 
-        public static SoundEffects ActiveButtonEffect
+        public static SoundEffect ActiveButtonEffect
         {
             get
             {
