@@ -6,7 +6,6 @@ using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
-using SpaceInvadersRemake.View;
 
 namespace SpaceInvadersRemake.View
 {
