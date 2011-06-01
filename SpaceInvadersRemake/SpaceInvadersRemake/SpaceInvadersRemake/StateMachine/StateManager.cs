@@ -32,25 +32,25 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
-        /// Ruft die Model-Methode vom aktuellen State auf.
+        /// Ruft die ModelUpdate-Methode vom aktuellen State auf.
         /// </summary>
-        public void Model(GameTime gameTime)
+        public void ModelUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Ruft die View-Methode vom aktuellen State auf.
+        /// Ruft die ViewUpdate-Methode vom aktuellen State auf.
         /// </summary>
-        public void View(GameTime gameTime)
+        public void ViewUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Ruft die Controller-Methode vom aktuellen State auf.
+        /// Ruft die ControllerUpdate-Methode vom aktuellen State auf.
         /// </summary>
-        public void Controller(GameTime gameTime)
+        public void ControllerUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
