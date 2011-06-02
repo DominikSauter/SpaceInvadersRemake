@@ -565,7 +565,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.State">
     <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACABAAAAAAQAEAAAAMQAgIIAAAAgQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQACABAAAAAAQAEAAAANQAgIIAgAAgQAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -759,25 +759,25 @@
       <FileName>View\IMediaplayer.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IStateModel">
-    <Position X="11.75" Y="2" Width="1.5" />
+  <Interface Name="SpaceInvadersRemake.StateMachine.IView">
+    <Position X="11.5" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IStateModel.cs</FileName>
+      <FileName>StateMachine\IView.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IStateView">
-    <Position X="11.75" Y="3.5" Width="1.5" />
+  <Interface Name="SpaceInvadersRemake.StateMachine.IModel">
+    <Position X="11.5" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IStateView.cs</FileName>
+      <FileName>StateMachine\IModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IStateController">
-    <Position X="11.75" Y="5" Width="1.5" />
+  <Interface Name="SpaceInvadersRemake.StateMachine.IController">
+    <Position X="11.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IStateController.cs</FileName>
+      <FileName>StateMachine\IController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="SpaceInvadersRemake.FormationEnum">
