@@ -3,8 +3,8 @@
   <Comment CommentText="Settings Files&#xD;&#xA;--&gt; Im Settings Ordner">
     <Position X="38.476" Y="29.539" Height="0.75" Width="1.7" />
   </Comment>
-  <Comment CommentText="Benötigt ??">
-    <Position X="50.177" Y="23.28" Height="0.75" Width="1.7" />
+  <Comment CommentText="Benötigt ??&#xD;&#xA;&lt;--">
+    <Position X="52.604" Y="22.009" Height="0.75" Width="1.7" />
   </Comment>
   <Class Name="SpaceInvadersRemake.GameManager">
     <Position X="2.5" Y="0.5" Width="1.5" />
@@ -443,18 +443,18 @@
       <FileName>View\ParticleEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.BlockSwarmAI">
+  <Class Name="SpaceInvadersRemake.Controller.BlockSwarmAI">
     <Position X="42.75" Y="36.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>BlockWaveAI.cs</FileName>
+      <FileName>Controller\BlockWaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.BlockFormation">
     <Position X="49.25" Y="24.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAA=</HashCode>
-      <FileName>BlockWave.cs</FileName>
+      <FileName>BlockFormation.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.FormationGenerator">
@@ -679,11 +679,11 @@
       <FileName>WaveGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.MothershipAI">
+  <Class Name="SpaceInvadersRemake.Controller.MothershipAI">
     <Position X="49.25" Y="33" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MotherShipAI.cs</FileName>
+      <FileName>Controller\MotherShipAI.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.GameCourseManager">
@@ -763,21 +763,21 @@
     <Position X="11.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IModel.cs</FileName>
+      <FileName>StateMachine\IStateModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceInvadersRemake.StateMachine.IStateView">
     <Position X="11.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IView.cs</FileName>
+      <FileName>StateMachine\IStateView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceInvadersRemake.StateMachine.IStateController">
     <Position X="11.75" Y="5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IController.cs</FileName>
+      <FileName>StateMachine\IStateController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="SpaceInvadersRemake.FormationEnum">

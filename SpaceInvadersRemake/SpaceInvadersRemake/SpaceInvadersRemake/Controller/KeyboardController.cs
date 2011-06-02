@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
+
+
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -38,6 +41,7 @@ namespace SpaceInvadersRemake.Controller
         public override void Update()
         {
             throw new NotImplementedException();
+           
         }
 
         /// <summary>
@@ -48,7 +52,7 @@ namespace SpaceInvadersRemake.Controller
         /// <returns>
         /// 2D Richtungsvektor
         /// </returns>
-        protected override Microsoft.Xna.Framework.Vector2 Movement()
+        protected override Vector2 Movement()
         {
             throw new NotImplementedException();
         }
@@ -66,5 +70,7 @@ namespace SpaceInvadersRemake.Controller
         {
             throw new NotImplementedException();
         }
+
+       
     }
 }
