@@ -55,6 +55,24 @@ namespace SpaceInvadersRemake.StateMachine
             this.game = gameManager;
         }
 
+        public IModel Model
+        {
+            get;
+            protected set;
+        }
+
+        public IController Controller
+        {
+            get;
+            protected set;
+        }
+
+        public IView View
+        {
+            get;
+            protected set;
+        }
+
         /// <summary>
         /// Spricht den ControllerUpdate im vorgegebenen Takt an.
         /// </summary>
@@ -62,7 +80,7 @@ namespace SpaceInvadersRemake.StateMachine
         public void ControllerUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
-}
+        }
 
         /// <summary>
         /// Spricht das ModelUpdate im vorgegebenen Takt an.
@@ -71,7 +89,7 @@ namespace SpaceInvadersRemake.StateMachine
         public void ModelUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
-}
+        }
 
         /// <summary>
         /// Spricht das ModelUpdate im vorgegebenen Takt an.

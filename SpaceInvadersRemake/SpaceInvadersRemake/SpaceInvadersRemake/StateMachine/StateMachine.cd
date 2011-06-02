@@ -70,7 +70,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.State">
     <Position X="10.25" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAACABAAAAAAQAEAAAAMQAgIIAAAAgQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQACABAAAAAAQAEAAAANQAgIIAgAAgQAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
   </Class>
