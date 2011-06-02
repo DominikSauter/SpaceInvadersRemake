@@ -9,7 +9,7 @@ namespace SpaceInvadersRemake.Controller
     /// <summary>
     /// 
     /// </summary>
-    public class BlockSwarmAI : SwarmAI
+    public class BlockWaveAI : WaveAI
     {
 
         /// <summary>

@@ -11,11 +11,10 @@ namespace SpaceInvadersRemake.Controller
     /// Die abstrakte ControllerUpdate Klasse dafür zuständig die verschiedenen <c>GameItem</c> zu kontrollieren.
     /// </summary>
     /// <remarks> 
-    /// Sie abstrahiert von den Controllerverhaltensweisen Benutzer und Künstliche Intelligenz
-    /// Um dies zutun benutzt sie das GameItem Interface
-    /// Im Architekturstil MVC fungiert sie als ControllerUpdate
+    /// Sie abstrahiert von den Controller-Verhaltensweisen Benutzer und Künstliche Intelligenz
+    /// Um dies zutun benutzt sie das GameItem Interface.
     /// </remarks>
-    public abstract class Controller
+    public abstract class Controller : SpaceInvadersRemake.StateMachine.IController
     {
   
 

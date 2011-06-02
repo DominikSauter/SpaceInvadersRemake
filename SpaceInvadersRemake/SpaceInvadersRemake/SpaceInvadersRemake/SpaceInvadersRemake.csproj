@@ -119,8 +119,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivePowerUp.cs" />
-    <Compile Include="AIEnum.cs" />
+    <Compile Include="Controller\AIEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
+    <Compile Include="Controller\Test.cs" />
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="EasyDifficulty.cs" />
     <Compile Include="Formation.cs" />
@@ -190,7 +191,7 @@
     <Compile Include="ModelF\GameItem.cs" />
     <Compile Include="ModelF\IGameItem.cs" />
     <Compile Include="Controller\MinibossAI.cs" />
-    <Compile Include="Controller\SingleAlienAI.cs" />
+    <Compile Include="Controller\AlienAI.cs" />
     <Compile Include="Controller\WaveAI.cs" />
     <Compile Include="ModelF\Deflector.cs" />
     <Compile Include="ModelF\Enemy.cs" />

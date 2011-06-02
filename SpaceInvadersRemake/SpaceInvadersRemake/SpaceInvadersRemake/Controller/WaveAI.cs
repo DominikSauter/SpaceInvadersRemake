@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.Controller
     /// <summary>
     /// Diese Klasse abstrahiert von den verschiedenen KIs zur Steurerung einer Welle von Gegnern
     /// </summary>
-    public abstract class SwarmAI : AIController
+    public abstract class WaveAI : AIController
     {
 
         /// <summary>
