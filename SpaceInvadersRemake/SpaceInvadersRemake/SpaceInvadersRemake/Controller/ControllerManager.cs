@@ -19,6 +19,9 @@ class ControllerManager : IController
     public ControllerManager()
     {
         throw new System.NotImplementedException();
+        //TODO Subsribe to Created Event from ModelGod Class
+
+        //TODO Subscribe to Destroyed Event from Controller.controllee
     }
 
     public ICollection<Controller> Controller
@@ -32,11 +35,6 @@ class ControllerManager : IController
         }
     }
 
-    public void CreateController(ControllerEnum desiredController, IGameItem Controllee)
-    {
-        throw new System.NotImplementedException();
-    }
-
     /// <summary>
     /// Erlaubt die Ausführung der im Controller enthalten Spielmechanik.
     /// </summary>
@@ -48,14 +46,29 @@ class ControllerManager : IController
         throw new NotImplementedException();
     }
 
-    public void CreateController(ControllerEnum desiredController, ICollection<IGameItem> Controllee, int shootingFrequenz)
+    /// <summary>
+    /// Generiert einen Controller.
+    /// </summary>
+    /// <param name="sender">Absender des Events.</param>
+    /// <param name="desiredController">Gibt an welchen Controller man generieert haben möchte.</param>
+    public void CreateController(object sender, EventHandler desiredController) 
+        //TODO: Use EventHandler<T> with T to decide with model group
     {
         throw new System.NotImplementedException();
     }
 
-    public void CreateController(ControllerEnum desiredController, IGameItem Controllee, int shootingFrequenz)
+    /// <summary>
+    /// Destroys the controller.
+    /// </summary>
+    /// <param name="sender">The sender.</param>
+    /// <param name="e">The e.</param>
+    //TODO Decide wether it's needed or not
+    //Alternative isAlive prüfen bzw 
+    public void DestroyController(object sender, EventHandler e)
     {
+
         throw new System.NotImplementedException();
     }
+
     }
 }
