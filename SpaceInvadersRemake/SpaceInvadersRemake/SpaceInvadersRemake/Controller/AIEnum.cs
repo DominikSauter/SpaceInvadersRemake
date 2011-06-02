@@ -10,7 +10,7 @@ namespace SpaceInvadersRemake.Controller
         KeyboardController,
         BlockSwarmAI,
         MinibossAI,
-        SingleAlienAI,
+        AlienAI,
         MothershipAI,
         
     }

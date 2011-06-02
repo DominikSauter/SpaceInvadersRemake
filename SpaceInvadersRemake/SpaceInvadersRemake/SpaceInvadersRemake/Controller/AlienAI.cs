@@ -5,8 +5,10 @@ using System.Text;
 
 namespace SpaceInvadersRemake.Controller
 {
-    public class SingleAlienAI : AIController
+    public abstract class AlienAI : AIController
     {
+        public AlienAI(WaveAI wave)
+        { }
 
         public override void Update()
         {

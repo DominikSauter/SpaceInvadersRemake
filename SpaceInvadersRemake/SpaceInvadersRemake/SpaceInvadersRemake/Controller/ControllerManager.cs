@@ -6,7 +6,14 @@ using SpaceInvadersRemake.StateMachine;
 
 namespace SpaceInvadersRemake.Controller
 {
-    
+
+    /// <summary>
+    /// Stellt den Einstiegspunkt des Controller-Namespaces dar.
+    /// </summary>
+    /// <remarks>
+    /// Die Controller-Eigenschaft hält alle Controller, die im Spiel sind.
+    /// Im Architekturstil MVC fungiert sie als Controller.
+    /// </remarks>
 class ControllerManager : IController
     {
     public ControllerManager()
