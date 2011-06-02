@@ -36,10 +36,7 @@ namespace SpaceInvadersRemake.Controller
 
         }
 
-        /// <summary>
-        /// 	<c>Update</c> ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
-        /// </summary>
-        public  void Update();
+ 
 
 
     
@@ -54,6 +51,21 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         /// <c>true</c> = schießen andererseits <c>false</c>
         protected abstract bool Shooting();
-    
+
+
+
+        /// <summary>
+        /// Erlaubt die Ausführung der im Controller enthalten Spielmechanik.
+        /// </summary>
+        /// <remarks>Update ist die Methode, die  pro Frame aufgerufen wird,
+        /// damit entschieden wird wie sich Controllee verhalten soll
+        /// </remarks>
+        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
+        public void Update(Game game, GameTime gameTime, StateMachine.State state)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
