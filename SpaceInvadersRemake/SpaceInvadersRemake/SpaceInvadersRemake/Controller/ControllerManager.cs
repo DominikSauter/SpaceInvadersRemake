@@ -7,7 +7,7 @@ using SpaceInvadersRemake.StateMachine;
 namespace SpaceInvadersRemake.Controller
 {
     
-class ControllerManager : IStateController
+class ControllerManager : IController
     {
     public ControllerManager()
     {

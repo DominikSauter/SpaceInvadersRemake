@@ -130,9 +130,9 @@
     <Compile Include="PowerUpAction.cs" />
     <Compile Include="ProjectileTypeEnum.cs" />
     <Compile Include="SkullFormation.cs" />
-    <Compile Include="StateMachine\IStateController.cs" />
-    <Compile Include="StateMachine\IStateModel.cs" />
-    <Compile Include="StateMachine\IStateView.cs" />
+    <Compile Include="StateMachine\IController.cs" />
+    <Compile Include="StateMachine\IModel.cs" />
+    <Compile Include="StateMachine\IView.cs" />
     <Compile Include="View\Explosion.cs" />
     <Compile Include="View\MothershipEngine.cs" />
     <Compile Include="View\PlayerShipEngine.cs" />

@@ -6,12 +6,14 @@ using System.Text;
 namespace SpaceInvadersRemake.StateMachine
 {
     /// <summary>
-    /// Muss von dem Haupteinstiegspunkt der View implementiert werden.
+    /// Muss von dem Haupteinstiegspunkt des Models implementiert werden.
     /// </summary>
-     public interface IStateView
+    public interface IModel
     {
+
+  
         /// <summary>
-        /// Erlaubt die Ausführung der in der View enthalten Spielmechanik.
+        /// Erlaubt die Ausführung der im Model enthalten Spielmechanik.
         /// </summary>
         /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
