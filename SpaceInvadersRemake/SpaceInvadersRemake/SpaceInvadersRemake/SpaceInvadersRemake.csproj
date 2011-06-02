@@ -267,6 +267,7 @@
     <None Include="ClassDiagram.cd">
       <SubType>Designer</SubType>
     </None>
+    <None Include="Controller\Controller.cd" />
     <None Include="Settings\Keyboard.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>Keyboard1.Designer.cs</LastGenOutput>
