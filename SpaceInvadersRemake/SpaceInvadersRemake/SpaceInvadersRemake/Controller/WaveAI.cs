@@ -14,7 +14,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Eigenschaft Controllee Liste (kontrollierte Objekt)
         /// </summary>
-        public override List<IGameItem> Controllee
+        public override ICollection<IGameItem> Controllee
         {
             get
             {
