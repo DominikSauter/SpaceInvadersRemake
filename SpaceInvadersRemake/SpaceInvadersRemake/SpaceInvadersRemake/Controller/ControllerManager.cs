@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.StateMachine;
+using SpaceInvadersRemake.Helper;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -51,8 +52,9 @@ class ControllerManager : IController
     /// </summary>
     /// <param name="sender">Absender des Events.</param>
     /// <param name="desiredController">Gibt an welchen Controller man generieert haben möchte.</param>
-    public void CreateController(object sender, EventHandler desiredController) 
-        //TODO: Use EventHandler<T> with T to decide with model group
+    public void CreateController(object sender, EventHandler<ControllerMakings> desiredController) 
+        
+
     {
         throw new System.NotImplementedException();
     }

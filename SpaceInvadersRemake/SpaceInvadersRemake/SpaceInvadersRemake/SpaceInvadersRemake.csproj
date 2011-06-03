@@ -119,12 +119,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivePowerUp.cs" />
+    <Compile Include="Helper\ControllerMakings.cs" />
     <Compile Include="Controller\AIEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
     <Compile Include="Controller\Test.cs" />
     <Compile Include="DifficultyLevel.cs" />
     <Compile Include="EasyDifficulty.cs" />
-    <Compile Include="Formation.cs" />
+    <Compile Include="Helper\FormationEnum.cs" />
     <Compile Include="GameCourseManager.cs" />
     <Compile Include="HardDifficulty.cs" />
     <Compile Include="MediumDifficulty.cs" />
@@ -132,7 +133,7 @@
     <Compile Include="Controller\MotherShipAI.cs" />
     <Compile Include="PowerUpAction.cs" />
     <Compile Include="ProjectileTypeEnum.cs" />
-    <Compile Include="SkullFormation.cs" />
+    <Compile Include="Generator\SkullFormation.cs" />
     <Compile Include="StateMachine\IController.cs" />
     <Compile Include="StateMachine\IModel.cs" />
     <Compile Include="StateMachine\IView.cs" />
@@ -142,7 +143,7 @@
     <Compile Include="View\PowerUpGlow.cs" />
     <Compile Include="View\IMediaplayer.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
-    <Compile Include="BlockFormation.cs" />
+    <Compile Include="Generator\BlockFormation.cs" />
     <Compile Include="Controller\BlockWaveAI.cs" />
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="ModelF\Alien.cs" />
@@ -223,7 +224,7 @@
     <Compile Include="View\ShieldRepresentation.cs" />
     <Compile Include="View\ViewConstants.cs" />
     <Compile Include="View\ViewManager.cs" />
-    <Compile Include="WaveGenerator.cs" />
+    <Compile Include="Generator\WaveGenerator.cs" />
     <Compile Include="ModelF\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
