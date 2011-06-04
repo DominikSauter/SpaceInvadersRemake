@@ -51,7 +51,7 @@ class ControllerManager : IController
     /// Generiert einen Controller.
     /// </summary>
     /// <param name="sender">Absender des Events.</param>
-    /// <param name="desiredController">Gibt an welchen Controller man generiert haben möchte.</param>
+    /// <param name="desiredController">Gibt an welchen Controller man generieert haben möchte.</param>
     public void CreateController(object sender, EventHandler<ControllerMakings> desiredController) 
         
 

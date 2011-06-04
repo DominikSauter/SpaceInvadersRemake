@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using SpaceInvadersRemake.Controller;
 
 namespace SpaceInvadersRemake.Helper
 {
@@ -12,8 +11,5 @@ namespace SpaceInvadersRemake.Helper
     /// <remarks>Indem man diese Struct dem Event Model Created mitgibt, steuert wann z.B. welche Controller Intelligens man haben möchte oder wie hoch die Schussfrequenz des Controllers sein soll.</remarks>
     public struct ControllerMakings
     {
-        AIEnum desiredController;
-        int shootingFrequenz;
-
     }
 }

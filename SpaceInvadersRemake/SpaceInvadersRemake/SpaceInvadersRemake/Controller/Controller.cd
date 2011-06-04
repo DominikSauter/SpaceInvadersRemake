@@ -32,7 +32,7 @@
   <Class Name="SpaceInvadersRemake.Controller.ControllerManager">
     <Position X="13" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAQAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ControllerManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -79,10 +79,10 @@
       <FileName>ModelF\IGameItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="SpaceInvadersRemake.Controller.AIEnum">
-    <Position X="7" Y="1.25" Width="1.5" />
+  <Enum Name="SpaceInvadersRemake.Controller.ControllerEnum">
+    <Position X="6.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAACAAAAAAAAAAAAAAABAAAgAAAAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAgAABAABAAA=</HashCode>
       <FileName>Controller\AIEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
