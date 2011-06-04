@@ -222,6 +222,7 @@
     <Compile Include="View\ShieldRepresentation.cs" />
     <Compile Include="View\ViewConstants.cs" />
     <Compile Include="View\ViewManager.cs" />
+    <Compile Include="Generator\WaveGenerator.cs" />
     <Compile Include="ModelF\Weapon.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -273,9 +274,7 @@
     </None>
     <None Include="StateMachine\StateMachine.cd" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Generator\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
   <!--
