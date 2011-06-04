@@ -3,9 +3,6 @@
   <Comment CommentText="Settings Files&#xD;&#xA;--&gt; Im Settings Ordner">
     <Position X="38.476" Y="29.539" Height="0.75" Width="1.7" />
   </Comment>
-  <Comment CommentText="Benötigt ??&#xD;&#xA;&lt;--">
-    <Position X="42.102" Y="18.851" Height="0.75" Width="1.7" />
-  </Comment>
   <Class Name="SpaceInvadersRemake.GameManager">
     <Position X="2.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -295,7 +292,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.DirectionsConstants">
-    <Position X="30.5" Y="19.5" Width="1.75" />
+    <Position X="29.75" Y="18.75" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
       <FileName>ModelF\DirectionsConstants.cs</FileName>
@@ -603,28 +600,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.DifficultyLevel">
-    <Position X="38.5" Y="21.75" Width="1.5" />
+    <Position X="34.5" Y="21.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>ModelF\DifficultyLevel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.EasyDifficulty">
-    <Position X="36.75" Y="24" Width="1.5" />
+    <Position X="32.75" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>ModelF\EasyDifficulty.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.MediumDifficulty">
-    <Position X="38.5" Y="24" Width="1.5" />
+    <Position X="34.5" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>ModelF\MediumDifficulty.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.HardDifficulty">
-    <Position X="40.25" Y="24" Width="1.5" />
+    <Position X="36.25" Y="23.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
       <FileName>ModelF\HardDifficulty.cs</FileName>
@@ -706,14 +703,14 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Generator.FormationGenerator">
-    <Position X="38" Y="18.75" Width="1.5" />
+    <Position X="33.25" Y="19" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAACAgAA=</HashCode>
       <FileName>Generator\WaveGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Generator.WaveGenerator">
-    <Position X="40.5" Y="18.75" Width="1.5" />
+    <Position X="35.5" Y="18.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAEAAAAAAAAAAAAA=</HashCode>
       <FileName>Generator\WaveGenerator.cs</FileName>
@@ -727,7 +724,7 @@
     </TypeIdentifier>
   </Class>
   <Struct Name="SpaceInvadersRemake.Helper.ControllerMakings">
-    <Position X="35" Y="22" Width="1.5" />
+    <Position X="38.25" Y="20.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Helper\ControllerMakings.cs</FileName>
