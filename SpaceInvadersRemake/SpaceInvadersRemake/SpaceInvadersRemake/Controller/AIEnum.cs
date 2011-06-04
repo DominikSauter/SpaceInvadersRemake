@@ -5,7 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake.Controller
 {
-    public enum ControllerEnum
+    public enum AIEnum
     {
         KeyboardController,
         BlockSwarmAI,
