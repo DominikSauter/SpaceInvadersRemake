@@ -5,18 +5,17 @@ using System.Text;
 
 namespace SpaceInvadersRemake
 {
-    public class GameCourseManager
+    public class GameCourse
     {
-        private List<IGameItem> currentWave;
-        private IGameItem player;
-        private GameCourse gameCourse;
+        private GameTime waveStartingTime;
+        private int waveCounter;
 
-        private void InitializeGame()
+        public List<IGameItem> NextWave(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
 
-        public void Update(GameTime gameTime, State state)
+        public void Update(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }

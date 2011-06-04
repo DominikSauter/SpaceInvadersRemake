@@ -119,6 +119,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivePowerUp.cs" />
+    <Compile Include="GameCourse.cs" />
     <Compile Include="Helper\ControllerMakings.cs" />
     <Compile Include="Controller\AIEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
