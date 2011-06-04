@@ -118,23 +118,21 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ActivePowerUp.cs" />
-    <Compile Include="GameCourse.cs" />
+    <Compile Include="ModelF\ActivePowerUp.cs" />
+    <Compile Include="ModelF\GameCourse.cs" />
     <Compile Include="Helper\ControllerMakings.cs" />
     <Compile Include="Controller\AIEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
     <Compile Include="Controller\Test.cs" />
-    <Compile Include="DifficultyLevel.cs" />
-    <Compile Include="EasyDifficulty.cs" />
-    <Compile Include="Helper\FormationEnum.cs" />
-    <Compile Include="GameCourseManager.cs" />
-    <Compile Include="HardDifficulty.cs" />
-    <Compile Include="MediumDifficulty.cs" />
+    <Compile Include="ModelF\DifficultyLevel.cs" />
+    <Compile Include="ModelF\EasyDifficulty.cs" />
+    <Compile Include="ModelF\GameCourseManager.cs" />
+    <Compile Include="ModelF\HardDifficulty.cs" />
+    <Compile Include="ModelF\MediumDifficulty.cs" />
     <Compile Include="ModelF\ModelManager.cs" />
     <Compile Include="Controller\MotherShipAI.cs" />
-    <Compile Include="PowerUpAction.cs" />
-    <Compile Include="ProjectileTypeEnum.cs" />
-    <Compile Include="Generator\SkullFormation.cs" />
+    <Compile Include="ModelF\PowerUpAction.cs" />
+    <Compile Include="ModelF\ProjectileTypeEnum.cs" />
     <Compile Include="StateMachine\IController.cs" />
     <Compile Include="StateMachine\IModel.cs" />
     <Compile Include="StateMachine\IView.cs" />
@@ -144,7 +142,6 @@
     <Compile Include="View\PowerUpGlow.cs" />
     <Compile Include="View\IMediaplayer.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
-    <Compile Include="Generator\BlockFormation.cs" />
     <Compile Include="Controller\BlockWaveAI.cs" />
     <Compile Include="Controller\AIController.cs" />
     <Compile Include="ModelF\Alien.cs" />
