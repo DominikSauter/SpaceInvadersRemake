@@ -5,17 +5,13 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelF
 {
-    class ModelManager
+    class ModelManager : SpaceInvadersRemake.StateMachine.IModel
     {
-        public SpaceInvadersRemake.GameCourseManager GameCourseManager
+        private GameCourseManager gameCourseManager;
+
+        public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            throw new NotImplementedException();
         }
     }
 }
