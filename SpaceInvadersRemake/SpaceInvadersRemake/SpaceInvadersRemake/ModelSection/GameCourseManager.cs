@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.StateMachine;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.ModelSection
 {
     public class GameCourseManager
     {

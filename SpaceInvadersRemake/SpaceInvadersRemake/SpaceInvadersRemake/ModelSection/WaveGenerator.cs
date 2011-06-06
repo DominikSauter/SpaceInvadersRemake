@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
-namespace SpaceInvadersRemake.Generator
+namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
     /// Die Klasse dient dazu sich Gegner (<c>GameItem</c>) generieren zu lassen

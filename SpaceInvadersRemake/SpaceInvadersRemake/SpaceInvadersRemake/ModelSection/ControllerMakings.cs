@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SpaceInvadersRemake.Helper
+namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
     /// Diese Klasse dient dazu die gewünschten Controller Eigenschaften zu übergeben.
