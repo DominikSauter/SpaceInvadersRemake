@@ -120,7 +120,7 @@
   <ItemGroup>
     <Compile Include="ModelSection\ActivePowerUp.cs" />
     <Compile Include="ModelSection\GameCourse.cs" />
-    <Compile Include="ModelSection\ControllerMakings.cs" />
+    <Compile Include="ModelSection\ControllerParameters.cs" />
     <Compile Include="Controller\AIEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
     <Compile Include="Controller\Test.cs" />

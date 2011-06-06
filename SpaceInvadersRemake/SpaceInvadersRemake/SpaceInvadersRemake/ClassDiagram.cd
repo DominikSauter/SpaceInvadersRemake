@@ -542,7 +542,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.State">
     <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQACABAAAAAAQAEAAAANQAgIIAgAAgQAAAA=</HashCode>
+      <HashCode>AAAAAAAAAQACABAAAAAAQAEAAAANQAgIAAgAAgQAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -723,11 +723,11 @@
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
-  <Struct Name="SpaceInvadersRemake.ModelSection.ControllerMakings">
+  <Struct Name="SpaceInvadersRemake.ModelSection.ControllerParameters">
     <Position X="38.25" Y="20.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModelSection\ControllerMakings.cs</FileName>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\ControllerParameters.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="SpaceInvadersRemake.View.IView">
