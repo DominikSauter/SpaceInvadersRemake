@@ -11,7 +11,17 @@ namespace SpaceInvadersRemake.ModelSection
     {
         private List<IGameItem> currentWave;
         private IGameItem player;
-        private GameCourse gameCourse;
+
+        public GameCourse GameCourse
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         private void InitializeGame()
         {
