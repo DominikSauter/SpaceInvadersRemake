@@ -602,29 +602,8 @@
   <Class Name="SpaceInvadersRemake.ModelSection.DifficultyLevel">
     <Position X="34.5" Y="21.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEEAQAAAAAAAAABAAEAEA=</HashCode>
       <FileName>ModelSection\DifficultyLevel.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.EasyDifficulty">
-    <Position X="32.75" Y="23.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
-      <FileName>ModelSection\EasyDifficulty.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.MediumDifficulty">
-    <Position X="34.5" Y="23.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
-      <FileName>ModelSection\MediumDifficulty.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.HardDifficulty">
-    <Position X="36.25" Y="23.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAQAAAAAAAAAAAAEAEA=</HashCode>
-      <FileName>ModelSection\HardDifficulty.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.Controller.MothershipAI">

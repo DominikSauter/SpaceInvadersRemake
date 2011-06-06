@@ -12,7 +12,7 @@ namespace SpaceInvadersRemake.ModelSection
     /// <remarks>Abstrakte Fabrik</remarks>
     public static class FormationGenerator
     {
-        public static Array BlockFormation
+        public static Vector2[] BlockFormation
         {
             get
             {
@@ -23,7 +23,7 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
-        public static Array SkullFormation
+        public static Microsoft.Xna.Framework.Vector2[] SkullFormation
         {
             get
             {
@@ -48,8 +48,8 @@ namespace SpaceInvadersRemake.ModelSection
     public static class WaveGenerator
     {
         public static event EventHandler WaveGenerated;
-    
-        public static List<IGameItem> CreateWave(ControllerEnum AI, Array formation, DifficultyLevel difficultyLevel)
+
+        public static List<IGameItem> CreateWave(ControllerEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
         {
             throw new System.NotImplementedException();
             //SwitchCase über "Bestellung" 
