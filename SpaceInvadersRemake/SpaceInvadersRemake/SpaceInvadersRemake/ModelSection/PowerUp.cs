@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese abstrakte Klasse ist die Überklasse aller PowerUps.
+    /// </summary>
     public abstract class PowerUp : GameItem
     {
         private int Duration;

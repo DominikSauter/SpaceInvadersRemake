@@ -5,14 +5,12 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese Klasse stellt ein StaticShield-PowerUp dar. Dieses PowerUp verleiht dem Spieler ein Schild, das er im Spiel platzieren kann.
+    /// </summary>
     public class StaticShield : PowerUp
     {
         public override void Apply(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void Destroy()
         {
             throw new NotImplementedException();
         }

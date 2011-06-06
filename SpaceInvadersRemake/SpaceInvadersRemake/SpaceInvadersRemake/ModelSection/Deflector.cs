@@ -5,14 +5,12 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese Klasse stellt ein Deflector-PowerUp dar. Dieses PowerUp verbessert den Spieler, sodass er ein Schild hat, das einen Treffer absorbiert.
+    /// </summary>
     public class Deflector : PowerUp
     {
         public override void Apply(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void Destroy()
         {
             throw new NotImplementedException();
         }

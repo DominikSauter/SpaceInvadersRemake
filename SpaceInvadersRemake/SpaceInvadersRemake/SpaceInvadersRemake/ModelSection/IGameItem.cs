@@ -6,6 +6,9 @@ using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Dieses Interface muss von allen spielrelevanten Klassen implementiert werden.
+    /// </summary>
     public interface IGameItem
     {
         event EventHandler Hit;

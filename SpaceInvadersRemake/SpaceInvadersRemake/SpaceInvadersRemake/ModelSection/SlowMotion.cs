@@ -5,14 +5,12 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese Klasse stellt ein SlowMotion-PowerUp dar. Dieses PowerUp verlangsamt die Spielzeit.
+    /// </summary>
     public class SlowMotion : PowerUp
     {
         public override void Apply(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void Destroy()
         {
             throw new NotImplementedException();
         }

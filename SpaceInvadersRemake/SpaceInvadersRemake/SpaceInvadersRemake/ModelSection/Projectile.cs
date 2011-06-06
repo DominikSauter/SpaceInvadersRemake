@@ -31,11 +31,6 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
-        protected override void Destroy()
-        {
-            throw new NotImplementedException();
-        }
-
         public override event EventHandler Hit;
 
         public override event EventHandler Destroyed;
