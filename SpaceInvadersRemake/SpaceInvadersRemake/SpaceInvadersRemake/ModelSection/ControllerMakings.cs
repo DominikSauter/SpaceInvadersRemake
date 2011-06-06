@@ -5,9 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
-    // TODO: Was sind Controller-Eigenschaften (STST)
     /// <summary>
     /// Diese Klasse dient dazu die gewünschten Controller Eigenschaften zu übergeben.
+    /// // TODO: Was sind Controller-Eigenschaften (STST)
     /// </summary>
     /// <remarks>Indem man diese Struct dem Event Model Created mitgibt, steuert wann z.B. welche Controller Intelligens man haben möchte oder wie hoch die Schussfrequenz des Controllers sein soll.</remarks>
     public struct ControllerMakings
