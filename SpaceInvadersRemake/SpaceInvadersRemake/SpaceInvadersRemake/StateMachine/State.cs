@@ -6,13 +6,20 @@ using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    // TODO: Memento und Exit-Methoden; gibt es nicht 2 verschiedene Exit-Methoden
+
     /// <summary>
-    /// Stellt einen Programmzustand dar und tauscht dabei das MVC aus und hält die Bereiche ModelUpdate, ViewUpdate und ControllerUpdate zusammen.
+    /// Stellt einen Programmzustand dar und tauscht dabei das MVC aus. Des Weiteren werden die Bereiche Model, View und Controller zusammengehalten.
     /// </summary>
     /// <remarks>
-    /// Alle Programmzustände müssen von dieser Klasse ableiten.
-    /// Diese Unterklasse implementieren dann ihr eigenes MVC-Muster.
-    /// Um ein Zustandswechsel vorzunehmen wird <c>this.stateManager = newState</c> verwenden. Dieser Code kommt in eine extra Methode und kann dann vom MVC aufgerufen werden.
+    /// Hinweis zu diesem Abschnitt: In diesem Abschnitt ist mit dem Wort Bereich ein Teil der drei Bereiche im MVC gemeint.
+    /// Alle Programmzustände müssen von dieser Klasse ableiten. Diese Unterklasse implementieren dann ihr
+    /// eigenes MVC-Muster.
+    /// Zur Implementierung des MVC müssen die ModelInitialize, ViewInitialize und ControllerInitialize Methoden überschrieben werden, in der die Initialisierungsarbeiten der einzelnen Bereichen stehen.
+    /// Des Weiteren stehen die ModelUpdate, die ViewUpdate und die ControllerUpdate-Methode zur Verfügung, um einen von der Game-Klasse weitergereichten Aufruf in die einzelnen Bereiche zu senden.
+    /// TODO: Implementierungsanweisung für Exit
+    /// Für einen Zustandswechsel schreiben sie eine Methode im Erbe dieser Klasse mit folgendem Codeausschnitt:
+    /// <c>this.stateManager = newState;</c> Diese neue Methode kann dann vom MVC aufgerufen werden und welchselt dann den Zustand.
     /// </remarks>
     public abstract class State
     {
@@ -55,18 +62,27 @@ namespace SpaceInvadersRemake.StateMachine
             this.game = gameManager;
         }
 
+        /// <summary>
+        /// Haupteinstiegspunkt des Models.
+        /// </summary>
         public IModel Model
         {
             get;
             protected set;
         }
 
+        /// <summary>
+        /// Haupteinstiegspunkt des Controllers.
+        /// </summary>
         public IController Controller
         {
             get;
             protected set;
         }
 
+        /// <summary>
+        /// Haupteinstiegspunkt der View.
+        /// </summary>
         public IView View
         {
             get;
@@ -74,66 +90,69 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
-        /// Spricht den ControllerUpdate im vorgegebenen Takt an.
+        /// Spricht den Controller im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public void ControllerUpdate(GameTime gameTime)
+        public virtual void ControllerUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Spricht das ModelUpdate im vorgegebenen Takt an.
+        /// Spricht das Model im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public void ModelUpdate(GameTime gameTime)
+        public virtual void ModelUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Spricht das ModelUpdate im vorgegebenen Takt an.
+        /// Spricht die View im vorgegebenen Takt an.
         /// </summary>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public void ViewUpdate(GameTime gameTime)
+        public virtual void ViewUpdate(GameTime gameTime)
         {
             throw new System.NotImplementedException();
 }
 
         /// <summary>
-        /// Initialisierungsmethode für den ControllerUpdate.
+        /// Initialisierungsmethode für den Controller.
         /// </summary>
         protected abstract void ControllerInitialize();
 
         /// <summary>
-        /// Initialisierungsmethode für das ModelUpdate.
+        /// Initialisierungsmethode für das Model.
         /// </summary>
         protected abstract void ModelInitialize();
 
         /// <summary>
-        /// Initialisierungsmethode für die ViewUpdate.
+        /// Initialisierungsmethode für die View.
         /// </summary>
         protected abstract void ViewInitialize();
 
-        protected void ViewExit()
+        /// <summary>
+        /// TODO: Doku
+        /// </summary>
+        public virtual void ViewExit()
         {
             throw new System.NotImplementedException();
         }
 
-        protected void ControllerExit()
+        /// <summary>
+        /// TODO: Doku
+        /// </summary>
+        public virtual void ControllerExit()
         {
             throw new System.NotImplementedException();
         }
 
-        protected void ModelExit()
+        /// <summary>
+        /// TODO: Doku
+        /// </summary>
+        public virtual void ModelExit()
         {
             throw new System.NotImplementedException();
         }
-
-        protected void Exit()
-        {
-            throw new System.NotImplementedException();
-        }
-
     }
 }

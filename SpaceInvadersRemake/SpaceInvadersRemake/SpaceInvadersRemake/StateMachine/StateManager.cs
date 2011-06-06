@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.StateMachine
 {
     /// <summary>
-    /// Speichert den aktuelle State und gibt den Aufruf von der Game-Klasse weiter.
+    /// Speichert den aktuelle State und gibt die Aufrufe von der Game-Klasse weiter.
     /// </summary>
     /// <remarks>
     /// Diese Klasse existiert, weil eine Trennung zum XNA-Framework gewünscht war.
@@ -28,7 +28,15 @@ namespace SpaceInvadersRemake.StateMachine
         public State State
         {
             get;
-            set;
+            set
+            {
+                // TODO: vielleicht Probleme mit Memento
+                this.State.ControllerExit();
+                this.State.ModelExit();
+                this.State.ViewExit();
+
+                State = value;
+            }
         }
 
         /// <summary>
