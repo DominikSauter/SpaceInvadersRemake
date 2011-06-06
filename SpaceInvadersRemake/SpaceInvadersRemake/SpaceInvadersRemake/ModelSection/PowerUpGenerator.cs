@@ -5,16 +5,19 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
-    public class PowerUpGenerator
+    public static class PowerUpGenerator
     {
-        private List<IGameItem> gameItemList;
-    
-        public PowerUpGenerator(List<IGameItem> gameItemList)
-        {
-            throw new System.NotImplementedException();
-        }
-    
-        public void GeneratePowerUp(int type)
+        /// <summary>
+        /// Random-Objekt zur zufälligen generierung von PowerUps
+        /// </summary>
+        private static Random random;
+
+        /// <summary>
+        /// Diese Methode generiert auf Wunsch ein bestimmtes oder zufälliges PowerUp
+        /// </summary>
+        /// <remarks>Bei zufälliger Generierung wird kein StaticShield-PowerUp erzeugt.</remarks>
+        /// <param name="type">Typ des PowerUps</param>
+        public static void GeneratePowerUp(PowerUpEnum type)
         {
             throw new System.NotImplementedException();
         }

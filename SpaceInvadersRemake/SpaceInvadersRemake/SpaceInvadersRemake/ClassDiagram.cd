@@ -65,56 +65,56 @@
   <Class Name="SpaceInvadersRemake.ModelSection.PowerUp">
     <Position X="26" Y="27.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABACAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\PowerUp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.MultiShot">
     <Position X="24.25" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAIAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\MultiShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.PiercingShot">
     <Position X="20.75" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAIAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\PiercingShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Rapidfire">
     <Position X="22.5" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAIAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Rapidfire.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Speedboost">
     <Position X="26" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAIAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Speedboost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Deflector">
     <Position X="27.75" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAIAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Deflector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.SlowMotion">
     <Position X="31.25" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAIAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\SlowMotion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.StaticShield">
     <Position X="29.5" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAIAAJAAAAAAAAIABAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\StaticShield.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -157,7 +157,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.PowerUpGenerator">
     <Position X="25.75" Y="25.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAA=</HashCode>
       <FileName>ModelSection\PowerUpGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -508,23 +508,23 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.ActivePowerUp">
-    <Position X="28.25" Y="27.5" Width="1.5" />
+    <Position X="28.25" Y="27.25" Width="1.5" />
     <AssociationLine Name="Remove" Type="SpaceInvadersRemake.ModelSection.PowerUpAction" FixedFromPoint="true" FixedToPoint="true">
       <Path>
-        <Point X="29.75" Y="28.188" />
-        <Point X="30.125" Y="28.188" />
+        <Point X="29.75" Y="28.108" />
+        <Point X="30.125" Y="28.108" />
         <Point X="30.125" Y="28.153" />
         <Point X="31.5" Y="28.153" />
       </Path>
     </AssociationLine>
     <AssociationLine Name="Apply" Type="SpaceInvadersRemake.ModelSection.PowerUpAction" FixedFromPoint="true">
       <Path>
-        <Point X="29.75" Y="27.812" />
-        <Point X="31.5" Y="27.812" />
+        <Point X="29.75" Y="27.64" />
+        <Point X="31.5" Y="27.64" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAABAAAAAAAAAABAAAAAAABAAAAQAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ActivePowerUp.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
@@ -788,6 +788,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAACCAAAAAAAAAAgAAIA=</HashCode>
       <FileName>ModelSection\ProjectileTypeEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpaceInvadersRemake.ModelSection.PowerUpEnum">
+    <Position X="29.25" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAQAAAAAAACAAAAABABBABAAAAAAAAAIAA=</HashCode>
+      <FileName>ModelSection\PowerUpEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Delegate Name="SpaceInvadersRemake.ModelSection.PowerUpAction">
