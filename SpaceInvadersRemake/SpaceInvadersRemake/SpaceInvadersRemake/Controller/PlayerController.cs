@@ -13,7 +13,7 @@ namespace SpaceInvadersRemake.Controller
     {
 
         /// <summary>
-        ///   <c>Update</c>ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
+        ///   <c>Update</c>ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllees verhalten soll
         /// </summary>
         public override void Update()
         {
@@ -21,7 +21,7 @@ namespace SpaceInvadersRemake.Controller
         }
 
         /// <summary>
-        /// Entscheidet in welche Richtung sich das Controllee bewegen soll
+        /// Entscheidet in welche Richtung sich das Controllees bewegen soll
         /// </summary>
         /// <returns>
         /// 2D Richtungsvektor
@@ -32,7 +32,7 @@ namespace SpaceInvadersRemake.Controller
         }
 
         /// <summary>
-        /// Entscheidet ob Controllee schießen soll
+        /// Entscheidet ob Controllees schießen soll
         /// </summary>
         /// <returns>
         /// 	<c>true</c> = schießen andererseits <c>false</c>

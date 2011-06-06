@@ -21,7 +21,7 @@ namespace SpaceInvadersRemake.Controller
 
     
        /// <summary>
-       /// Eigenschaft Controllee (kontrollierte Objekt)
+       /// Eigenschaft Controllees (kontrollierte Objekt)
        /// </summary>
        /// <remarks>Eigenschaft in der das kontrollierte GameItem gespeichert ist.
        /// <c>get</c>
@@ -42,13 +42,13 @@ namespace SpaceInvadersRemake.Controller
 
     
         /// <summary>
-        /// Entscheidet in welche Richtung sich das Controllee bewegen soll
+        /// Entscheidet in welche Richtung sich das Controllees bewegen soll
         /// </summary>
         /// <returns>2D Richtungsvektor</returns>
         protected abstract Vector2 Movement();
 
         /// <summary>
-        /// Entscheided ob Controllee schießen soll
+        /// Entscheided ob Controllees schießen soll
         /// </summary>
         /// <c>true</c> = schießen andererseits <c>false</c>
         protected abstract bool Shooting();
@@ -59,7 +59,7 @@ namespace SpaceInvadersRemake.Controller
         /// Erlaubt die Ausführung der im Controller enthalten Spielmechanik.
         /// </summary>
         /// <remarks>Update ist die Methode, die  pro Frame aufgerufen wird,
-        /// damit entschieden wird wie sich Controllee verhalten soll
+        /// damit entschieden wird wie sich Controllees verhalten soll
         /// </remarks>
         /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>

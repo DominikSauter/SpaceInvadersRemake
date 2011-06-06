@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpaceInvadersRemake.Controller;
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -12,5 +13,37 @@ namespace SpaceInvadersRemake.ModelSection
     /// <remarks>Indem man diese Struct dem Event Model Created mitgibt, steuert wann z.B. welche Controller Intelligens man haben möchte oder wie hoch die Schussfrequenz des Controllers sein soll.</remarks>
     public struct ControllerMakings
     {
+        public ControllerEnum AI
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public List<IGameItem> Controllees
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public DifficultyLevel DifficultyLevel
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

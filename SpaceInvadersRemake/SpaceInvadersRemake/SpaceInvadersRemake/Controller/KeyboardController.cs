@@ -36,7 +36,7 @@ namespace SpaceInvadersRemake.Controller
         }
 
         /// <summary>
-        ///   <c>Update</c> ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllee verhalten soll
+        ///   <c>Update</c> ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllees verhalten soll
         /// </summary>
         public override void Update()
         {
@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.Controller
         }
 
         /// <summary>
-        /// Entscheided in welche Richtung sich das Controllee bewegen soll
+        /// Entscheided in welche Richtung sich das Controllees bewegen soll
         /// </summary>
         /// <remarks>Dies geschieht indem der Benutzer die Tasten für die Bewegungsrichtungen drückt.
         /// Welche Tasten dies sind, ist in der Eigenschaft <c>KBconfig</c> hinterlegt</remarks>
@@ -58,7 +58,7 @@ namespace SpaceInvadersRemake.Controller
         }
 
         /// <summary>
-        /// Entscheided ob Controllee schießen soll
+        /// Entscheided ob Controllees schießen soll
         /// </summary>
         /// <remarks>Dies geschieht indem der Benutzer die Taste für schießen drückt.
         /// Welche Taste dies ist, ist in der Eigenschaft <c>KBconfig</c> hinterlegt
