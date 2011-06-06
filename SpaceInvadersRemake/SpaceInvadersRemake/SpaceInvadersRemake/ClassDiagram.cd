@@ -121,7 +121,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Weapon">
     <Position X="5.75" Y="19.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQAAACAAAAAAAAAAACAEAAAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAQAAAACAAAAAAAAAACAEAAAAAAAAAIAAAAA=</HashCode>
       <FileName>ModelSection\Weapon.cs</FileName>
     </TypeIdentifier>
   </Class>

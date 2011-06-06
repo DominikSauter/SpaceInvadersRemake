@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Enumeration für die unterschiedlichen Projektiltypen zur Darstellung in der View.
+    /// </summary>
     public enum ProjectileTypeEnum
     {
         PlayerNormalProjectile,
