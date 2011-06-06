@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.StateMachine;
-using SpaceInvadersRemake.Helper;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.Controller
 {
