@@ -44,12 +44,6 @@ namespace SpaceInvadersRemake.ModelSection
             set;
         }
 
-        SpaceInvadersRemake.ModelHitsphere ModelHitsphere1
-        {
-            get;
-            set;
-        }
-
         void Move(Vector2 direction);
 
         void IsCollidedWith(IGameItem collisionPartner);
