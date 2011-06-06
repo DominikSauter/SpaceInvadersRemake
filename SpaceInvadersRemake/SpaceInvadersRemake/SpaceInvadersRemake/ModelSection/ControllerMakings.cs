@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    // TODO: Was sind Controller-Eigenschaften (STST)
     /// <summary>
     /// Diese Klasse dient dazu die gewünschten Controller Eigenschaften zu übergeben.
     /// </summary>

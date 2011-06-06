@@ -15,7 +15,7 @@ namespace SpaceInvadersRemake.Controller
     /// Die Controller-Eigenschaft hält alle Controller, die im Spiel sind.
     /// Im Architekturstil MVC fungiert sie als Controller.
     /// </remarks>
-class ControllerManager : IController
+public class ControllerManager : IController
     {
     public ControllerManager()
     {
