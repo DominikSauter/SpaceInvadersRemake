@@ -28,15 +28,7 @@ namespace SpaceInvadersRemake.StateMachine
         public State State
         {
             get;
-            set
-            {
-                // TODO: vielleicht Probleme mit Memento
-                this.State.ControllerExit();
-                this.State.ModelExit();
-                this.State.ViewExit();
-
-                State = value;
-            }
+            set;
         }
 
         /// <summary>

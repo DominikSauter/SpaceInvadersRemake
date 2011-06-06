@@ -10,5 +10,14 @@ namespace SpaceInvadersRemake.StateMachine
     /// </summary>
     public class InGameState : State
     {
+        /// <summary>
+        /// Wechselt in den BreakState.
+        /// </summary>
+        public void Break()
+        {
+            // PSEUDO:
+            // stateManager.State = newState;
+            // Dispose();
+        }
     }
 }

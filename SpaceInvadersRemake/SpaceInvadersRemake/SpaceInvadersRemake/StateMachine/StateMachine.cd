@@ -40,7 +40,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.InGameState">
     <Position X="10.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StateMachine\InGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -70,9 +70,10 @@
   <Class Name="SpaceInvadersRemake.StateMachine.State">
     <Position X="10.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAQACABAAAAAAQAEAAAANQAgIIAgAAgQAAAA=</HashCode>
+      <HashCode>AAAAAAAAASACABAAAAAAQAEAAAANQAgIAAgAAgQAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.StateManager">
     <Position X="6.75" Y="2.75" Width="1.5" />
@@ -100,25 +101,25 @@
       <Property Name="StateManager" />
     </ShowAsAssociation>
   </Class>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IStateView">
+  <Interface Name="SpaceInvadersRemake.StateMachine.IModel">
     <Position X="12.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IStateView.cs</FileName>
+      <FileName>StateMachine\IModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IStateModel">
+  <Interface Name="SpaceInvadersRemake.StateMachine.IView">
     <Position X="12.25" Y="6" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IStateModel.cs</FileName>
+      <FileName>StateMachine\IView.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Interface Name="SpaceInvadersRemake.StateMachine.IStateController">
+  <Interface Name="SpaceInvadersRemake.StateMachine.IController">
     <Position X="12.25" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>StateMachine\IStateController.cs</FileName>
+      <FileName>StateMachine\IController.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Font Name="Segoe UI" Size="9" />

@@ -6,22 +6,51 @@ using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.StateMachine
 {
-    // TODO: Memento und Exit-Methoden; gibt es nicht 2 verschiedene Exit-Methoden
-
     /// <summary>
-    /// Stellt einen Programmzustand dar und tauscht dabei das MVC aus. Des Weiteren werden die Bereiche Model, View und Controller zusammengehalten.
+    /// Stellt einen Programmzustand dar und tauscht dabei das MVC aus. Des Weiteren werden die Bereiche Model, 
+    /// View und Controller zusammengehalten.
     /// </summary>
     /// <remarks>
-    /// Hinweis zu diesem Abschnitt: In diesem Abschnitt ist mit dem Wort Bereich ein Teil der drei Bereiche im MVC gemeint.
-    /// Alle Programmzustände müssen von dieser Klasse ableiten. Diese Unterklasse implementieren dann ihr
-    /// eigenes MVC-Muster.
-    /// Zur Implementierung des MVC müssen die ModelInitialize, ViewInitialize und ControllerInitialize Methoden überschrieben werden, in der die Initialisierungsarbeiten der einzelnen Bereichen stehen.
-    /// Des Weiteren stehen die ModelUpdate, die ViewUpdate und die ControllerUpdate-Methode zur Verfügung, um einen von der Game-Klasse weitergereichten Aufruf in die einzelnen Bereiche zu senden.
-    /// TODO: Implementierungsanweisung für Exit
-    /// Für einen Zustandswechsel schreiben sie eine Methode im Erbe dieser Klasse mit folgendem Codeausschnitt:
-    /// <c>this.stateManager = newState;</c> Diese neue Methode kann dann vom MVC aufgerufen werden und welchselt dann den Zustand.
+    /// <para>Hinweis zu diesem Abschnitt: In diesem Abschnitt ist mit dem Wort Bereich ein Teil der drei Bereiche
+    /// im MVC gemeint.</para>
+    /// <para>Alle Programmzustände müssen von dieser Klasse ableiten. Diese Unterklasse implementieren dann ihr 
+    /// eigenes MVC-Muster.</para>
+    /// <para>Zur Implementierung des MVC müssen die ModelInitialize, ViewInitialize und ControllerInitialize 
+    /// Methoden überschrieben werden, in der die Initialisierungsarbeiten der einzelnen Bereichen stehen. Dabei 
+    /// müssen die Model-, View- und Controller-Eigenschaft gesetzt werden.</para>
+    /// <para>Des Weiteren stehen die ModelUpdate, die ViewUpdate und die ControllerUpdate-Methode zur Verfügung, 
+    /// um einen von der Game-Klasse weitergereichten Aufruf in die einzelnen Bereiche zu senden.</para>
+    /// <para>Für Zustandswechsel werden eigene Methoden in der Unterklasse geschrieben. Die dann vom MVC 
+    /// aufgerufen werden können und die Arbeit für einen Zustandswechsel vornehmen. Dabei gibt es zwei 
+    /// verschiedene Arten einen Zustandswechsel vorzunehmen. Entweder wird der alte Zustand gespeichert 
+    /// (Memento-Funktion) oder er wird verworfen und das Zustandsobjekt wird gelöscht (Zustandsverwerfung). 
+    /// Die Methode entscheidet über die Vorgehensweise. Diese Beiden sind im Beispiel dokumentiert.</para>
+    /// <para>Falls der Zustand entgültig gelöscht wurde, werden die ModelExit, die ViewExit und die ControllerExit 
+    /// Methoden aufgerufen, um die Arbeit in den einzelnen Bereiche zu erledigen.</para>
     /// </remarks>
-    public abstract class State
+    /// <example>
+    /// Dieses Beispiel zeigt einen Zustandswechsel mit Memento-Funktion in der Break-Methode und mit Zustandsverwerfung in der End-Methode.
+    /// <code>
+    /// InGameState : State
+    /// {
+    ///     // ...
+    ///     
+    ///     public void End()
+    ///     {
+    ///         HighscoreState newState = new HighscoreState(this.stateManager, this.game);
+    ///         this.stateMachine.State = newState;
+    ///         this.Dispose(); // für Zustandsverwerfung
+    ///     }
+    ///     
+    ///     public void Break()
+    ///     {
+    ///         BreakState newState = new BreakState(this.stateManager, this.game, this); // für Zustandsspeicherung
+    ///         this.stateMachine.State = newState;
+    ///     }
+    /// }
+    /// </code>
+    /// </example>
+    public abstract class State : IDisposable
     {
         /// <summary>
         /// Verweis auf den StateManager
@@ -41,9 +70,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
         /// </summary>
         /// <param name="stateManager">Referenz zum StateManager</param>
-        /// <param name="previousState">Vorheriger State oder null, falls keiner vorhanden oder nicht gespeichert werden soll.</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
-        public State(StateManager stateManager, State previousState, Game gameManager)
+        /// <param name="previousState">Vorheriger State oder null, falls keiner vorhanden oder nicht gespeichert werden soll.</param>
+        public State(StateManager stateManager, Game gameManager, State previousState)
         {
             this.stateManager = stateManager;
             this.previousState = previousState;
@@ -64,95 +93,123 @@ namespace SpaceInvadersRemake.StateMachine
 
         /// <summary>
         /// Haupteinstiegspunkt des Models.
+        /// Diese Eigenschaft darf nur von der Init-Methode geändert werden.
         /// </summary>
         public IModel Model
         {
             get;
-            protected set;
+            protected set; // DESIGN: muss, weil es sonst vom Konstruktor gesetzt werden müsste und nicht im dafür vorgesehender ModelInit-Methode.
         }
 
         /// <summary>
         /// Haupteinstiegspunkt des Controllers.
+        /// Diese Eigenschaft darf nur von der Init-Methode geändert werden.
         /// </summary>
         public IController Controller
         {
             get;
-            protected set;
+            protected set; // DESIGN: muss, weil es sonst vom Konstruktor gesetzt werden müsste und nicht im dafür vorgesehender ControllerInit-Methode.
         }
 
         /// <summary>
         /// Haupteinstiegspunkt der View.
+        /// Diese Eigenschaft darf nur von der Init-Methode geändert werden.
         /// </summary>
         public IView View
         {
             get;
-            protected set;
+            protected set; // DESIGN: muss, weil es sonst vom Konstruktor gesetzt werden müsste und nicht im dafür vorgesehender ViewInit-Methode.
         }
 
         /// <summary>
         /// Spricht den Controller im vorgegebenen Takt an.
         /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public virtual void ControllerUpdate(GameTime gameTime)
-        {
-            throw new System.NotImplementedException();
-        }
+        public virtual void ControllerUpdate(GameTime gameTime) { }
 
         /// <summary>
         /// Spricht das Model im vorgegebenen Takt an.
         /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public virtual void ModelUpdate(GameTime gameTime)
-        {
-            throw new System.NotImplementedException();
-        }
+        public virtual void ModelUpdate(GameTime gameTime) { }
 
         /// <summary>
         /// Spricht die View im vorgegebenen Takt an.
         /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public virtual void ViewUpdate(GameTime gameTime)
-        {
-            throw new System.NotImplementedException();
-}
+        public virtual void ViewUpdate(GameTime gameTime) { }
 
         /// <summary>
         /// Initialisierungsmethode für den Controller.
         /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
         protected abstract void ControllerInitialize();
 
         /// <summary>
         /// Initialisierungsmethode für das Model.
         /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
         protected abstract void ModelInitialize();
 
         /// <summary>
         /// Initialisierungsmethode für die View.
         /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
         protected abstract void ViewInitialize();
 
         /// <summary>
-        /// TODO: Doku
+        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich der View.
         /// </summary>
-        public virtual void ViewExit()
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
+        public virtual void ViewExit() { }
+
+        /// <summary>
+        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Controllers.
+        /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
+        public virtual void ControllerExit() { }
+
+        /// <summary>
+        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Models.
+        /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
+        public virtual void ModelExit() { }
+
+        public void Dispose()
         {
-            throw new System.NotImplementedException();
+            ModelExit();
+            ViewExit();
+            ControllerExit();
         }
 
         /// <summary>
-        /// TODO: Doku
+        /// TODO: doc
         /// </summary>
-        public virtual void ControllerExit()
+        public void Back()
         {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// TODO: Doku
-        /// </summary>
-        public virtual void ModelExit()
-        {
-            throw new System.NotImplementedException();
+            this.stateManager.State = this.previousState;
+            Dispose();
         }
     }
 }
