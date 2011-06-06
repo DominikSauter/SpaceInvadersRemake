@@ -17,7 +17,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Schriftart
         /// </summary>
-        public SpriteFont Font
+        public static SpriteFont Font
         {
             get
             {
@@ -31,7 +31,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Spiel Hintergrund
         /// </summary>
-        public Texture2D GameBackgroundImage
+        public static Texture2D GameBackgroundImage
         {
             get
             {
@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Menü Hintergrund
         /// </summary>
-        public Texture2D MenuBackgroundImage
+        public static Texture2D MenuBackgroundImage
         {
             get
             {
@@ -59,7 +59,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// HUD Hintergrund
         /// </summary>
-        public Texture2D HUDBackgroundTexture
+        public static Texture2D HUDBackgroundTexture
         {
             get
             {
@@ -73,7 +73,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Button Hintergrund
         /// </summary>
-        public Texture2D ButtonBackgroundTexture
+        public static Texture2D ButtonBackgroundTexture
         {
             get
             {
@@ -619,7 +619,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Lädt den Content aus der GameManager Klasse in die ViewContent Klasse
         /// </summary>
-        public void LoadContent()
+        public static void LoadContent()
         {
             throw new System.NotImplementedException();
         }

@@ -5,6 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
 {
@@ -27,7 +28,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Beinhaltet Objekte der Klasse ButtonRepresentation, die die einzelnen Buttons darstellen.
         /// </summary>
-        public SpaceInvadersRemake.ButtonRepresentation[] ButtonRepresentation
+        public ButtonRepresentation[] ButtonRepresentation
         {
             get
             {

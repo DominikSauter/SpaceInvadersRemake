@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation eines Projektils.
         /// </summary>
-        public void ProjectileRepresentation()
+        public ProjectileRepresentation()
         {
             throw new System.NotImplementedException();
         }
