@@ -5,10 +5,16 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese abstrakte Klasse ist die Überklasse von allen spielrelevanten Objekten.
+    /// </summary>
     public abstract class GameItem : IGameItem
     {
 
-        protected abstract void Destroy();
+        protected void Destroy()
+        {
+            throw new System.NotImplementedException();
+}
       
         public abstract event EventHandler Hit;
 

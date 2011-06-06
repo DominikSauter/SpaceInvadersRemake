@@ -5,14 +5,12 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese Klasse stellt ein MultiShot-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers, sodass diese mehrere Projektile auf einmal abfeuern kann.
+    /// </summary>
     public class MultiShot : PowerUp
     {
         public override void Apply(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void Destroy()
         {
             throw new NotImplementedException();
         }

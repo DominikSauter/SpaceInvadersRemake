@@ -7,10 +7,6 @@ namespace SpaceInvadersRemake.ModelSection
 {
     public class Shield : GameItem
     {
-        protected override void Destroy()
-        {
-            throw new NotImplementedException();
-        }
 
         public override event EventHandler Hit;
 

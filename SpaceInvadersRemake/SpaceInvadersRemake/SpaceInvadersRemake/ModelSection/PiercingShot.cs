@@ -5,14 +5,12 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese Klasse stellt ein PiercingShot-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers, sodass die Projektile einen Gegner durchschlagen können.
+    /// </summary>
     public class PiercingShot : PowerUp
     {
         public override void Apply(Player player)
-        {
-            throw new NotImplementedException();
-        }
-
-        protected override void Destroy()
         {
             throw new NotImplementedException();
         }
