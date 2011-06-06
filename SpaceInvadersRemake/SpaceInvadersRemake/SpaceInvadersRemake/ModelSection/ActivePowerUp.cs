@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -11,11 +12,20 @@ namespace SpaceInvadersRemake.ModelSection
     /// <remarks>Die Ausführung der PowerUps auf dem Spieler wird über die Delegates <code>Apply</code> und <code>Remove</code> gelöst. Die Funtionen müssen von den PowerUp-Unterklassen bereitgestellt werden.</remarks>
     public class ActivePowerUp
     {
+        /// <summary>
+        /// Erzeugt ein ActivePowerUp
+        /// </summary>
+        /// <param name="timeLeft">Die Wirkungsdauer des PowerUps</param>
+        /// <param name="apply">Die Funktion, mit der das PowerUp angewendet wird</param>
+        /// <param name="remove">Die Funktion, mit der das PowerUp rückgängig gemacht wird</param>
         public ActivePowerUp(float timeLeft, PowerUpAction apply, PowerUpAction remove)
         {
             throw new System.NotImplementedException();
         }
-    
+
+        /// <summary>
+        /// Die verbleibende Wirkungsdauer des PowerUps
+        /// </summary>
         public float TimeLeft
         {
             get
@@ -27,6 +37,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Die Funktion, mit der das PowerUp rückgängig gemacht wird
+        /// </summary>
         public PowerUpAction Remove
         {
             get
@@ -38,6 +51,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Die Funktion, mit der das PowerUp angewendet wird
+        /// </summary>
         public PowerUpAction Apply
         {
             get
@@ -47,6 +63,29 @@ namespace SpaceInvadersRemake.ModelSection
             set
             {
             }
+        }
+
+        /// <summary>
+        /// Der Typ des PowerUps
+        /// </summary>
+        public PowerUpEnum Type
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
+        /// Updatet das ActivePowerUp
+        /// </summary>
+        /// <param name="gameTime">aktuelle Spielzeit</param>
+        public void Update(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }

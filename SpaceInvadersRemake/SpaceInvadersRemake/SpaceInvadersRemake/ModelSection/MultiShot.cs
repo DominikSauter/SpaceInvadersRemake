@@ -40,5 +40,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             throw new NotImplementedException();
         }
+
+        private const float duration = 0.0f;
     }
 }
