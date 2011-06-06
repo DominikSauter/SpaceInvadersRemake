@@ -9,7 +9,17 @@ namespace SpaceInvadersRemake.ModelSection
     public class GameCourse
     {
         private GameTime waveStartingTime;
-        private int waveCounter;
+
+        public int WaveCounter
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public List<IGameItem> NextWave(GameTime gameTime)
         {

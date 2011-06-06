@@ -7,7 +7,16 @@ namespace SpaceInvadersRemake.ModelSection
 {
     class ModelManager : SpaceInvadersRemake.StateMachine.IModel
     {
-        private GameCourseManager gameCourseManager;
+        public GameCourseManager GameCourseManager
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
 
         public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
         {
