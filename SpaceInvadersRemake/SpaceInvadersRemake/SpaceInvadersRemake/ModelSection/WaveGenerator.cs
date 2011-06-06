@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.Controller;
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -38,7 +37,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Generiert eine FormationEnum von Gegnern 
        /// </summary>
        /// <returns></returns>
-        protected static List<IGameItem> CreateFormation(int hitpoints, Vector2 velocity, Array formation)
+        public static List<IGameItem> CreateFormation(int hitpoints, Vector2 velocity, Array formation)
         {
             throw new System.NotImplementedException();
 }
