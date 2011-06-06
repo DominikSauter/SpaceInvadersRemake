@@ -731,7 +731,6 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ModelHitsphere" />
-      <Property Name="ModelHitsphere1" />
     </ShowAsAssociation>
   </Interface>
   <Interface Name="SpaceInvadersRemake.View.IMediaplayer">
