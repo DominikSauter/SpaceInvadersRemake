@@ -55,11 +55,6 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
-        public override void Shoot()
-        {
-            throw new NotImplementedException();
-        }
-
         public override event EventHandler Created;
     }
 }

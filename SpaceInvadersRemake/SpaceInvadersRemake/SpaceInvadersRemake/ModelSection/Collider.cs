@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.ModelSection
     public static class Collider
     {
 
-        public static void CheckCollision(IGameItem CollisionPartner1, IGameItem CollisionPartner2)
+        private static void CheckCollision(IGameItem CollisionPartner1, IGameItem CollisionPartner2)
         {
             throw new System.NotImplementedException();
         }

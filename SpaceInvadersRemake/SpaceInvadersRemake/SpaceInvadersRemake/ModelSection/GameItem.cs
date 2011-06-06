@@ -61,7 +61,10 @@ namespace SpaceInvadersRemake.ModelSection
 
         public abstract void Update(Microsoft.Xna.Framework.GameTime gameTime);
 
-        public abstract void Shoot();
+        public virtual void Shoot()
+        {
+            throw new System.NotImplementedException();
+}
 
         public static List<IGameItem> GameItemList
         {

@@ -72,49 +72,49 @@
   <Class Name="SpaceInvadersRemake.ModelSection.MultiShot">
     <Position X="24.25" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\MultiShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.PiercingShot">
     <Position X="20.75" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\PiercingShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Rapidfire">
     <Position X="22.5" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Rapidfire.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Speedboost">
     <Position X="26" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Speedboost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Deflector">
     <Position X="27.75" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Deflector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.SlowMotion">
     <Position X="31.25" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\SlowMotion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.StaticShield">
     <Position X="29.5" Y="29.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAJAABAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAJAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\StaticShield.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -128,14 +128,14 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Projectile">
     <Position X="8" Y="27.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIABBAEAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAIABAAEAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Projectile.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Shield">
     <Position X="17.5" Y="27.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAIAAAAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -725,6 +725,7 @@
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="ModelHitsphere" />
+      <Property Name="ModelHitsphere1" />
     </ShowAsAssociation>
   </Interface>
   <Interface Name="SpaceInvadersRemake.View.IMediaplayer">
