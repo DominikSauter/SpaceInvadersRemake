@@ -6,30 +6,80 @@ using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.ModelSection
 {
-    public abstract class DifficultyLevel
+    public class DifficultyLevel
     {
-        public abstract int Hitpoints
+        private DifficultyLevel(int hitpoints, int shootingFrequency, Vector2 velocity, Vector2 velocityIncrease)
         {
-            get;
-            set;
+            throw new System.NotImplementedException();
+        }
+    
+        public int Hitpoints
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+}
+            set { }
         }
 
-        public abstract Vector2 Velocity
+        public Vector2 Velocity
         {
-            get;
-            set;
+            get
+            {
+                throw new System.NotImplementedException();
+}
+            set { }
         }
 
-        public abstract int ShootingFrequency
+        public int ShootingFrequency
         {
-            get;
-            set;
+            get
+            {
+                throw new System.NotImplementedException();
+}
+            set { }
         }
 
-        public abstract Vector2 VelocityIncrease
+        public Vector2 VelocityIncrease
         {
-            get;
-            set;
+            get
+            {
+                throw new System.NotImplementedException();
+}
+            set { }
+        }
+
+        public static DifficultyLevel EasyDifficulty
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static DifficultyLevel MediumDifficulty
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static DifficultyLevel HardDifficulty
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
     }
 }
