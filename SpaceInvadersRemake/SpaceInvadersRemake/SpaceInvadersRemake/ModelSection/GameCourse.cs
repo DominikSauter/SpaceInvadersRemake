@@ -40,7 +40,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Erzeugt eine neue Welle, d.h. eine Liste von Aliens, die durch einen Controller gesteuert werden. Die Abfolge der Wellen ist hier anhand des WaveCounters festgelegt. Die Methode setzt außerdem bei jedem Aufruf die "waveStartingTime" auf die aktuelle "gameTime".
+        /// Erzeugt eine neue Welle, d.h. eine Liste von Aliens, die durch einen Controllers gesteuert werden. Die Abfolge der Wellen ist hier anhand des WaveCounters festgelegt. Die Methode setzt außerdem bei jedem Aufruf die "waveStartingTime" auf die aktuelle "gameTime".
         /// </summary>
         public List<IGameItem> NextWave(GameTime gameTime)
         {

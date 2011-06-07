@@ -653,7 +653,7 @@
   <Class Name="SpaceInvadersRemake.Controller.ControllerManager">
     <Position X="44" Y="22" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAQAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ControllerManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -677,7 +677,7 @@
   <Class Name="SpaceInvadersRemake.Controller.WaveAI">
     <Position X="44" Y="33" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\WaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -736,7 +736,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.ControllerEventArgs">
-    <Position X="40.5" Y="20.5" Width="1.5" />
+    <Position X="40.5" Y="20.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ControllerParameters.cs</FileName>

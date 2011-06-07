@@ -38,7 +38,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controller beeinflusst werden kann.
+        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controllers beeinflusst werden kann.
         /// </summary>
         /// <param name="gameTime">Spielzeit</param>
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)

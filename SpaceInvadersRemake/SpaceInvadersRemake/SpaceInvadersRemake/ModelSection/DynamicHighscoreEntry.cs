@@ -6,7 +6,7 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt einen dynamischen Highscore-Eintrag dar. Dabei kann nur der Name durch einen Controller verändert werden, die Punktzahl nicht.
+    /// Diese Klasse stellt einen dynamischen Highscore-Eintrag dar. Dabei kann nur der Name durch einen Controllers verändert werden, die Punktzahl nicht.
     /// </summary>
     public class DynamicHighscoreEntry : HighscoreEntry
     {

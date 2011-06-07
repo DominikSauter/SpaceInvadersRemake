@@ -11,9 +11,9 @@ namespace SpaceInvadersRemake.Controller
         {
             ControllerManager cm = new ControllerManager();
 
-            // cm.Controller.Add(new Controller()); // TODO: Kontextsentiv???
+            // cm.Controllers.Add(new Controllers()); // TODO: Kontextsentiv???
 
-            cm.Controller.Add(new KeyboardController());
+            cm.Controllers.Add(new KeyboardController());
         }
     }
 }

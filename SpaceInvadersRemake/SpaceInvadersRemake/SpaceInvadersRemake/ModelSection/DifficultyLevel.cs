@@ -9,7 +9,7 @@ namespace SpaceInvadersRemake.ModelSection
     /// <summary>
     /// Enthält Parameter, die den Schwierigkeitsgrad festlegen.
     /// </summary>
-    /// <remarks>Die vier Parameter "Hitpoints", "Velocity" (für FormationGenerator relevant), sowie "ShootingFrequency" und "VelocityIncrease" (für Controller relevant) bestimmen den Schwierigkeitsgrad.</remarks>
+    /// <remarks>Die vier Parameter "Hitpoints", "Velocity" (für FormationGenerator relevant), sowie "ShootingFrequency" und "VelocityIncrease" (für Controllers relevant) bestimmen den Schwierigkeitsgrad.</remarks>
     public class DifficultyLevel
     {
         /// <summary>
