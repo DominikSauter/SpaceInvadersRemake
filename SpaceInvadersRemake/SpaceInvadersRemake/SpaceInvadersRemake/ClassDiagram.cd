@@ -648,7 +648,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.Controller.ControllerManager">
-    <Position X="43.75" Y="23.25" Width="1.75" />
+    <Position X="44" Y="22" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAQAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ControllerManager.cs</FileName>
@@ -656,11 +656,12 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.Controller.Controller">
-    <Position X="44" Y="26" Width="1.5" />
+    <Position X="43.25" Y="26.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAAAAAIAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\Controller.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.GameItemRepresentation">
     <Position X="27" Y="2.5" Width="1.5" />
@@ -729,6 +730,7 @@
       <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\MenuController.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.ControllerEventArgs">
     <Position X="40.5" Y="20.5" Width="1.5" />
@@ -783,6 +785,13 @@
       <FileName>StateMachine\IController.cs</FileName>
     </TypeIdentifier>
   </Interface>
+  <Interface Name="SpaceInvadersRemake.Controller.IComander">
+    <Position X="44.5" Y="24.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\IComander.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
   <Enum Name="SpaceInvadersRemake.ModelSection.ProjectileTypeEnum">
     <Position X="5.75" Y="28" Width="1.5" />
     <TypeIdentifier>
@@ -798,7 +807,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="SpaceInvadersRemake.ModelSection.ControllerEnum">
-    <Position X="46.25" Y="23.25" Width="2.5" />
+    <Position X="46.5" Y="22.25" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAACAAAAAAAAAAAAAAABAAAgAAAAABAAA=</HashCode>
       <FileName>ModelSection\ControllerEnum.cs</FileName>
