@@ -30,9 +30,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.Controller.ControllerManager">
-    <Position X="13" Y="0.5" Width="2.25" />
+    <Position X="12" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAQAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAQAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ControllerManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -72,8 +72,16 @@
       <FileName>Controller\AlienAI.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="SpaceInvadersRemake.Controller.MenuController">
+    <Position X="15" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\MenuController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
   <Interface Name="SpaceInvadersRemake.IGameItem">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+    <Position X="2.75" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AwQAAAAAAIAABAAgAAIAAAAAAAQAAAQAAAAAAAAEAIA=</HashCode>
       <FileName>ModelF\IGameItem.cs</FileName>
@@ -82,7 +90,7 @@
   <Enum Name="SpaceInvadersRemake.Controller.ControllerEnum">
     <Position X="6.5" Y="1" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAABAAAgAABAABAAA=</HashCode>
+      <HashCode>AAAAAAAAAABAACAAAAAAAAAAAAAAABAAAgAAAAABAAA=</HashCode>
       <FileName>Controller\AIEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
