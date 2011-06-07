@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -10,37 +8,61 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public class MultiShot : PowerUp
     {
+        /// <summary>
+        /// Diese Methode wird über ein "PowerUpAction"-Delegate in der "ActivePowerUp"-Klasse dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
+        /// </summary>
+        /// <param name="player">Der Spieler bei dem das PowerUp angewendet werden soll.</param>
         public override void Apply(Player player)
         {
             throw new NotImplementedException();
         }
 
-        public override event EventHandler Hit;
+        /// <summary>
+        /// Dieses Event wird ausgelöst, wenn ein Objekt der Klasse mit einem anderen Objekt kollidiert ist.
+        /// </summary>
+        public static event EventHandler Hit;
 
-        public override event EventHandler Destroyed;
+        /// <summary>
+        /// Dieses Event wird ausgelöst, wenn ein Objekt der Klasse zerstört wurde, d.h. dessen Lebenspunkte auf 0 gesunken sind.
+        /// </summary>
+        public static event EventHandler Destroyed;
 
-        public override void Move(Microsoft.Xna.Framework.Vector2 direction)
-        {
-            throw new NotImplementedException();
-        }
-
+        /// <summary>
+        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen.
+        /// </summary>
+        /// <param name="collisionPartner">Das GameItem mit die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
         }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
-        {
-            throw new NotImplementedException();
-        }
+        /// <summary>
+        /// Dieses Event wird ausgelöst, wenn ein neues Objekt dieser Klasse erzeugt wurde.
+        /// </summary>
+        public static event EventHandler Created;
 
-        public override event EventHandler Created;
-
+        /// <summary>
+        /// Diese Methode wird über ein "PowerUpAction"-Delegate in der "ActivePowerUp"-Klasse dazu benutzt den Effekt des PowerUps am Spieler rückgängig zu machen.
+        /// </summary>
+        /// <param name="player">Der Spieler bei dem das PowerUp entfernt werden soll.</param>
         public override void Remove(Player player)
         {
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Konstante, die die Wirkungsdauer des PowerUps festlegt
+        /// </summary>
         private const float duration = 0.0f;
+
+        /// <summary>
+        /// Erstellt ein MultiShot-PowerUp
+        /// </summary>
+        /// <param name="position">Startposition</param>
+        /// <param name="velocity">Geschwindigkeit</param>
+        public MultiShot(Vector2 position, Vector2 velocity)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

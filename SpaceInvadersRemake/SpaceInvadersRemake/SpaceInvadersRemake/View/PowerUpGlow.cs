@@ -18,7 +18,7 @@ namespace SpaceInvadersRemake.View
         /// Erstellt eine Partikel Engine für einen Glitzereffekt für PowerUps
         /// </summary>
         /// <param name="texture">Grafische Darstellung der Partikel</param>
-        /// <param name="location">Position des Partikel Emitters</param>
+        /// <param name="location">position des Partikel Emitters</param>
         /// <param name="size">Größe der dargestellten Partikel</param>
         public PowerUpGlow(Microsoft.Xna.Framework.Graphics.Texture2D texture, Vector2 location, float size)
         {
