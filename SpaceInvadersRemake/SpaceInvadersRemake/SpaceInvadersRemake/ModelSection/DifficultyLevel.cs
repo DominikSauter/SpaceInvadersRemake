@@ -6,13 +6,24 @@ using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Enthält Parameter, die den Schwierigkeitsgrad festlegen.
+    /// </summary>
+    /// <remarks>Die vier Parameter "Hitpoints", "Velocity" (für FormationGenerator relevant), sowie "ShootingFrequency" und "VelocityIncrease" (für Controller relevant) bestimmen den Schwierigkeitsgrad.</remarks>
     public class DifficultyLevel
     {
-        private DifficultyLevel(int hitpoints, int shootingFrequency, Vector2 velocity, Vector2 velocityIncrease)
+        /// <summary>
+        /// Konstruktor
+        /// </summary>
+        /// <remarks>Private deklariert.</remarks>
+        private DifficultyLevel(int hitpoints, Vector2 velocity, int shootingFrequency, Vector2 velocityIncrease)
         {
             throw new System.NotImplementedException();
         }
-    
+
+        /// <summary>
+        /// Schwierigkeitsspezifische Lebenspunkte der Aliens.
+        /// </summary>
         public int Hitpoints
         {
             get
@@ -22,6 +33,9 @@ namespace SpaceInvadersRemake.ModelSection
             set { }
         }
 
+        /// <summary>
+        /// Schwierigkeitsspezifische Geschwindigkeit der Aliens.
+        /// </summary>
         public Vector2 Velocity
         {
             get
@@ -31,6 +45,9 @@ namespace SpaceInvadersRemake.ModelSection
             set { }
         }
 
+        /// <summary>
+        /// Schwierigkeitsspezifische Schussfrequenz der Aliens.
+        /// </summary>
         public int ShootingFrequency
         {
             get
@@ -40,6 +57,9 @@ namespace SpaceInvadersRemake.ModelSection
             set { }
         }
 
+        /// <summary>
+        /// Schwierigkeitsspezifische Geschwindigkeitserhöhung der Aliens.
+        /// </summary>
         public Vector2 VelocityIncrease
         {
             get
@@ -49,6 +69,9 @@ namespace SpaceInvadersRemake.ModelSection
             set { }
         }
 
+        /// <summary>
+        /// Konfiguration der Parameter für die 1. Schwierigkeitsstufe ("leicht").
+        /// </summary>
         public static DifficultyLevel EasyDifficulty
         {
             get
@@ -60,6 +83,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Konfiguration der Parameter für die 2. Schwierigkeitsstufe ("mittel").
+        /// </summary>
         public static DifficultyLevel MediumDifficulty
         {
             get
@@ -71,6 +97,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Konfiguration der Parameter für die 3. Schwierigkeitsstufe ("schwer").
+        /// </summary>
         public static DifficultyLevel HardDifficulty
         {
             get

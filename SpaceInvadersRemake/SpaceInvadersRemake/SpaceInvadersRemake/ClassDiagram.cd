@@ -693,9 +693,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.FormationGenerator">
-    <Position X="33.25" Y="19" Width="1.5" />
+    <Position X="33" Y="18.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAACAgAA=</HashCode>
+      <HashCode>ABAAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAACAgAA=</HashCode>
       <FileName>ModelSection\WaveGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
