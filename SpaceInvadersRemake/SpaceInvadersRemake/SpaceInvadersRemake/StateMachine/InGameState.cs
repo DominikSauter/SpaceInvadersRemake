@@ -19,5 +19,12 @@ namespace SpaceInvadersRemake.StateMachine
             // stateManager.State = newState;
             // Dispose();
         }
+
+        public void Exit(int score)
+        {
+ 
+        }
+
+        
     }
 }

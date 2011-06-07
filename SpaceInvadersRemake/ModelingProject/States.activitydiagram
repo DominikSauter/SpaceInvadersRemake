@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="93b3182b-ebb8-4f33-b858-1e16e5033149" name="States" linkedPackageId="fd37792c-d38d-4483-82f0-e2978195be85" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="93b3182b-ebb8-4f33-b858-1e16e5033149" name="States" linkedPackageId="fd37792c-d38d-4483-82f0-e2978195be85" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="5fce2c1e-90b0-453d-8a73-799bb3f76850" name="States" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -76,6 +76,10 @@
               <controlFlow Id="93f3dc20-b62f-4abc-ba5e-96006eb0a06e" isLeaf="false">
                 <callBehaviorActionMoniker Id="3f279932-9495-4971-bcb2-68bcf1b0d3cb" LastKnownName="Options" />
                 <elementDefinition Id="d3f41751-97fa-4553-a27c-9d38cbfac339" />
+              </controlFlow>
+              <controlFlow Id="3fabb6f1-8e39-4155-937a-34cc3120cafb" isLeaf="false">
+                <opaqueActionMoniker Id="d3f9967a-4402-4e1a-b420-6375aa439377" LastKnownName="MainMenu" />
+                <elementDefinition Id="8bce646c-be3f-4ee2-a9d9-68fe019e87be" />
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>

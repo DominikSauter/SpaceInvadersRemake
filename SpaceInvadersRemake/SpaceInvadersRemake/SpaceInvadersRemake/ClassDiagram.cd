@@ -179,10 +179,13 @@
   <Class Name="SpaceInvadersRemake.View.ShieldRepresentation">
     <Position X="26" Y="8.25" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ShieldRepresentation.cs</FileName>
       <NewMemberFileName>ShieldRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Explosion" />
+    </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.View.ProjectileRepresentation">
     <Position X="28" Y="8.25" Width="2" />
@@ -572,7 +575,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.InGameState">
     <Position X="5.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAIAAAAAAAAAA=</HashCode>
       <FileName>StateMachine\InGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
