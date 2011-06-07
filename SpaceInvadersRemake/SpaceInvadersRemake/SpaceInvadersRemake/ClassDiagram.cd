@@ -199,6 +199,12 @@
         <Point X="32.25" Y="9.819" />
         <Point X="32.5" Y="9.819" />
         <Point X="32.5" Y="12.375" />
+        <Point X="32.542" Y="12.375" Type="JumpStart" />
+        <Point X="32.708" Y="12.375" Type="JumpEnd" />
+        <Point X="34.542" Y="12.375" Type="JumpStart" />
+        <Point X="34.708" Y="12.375" Type="JumpEnd" />
+        <Point X="36.542" Y="12.375" Type="JumpStart" />
+        <Point X="36.708" Y="12.375" Type="JumpEnd" />
         <Point X="39.135" Y="12.375" />
         <Point X="39.135" Y="12.75" />
       </Path>
@@ -726,13 +732,13 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Struct Name="SpaceInvadersRemake.ModelSection.ControllerParameters">
-    <Position X="38.25" Y="20.5" Width="1.5" />
+  <Class Name="SpaceInvadersRemake.ModelSection.ControllerEventArgs">
+    <Position X="40.5" Y="20.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ControllerParameters.cs</FileName>
     </TypeIdentifier>
-  </Struct>
+  </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="27" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -779,13 +785,6 @@
       <FileName>StateMachine\IController.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="SpaceInvadersRemake.Controller.ControllerEnum">
-    <Position X="46.25" Y="23.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAABAACAAAAAAAAAAAAAAABAAAgAAAAABAAA=</HashCode>
-      <FileName>Controller\AIEnum.cs</FileName>
-    </TypeIdentifier>
-  </Enum>
   <Enum Name="SpaceInvadersRemake.ModelSection.ProjectileTypeEnum">
     <Position X="5.75" Y="28" Width="1.5" />
     <TypeIdentifier>
@@ -798,6 +797,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAQAAAAAAACAAAAABABBABAAAAAAAAAIAA=</HashCode>
       <FileName>ModelSection\PowerUpEnum.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="SpaceInvadersRemake.ModelSection.ControllerEnum">
+    <Position X="46.25" Y="23.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAACAAAAAAAAAAAAAAABAAAgAAAAABAAA=</HashCode>
+      <FileName>ModelSection\ControllerEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Delegate Name="SpaceInvadersRemake.ModelSection.PowerUpAction">

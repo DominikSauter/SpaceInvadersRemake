@@ -36,15 +36,6 @@ namespace SpaceInvadersRemake.Controller
         }
 
         /// <summary>
-        ///   <c>Update</c> ist die Methode, die  pro Frame aufgerufen wird, damit entschieden wird wie sich Controllees verhalten soll
-        /// </summary>
-        public override void Update()
-        {
-            throw new NotImplementedException();
-           
-        }
-
-        /// <summary>
         /// Entscheided in welche Richtung sich das Controllees bewegen soll
         /// </summary>
         /// <remarks>Dies geschieht indem der Benutzer die Tasten für die Bewegungsrichtungen drückt.
@@ -71,6 +62,6 @@ namespace SpaceInvadersRemake.Controller
             throw new NotImplementedException();
         }
 
-       
+
     }
 }
