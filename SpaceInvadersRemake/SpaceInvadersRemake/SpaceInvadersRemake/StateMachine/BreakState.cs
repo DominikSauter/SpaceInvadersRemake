@@ -10,5 +10,6 @@ namespace SpaceInvadersRemake.StateMachine
     /// </summary>
     public class BreakState : State
     {
+        
     }
 }
