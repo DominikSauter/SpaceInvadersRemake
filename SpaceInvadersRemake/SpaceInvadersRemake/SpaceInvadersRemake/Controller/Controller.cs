@@ -15,7 +15,7 @@ namespace SpaceInvadersRemake.Controller
     /// Sie abstrahiert von den Controller-Verhaltensweisen Benutzer und Künstliche Intelligenz
     /// Um dies zutun benutzt sie das GameItem Interface.
     /// </remarks>
-    public abstract class Controller : SpaceInvadersRemake.StateMachine.IController
+    public abstract class Controller
     {
   
 
