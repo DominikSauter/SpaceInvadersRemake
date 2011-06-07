@@ -7,12 +7,14 @@ using SpaceInvadersRemake.Controller;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse dient dazu die gewünschten Controller Eigenschaften zu übergeben.
-    /// // TODO: Was sind Controller-Eigenschaften (STST)
+    /// Diese Struct dient der Parameterübergabe über das Event "WaveGenerated" der Klasse WaveGenerator. Sie enthält die gewünschte Controller-AI, eine Liste der zu kontrollierenden Aliens und das Schwierigkeitsgrad-Objekt.
     /// </summary>
-    /// <remarks>Indem man diese Struct dem Event Model Created mitgibt, steuert wann z.B. welche Controller Intelligens man haben möchte oder wie hoch die Schussfrequenz des Controllers sein soll.</remarks>
+    /// <remarks>Das Objekt für den Schwierigkeitsgrad enthält die zwei Parameter "ShootingFrequency" und "VelocityIncrease", die für den Controller bestimmt sind.</remarks>
     public struct ControllerParameters
     {
+        /// <summary>
+        /// Die gewünschte Controller-AI.
+        /// </summary>
         public ControllerEnum AI
         {
             get
@@ -24,6 +26,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Die Liste der zu kontrollierenden Aliens.
+        /// </summary>
         public List<IGameItem> Controllees
         {
             get
@@ -35,6 +40,10 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Objekt, das Parameter enthält, die den Schwierigkeitsgrad festlegen.
+        /// </summary>
+        /// <remarks>"ShootingFrequency" und "VelocityIncrease" sind für den Controller relevant.</remarks>
         public DifficultyLevel DifficultyLevel
         {
             get
