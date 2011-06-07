@@ -199,12 +199,6 @@
         <Point X="32.25" Y="9.819" />
         <Point X="32.5" Y="9.819" />
         <Point X="32.5" Y="12.375" />
-        <Point X="32.542" Y="12.375" Type="JumpStart" />
-        <Point X="32.708" Y="12.375" Type="JumpEnd" />
-        <Point X="34.542" Y="12.375" Type="JumpStart" />
-        <Point X="34.708" Y="12.375" Type="JumpEnd" />
-        <Point X="36.542" Y="12.375" Type="JumpStart" />
-        <Point X="36.708" Y="12.375" Type="JumpEnd" />
         <Point X="39.135" Y="12.375" />
         <Point X="39.135" Y="12.75" />
       </Path>
@@ -234,11 +228,11 @@
     <AssociationLine Name="PlayerShipEngine" Type="SpaceInvadersRemake.View.PlayerShipEngine" FixedFromPoint="true" FixedToPoint="true">
       <Path>
         <Point X="19.844" Y="10.703" />
-        <Point X="19.844" Y="16.223" />
-        <Point X="23.573" Y="16.223" Type="JumpStart" />
-        <Point X="23.739" Y="16.223" Type="JumpEnd" />
-        <Point X="34.26" Y="16.223" />
-        <Point X="34.26" Y="15.848" />
+        <Point X="19.844" Y="16.03" />
+        <Point X="23.573" Y="16.03" Type="JumpStart" />
+        <Point X="23.739" Y="16.03" Type="JumpEnd" />
+        <Point X="34.26" Y="16.03" />
+        <Point X="34.26" Y="15.656" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -441,7 +435,7 @@
         <Point X="23.656" Y="10.703" />
         <Point X="23.656" Y="16.479" />
         <Point X="36.625" Y="16.479" />
-        <Point X="36.625" Y="15.848" />
+        <Point X="36.625" Y="15.656" />
       </Path>
     </AssociationLine>
     <TypeIdentifier>
@@ -466,7 +460,7 @@
   <Class Name="SpaceInvadersRemake.View.SoundEffects">
     <Position X="38.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQgAAAAAAAAAAQAACAAAAEAgAAABAAAoAIAAAgAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAACAAAAEAAAAABAAAoAIAAAgAAAA=</HashCode>
       <FileName>View\SoundEffects.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -474,7 +468,7 @@
   <Class Name="SpaceInvadersRemake.View.BackgroundMusic">
     <Position X="40.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AACAAAAAAACAAAAAAAIAAQAAAAIAAAAAoAIAAAAAAAI=</HashCode>
+      <HashCode>AACAAAAAAACAAAAAAAIAAAAAAAAAAAAAoAIAAAAAAAI=</HashCode>
       <FileName>View\BackgroundMusic.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -482,28 +476,28 @@
   <Class Name="SpaceInvadersRemake.View.PlayerShipEngine">
     <Position X="33.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\PlayerShipEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.MothershipEngine">
     <Position X="35.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\MothershipEngine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.Explosion">
     <Position X="31.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\Explosion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.PowerUpGlow">
     <Position X="37.75" Y="12.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAQAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\PowerUpGlow.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -642,7 +636,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="24.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAYABAEAAAAAgAAAABEAQQAAAAAAAAAQAAEAAAAAACA=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

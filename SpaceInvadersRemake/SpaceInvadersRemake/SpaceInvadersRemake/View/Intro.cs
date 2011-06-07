@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace SpaceInvadersRemake.View
 {
@@ -36,14 +37,6 @@ namespace SpaceInvadersRemake.View
             {
                 throw new NotImplementedException();
             }
-        }
-
-        /// <summary>
-        /// Wiedergabe des Intros
-        /// </summary>
-        public void Play()
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -83,6 +76,30 @@ namespace SpaceInvadersRemake.View
         /// Setzt die Wiedergabe des Intros fort
         /// </summary>
         public void Resume()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe der Soundeffekte
+        /// </summary>
+        public void Play(SoundEffect SoundFX)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe der Hintergrundmusik
+        /// </summary>
+        public void Play(Song Background)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe des Intros
+        /// </summary>
+        public void Play(Video intro)
         {
             throw new NotImplementedException();
         }

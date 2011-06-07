@@ -43,7 +43,10 @@ namespace SpaceInvadersRemake.View
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
         /// <param name="gameTime">Zeitpunkt des Spiels, zu dem die <c>draw</c> Methode aufgerufen wird.</param>
-        public void Draw(GameTime gameTime);
+        public void Draw(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Erstellt ein ButtonRepresentation Objekt welches zu der Liste hinzugefügt wird.
