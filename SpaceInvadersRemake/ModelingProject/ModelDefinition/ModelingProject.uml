@@ -157,6 +157,14 @@
                   LastKnownName="Options"
                   LastKnownLocation="ModelingProject.uml" />
               </controlFlow>
+              <controlFlow
+                Id="8bce646c-be3f-4ee2-a9d9-68fe019e87be"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="3ff6c154-9aaf-4f5e-aafc-eb22bdd5620f"
+                  LastKnownName="MainMenu"
+                  LastKnownLocation="ModelingProject.uml" />
+              </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
           <activityFinalNode

@@ -20,6 +20,17 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
+        public Explosion Explosion
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();

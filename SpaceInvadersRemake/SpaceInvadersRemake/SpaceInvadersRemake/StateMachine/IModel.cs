@@ -10,8 +10,6 @@ namespace SpaceInvadersRemake.StateMachine
     /// </summary>
     public interface IModel
     {
-
-  
         /// <summary>
         /// Erlaubt die Ausführung der im Model enthalten Spielmechanik.
         /// </summary>
