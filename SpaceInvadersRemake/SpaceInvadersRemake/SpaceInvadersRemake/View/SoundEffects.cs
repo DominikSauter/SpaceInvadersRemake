@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace SpaceInvadersRemake.View
 {
@@ -31,14 +32,6 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Wiedergabe des Effekts
-        /// </summary>
-        public void Play()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Wahrheitswert, der festlegt ob ein Effekt wiederholt werden soll.
         /// true: Effekt wird wiederholt
         /// false: Effekt wird einmalig wiedergegeben
@@ -57,21 +50,6 @@ namespace SpaceInvadersRemake.View
 
         private SoundEffects fireWeapon;
         private SoundEffects dropPowerUp;
-
-        private void playPowerUp()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void playExplosion()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void playWeapon()
-        {
-            throw new System.NotImplementedException();
-        }
 
         /// <summary>
         /// Stoppt die Wiedergabe eines Sound Effekts
@@ -93,6 +71,30 @@ namespace SpaceInvadersRemake.View
         /// Setzt die Wiedergabe des Sound Effekts fort 
         /// </summary>
         public void Resume()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe der Soundeffekte
+        /// </summary>
+        public void Play(SoundEffect SoundFX)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe der Hintergrundmusik
+        /// </summary>
+        public void Play(Song Background)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe des Intros
+        /// </summary>
+        public void Play(Video intro)
         {
             throw new NotImplementedException();
         }

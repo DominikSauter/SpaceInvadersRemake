@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework.Media;
+using Microsoft.Xna.Framework.Audio;
 
 namespace SpaceInvadersRemake.View
 {
@@ -39,14 +40,6 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Wiedergabe der Hintergrundmusik
-        /// </summary>
-        public void Play()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Wahrheitswert für die Wiederholung der Hintergrundmusik.
         /// true: Hintergrundmusik wird wiederholt
         /// false: Hintergrundmusik wird einmalig abgespielt
@@ -64,16 +57,6 @@ namespace SpaceInvadersRemake.View
         }
 
         private Song gameSong;
-
-        private void playGameSong()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        private void playMenuSong()
-        {
-            throw new System.NotImplementedException();
-        }
 
         /// <summary>
         /// Stoppt die Wiedergabe der Hintergrundmusik
@@ -97,6 +80,30 @@ namespace SpaceInvadersRemake.View
         public void FadeOut()
         {
             throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe der Soundeffekte
+        /// </summary>
+        public void Play(SoundEffect SoundFX)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe der Hintergrundmusik
+        /// </summary>
+        public void Play(Song Background)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wiedergabe des Intros
+        /// </summary>
+        public void Play(Video intro)
+        {
+            throw new NotImplementedException();
         }
     }
 }

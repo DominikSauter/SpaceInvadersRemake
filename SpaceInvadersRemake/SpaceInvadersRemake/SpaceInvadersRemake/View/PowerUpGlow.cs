@@ -37,11 +37,6 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        private override Particle generateNewParticle()
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override void Update()
         {
             throw new NotImplementedException();

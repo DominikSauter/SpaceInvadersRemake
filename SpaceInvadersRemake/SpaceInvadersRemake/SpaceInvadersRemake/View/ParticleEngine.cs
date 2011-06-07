@@ -22,16 +22,11 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         abstract public Vector2 EmitterLocation
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
-        private abstract Particle generateNewParticle()
+        private Particle generateNewParticle()
         {
             throw new System.NotImplementedException();
         }
@@ -39,18 +34,12 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt (unter Verwendung von <c>generateNewParticle()</c>) und Zerstört Partikel
         /// </summary>
-        abstract public void Update()
-        {
-            throw new System.NotImplementedException();
-        }
+        abstract public void Update();
 
         /// <summary>
         /// Zeichnet alle Partikel indem es deren <c>Draw()</c> Methode aufruft.
         /// </summary>
         /// <param name="spriteBatch"></param>
-        abstract public void Draw(SpriteBatch spriteBatch)
-        {
-            throw new System.NotImplementedException();
-        }
+        abstract public void Draw(SpriteBatch spriteBatch);
     }
 }

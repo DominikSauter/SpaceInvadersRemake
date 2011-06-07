@@ -30,5 +30,60 @@ namespace SpaceInvadersRemake.View
         {
             throw new NotImplementedException();
         }
+
+        public void ShootFX()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void MothershipFX()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void ExplosionFX()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void KamikazeFX()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreatePlayer()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreateAlien()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreateMothership()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreateMiniboss()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreateShield()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreateProjectile()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void CreatePowerUp()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
