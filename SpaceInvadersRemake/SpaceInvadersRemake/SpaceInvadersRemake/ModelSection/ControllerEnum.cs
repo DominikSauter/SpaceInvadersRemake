@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace SpaceInvadersRemake.Controller
+namespace SpaceInvadersRemake.ModelSection
 {
+    
+    
     public enum ControllerEnum
     {
-        KeyboardController,
+        KeyboardController,//HACK Umbenennen in gewünschtes Verhalten bsp: statt BlockSwarmAI schreibe im BlockMovement -CK
         BlockSwarmAI,
         MinibossAI,
         AlienAI,
