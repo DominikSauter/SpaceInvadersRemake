@@ -15,7 +15,7 @@ namespace SpaceInvadersRemake.Controller
     /// Sie abstrahiert von den Controller-Verhaltensweisen Benutzer und Künstliche Intelligenz
     /// Um dies zutun benutzt sie das GameItem Interface.
     /// </remarks>
-    public abstract class Controller
+    public abstract class Controller : IComander
     {
   
 
@@ -65,6 +65,11 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void Update()
         {
             throw new NotImplementedException();
         }
