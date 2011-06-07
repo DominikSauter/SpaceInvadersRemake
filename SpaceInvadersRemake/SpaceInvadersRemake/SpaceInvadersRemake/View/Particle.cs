@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake.View
         /// Erzeugt einen einzelnen Partikel.
         /// </summary>
         /// <param name="texture">Grafische Darstellung</param>
-        /// <param name="position">Aktuelle Position</param>
+        /// <param name="position">Aktuelle position</param>
         /// <param name="projectileVelocity">Richtung und Bewegungsgeschwindigkeit</param>
         /// <param name="color">Farbe</param>
         /// <param name="size">Größe</param>
@@ -30,7 +30,7 @@ namespace SpaceInvadersRemake.View
         }
     
         /// <summary>
-        /// Aktuelle Position des Partikels
+        /// Aktuelle position des Partikels
         /// </summary>
         public Vector2 Position
         {

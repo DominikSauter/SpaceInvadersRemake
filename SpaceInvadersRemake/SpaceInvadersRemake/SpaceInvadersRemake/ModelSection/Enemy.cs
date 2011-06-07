@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Die abstrakte Oberklasse aller gegnerischen Raumschiffe im Spiel.
+    /// </summary>
     public abstract class Enemy : Ship
     {
     }

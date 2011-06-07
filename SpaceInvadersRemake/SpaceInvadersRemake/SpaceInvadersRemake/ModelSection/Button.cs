@@ -5,13 +5,23 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese Klasse stellt einen Button im Menü dar
+    /// </summary>
     public class Button
     {
+        /// <summary>
+        /// Erstellt einen Button
+        /// </summary>
+        /// <param name="text">Beschriftung</param>
         public Button(string text)
         {
             throw new System.NotImplementedException();
         }
-    
+
+        /// <summary>
+        /// Die Beschriftung des Buttons
+        /// </summary>
         public string Text
         {
             get
@@ -23,6 +33,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Zeigt an, ob der Button ausgewählt ist
+        /// </summary>
         public bool Active
         {
             get

@@ -5,6 +5,9 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese Klasse wird verwendet um PowerUps zu generieren
+    /// </summary>
     public static class PowerUpGenerator
     {
         /// <summary>

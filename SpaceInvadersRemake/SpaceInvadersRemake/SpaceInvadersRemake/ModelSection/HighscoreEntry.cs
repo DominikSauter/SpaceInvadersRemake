@@ -5,8 +5,14 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Abstrakte Oberklasse der Highscore-Einträge
+    /// </summary>
     public abstract class HighscoreEntry
     {
+        /// <summary>
+        /// Name des Spielers
+        /// </summary>
         public string Name
         {
             get
@@ -16,6 +22,9 @@ namespace SpaceInvadersRemake.ModelSection
             set { }
         }
 
+        /// <summary>
+        /// Erreichte Punktzahl
+        /// </summary>
         public int Score
         {
             get
