@@ -85,7 +85,7 @@ namespace SpaceInvadersRemake.ModelSection
         public abstract void IsCollidedWith(IGameItem collisionPartner);
 
         /// <summary>
-        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controller beeinflusst werden kann.
+        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controllers beeinflusst werden kann.
         /// </summary>
         /// <param name="gameTime">Spielzeit</param>
         public abstract void Update(Microsoft.Xna.Framework.GameTime gameTime);

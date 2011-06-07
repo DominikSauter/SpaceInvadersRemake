@@ -8,9 +8,9 @@ namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
     /// Diese Klasse dient der Parameterübergabe über das Event "WaveGenerated" der Klasse WaveGenerator.
-    /// Sie enthält die gewünschte Controller-AI, eine Liste der zu kontrollierenden Aliens und das Schwierigkeitsgrad-Objekt.
+    /// Sie enthält die gewünschte Controllers-AI, eine Liste der zu kontrollierenden Aliens und das Schwierigkeitsgrad-Objekt.
     /// </summary>
-    /// <remarks>Das Objekt für den Schwierigkeitsgrad enthält die zwei Parameter "ShootingFrequency" und "VelocityIncrease", die für den Controller bestimmt sind.</remarks>
+    /// <remarks>Das Objekt für den Schwierigkeitsgrad enthält die zwei Parameter "ShootingFrequency" und "VelocityIncrease", die für den Controllers bestimmt sind.</remarks>
     public class ControllerEventArgs: System.EventArgs
     {
         /// <summary>
@@ -44,7 +44,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Objekt, das Parameter enthält, die den Schwierigkeitsgrad festlegen.
         /// </summary>
-        /// <remarks>"ShootingFrequency" und "VelocityIncrease" sind für den Controller relevant.</remarks>
+        /// <remarks>"ShootingFrequency" und "VelocityIncrease" sind für den Controllers relevant.</remarks>
         public DifficultyLevel DifficultyLevel
         {
             get

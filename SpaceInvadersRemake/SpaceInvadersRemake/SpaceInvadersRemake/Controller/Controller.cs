@@ -12,7 +12,7 @@ namespace SpaceInvadersRemake.Controller
     /// Die abstrakte ControllerUpdate Klasse dafür zuständig die verschiedenen <c>GameItem</c> zu kontrollieren.
     /// </summary>
     /// <remarks> 
-    /// Sie abstrahiert von den Controller-Verhaltensweisen Benutzer und Künstliche Intelligenz
+    /// Sie abstrahiert von den Controllers-Verhaltensweisen Benutzer und Künstliche Intelligenz
     /// Um dies zutun benutzt sie das GameItem Interface.
     /// </remarks>
     public abstract class Controller : IComander
@@ -56,7 +56,7 @@ namespace SpaceInvadersRemake.Controller
 
 
         /// <summary>
-        /// Erlaubt die Ausführung der im Controller enthalten Spielmechanik.
+        /// Erlaubt die Ausführung der im Controllers enthalten Spielmechanik.
         /// </summary>
         /// <remarks>Update ist die Methode, die  pro Frame aufgerufen wird,
         /// damit entschieden wird wie sich Controllees verhalten soll

@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
 {
     /// <summary>
     /// Stellt einen Programmzustand dar und tauscht dabei das MVC aus. Des Weiteren werden die Bereiche Model, 
-    /// View und Controller zusammengehalten.
+    /// View und Controllers zusammengehalten.
     /// </summary>
     /// <remarks>
     /// <para>Hinweis zu diesem Abschnitt: In diesem Abschnitt ist mit dem Wort Bereich ein Teil der drei Bereiche
@@ -17,7 +17,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// eigenes MVC-Muster.</para>
     /// <para>Zur Implementierung des MVC müssen die ModelInitialize, ViewInitialize und ControllerInitialize 
     /// Methoden überschrieben werden, in der die Initialisierungsarbeiten der einzelnen Bereichen stehen. Dabei 
-    /// müssen die Model-, View- und Controller-Eigenschaft gesetzt werden.</para>
+    /// müssen die Model-, View- und Controllers-Eigenschaft gesetzt werden.</para>
     /// <para>Des Weiteren stehen die ModelUpdate, die ViewUpdate und die ControllerUpdate-Methode zur Verfügung, 
     /// um einen von der Game-Klasse weitergereichten Aufruf in die einzelnen Bereiche zu senden.</para>
     /// <para>Für Zustandswechsel werden eigene Methoden in der Unterklasse geschrieben. Die dann vom MVC 
@@ -124,7 +124,7 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
-        /// Spricht den Controller im vorgegebenen Takt an.
+        /// Spricht den Controllers im vorgegebenen Takt an.
         /// </summary>
         /// <remarks>
         /// Um den Aufruf muss sich nicht gekümmert werden.
@@ -151,7 +151,7 @@ namespace SpaceInvadersRemake.StateMachine
         public virtual void ViewUpdate(GameTime gameTime) { }
 
         /// <summary>
-        /// Initialisierungsmethode für den Controller.
+        /// Initialisierungsmethode für den Controllers.
         /// </summary>
         /// <remarks>
         /// Um den Aufruf muss sich nicht gekümmert werden.

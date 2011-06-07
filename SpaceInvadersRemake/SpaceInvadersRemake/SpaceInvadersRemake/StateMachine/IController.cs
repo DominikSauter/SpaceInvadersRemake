@@ -12,7 +12,7 @@ namespace SpaceInvadersRemake.StateMachine
     {
 
         /// <summary>
-        /// Erlaubt die Ausführung der im Controller enthalten Spielmechanik.
+        /// Erlaubt die Ausführung der im Controllers enthalten Spielmechanik.
         /// </summary>
         /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
