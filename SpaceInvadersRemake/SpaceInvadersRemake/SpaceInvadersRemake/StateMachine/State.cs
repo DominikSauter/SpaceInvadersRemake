@@ -29,7 +29,8 @@ namespace SpaceInvadersRemake.StateMachine
     /// Methoden aufgerufen, um die Arbeit in den einzelnen Bereiche zu erledigen.</para>
     /// </remarks>
     /// <example>
-    /// Dieses Beispiel zeigt einen Zustandswechsel mit Memento-Funktion in der Break-Methode und mit Zustandsverwerfung in der End-Methode.
+    /// Dieses Beispiel zeigt einen Zustandswechsel mit Memento-Funktion in der Break-Methode und mit 
+    /// Zustandsverwerfung in der End-Methode.
     /// <code>
     /// InGameState : State
     /// {
@@ -44,7 +45,8 @@ namespace SpaceInvadersRemake.StateMachine
     ///     
     ///     public void Break()
     ///     {
-    ///         BreakState newState = new BreakState(this.stateManager, this.game, this); // für Zustandsspeicherung
+    ///         // für Zustandsspeicherung
+    ///         BreakState newState = new BreakState(this.stateManager, this.game, this);
     ///         this.stateMachine.State = newState;
     ///     }
     /// }
@@ -93,7 +95,7 @@ namespace SpaceInvadersRemake.StateMachine
 
         /// <summary>
         /// Haupteinstiegspunkt des Models.
-        /// Diese Eigenschaft darf nur von der Init-Methode geändert werden.
+        /// Diese Eigenschaft darf nur von der ModelInitialise-Methode geändert werden.
         /// </summary>
         public IModel Model
         {
@@ -103,7 +105,7 @@ namespace SpaceInvadersRemake.StateMachine
 
         /// <summary>
         /// Haupteinstiegspunkt des Controllers.
-        /// Diese Eigenschaft darf nur von der Init-Methode geändert werden.
+        /// Diese Eigenschaft darf nur von der ControllerInitialise-Methode geändert werden.
         /// </summary>
         public IController Controller
         {
@@ -113,7 +115,7 @@ namespace SpaceInvadersRemake.StateMachine
 
         /// <summary>
         /// Haupteinstiegspunkt der View.
-        /// Diese Eigenschaft darf nur von der Init-Methode geändert werden.
+        /// Diese Eigenschaft darf nur von der ViewInitialise-Methode geändert werden.
         /// </summary>
         public IView View
         {
@@ -206,6 +208,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <summary>
         /// TODO: doc
         /// </summary>
+        /// <exception cref=""
         public void Back()
         {
             this.stateManager.State = this.previousState;
