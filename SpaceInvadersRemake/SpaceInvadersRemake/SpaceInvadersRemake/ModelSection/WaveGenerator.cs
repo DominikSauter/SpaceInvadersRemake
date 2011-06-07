@@ -83,11 +83,15 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public static class WaveGenerator
     {
+        
+        //UNDONE Klasse überprüfen wegen  Änderung nötig ! da struct als eventarg nicht funktioniert -CK
+ 
+
         /// <summary>
-        /// Übergibt die benötigten Parameter an den Controller über die Struct "ControllerParameters".
+        /// Übergibt die benötigten Parameter an den Controller über die "ControllerEventArgs".
         /// </summary>
         /// <remarks>Parameter sind: Gewünschte AI als Enum, Liste der Gegner-Objekte und Schwierigkeitsgrad-Objekt.</remarks>
-        public static event EventHandler WaveGenerated;
+        public static event EventHandler<ControllerEventArgs> WaveGenerated;
 
         /// <summary>
         /// Erzeugt eine neue Welle mit den Parametern AI, Formation und Schwierigkeitsgrad, und ruft danach das Event "WaveGenerated" auf, um dem Controller die gewünschten Controller-Eigenschaften mitzuteilen.

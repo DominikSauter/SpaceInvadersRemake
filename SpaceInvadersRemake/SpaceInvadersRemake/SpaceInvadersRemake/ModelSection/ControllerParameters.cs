@@ -7,15 +7,16 @@ using SpaceInvadersRemake.Controller;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Struct dient der Parameterübergabe über das Event "WaveGenerated" der Klasse WaveGenerator. Sie enthält die gewünschte Controller-AI, eine Liste der zu kontrollierenden Aliens und das Schwierigkeitsgrad-Objekt.
+    /// Diese Klasse dient der Parameterübergabe über das Event "WaveGenerated" der Klasse WaveGenerator.
+    /// Sie enthält die gewünschte Controller-AI, eine Liste der zu kontrollierenden Aliens und das Schwierigkeitsgrad-Objekt.
     /// </summary>
     /// <remarks>Das Objekt für den Schwierigkeitsgrad enthält die zwei Parameter "ShootingFrequency" und "VelocityIncrease", die für den Controller bestimmt sind.</remarks>
-    public struct ControllerParameters
+    public class ControllerEventArgs: System.EventArgs
     {
         /// <summary>
         /// Die gewünschte Controller-AI.
         /// </summary>
-        public ControllerEnum AI
+        public ControllerEnum AI 
         {
             get
             {
