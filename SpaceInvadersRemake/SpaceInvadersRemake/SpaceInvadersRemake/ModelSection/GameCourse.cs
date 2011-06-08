@@ -16,6 +16,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// Enthält die GameTime zum Zeitpunkt der Erstellung der letzten Welle.
         /// </summary>
         private GameTime waveStartingTime;
+        /// <summary>
+        /// Objekt um Zufallselemente einzubauen, z.B. zufällige Formationen oder das zufällige Auftauchen eines Mutterschiffs.
+        /// </summary>
+        private Random random;
 
         /// <summary>
         /// Konstruktor
