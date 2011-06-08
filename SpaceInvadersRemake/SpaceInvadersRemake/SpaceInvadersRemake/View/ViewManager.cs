@@ -109,7 +109,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public void CreatePlayer()
+        public PlayerRepresentation CreatePlayer()
         {
             throw new System.NotImplementedException();
         }
@@ -121,7 +121,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public void CreateAlien()
+        public AlienRepresentation CreateAlien()
         {
             throw new System.NotImplementedException();
         }
@@ -133,7 +133,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public void CreateMothership()
+        public MothershipRepresentation CreateMothership()
         {
             throw new System.NotImplementedException();
         }
@@ -145,7 +145,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public void CreateMiniboss()
+        public MinibossRepresentation CreateMiniboss()
         {
             throw new System.NotImplementedException();
         }
@@ -157,7 +157,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public void CreateShield()
+        public ShieldRepresentation CreateShield()
         {
             throw new System.NotImplementedException();
         }
@@ -169,7 +169,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public void CreateProjectile()
+        public ProjectileRepresentation CreateProjectile()
         {
             throw new System.NotImplementedException();
         }
@@ -181,7 +181,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public void CreatePowerUp()
+        public PowerUpRepresentation CreatePowerUp()
         {
             throw new System.NotImplementedException();
         }
