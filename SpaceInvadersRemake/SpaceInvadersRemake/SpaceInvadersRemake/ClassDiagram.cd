@@ -386,7 +386,7 @@
   <Class Name="SpaceInvadersRemake.Settings.Keyboard">
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAAFAAAACACAAAAAAAA=</HashCode>
+      <HashCode>AQAAAAIAAAAAAAAAAAAAIAAAAAAFAAAACACAAAAAAAI=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelHitsphere">
@@ -646,14 +646,6 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SpaceInvadersRemake.Controller.Controller">
-    <Position X="43.25" Y="26.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Controller\Controller.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="SpaceInvadersRemake.View.GameItemRepresentation">
     <Position X="27" Y="2.5" Width="1.5" />
     <TypeIdentifier>
@@ -729,6 +721,14 @@
       <HashCode>AQAAAAAAAAAAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ControllerParameters.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.Controller.Controller">
+    <Position X="43.25" Y="26.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAIAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Controller\Controller.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="27" Y="0.5" Width="1.5" />

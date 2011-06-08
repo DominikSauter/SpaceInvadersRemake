@@ -25,6 +25,9 @@ namespace SpaceInvadersRemake.Controller
     class MenuController : IComander
     {
 
+        /// <summary>
+        /// Erlaubt die Ausführung der Steuerung.
+        /// </summary>
         public void Update()
         {
             throw new NotImplementedException();

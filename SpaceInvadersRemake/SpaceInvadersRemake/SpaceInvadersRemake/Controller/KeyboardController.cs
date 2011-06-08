@@ -12,18 +12,24 @@ namespace SpaceInvadersRemake.Controller
     /// <summary>
     /// Diese Klasse stellt die konkrete Benutzereingabe mithilfe der Tastatur.
     /// </summary>
-    /// <remarks>In dieser Klasse wird das Verhalten des Controllers vom einem menschlichen Benutzers
+    /// <remarks>In dieser Klasse wird das Verhalten des Controllers vom einem menschlichen Benutzer
     /// mithilfe der Tastatur bestimmt</remarks>
     public class KeyboardController : PlayerController
     {
+        public KeyboardController()
+        {
+            throw new System.NotImplementedException();
+        }
 
        
 
 
         /// <summary>
-        /// Eigenschaft der Tastatur Konfiguration
+        /// Getter/Setter der Tastatur Konfiguration
         /// </summary>
-        /// 
+        /// <value>
+        /// Die KBconfig.
+        /// </value>
         public Settings.Keyboard KBconfig
         {
             get
