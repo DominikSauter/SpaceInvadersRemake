@@ -119,6 +119,10 @@
   <ItemGroup>
     <Compile Include="Controller\ICommander.cs" />
     <Compile Include="Controller\MenuController.cs" />
+    <Compile Include="ModelSection\ListSelect.cs" />
+    <Compile Include="ModelSection\MenuControl.cs" />
+    <Compile Include="ModelSection\HighscoreManager.cs" />
+    <Compile Include="ModelSection\Menu.cs" />
     <Compile Include="ModelSection\ActivePowerUp.cs" />
     <Compile Include="ModelSection\FormationGenerator.cs" />
     <Compile Include="ModelSection\GameCourse.cs" />
@@ -172,7 +176,6 @@
     <Compile Include="ModelSection\Collider.cs" />
     <Compile Include="Controller\Controller.cs" />
     <Compile Include="ModelSection\CoordinateConstants.cs" />
-    <Compile Include="ModelSection\DynamicHighscoreEntry.cs" />
     <Compile Include="ModelSection\HighscoreEntry.cs" />
     <Compile Include="ModelSection\MultiShotWeapon.cs" />
     <Compile Include="ModelSection\PiercingShotWeapon.cs" />
@@ -182,7 +185,6 @@
     <Compile Include="StateMachine\MainMenuState.cs" />
     <Compile Include="StateMachine\StateManager.cs" />
     <Compile Include="StateMachine\VideoOptionsState.cs" />
-    <Compile Include="ModelSection\StaticHighscoreEntry.cs" />
     <Compile Include="Controller\KeyboardController.cs" />
     <Compile Include="Controller\PlayerController.cs" />
     <Compile Include="ModelSection\StaticShieldWeapon.cs" />

@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert die Highscoreoberfläche
         /// </summary>
-        /// <param name="buttonLabels">Beschriftungen der Buttons</param>
+        /// <param name="buttonLabels">Beschriftungen der Controls</param>
         public HighscoreUI(string[] buttonLabels)
         {
             throw new System.NotImplementedException();

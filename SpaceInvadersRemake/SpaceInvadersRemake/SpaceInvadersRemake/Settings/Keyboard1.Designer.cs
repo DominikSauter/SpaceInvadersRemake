@@ -25,25 +25,25 @@ namespace SpaceInvadersRemake.Settings {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Left")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Down")]
         public global::Microsoft.Xna.Framework.Input.Keys Left {
             get {
-                return ((global::Microsoft.Xna.Framework.Input.Keys)(this["Left"]));
+                return ((global::Microsoft.Xna.Framework.Input.Keys)(this["Down"]));
             }
             set {
-                this["Left"] = value;
+                this["Down"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Right")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Up")]
         public global::Microsoft.Xna.Framework.Input.Keys Right {
             get {
-                return ((global::Microsoft.Xna.Framework.Input.Keys)(this["Right"]));
+                return ((global::Microsoft.Xna.Framework.Input.Keys)(this["Up"]));
             }
             set {
-                this["Right"] = value;
+                this["Up"] = value;
             }
         }
         

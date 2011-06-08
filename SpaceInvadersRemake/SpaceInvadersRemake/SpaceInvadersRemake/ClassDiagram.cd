@@ -190,31 +190,17 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Button">
-    <Position X="23.75" Y="19.5" Width="1.5" />
+    <Position X="12" Y="19.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAACAAAAAA=</HashCode>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAQ=</HashCode>
       <FileName>ModelSection\Button.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.StaticHighscoreEntry">
-    <Position X="25.5" Y="21.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>ModelSection\StaticHighscoreEntry.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.HighscoreEntry">
-    <Position X="27" Y="19.75" Width="1.5" />
+    <Position X="17.75" Y="16.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\HighscoreEntry.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.DynamicHighscoreEntry">
-    <Position X="28" Y="21.75" Width="2" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
-      <FileName>ModelSection\DynamicHighscoreEntry.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.MultiShotWeapon">
@@ -492,14 +478,44 @@
       <FileName>ModelSection\CoordinateConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.View.PlayerRepresentation">
-    <Position X="22.5" Y="9" Width="1.75" />
+  <Class Name="SpaceInvadersRemake.ModelSection.Menu">
+    <Position X="14.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAgAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAAAY=</HashCode>
+      <FileName>ModelSection\Menu.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.HighscoreManager">
+    <Position X="17.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\HighscoreManager.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.MenuControl">
+    <Position X="13" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCACACAAAAAQ=</HashCode>
+      <FileName>ModelSection\MenuControl.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.ListSelect&lt;T&gt;">
+    <Position X="14" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAQ=</HashCode>
+      <FileName>ModelSection\ListSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="SpaceInvadersRemake.View.IView">
+    <Position X="27" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAgAAAAAAAAAFIAAAACAAAAAAAAAIQAA=</HashCode>
       <FileName>View\PlayerRepresentation.cs</FileName>
       <NewMemberFileName>PlayerRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
-  </Class>
+  </Interface>
   <Class Name="SpaceInvadersRemake.View.MothershipRepresentation">
     <Position X="26.5" Y="9" Width="2.25" />
     <TypeIdentifier>
