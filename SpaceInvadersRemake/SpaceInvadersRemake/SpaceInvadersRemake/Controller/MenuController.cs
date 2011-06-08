@@ -24,6 +24,13 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     class MenuController : ICommander
     {
+        /// <summary>
+        /// Generiert eine neue Instanz der <see cref="MenuController"/> Klasse.
+        /// </summary>
+        public MenuController()
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Erlaubt die Ausführung der Steuerung.

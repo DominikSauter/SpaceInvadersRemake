@@ -16,6 +16,9 @@ namespace SpaceInvadersRemake.Controller
     /// mithilfe der Tastatur bestimmt</remarks>
     public class KeyboardController : PlayerController
     {
+        /// <summary>
+        /// Generiert eine neue Instanz der <see cref="KeyboardController"/> Klasse.
+        /// </summary>
         public KeyboardController()
         {
             throw new System.NotImplementedException();
@@ -51,7 +54,9 @@ namespace SpaceInvadersRemake.Controller
         /// </returns>
         protected override Vector2 Movement()
         {
-            throw new NotImplementedException();
+
+            
+             throw new NotImplementedException();
         }
 
         /// <summary>

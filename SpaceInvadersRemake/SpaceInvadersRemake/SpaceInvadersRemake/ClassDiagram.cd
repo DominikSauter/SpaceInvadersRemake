@@ -412,7 +412,7 @@
   <Class Name="SpaceInvadersRemake.Controller.BlockWaveAI">
     <Position X="43" Y="36" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAgABAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\BlockWaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>

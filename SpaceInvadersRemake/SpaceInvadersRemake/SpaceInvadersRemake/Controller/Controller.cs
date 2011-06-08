@@ -9,7 +9,7 @@ namespace SpaceInvadersRemake.Controller
 {
 
     /// <summary>
-    /// Die abstrakte ControllerUpdate Klasse ist dafür zuständig die verschiedenen <c>GameItem</c> zu kontrollieren.
+    /// Die abstrakte Controller Klasse ist dafür zuständig die verschiedenen <c>GameItem</c> zu kontrollieren.
     /// </summary>
     /// <remarks> 
     /// Sie abstrahiert von den Controller-Verhaltensweisen Benutzer und Künstliche Intelligenz im GameState
@@ -29,7 +29,7 @@ namespace SpaceInvadersRemake.Controller
        /// <remarks>Eigenschaft in der das kontrollierte GameItem gespeichert ist.
        /// <c>get</c>
        /// <c>set</c>setzt ein IGameItem als kontrolliertes GameItem ein.</remarks>
-        public IGameItem Controllee
+        public virtual IGameItem Controllee
         {
             get
             {
