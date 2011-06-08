@@ -11,6 +11,10 @@ namespace SpaceInvadersRemake.Controller
     /// </summary>
     public class BlockWaveAI : WaveAI
     {
+        public BlockWaveAI()
+        {
+            throw new System.NotImplementedException();
+        }
 
         /// <summary>
         /// Entscheidet in welche Richtung sich das Controllees bewegen soll

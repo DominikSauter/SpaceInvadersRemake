@@ -9,11 +9,14 @@ namespace SpaceInvadersRemake.Controller
 {
 
     /// <summary>
-    /// Die abstrakte ControllerUpdate Klasse dafür zuständig die verschiedenen <c>GameItem</c> zu kontrollieren.
+    /// Die abstrakte ControllerUpdate Klasse ist dafür zuständig die verschiedenen <c>GameItem</c> zu kontrollieren.
     /// </summary>
     /// <remarks> 
-    /// Sie abstrahiert von den Controllers-Verhaltensweisen Benutzer und Künstliche Intelligenz
+    /// Sie abstrahiert von den Controller-Verhaltensweisen Benutzer und Künstliche Intelligenz im GameState
     /// Um dies zutun benutzt sie das GameItem Interface.
+    /// Von dieser Klasse ist nicht zu erben, sondern von ihren Unterklassen.
+    /// <see cref="PlayerController"/>
+    /// <see cref="AIController"/>
     /// </remarks>
     public abstract class Controller : IComander
     {
@@ -53,22 +56,9 @@ namespace SpaceInvadersRemake.Controller
         /// <c>true</c> = schießen andererseits <c>false</c>
         protected abstract bool Shooting();
 
-
-
         /// <summary>
-        /// Erlaubt die Ausführung der im Controllers enthalten Spielmechanik.
+        /// Erlaubt die Ausführung der Steuerung.
         /// </summary>
-        /// <remarks>SpecialEvent ist die Methode, die  pro Frame aufgerufen wird,
-        /// damit entschieden wird wie sich Controllees verhalten soll
-        /// </remarks>
-        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
-        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
-        /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
-        public void Update(Game game, GameTime gameTime, StateMachine.State state)
-        {
-            throw new NotImplementedException();
-        }
-
         public void Update()
         {
             throw new NotImplementedException();
