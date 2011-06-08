@@ -12,6 +12,17 @@ namespace SpaceInvadersRemake.View
     {
         private Texture2D texture;
 
+        public ModelSection.Projectile ProjectileGameItem
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();

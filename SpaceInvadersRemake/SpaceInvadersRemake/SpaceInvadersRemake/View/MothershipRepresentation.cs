@@ -43,6 +43,17 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        public ModelSection.Mothership MothershipGameItem
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();

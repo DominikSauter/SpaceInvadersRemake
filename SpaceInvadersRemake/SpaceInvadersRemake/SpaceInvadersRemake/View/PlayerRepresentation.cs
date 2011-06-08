@@ -44,6 +44,17 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        public ModelSection.Player PlayerGameItem
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();

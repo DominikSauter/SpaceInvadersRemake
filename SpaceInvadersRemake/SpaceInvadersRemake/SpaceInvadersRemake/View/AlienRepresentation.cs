@@ -32,6 +32,17 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        public ModelSection.Alien AlienGameItem
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();

@@ -31,6 +31,17 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        public ModelSection.Shield ShieldGameItem
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();
