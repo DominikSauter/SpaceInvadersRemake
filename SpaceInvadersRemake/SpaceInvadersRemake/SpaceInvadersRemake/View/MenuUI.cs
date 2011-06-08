@@ -19,14 +19,14 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert die Menüoberfläche
         /// </summary>
-        /// <param name="buttonLabels">Beschriftungen der Buttons</param>
+        /// <param name="buttonLabels">Beschriftungen der Controls</param>
         public MenuUI(string[] buttonLabels)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Beinhaltet Objekte der Klasse ButtonRepresentation, die die einzelnen Buttons darstellen.
+        /// Beinhaltet Objekte der Klasse ButtonRepresentation, die die einzelnen Controls darstellen.
         /// </summary>
         public ButtonRepresentation[] ButtonRepresentation
         {

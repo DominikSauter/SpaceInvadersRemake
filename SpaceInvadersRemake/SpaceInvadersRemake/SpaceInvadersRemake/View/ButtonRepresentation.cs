@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
-    /// Diese Klasse kümmert sich um die Darstellung eines Buttons.
+    /// Diese Klasse kümmert sich um die Darstellung eines Controls.
     /// </summary>
     public class ButtonRepresentation
     {

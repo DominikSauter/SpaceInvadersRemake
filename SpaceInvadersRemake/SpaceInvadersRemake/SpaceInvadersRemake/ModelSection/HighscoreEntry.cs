@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.ModelSection
     /// <summary>
     /// Abstrakte Oberklasse der Highscore-Einträge
     /// </summary>
-    public abstract class HighscoreEntry
+    public class HighscoreEntry
     {
         /// <summary>
         /// Name des Spielers
