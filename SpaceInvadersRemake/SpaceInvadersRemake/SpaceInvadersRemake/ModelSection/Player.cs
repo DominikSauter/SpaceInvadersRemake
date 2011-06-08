@@ -139,5 +139,15 @@ namespace SpaceInvadersRemake.ModelSection
         {
             throw new System.NotImplementedException();
         }
+
+        /// <summary>
+        /// Fügt der Punktzahl des Spielers Punkte hinzu. Wird verwendet um sich am "ScoreGained"-Event der Gegner anzumelden.
+        /// </summary>
+        /// <param name="enemy">Gegner der das Event ausgelöst hat</param>
+        /// <param name="e">EventArgs werden nich verwendet</param>
+        public void AddScore(Object enemy, EventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
