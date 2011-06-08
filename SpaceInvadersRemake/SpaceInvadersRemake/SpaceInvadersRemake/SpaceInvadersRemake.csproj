@@ -118,7 +118,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controller\IComander.cs" />
+    <Compile Include="Controller\ICommander.cs" />
     <Compile Include="Controller\MenuController.cs" />
     <Compile Include="ModelSection\ActivePowerUp.cs" />
     <Compile Include="ModelSection\FormationGenerator.cs" />

@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.Controller
     /// <summary>
     /// Muss von allen Klassen implementiert werden, die ein etwas kontrollieren.
     /// </summary>
-    interface IComander
+    public interface ICommander
     {
         /// <summary>
         /// Erlaubt die Ausführung der Steuerung.

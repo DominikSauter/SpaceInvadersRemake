@@ -41,7 +41,7 @@ public class ControllerManager : IController
     /// <value>
     /// Die Liste der Controller.
     /// </value>
-    public ICollection<IComander> Controllers
+    public ICollection<ICommander> Controllers
     {
         get
         {
