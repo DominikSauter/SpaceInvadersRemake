@@ -3,14 +3,14 @@
   <Class Name="SpaceInvadersRemake.StateMachine.AudioOptionsState">
     <Position X="1.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\AudioOptionsState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.VideoOptionsState">
     <Position X="8.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\VideoOptionsState.cs</FileName>
       <NewMemberFileName>VideoOptionsState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -18,14 +18,14 @@
   <Class Name="SpaceInvadersRemake.StateMachine.BreakState">
     <Position X="12.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\BreakState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.CreditsState">
     <Position X="17.25" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\CreditsState.cs</FileName>
       <NewMemberFileName>CreditsState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -33,21 +33,21 @@
   <Class Name="SpaceInvadersRemake.StateMachine.HighscoreState">
     <Position X="3.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\HighscoreState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.InGameState">
     <Position X="10.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAEQAAAIAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\InGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.IntroState">
     <Position X="15" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\IntroState.cs</FileName>
       <NewMemberFileName>IntroState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -55,7 +55,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.MainMenuState">
     <Position X="19.5" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\MainMenuState.cs</FileName>
       <NewMemberFileName>MainMenuState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -63,14 +63,14 @@
   <Class Name="SpaceInvadersRemake.StateMachine.OptionsState">
     <Position X="6" Y="8.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\OptionsState.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.StateMachine.State">
     <Position X="10.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAASACABAAAAAAQAEAAAANQAgIAAgAAgQAAAA=</HashCode>
+      <HashCode>AQAAAAAAASACABAAAAAAQAEAAAANQAgIAAgAAgQAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />

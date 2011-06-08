@@ -18,7 +18,7 @@ namespace SpaceInvadersRemake.Controller
     /// <see cref="PlayerController"/>
     /// <see cref="AIController"/>
     /// </remarks>
-    public abstract class Controller : IComander
+    public abstract class Controller : ICommander
     {
   
 

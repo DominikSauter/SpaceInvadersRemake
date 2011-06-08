@@ -10,5 +10,19 @@ namespace SpaceInvadersRemake.StateMachine
     /// </summary>
     public class CreditsState : State
     {
+        protected override void ControllerInitialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void ModelInitialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void ViewInitialize()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
