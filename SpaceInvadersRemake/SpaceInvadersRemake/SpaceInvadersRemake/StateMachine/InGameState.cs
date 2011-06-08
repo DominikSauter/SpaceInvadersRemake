@@ -11,6 +11,16 @@ namespace SpaceInvadersRemake.StateMachine
     public class InGameState : State
     {
         /// <summary>
+        /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
+        /// </summary>
+        /// <param name="stateManager">Referenz zum StateManager</param>
+        /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
+        public InGameState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
+            : base (stateManager, gameManager)
+        {
+        }
+
+        /// <summary>
         /// Wechselt in den BreakState.
         /// </summary>
         public void Break()
