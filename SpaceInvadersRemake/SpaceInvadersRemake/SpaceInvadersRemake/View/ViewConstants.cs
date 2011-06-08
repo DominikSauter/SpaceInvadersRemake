@@ -617,6 +617,20 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
+        /// Grafik die Anzeigt welches PowerUp gerade activiert ist
+        /// </summary>
+        public static Texture2D PowerUpIcon
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
         /// Lädt den Content aus der GameManager Klasse in die ViewContent Klasse
         /// </summary>
         public static void LoadContent()

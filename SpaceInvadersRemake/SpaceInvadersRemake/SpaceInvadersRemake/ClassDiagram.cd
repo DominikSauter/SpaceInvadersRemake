@@ -268,7 +268,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewContent">
     <Position X="42.75" Y="0.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AgIDQgBBACAAAgAUAAQAIEAoRAQAIACCAEgCACALALc=</HashCode>
+      <HashCode>AgIDQgBBACAAAgAUAAQAIEAoRAQAIACCAEwCACALALc=</HashCode>
       <FileName>View\ViewConstants.cs</FileName>
       <NewMemberFileName>ViewConstants.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -401,7 +401,7 @@
   <Class Name="SpaceInvadersRemake.View.GameUI">
     <Position X="29.5" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAoAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <HashCode>CAoAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACQAAAAAAAA=</HashCode>
       <FileName>View\GameUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
