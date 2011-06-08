@@ -8,6 +8,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Stellt den auf dem Bildschirm sichtbaren Miniboss dar.
+    /// </summary>
+    /// <remarks>
+    /// Hält die PartikelEngines für Explosionen.
+    /// </remarks>
     public class MinibossRepresentation : GameItemRepresentation
     {
         private Texture2D explosionTexture;
@@ -21,7 +27,13 @@ namespace SpaceInvadersRemake.View
         {
             throw new System.NotImplementedException();
         }
-    
+
+        /// <summary>
+        /// ParticleEmitter der einen Explosionseffekt erzeugt.
+        /// </summary>
+        /// <remarks>
+        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
+        /// </remarks>
         public Explosion Explosion
         {
             get
@@ -33,6 +45,9 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Referenz auf das Miniboss-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// </summary>
         public ModelSection.Miniboss MinibossGameItem
         {
             get
@@ -44,6 +59,10 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Zeichnet das Spielerschiff auf den Bildschirm.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();
