@@ -7,7 +7,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Bestimmt die Abfolge der Wellen und besonderer Ereignisse während einer Welle, etwa das Auftauchen eines Mutterschiffs.
+    /// Ist für den Spielablauf zuständig und bestimmt u.a. die Abfolge der Wellen und besonderer Ereignisse während einer Welle, etwa das Auftauchen eines Mutterschiffs.
     /// </summary>
     /// <remarks>Zählt außerdem die Wellen mit.</remarks>
     public class GameCourse
@@ -40,7 +40,21 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Erzeugt eine neue Welle, d.h. eine Liste von Aliens, die durch einen Controllers gesteuert werden. Die Abfolge der Wellen ist hier anhand des WaveCounters festgelegt. Die Methode setzt außerdem bei jedem Aufruf die "waveStartingTime" auf die aktuelle "gameTime".
+        /// Referenz auf das Spielerschiff-Objekt.
+        /// </summary>
+        public SpaceInvadersRemake.ModelSection.IGameItem Player
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
+        /// Erzeugt eine neue Welle, d.h. eine Liste von Aliens, die durch einen Controller gesteuert werden. Die Abfolge der Wellen ist hier anhand des WaveCounters festgelegt. Die Methode setzt außerdem bei jedem Aufruf die "waveStartingTime" auf die aktuelle "gameTime".
         /// </summary>
         public List<IGameItem> NextWave(GameTime gameTime)
         {
@@ -51,7 +65,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// Dient zur Erstellung besonderer Ereignisse während einer Welle, z.B. das Auftauchen eines Mutterschiffs.
         /// </summary>
         /// <remarks>Hierfür wird die "waveStartingTime" benötigt, um Ereignisse zu bestimmten Wellen timen zu können.</remarks>
-        public void Update(GameTime gameTime)
+        public void SpecialEvent(GameTime gameTime)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wird vom Konstruktor aufgerufen, um das Spiel zu initialisieren.
+        /// </summary>
+        /// <remarks>Konkret werden das Spielerschiff, sowie die statischen Schilde erzeugt.</remarks>
+        private void InitializeGame()
         {
             throw new System.NotImplementedException();
         }

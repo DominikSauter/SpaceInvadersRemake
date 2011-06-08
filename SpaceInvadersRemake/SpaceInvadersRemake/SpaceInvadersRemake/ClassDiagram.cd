@@ -632,16 +632,6 @@
       <FileName>Controller\MotherShipAI.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.GameCourseManager">
-    <Position X="12" Y="16.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAQAAIAAAAABAAAAAAAAAAAAAAAAAAABAAIAAAAAAAA=</HashCode>
-      <FileName>ModelSection\GameCourseManager.cs</FileName>
-    </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GameCourse" />
-    </ShowAsAssociation>
-  </Class>
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="24.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
@@ -710,20 +700,20 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.GameCourse">
-    <Position X="8.75" Y="16.5" Width="1.5" />
+    <Position X="9" Y="16.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAQAAAAAAAIQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAIQAAAAAAAAAAAAIAAQCAAAA=</HashCode>
       <FileName>ModelSection\GameCourse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.ModelManager">
     <Position X="12" Y="14" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAYAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ModelManager.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
-      <Property Name="GameCourseManager" />
+      <Property Name="GameCourse" />
     </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
@@ -810,7 +800,7 @@
     </TypeIdentifier>
   </Enum>
   <Enum Name="SpaceInvadersRemake.ModelSection.ControllerEnum">
-    <Position X="46.5" Y="22.25" Width="2.5" />
+    <Position X="40.25" Y="22.75" Width="2.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAACAAAAAAAAAAAAAAABAAAgAAAAABAAA=</HashCode>
       <FileName>ModelSection\ControllerEnum.cs</FileName>
