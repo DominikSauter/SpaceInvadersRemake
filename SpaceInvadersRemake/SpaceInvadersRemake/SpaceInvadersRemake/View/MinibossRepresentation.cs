@@ -33,6 +33,17 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        public ModelSection.Miniboss MinibossGameItem
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();

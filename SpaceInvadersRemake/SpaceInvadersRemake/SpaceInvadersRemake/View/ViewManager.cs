@@ -9,11 +9,35 @@ namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Diese Klasse verwaltet alle für den aktuellen Spielzustand benötigten View Objekte.
-    /// Die Ezeugung der Objekte wird durch Events gesteuert. Sobald die <c>draw()</c> Methode in der State Machine aufgerufen
+    /// Die Erzeugung der Objekte wird durch Events gesteuert. Sobald die <c>draw()</c> Methode in der State Machine aufgerufen
     /// wird, wird die Liste mit den View Objekten durchgegangen und bei jedem Objekt die <c>draw()</c> Methode aufgerufen.
     /// </summary>
+    /// <remarks>
+    /// Der <code>ViewManager</code> registriert sich beim Instanziieren bei allen <code>Create</code>-Events um diese später
+    /// behandeln zu können.
+    /// 
+    /// Er registriert auch immer gleichzeitig die passenden View-Methoden an den Model-Objekten (z.B. für Soundeffekte)
+    /// </remarks>
     class ViewManager : SpaceInvadersRemake.StateMachine.IView
     {
+        //Random Generator um zufällige AlienRepresentations zu erstellen.
+        private Random random;
+
+        /// <summary>
+        /// Erzeugt abhängig vom aktuellen Zustand in der <code>StateMachine</code> das passende
+        /// ViewManager-Objekt
+        /// </summary>
+        /// 
+        /// <param name="currentState">Aktueller Zustand der <code>StateMachine</code> anhand dessen die passende
+        /// UI erstellt wird.</param>
+        /// 
+        /// <remarks>
+        /// Die <code>ViewItemList</code> wird initialisiert und das passende UI Objekt hinzugefügt (GameUI, HighscoreUI, MenuUI).
+        /// </remarks>
+        public ViewManager(StateMachine.State currentState)
+        {
+            throw new System.NotImplementedException();
+        }
         /// <summary>
         /// Liste mit den View Objekten
         /// </summary>
