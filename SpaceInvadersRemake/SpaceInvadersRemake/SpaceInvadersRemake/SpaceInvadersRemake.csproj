@@ -127,7 +127,6 @@
     <Compile Include="Controller\ControllerManager.cs" />
     <Compile Include="Controller\Test.cs" />
     <Compile Include="ModelSection\DifficultyLevel.cs" />
-    <Compile Include="ModelSection\GameCourseManager.cs" />
     <Compile Include="ModelSection\ModelManager.cs" />
     <Compile Include="Controller\MotherShipAI.cs" />
     <Compile Include="ModelSection\PowerUpAction.cs" />

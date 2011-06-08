@@ -58,7 +58,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Erlaubt die Ausführung der im Controllers enthalten Spielmechanik.
         /// </summary>
-        /// <remarks>Update ist die Methode, die  pro Frame aufgerufen wird,
+        /// <remarks>SpecialEvent ist die Methode, die  pro Frame aufgerufen wird,
         /// damit entschieden wird wie sich Controllees verhalten soll
         /// </remarks>
         /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
