@@ -219,7 +219,7 @@
     <Compile Include="View\PowerUpRepresentation.cs" />
     <Compile Include="View\ProjectileRepresentation.cs" />
     <Compile Include="View\ShieldRepresentation.cs" />
-    <Compile Include="View\ViewConstants.cs" />
+    <Compile Include="View\ViewContent.cs" />
     <Compile Include="View\ViewManager.cs" />
     <Compile Include="ModelSection\WaveGenerator.cs" />
     <Compile Include="ModelSection\Weapon.cs" />

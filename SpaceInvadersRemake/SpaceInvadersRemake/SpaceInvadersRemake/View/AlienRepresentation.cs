@@ -21,7 +21,7 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
-        public Explosion Explosion
+        public ModelSection.Alien AlienGameItem
         {
             get
             {
@@ -32,7 +32,7 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        public ModelSection.Alien AlienGameItem
+        public Explosion Explosion
         {
             get
             {
