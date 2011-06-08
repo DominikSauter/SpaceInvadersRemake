@@ -16,6 +16,7 @@ namespace SpaceInvadersRemake.View
         private Texture2D gameBackgroundImage;
         private Texture2D hudBackgroundTexture;
         private SpriteFont font;
+        private Texture2D PowerUpIcon;
     
         /// <summary>
         /// Initialisiert die Spieloberfläche
@@ -34,6 +35,9 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Zeichnet Punkte und Leben des Spielers, sowie die Dauer des eingesammelten PowerUps
+        /// </summary>
         private void labelHUD()
         {
             throw new System.NotImplementedException();
