@@ -14,7 +14,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
         /// </summary>
-        protected void Destroy()
+        protected virtual void Destroy()
         {
             throw new System.NotImplementedException();
         }

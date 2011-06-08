@@ -19,29 +19,38 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static Vector2 Up
         {
-            public get
+            get
             {
-                return new Vector2(0.0f, 1.0f);
+                throw new System.NotImplementedException();
+            }
+            set
+            {
             }
         }
         /// <summary>
         /// Unten
         /// </summary>
         public static Vector2 Down
+        {
+            get
             {
-            public get
+                throw new System.NotImplementedException();
+            }
+            set
             {
-                return new Vector2(0.0f, -1.0f);
             }
         }
         /// <summary>
         /// Rechts
         /// </summary>
         public static Vector2 Right
+        {
+            get
             {
-            public get
+                throw new System.NotImplementedException();
+            }
+            set
             {
-                return new Vector2(1.0f, 0.0f);
             }
         }
         /// <summary>
@@ -49,9 +58,12 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static Vector2 Left
         {
-            public get
+            get
             {
-                return new Vector2(-1.0f, 0.0f);
+                throw new System.NotImplementedException();
+            }
+            set
+            {
             }
         }
 

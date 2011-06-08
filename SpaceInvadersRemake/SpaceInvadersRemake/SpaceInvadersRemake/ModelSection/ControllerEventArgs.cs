@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die gewünschte Controller-AI.
         /// </summary>
-        public ControllerEnum AI 
+        public BehaviourEnum Behaviour 
         {
             get
             {
@@ -30,7 +30,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die Liste der zu kontrollierenden Aliens.
         /// </summary>
-        public List<IGameItem> Controllees
+        public System.Collections.Generic.ICollection<SpaceInvadersRemake.ModelSection.IGameItem> Controllees
         {
             get
             {

@@ -8,13 +8,6 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public class Miniboss : Enemy
     {
-        /// <summary>
-        /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
-        /// </summary>
-        protected override void Destroy()
-        {
-            throw new NotImplementedException();
-        }
 
         /// <summary>
         /// Dieses Event wird ausgelöst, wenn ein Objekt der Klasse mit einem anderen Objekt kollidiert ist.
