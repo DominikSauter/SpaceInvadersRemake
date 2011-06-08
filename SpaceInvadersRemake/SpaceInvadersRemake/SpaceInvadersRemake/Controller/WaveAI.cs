@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.Controller
@@ -9,20 +6,21 @@ namespace SpaceInvadersRemake.Controller
     /// <summary>
     /// Diese Klasse abstrahiert von den verschiedenen KIs zur Steurerung einer Welle von Gegnern
     /// </summary>
+    /// <remarks>
+    /// Von dieser Klasse ist für die Implementierung einer Wellen KI zu erben.
+    /// </remarks>
     public abstract class WaveAI : AIController
     {
-        // TODO:
-        ///// <summary>
-        ///// Eigenschaft Controllees Liste (kontrollierte Objekt)
-        ///// </summary>
-        //public override ICollection<IGameItem> Controllees
-        //{
-        //    get
-        //    {
-        //        throw new NotImplementedException();
-        //    }
-        //    set { 
-        //    }
-        //}
+         
+        /// <summary>
+        /// Eigenschaft Controllees Liste (kontrollierte Objekt)
+        /// </summary>
+        public abstract System.Collections.Generic.ICollection<IGameItem> Controllees
+        {
+            get;
+
+           set; 
+
+        }
     }
 }
