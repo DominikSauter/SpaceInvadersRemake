@@ -8,6 +8,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Stellt die auf dem Bildschirm sichtbaren Aliens dar.
+    /// </summary>
+    /// <remarks>
+    /// Hält die PartikelEngines für Explosionen.
+    /// </remarks>
     public class AlienRepresentation : GameItemRepresentation
     {
         private Texture2D explosionTexture;
@@ -21,6 +27,9 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Referenz auf ein Alien-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// </summary>
         public ModelSection.Alien AlienGameItem
         {
             get
@@ -32,6 +41,12 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// ParticleEmitter der einen Explosionseffekt erzeugt.
+        /// </summary>
+        /// <remarks>
+        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
+        /// </remarks>
         public Explosion Explosion
         {
             get
@@ -43,6 +58,10 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Zeichnet ein Alienschiff auf den Bildschirm.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();
