@@ -37,28 +37,28 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Enemy">
     <Position X="14.5" Y="30.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Alien">
     <Position X="12.75" Y="35.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAEAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Alien.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Mothership">
     <Position X="14.5" Y="35.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAEAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Mothership.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Miniboss">
     <Position X="16.25" Y="35.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAEAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Miniboss.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -294,11 +294,11 @@
       <FileName>Controller\AIController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.DirectionsConstants">
+  <Class Name="SpaceInvadersRemake.ModelSection.CoordinateConstants">
     <Position X="29.75" Y="18.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAACACAAAAAAAI=</HashCode>
-      <FileName>ModelSection\DirectionsConstants.cs</FileName>
+      <HashCode>AAAAAAIAAAAhAgAAAAAAAAAACAAAAAAACACAAAAAAAI=</HashCode>
+      <FileName>ModelSection\CoordinateConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Button">
@@ -635,7 +635,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="24.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAYABAEAAAAAgAAAABEAQQAAAAAAAAAQAAEAAAAAACA=</HashCode>
+      <HashCode>AgYABAEAAAAAiAAAABEAAQAAAAAAAAAQAAAAAAAAADA=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -689,7 +689,8 @@
     <Position X="33" Y="18.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ABAAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAACAgAA=</HashCode>
-      <FileName>ModelSection\WaveGenerator.cs</FileName>
+      <FileName>ModelSection\FormationGenerator.cs</FileName>
+      <NewMemberFileName>ModelSection\WaveGenerator.cs</NewMemberFileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.WaveGenerator">
