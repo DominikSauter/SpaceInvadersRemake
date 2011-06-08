@@ -7,6 +7,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Stellt das auf dem Bildschirm sichtbare Mutterschiff dar.
+    /// </summary>
+    /// <remarks>
+    /// Hält die PartikelEngines für Antrieb und Explosionen.
+    /// </remarks>
     public class MothershipRepresentation : GameItemRepresentation
     {
         private Texture2D explosionTexture;
@@ -21,6 +27,12 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// ParticleEmitter der einen Explosionseffekt erzeugt.
+        /// </summary>
+        /// <remarks>
+        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
+        /// </remarks>
         public Explosion Explosion
         {
             get
@@ -32,6 +44,9 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// ParticleEmitter der einen Effekt erzeugt, welcher den Antrieb des Mutterschiffs darstellt.
+        /// </summary>
         public MothershipEngine MothershipEngine
         {
             get
@@ -43,6 +58,9 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Referenz auf das Mothership-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// </summary>
         public ModelSection.Mothership MothershipGameItem
         {
             get
@@ -54,6 +72,10 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Zeichnet das Spielerschiff auf den Bildschirm.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();
