@@ -65,22 +65,6 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Pausiert die Introwiedergabe
-        /// </summary>
-        public void Pause()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Setzt die Wiedergabe des Intros fort
-        /// </summary>
-        public void Resume()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Wiedergabe der Soundeffekte
         /// </summary>
         public void Play(SoundEffect SoundFX)
