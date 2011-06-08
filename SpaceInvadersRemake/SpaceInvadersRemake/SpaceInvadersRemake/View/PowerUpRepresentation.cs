@@ -8,6 +8,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Stellt die von Aliens fallengelassenen PowerUps auf dem Bildschirm dar.
+    /// </summary>
+    /// <remarks>
+    /// Hält die PartikelEngines für einen Glitzereffekt.
+    /// </remarks>
     public class PowerUpRepresentation : GameItemRepresentation
     {
         private Texture2D texture;
@@ -19,8 +25,10 @@ namespace SpaceInvadersRemake.View
         {
             throw new System.NotImplementedException();
         }
-        
 
+        /// <summary>
+        /// ParticleEmitter der einen Glitzereffekt erzeugt.
+        /// </summary>
         public PowerUpGlow PowerUpGlow
         {
             get
@@ -32,6 +40,9 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Referenz auf ein PowerUp-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// </summary>
         public ModelSection.PowerUp PowerUpGameItem
         {
             get
@@ -43,6 +54,10 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Zeichnet das Spielerschiff auf den Bildschirm.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();

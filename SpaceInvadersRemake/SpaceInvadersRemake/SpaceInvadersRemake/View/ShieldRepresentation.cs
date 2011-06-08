@@ -8,6 +8,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Stellt die auf dem Bildschirm sichtbaren Schilde dar.
+    /// </summary>
+    /// <remarks>
+    /// Hält die PartikelEngines für Explosionen.
+    /// </remarks>
     public class ShieldRepresentation : GameItemRepresentation
     {
         private Texture2D texture;
@@ -20,6 +26,12 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// ParticleEmitter der einen Explosionseffekt erzeugt.
+        /// </summary>
+        /// <remarks>
+        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
+        /// </remarks>
         public Explosion Explosion
         {
             get
@@ -31,6 +43,9 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Referenz auf ein Shield-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// </summary>
         public ModelSection.Shield ShieldGameItem
         {
             get
@@ -42,9 +57,18 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Zeichnet das Spielerschiff auf den Bildschirm.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();
+        }
+
+        private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
+        {
+            throw new System.NotImplementedException();
         }
     }
 }
