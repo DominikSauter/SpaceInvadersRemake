@@ -18,6 +18,13 @@
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\ArchitectureTools\Microsoft.VisualStudio.TeamArchitect.ModelingProject.targets" />
   <ItemGroup>
+    <Content Include="ViewPlayerCreated.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ViewPlayerCreated.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>ViewPlayerCreated.sequencediagram</DependentUpon>
+    </Content>
     <EmbeddedResource Include="States.activitydiagram">
       <SubType>Content</SubType>
     </EmbeddedResource>
