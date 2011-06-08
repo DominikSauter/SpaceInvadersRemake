@@ -11,18 +11,18 @@ namespace SpaceInvadersRemake.Controller
     /// </summary>
     public abstract class WaveAI : AIController
     {
-
-        /// <summary>
-        /// Eigenschaft Controllees Liste (kontrollierte Objekt)
-        /// </summary>
-        public override ICollection<IGameItem> Controllees
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set { 
-            }
-        }
+        // TODO:
+        ///// <summary>
+        ///// Eigenschaft Controllees Liste (kontrollierte Objekt)
+        ///// </summary>
+        //public override ICollection<IGameItem> Controllees
+        //{
+        //    get
+        //    {
+        //        throw new NotImplementedException();
+        //    }
+        //    set { 
+        //    }
+        //}
     }
 }
