@@ -684,7 +684,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.PlayerRepresentation">
-    <Position X="22.5" Y="9" Width="1.75" />
+    <Position X="22.75" Y="9" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAgAAAAAAAAAFIAAAACAAAAAAAAAIQAA=</HashCode>
       <FileName>View\PlayerRepresentation.cs</FileName>
