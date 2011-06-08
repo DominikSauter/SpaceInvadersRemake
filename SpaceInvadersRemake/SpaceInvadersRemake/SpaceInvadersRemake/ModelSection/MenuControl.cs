@@ -5,9 +5,15 @@ using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
+    /// <summary>
+    /// Diese abstrakte Klasse ist die Oberklasse aller Menüeinträge
+    /// </summary>
     public abstract class MenuControl
     {
-        public bool Active
+        /// <summary>
+        /// Zeigt an, ob das Menüelement derzeit aktiv ist
+        /// </summary>
+        public virtual bool Active
         {
             get
             {
@@ -18,6 +24,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Die Beschreibung des Menüelements
+        /// </summary>
         public String Text
         {
             get
@@ -29,6 +38,9 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Führt die mit dem Element verbundene Funktion aus.
+        /// </summary>
         public abstract void Action();
 
         // DESIGN: In der Oberklasse deklariert um dem Controller Arbeit abzunehmen und eine bessere
