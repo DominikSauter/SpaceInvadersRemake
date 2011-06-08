@@ -8,6 +8,12 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
+    /// <summary>
+    /// Stellt die auf dem Bildschirm sichtbare Spielerfigur dar.
+    /// </summary>
+    /// <remarks>
+    /// Hält die PartikelEngines für Antrieb und Explosionen.
+    /// </remarks>
     public class PlayerRepresentation : GameItemRepresentation
     {
         private List<Texture2D> explosionTextures;
@@ -22,6 +28,12 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// ParticleEmitter der einen Explosionseffekt erzeugt.
+        /// </summary>
+        /// <remarks>
+        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
+        /// </remarks>
         public Explosion Explosion
         {
             get
@@ -33,6 +45,9 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// ParticleEmitter der einen Effekt erzeugt, welcher den Antrieb des Spielerschiffs darstellt.
+        /// </summary>
         public PlayerShipEngine PlayerShipEngine
         {
             get
@@ -44,6 +59,9 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Referenz auf das Player-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// </summary>
         public ModelSection.Player PlayerGameItem
         {
             get
@@ -55,6 +73,10 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Zeichnet das Spielerschiff auf den Bildschirm.
+        /// </summary>
+        /// <param name="gameTime"></param>
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();
