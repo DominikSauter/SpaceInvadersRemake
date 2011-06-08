@@ -73,9 +73,15 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="velocity">Geschwindigkeit</param>
         /// <param name="hitpoints">Lebenspunkte</param>
         /// <param name="weapon">Waffe</param>
-        public Alien(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon)
+        /// <param name="scoreGain">Punktwert des Aliens</param>
+        public Alien(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int scoreGain)
         {
             throw new System.NotImplementedException();
         }
+
+        /// <summary>
+        /// Dieses Event wird ausgelöst, wenn es für einen Abschuss Punkte gibt
+        /// </summary>
+        public static event EventHandler ScoreGained;
     }
 }

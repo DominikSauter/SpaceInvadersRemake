@@ -121,6 +121,7 @@
     <Compile Include="Controller\IComander.cs" />
     <Compile Include="Controller\MenuController.cs" />
     <Compile Include="ModelSection\ActivePowerUp.cs" />
+    <Compile Include="ModelSection\FormationGenerator.cs" />
     <Compile Include="ModelSection\GameCourse.cs" />
     <Compile Include="ModelSection\ControllerParameters.cs" />
     <Compile Include="ModelSection\ControllerEnum.cs" />
@@ -171,7 +172,7 @@
     <Compile Include="ModelSection\RapidfireWeapon.cs" />
     <Compile Include="ModelSection\Collider.cs" />
     <Compile Include="Controller\Controller.cs" />
-    <Compile Include="ModelSection\DirectionsConstants.cs" />
+    <Compile Include="ModelSection\CoordinateConstants.cs" />
     <Compile Include="ModelSection\DynamicHighscoreEntry.cs" />
     <Compile Include="ModelSection\HighscoreEntry.cs" />
     <Compile Include="ModelSection\MultiShotWeapon.cs" />

@@ -102,7 +102,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// In dieser Liste werden alle Spielobjekte verwaltet.
         /// </summary>
         /// <remarks>Muss am Anfang eines Spiels neu erzeugt und am Ende gelöscht werden</remarks>
-        public static List<IGameItem> GameItemList
+        public static System.Collections.Generic.LinkedList<SpaceInvadersRemake.ModelSection.IGameItem> GameItemList
         {
             get
             {
