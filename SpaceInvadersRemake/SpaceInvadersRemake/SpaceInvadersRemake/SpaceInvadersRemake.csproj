@@ -123,8 +123,8 @@
     <Compile Include="ModelSection\ActivePowerUp.cs" />
     <Compile Include="ModelSection\FormationGenerator.cs" />
     <Compile Include="ModelSection\GameCourse.cs" />
-    <Compile Include="ModelSection\ControllerParameters.cs" />
-    <Compile Include="ModelSection\ControllerEnum.cs" />
+    <Compile Include="ModelSection\ControllerEventArgs.cs" />
+    <Compile Include="ModelSection\BehaviourEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
     <Compile Include="Controller\Test.cs" />
     <Compile Include="ModelSection\DifficultyLevel.cs" />

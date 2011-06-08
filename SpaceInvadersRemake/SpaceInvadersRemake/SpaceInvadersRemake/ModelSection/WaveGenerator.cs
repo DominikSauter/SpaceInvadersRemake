@@ -24,7 +24,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erzeugt eine neue Welle mit den Parametern AI, Formation und Schwierigkeitsgrad, und ruft danach das Event "WaveGenerated" auf, um dem Controllers die gewünschten Controllers-Eigenschaften mitzuteilen.
         /// </summary>
         /// <remarks>Dem Event "WaveGenerated" werden die gewünschte Controllers-AI, die erstellte Liste an Gegnern und das  Schwierigkeitsgrad-Objekt übergeben.</remarks>
-        public static List<IGameItem> CreateWave(ControllerEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
+        public static List<IGameItem> CreateWave(BehaviourEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
         {
             throw new System.NotImplementedException();
             //SwitchCase über "Bestellung" 
