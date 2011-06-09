@@ -6,7 +6,7 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Implementiert das Interface IModel als Überklasse für den Model-Bereich. Verwaltet dabei in der Update-Methode die GameItem.GameItemList und den Spielablauf.
+    /// Implementiert das Interface IModel als Überklasse für den Model-Bereich (aus MVC). Verwaltet dabei in der Update-Methode die GameItem.GameItemList und den Spielablauf.
     /// </summary>
     /// <remarks>Die Untermethode "UpdateGameItemList" verwaltet die GameItem.GameItemList, während "UpdateGameCourse" den Spielablauf managed.</remarks>
     class ModelManager : SpaceInvadersRemake.StateMachine.IModel
@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         private System.Collections.Generic.List<SpaceInvadersRemake.ModelSection.IGameItem> currentWave;
         /// <summary>
-        /// Konstruktor; erzeugt ein neues GameCourse-Objekt und leert die GameItem.GameItemList.
+        /// Konstruktor; erzeugt ein neues GameCourse-Objekt.
         /// </summary>
         public ModelManager()
         {
@@ -60,6 +60,16 @@ namespace SpaceInvadersRemake.ModelSection
         private void UpdateGameItemList()
         {
             throw new System.NotImplementedException();
+        }
+
+
+        /// <summary>
+        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Models.
+        /// </summary>
+        /// <remarks>Konkret: Leeren der GameItem.GameItemList.</remarks>
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }
