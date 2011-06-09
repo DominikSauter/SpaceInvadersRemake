@@ -1,57 +1,114 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="da5d3f0f-b1c9-4245-adab-512a308beac1" name="Command Player Ship" linkedPackageId="c36f7e8a-7e83-4c6b-a721-68dddaddc3fa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="979ba1aa-8480-4ca9-bdd6-def3cbfb7fe8">
-      <profileInstance Id="2bbb1ca7-fc3c-47a4-bebe-407470a788fa" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="777decc8-31a5-450f-ab38-100e5f0807ab">
-      <profileInstance Id="9a1f3650-dbd2-4197-ba14-0583c432b8b7" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="da5d3f0f-b1c9-4245-adab-512a308beac1" name="Command Player Ship" linkedPackageId="c36f7e8a-7e83-4c6b-a721-68dddaddc3fa" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="92d93064-188d-49d3-9240-18b8c5ff1cbc" name="Command Player Ship" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
         <elementDefinition Id="d5b56621-92fc-44ee-b059-7ea39d92d755" />
         <fragments>
-          <lostFoundTarget Id="9dc90146-61f3-4918-847e-9668d89491cb" name="LostFoundTarget6">
-            <elementDefinition Id="df1c6caf-a138-4fc5-9fc5-1dddd3c939e7" />
-          </lostFoundTarget>
-          <messageOccurrenceSpecification Id="60991980-fafd-44ba-bf47-2b939f4df61f" name="MessageOccurrenceSpecification108">
-            <elementDefinition Id="568787be-eece-4070-86b1-fa3cc0597d21" />
+          <behaviorExecutionSpecification Id="d5e8fd73-19ac-4396-acd8-3cadd8306d31" name="BehaviorExecutionSpecification2">
+            <elementDefinition Id="4b35fa08-6216-4e9f-8159-37182f7d49c3" />
+            <coveredLifelines>
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker Id="99d170c3-27c7-4e00-9162-2723523c09bf" LastKnownName="ExecutionOccurrenceSpecification4" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker Id="9c1022d2-5b42-479f-8ca0-04336467fca3" LastKnownName="ExecutionOccurrenceSpecification3" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker Id="63b2adc2-cdf3-48f4-a687-0f883ed922f2" LastKnownName="MessageOccurrenceSpecification2" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification Id="9c1022d2-5b42-479f-8ca0-04336467fca3" name="ExecutionOccurrenceSpecification3">
+            <elementDefinition Id="fd505b89-e45e-49d7-b177-fcc541326134" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="8a7ea610-c9f8-49b4-b3ee-72681a178568" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
             <covered>
-              <lifelineMoniker Id="4ae65a55-295f-40a1-be68-0eb20e88d777" LastKnownName="PlayerController" />
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="63b2adc2-cdf3-48f4-a687-0f883ed922f2" name="MessageOccurrenceSpecification2">
+            <elementDefinition Id="5bcc5adb-ed4c-4de0-abe7-356ebbf2383a" />
+            <covered>
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
             </covered>
           </messageOccurrenceSpecification>
+          <lostFoundTarget Id="eee393c9-70e0-47fc-a715-ecb8387b313c" name="LostFoundTarget2">
+            <elementDefinition Id="18e7ea49-1faf-44f8-9eb9-1264294c9041" />
+          </lostFoundTarget>
+          <executionOccurrenceSpecification Id="99d170c3-27c7-4e00-9162-2723523c09bf" name="ExecutionOccurrenceSpecification4">
+            <elementDefinition Id="10df774f-ad17-46e5-a548-96c66a19f1c2" />
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker Id="735a8168-2a85-40ca-ba56-043ae5468e25" LastKnownName="ExecutionEvent" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+            </covered>
+          </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
+          <lifeline Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" name="Controller Manager" isActor="false" lifelineDisplayName="Controller Manager">
+            <elementDefinition Id="f49d74a3-8978-4f30-8d83-a02ccc374567" />
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker Id="9c1022d2-5b42-479f-8ca0-04336467fca3" LastKnownName="ExecutionOccurrenceSpecification3" />
+              <executionOccurrenceSpecificationMoniker Id="99d170c3-27c7-4e00-9162-2723523c09bf" LastKnownName="ExecutionOccurrenceSpecification4" />
+            </topLevelOccurrences>
+          </lifeline>
           <lifeline Id="4ae65a55-295f-40a1-be68-0eb20e88d777" name="PlayerController" isActor="false" lifelineDisplayName="PlayerController">
             <elementDefinition Id="7cb76d99-9b39-4ec3-b6f6-37602d81ef4e" />
-            <topLevelOccurrences>
-              <messageOccurrenceSpecificationMoniker Id="60991980-fafd-44ba-bf47-2b939f4df61f" LastKnownName="MessageOccurrenceSpecification108" />
-            </topLevelOccurrences>
+          </lifeline>
+          <lifeline Id="30edf3dc-64d5-48e1-882e-7f5c77857b78" name="Lifeline2" isActor="false" lifelineDisplayName="Lifeline2">
+            <elementDefinition Id="c6832e89-ce58-4a57-853d-c92db8fd5c85" />
+          </lifeline>
+          <lifeline Id="4d19f7d4-91ad-4481-989b-186080383cf6" name="Lifeline3" isActor="false" lifelineDisplayName="Lifeline3">
+            <elementDefinition Id="b960c008-cc64-4cea-84f0-909355d0b850" />
           </lifeline>
         </lifelines>
         <messages>
-          <message Id="f1b3d6ee-7c5b-4e13-a9bd-d359a7d4da65" name="Command Player Ship" messageKind="Lost" messageSort="AsynchCall" createSelfMessage="false">
-            <elementDefinition Id="2ae6abba-329c-44bb-9643-9e153df7e617" />
+          <message Id="00038b23-8437-456e-9d25-0f06476fcf2b" name="Player Created" messageKind="Found" messageSort="AsynchCall" createSelfMessage="false">
+            <elementDefinition Id="e0efeb14-c433-466d-a795-62c0f24e63f6" />
             <sendEvent>
-              <messageOccurrenceSpecificationMoniker Id="60991980-fafd-44ba-bf47-2b939f4df61f" LastKnownName="MessageOccurrenceSpecification108" />
+              <lostFoundTargetMoniker Id="eee393c9-70e0-47fc-a715-ecb8387b313c" LastKnownName="LostFoundTarget2" />
             </sendEvent>
             <receiveEvent>
-              <lostFoundTargetMoniker Id="9dc90146-61f3-4918-847e-9668d89491cb" LastKnownName="LostFoundTarget6" />
+              <messageOccurrenceSpecificationMoniker Id="63b2adc2-cdf3-48f4-a687-0f883ed922f2" LastKnownName="MessageOccurrenceSpecification2" />
             </receiveEvent>
           </message>
         </messages>
       </interaction>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="8a7ea610-c9f8-49b4-b3ee-72681a178568" name="ExecutionEvent">
+        <elementDefinition Id="bd0d8aa2-7feb-4a0a-8114-4d3c8e75fc4f" />
+      </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent Id="735a8168-2a85-40ca-ba56-043ae5468e25" name="ExecutionEvent">
+        <elementDefinition Id="283f185d-20b6-40c4-ab41-91f49c7fec4d" />
+      </executionEvent>
+    </packageHasNamedElement>
   </packagedElements>
   <package Id="c36f7e8a-7e83-4c6b-a721-68dddaddc3fa" name="ModelingProject">
     <elementDefinition Id="a0cd5890-f207-4b2a-83cb-b456b2d2f4b1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="979ba1aa-8480-4ca9-bdd6-def3cbfb7fe8">
+        <profileInstance Id="2bbb1ca7-fc3c-47a4-bebe-407470a788fa" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="777decc8-31a5-450f-ab38-100e5f0807ab">
+        <profileInstance Id="9a1f3650-dbd2-4197-ba14-0583c432b8b7" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>
