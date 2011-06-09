@@ -32,6 +32,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Destroyed Event.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="MVC.activitydiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="MVC.activitydiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>MVC.activitydiagram</DependentUpon>
+    </Content>
     <Content Include="NextWave.sequencediagram">
       <SubType>Content</SubType>
     </Content>
