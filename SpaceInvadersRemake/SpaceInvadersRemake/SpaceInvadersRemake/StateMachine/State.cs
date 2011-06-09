@@ -176,9 +176,9 @@ namespace SpaceInvadersRemake.StateMachine
         
         public void Dispose()
         {
-            this.Model.Exit();
-            this.View.Exit();
-            this.Controller.Exit();
+            this.Model.Dispose();
+            this.View.Dispose();
+            this.Controller.Dispose();
         }
 
         /// <summary>

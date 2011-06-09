@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt der View implementiert werden.
     /// </summary>
-    public interface IView
+    public interface IView : IDisposable
     {
         /// <summary>
         /// Erlaubt die Ausführung der in der View enthalten Spielmechanik.
@@ -24,6 +24,6 @@ namespace SpaceInvadersRemake.StateMachine
         /// <remarks>
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
-        void Exit();
+        void Dispose();
     }
 }

@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt des Models implementiert werden.
     /// </summary>
-    public interface IModel
+    public interface IModel : IDisposable
     {
         /// <summary>
         /// Erlaubt die Ausführung der im Model enthalten Spielmechanik.
@@ -24,6 +24,6 @@ namespace SpaceInvadersRemake.StateMachine
         /// <remarks>
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
-        void Exit();
+        void Dispose();
     }
 }

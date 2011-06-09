@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt des Controllers implementiert werden.
     /// </summary>
-    public interface IController
+    public interface IController : IDisposable
     {
 
         /// <summary>
@@ -25,6 +25,6 @@ namespace SpaceInvadersRemake.StateMachine
         /// <remarks>
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
-        void Exit();
+        void Dispose();
     }
 }
