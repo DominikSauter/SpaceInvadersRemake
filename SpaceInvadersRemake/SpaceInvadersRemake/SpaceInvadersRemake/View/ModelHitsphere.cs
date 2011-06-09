@@ -14,7 +14,9 @@ namespace SpaceInvadersRemake
         /// <summary>
         /// Erzeugt eine kugelförmige Hitbox.
         /// </summary>
-        public ModelHitsphere()
+        /// <param name="radius">Radius einer kugelförmigen Hitbox</param>
+        /// <param name="hitspheres">Liste mit Hitspheres um eine hierarchisches Kollisionsmodel zu ermöglichen.</param>
+        public ModelHitsphere(int radius, List<ModelHitsphere> hitspheres)
         {
             throw new System.NotImplementedException();
         }

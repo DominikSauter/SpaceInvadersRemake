@@ -398,7 +398,7 @@
   <Class Name="SpaceInvadersRemake.Controller.WaveAI">
     <Position X="44" Y="33" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\WaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -504,7 +504,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.ListSelect&lt;T&gt;">
     <Position X="14" Y="19.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAABgAAAAAAAAAAAAAAAAAAAAAAAEAAABAAAAAAAAQ=</HashCode>
+      <HashCode>AgAABgAAAAAAAAAAAAAAAAgAAAAAAEAgABAAAAAAAAQ=</HashCode>
       <FileName>ModelSection\ListSelect.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -525,7 +525,7 @@
   <Class Name="SpaceInvadersRemake.View.ShieldRepresentation">
     <Position X="31.25" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgABAAAAAAAEAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgABAAAAAAAEAAAAAiAAAAAAAAAAAAA=</HashCode>
       <FileName>View\ShieldRepresentation.cs</FileName>
       <NewMemberFileName>ShieldRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -564,7 +564,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="22.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgYABAEAAAAAiAAAABEAAQAAAAAAAAAQAAQAAAAAADA=</HashCode>
+      <HashCode>AgYABAEAAACAiAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -688,6 +688,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAgAAAAAAAAAFIAAAACAAAAAAAAAIQAA=</HashCode>
       <FileName>View\PlayerRepresentation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.PlaneProjector">
+    <Position X="22.5" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>PlaneProjector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">

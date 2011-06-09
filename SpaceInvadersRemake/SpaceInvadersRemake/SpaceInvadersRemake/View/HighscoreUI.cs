@@ -15,12 +15,11 @@ namespace SpaceInvadersRemake.View
     {
         private Texture2D highscoreBackgroundImage;
         private Texture2D font;
-    
+
         /// <summary>
         /// Initialisiert die Highscoreoberfläche
         /// </summary>
-        /// <param name="buttonLabels">Beschriftungen der Controls</param>
-        public HighscoreUI(string[] buttonLabels)
+        public HighscoreUI(SpriteFont font, Texture2D background)
         {
             throw new System.NotImplementedException();
         }

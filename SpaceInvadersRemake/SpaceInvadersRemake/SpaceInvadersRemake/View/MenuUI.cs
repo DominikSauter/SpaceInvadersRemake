@@ -20,7 +20,8 @@ namespace SpaceInvadersRemake.View
         /// Initialisiert die Menüoberfläche
         /// </summary>
         /// <param name="buttonLabels">Beschriftungen der Controls</param>
-        public MenuUI(string[] buttonLabels)
+        /// <param name="background">Hintergrundbild</param>
+        public MenuUI(string[] buttonLabels, Texture2D background)
         {
             throw new System.NotImplementedException();
         }
