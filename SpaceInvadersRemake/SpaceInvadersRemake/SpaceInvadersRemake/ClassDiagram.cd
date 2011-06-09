@@ -300,7 +300,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.State">
     <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAASACABAAAAAAQAEAAAANQAgIAAgAAgQAAAA=</HashCode>
+      <HashCode>AQAAAAAAASACABAAAAAAAAAAAAANQAgIAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -308,7 +308,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.BreakState">
     <Position X="7.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\BreakState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -323,7 +323,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.HighscoreState">
     <Position X="2.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAIAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\HighscoreState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -337,7 +337,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.IntroState">
     <Position X="9.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAIAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\IntroState.cs</FileName>
       <NewMemberFileName>IntroState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -345,7 +345,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.MainMenuState">
     <Position X="14.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAQAAAAgAAAAAAAAAAAAAAAgCAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\MainMenuState.cs</FileName>
       <NewMemberFileName>MainMenuState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -353,7 +353,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.OptionsState">
     <Position X="4" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAEQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\OptionsState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -390,7 +390,7 @@
   <Class Name="SpaceInvadersRemake.Controller.ControllerManager">
     <Position X="44" Y="22" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\ControllerManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -713,23 +713,23 @@
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceInvadersRemake.StateMachine.IView">
-    <Position X="11.5" Y="4" Width="1.5" />
+    <Position X="11.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StateMachine\IView.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceInvadersRemake.StateMachine.IModel">
-    <Position X="11.5" Y="5.25" Width="1.5" />
+    <Position X="11.5" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StateMachine\IModel.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="SpaceInvadersRemake.StateMachine.IController">
-    <Position X="11.5" Y="2.75" Width="1.5" />
+    <Position X="11.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>StateMachine\IController.cs</FileName>
     </TypeIdentifier>
   </Interface>
