@@ -34,5 +34,37 @@ namespace SpaceInvadersRemake.StateMachine
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Startet ein neues Spiel und wechselt damit den Zustand.
+        /// </summary>
+        public void StartGame()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Zeigt die Highscore an und wechselt damit den Zustand.
+        /// </summary>
+        public void ShowHighscore()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Zeigt die Credits an und wechselt damit den Zustand.
+        /// </summary>
+        public void ShowCredits()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Zeigt die Optionen an und wechselt damit den Zustand.
+        /// </summary>
+        public void ShowOptions()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

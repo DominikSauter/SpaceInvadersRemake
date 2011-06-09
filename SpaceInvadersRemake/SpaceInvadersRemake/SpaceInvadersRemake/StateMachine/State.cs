@@ -173,44 +173,22 @@ namespace SpaceInvadersRemake.StateMachine
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
         protected abstract void ViewInitialize();
-
-        /// <summary>
-        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich der View.
-        /// </summary>
-        /// <remarks>
-        /// Um den Aufruf muss sich nicht gekümmert werden.
-        /// </remarks>
-        public virtual void ViewExit() { }
-
-        /// <summary>
-        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Controllers.
-        /// </summary>
-        /// <remarks>
-        /// Um den Aufruf muss sich nicht gekümmert werden.
-        /// </remarks>
-        public virtual void ControllerExit() { }
-
-        /// <summary>
-        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Models.
-        /// </summary>
-        /// <remarks>
-        /// Um den Aufruf muss sich nicht gekümmert werden.
-        /// </remarks>
-        public virtual void ModelExit() { }
-
+        
         public void Dispose()
         {
-            ModelExit();
-            ViewExit();
-            ControllerExit();
+            this.Model.Exit();
+            this.View.Exit();
+            this.Controller.Exit();
         }
 
         /// <summary>
-        /// TODO: doc
+        /// Geht in den vorherigen Zustand zurück und löscht diesen Zustand.
         /// </summary>
-        /// <exception cref=""
+        /// <exception cref="System.NullReferenceException">Wird geworfen, wenn kein vorhiger Zustand definiert wurde.</exception>
         public void Back()
         {
+            if (this.previousState == null)
+                throw new NullReferenceException("Back hier nicht verwendet werden, da keiner definiert wurde.");
             this.stateManager.State = this.previousState;
             Dispose();
         }

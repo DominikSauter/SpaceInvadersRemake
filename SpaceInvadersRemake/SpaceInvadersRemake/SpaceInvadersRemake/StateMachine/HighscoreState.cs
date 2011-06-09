@@ -20,6 +20,8 @@ namespace SpaceInvadersRemake.StateMachine
         {
         }
 
+        // TODO: 2. Konstruktor für Punkte Entgegennahme
+
         protected override void ControllerInitialize()
         {
             throw new NotImplementedException();
@@ -31,6 +33,14 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         protected override void ViewInitialize()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wechselt in das Hauptmenü und damit den Zustand.
+        /// </summary>
+        public void Exit()
         {
             throw new NotImplementedException();
         }

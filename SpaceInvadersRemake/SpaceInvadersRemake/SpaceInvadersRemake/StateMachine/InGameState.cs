@@ -21,18 +21,20 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
-        /// Wechselt in den BreakState.
+        /// Wechselt in den BreakState (Pausemenü).
         /// </summary>
         public void Break()
         {
-            // PSEUDO:
-            // stateManager.State = newState;
-            // Dispose();
+            throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Beendet das Spiel und welchselt in die Highscore-Ansicht.
+        /// </summary>
+        /// <param name="score">Punkte, die der Spieler im Spiel erreicht hat.</param>
         public void Exit(int score)
         {
- 
+            throw new NotImplementedException();
         }
 
 
