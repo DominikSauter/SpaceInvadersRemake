@@ -107,7 +107,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Fügt der Liste der aktiven PowerUps ein neues PowerUp hinzu
         /// </summary>
         /// <remarks>Unbedingt die Kommentare zur PowerUp-Liste "ActivePowerUps" beachten</remarks>
-        /// <param name="powerUp">Das neue PowerUp</param>
+        /// <param name="powerUpIcons">Das neue PowerUp</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
             throw new System.NotImplementedException();

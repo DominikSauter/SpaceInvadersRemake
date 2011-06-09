@@ -13,7 +13,7 @@ namespace SpaceInvadersRemake.View
     /// wird, wird die Liste mit den View Objekten durchgegangen und bei jedem Objekt die <c>draw()</c> Methode aufgerufen.
     /// </summary>
     /// <remarks>
-    /// Der <code>ViewManager</code> registriert sich beim Instanziieren bei allen <code>Create</code>-Events um diese später
+    /// Der <code>ViewManager</code> registriert sich beim Instanziieren bei allen <code>CreateHighscoreUI</code>-Events um diese später
     /// behandeln zu können.
     /// 
     /// Er registriert auch immer gleichzeitig die passenden View-Methoden an den Model-Objekten (z.B. für Soundeffekte)
@@ -46,6 +46,20 @@ namespace SpaceInvadersRemake.View
         /// die GameUI, HighscoreUI und MenuUI.
         /// </remarks>
         public List<IView> ViewItemList
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
+        /// Audioplayer um die Soundeffekte wiederzugeben.
+        /// </summary>
+        public SoundEffects EffectPlayer
         {
             get
             {
@@ -182,6 +196,33 @@ namespace SpaceInvadersRemake.View
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
         public PowerUpRepresentation CreatePowerUp()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Erstellt eine GameUI-Objekt und fügt dieses in die ViewItemList ein.
+        /// </summary>
+        /// <returns>GameUI-Objekt, welches die Spieleroberfläche darstellt.</returns>
+        public GameUI CreateGameUI()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Erstellt eine HighscoreUI-Objekt und fügt dieses in die ViewItemList ein.
+        /// </summary>
+        /// <returns>HighscoreUI-Objekt, welches die Highscoreansicht darstellt.</returns>
+        public HighscoreUI CreateHighscoreUI()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Erstellt eine MenuUI-Objekt und fügt dieses in die ViewItemList ein.
+        /// </summary>
+        /// <returns>MenuUI-Objekt, welches das Menu darstellt.</returns>
+        public MenuUI CreateMenuUI()
         {
             throw new System.NotImplementedException();
         }
