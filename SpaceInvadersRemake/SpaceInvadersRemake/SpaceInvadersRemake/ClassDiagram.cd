@@ -438,14 +438,11 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.ModelManager">
-    <Position X="12" Y="14" Width="1.5" />
+    <Position X="9" Y="13" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAYAAAAABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAYAAACABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ModelManager.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="GameCourse" />
-    </ShowAsAssociation>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.Controller.MenuController">
