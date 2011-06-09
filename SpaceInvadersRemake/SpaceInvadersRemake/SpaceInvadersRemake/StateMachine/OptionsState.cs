@@ -35,5 +35,21 @@ namespace SpaceInvadersRemake.StateMachine
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Wechselt in die Audio-Optionen und damit den Zustand.
+        /// </summary>
+        public void ShowAudioOptions()
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Wechselt in die Video-Optionen und damit den Zustand.
+        /// </summary>
+        public void ShowVideoOptions()
+        { 
+            throw new NotImplementedException(); 
+        }
     }
 }

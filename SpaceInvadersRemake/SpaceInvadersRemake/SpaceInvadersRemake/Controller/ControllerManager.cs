@@ -86,5 +86,11 @@ public class ControllerManager : IController
         throw new System.NotImplementedException();
     }
 
+
+
+    public void Exit()
+    {
+        throw new NotImplementedException();
+    }
     }
 }

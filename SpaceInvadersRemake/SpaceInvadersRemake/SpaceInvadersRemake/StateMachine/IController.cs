@@ -8,7 +8,7 @@ namespace SpaceInvadersRemake.StateMachine
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt des Controllers implementiert werden.
     /// </summary>
-     public interface IController
+    public interface IController
     {
 
         /// <summary>
@@ -17,6 +17,14 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
-         void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, State state);
+        void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, State state);
+
+        /// <summary>
+        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Controllers.
+        /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
+        void Exit();
     }
 }

@@ -35,5 +35,13 @@ namespace SpaceInvadersRemake.StateMachine
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Beendet das Spiel und wechselt damit den Zustand.
+        /// </summary>
+        public void ExitGame()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

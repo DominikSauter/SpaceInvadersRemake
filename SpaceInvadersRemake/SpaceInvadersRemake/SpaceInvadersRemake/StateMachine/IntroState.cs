@@ -34,5 +34,13 @@ namespace SpaceInvadersRemake.StateMachine
         {
             throw new NotImplementedException();
         }
+
+        /// <summary>
+        /// Welchselt ins Hauptmenü und damit den Zustand.
+        /// </summary>
+        public void Exit()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
