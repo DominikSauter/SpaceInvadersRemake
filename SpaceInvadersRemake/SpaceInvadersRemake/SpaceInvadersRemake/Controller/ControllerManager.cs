@@ -88,7 +88,7 @@ public class ControllerManager : IController
 
 
 
-    public void Exit()
+    public void Dispose()
     {
         throw new NotImplementedException();
     }
