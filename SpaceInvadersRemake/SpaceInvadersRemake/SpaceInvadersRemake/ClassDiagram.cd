@@ -434,11 +434,11 @@
       <FileName>ModelSection\GameCourse.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.ModelManager">
+  <Class Name="SpaceInvadersRemake.ModelSection.GameCourseManager">
     <Position X="16.5" Y="30" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAYAAACABAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAA=</HashCode>
-      <FileName>ModelSection\ModelManager.cs</FileName>
+      <FileName>ModelSection\GameCourseManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>

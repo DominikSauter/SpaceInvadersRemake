@@ -6,10 +6,10 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Implementiert das Interface IModel als Überklasse für den Model-Bereich (aus MVC). Verwaltet dabei in der Update-Methode die GameItem.GameItemList und den Spielablauf.
+    /// Diese Klasse verwaltet den Spielablauf.
     /// </summary>
-    /// <remarks>Die Untermethode "UpdateGameItemList" verwaltet die GameItem.GameItemList, während "UpdateGameCourse" den Spielablauf managed.</remarks>
-    class ModelManager : SpaceInvadersRemake.StateMachine.IModel
+    /// <remarks>Die Update-Untermethode "UpdateGameItemList" verwaltet die GameItem.GameItemList, während "UpdateGameCourse" den Spielablauf managed.</remarks>
+    public class GameCourseManager : SpaceInvadersRemake.StateMachine.IModel
     {
         /// <summary>
         /// Die Aliens der aktuellen Welle.
@@ -18,7 +18,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Konstruktor; erzeugt ein neues GameCourse-Objekt.
         /// </summary>
-        public ModelManager()
+        public GameCourseManager()
         {
             throw new System.NotImplementedException();
         }
