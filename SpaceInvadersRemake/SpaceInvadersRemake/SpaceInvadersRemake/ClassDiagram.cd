@@ -475,7 +475,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Menu">
     <Position X="22" Y="30" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAIAAAAAAAAAAAAAAAAAgAAAACAACACgAAAAAAY=</HashCode>
+      <HashCode>AAQAAAIAACAAAAAAAAAAAAAAgAAAACAACACgAAAAAAY=</HashCode>
       <FileName>ModelSection\Menu.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -483,7 +483,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.HighscoreManager">
     <Position X="25.25" Y="30" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAIAAIAAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAIAAICAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
       <FileName>ModelSection\HighscoreManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -558,7 +558,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="36.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgYABAEAAACAiAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
+      <HashCode>AgYABAEAACCAiAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -665,7 +665,7 @@
   <Class Name="SpaceInvadersRemake.View.Explosion">
     <Position X="54.25" Y="5.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAAAAAgAAAAgAAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AAQAABAAAAAAAgAAAAgAAAAAAAAEAgAAAAQAAAAAAAA=</HashCode>
       <FileName>View\Explosion.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -685,7 +685,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.PlaneProjector">
-    <Position X="36.5" Y="6" Width="1.5" />
+    <Position X="36.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
       <FileName>PlaneProjector.cs</FileName>

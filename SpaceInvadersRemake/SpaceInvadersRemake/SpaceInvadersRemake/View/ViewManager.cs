@@ -18,7 +18,7 @@ namespace SpaceInvadersRemake.View
     /// 
     /// Er registriert auch immer gleichzeitig die passenden View-Methoden an den Model-Objekten (z.B. für Soundeffekte)
     /// </remarks>
-    class ViewManager : SpaceInvadersRemake.StateMachine.IView
+    public class ViewManager : SpaceInvadersRemake.StateMachine.IView
     {
         //Random Generator um zufällige AlienRepresentations zu erstellen.
         private Random random;
@@ -71,20 +71,9 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Iteriert über die gesamte Liste <code>ViewItemList</code> und ruft die <code>Update() bzw. Draw() Methoden auf</code>.
-        /// </summary>
-        /// <param name="game">siehe Microsoft-Doc</param>
-        /// <param name="gameTime">siehe Microsoft-Doc</param>
-        /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
-        public void Update(Game game, GameTime gameTime, StateMachine.State state)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Soundeffekt für das Abfeuern der Spielerwaffe.
         /// </summary>
-        public void ShootSFX()
+        public void ShootSFX(object weapon, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -94,8 +83,9 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         /// <remarks>
         /// Eventuell über die komplette Dauer, während das Mutterschiff im Bild ist.
+        /// Private Methode, da sie aufgerufen werden kann wenn ein Mutterschiff erstellt wird.
         /// </remarks>
-        public void MothershipSFX()
+        private void MothershipSFX(object mothership, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -103,7 +93,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Soundeffekt sowie Anstosspunkt für die Explosions-PartikelEngine, wenn eine Representation zerstört wird.
         /// </summary>
-        public void ExplosionFX()
+        public void ExplosionFX(object gameItem, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -111,7 +101,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Soundeffekt wenn ein "Kamikaze"-Alien sein Spezialmanöver startet.
         /// </summary>
-        public void KamikazeSFX()
+        public void KamikazeSFX(object alien, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -123,7 +113,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public PlayerRepresentation CreatePlayer()
+        public PlayerRepresentation CreatePlayer(object player, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -135,7 +125,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public AlienRepresentation CreateAlien()
+        public AlienRepresentation CreateAlien(Object alien, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -147,7 +137,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public MothershipRepresentation CreateMothership()
+        public MothershipRepresentation CreateMothership(object mothership, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -159,7 +149,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public MinibossRepresentation CreateMiniboss()
+        public MinibossRepresentation CreateMiniboss(Object miniboss, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -171,7 +161,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public ShieldRepresentation CreateShield()
+        public ShieldRepresentation CreateShield(object shield, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -183,7 +173,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public ProjectileRepresentation CreateProjectile()
+        public ProjectileRepresentation CreateProjectile(object projectile, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -195,7 +185,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
         /// </remarks>
-        public PowerUpRepresentation CreatePowerUp()
+        public PowerUpRepresentation CreatePowerUp(object powerUp, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -225,6 +215,28 @@ namespace SpaceInvadersRemake.View
         public MenuUI CreateMenuUI()
         {
             throw new System.NotImplementedException();
+        }
+
+        /// <summary>
+        /// Iteriert über die gesamte Liste <code>ViewItemList</code> und ruft die <code>Update() bzw. Draw() Methoden auf</code>.
+        /// </summary>
+        /// <param name="game">siehe Microsoft-Doc</param>
+        /// <param name="gameTime">siehe Microsoft-Doc</param>
+        /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
+        public void Update(Game game, GameTime gameTime, StateMachine.State state)
+        {
+            throw new NotImplementedException();
+        }
+
+        /// <summary>
+        /// Erledigt Aufräumarbeiten, wenn der aktuelle State endgültig beendet wird.
+        /// </summary>
+        /// <remarks>
+        /// Löschen von Objekten aus der ViewItemList um den Bildschirm zu "säubern".
+        /// </remarks>
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }
