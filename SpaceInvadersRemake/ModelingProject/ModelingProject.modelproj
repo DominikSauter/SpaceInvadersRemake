@@ -25,13 +25,6 @@
       <SubType>Content</SubType>
       <DependentUpon>Command Player Ship.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="Destroyed Event.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="Destroyed Event.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>Destroyed Event.sequencediagram</DependentUpon>
-    </Content>
     <Content Include="MVC.activitydiagram">
       <SubType>Content</SubType>
     </Content>
