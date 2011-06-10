@@ -451,7 +451,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.ControllerEventArgs">
-    <Position X="38.75" Y="18.5" Width="2" />
+    <Position X="38.5" Y="18" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAEAAAAAAAAAQAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ControllerEventArgs.cs</FileName>
