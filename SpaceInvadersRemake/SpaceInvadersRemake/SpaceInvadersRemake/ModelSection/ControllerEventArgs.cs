@@ -14,6 +14,13 @@ namespace SpaceInvadersRemake.ModelSection
     public class ControllerEventArgs: System.EventArgs
     {
         /// <summary>
+        /// Konstruktor
+        /// </summary>
+        public ControllerEventArgs()
+        {
+            throw new System.NotImplementedException();
+        }
+        /// <summary>
         /// Die gewünschte Controller-AI.
         /// </summary>
         public BehaviourEnum Behaviour 
@@ -30,7 +37,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die Liste der zu kontrollierenden Aliens.
         /// </summary>
-        public System.Collections.Generic.ICollection<SpaceInvadersRemake.ModelSection.IGameItem> Controllees
+        public List<IGameItem> Controllees
         {
             get
             {
