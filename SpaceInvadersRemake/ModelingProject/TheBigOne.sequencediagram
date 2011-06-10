@@ -269,7 +269,7 @@
               <lifelineMoniker Id="c511476e-c732-4f93-a87c-5e3a80f75ced" LastKnownName="Player" />
             </covered>
           </messageOccurrenceSpecification>
-          <combinedFragment Id="1ea00a41-1d7a-4bd2-ba3e-ec075894081d" name="CombinedFragment2" interactionOperator="Seq">
+          <combinedFragment Id="1ea00a41-1d7a-4bd2-ba3e-ec075894081d" name="CombinedFragment2" interactionOperator="Par">
             <elementDefinition Id="b85be7ab-8477-499d-9e57-106cf86f421e" />
             <coveredLifelines>
               <lifelineMoniker Id="c511476e-c732-4f93-a87c-5e3a80f75ced" LastKnownName="Player" />
