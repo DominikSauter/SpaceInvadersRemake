@@ -5793,7 +5793,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <covered>
               <lifelineMoniker
                 Id="f49d74a3-8978-4f30-8d83-a02ccc374567"
-                LastKnownName="Controller Manager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5803,7 +5803,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="f49d74a3-8978-4f30-8d83-a02ccc374567"
-                LastKnownName="Controller Manager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </coveredLifelines>
             <finish>
@@ -5839,7 +5839,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <covered>
               <lifelineMoniker
                 Id="f49d74a3-8978-4f30-8d83-a02ccc374567"
-                LastKnownName="Controller Manager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -5857,7 +5857,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <covered>
               <lifelineMoniker
                 Id="f49d74a3-8978-4f30-8d83-a02ccc374567"
-                LastKnownName="Controller Manager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -5865,9 +5865,9 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
         <lifelines>
           <lifeline
             Id="f49d74a3-8978-4f30-8d83-a02ccc374567"
-            name="Controller Manager"
+            name="ControllerManager"
             isActor="false"
-            lifelineDisplayName="Controller Manager">
+            lifelineDisplayName="ControllerManager">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="fd505b89-e45e-49d7-b177-fcc541326134"
@@ -7718,72 +7718,12 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
         isReentrant="false">
         <fragments>
           <messageOccurrenceSpecification
-            Id="74d0acc2-26ee-4d72-a0ca-6011238ff4be"
-            name="MessageOccurrenceSpecification77">
+            Id="6595761b-aaec-4acf-9131-1eff50657ed4"
+            name="MessageOccurrenceSpecification87">
             <covered>
               <lifelineMoniker
                 Id="33c5338c-d1ee-4fd5-baa1-2d67b46190b4"
                 LastKnownName="WaveAIController"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="473cc862-d7ba-4857-9893-28a46dd1e9b8"
-            name="MessageOccurrenceSpecification75">
-            <covered>
-              <lifelineMoniker
-                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-                LastKnownName="GameCourseManager"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="272d6178-f337-4e04-a936-c01c9e808198"
-            name="MessageOccurrenceSpecification76">
-            <covered>
-              <lifelineMoniker
-                Id="33c5338c-d1ee-4fd5-baa1-2d67b46190b4"
-                LastKnownName="WaveAIController"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="7cbcef14-63b5-4aaf-b35e-aab424a8da70"
-            name="MessageOccurrenceSpecification86">
-            <covered>
-              <lifelineMoniker
-                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-                LastKnownName="GameCourseManager"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="d1db9fec-44ec-46fc-8ca3-b7b7dc4557ef"
-            name="MessageOccurrenceSpecification104">
-            <covered>
-              <lifelineMoniker
-                Id="33c5338c-d1ee-4fd5-baa1-2d67b46190b4"
-                LastKnownName="WaveAIController"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="84bb335f-d719-469e-a9aa-34212641aa6f"
-            name="MessageOccurrenceSpecification78">
-            <covered>
-              <lifelineMoniker
-                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-                LastKnownName="GameCourseManager"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="38fe6696-a012-4e45-9425-4440475f6fb0"
-            name="MessageOccurrenceSpecification73">
-            <covered>
-              <lifelineMoniker
-                Id="32bde92d-3753-4269-957c-fc1152c16ec1"
-                LastKnownName="WaveGenerator"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7798,8 +7738,28 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="6595761b-aaec-4acf-9131-1eff50657ed4"
-            name="MessageOccurrenceSpecification87">
+            Id="38fe6696-a012-4e45-9425-4440475f6fb0"
+            name="MessageOccurrenceSpecification73">
+            <covered>
+              <lifelineMoniker
+                Id="32bde92d-3753-4269-957c-fc1152c16ec1"
+                LastKnownName="WaveGenerator"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1edaa22a-a1fb-4e5c-b0d6-9bdaae1308ae"
+            name="MessageOccurrenceSpecification74">
+            <covered>
+              <lifelineMoniker
+                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
+                LastKnownName="ControllerManager"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="1cef2f58-be69-4367-adf4-d2b9d27fd05e"
+            name="MessageOccurrenceSpecification106">
             <covered>
               <lifelineMoniker
                 Id="33c5338c-d1ee-4fd5-baa1-2d67b46190b4"
@@ -7818,8 +7778,8 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1cef2f58-be69-4367-adf4-d2b9d27fd05e"
-            name="MessageOccurrenceSpecification106">
+            Id="272d6178-f337-4e04-a936-c01c9e808198"
+            name="MessageOccurrenceSpecification76">
             <covered>
               <lifelineMoniker
                 Id="33c5338c-d1ee-4fd5-baa1-2d67b46190b4"
@@ -7828,12 +7788,52 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="1edaa22a-a1fb-4e5c-b0d6-9bdaae1308ae"
-            name="MessageOccurrenceSpecification74">
+            Id="473cc862-d7ba-4857-9893-28a46dd1e9b8"
+            name="MessageOccurrenceSpecification75">
             <covered>
               <lifelineMoniker
                 Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-                LastKnownName="GameCourseManager"
+                LastKnownName="ControllerManager"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="74d0acc2-26ee-4d72-a0ca-6011238ff4be"
+            name="MessageOccurrenceSpecification77">
+            <covered>
+              <lifelineMoniker
+                Id="33c5338c-d1ee-4fd5-baa1-2d67b46190b4"
+                LastKnownName="WaveAIController"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="84bb335f-d719-469e-a9aa-34212641aa6f"
+            name="MessageOccurrenceSpecification78">
+            <covered>
+              <lifelineMoniker
+                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
+                LastKnownName="ControllerManager"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d1db9fec-44ec-46fc-8ca3-b7b7dc4557ef"
+            name="MessageOccurrenceSpecification104">
+            <covered>
+              <lifelineMoniker
+                Id="33c5338c-d1ee-4fd5-baa1-2d67b46190b4"
+                LastKnownName="WaveAIController"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7cbcef14-63b5-4aaf-b35e-aab424a8da70"
+            name="MessageOccurrenceSpecification86">
+            <covered>
+              <lifelineMoniker
+                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -7843,7 +7843,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-                LastKnownName="GameCourseManager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </coveredLifelines>
             <finish>
@@ -7891,7 +7891,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <covered>
               <lifelineMoniker
                 Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-                LastKnownName="GameCourseManager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -8046,24 +8046,6 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="bba1fc96-aa42-4075-aecd-df2d78acb9ff"
-            name="ExecutionOccurrenceSpecification40">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="a9c3928b-a09b-432f-9eb0-10c23d464a97"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="ModelingProject.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-                LastKnownName="GameCourseManager"
-                LastKnownLocation="ModelingProject.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
             Id="b0d333ca-5fe4-4c39-af31-68298445ea39"
             name="ExecutionOccurrenceSpecification61">
             <event>
@@ -8078,6 +8060,24 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
               <lifelineMoniker
                 Id="1747d25a-344a-4774-8f5e-f610ceaec405"
                 LastKnownName="Alien"
+                LastKnownLocation="ModelingProject.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="bba1fc96-aa42-4075-aecd-df2d78acb9ff"
+            name="ExecutionOccurrenceSpecification40">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a9c3928b-a09b-432f-9eb0-10c23d464a97"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="ModelingProject.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -8197,9 +8197,9 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
           </lifeline>
           <lifeline
             Id="ea79a9cb-2544-453a-9ad8-c6e298888a81"
-            name="GameCourseManager"
+            name="ControllerManager"
             isActor="false"
-            lifelineDisplayName="GameCourseManager">
+            lifelineDisplayName="ControllerManager">
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="4be3e88a-8814-488d-b55c-d83cc385caed"
@@ -9363,7 +9363,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <covered>
               <lifelineMoniker
                 Id="08b88b28-376e-4176-b45f-cc270f8d1192"
-                LastKnownName="GameCourseManager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -9394,7 +9394,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="08b88b28-376e-4176-b45f-cc270f8d1192"
-                LastKnownName="GameCourseManager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
               <lifelineMoniker
                 Id="424f565c-cf74-45ae-bb4c-4b88998bfd93"
@@ -9416,7 +9416,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="08b88b28-376e-4176-b45f-cc270f8d1192"
-                    LastKnownName="GameCourseManager"
+                    LastKnownName="ControllerManager"
                     LastKnownLocation="ModelingProject.uml" />
                   <lifelineMoniker
                     Id="424f565c-cf74-45ae-bb4c-4b88998bfd93"
@@ -9547,7 +9547,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <covered>
               <lifelineMoniker
                 Id="08b88b28-376e-4176-b45f-cc270f8d1192"
-                LastKnownName="GameCourseManager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -10007,7 +10007,7 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
             <covered>
               <lifelineMoniker
                 Id="08b88b28-376e-4176-b45f-cc270f8d1192"
-                LastKnownName="GameCourseManager"
+                LastKnownName="ControllerManager"
                 LastKnownLocation="ModelingProject.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -10025,9 +10025,9 @@ wenn ja: mit oder ohne referenz aus dem haupt diagramm ?</body>
         <lifelines>
           <lifeline
             Id="08b88b28-376e-4176-b45f-cc270f8d1192"
-            name="GameCourseManager"
+            name="ControllerManager"
             isActor="false"
-            lifelineDisplayName="GameCourseManager">
+            lifelineDisplayName="ControllerManager">
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker
                 Id="2d831871-1585-48e5-82f1-ec3dea8d9d28"

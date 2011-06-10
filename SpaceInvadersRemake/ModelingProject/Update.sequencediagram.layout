@@ -36,14 +36,14 @@
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="de668d09-0a04-42fe-bf68-271e6175990b" absoluteBounds="1.025, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+      <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="ba75321b-c4f8-4cde-bf9f-c7fa14a89717" absoluteBounds="0.36159979820251453, 0.6, 1.4768004035949707, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+        <umlLifelineHeadShape Id="ba75321b-c4f8-4cde-bf9f-c7fa14a89717" absoluteBounds="0.43801581382751453, 0.6, 1.3239683723449707, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="4594629e-219c-4ebb-9277-a900d6174554" absoluteBounds="1.025, 1, 0, 7">
-          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
         </lifelineHoverShape>
       </relativeChildShapes>
     </lifelineShape>
@@ -76,14 +76,14 @@
       <commentMoniker Id="f0238b4c-d840-4ceb-a0df-7b82f0584f52" />
       <relativeChildShapes />
     </commentShape>
-    <commentConnector edgePoints="[(3.625 : 1.375); (3.08541666666667 : 1.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+    <commentConnector edgePoints="[(3.625 : 1.375); (3.08541666666667 : 1.375)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
       <relativeChildShapes />
       <nodes>
         <commentShapeMoniker Id="6dd55444-2f23-4844-906c-d11ba928a685" />
         <lifelineShapeMoniker Id="d5d84828-d3f7-4717-bfe2-2e583390eb4b" />
       </nodes>
     </commentConnector>
-    <commentConnector edgePoints="[(5.125 : 1.375); (5.425 : 1.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+    <commentConnector edgePoints="[(5.125 : 1.375); (5.425 : 1.375)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
       <relativeChildShapes />
       <nodes>
         <commentShapeMoniker Id="6dd55444-2f23-4844-906c-d11ba928a685" />
@@ -158,7 +158,7 @@
       <commentMoniker Id="d6609277-c530-4f18-a448-7851ad24a733" />
       <relativeChildShapes />
     </commentShape>
-    <commentConnector edgePoints="[(2.125 : 3.8125); (2.93541666666667 : 3.8125)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+    <commentConnector edgePoints="[(2.125 : 3.8125); (2.93541666666667 : 3.8125)]" fixedFrom="Caller" fixedTo="Caller" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
       <relativeChildShapes />
       <nodes>
         <commentShapeMoniker Id="26dab592-e7da-47af-b267-dfcef530dc6d" />

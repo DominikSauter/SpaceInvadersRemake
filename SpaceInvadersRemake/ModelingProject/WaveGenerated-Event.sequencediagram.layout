@@ -3,13 +3,13 @@
   <SequenceDesignerModelMoniker Id="54c3ea61-a0c7-4cb4-a105-00c99d6801fc" />
   <nestedChildShapes>
     <lifelineShape Id="0e37bcb1-74c4-4316-937c-e12348286673" absoluteBounds="3.075, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="209a06af-71a9-4bc3-a647-98baa66da8fd" LastKnownName="GameCourseManager" />
+      <lifelineMoniker Id="209a06af-71a9-4bc3-a647-98baa66da8fd" LastKnownName="ControllerManager" />
       <relativeChildShapes>
         <lifelineHoverShape Id="53b0afc1-821e-4546-bdd5-ab7b64dc9315" absoluteBounds="3.075, 1, 0, 7">
-          <lifelineMoniker Id="209a06af-71a9-4bc3-a647-98baa66da8fd" LastKnownName="GameCourseManager" />
+          <lifelineMoniker Id="209a06af-71a9-4bc3-a647-98baa66da8fd" LastKnownName="ControllerManager" />
         </lifelineHoverShape>
-        <umlLifelineHeadShape Id="79cdedb6-dded-4cd4-91bc-5f8a1324e2bc" absoluteBounds="2.4115997982025146, 0.6, 1.4768004035949707, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="209a06af-71a9-4bc3-a647-98baa66da8fd" LastKnownName="GameCourseManager" />
+        <umlLifelineHeadShape Id="79cdedb6-dded-4cd4-91bc-5f8a1324e2bc" absoluteBounds="2.4880158138275146, 0.6, 1.3239683723449707, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="209a06af-71a9-4bc3-a647-98baa66da8fd" LastKnownName="ControllerManager" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <umlExecutionSpecificationShape Id="1836660b-af94-4d98-9ac8-fcb54463d488" absoluteBounds="3.075, 1.3, 0.15, 1.45" customColor="184, 204, 215" visualStyleMode="Modified">

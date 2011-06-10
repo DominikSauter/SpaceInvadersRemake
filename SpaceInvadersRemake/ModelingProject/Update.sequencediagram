@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="52f1d355-6258-4e08-a8bb-16443f7d377a" name="Update()" linkedPackageId="2a7b6a94-b773-4cc1-bf83-a13d5f81a108" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="52f1d355-6258-4e08-a8bb-16443f7d377a" name="Update()" linkedPackageId="2a7b6a94-b773-4cc1-bf83-a13d5f81a108" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="eff39bba-e831-4bdd-b263-678a88c1f60e" name="Update()" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -96,7 +96,7 @@
           <messageOccurrenceSpecification Id="460541b7-cbb8-4165-b7d3-6fc0e68e75a0" name="MessageOccurrenceSpecification86">
             <elementDefinition Id="0a57df2f-8dc0-4eab-8de1-4fa2683fb545" />
             <covered>
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="8960e535-be9d-4f20-9ae8-b05dd6c05d80" name="MessageOccurrenceSpecification92">
@@ -114,7 +114,7 @@
           <combinedFragment Id="8acca964-2b04-49f5-8134-4a25d733ecf1" name="CombinedFragment1" interactionOperator="Loop">
             <elementDefinition Id="2849f404-ce41-4f35-b2d6-2a2417b92073" />
             <coveredLifelines>
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
               <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
               <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
               <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
@@ -123,7 +123,7 @@
               <interactionOperand Id="da962bb4-9647-487a-94c4-360e9f04f48d" name="InteractionOperand1">
                 <elementDefinition Id="655e3271-5771-419a-af10-8b68b8013202" />
                 <coveredLifelines>
-                  <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+                  <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
                   <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
                   <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
                   <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
@@ -188,7 +188,7 @@
           <operandOccurrenceSpecification Id="20ed9f94-c05a-410a-b12c-141e6c255fbf" name="OperandOccurrenceSpecification3">
             <elementDefinition Id="2d831871-1585-48e5-82f1-ec3dea8d9d28" />
             <covered>
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="8379578f-fc22-479e-b704-06aee216ef62" name="OperandOccurrenceSpecification1">
@@ -443,7 +443,7 @@
           <operandOccurrenceSpecification Id="97dc34b6-ee78-4409-b92b-d9e97e4c113e" name="OperandOccurrenceSpecification4">
             <elementDefinition Id="7d2d509e-8cbe-4849-a50f-eed7e87b2ed0" />
             <covered>
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="8ed322ca-5799-4ccb-a3f4-df6c6523e678" name="OperandOccurrenceSpecification8">
@@ -454,7 +454,7 @@
           </operandOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="38939e4c-f784-49c5-bb45-63aa8be45057" name="GameCourseManager" isActor="false" lifelineDisplayName="GameCourseManager">
+          <lifeline Id="38939e4c-f784-49c5-bb45-63aa8be45057" name="ControllerManager" isActor="false" lifelineDisplayName="ControllerManager">
             <elementDefinition Id="08b88b28-376e-4176-b45f-cc270f8d1192" />
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker Id="20ed9f94-c05a-410a-b12c-141e6c255fbf" LastKnownName="OperandOccurrenceSpecification3" />

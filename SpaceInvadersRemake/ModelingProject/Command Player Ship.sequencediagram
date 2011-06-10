@@ -11,13 +11,13 @@
           <messageOccurrenceSpecification Id="63b2adc2-cdf3-48f4-a687-0f883ed922f2" name="MessageOccurrenceSpecification2">
             <elementDefinition Id="5bcc5adb-ed4c-4de0-abe7-356ebbf2383a" />
             <covered>
-              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="ControllerManager" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="d5e8fd73-19ac-4396-acd8-3cadd8306d31" name="BehaviorExecutionSpecification2">
             <elementDefinition Id="4b35fa08-6216-4e9f-8159-37182f7d49c3" />
             <coveredLifelines>
-              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="ControllerManager" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="99d170c3-27c7-4e00-9162-2723523c09bf" LastKnownName="ExecutionOccurrenceSpecification4" />
@@ -37,7 +37,7 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="ControllerManager" />
             </covered>
           </executionOccurrenceSpecification>
           <executionOccurrenceSpecification Id="99d170c3-27c7-4e00-9162-2723523c09bf" name="ExecutionOccurrenceSpecification4">
@@ -48,12 +48,12 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="ControllerManager" />
             </covered>
           </executionOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" name="Controller Manager" isActor="false" lifelineDisplayName="Controller Manager">
+          <lifeline Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" name="ControllerManager" isActor="false" lifelineDisplayName="ControllerManager">
             <elementDefinition Id="f49d74a3-8978-4f30-8d83-a02ccc374567" />
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="9c1022d2-5b42-479f-8ca0-04336467fca3" LastKnownName="ExecutionOccurrenceSpecification3" />
