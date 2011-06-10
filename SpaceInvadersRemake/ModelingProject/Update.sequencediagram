@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="52f1d355-6258-4e08-a8bb-16443f7d377a" name="Update()" linkedPackageId="2a7b6a94-b773-4cc1-bf83-a13d5f81a108" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="86059f00-c068-4cd0-aa60-8bb3c2056d38">
-      <profileInstance Id="d44eee02-620b-4f2f-8eab-9478a4258a28" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="f680d7e4-eb06-4df6-bcbb-ea7c680f64ac">
-      <profileInstance Id="3533ac60-6585-4474-a2ff-cbe57b3c2c42" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="eff39bba-e831-4bdd-b263-678a88c1f60e" name="Update()" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -41,11 +27,95 @@
         </ownedCommentsInternal>
         <elementDefinition Id="2b42f605-291f-4950-b8ab-b6bbcc3da34b" />
         <fragments>
+          <messageOccurrenceSpecification Id="15e8334f-9ef4-4994-ba81-012e3ed2f299" name="MessageOccurrenceSpecification95">
+            <elementDefinition Id="3c25df2c-6478-46c0-bf11-7d9b0c4746b1" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="bbf46a96-804c-41f4-b3c0-262b99d58896" name="MessageOccurrenceSpecification96">
+            <elementDefinition Id="e6d32039-2562-4280-9e72-e2727370a108" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="7a7f2a81-aa36-4c6b-baed-f13f13c743ff" name="MessageOccurrenceSpecification94">
+            <elementDefinition Id="63ff18ae-193d-4a05-a861-db71ebd56e2a" />
+            <covered>
+              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b3abca9c-9259-441e-99d7-2d8c15721209" name="MessageOccurrenceSpecification93">
+            <elementDefinition Id="f3d41318-398d-4c23-8694-e13627d4e464" />
+            <covered>
+              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="6a92c9a3-7040-4906-96b3-fe502589e16d" name="MessageOccurrenceSpecification100">
+            <elementDefinition Id="48b0dfd4-6669-4417-9f57-dbf6fcd34555" />
+            <covered>
+              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="b0760487-0a4c-403e-a887-8f483a8b3e0f" name="MessageOccurrenceSpecification97">
+            <elementDefinition Id="4124eb69-c7d3-4f86-a2da-b61d65cdcf18" />
+            <covered>
+              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4dfe1577-6441-46e4-aea4-b2c4733e8c99" name="MessageOccurrenceSpecification99">
+            <elementDefinition Id="d688ecd7-ac07-4bfb-8fb6-53e432dcb307" />
+            <covered>
+              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="a3840be6-d2ff-48c8-8d07-4d5f6cbd4a05" name="MessageOccurrenceSpecification101">
+            <elementDefinition Id="2d3b30bc-a2b3-4ee1-bb62-a26d5c36bfa7" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="2a55e090-451b-43ce-a345-fcd572ada0e6" name="MessageOccurrenceSpecification98">
+            <elementDefinition Id="cee21815-e2b8-40ba-ba9c-544bf05e627f" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="893082d5-3fb2-4732-8c02-124177637446" name="MessageOccurrenceSpecification103">
+            <elementDefinition Id="d6c75d1f-3cbf-4195-9df7-ed6422790b57" />
+            <covered>
+              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="736f4055-fa9a-42f9-84c0-efe203489dce" name="MessageOccurrenceSpecification102">
+            <elementDefinition Id="3484f185-ae3c-47e5-8577-d8d80bc983f8" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="460541b7-cbb8-4165-b7d3-6fc0e68e75a0" name="MessageOccurrenceSpecification86">
+            <elementDefinition Id="0a57df2f-8dc0-4eab-8de1-4fa2683fb545" />
+            <covered>
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="8960e535-be9d-4f20-9ae8-b05dd6c05d80" name="MessageOccurrenceSpecification92">
+            <elementDefinition Id="442c915a-9f59-41b3-b083-c9fa3e22642f" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="f8164211-9739-49ad-8b2d-8488d9b57382" name="MessageOccurrenceSpecification87">
+            <elementDefinition Id="50ca3614-8640-4a12-84e5-66796254c996" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </messageOccurrenceSpecification>
           <combinedFragment Id="8acca964-2b04-49f5-8134-4a25d733ecf1" name="CombinedFragment1" interactionOperator="Loop">
             <elementDefinition Id="2849f404-ce41-4f35-b2d6-2a2417b92073" />
             <coveredLifelines>
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
               <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
               <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
               <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
             </coveredLifelines>
@@ -53,8 +123,8 @@
               <interactionOperand Id="da962bb4-9647-487a-94c4-360e9f04f48d" name="InteractionOperand1">
                 <elementDefinition Id="655e3271-5771-419a-af10-8b68b8013202" />
                 <coveredLifelines>
+                  <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
                   <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-                  <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
                   <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
                   <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
                 </coveredLifelines>
@@ -115,6 +185,18 @@
               </interactionOperand>
             </operands>
           </combinedFragment>
+          <operandOccurrenceSpecification Id="20ed9f94-c05a-410a-b12c-141e6c255fbf" name="OperandOccurrenceSpecification3">
+            <elementDefinition Id="2d831871-1585-48e5-82f1-ec3dea8d9d28" />
+            <covered>
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="8379578f-fc22-479e-b704-06aee216ef62" name="OperandOccurrenceSpecification1">
+            <elementDefinition Id="53ab171c-ef0f-437d-bfb6-35f82727f172" />
+            <covered>
+              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="cc11b1ce-6518-441c-9e82-3f6f471d457d" name="OperandOccurrenceSpecification7">
             <elementDefinition Id="f89b127a-8cb8-48c2-88d1-3a098305dbea" />
             <covered>
@@ -125,18 +207,6 @@
             <elementDefinition Id="96b29c83-808f-458f-b2c2-adb68afbfa10" />
             <covered>
               <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="20ed9f94-c05a-410a-b12c-141e6c255fbf" name="OperandOccurrenceSpecification3">
-            <elementDefinition Id="2d831871-1585-48e5-82f1-ec3dea8d9d28" />
-            <covered>
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="8379578f-fc22-479e-b704-06aee216ef62" name="OperandOccurrenceSpecification1">
-            <elementDefinition Id="53ab171c-ef0f-437d-bfb6-35f82727f172" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="9184b1a7-7e72-4aef-9968-863599c4639c" name="BehaviorExecutionSpecification24">
@@ -173,18 +243,6 @@
               <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="460541b7-cbb8-4165-b7d3-6fc0e68e75a0" name="MessageOccurrenceSpecification86">
-            <elementDefinition Id="0a57df2f-8dc0-4eab-8de1-4fa2683fb545" />
-            <covered>
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="f8164211-9739-49ad-8b2d-8488d9b57382" name="MessageOccurrenceSpecification87">
-            <elementDefinition Id="50ca3614-8640-4a12-84e5-66796254c996" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="5e569559-a364-49e4-952f-9ac799b955d1" name="BehaviorExecutionSpecification27">
             <elementDefinition Id="247bfff4-2a8e-4c57-bdfe-15a1476cda31" />
             <coveredLifelines>
@@ -212,30 +270,6 @@
               <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b3abca9c-9259-441e-99d7-2d8c15721209" name="MessageOccurrenceSpecification93">
-            <elementDefinition Id="f3d41318-398d-4c23-8694-e13627d4e464" />
-            <covered>
-              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="8960e535-be9d-4f20-9ae8-b05dd6c05d80" name="MessageOccurrenceSpecification92">
-            <elementDefinition Id="442c915a-9f59-41b3-b083-c9fa3e22642f" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="7a7f2a81-aa36-4c6b-baed-f13f13c743ff" name="MessageOccurrenceSpecification94">
-            <elementDefinition Id="63ff18ae-193d-4a05-a861-db71ebd56e2a" />
-            <covered>
-              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="15e8334f-9ef4-4994-ba81-012e3ed2f299" name="MessageOccurrenceSpecification95">
-            <elementDefinition Id="3c25df2c-6478-46c0-bf11-7d9b0c4746b1" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="d9049d8c-69b6-4c1e-8195-3ef3071903d0" name="ExecutionOccurrenceSpecification54">
             <elementDefinition Id="ac34f930-404c-49e0-a3c2-780faa05a9b4" />
             <event>
@@ -273,18 +307,6 @@
               <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="bbf46a96-804c-41f4-b3c0-262b99d58896" name="MessageOccurrenceSpecification96">
-            <elementDefinition Id="e6d32039-2562-4280-9e72-e2727370a108" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="b0760487-0a4c-403e-a887-8f483a8b3e0f" name="MessageOccurrenceSpecification97">
-            <elementDefinition Id="4124eb69-c7d3-4f86-a2da-b61d65cdcf18" />
-            <covered>
-              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
-            </covered>
-          </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="86ad70b5-a700-4bec-ba8e-aeff35c5e616" name="BehaviorExecutionSpecification29">
             <elementDefinition Id="92b1e48a-51b2-43f2-8b85-c85aff375d5a" />
             <coveredLifelines>
@@ -312,18 +334,6 @@
               <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="2a55e090-451b-43ce-a345-fcd572ada0e6" name="MessageOccurrenceSpecification98">
-            <elementDefinition Id="cee21815-e2b8-40ba-ba9c-544bf05e627f" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="4dfe1577-6441-46e4-aea4-b2c4733e8c99" name="MessageOccurrenceSpecification99">
-            <elementDefinition Id="d688ecd7-ac07-4bfb-8fb6-53e432dcb307" />
-            <covered>
-              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="07e03352-1939-4008-a149-09b423b87766" name="ExecutionOccurrenceSpecification56">
             <elementDefinition Id="89743e7a-c113-4fa1-a2a8-69f3e5fbb4ee" />
             <event>
@@ -335,18 +345,6 @@
               <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="6a92c9a3-7040-4906-96b3-fe502589e16d" name="MessageOccurrenceSpecification100">
-            <elementDefinition Id="48b0dfd4-6669-4417-9f57-dbf6fcd34555" />
-            <covered>
-              <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="a3840be6-d2ff-48c8-8d07-4d5f6cbd4a05" name="MessageOccurrenceSpecification101">
-            <elementDefinition Id="2d3b30bc-a2b3-4ee1-bb62-a26d5c36bfa7" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="c244989e-47a2-4814-aa7e-49edb0aea052" name="ExecutionOccurrenceSpecification58">
             <elementDefinition Id="cf88146f-5138-4b3a-a7a9-8ea4b1c75d93" />
             <event>
@@ -396,18 +394,6 @@
               <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="736f4055-fa9a-42f9-84c0-efe203489dce" name="MessageOccurrenceSpecification102">
-            <elementDefinition Id="3484f185-ae3c-47e5-8577-d8d80bc983f8" />
-            <covered>
-              <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="893082d5-3fb2-4732-8c02-124177637446" name="MessageOccurrenceSpecification103">
-            <elementDefinition Id="d6c75d1f-3cbf-4195-9df7-ed6422790b57" />
-            <covered>
-              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
-            </covered>
-          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="e667297f-1747-4c49-86d0-7b1492986187" name="ExecutionOccurrenceSpecification60">
             <elementDefinition Id="f04089fe-08ee-46e7-bdd4-87fb57343eac" />
             <event>
@@ -419,16 +405,16 @@
               <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
             </covered>
           </executionOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="d85f8d28-d282-465d-85e4-20e1a0fb59fb" name="OperandOccurrenceSpecification18">
-            <elementDefinition Id="8b7865d0-00cb-4123-bbf6-d4811f216415" />
-            <covered>
-              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="876b695d-ac65-4cdc-9783-2a71ad3bb88a" name="OperandOccurrenceSpecification16">
             <elementDefinition Id="b6f9b17f-7383-41a9-89bb-c0a12d7f39e0" />
             <covered>
               <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="d85f8d28-d282-465d-85e4-20e1a0fb59fb" name="OperandOccurrenceSpecification18">
+            <elementDefinition Id="8b7865d0-00cb-4123-bbf6-d4811f216415" />
+            <covered>
+              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
             </covered>
           </operandOccurrenceSpecification>
           <executionOccurrenceSpecification Id="b7005338-4815-41dd-8398-a1597d787f5a" name="ExecutionOccurrenceSpecification48">
@@ -442,18 +428,6 @@
               <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
             </covered>
           </executionOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="97dc34b6-ee78-4409-b92b-d9e97e4c113e" name="OperandOccurrenceSpecification4">
-            <elementDefinition Id="7d2d509e-8cbe-4849-a50f-eed7e87b2ed0" />
-            <covered>
-              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="8ed322ca-5799-4ccb-a3f4-df6c6523e678" name="OperandOccurrenceSpecification8">
-            <elementDefinition Id="4e7b78af-5083-47a0-9773-b1ae130645e9" />
-            <covered>
-              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="a4b909bf-cb9a-49db-823e-4dac6296e41b" name="OperandOccurrenceSpecification2">
             <elementDefinition Id="ab0c303e-cb99-40d6-9110-1c50b863257c" />
             <covered>
@@ -466,9 +440,21 @@
               <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
             </covered>
           </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="97dc34b6-ee78-4409-b92b-d9e97e4c113e" name="OperandOccurrenceSpecification4">
+            <elementDefinition Id="7d2d509e-8cbe-4849-a50f-eed7e87b2ed0" />
+            <covered>
+              <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="8ed322ca-5799-4ccb-a3f4-df6c6523e678" name="OperandOccurrenceSpecification8">
+            <elementDefinition Id="4e7b78af-5083-47a0-9773-b1ae130645e9" />
+            <covered>
+              <lifelineMoniker Id="bd3ee2d6-04c8-438d-8d25-9bc2bce7e5ba" LastKnownName="Alien" />
+            </covered>
+          </operandOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="38939e4c-f784-49c5-bb45-63aa8be45057" name="ControllerManager" isActor="false" lifelineDisplayName="ControllerManager">
+          <lifeline Id="38939e4c-f784-49c5-bb45-63aa8be45057" name="GameCourseManager" isActor="false" lifelineDisplayName="GameCourseManager">
             <elementDefinition Id="08b88b28-376e-4176-b45f-cc270f8d1192" />
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker Id="20ed9f94-c05a-410a-b12c-141e6c255fbf" LastKnownName="OperandOccurrenceSpecification3" />
@@ -630,5 +616,19 @@
   </packagedElements>
   <package Id="2a7b6a94-b773-4cc1-bf83-a13d5f81a108" name="ModelingProject">
     <elementDefinition Id="a0cd5890-f207-4b2a-83cb-b456b2d2f4b1" />
+    <profileInstances>
+      <packageHasProfileInstances Id="86059f00-c068-4cd0-aa60-8bb3c2056d38">
+        <profileInstance Id="d44eee02-620b-4f2f-8eab-9478a4258a28" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="f680d7e4-eb06-4df6-bcbb-ea7c680f64ac">
+        <profileInstance Id="3533ac60-6585-4474-a2ff-cbe57b3c2c42" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </SequenceDesignerModel>
