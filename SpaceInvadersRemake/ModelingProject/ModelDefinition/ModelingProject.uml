@@ -746,7 +746,7 @@
           <combinedFragment
             Id="b85be7ab-8477-499d-9e57-106cf86f421e"
             name="CombinedFragment2"
-            interactionOperator="Seq">
+            interactionOperator="Par">
             <coveredLifelines>
               <lifelineMoniker
                 Id="9c5222a3-d5b2-4b1a-8ef7-2a5c3a385901"
