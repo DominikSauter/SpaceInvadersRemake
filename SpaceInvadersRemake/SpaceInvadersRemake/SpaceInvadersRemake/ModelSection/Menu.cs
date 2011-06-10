@@ -99,5 +99,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             throw new System.NotImplementedException();
         }
+
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
