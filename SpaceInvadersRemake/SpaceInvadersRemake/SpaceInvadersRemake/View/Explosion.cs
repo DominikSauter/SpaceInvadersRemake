@@ -59,5 +59,10 @@ namespace SpaceInvadersRemake.View
         {
             throw new NotImplementedException();
         }
+
+        public void StartExplosion()
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }
