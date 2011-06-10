@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Konstruktor
         /// </summary>
-        public ControllerEventArgs()
+        public ControllerEventArgs(BehaviourEnum behaviour, List<IGameItem> controllees, DifficultyLevel difficultyLevel)
         {
             throw new System.NotImplementedException();
         }
