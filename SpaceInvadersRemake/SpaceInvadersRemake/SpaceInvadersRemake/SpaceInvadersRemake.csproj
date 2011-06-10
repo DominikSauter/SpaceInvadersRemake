@@ -130,7 +130,7 @@
     <Compile Include="ModelSection\BehaviourEnum.cs" />
     <Compile Include="Controller\ControllerManager.cs" />
     <Compile Include="ModelSection\DifficultyLevel.cs" />
-    <Compile Include="ModelSection\ModelManager.cs" />
+    <Compile Include="ModelSection\GameCourseManager.cs" />
     <Compile Include="Controller\MotherShipAI.cs" />
     <Compile Include="ModelSection\PowerUpAction.cs" />
     <Compile Include="ModelSection\ProjectileTypeEnum.cs" />
