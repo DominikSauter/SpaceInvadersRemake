@@ -22,7 +22,7 @@ namespace SpaceInvadersRemake.Controller
     /// Zurück 
     /// Falls ein Menüpunkt Einstellungsmöglichkeiten bietet, werden diese mit rechts/links ausgewählt.
     /// </remarks>
-    class MenuController : ICommander
+    public class MenuController : ICommander
     {
         /// <summary>
         /// Generiert eine neue Instanz der <see cref="MenuController"/> Klasse.
