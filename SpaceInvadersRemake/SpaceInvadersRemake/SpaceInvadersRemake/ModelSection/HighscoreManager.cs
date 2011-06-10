@@ -46,6 +46,9 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
 
+        /// <summary>
+        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Models.
+        /// </summary>
         public void Dispose()
         {
             throw new NotImplementedException();
