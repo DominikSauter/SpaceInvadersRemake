@@ -5,6 +5,15 @@
       <interaction Id="92d93064-188d-49d3-9240-18b8c5ff1cbc" name="Command Player Ship" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
         <elementDefinition Id="d5b56621-92fc-44ee-b059-7ea39d92d755" />
         <fragments>
+          <lostFoundTarget Id="eee393c9-70e0-47fc-a715-ecb8387b313c" name="LostFoundTarget2">
+            <elementDefinition Id="18e7ea49-1faf-44f8-9eb9-1264294c9041" />
+          </lostFoundTarget>
+          <messageOccurrenceSpecification Id="63b2adc2-cdf3-48f4-a687-0f883ed922f2" name="MessageOccurrenceSpecification2">
+            <elementDefinition Id="5bcc5adb-ed4c-4de0-abe7-356ebbf2383a" />
+            <covered>
+              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+            </covered>
+          </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="d5e8fd73-19ac-4396-acd8-3cadd8306d31" name="BehaviorExecutionSpecification2">
             <elementDefinition Id="4b35fa08-6216-4e9f-8159-37182f7d49c3" />
             <coveredLifelines>
@@ -31,15 +40,6 @@
               <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="63b2adc2-cdf3-48f4-a687-0f883ed922f2" name="MessageOccurrenceSpecification2">
-            <elementDefinition Id="5bcc5adb-ed4c-4de0-abe7-356ebbf2383a" />
-            <covered>
-              <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <lostFoundTarget Id="eee393c9-70e0-47fc-a715-ecb8387b313c" name="LostFoundTarget2">
-            <elementDefinition Id="18e7ea49-1faf-44f8-9eb9-1264294c9041" />
-          </lostFoundTarget>
           <executionOccurrenceSpecification Id="99d170c3-27c7-4e00-9162-2723523c09bf" name="ExecutionOccurrenceSpecification4">
             <elementDefinition Id="10df774f-ad17-46e5-a548-96c66a19f1c2" />
             <event>

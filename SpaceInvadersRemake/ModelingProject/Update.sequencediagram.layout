@@ -8,13 +8,13 @@
         <lifelineHoverShape Id="bf04bb8c-4dfb-44d3-a420-a43699a0d599" absoluteBounds="2.9354166666666663, 1, 0, 7">
           <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
         </lifelineHoverShape>
-        <umlExecutionSpecificationShape Id="6930c4ba-5ac5-4cdd-b221-24c76d7639cd" absoluteBounds="2.9354166666666663, 2.3763367929806307, 0.15, 4.4519965399056654" customColor="184, 204, 215" visualStyleMode="Modified">
-          <behaviorExecutionSpecificationMoniker Id="9184b1a7-7e72-4aef-9968-863599c4639c" LastKnownName="BehaviorExecutionSpecification24" />
-        </umlExecutionSpecificationShape>
-        <umlLifelineHeadShape Id="c33b81bd-23e1-46ad-8dd8-e99a0a11999e" absoluteBounds="2.098958333333333, 0.6, 1.8229166666666665, 0.4" customColor="White" visualStyleMode="Modified">
+        <umlLifelineHeadShape Id="c33b81bd-23e1-46ad-8dd8-e99a0a11999e" absoluteBounds="2.3724938623110452, 0.6, 1.2758456087112426, 0.4" customColor="White" visualStyleMode="Modified">
           <lifelineMoniker Id="6a86efdb-bc31-4275-8b05-91593f9a97d8" LastKnownName="WaveAIController" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
+        <umlExecutionSpecificationShape Id="6930c4ba-5ac5-4cdd-b221-24c76d7639cd" absoluteBounds="2.9354166666666663, 2.3763367929806307, 0.15, 4.4519965399056654" customColor="184, 204, 215" visualStyleMode="Modified">
+          <behaviorExecutionSpecificationMoniker Id="9184b1a7-7e72-4aef-9968-863599c4639c" LastKnownName="BehaviorExecutionSpecification24" />
+        </umlExecutionSpecificationShape>
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="6cc47f61-55e7-4a35-8d9e-13c2fb6d415a" absoluteBounds="8.283333333333335, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
@@ -36,14 +36,14 @@
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="de668d09-0a04-42fe-bf68-271e6175990b" absoluteBounds="1.025, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
+      <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="ba75321b-c4f8-4cde-bf9f-c7fa14a89717" absoluteBounds="0.43854166666666661, 0.6, 1.3229166666666665, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
+        <umlLifelineHeadShape Id="ba75321b-c4f8-4cde-bf9f-c7fa14a89717" absoluteBounds="0.36159979820251453, 0.6, 1.4768004035949707, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="4594629e-219c-4ebb-9277-a900d6174554" absoluteBounds="1.025, 1, 0, 7">
-          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="ControllerManager" />
+          <lifelineMoniker Id="38939e4c-f784-49c5-bb45-63aa8be45057" LastKnownName="GameCourseManager" />
         </lifelineHoverShape>
       </relativeChildShapes>
     </lifelineShape>
@@ -60,7 +60,7 @@
         <lifelineHoverShape Id="95850b37-f25a-4fa3-8a57-065cd72823ce" absoluteBounds="5.4250000000000016, 1, 0, 7">
           <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
         </lifelineHoverShape>
-        <umlLifelineHeadShape Id="ad2a0323-6164-435a-a62e-7b0428114c24" absoluteBounds="4.6875000000000018, 0.6, 1.625, 0.4" customColor="White" visualStyleMode="Modified">
+        <umlLifelineHeadShape Id="ad2a0323-6164-435a-a62e-7b0428114c24" absoluteBounds="4.86207719564438, 0.6, 1.2758456087112426, 0.4" customColor="White" visualStyleMode="Modified">
           <lifelineMoniker Id="84119988-2e52-47d9-9ec2-da48c7907798" LastKnownName="WaveAIController" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
@@ -76,14 +76,14 @@
       <commentMoniker Id="f0238b4c-d840-4ceb-a0df-7b82f0584f52" />
       <relativeChildShapes />
     </commentShape>
-    <commentConnector edgePoints="[(3.625 : 1.375); (3.08541666666667 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+    <commentConnector edgePoints="[(3.625 : 1.375); (3.08541666666667 : 1.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
       <relativeChildShapes />
       <nodes>
         <commentShapeMoniker Id="6dd55444-2f23-4844-906c-d11ba928a685" />
         <lifelineShapeMoniker Id="d5d84828-d3f7-4717-bfe2-2e583390eb4b" />
       </nodes>
     </commentConnector>
-    <commentConnector edgePoints="[(5.125 : 1.375); (5.425 : 1.375)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+    <commentConnector edgePoints="[(5.125 : 1.375); (5.425 : 1.375)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
       <relativeChildShapes />
       <nodes>
         <commentShapeMoniker Id="6dd55444-2f23-4844-906c-d11ba928a685" />
@@ -158,7 +158,7 @@
       <commentMoniker Id="d6609277-c530-4f18-a448-7851ad24a733" />
       <relativeChildShapes />
     </commentShape>
-    <commentConnector edgePoints="[(2.125 : 3.8125); (2.93541666666667 : 3.8125)]" fixedFrom="Algorithm" fixedTo="Algorithm" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
+    <commentConnector edgePoints="[(2.125 : 3.8125); (2.93541666666667 : 3.8125)]" fixedFrom="NotFixed" fixedTo="NotFixed" TargetRelationshipDomainClassId="217d6bd0-42ed-4e7f-ad2b-af3ef5142428" customColor="Black">
       <relativeChildShapes />
       <nodes>
         <commentShapeMoniker Id="26dab592-e7da-47af-b267-dfcef530dc6d" />
