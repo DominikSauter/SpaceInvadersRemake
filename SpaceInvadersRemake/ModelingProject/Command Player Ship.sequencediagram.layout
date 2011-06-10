@@ -15,14 +15,14 @@
       </relativeChildShapes>
     </lifelineShape>
     <lifelineShape Id="f2815642-9392-422e-bd64-86c46bc210d3" absoluteBounds="1.74375, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+      <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="ControllerManager" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="3fd9d1a9-057b-48d4-b14e-a53dbf98a9f1" absoluteBounds="1.1400014710426329, 0.6, 1.3574970579147339, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+        <umlLifelineHeadShape Id="3fd9d1a9-057b-48d4-b14e-a53dbf98a9f1" absoluteBounds="1.1567658138275145, 0.6, 1.3239683723449707, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="ControllerManager" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="fb956c18-e468-4369-87ca-139ce72432d3" absoluteBounds="1.74375, 1, 0, 7">
-          <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="Controller Manager" />
+          <lifelineMoniker Id="b91420df-4ec5-4b89-a76c-7dc55ab1d058" LastKnownName="ControllerManager" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="6ce5c8df-a800-4ce0-abab-b27b89f29f89" absoluteBounds="1.74375, 1.5833333333333333, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="d5e8fd73-19ac-4396-acd8-3cadd8306d31" LastKnownName="BehaviorExecutionSpecification2" />
