@@ -70,13 +70,6 @@
     <EmbeddedResource Include="States.activitydiagram">
       <SubType>Content</SubType>
     </EmbeddedResource>
-    <Content Include="StateMachine.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="StateMachine.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>StateMachine.sequencediagram</DependentUpon>
-    </Content>
     <Content Include="States.activitydiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>States.activitydiagram</DependentUpon>
