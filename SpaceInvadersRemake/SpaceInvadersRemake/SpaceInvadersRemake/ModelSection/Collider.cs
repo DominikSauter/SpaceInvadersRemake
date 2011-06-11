@@ -12,7 +12,7 @@ namespace SpaceInvadersRemake.ModelSection
     {
 
         /// <summary>
-        /// Überprüft, ob zwei GameItems kollidieren
+        /// Überprüft, ob zwei <c>GameItem</c>s kollidieren
         /// </summary>
         /// <param name="CollisionPartner1">Kollisionspartner 1</param>
         /// <param name="CollisionPartner2">Kollisionspartner 2</param>
@@ -22,10 +22,10 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Überprüft alle GameItems in der angegebenen Liste auf Kollisionen in dem für jeweils ein Paar die CheckCollision-Methode aufgerufen wird. 
-        /// Dabei wird ausgeschloosen, dass zwei gleichartige Objekte kollidieren.
+        /// Überprüft alle <c>GameItem</c>s in der angegebenen Liste auf Kollisionen in dem für jeweils ein Paar die <c>CheckCollision</c>-Methode aufgerufen wird. 
+        /// Dabei wird ausgeschlossen, dass zwei gleichartige Objekte kollidieren.
         /// </summary>
-        /// <param name="GameItemList">Liste aller GameItems</param>
+        /// <param name="GameItemList">Liste aller <c>GameItem</c>s</param>
         public static void CheckAllCollisions(List<IGameItem> GameItemList)
         {
             throw new System.NotImplementedException();

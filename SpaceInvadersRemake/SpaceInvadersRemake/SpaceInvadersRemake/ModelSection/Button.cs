@@ -11,9 +11,10 @@ namespace SpaceInvadersRemake.ModelSection
     public class Button : MenuControl
     {
         /// <summary>
-        /// Speichert die mit dem Button verbundene Funktion
+        /// Speichert die mit dem Button verbundene Funktion (Delegate)
         /// </summary>
         private Action action;
+
         /// <summary>
         /// Erstellt einen Button
         /// </summary>

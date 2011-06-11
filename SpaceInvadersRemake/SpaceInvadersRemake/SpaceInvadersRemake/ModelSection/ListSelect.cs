@@ -6,19 +6,26 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt einen Menüeintrag dar, bei dem aus einer Liste von Elementen ein bestimmtes Element ausgewählt werden kann. Dabei wird immer nur das ausgewählte Element aus der Liste nach außen weitergegeben. Diese Klasse ist generisch und kann für fast alle Typen verwendet werden.
+    /// Diese Klasse stellt einen Menüeintrag dar, bei dem aus einer Liste von Elementen ein bestimmtes 
+    /// Element ausgewählt werden kann. Dabei wird immer nur das ausgewählte Element aus der Liste nach 
+    /// außen weitergegeben. Diese Klasse ist generisch und kann für fast alle Typen verwendet werden.
     /// </summary>
-    /// <remarks>Der Typ, der in der Liste genutzt wird, sollte die "ToString"-Methode vernünftig überschreiben, da diese zum Anzeigen benutzt wird.</remarks>
+    /// <remarks>
+    /// Der Typ, der in der Liste genutzt wird, muss die <c>ToString</c>-Methode vernünftig überschreiben,
+    /// da diese zum Anzeigen des Wert benutzt wird.
+    /// </remarks>
     public class ListSelect<T> : MenuControl
     {
         /// <summary>
         /// Speichert die mit dem Menüelement verbundene Funktion.
         /// </summary>
         private Action<T> action;
+
         /// <summary>
         /// Speichert die Liste die verwaltet werden soll.
         /// </summary>
         private List<T> list;
+
         /// <summary>
         /// Speichert den aktuell im Programm aktiven Wert.
         /// </summary>
@@ -52,7 +59,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Zeigt an ob das Element aktiv ist.
         /// </summary>
-        /// <remarks>Wenn diese Eigenschaft auf "false" gesetzt wird, dann muss "SelectedItem" auf "activeItem" gesetzt werden.</remarks>
+        /// <remarks>
+        /// Wenn diese Eigenschaft auf <c>false</c> gesetzt wird, dann muss der Wert von 
+        /// <c>SelectedItem</c> auf den von <c>activeItem</c> gesetzt werden.
+        /// </remarks>
         public override bool Active
         {
             get
@@ -65,9 +75,12 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Führt die mit dem Element verbundene Funktion aus. Dabei wird "activeItem" als Parameter übergeben.
+        /// Führt die mit dem Element verbundene Funktion aus. Dabei wird <c>activeItem</c> als Parameter übergeben.
         /// </summary>
-        /// <remarks>Beim Ausführen muss "activeItem" auf "SelectedItem" gesetzt werden. Außerdem sollte Delegate nur dann aufgerufen werden, wenn sich die beiden Werte unterscheiden.</remarks>
+        /// <remarks>
+        /// Beim Ausführen muss der Wert von <c>activeItem</c> auf den von <c>SelectedItem</c> gesetzt werden. 
+        /// Außerdem sollte das Delegate nur dann aufgerufen werden, wenn sich die beiden Werte unterscheiden.
+        /// </remarks>
         public override void Action()
         {
             throw new NotImplementedException();

@@ -9,11 +9,11 @@ namespace SpaceInvadersRemake.ModelSection
     /// <summary>
     /// Diese Klasse stellt ein aktives PowerUp dar, das beim Spieler wirksam ist.
     /// </summary>
-    /// <remarks>Die Ausführung der PowerUps auf dem Spieler wird über die Delegates Apply und Remove gelöst. Die Funtionen müssen von den PowerUp-Unterklassen bereitgestellt werden.</remarks>
+    /// <remarks>Die Ausführung der PowerUps auf dem Spieler wird über die Delegates <c>Apply</c> und <c>Remove</c> gelöst. Die Funtionen müssen von den <c>PowerUp</c>-Unterklassen bereitgestellt werden.</remarks>
     public class ActivePowerUp
     {
         /// <summary>
-        /// Erzeugt ein ActivePowerUp
+        /// Erzeugt ein <c>ActivePowerUp</c>
         /// </summary>
         /// <param name="timeLeft">Die Wirkungsdauer des PowerUps</param>
         /// <param name="apply">Die Funktion, mit der das PowerUp angewendet wird</param>

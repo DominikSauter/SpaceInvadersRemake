@@ -7,7 +7,7 @@ namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
     /// Diese Klasse stellt das Highscore-Menü dar. Darin werden Highscore-Einträge verwaltet, 
-    /// von denen einer wenn gewollt von einem Controller bearbeitet werden kann.
+    /// von denen einer, wenn gewollt, von einem Controller bearbeitet werden kann.
     /// </summary>
     public class HighscoreManager : SpaceInvadersRemake.StateMachine.IModel
     {
@@ -36,7 +36,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
         
         /// <summary>
-        /// Gibt die HighscoreListe als Array zurück.
+        /// Gibt die Highscore-Liste als Array zurück.
         /// </summary>
         public SpaceInvadersRemake.ModelSection.HighscoreEntry[] HighscoreEntries
         {
@@ -47,7 +47,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Gibt, falls vorhanden den Eintrag zurück, der bearbeitet werden kann.
+        /// Gibt, falls vorhanden, den Eintrag zurück, der bearbeitet werden kann.
         /// </summary>
         public HighscoreEntry NewEntry
         {
@@ -58,7 +58,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Bestätigt die Bearbeitung des Eintragt und speichert die dadurch veränderte Liste.
+        /// Bestätigt die Bearbeitung des Eintrags und speichert die dadurch veränderte Liste.
         /// </summary>
         /// <returns></returns>
         public bool Save()

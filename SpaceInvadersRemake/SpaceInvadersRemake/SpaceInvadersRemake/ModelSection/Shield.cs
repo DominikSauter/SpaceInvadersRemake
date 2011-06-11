@@ -4,7 +4,8 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Schild dar, das den Spieler vor feindlichem Beschuss schützt, aber auch seine eigenen Projektile aufhält.
+    /// Diese Klasse stellt ein Schild dar, das den Spieler vor feindlichem Beschuss schützt, 
+    /// aber auch seine eigenen Projektile aufhält.
     /// </summary>
     public class Shield : GameItem
     {

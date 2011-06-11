@@ -13,7 +13,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         /// <summary>
         /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
-        /// Sie sorgt dafür, dass das Destroyed-Event ausgelöst wird.
+        /// Sie sorgt dafür, dass das <c>Destroyed</c>-Event ausgelöst wird.
         /// </summary>
         protected virtual void Destroy()
         {
@@ -95,7 +95,7 @@ namespace SpaceInvadersRemake.ModelSection
 }
 
         /// <summary>
-        /// In dieser Liste werden alle Spielobjekte verwaltet. Jeden Spielobjekt fügt sich selbst in seinem Konstruktor zu dieser Liste hinzu.
+        /// In dieser Liste werden alle Spielobjekte verwaltet. Jedes Spielobjekt fügt sich selbst in seinem Konstruktor zu dieser Liste hinzu.
         /// </summary>
         /// <remarks>
         /// Muss am Anfang eines Spiels neu erzeugt und am Ende gelöscht werden

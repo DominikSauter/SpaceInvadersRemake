@@ -4,7 +4,8 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Rapidfire-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers, sodass diese in schneller Folge feuern kann.
+    /// Diese Klasse stellt ein Rapidfire-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers,
+    /// sodass diese in schneller Folge feuern kann.
     /// </summary>
     public class Rapidfire : PowerUp
     {

@@ -24,7 +24,8 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die verbleibenden Leben (Versuche) des Spielers. Wenn der Wert 0 erreicht wird, wird "IsAlive" auf "false" gesetzt.
+        /// Die verbleibenden Leben (Versuche) des Spielers. Wenn der Wert 0 erreicht wird, wird <c>IsAlive</c> 
+        /// auf <c>false</c> gesetzt.
         /// </summary>
         public int Lives
         {
@@ -86,10 +87,11 @@ namespace SpaceInvadersRemake.ModelSection
         public static event EventHandler Created;
 
         /// <summary>
-        /// Fügt der Liste der aktiven PowerUps ein neues PowerUp hinzu. Dabei wird das Apply-Delegate des übegebenen ActivePowerUps ausgelöst.
+        /// Fügt der Liste der aktiven PowerUps ein neues PowerUp hinzu. Dabei wird das <c>Apply</c>-Delegate des übegebenen <c>ActivePowerUp</c>s ausgelöst.
         /// </summary>
-        /// <remarks>Wenn bereits ein gleiches ActivePowerUp in der Liste ist, wird dieses gelöscht ohne das Remove-Delegate auszulösen.
-        /// Für weitere Informationen sollten ubedingt die Hinweise zur PowerUp-Liste "ActivePowerUps" beachten.
+        /// <remarks>
+        /// Wenn bereits ein gleiches <c>ActivePowerUp</c> in der Liste ist, wird dieses gelöscht ohne das <c>Remove-</c>Delegate auszulösen.
+        /// Für weitere Informationen sollten unbedingt die Hinweise zur PowerUp-Liste <c>ActivePowerUps</c> beachtet werden.
         /// </remarks>
         /// <param name="powerUpIcons">Das neue PowerUp</param>
         public void AddPowerUp(ActivePowerUp powerUp)
@@ -98,14 +100,14 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Eine Liste der derzeit aktiven PowerUps des Spielers. Ihr werden in der AddPowerUp-Methode Elemente hinzugefügt.
-        /// In der Update-Methode wird bei allen aktiven PowerUps die Restzeit aktualisiert und diese gegebenenfalls entfernt, 
+        /// Eine Liste der derzeit aktiven PowerUps des Spielers. Ihr werden in der <c>AddPowerUp</c>-Methode Elemente hinzugefügt.
+        /// In der <c>Update</c>-Methode wird bei allen aktiven PowerUps die Restzeit aktualisiert und diese gegebenenfalls entfernt, 
         /// wenn die Restzeit auf null oder darunter gefallen ist.
         /// </summary>
-        /// <remarks>Wird der Liste ein PowerUp hinzugefügt, wird dessen "Apply"-Delegate aufgerufen (in der AddPowerUp-Methode).
-        /// Beim Entfernen aus der Liste wird das "Remove"-Delegate aufgerufen (in der Update-Methode). Ausnahme ist, 
+        /// <remarks>Wird der Liste ein PowerUp hinzugefügt, wird dessen <c>Apply</c>-Delegate aufgerufen (in der <c>AddPowerUp</c>-Methode).
+        /// Beim Entfernen aus der Liste wird das <c>Remove</c>-Delegate aufgerufen (in der <c>Update</c>-Methode). Ausnahme ist, 
         /// wenn ein weiteres Waffen-PowerUp hinzugefügt wird oder ein PowerUp, das bereits aktiv ist. 
-        /// In diesem Fall wird das vorher aktive Waffen-PowerUp entfernt ohne "Remove" aufzurufen.
+        /// In diesem Fall wird das vorher aktive Waffen-PowerUp entfernt ohne <c>Remove</c> aufzurufen.
         /// </remarks>
         public List<ActivePowerUp> ActivePowerUps
         {
@@ -131,7 +133,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Fügt der Punktzahl des Spielers Punkte hinzu. Wird verwendet um sich am "ScoreGained"-Event der Gegner-Klassen anzumelden.
+        /// Fügt der Punktzahl des Spielers Punkte hinzu. Wird verwendet um sich am <c>ScoreGained</c>-Event der Gegner-Klassen anzumelden.
         /// </summary>
         /// <param name="enemy">Gegner der das Event ausgelöst hat</param>
         /// <param name="e">EventArgs werden nich verwendet</param>
