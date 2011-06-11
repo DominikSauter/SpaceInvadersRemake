@@ -30,7 +30,7 @@ namespace SpaceInvadersRemake.View
         }
     
         /// <summary>
-        /// Aktuelle position des Partikels
+        /// Aktuelle Position des Partikels
         /// </summary>
         public Vector2 Position
         {
@@ -124,7 +124,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet mit Hilfe des <c>SpriteBatch</c> das Partikel auf den Bildschirm
         /// </summary>
-        /// <param name="spriteBatch"></param>
+        /// <param name="spriteBatch">Objekt zum Zeichnen von 2D Grafiken</param>
         public void Draw(SpriteBatch spriteBatch)
         {
             throw new System.NotImplementedException();

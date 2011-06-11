@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
-    /// Die GameUI(GameUserInterface) Klasse stellt die Spieloberfläche während des Spiels via der <c>draw</c> Methode dar.
+    /// Die GameUI(GameUserInterface) Klasse stellt die Spieloberfläche während des Spiels via der <c>Draw()</c> Methode dar.
     /// </summary>
     public class GameUI : IView
     {
@@ -33,7 +33,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
-        /// <param name="gameTime">Zeitpunkt des Spiels, zu dem die <c>draw</c> Methode aufgerufen wird.</param>
+        /// <param name="gameTime">Spielzeit</param>
         public void Draw(GameTime gameTime)
         {
             throw new System.NotImplementedException();

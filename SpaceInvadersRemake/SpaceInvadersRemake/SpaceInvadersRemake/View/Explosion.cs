@@ -21,7 +21,7 @@ namespace SpaceInvadersRemake.View
         /// Erstellt eine Partikel Engine für einen Explosionseffekt.
         /// </summary>
         /// <param name="texture">Grafische Darstellung der Partikel</param>
-        /// <param name="location">position des Partikel Emitters</param>
+        /// <param name="location">Position des Partikel Emitters</param>
         /// <param name="size">Größe der dargestellten Partikel</param>
         public Explosion(Microsoft.Xna.Framework.Graphics.Texture2D texture, Vector2 location, float size)
         {
@@ -54,7 +54,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Leitet die Draw()-Methode an die Partikel weiter.
         /// </summary>
-        /// <param name="spriteBatch"></param>
+        /// <param name="spriteBatch">Objekt zum Zeichnen von 2D Grafiken</param>
         public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
         {
             throw new NotImplementedException();

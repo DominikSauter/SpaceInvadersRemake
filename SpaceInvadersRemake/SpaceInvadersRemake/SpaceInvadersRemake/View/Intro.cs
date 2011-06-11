@@ -24,9 +24,12 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Lautstärkeregelung der Audiowiedergabe
-        /// Bei 0 lautlos
+        /// Lautstärkeregelung
         /// </summary>
+        /// <remarks>
+        /// bei 0: lautlos
+        /// bei 1: volle Lautstärke
+        /// </remarks>
         public float Volume
         {
             get
@@ -67,6 +70,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Wiedergabe der Soundeffekte
         /// </summary>
+        /// <param name="SoundFX">Soundeffekt</param>
         public void Play(SoundEffect SoundFX)
         {
             throw new NotImplementedException();
@@ -75,6 +79,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Wiedergabe der Hintergrundmusik
         /// </summary>
+        /// <param name="Background">Hintergrundmusik</param>
         public void Play(Song Background)
         {
             throw new NotImplementedException();
@@ -83,6 +88,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Wiedergabe des Intros
         /// </summary>
+        /// <param name="intro">Introvideo</param>
         public void Play(Video intro)
         {
             throw new NotImplementedException();

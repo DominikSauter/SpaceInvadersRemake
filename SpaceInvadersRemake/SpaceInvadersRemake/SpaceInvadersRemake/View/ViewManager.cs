@@ -9,11 +9,11 @@ namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Diese Klasse verwaltet alle für den aktuellen Spielzustand benötigten View Objekte.
-    /// Die Erzeugung der Objekte wird durch Events gesteuert. Sobald die <c>draw()</c> Methode in der State Machine aufgerufen
-    /// wird, wird die Liste mit den View Objekten durchgegangen und bei jedem Objekt die <c>draw()</c> Methode aufgerufen.
+    /// Die Erzeugung der Objekte wird durch Events gesteuert. Sobald die <c>Draw()</c> Methode in der State Machine aufgerufen
+    /// wird, wird die Liste mit den View Objekten durchgegangen und bei jedem Objekt die <c>Draw()</c> Methode aufgerufen.
     /// </summary>
     /// <remarks>
-    /// Der <code>ViewManager</code> registriert sich beim Instanziieren bei allen <code>CreateHighscoreUI</code>-Events um diese später
+    /// Der <c>ViewManager</c> registriert sich beim Instanziieren bei allen <c>Create</c>-Events um diese später
     /// behandeln zu können.
     /// 
     /// Er registriert auch immer gleichzeitig die passenden View-Methoden an den Model-Objekten (z.B. für Soundeffekte)
@@ -24,15 +24,15 @@ namespace SpaceInvadersRemake.View
         private Random random;
 
         /// <summary>
-        /// Erzeugt abhängig vom aktuellen Zustand in der <code>StateMachine</code> das passende
+        /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende
         /// ViewManager-Objekt
         /// </summary>
         /// 
-        /// <param name="currentState">Aktueller Zustand der <code>StateMachine</code> anhand dessen die passende
+        /// <param name="currentState">Aktueller Zustand der <c>StateMachine</c> anhand dessen die passende
         /// UI erstellt wird.</param>
         /// 
         /// <remarks>
-        /// Die <code>ViewItemList</code> wird initialisiert und das passende UI Objekt hinzugefügt (GameUI, HighscoreUI, MenuUI).
+        /// Die <c>ViewItemList</c> wird initialisiert und das passende UI Objekt hinzugefügt (GameUI, HighscoreUI, MenuUI).
         /// </remarks>
         public ViewManager(StateMachine.State currentState)
         {
@@ -73,6 +73,8 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Soundeffekt für das Abfeuern der Spielerwaffe.
         /// </summary>
+        /// <param name="weapon">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         public void ShootSFX(object weapon, EventArgs e)
         {
             throw new System.NotImplementedException();
@@ -81,6 +83,8 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Soundeffekt für das Erscheinen des Mutterschiffs.
         /// </summary>
+        /// <param name="mothership">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
         /// Eventuell über die komplette Dauer, während das Mutterschiff im Bild ist.
         /// Private Methode, da sie aufgerufen werden kann wenn ein Mutterschiff erstellt wird.
@@ -93,6 +97,8 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Soundeffekt sowie Anstosspunkt für die Explosions-PartikelEngine, wenn eine Representation zerstört wird.
         /// </summary>
+        /// <param name="gameItem">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         public void ExplosionFX(object gameItem, EventArgs e)
         {
             throw new System.NotImplementedException();
@@ -101,17 +107,21 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Soundeffekt wenn ein "Kamikaze"-Alien sein Spezialmanöver startet.
         /// </summary>
+        /// <param name="alien">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         public void KamikazeSFX(object alien, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Behandelt ein Created-Event aus Model. Eine <code>PlayerRepresentation</code> wird erstellt,
+        /// Behandelt ein Created-Event aus Model. Eine <c>PlayerRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
         /// </summary>
+        /// <param name="player">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
-        /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
+        /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
         public PlayerRepresentation CreatePlayer(object player, EventArgs e)
         {
@@ -119,11 +129,13 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Behandelt ein Created-Event aus Model. Eine <code>AlienRepresentation</code> wird erstellt,
+        /// Behandelt ein Created-Event aus Model. Eine <c>AlienRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
         /// </summary>
+        /// <param name="alien">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
-        /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
+        /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
         public AlienRepresentation CreateAlien(Object alien, EventArgs e)
         {
@@ -131,11 +143,13 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Behandelt ein Created-Event aus Model. Eine <code>MothershipRepresentation</code> wird erstellt,
+        /// Behandelt ein Created-Event aus Model. Eine <c>MothershipRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
         /// </summary>
+        /// <param name="mothership">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
-        /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
+        /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
         public MothershipRepresentation CreateMothership(object mothership, EventArgs e)
         {
@@ -143,11 +157,13 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Behandelt ein Created-Event aus Model. Eine <code>MinibossRepresentation</code> wird erstellt,
+        /// Behandelt ein Created-Event aus Model. Eine <c>MinibossRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
         /// </summary>
+        /// <param name="miniboss">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
-        /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
+        /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
         public MinibossRepresentation CreateMiniboss(Object miniboss, EventArgs e)
         {
@@ -155,11 +171,13 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Behandelt ein Created-Event aus Model. Eine <code>ShieldRepresentation</code> wird erstellt,
+        /// Behandelt ein Created-Event aus Model. Eine <c>ShieldRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
         /// </summary>
+        /// <param name="shield">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
-        /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
+        /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
         public ShieldRepresentation CreateShield(object shield, EventArgs e)
         {
@@ -167,11 +185,13 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Behandelt ein Created-Event aus Model. Eine <code>projectileRepresentation</code> wird erstellt,
+        /// Behandelt ein Created-Event aus Model. Eine <c>projectileRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
         /// </summary>
+        /// <param name="projectile">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
-        /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
+        /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
         public ProjectileRepresentation CreateProjectile(object projectile, EventArgs e)
         {
@@ -179,11 +199,13 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Behandelt ein Created-Event aus Model. Eine <code>PowerUpRepresentation</code> wird erstellt,
+        /// Behandelt ein Created-Event aus Model. Eine <c>PowerUpRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
         /// </summary>
+        /// <param name="powerUp">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         /// <remarks>
-        /// Beim Erstellen der Representation muss im Model die passendende <code>ModelHitsphere</code> gespeichert werden.
+        /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
         public PowerUpRepresentation CreatePowerUp(object powerUp, EventArgs e)
         {
@@ -218,10 +240,10 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Iteriert über die gesamte Liste <code>ViewItemList</code> und ruft die <code>Update() bzw. Draw() Methoden auf</code>.
+        /// Iteriert über die gesamte Liste <c>ViewItemList</c> und ruft die <c>Update()</c> bzw. <c>Draw()</c> Methoden auf.
         /// </summary>
-        /// <param name="game">siehe Microsoft-Doc</param>
-        /// <param name="gameTime">siehe Microsoft-Doc</param>
+        /// <param name="game">XNA Game Klasse</param>
+        /// <param name="gameTime">Spielzeit</param>
         /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
         {

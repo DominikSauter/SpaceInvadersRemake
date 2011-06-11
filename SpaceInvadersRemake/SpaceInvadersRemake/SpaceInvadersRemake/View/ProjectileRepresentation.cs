@@ -32,7 +32,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet das Spielerschiff auf den Bildschirm.
         /// </summary>
-        /// <param name="gameTime"></param>
+        /// <param name="gameTime">Spielzeit</param>
         public override void Draw(GameTime gameTime)
         {
             throw new NotImplementedException();
