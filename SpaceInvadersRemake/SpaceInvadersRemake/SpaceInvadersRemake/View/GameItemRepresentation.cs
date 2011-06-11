@@ -36,7 +36,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Positionsmatrix, welche die position des 3D Models im Raum festlegt.
+        /// Positionsmatrix, welche die Position des 3D Models im Raum festlegt.
         /// </summary>
         public Matrix World
         {
@@ -53,7 +53,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet das Objekt auf den Bildschirm
         /// </summary>
-        /// <param name="gameTime"></param>
+        /// <param name="gameTime">Spielzeit</param>
         abstract public void Draw(GameTime gameTime);
 
     }

@@ -99,7 +99,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Menu Hintergrundmusik
+        /// Hintergrundmusik im Menü 
         /// </summary>
         public static Song MenuSong
         {
@@ -141,7 +141,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Explosion Sound Effekt
+        /// Sound Effekt für Explosionen
         /// </summary>
         public static SoundEffect ExplosionEffect
         {
@@ -155,7 +155,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Sound Effekt für den PowerUP
+        /// Sound Effekt für das Erscheinen eines PowerUp's
         /// </summary>
         public static SoundEffect PowerUpEffect
         {
@@ -183,7 +183,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// 3D Model des Gegner Bosses
+        /// 3D Model eines gegnerischen Bosses
         /// </summary>
         public static Model BossModel
         {
@@ -281,7 +281,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Kugelförmige Hitbox des 3D Alienschiffes
+        /// Kugelförmige Hitbox eines 3D Alienschiffes
         /// </summary>
         public static ModelHitsphere Alien1Hitsphere
         {
@@ -295,7 +295,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// Kugelförmige Hitbox eines 3D Alienschiffes
         /// </summary>
         public static ModelHitsphere Alien2Hitsphere
         {
@@ -309,7 +309,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// Kugelförmige Hitbox eines 3D Alienschiffes
         /// </summary>
         public static ModelHitsphere Alien3Hitsphere
         {
@@ -323,7 +323,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// Kugelförmige Hitbox eines 3D Alienschiffes
         /// </summary>
         public static ModelHitsphere Alien4Hitsphere
         {
@@ -337,7 +337,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Kugelförmige Hitbox der 3D Alienschiffe
+        /// Kugelförmige Hitbox eines 3D Alienschiffes
         /// </summary>
         public static ModelHitsphere Alien5Hitsphere
         {
@@ -519,7 +519,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Glanztextur des PowerUps
+        /// Glitzertextur des PowerUps
         /// </summary>
         public static Texture2D PowerUpGlowTexture
         {
@@ -592,20 +592,6 @@ namespace SpaceInvadersRemake.View
         /// Sound Effekt des vorbeifliegenden Mutterschiffs
         /// </summary>
         public static SoundEffect AlienMothershipEffect
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        /// <summary>
-        /// Sound Effekt beim aktivieren eines Menübuttons
-        /// </summary>
-        public static SoundEffect ActiveButtonEffect
         {
             get
             {

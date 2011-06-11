@@ -18,7 +18,7 @@ namespace SpaceInvadersRemake.View
         private List<Texture2D> textures;
 
         /// <summary>
-        /// position an der alle Partikel standardmäßig erzeugt werden.
+        /// Position an der alle Partikel standardmäßig erzeugt werden.
         /// </summary>
         abstract public Vector2 EmitterLocation
         {

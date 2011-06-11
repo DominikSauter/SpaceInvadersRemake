@@ -25,12 +25,21 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Spielt Sound ab
+        /// Spielt einen Soundeffekt ab.
         /// </summary>
+        /// <param name="SoundFX">Soundeffekt</param>
         void Play(SoundEffect SoundFX);
 
+        /// <summary>
+        /// Spielt eine Hintergrundmusik ab.
+        /// </summary>
+        /// <param name="Background">Hintergrundmusik</param>
         void Play(Song Background);
 
+        /// <summary>
+        /// Spielt ein Video ab.
+        /// </summary>
+        /// <param name="intro">Introvideo</param>
         void Play(Video intro);
 
         /// <summary>

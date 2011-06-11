@@ -9,14 +9,14 @@ using Microsoft.Xna.Framework.Audio;
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
-    /// Diese klasse kümmert sich um die Wiedergabe der Hintergrundmusik.
+    /// Diese Klasse kümmert sich um die Wiedergabe der Hintergrundmusik.
     /// </summary>
     public class BackgroundMusic : IMediaplayer
     {
         private Song menuSong;
 
         /// <summary>
-        /// Initialisiert Hintergrundmusik
+        /// Initialisiert die Hintergrundmusik
         /// </summary>
         public BackgroundMusic()
         {
@@ -25,8 +25,11 @@ namespace SpaceInvadersRemake.View
 
         /// <summary>
         /// Lautstärkeregelung
-        /// Bei 0 lautlos
         /// </summary>
+        /// <remarks>
+        /// bei 0: lautlos
+        /// bei 1: volle Lautstärke
+        /// </remarks>
         public float Volume
         {
             get
@@ -67,7 +70,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Langsammes Einblenden der Hintegrundmusik
+        /// Langsames Einblenden der Hintegrundmusik
         /// </summary>
         public void FadeIn()
         {
@@ -75,7 +78,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Langsammes Ausblenden der Hintergrundmusik
+        /// Langsames Ausblenden der Hintergrundmusik
         /// </summary>
         public void FadeOut()
         {
@@ -85,6 +88,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Wiedergabe der Soundeffekte
         /// </summary>
+        /// <param name="SoundFX">Soundeffekt</param>
         public void Play(SoundEffect SoundFX)
         {
             throw new NotImplementedException();
@@ -93,6 +97,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Wiedergabe der Hintergrundmusik
         /// </summary>
+        /// <param name="Background">Hintergrundmusik</param>
         public void Play(Song Background)
         {
             throw new NotImplementedException();
@@ -101,6 +106,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Wiedergabe des Intros
         /// </summary>
+        /// <param name="intro">Introvideo</param>
         public void Play(Video intro)
         {
             throw new NotImplementedException();

@@ -17,8 +17,11 @@ namespace SpaceInvadersRemake.View
 
         /// <summary>
         /// Lautstärkeregelung
-        /// Bei 0 lautlos
         /// </summary>
+        /// <remarks>
+        /// bei 0: lautlos
+        /// bei 1: volle Lautstärke
+        /// </remarks>
         public float Volume
         {
             get
