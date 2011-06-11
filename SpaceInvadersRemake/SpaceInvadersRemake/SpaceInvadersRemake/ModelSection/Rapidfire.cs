@@ -4,14 +4,10 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein RapidFire-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers, sodass diese in schneller Folge feuern kann.
+    /// Diese Klasse stellt ein Rapidfire-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers, sodass diese in schneller Folge feuern kann.
     /// </summary>
     public class Rapidfire : PowerUp
     {
-        /// <summary>
-        /// Diese Methode wird über ein "PowerUpAction"-Delegate in der "ActivePowerUp"-Klasse dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
-        /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUp angewendet werden soll.</param>
         public override void Apply(Player player)
         {
             throw new NotImplementedException();
@@ -27,10 +23,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        /// <summary>
-        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen.
-        /// </summary>
-        /// <param name="collisionPartner">Das GameItem mit die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
@@ -41,10 +33,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Created;
 
-        /// <summary>
-        /// Diese Methode wird über ein "PowerUpAction"-Delegate in der "ActivePowerUp"-Klasse dazu benutzt den Effekt des PowerUps am Spieler rückgängig zu machen.
-        /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUp entfernt werden soll.</param>
         public override void Remove(Player player)
         {
             throw new NotImplementedException();
@@ -59,7 +47,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein Rapidfire-PowerUp
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">Geschwindigkeit</param>
+        /// <param name="velocity">maximale Geschwindigkeit</param>
         public Rapidfire(Vector2 position, Vector2 velocity)
         {
             throw new System.NotImplementedException();

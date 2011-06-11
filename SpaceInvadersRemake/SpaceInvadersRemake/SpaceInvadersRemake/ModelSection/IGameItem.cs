@@ -22,8 +22,11 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die aktuelle Geschwindigkeit
+        /// Die maximale Geschwindigkeit
         /// </summary>
+        /// <remarks>
+        /// Da diese Eigenschaft die maximale Geschwindigkeit angibt, müssen die x- und y-Werte nichtnegativ sein.
+        /// </remarks>
         Vector2 Velocity
         {
             get;
@@ -40,7 +43,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Zeigt an ob das Objekt noch nicht zerstört ist oder ob es gelöscht werden kann.
+        /// Zeigt an ob das Objekt gelöscht werden kann.
         /// </summary>
         bool IsAlive
         {
@@ -49,7 +52,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Das begrenzende Volumen (Kugel) des Objekts
+        /// Das begrenzende Volumen (Kugel) des Objekts für die Kollisionsberechnung
         /// </summary>
         ModelHitsphere ModelHitsphere
         {
@@ -58,26 +61,38 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Bewegt das Objekt in die gewünschte Richtung
+        /// Bewegt das Objekt in die gewünschte Richtung, dabei werden die x- und die y-Komponente mit denen der maximalen Geschwindigkeit multipliziert.
         /// </summary>
+        /// <remarks>
+        /// Der übergebene Richtungsvektor wird vor der Multiplikation normalisiert.
+        /// </remarks>
         /// <param name="direction">Bewegungsrichtung</param>
         void Move(Vector2 direction);
 
         /// <summary>
-        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen.
+        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen. 
+        /// Innerhalb der Methode wird der Schaden am übergebenen Objekt berechnet,
+        /// oder PowerUps angewendet. Außerdem wird das Hit-Event ausgelöst.
         /// </summary>
-        /// <param name="collisionPartner">Das GameItem mit die Kollision stattfand.</param>
+        /// <remarks>
+        /// Bei der Kollisionsprüfung wird nur verhindert, dass zwei gleichartige Objekte kollidieren. 
+        /// Deshalb muss in dieser Methode geprüft werden, ob eine Kollision mit dem übergebenen Objekt überhaupt sinnvoll ist.
+        /// </remarks>
+        /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         void IsCollidedWith(IGameItem collisionPartner);
 
         /// <summary>
-        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controllers beeinflusst werden kann.
+        /// In dieser Methode werden alle Werte aktualisiert, die nicht durch einen Controller beeinflusst werden können.
         /// </summary>
         /// <param name="gameTime">Spielzeit</param>
         void Update(GameTime gameTime);
 
         /// <summary>
-        /// Teilt dem Objekt mit, dass es versuchen soll zu schießen
+        /// Teilt dem Objekt mit, dass es versuchen soll zu schießen.
         /// </summary>
+        /// <remarks>
+        /// Wenn das Objekt nicht schießen kann, dann geschieht nichts.
+        /// </remarks>
         void Shoot();
     }
 }

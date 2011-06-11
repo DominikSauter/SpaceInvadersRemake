@@ -6,8 +6,13 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse wird verwendet um PowerUps zu generieren
+    /// Diese statische Klasse wird verwendet um PowerUps zu generieren. Sie bietet eine Fabrik-Methode 
+    /// um züfallige oder ausgewählte PowerUps zu erzeugen.
     /// </summary>
+    /// <remarks>
+    /// Diese Klasse wird ausschließlich dazu verwendet zufällige oder ausgewählte PowerUps zu erzeugen.
+    /// Das zufällige auftreten von PowerUps muss an anderer Stelle gelöst werden.
+    /// </remarks>
     public static class PowerUpGenerator
     {
         /// <summary>

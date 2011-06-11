@@ -15,7 +15,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         Random,
         PiercingShot,
-        RapidFire,
+        Rapidfire,
         MultiShot,
         Speedboost,
         Deflector,

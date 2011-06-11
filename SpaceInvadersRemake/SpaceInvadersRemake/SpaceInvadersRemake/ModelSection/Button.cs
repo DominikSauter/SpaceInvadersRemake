@@ -24,9 +24,6 @@ namespace SpaceInvadersRemake.ModelSection
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        /// Führt die mit dem Element verbundene Funktion aus.
-        /// </summary>
         public override void Action()
         {
             throw new NotImplementedException();

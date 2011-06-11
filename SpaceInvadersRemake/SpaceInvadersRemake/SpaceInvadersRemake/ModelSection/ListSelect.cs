@@ -28,14 +28,15 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein ListSelect-Objekt
         /// </summary>
         /// <param name="list">Eine Liste von Elementen die verwaltet werden sollen</param>
+        /// <param name="active">Der derzeit im Programm aktive Wert</param>
         /// <param name="action">Eine Funktion, die einen Parameter vom Typ in der Liste entgegennimmt, und diesen Parameter anwendet. Dadurch können über dieses Menüelement Daten an einer anderen Stelle des Programms geändert werden.</param>
-        public ListSelect(List<T> list, Action<T> action)
+        public ListSelect(List<T> list, T active, Action<T> action)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Zeigt den ausgewählten Wert an.
+        /// Gibt den ausgewählten Wert zurück.
         /// </summary>
         public T SelectedItem
         {
@@ -72,17 +73,11 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Wählt den vorigen Eintrag des Controls aus, wenn dies möglich ist.
-        /// </summary>
         public override void Prev()
         {
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Wählt den nächten Eintrag des Controls aus, wenn dies möglich ist.
-        /// </summary>
         public override void Next()
         {
             throw new NotImplementedException();

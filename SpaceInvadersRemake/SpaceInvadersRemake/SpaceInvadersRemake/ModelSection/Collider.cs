@@ -6,7 +6,7 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse verwaltet die Kollisionsberechnung
+    /// Diese statische Klasse bietet eine öffentliche Funktion zur Kollisionsberechnung aller Spielobjekte
     /// </summary>
     public static class Collider
     {
@@ -22,7 +22,8 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Überprüft alle GameItems in der angegebenen Liste auf Kollisionen
+        /// Überprüft alle GameItems in der angegebenen Liste auf Kollisionen in dem für jeweils ein Paar die CheckCollision-Methode aufgerufen wird. 
+        /// Dabei wird ausgeschloosen, dass zwei gleichartige Objekte kollidieren.
         /// </summary>
         /// <param name="GameItemList">Liste aller GameItems</param>
         public static void CheckAllCollisions(List<IGameItem> GameItemList)

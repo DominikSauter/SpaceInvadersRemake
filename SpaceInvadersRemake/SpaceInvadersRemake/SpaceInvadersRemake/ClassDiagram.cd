@@ -62,7 +62,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.PowerUp">
     <Position X="26" Y="50.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAJAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\PowerUp.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -132,7 +132,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Shield">
     <Position X="17.5" Y="50.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAAAAAAAAAAIAAAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
