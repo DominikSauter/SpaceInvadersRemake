@@ -174,6 +174,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// </remarks>
         protected abstract void ViewInitialize();
         
+        /// <summary>
+        /// Führt anwendungsspezifische Aufgaben durch, die mit der Freigabe, der Zurückgabe oder dem Zurücksetzen von nicht verwalteten Ressourcen zusammenhängen.
+        /// </summary>
         public void Dispose()
         {
             this.Model.Dispose();
