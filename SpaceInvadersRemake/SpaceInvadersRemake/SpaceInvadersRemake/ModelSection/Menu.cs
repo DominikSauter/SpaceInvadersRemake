@@ -6,7 +6,9 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Menü dar, das mit verschiedenen Steuerelementen initialisiert wird. Von Außen kann ein Controller über die Funktionen "Up", "Down", "Left", "Right" und "Action" das Menü beeinflussen.
+    /// Diese Klasse stellt ein Menü dar, das mit verschiedenen Steuerelementen initialisiert wird. 
+    /// Von Außen kann ein Controller über die Funktionen "Up", "Down", "Left", "Right" und "Action" 
+    /// das Menü beeinflussen.
     /// </summary>
     public class Menu : SpaceInvadersRemake.StateMachine.IModel
     {
@@ -50,7 +52,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Ruft die "Action"-Methode des aktiven Elements auf
+        /// Ruft die <c>Action-Methode</c> des aktiven Elements auf
         /// </summary>
         public void Action()
         {
@@ -63,7 +65,8 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Wählt das Menüelement unter dem derzeit aktiven aus. Wenn das unterste Element bereits gewählt ist, dann springt die Auswahl zum obersten Element.
+        /// Wählt das Menüelement unter dem derzeit aktiven aus. Wenn das unterste Element bereits gewählt 
+        /// ist, dann springt die Auswahl zum obersten Element.
         /// </summary>
         public void Down()
         {
@@ -71,7 +74,8 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Wählt das Menüelement über dem derzeit aktiven aus. Wenn das oberste Element bereits gewählt ist, dann springt die Auswahl zum untersten Element.
+        /// Wählt das Menüelement über dem derzeit aktiven aus. Wenn das oberste Element bereits gewählt 
+        /// ist, dann springt die Auswahl zum untersten Element.
         /// </summary>
         public void Up()
         {
@@ -79,7 +83,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Ruft die "Prev"-Methode des aktiven Elements auf
+        /// Ruft die <c>Prev</c>-Methode des aktiven Elements auf
         /// </summary>
         public void Left()
         {
@@ -87,7 +91,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Ruft die "Next"-Methode des aktiven Elements auf
+        /// Ruft die <c>Next</c>-Methode des aktiven Elements auf
         /// </summary>
         public void Right()
         {

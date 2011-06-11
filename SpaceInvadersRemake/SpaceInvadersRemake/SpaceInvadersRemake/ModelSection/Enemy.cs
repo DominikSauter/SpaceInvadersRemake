@@ -11,7 +11,7 @@ namespace SpaceInvadersRemake.ModelSection
     public abstract class Enemy : Ship
     {
         /// <summary>
-        /// Die Punktzahl die dem Spieler bei Zertörung gutgeschrieben wird
+        /// Die Punktzahl die dem Spieler bei Zertörung des Schiffs gutgeschrieben wird
         /// </summary>
         public int ScoreGain
         {

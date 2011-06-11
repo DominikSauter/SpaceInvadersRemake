@@ -13,7 +13,7 @@ namespace SpaceInvadersRemake.ModelSection
     {
 
         /// <summary>
-        /// Die aktuelle position
+        /// Die aktuelle Position
         /// </summary>
         Vector2 Position
         {
@@ -72,7 +72,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen. 
         /// Innerhalb der Methode wird der Schaden am übergebenen Objekt berechnet,
-        /// oder PowerUps angewendet. Außerdem wird das Hit-Event ausgelöst.
+        /// oder PowerUps angewendet. Außerdem wird das <c>Hit</c>-Event ausgelöst.
         /// </summary>
         /// <remarks>
         /// Bei der Kollisionsprüfung wird nur verhindert, dass zwei gleichartige Objekte kollidieren. 

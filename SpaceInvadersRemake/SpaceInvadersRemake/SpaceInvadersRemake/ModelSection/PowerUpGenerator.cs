@@ -6,24 +6,24 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese statische Klasse wird verwendet um PowerUps zu generieren. Sie bietet eine Fabrik-Methode 
-    /// um züfallige oder ausgewählte PowerUps zu erzeugen.
+    /// Diese statische Klasse wird verwendet um <c>PowerUp</c>s zu generieren. Sie bietet eine Fabrik-Methode 
+    /// um zufällige oder ausgewählte <c>PowerUp</c>s zu erzeugen.
     /// </summary>
     /// <remarks>
-    /// Diese Klasse wird ausschließlich dazu verwendet zufällige oder ausgewählte PowerUps zu erzeugen.
-    /// Das zufällige auftreten von PowerUps muss an anderer Stelle gelöst werden.
+    /// Diese Klasse wird ausschließlich dazu verwendet zufällige oder ausgewählte <c>PowerUp</c>s zu erzeugen.
+    /// Das zufällige auftreten von <c>PowerUp</c>s muss an anderer Stelle gelöst werden.
     /// </remarks>
     public static class PowerUpGenerator
     {
         /// <summary>
-        /// Random-Objekt zur zufälligen generierung von PowerUps
+        /// Random-Objekt zur zufälligen Generierung von <c>PowerUp</c>s
         /// </summary>
         private static Random random;
 
         /// <summary>
-        /// Diese Methode generiert auf Wunsch ein bestimmtes oder zufälliges PowerUp
+        /// Diese Methode generiert auf Wunsch ein bestimmtes oder zufälliges <c>PowerUp</c>.
         /// </summary>
-        /// <remarks>Bei zufälliger Generierung wird kein StaticShield-PowerUp erzeugt.</remarks>
+        /// <remarks>Bei zufälliger Generierung wird kein <c>StaticShield</c>-PowerUp erzeugt.</remarks>
         /// <param name="type">Typ des PowerUps</param>
         public static void GeneratePowerUp(PowerUpEnum type)
         {
