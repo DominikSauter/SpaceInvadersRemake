@@ -684,11 +684,11 @@
       <FileName>View\PlayerRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.PlaneProjector">
+  <Class Name="SpaceInvadersRemake.View.PlaneProjector">
     <Position X="36.5" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
-      <FileName>PlaneProjector.cs</FileName>
+      <FileName>View\PlaneProjector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
