@@ -55,18 +55,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Hit;
 
-        /// <summary>
-        /// Wird nicht verwendet.
-        /// </summary>
-        public override void Move(Microsoft.Xna.Framework.Vector2 direction)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Nimmt die Konsequenzen am Projektil vor, die nach einer Kollision mit einem anderen IGameItem ("collisionPartner") fällig sind.
-        /// </summary>
-        /// <remarks>Die Kollisionsbehandlung erfolgt kontextsensitiv, also unterschiedlich, je nachdem, mit welchem Typ von IGameItem das Projektil kollidiert ist.</remarks>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
@@ -82,8 +70,13 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Dem Konstruktor werden Startposition ("position") des Projektils, Flugrichtung ("flightDirection"), Projektiltyp ("projectileType"), Lebenspunkte ("hitpoints") und Geschwindigkeit ("velocity") übergeben.
+        /// Erstellt ein Projektil
         /// </summary>
+        /// <param name="position">Position</param>
+        /// <param name="flightDirection">Flugrichtung</param>
+        /// <param name="projectileType">Art des Projektils</param>
+        /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="velocity">maximale Geschwindigkeit</param>
         public Projectile(Vector2 position, Vector2 flightDirection, ProjectileTypeEnum projectileType, int hitpoints, Vector2 velocity)
         {
             throw new System.NotImplementedException();

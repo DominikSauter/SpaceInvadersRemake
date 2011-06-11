@@ -11,10 +11,6 @@ namespace SpaceInvadersRemake.ModelSection
     /// <remarks>Die Bezeichnung "Controller" bezieht sich im Folgenden auf den Controller-Bereich aus MVC.</remarks>
     public static class WaveGenerator
     {
-        
-        //UNDONE Klasse überprüfen wegen  Änderung nötig ! da struct als eventarg nicht funktioniert -CK
-
-
         /// <summary>
         /// Übergibt die benötigten Parameter an den Controller über die "ControllerEventArgs".
         /// </summary>
@@ -22,9 +18,13 @@ namespace SpaceInvadersRemake.ModelSection
         public static event EventHandler<ControllerEventArgs> WaveGenerated;
 
         /// <summary>
-        /// Erzeugt eine neue Welle mit den Parametern AI, Formation und Schwierigkeitsgrad, und ruft danach das Event "WaveGenerated" auf, um dem Controller die gewünschten Controller-Eigenschaften mitzuteilen.
+        /// Erzeugt eine neue Welle und ruft danach das Event "WaveGenerated" auf, um dem Controller die gewünschten Controller-Eigenschaften mitzuteilen.
         /// </summary>
         /// <remarks>Dem Event "WaveGenerated" werden die gewünschte Controller-AI, die erstellte Liste an Gegnern und das Schwierigkeitsgrad-Objekt übergeben.</remarks>
+        /// <param name="AI">gewünschtes Verhalten des Controllers</param>
+        /// <param name="formation">gewünschte Formation der Welle</param>
+        /// <param name="difficultyLevel">gewünschter Schwierigkeitsgrad</param>
+        /// <returns>Eine Liste von Gegnern, die sie aktuelle Welle darstellen</returns>
         public static List<IGameItem> CreateWave(BehaviourEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
         {
             throw new System.NotImplementedException();
