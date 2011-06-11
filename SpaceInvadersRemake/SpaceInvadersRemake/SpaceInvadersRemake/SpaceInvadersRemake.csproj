@@ -135,7 +135,7 @@
     <Compile Include="ModelSection\PowerUpAction.cs" />
     <Compile Include="ModelSection\ProjectileTypeEnum.cs" />
     <Compile Include="ModelSection\PowerUpEnum.cs" />
-    <Compile Include="PlaneProjector.cs" />
+    <Compile Include="View\PlaneProjector.cs" />
     <Compile Include="StateMachine\IController.cs" />
     <Compile Include="StateMachine\IModel.cs" />
     <Compile Include="StateMachine\IView.cs" />

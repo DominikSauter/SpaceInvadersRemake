@@ -5,7 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Utilityklasse um Umrechnungen zwischen den verschiedenen Ebenen zu ermöglichen.
