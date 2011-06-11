@@ -38,7 +38,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die Funktion, mit der das PowerUp rückgängig gemacht wird
+        /// Die Funktion (Delegate), mit der das PowerUp rückgängig gemacht wird
         /// </summary>
         public PowerUpAction Remove
         {
@@ -52,7 +52,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die Funktion, mit der das PowerUp angewendet wird
+        /// Die Funktion (Delegate), mit der das PowerUp angewendet wird
         /// </summary>
         public PowerUpAction Apply
         {
