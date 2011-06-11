@@ -19,28 +19,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        /// <summary>
-        /// Bewegt das Objekt in die gewünschte Richtung
-        /// </summary>
-        /// <param name="direction">Bewegungsrichtung</param>
-        public override void Move(Microsoft.Xna.Framework.Vector2 direction)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen.
-        /// </summary>
-        /// <param name="collisionPartner">Das GameItem mit die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controllers beeinflusst werden kann.
-        /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();

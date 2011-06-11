@@ -57,19 +57,13 @@ namespace SpaceInvadersRemake.ModelSection
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        /// Updatet das Menü (momentan ohne Funktion)
-        /// </summary>
-        /// <param name="game">Referenz zum aktuellen Spiel</param>
-        /// <param name="gameTime">Spielzeit</param>
-        /// <param name="state">Referenz zum Zustand, der die Methode aufgerufen hat</param>
         public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Wählt das untere Menüelement aus. Wenn das unterste Element bereits gewählt ist, dann springt die Auswahl zum obersten Element.
+        /// Wählt das Menüelement unter dem derzeit aktiven aus. Wenn das unterste Element bereits gewählt ist, dann springt die Auswahl zum obersten Element.
         /// </summary>
         public void Down()
         {
@@ -77,7 +71,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Wählt das obere Menüelement aus. Wenn das oberste Element bereits gewählt ist, dann springt die Auswahl zum untersten Element.
+        /// Wählt das Menüelement über dem derzeit aktiven aus. Wenn das oberste Element bereits gewählt ist, dann springt die Auswahl zum untersten Element.
         /// </summary>
         public void Up()
         {
@@ -100,10 +94,6 @@ namespace SpaceInvadersRemake.ModelSection
             throw new System.NotImplementedException();
         }
 
-
-        /// <summary>
-        /// Erledigt die Arbeit, die anfällt, wenn der State entgültig zerstört wird, im Bereich des Models.
-        /// </summary>
         public void Dispose()
         {
             throw new NotImplementedException();

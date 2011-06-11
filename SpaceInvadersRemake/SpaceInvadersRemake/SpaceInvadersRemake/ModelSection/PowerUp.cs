@@ -6,7 +6,7 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese abstrakte Klasse ist die Überklasse aller PowerUps.
+    /// Diese abstrakte Klasse ist die Überklasse aller PowerUps die von abgeschossenen Gegnern erzeugt werden und vom Spieler eingesammelt werden können.
     /// </summary>
     public abstract class PowerUp : GameItem
     {
@@ -23,19 +23,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="player">Der Spieler bei dem das PowerUp entfernt werden soll.</param>
         public abstract void Remove(Player player);
 
-        /// <summary>
-        /// Bewegt das Objekt in die gewünschte Richtung
-        /// </summary>
-        /// <param name="direction">Bewegungsrichtung</param>
-        public override void Move(Microsoft.Xna.Framework.Vector2 direction)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controllers beeinflusst werden kann.
-        /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();

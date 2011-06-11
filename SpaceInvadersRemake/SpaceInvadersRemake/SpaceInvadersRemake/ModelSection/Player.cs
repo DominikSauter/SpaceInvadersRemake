@@ -45,9 +45,6 @@ namespace SpaceInvadersRemake.ModelSection
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
-        /// </summary>
         protected override void Destroy()
         {
             throw new NotImplementedException();
@@ -63,36 +60,21 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        /// <summary>
-        /// Bewegt das Objekt in die gewünschte Richtung
-        /// </summary>
-        /// <param name="direction">Bewegungsrichtung</param>
         public override void Move(Vector2 direction)
         {
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen.
-        /// </summary>
-        /// <param name="collisionPartner">Das GameItem mit die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controllers beeinflusst werden kann.
-        /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Teilt dem Objekt mit, dass es versuchen soll zu schießen
-        /// </summary>
         public override void Shoot()
         {
             throw new NotImplementedException();
@@ -104,9 +86,11 @@ namespace SpaceInvadersRemake.ModelSection
         public static event EventHandler Created;
 
         /// <summary>
-        /// Fügt der Liste der aktiven PowerUps ein neues PowerUp hinzu
+        /// Fügt der Liste der aktiven PowerUps ein neues PowerUp hinzu. Dabei wird das Apply-Delegate des übegebenen ActivePowerUps ausgelöst.
         /// </summary>
-        /// <remarks>Unbedingt die Kommentare zur PowerUp-Liste "ActivePowerUps" beachten</remarks>
+        /// <remarks>Wenn bereits ein gleiches ActivePowerUp in der Liste ist, wird dieses gelöscht ohne das Remove-Delegate auszulösen.
+        /// Für weitere Informationen sollten ubedingt die Hinweise zur PowerUp-Liste "ActivePowerUps" beachten.
+        /// </remarks>
         /// <param name="powerUpIcons">Das neue PowerUp</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
@@ -114,9 +98,15 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Eine Liste der derzeit aktiven PowerUps des Spielers
+        /// Eine Liste der derzeit aktiven PowerUps des Spielers. Ihr werden in der AddPowerUp-Methode Elemente hinzugefügt.
+        /// In der Update-Methode wird bei allen aktiven PowerUps die Restzeit aktualisiert und diese gegebenenfalls entfernt, 
+        /// wenn die Restzeit auf null oder darunter gefallen ist.
         /// </summary>
-        /// <remarks>Wird der Liste ein PowerUp hinzugefügt, wird dessen "Apply"-Delegate aufgerufen. Beim Entfernen aus der Liste wird das "Remove"-Delegate aufgerufen. Ausname ist, wenn ein weiteres Waffen-PowerUp hinzugefügt wird. In diesem Fall wird das vorher aktive Waffen-PowerUp entfernt ohne "Remove" aufzurufen.</remarks>
+        /// <remarks>Wird der Liste ein PowerUp hinzugefügt, wird dessen "Apply"-Delegate aufgerufen (in der AddPowerUp-Methode).
+        /// Beim Entfernen aus der Liste wird das "Remove"-Delegate aufgerufen (in der Update-Methode). Ausnahme ist, 
+        /// wenn ein weiteres Waffen-PowerUp hinzugefügt wird oder ein PowerUp, das bereits aktiv ist. 
+        /// In diesem Fall wird das vorher aktive Waffen-PowerUp entfernt ohne "Remove" aufzurufen.
+        /// </remarks>
         public List<ActivePowerUp> ActivePowerUps
         {
             get
@@ -132,7 +122,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erzeugt einen Spieler
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">Geschwindigkeit</param>
+        /// <param name="velocity">maximale Geschwindigkeit</param>
         /// <param name="lives">Anzahl Leben</param>
         /// <param name="weapon">Startwaffe</param>
         public Player(Vector2 position, Vector2 velocity, int lives, Weapon weapon)
@@ -141,7 +131,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Fügt der Punktzahl des Spielers Punkte hinzu. Wird verwendet um sich am "ScoreGained"-Event der Gegner anzumelden.
+        /// Fügt der Punktzahl des Spielers Punkte hinzu. Wird verwendet um sich am "ScoreGained"-Event der Gegner-Klassen anzumelden.
         /// </summary>
         /// <param name="enemy">Gegner der das Event ausgelöst hat</param>
         /// <param name="e">EventArgs werden nich verwendet</param>

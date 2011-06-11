@@ -13,6 +13,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         /// <summary>
         /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
+        /// Sie sorgt dafür, dass das Destroyed-Event ausgelöst wird.
         /// </summary>
         protected virtual void Destroy()
         {
@@ -20,7 +21,6 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die aktuelle position
         /// </summary>
         public Microsoft.Xna.Framework.Vector2 Position
         {
@@ -33,7 +33,6 @@ namespace SpaceInvadersRemake.ModelSection
           }
 
         /// <summary>
-        /// Die aktuelle Geschwindigkeit
         /// </summary>
         public Microsoft.Xna.Framework.Vector2 Velocity
         {
@@ -46,7 +45,6 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die Lebenspunkte des Objekts
         /// </summary>
         public int Hitpoints
         {
@@ -60,7 +58,6 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Zeigt an ob das Objekt noch nicht zerstört ist oder ob es gelöscht werden kann.
         /// </summary>
         public bool IsAlive
         {
@@ -73,25 +70,24 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Bewegt das Objekt in die gewünschte Richtung
         /// </summary>
-        /// <param name="direction">Bewegungsrichtung</param>
-        public abstract void Move(Microsoft.Xna.Framework.Vector2 direction);
+        /// <param name="direction"></param>
+        public virtual void Move(Microsoft.Xna.Framework.Vector2 direction)
+        {
+            throw new System.NotImplementedException();
+}
 
         /// <summary>
-        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen.
         /// </summary>
-        /// <param name="collisionPartner">Das GameItem mit die Kollision stattfand.</param>
+        /// <param name="collisionPartner"></param>
         public abstract void IsCollidedWith(IGameItem collisionPartner);
 
         /// <summary>
-        /// In dieser Methode wird alles geupdatet, was nicht durch einen Controllers beeinflusst werden kann.
         /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
+        /// <param name="gameTime"></param>
         public abstract void Update(Microsoft.Xna.Framework.GameTime gameTime);
 
         /// <summary>
-        /// Teilt dem Objekt mit, dass es versuchen soll zu schießen
         /// </summary>
         public virtual void Shoot()
         {
@@ -99,9 +95,11 @@ namespace SpaceInvadersRemake.ModelSection
 }
 
         /// <summary>
-        /// In dieser Liste werden alle Spielobjekte verwaltet.
+        /// In dieser Liste werden alle Spielobjekte verwaltet. Jeden Spielobjekt fügt sich selbst in seinem Konstruktor zu dieser Liste hinzu.
         /// </summary>
-        /// <remarks>Muss am Anfang eines Spiels neu erzeugt und am Ende gelöscht werden</remarks>
+        /// <remarks>
+        /// Muss am Anfang eines Spiels neu erzeugt und am Ende gelöscht werden
+        /// </remarks>
         public static System.Collections.Generic.LinkedList<SpaceInvadersRemake.ModelSection.IGameItem> GameItemList
         {
             get
@@ -114,7 +112,6 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Das begrenzende Volumen (Kugel) des Objekts
         /// </summary>
         public ModelHitsphere ModelHitsphere
         {
