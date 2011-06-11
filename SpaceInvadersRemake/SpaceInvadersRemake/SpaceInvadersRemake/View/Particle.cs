@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         /// <param name="texture">Grafische Darstellung</param>
         /// <param name="position">Aktuelle position</param>
-        /// <param name="projectileVelocity">Richtung und Bewegungsgeschwindigkeit</param>
+        /// <param name="velocity">Richtung und Bewegungsgeschwindigkeit</param>
         /// <param name="color">Farbe</param>
         /// <param name="size">Größe</param>
         /// <param name="ttl">Lebenszeit</param>

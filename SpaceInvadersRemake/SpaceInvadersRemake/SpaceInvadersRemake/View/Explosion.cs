@@ -60,6 +60,9 @@ namespace SpaceInvadersRemake.View
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Startet Partikel-Emitter, sobald Destroyed-Event geworfen wurde.
+        /// </summary>
         public void StartExplosion()
         {
             throw new System.NotImplementedException();
