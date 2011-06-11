@@ -25,9 +25,6 @@ namespace SpaceInvadersRemake.ModelSection
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        /// Diese Methode generiert ein neues Projektil-Objekt an der Stelle von "position" mit der Flugrichtung "shootingDirection" und wirft das Event "WeaponFired".
-        /// </summary>
         public override void Fire(Vector2 position, Vector2 shootingDirection, GameTime gameTime)
         {
             throw new NotImplementedException();

@@ -6,7 +6,9 @@ namespace SpaceInvadersRemake.ModelSection
     /// <summary>
     /// Generiert eine Liste von Gegner-Objekten aus einem Positions-Array.
     /// </summary>
-    /// <remarks>Vorgefertigte Arrays für bestimmte Formationen sind in der Klasse bereits verfügbar.</remarks>
+    /// <remarks>
+    /// Vorgefertigte Arrays für bestimmte Formationen sind in der Klasse bereits verfügbar.
+    /// </remarks>
     public static class FormationGenerator
     {
         /// <summary>
@@ -68,7 +70,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Erzeugt eine Liste von Gegner-Objekten aus einem Vector2-Array.
         /// </summary>
-        /// <returns></returns>
+        /// <param name="hitpoints">Lebenspunkte der Gegner</param>
+        /// <param name="velocity">maximale Geschwindigkeit der Gegner</param>
+        /// <param name="formation">Formation der Welle</param>
+        /// <returns>Die generierte Liste von Gegnern</returns>
         public static List<IGameItem> CreateFormation(int hitpoints, Vector2 velocity, Vector2[] formation)
         {
             throw new System.NotImplementedException();
