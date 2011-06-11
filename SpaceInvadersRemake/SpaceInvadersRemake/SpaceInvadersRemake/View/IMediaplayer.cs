@@ -13,8 +13,12 @@ namespace SpaceInvadersRemake.View
     public interface IMediaplayer
     {
         /// <summary>
-        /// Musiklautstärke
+        /// Lautstärkeregelung
         /// </summary>
+        /// <remarks>
+        /// bei 0: lautlos
+        /// bei 1: volle Lautstärke
+        /// </remarks>
         float Volume
         {
             get;
@@ -22,7 +26,9 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Musikstücke werden wiederholt oder nicht.
+        /// Wahrheitswert, der festlegt ob ein Effekt wiederholt werden soll.
+        /// true: Effekt wird wiederholt
+        /// false: Effekt wird einmalig wiedergegeben
         /// </summary>
         bool Repeat
         {
