@@ -37,7 +37,7 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
-        /// Beendet das Spiel und wechselt damit den Zustand.
+        /// Beendet das Spiel und wechselt damit den Zustand ins Hauptmenü.
         /// </summary>
         public void ExitGame()
         {

@@ -11,7 +11,7 @@ namespace SpaceInvadersRemake.StateMachine
     public class InGameState : State
     {
         /// <summary>
-        /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
+        /// Erstellt einen neuen Zustand.
         /// </summary>
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
