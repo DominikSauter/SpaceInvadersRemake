@@ -46,6 +46,13 @@
       <SubType>Content</SubType>
       <DependentUpon>Player-Created-Event.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="StateMachine.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="StateMachine.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>StateMachine.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="TheBigOne.sequencediagram">
       <SubType>Content</SubType>
     </Content>

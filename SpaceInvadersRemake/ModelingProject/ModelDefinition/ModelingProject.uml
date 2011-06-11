@@ -1,15 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="a0cd5890-f207-4b2a-83cb-b456b2d2f4b1"
   name="ModelingProject" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
-  <ownedCommentsInternal>
-    <comment
-      Id="66a73843-2c02-445d-9fd5-f6c892756d57">
-      <body>Prototype für entwurfs Dokument
-</body>
-    </comment>
-  </ownedCommentsInternal>
   <profileInstances>
     <packageHasProfileInstances
       Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
@@ -11235,26 +11228,7 @@
           <opaqueAction
             Id="8a2b01a8-7b02-454a-aa8e-124cfcc924af"
             name="Model"
-            isLeaf="false">
-            <flowNodeTargets>
-              <controlFlow
-                Id="372909a1-6fed-4705-a459-7cd41a05abcc"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="5646688a-db88-41ad-977f-3858001b8ac0"
-                  LastKnownName="View"
-                  LastKnownLocation="ModelingProject.uml" />
-              </controlFlow>
-              <controlFlow
-                Id="e886decb-a210-4bdb-b1d5-b7a8b3f1970b"
-                isLeaf="false">
-                <opaqueActionMoniker
-                  Id="4f963a55-fee4-4fd4-b748-bfe303f128b1"
-                  LastKnownName="Controller"
-                  LastKnownLocation="ModelingProject.uml" />
-              </controlFlow>
-            </flowNodeTargets>
-          </opaqueAction>
+            isLeaf="false" />
           <opaqueAction
             Id="5646688a-db88-41ad-977f-3858001b8ac0"
             name="View"
@@ -11447,6 +11421,39 @@
       <executionEvent
         Id="6be5db2e-b49f-4f1c-9e7d-e0cd87f91eb3"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="bf3e608d-581c-4514-a644-fa800769d994"
+        name="StateMachine"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <lifelines>
+          <lifeline
+            Id="8b74f8f0-4633-4946-a301-5facebb0f965"
+            name="GameManager"
+            isActor="false"
+            lifelineDisplayName="GameManager" />
+          <lifeline
+            Id="004e3f07-54cd-4f74-a1b2-7b11abcaf302"
+            name="StateManager"
+            isActor="false"
+            lifelineDisplayName="StateManager" />
+          <lifeline
+            Id="d8302d35-7794-4ed4-9a19-94943a358f22"
+            name="IntroState"
+            isActor="false"
+            lifelineDisplayName="IntroState" />
+          <lifeline
+            Id="8b127f99-2eec-4f88-8287-14c727bb67ab"
+            name="MainMenuState"
+            isActor="false"
+            lifelineDisplayName="MainMenuState" />
+        </lifelines>
+      </interaction>
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
