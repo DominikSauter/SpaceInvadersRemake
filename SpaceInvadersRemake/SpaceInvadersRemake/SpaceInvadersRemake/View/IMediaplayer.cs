@@ -12,12 +12,18 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public interface IMediaplayer
     {
+        /// <summary>
+        /// Musiklautstärke
+        /// </summary>
         float Volume
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Musikstücke werden wiederholt oder nicht.
+        /// </summary>
         bool Repeat
         {
             get;
