@@ -161,7 +161,7 @@
     <Compile Include="View\ModelHitsphere.cs" />
     <Compile Include="ModelSection\MothershipWeapon.cs" />
     <Compile Include="ModelSection\PlayerNormalWeapon.cs" />
-    <Compile Include="Settings\Keyboard1.Designer.cs">
+    <Compile Include="Settings\Keyboard.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Keyboard.settings</DependentUpon>
@@ -271,7 +271,7 @@
     <None Include="Controller\Controller.cd" />
     <None Include="Settings\Keyboard.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
-      <LastGenOutput>Keyboard1.Designer.cs</LastGenOutput>
+      <LastGenOutput>Keyboard.Designer.cs</LastGenOutput>
     </None>
     <None Include="StateMachine\StateMachine.cd" />
   </ItemGroup>
