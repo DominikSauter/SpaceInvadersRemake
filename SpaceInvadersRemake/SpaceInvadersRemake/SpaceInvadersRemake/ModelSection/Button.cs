@@ -22,12 +22,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="action">Die Funktion die beim aktivieren des Buttons ausgeführt werden soll.</param>
         public Button(string text, Action action)
         {
-            throw new System.NotImplementedException();
+            this.Text = text;
+            this.Active = false;
+            this.action += action;
         }
 
         public override void Action()
         {
-            throw new NotImplementedException();
+            action();
         }
     }
 }

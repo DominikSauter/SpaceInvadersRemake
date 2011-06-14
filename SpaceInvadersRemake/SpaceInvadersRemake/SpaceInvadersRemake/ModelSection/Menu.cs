@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -15,7 +13,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Speichert die Menüelemente
         /// </summary>
-        private System.Collections.Generic.List<SpaceInvadersRemake.ModelSection.MenuControl> controls;
+        private List<MenuControl> controls;
 
         /// <summary>
         /// Ertellt ein neues Menü
@@ -23,17 +21,23 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="controls">Die Liste der Menüeinträge</param>
         public Menu(List<MenuControl> controls)
         {
-            throw new System.NotImplementedException();
+            this.controls = controls;
+            controls[0].Active = true;
+            ActiveControl = controls[0];
+            
         }
 
         /// <summary>
         /// Gibt die Menüelemente als Array zurück
         /// </summary>
-        public SpaceInvadersRemake.ModelSection.MenuControl[] Controls
+        public MenuControl[] Controls
         {
             get
             {
                 return controls.ToArray();
+            }
+            private set
+            {
             }
         }
 
@@ -44,10 +48,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return ActiveControl;
             }
-            set
+            private set
             {
+                ActiveControl = value;
             }
         }
 
@@ -56,12 +61,12 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Action()
         {
-            throw new System.NotImplementedException();
+            ActiveControl.Action();
         }
 
         public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
         {
-            throw new NotImplementedException();
+            // nicht benötigt
         }
 
         /// <summary>
@@ -70,7 +75,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Down()
         {
-            throw new System.NotImplementedException();
+            ActiveControl.Active = false;
+            int i = controls.IndexOf(ActiveControl);
+            ActiveControl = controls[(i+1)%controls.Count];
+            ActiveControl.Active = true;
         }
 
         /// <summary>
@@ -79,7 +87,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Up()
         {
-            throw new System.NotImplementedException();
+            ActiveControl.Active = false;
+            int i = controls.IndexOf(ActiveControl);
+            ActiveControl = controls[(i - 1) % controls.Count];
+            ActiveControl.Active = true;
         }
 
         /// <summary>
@@ -87,7 +98,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Left()
         {
-            throw new System.NotImplementedException();
+            ActiveControl.Prev();
         }
 
         /// <summary>
@@ -95,12 +106,12 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Right()
         {
-            throw new System.NotImplementedException();
+            ActiveControl.Next();
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            controls.Clear();
         }
     }
 }
