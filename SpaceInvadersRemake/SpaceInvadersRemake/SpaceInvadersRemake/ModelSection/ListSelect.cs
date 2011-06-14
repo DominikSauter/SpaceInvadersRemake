@@ -39,22 +39,17 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="action">Eine Funktion, die einen Parameter vom Typ in der Liste entgegennimmt, und diesen Parameter anwendet. Dadurch können über dieses Menüelement Daten an einer anderen Stelle des Programms geändert werden.</param>
         public ListSelect(List<T> list, T active, Action<T> action)
         {
-            throw new System.NotImplementedException();
+            this.list = list;
+            this.activeItem = active;
+            this.action += action;
+
+            SelectedItem = activeItem;
         }
 
         /// <summary>
         /// Gibt den ausgewählten Wert zurück.
         /// </summary>
-        public T SelectedItem
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public T SelectedItem { get; private set; }
 
         /// <summary>
         /// Zeigt an ob das Element aktiv ist.
@@ -67,10 +62,15 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return Active;
             }
             set
             {
+                this.Active = value;
+                if (value == false)
+                {
+                    SelectedItem = activeItem;
+                }
             }
         }
 
@@ -83,17 +83,23 @@ namespace SpaceInvadersRemake.ModelSection
         /// </remarks>
         public override void Action()
         {
-            throw new NotImplementedException();
+            if ((object)activeItem != (object)SelectedItem)
+            {
+                activeItem = SelectedItem;
+                action(activeItem);
+            }
         }
 
         public override void Prev()
         {
-            throw new NotImplementedException();
+            int i = list.IndexOf(SelectedItem);
+            SelectedItem = list[(i - 1) % list.Count];
         }
 
         public override void Next()
         {
-            throw new NotImplementedException();
+            int i = list.IndexOf(SelectedItem);
+            SelectedItem = list[(i + 1) % list.Count];
         }
     }
 }

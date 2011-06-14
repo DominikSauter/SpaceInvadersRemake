@@ -24,11 +24,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public string Name
         {
-            get
-            {
-                throw new System.NotImplementedException();
-}
-            set { }
+            get;
+            set;
         }
 
         /// <summary>
@@ -36,11 +33,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public int Score
         {
-            get
-            {
-                throw new System.NotImplementedException();
-}
-            set { }
+            get;
+            private set;
         }
     }
 }

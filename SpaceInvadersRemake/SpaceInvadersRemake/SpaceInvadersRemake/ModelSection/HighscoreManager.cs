@@ -14,7 +14,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die Liste der Highscore-Einträge
         /// </summary>
-        private System.Collections.Generic.List<HighscoreEntry> highscore;
+        private List<HighscoreEntry> highscore;
 
         /// <summary>
         /// Erstellt ein Highscore-Menü bei dem ein neuer Eintrag hinzugefügt werden soll. Ist die übergebene
@@ -25,6 +25,7 @@ namespace SpaceInvadersRemake.ModelSection
         public HighscoreManager(int score)
         {
             throw new System.NotImplementedException();
+            // TODO: Datenanbindung an Highscore-Datei
         }
 
         /// <summary>
@@ -33,16 +34,20 @@ namespace SpaceInvadersRemake.ModelSection
         public HighscoreManager()
         {
             throw new System.NotImplementedException();
+            // TODO: Datenanbindung an Highscore-Datei
         }
         
         /// <summary>
         /// Gibt die Highscore-Liste als Array zurück.
         /// </summary>
-        public SpaceInvadersRemake.ModelSection.HighscoreEntry[] HighscoreEntries
+        public HighscoreEntry[] HighscoreEntries
         {
             get
             {
-                throw new System.NotImplementedException();
+                return highscore.ToArray();
+            }
+            private set
+            {
             }
         }
 
@@ -51,10 +56,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public HighscoreEntry NewEntry
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }            
+            get;
+            private set;
         }
 
         /// <summary>
@@ -64,16 +67,17 @@ namespace SpaceInvadersRemake.ModelSection
         public bool Save()
         {
             throw new System.NotImplementedException();
+            // TODO: Datenanbindung an Highscore-Datei
         }
 
         public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
         {
-            throw new NotImplementedException();
+            // nicht benötigt
         }
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            highscore.Clear();
         }
     }
 }

@@ -15,8 +15,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public virtual bool Active
         {
-            public get;
-            public set;
+            get;
+            set;
         }
 
         /// <summary>
@@ -24,8 +24,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public String Text
         {
-            public get;
-            private set;
+            get;
+            protected set;
         }
 
         /// <summary>
