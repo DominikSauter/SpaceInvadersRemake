@@ -15,13 +15,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public virtual bool Active
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            public get;
+            public set;
         }
 
         /// <summary>
@@ -29,13 +24,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public String Text
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            public get;
+            private set;
         }
 
         /// <summary>
@@ -52,7 +42,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public virtual void Prev()
         {
-            throw new System.NotImplementedException();
+            
         }
 
         // DESIGN: In der Oberklasse deklariert um dem Controller Arbeit abzunehmen und eine bessere
@@ -65,7 +55,6 @@ namespace SpaceInvadersRemake.ModelSection
         public virtual void Next()
         {
             
-            throw new System.NotImplementedException();
         }
     }
 }
