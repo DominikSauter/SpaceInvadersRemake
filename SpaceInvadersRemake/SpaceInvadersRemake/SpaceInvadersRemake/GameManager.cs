@@ -56,8 +56,10 @@ namespace SpaceInvadersRemake
         /// </summary>
         protected override void LoadContent()
         {
-            // CreateHighscoreUI a new SpriteBatch, which can be used to draw texture.
+            // Create a new SpriteBatch, which can be used to draw texture.
             spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            View.ViewContent.LoadContent(this.Content);
 
             // TODO: use this.Content to load your game content here
         }
@@ -102,6 +104,12 @@ namespace SpaceInvadersRemake
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             // TODO: Apply your drawing code here
+
+            // <View>
+            //spriteBatch.Begin();
+            //spriteBatch.Draw(View.ViewContent.GameBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
+            //spriteBatch.End();
+            // </View>
 
             // <STST>
             //this.StateManager.ViewUpdate(gameTime);
