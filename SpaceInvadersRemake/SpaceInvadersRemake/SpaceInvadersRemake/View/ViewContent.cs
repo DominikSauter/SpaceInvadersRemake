@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
@@ -33,13 +34,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D GameBackgroundImage
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -47,13 +43,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D MenuBackgroundImage
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -619,9 +610,10 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Lädt den Content aus der GameManager Klasse in die ViewContent Klasse
         /// </summary>
-        public static void LoadContent()
+        public static void LoadContent(ContentManager Content)
         {
-            throw new System.NotImplementedException();
+            GameBackgroundImage = Content.Load<Texture2D>("Images/InGame_Hintergrund");
+            MenuBackgroundImage = Content.Load<Texture2D>("Images/Menü_Hintergrund");
         }
 
         /// <summary>
