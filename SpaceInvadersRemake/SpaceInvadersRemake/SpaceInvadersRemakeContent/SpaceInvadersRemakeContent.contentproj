@@ -60,15 +60,15 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\Menü_Hintergrund.jpg">
-      <Name>Menü_Hintergrund</Name>
+    <Compile Include="Graphics\Projektil.png">
+      <Name>Projektil</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Graphics\Projektil.png">
-      <Name>Projektil</Name>
+    <Compile Include="Images\Menü_Hintergrund.png">
+      <Name>Menü_Hintergrund</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
