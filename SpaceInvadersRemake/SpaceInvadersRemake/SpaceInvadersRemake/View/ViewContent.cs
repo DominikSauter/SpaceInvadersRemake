@@ -370,31 +370,16 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Textur des Standardprojektils des Spielers
+        /// Textur des Standardprojektils des Spielers und der Aliens
         /// </summary>
-        public static Texture2D PlayerProjectileNormal
+        /// <remarks>
+        /// Durch Färben der Hintergrundfläche können unterschiedliche Projektile
+        /// für Spieler und Alien erstellt werden.
+        /// </remarks>
+        public static Texture2D ProjectileNormal
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        /// <summary>
-        /// Textur des Alienprojektils
-        /// </summary>
-        public static Texture2D AlienProjectile
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -614,6 +599,7 @@ namespace SpaceInvadersRemake.View
         {
             GameBackgroundImage = Content.Load<Texture2D>("Images/InGame_Hintergrund");
             MenuBackgroundImage = Content.Load<Texture2D>("Images/Menü_Hintergrund");
+            ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
         }
 
         /// <summary>

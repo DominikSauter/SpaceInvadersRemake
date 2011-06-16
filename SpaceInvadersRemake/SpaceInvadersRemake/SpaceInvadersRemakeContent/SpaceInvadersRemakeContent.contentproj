@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="3D Models\" />
-    <Folder Include="Graphics\" />
     <Folder Include="Music\" />
     <Folder Include="Particle textures\" />
     <Folder Include="Soundeffects\" />
@@ -63,6 +62,13 @@
   <ItemGroup>
     <Compile Include="Images\Menü_Hintergrund.jpg">
       <Name>Menü_Hintergrund</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Graphics\Projektil.png">
+      <Name>Projektil</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
