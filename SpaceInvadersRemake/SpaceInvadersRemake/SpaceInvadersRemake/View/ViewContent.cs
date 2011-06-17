@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.View
 {
@@ -20,13 +21,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static SpriteFont Font
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -52,13 +48,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D HUDBackgroundTexture
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -66,13 +57,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D ButtonBackgroundTexture
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -80,13 +66,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere PlayerHitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -94,13 +75,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Song MenuSong
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -108,13 +84,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Song GameSong
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -122,13 +93,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static SoundEffect WeaponEffectPlayer
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -136,13 +102,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static SoundEffect ExplosionEffect
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -150,13 +111,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static SoundEffect PowerUpEffect
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -164,13 +120,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model PlayerModel
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -178,13 +129,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model BossModel
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -192,13 +138,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model Alien1Model
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -206,13 +147,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model Alien2Model
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -220,13 +156,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model Alien3Model
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -234,13 +165,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model Alien4Model
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -248,13 +174,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model Alien5Model
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -262,13 +183,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Model MothershipModel
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -276,13 +192,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere Alien1Hitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -290,13 +201,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere Alien2Hitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -304,13 +210,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere Alien3Hitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -318,13 +219,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere Alien4Hitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -332,13 +228,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere Alien5Hitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -346,13 +237,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere MothershipHitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -360,13 +246,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static ModelHitsphere BossHitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -387,13 +268,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D PowerUp
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -401,27 +277,17 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D ShieldTexture
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
         /// Textur des PiercingShot Projektils des Spielers
         /// </summary>
-        public static Texture2D PlayerProjectilePiercing
+        public static Texture2D ProjectilePiercing
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -429,13 +295,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D MothershipProjectile
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -443,27 +304,17 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D BossProjectile
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
         /// Kugelförmige Hitbox der 3D Schilde
         /// </summary>
-        public static int ShieldHitsphere
+        public static ModelHitsphere ShieldHitsphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -471,13 +322,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Video IntroVideo
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -485,13 +331,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D ExplosionTextures
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -499,13 +340,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D PowerUpGlowTexture
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -513,13 +349,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static Texture2D EngineTexture
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -527,13 +358,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static SoundEffect WeaponEffectPiercingshot
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -541,13 +367,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static SoundEffect WeaponEffectMultishot
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -555,19 +376,29 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static SoundEffect AlienKamikazeEffect
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
         /// Sound Effekt des vorbeifliegenden Mutterschiffs
         /// </summary>
         public static SoundEffect AlienMothershipEffect
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Grafik die Anzeigt welches PowerUp gerade activiert ist
+        /// </summary>
+        public static Texture2D PowerUpIcon
+        {
+            get;
+            set;
+        }
+
+        public static ModelHitsphere ProjectileNormalHitsphere
         {
             get
             {
@@ -578,10 +409,18 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        /// <summary>
-        /// Grafik die Anzeigt welches PowerUp gerade activiert ist
-        /// </summary>
-        public static Texture2D PowerUpIcon
+        public static ModelHitsphere ProjectilePiercingHitsphere
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public static ModelHitsphere ProjectileBossHitsphere
         {
             get
             {
@@ -607,7 +446,67 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static void ComputeHitspheres()
         {
-            throw new System.NotImplementedException();
+            PlayerHitsphere = computeBigModelHitsphere(PlayerModel);
+            Alien1Hitsphere = computeBigModelHitsphere(Alien1Model);
+            Alien2Hitsphere = computeBigModelHitsphere(Alien2Model);
+            Alien3Hitsphere = computeBigModelHitsphere(Alien3Model);
+            Alien4Hitsphere = computeBigModelHitsphere(Alien4Model);
+            Alien5Hitsphere = computeBigModelHitsphere(Alien5Model);
+            MothershipHitsphere = computeBigModelHitsphere(MothershipModel);
+            ShieldHitsphere = computeBigTextureHitsphere(ShieldTexture);
+            ProjectileNormalHitsphere = computeBigTextureHitsphere(ProjectileNormal);
+            //<WAHL>
+            //ProjectilePiercingHitsphere = computeBigTextureHitsphere(ProjectilePiercing);
+            //BossHitsphere = computeBigModelHitsphere(BossModel);
+            //ProjectileBossHitsphere = computeBigTextureHitsphere(BossProjectile);
+            //</WAHL>
+
+        }
+
+        /// <summary>
+        /// Erstellt anhand eines 3D Models eine Hitbox, die das komplette Model umgibt.
+        /// </summary>
+        /// <param name="model3D">Model von dem die Hitbox zu berechnen ist.</param>
+        /// <returns>Hitbox für das 3D Model</returns>
+        private static ModelHitsphere computeBigModelHitsphere(Model model3D)
+        {
+            double maxRadius = 0;
+            foreach (ModelMesh mesh in model3D.Meshes)
+            {
+                //Mesh-Mittelpunkt
+                Vector3 meshCenter = mesh.BoundingSphere.Center;
+
+                //Vektornorm für den Abstand des Mesh-Mittelpunkt zum Model-Mittelpunkt
+                //(laut "http://sharky.bluecog.co.nz/?p=119" ist der Mesh-Mittelpunkt relativ zum Model-Mittelpunkt)
+                double centerDistance = Math.Sqrt(Math.Pow(meshCenter.X, 2.0) + Math.Pow(meshCenter.Y, 2.0) + Math.Pow(meshCenter.Z, 2.0));
+
+                //möglicher Radius für die Hitbox, anhand des Abstands zum Model-Zentrum und dem Radius der Hitbox um das Mesh
+                double possibleRadius = centerDistance + mesh.BoundingSphere.Radius;
+
+                if (possibleRadius > maxRadius)
+                {
+                    maxRadius = possibleRadius;
+                }
+            }
+
+            return new ModelHitsphere((int)maxRadius, new List<ModelHitsphere>());
+        }
+
+        /// <summary>
+        ///  Erstellt anhand einer 2D Grafik eine Hitbox, welche die komplette Grafik umgibt.
+        /// </summary>
+        /// <param name="graphic">Grafik von der die Hitbox zu berechnen ist.</param>
+        /// <returns>Hitbox für die 2D Grafik</returns>
+        private static ModelHitsphere computeBigTextureHitsphere(Texture2D graphic)
+        {
+            //Mittelpunkt der Grafik
+            Point center = graphic.Bounds.Center;
+
+            //Obere linke Ecke der Grafik, welche die Position bestimmt
+            Point location = graphic.Bounds.Location;
+            double maxRadius = Math.Sqrt(Math.Pow(center.X - location.X, 2.0) + Math.Pow(center.Y - location.Y, 2.0));
+
+            return new ModelHitsphere((int)maxRadius, new List<ModelHitsphere>());
         }
     }
 }
