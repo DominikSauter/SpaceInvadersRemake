@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -13,6 +14,18 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class MinibossAI : AIController
     {
+        /// <summary>
+        /// Erstellt eine neue Instanz eines allgemeinen MinibossAI Kontrollers.
+        /// </summary>
+        /// <remarks>
+        /// Da dies eine Abstrakte Klasse ist, wird dieser Konstruktor innerhalb des Konstruktors der konkreten Klasse aufgerufen.
+        /// </remarks>
+        /// <param name="shootingFrequency">Die Schussfrequenz.</param>
+        /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll.</param>
+        protected MinibossAI(int shootingFrequency, IGameItem controllee) : base(shootingFrequency, controllee)
+        {
+           //Nichts zu erledigen
+        }
 
         /// <summary>
         /// Entscheidet in welche Richtung sich das Controllees bewegen soll

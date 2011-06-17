@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.ModelSection;
+using SpaceInvadersRemake.StateMachine;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -21,12 +22,15 @@ namespace SpaceInvadersRemake.Controller
     public abstract class Controller : ICommander
     {
 
-        //TODO: Kommentar
+        
         /// <summary>
-        /// 
+        /// Erstellt eine neue Instanz eines allgemeinen Controllers.
         /// </summary>
+        /// <remarks>
+        /// Da dies eine Abstrakte Klasse ist, wird dieser innerhalb des Konstruktors der konkreten Klasse aufgerufen.
+        /// </remarks>
         /// <param name="controllee"></param>
-        public Controller(IGameItem controllee)
+        protected Controller(IGameItem controllee)
         {
             this.Controllee = controllee;
         }
@@ -39,15 +43,11 @@ namespace SpaceInvadersRemake.Controller
        /// <remarks>Eigenschaft in der das kontrollierte GameItem gespeichert ist.
        /// <c>get</c>
        /// <c>set</c>setzt ein IGameItem als kontrolliertes GameItem ein.</remarks>
-        public virtual IGameItem Controllee
+        protected virtual IGameItem Controllee
         {
-            get 
-            {
-                return Controllee;
-            }
-           
-            set { }
+            get;
 
+            set;
         }
 
  
@@ -69,7 +69,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Erlaubt die Ausführung der Steuerung.
         /// </summary>
-        public virtual void Update()
+        public virtual void Update(Game game,GameTime gameTime, State state)
         {
             //Richtungsanweisung an das Controllee (ermittelt durch konkreten Controller)
             Controllee.Move(this.Movement());

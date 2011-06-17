@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpaceInvadersRemake.ModelSection;
 
 
 namespace SpaceInvadersRemake.Controller
@@ -12,12 +13,13 @@ namespace SpaceInvadersRemake.Controller
     public class MothershipAI : AIController
     {
         /// <summary>
-        /// Generiert eine neue Instanz der <see cref="MothershipAI"/> Klasse.
+        /// Generiert eine neue Instanz der MothershipAI Controllers.
         /// </summary>
-        public MothershipAI()
+        public MothershipAI(int shootingFrequency, IGameItem controllee) : base(shootingFrequency, controllee)
         {
-            throw new System.NotImplementedException();
+            //Nichts zu erledigen.
         }
+
 
         /// <summary>
         /// Entscheidet in welche Richtung sich das Controllee bewegen soll
@@ -39,7 +41,8 @@ namespace SpaceInvadersRemake.Controller
         /// <c>false</c>
         protected override bool Shooting()
         {
-            throw new NotImplementedException();
+            //Hack für /FA11000W/ (Mutterschiff schießt)
+            return false;
         }
     }
 }

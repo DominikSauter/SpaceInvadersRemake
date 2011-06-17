@@ -39,6 +39,7 @@ namespace SpaceInvadersRemake.Controller
         {
             get;
 
+            //HACK sichtbarkeit falls Tastaturbelegung wärend laufendem Spiel änderbar sein soll.
            private set;
 
 

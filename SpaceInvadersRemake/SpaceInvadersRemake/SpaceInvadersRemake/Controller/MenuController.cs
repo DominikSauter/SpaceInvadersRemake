@@ -5,9 +5,6 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.StateMachine;
 
-//TODO: Diskussion über Designentscheidungen
-
-// UNDER CONSTRUCTION -CK
 
 
 namespace SpaceInvadersRemake.Controller
@@ -35,7 +32,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Erlaubt die Ausführung der Steuerung.
         /// </summary>
-        public void Update()
+        public void Update(Game game, GameTime gameTime, State state)
         {
             throw new NotImplementedException();
         }
