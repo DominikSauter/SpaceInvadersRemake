@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpaceInvadersRemake.StateMachine;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -17,6 +18,9 @@ namespace SpaceInvadersRemake.Controller
         /// Wird vom ControllerManager aufgerufen immer dann wenn eine Interaktion des Controllers
         /// benötigt wird. In der Regel innerhalb des Gameloops.
         /// </remarks>
-        void Update();
+        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
+        void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, State state);
     }
 }

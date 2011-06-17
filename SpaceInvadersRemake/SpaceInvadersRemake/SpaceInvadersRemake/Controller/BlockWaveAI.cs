@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using SpaceInvadersRemake.ModelSection;
+using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.StateMachine;
+
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -13,12 +16,19 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public class BlockWaveAI : WaveAI
     {
+       //Private Felder
+        private bool moveDown = false;
+        private Vector2 currentDirection = CoordinateConstants.Right;
+        
+        
         /// <summary>
-        /// Generiert eine neue  <see cref="BlockWaveAI"/> Klasse.
+        /// Generiert eine neue BlockWaveAI Klasse.
         /// </summary>
-        public BlockWaveAI()
+        /// <param name="shootingFrequency">Die Schussfrequenz.</param>
+        /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
+        public BlockWaveAI(int shootingFrequency, ICollection<IGameItem> controllees) :base (shootingFrequency, controllees)
         {
-            throw new System.NotImplementedException();
+            //Nichts zu erledigen
         }
 
         /// <summary>
@@ -27,9 +37,12 @@ namespace SpaceInvadersRemake.Controller
         /// <returns>
         /// 2D Richtungsvektor
         /// </returns>
+        
+        //Nicht brauchbar in dieser Klasse.
         protected override Microsoft.Xna.Framework.Vector2 Movement()
         {
-            throw new NotImplementedException();
+            
+            return Vector2.Zero;
         }
 
         /// <summary>
@@ -44,18 +57,83 @@ namespace SpaceInvadersRemake.Controller
             throw new NotImplementedException();
         }
 
+
+        /// <summary>
+        /// Erlaubt die Ausführung der Steuerung.
+        /// </summary>
+        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
+        public override void Update(Game game, GameTime gameTime, State state)
+        {
+
+            //Ausführung des Runter Kommandos aus vorigem Frame.
+            if (moveDown)
+            {
+                //Navigiert alle GameItem nach unten.
+                foreach (IGameItem item in Controllees)
+                {
+                    item.Move(CoordinateConstants.Down);
+                }
+                moveDown = false;
+            }
+            else //Bewegung in Richtung aktuelle Richtung.
+            {
+                foreach (IGameItem item in Controllees)
+                {
+                    item.Move(currentDirection);
+                    
+                    //Überprüft ob eines der GameItem am Rand ist und setzt das Kommando im nächsten Frame runterzurücken.
+                    if (item.Position.X == CoordinateConstants.RightBorder || item.Position.X == CoordinateConstants.LeftBorder)
+                    {
+                        moveDown = true;
+                    }
+                }
+            }
+
+            /*
+             * Ändert die aktuelle Richtung sofern ein GameItem am Rand ist, 
+             * damit nachdem runtergerückt wurde in die andere Richtung sich bewegt wird.
+            */
+            if (moveDown)
+            {
+               //Hack für Performance 
+                //sofern Left * -1 = Right ist, kann current *(-1) stehen für gleichen Effekt.
+                currentDirection = BlockWaveAI.changeDirection(currentDirection);
+            }
+
+            //TODO Implement Shooting
+
+          }
+
         /// <summary>
         /// Eigenschaft Controllees Liste (kontrollierte Objekte)
         /// </summary>
-        public override ICollection<IGameItem> Controllees
+        protected override ICollection<IGameItem> Controllees
         {
-            get
+            get;
+ 
+            set;
+
+        }
+
+        //Private Methoden
+        
+        /// <summary>
+        /// Ändert die Richtung.
+        /// </summary>
+        /// <param name="currentDirection">Die aktuelle Richtung.</param>
+        /// <returns>Die Gegengesetzte Richtung</returns>
+        private static Vector2 changeDirection(Vector2 currentDirection)
+        {
+            
+            if (currentDirection == CoordinateConstants.Left)
             {
-                throw new NotImplementedException();
+                return CoordinateConstants.Right;
             }
-            set
+            else
             {
-                throw new NotImplementedException();
+                return CoordinateConstants.Left;
             }
         }
     }
