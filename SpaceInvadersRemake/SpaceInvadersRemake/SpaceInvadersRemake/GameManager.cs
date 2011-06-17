@@ -48,6 +48,9 @@ namespace SpaceInvadersRemake
             // TODO: Apply your initialization logic here
             // [View] Hier soll die Hintergrundmusik (GameSong, MenuSong) initialisiert werden
             base.Initialize();
+
+            //[VIEW]
+            View.ViewContent.ComputeHitspheres();
         }
 
         /// <summary>
@@ -59,6 +62,7 @@ namespace SpaceInvadersRemake
             // Create a new SpriteBatch, which can be used to draw texture.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            //[VIEW]
             View.ViewContent.LoadContent(this.Content);
 
             // TODO: use this.Content to load your game content here
