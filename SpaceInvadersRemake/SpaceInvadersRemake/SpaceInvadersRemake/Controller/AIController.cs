@@ -15,7 +15,7 @@ namespace SpaceInvadersRemake.Controller
     public abstract class AIController : SpaceInvadersRemake.Controller.Controller
     {
 
-       public AIController(int shootingFrequency, IGameItem controllee)
+       protected AIController(int shootingFrequency, IGameItem controllee)
             : base(controllee)
         {
             this.ShootingFrequency = shootingFrequency;

@@ -71,6 +71,7 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         public virtual void Update()
         {
+            //Richtungsanweisung an das Controllee (ermittelt durch konkreten Controller)
             Controllee.Move(this.Movement());
 
            
@@ -80,7 +81,6 @@ namespace SpaceInvadersRemake.Controller
             }
             
             
-            //throw new NotImplementedException();
         }
     }
 }

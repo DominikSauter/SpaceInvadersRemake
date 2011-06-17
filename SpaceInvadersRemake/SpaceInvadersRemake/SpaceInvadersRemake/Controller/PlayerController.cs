@@ -12,33 +12,10 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class PlayerController : SpaceInvadersRemake.Controller.Controller
     {
-        public PlayerController(IGameItem controllee):base(controllee)
+        protected PlayerController(IGameItem controllee):base(controllee)
         {
             
         }
 
-         
-
-        /// <summary>
-        /// Entscheidet in welche Richtung sich das Controllees bewegen soll
-        /// </summary>
-        /// <returns>
-        /// 2D Richtungsvektor
-        /// </returns>
-        protected override Microsoft.Xna.Framework.Vector2 Movement()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Entscheidet ob Controllees schießen soll
-        /// </summary>
-        /// <returns>
-        /// 	<c>true</c> = schießen andererseits <c>false</c>
-        /// </returns>
-        protected override bool Shooting()
-        {
-            throw new NotImplementedException();
-        }
     }
 }
