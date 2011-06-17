@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Settings;
-
+using Microsoft.Xna.Framework.Input;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -22,7 +22,7 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         public KeyboardController(IGameItem controllee): base(controllee)
         {
-            this.KBconfig = Keyboard.Default;
+            this.KBconfig = KeyboardConfig.Default;
         }
 
        
@@ -34,7 +34,7 @@ namespace SpaceInvadersRemake.Controller
         /// <value>
         /// Die KBconfig.
         /// </value>
-        public Settings.Keyboard KBconfig
+        public Settings.KeyboardConfig KBconfig
         {
             get;
 
@@ -53,9 +53,9 @@ namespace SpaceInvadersRemake.Controller
         /// </returns>
         protected override Vector2 Movement()
         {
-
+            KeyboardState kState = Keyboard.GetState();
             
-             throw new NotImplementedException();
+             
         }
 
         /// <summary>
@@ -71,7 +71,5 @@ namespace SpaceInvadersRemake.Controller
         {
             throw new NotImplementedException();
         }
-
-
     }
 }

@@ -125,7 +125,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Projectile">
     <Position X="8" Y="50.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIABAAEAAAIAAAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAAAAAAABAAEAAAIAAAAAAAAAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Projectile.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -168,7 +168,7 @@
   <Class Name="SpaceInvadersRemake.Controller.PlayerController">
     <Position X="62.75" Y="41.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAgABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\PlayerController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -256,7 +256,7 @@
       <FileName>ModelSection\StaticShieldWeapon.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.Settings.Keyboard">
+  <Class Name="SpaceInvadersRemake.Settings.KeyboardConfig">
     <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAIAAAAAAAAAAAAAIAAAAAAFAAAACACAAAAAAAI=</HashCode>
@@ -483,7 +483,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.HighscoreManager">
     <Position X="25.25" Y="30" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAIAAICAAAAAAAAAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAIAAICAAAAAICAAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
       <FileName>ModelSection\HighscoreManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -606,7 +606,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewContent">
     <Position X="33.5" Y="0.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AgIDQgBBACAAAgAUAAQAIEAoRAQAIACCAEwCACALALc=</HashCode>
+      <HashCode>AgIDAgBBACAAAgAUAAQAIEAoQAEAIACCAEwCACALALc=</HashCode>
       <FileName>View\ViewContent.cs</FileName>
     </TypeIdentifier>
   </Class>
