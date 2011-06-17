@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
-
+using SpaceInvadersRemake.ModelSection;
+using SpaceInvadersRemake.Settings;
 
 
 namespace SpaceInvadersRemake.Controller
@@ -19,9 +20,9 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Generiert eine neue Instanz der <see cref="KeyboardController"/> Klasse.
         /// </summary>
-        public KeyboardController()
+        public KeyboardController(IGameItem controllee): base(controllee)
         {
-            throw new System.NotImplementedException();
+            this.KBconfig = Keyboard.Default;
         }
 
        
@@ -35,13 +36,11 @@ namespace SpaceInvadersRemake.Controller
         /// </value>
         public Settings.Keyboard KBconfig
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+
+           private set;
+
+
         }
 
         /// <summary>
