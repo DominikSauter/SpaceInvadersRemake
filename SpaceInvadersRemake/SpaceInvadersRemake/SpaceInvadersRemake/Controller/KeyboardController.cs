@@ -25,7 +25,8 @@ namespace SpaceInvadersRemake.Controller
             this.KBconfig = KeyboardConfig.Default;
         }
 
-       
+       //Private fields
+       private KeyboardState kState;
 
 
         /// <summary>
@@ -54,6 +55,20 @@ namespace SpaceInvadersRemake.Controller
         protected override Vector2 Movement()
         {
             KeyboardState kState = Keyboard.GetState();
+            Vector2 direction = Vector2.Zero;
+
+            if (kState.IsKeyDown(KBconfig.Left))
+            {
+                direction += CoordinateConstants.Left;
+            }
+
+            if (kState.IsKeyDown(KBconfig.Right))
+            {
+                direction += CoordinateConstants.Right;
+            }
+
+
+            return direction;
             
              
         }
@@ -69,7 +84,14 @@ namespace SpaceInvadersRemake.Controller
         /// </returns>
         protected override bool Shooting()
         {
-            throw new NotImplementedException();
+            bool shoot = false;
+
+            if (kState.IsKeyDown(KBconfig.Fire))
+            {
+                shoot = true;
+            }
+
+            return shoot;
         }
     }
 }
