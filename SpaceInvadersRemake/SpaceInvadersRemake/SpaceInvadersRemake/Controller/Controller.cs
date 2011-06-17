@@ -20,6 +20,16 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class Controller : ICommander
     {
+
+        //TODO: Kommentar
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="controllee"></param>
+        public Controller(IGameItem controllee)
+        {
+            this.Controllee = controllee;
+        }
   
 
     
@@ -31,11 +41,11 @@ namespace SpaceInvadersRemake.Controller
        /// <c>set</c>setzt ein IGameItem als kontrolliertes GameItem ein.</remarks>
         public virtual IGameItem Controllee
         {
-            get
+            get 
             {
-                throw new System.NotImplementedException();
-}
-
+                return Controllee;
+            }
+           
             set { }
 
         }
@@ -59,9 +69,18 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Erlaubt die Ausführung der Steuerung.
         /// </summary>
-        public void Update()
+        public virtual void Update()
         {
-            throw new NotImplementedException();
+            Controllee.Move(this.Movement());
+
+           
+            if (this.Shooting())
+            {
+                Controllee.Shoot();
+            }
+            
+            
+            //throw new NotImplementedException();
         }
     }
 }

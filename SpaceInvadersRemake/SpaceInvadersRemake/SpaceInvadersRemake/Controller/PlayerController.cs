@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -14,6 +12,12 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class PlayerController : SpaceInvadersRemake.Controller.Controller
     {
+        public PlayerController(IGameItem controllee):base(controllee)
+        {
+            
+        }
+
+         
 
         /// <summary>
         /// Entscheidet in welche Richtung sich das Controllees bewegen soll

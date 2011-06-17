@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using SpaceInvadersRemake.ModelSection;
 namespace SpaceInvadersRemake.Controller
 {
     /// <summary>
@@ -14,6 +14,12 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class AIController : SpaceInvadersRemake.Controller.Controller
     {
+
+       public AIController(int shootingFrequency, IGameItem controllee)
+            : base(controllee)
+        {
+            this.ShootingFrequency = shootingFrequency;
+        }
 
         /// <summary>
         /// Getter/Setter der Schussfrequenz.
