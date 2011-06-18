@@ -42,7 +42,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Dieses Event wird ausgelöst, wenn ein neues Objekt dieser Klasse erzeugt wurde.
         /// </summary>
-        public static event EventHandler Created;
+        public static event EventHandler Created;//HACK change EventHandler<ControllerEventArgs>
 
         /// <summary>
         /// Erzeugt ein Mutterschiff
