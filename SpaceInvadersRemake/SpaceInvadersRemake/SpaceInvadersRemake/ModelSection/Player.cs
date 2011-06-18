@@ -9,18 +9,24 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public class Player : Ship
     {
+
+        /// <summary>
+        /// Feld zum Speichern der Grundgeschwindigkeit des Spielers
+        /// </summary>
+        private Vector2 baseVelocity;
+
+        /// <summary>
+        /// Feld zum Speichern der Startposition des Spielers
+        /// </summary>
+        private Vector2 startPosition;
+
         /// <summary>
         /// Die aktuelle Punktzahl des Spielers
         /// </summary>
         public int Score
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -29,13 +35,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public int Lives
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -43,12 +44,31 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Reset()
         {
-            throw new System.NotImplementedException();
+            Hitpoints = 1;
+            Weapon = new PlayerNormalWeapon();
+            ActivePowerUps.Clear();
+            Velocity = baseVelocity;
+            Position = startPosition;
         }
 
         protected override void Destroy()
         {
-            throw new NotImplementedException();
+            Lives--;
+
+            if (Lives <= 0)
+            {
+                IsAlive = false;
+
+                Alien.ScoreGained -= AddScore;
+                Mothership.ScoreGained -= AddScore;
+                Miniboss.ScoreGained -= AddScore;
+            }
+            else
+            {
+                Reset();
+            }
+
+            Player.Destroyed(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -63,7 +83,19 @@ namespace SpaceInvadersRemake.ModelSection
 
         public override void Move(Vector2 direction)
         {
-            throw new NotImplementedException();
+            direction.Normalize();
+
+            Position += Velocity * direction;
+
+            if (Position.X < CoordinateConstants.LeftBorder)
+            {
+                Position = new Vector2(CoordinateConstants.LeftBorder, startPosition.Y);
+            }
+
+            if (Position.X > CoordinateConstants.RightBorder)
+            {
+                Position = new Vector2(CoordinateConstants.RightBorder, startPosition.Y);
+            }
         }
 
         public override void IsCollidedWith(IGameItem collisionPartner)
@@ -71,14 +103,16 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            //TODO: PowerUp-System
         }
 
         public override void Shoot()
         {
-            throw new NotImplementedException();
+            //TODO: Waffen abfeuern
+
+            // Problem: Fire() benötigt gameTime, Shoot() bekommt aber keine gameTime
         }
 
         /// <summary>
@@ -96,7 +130,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="powerUpIcons">Das neue PowerUp</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
-            throw new System.NotImplementedException();
+            //TODO: PowerUp-System
         }
 
         /// <summary>
@@ -111,13 +145,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </remarks>
         public List<ActivePowerUp> ActivePowerUps
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -129,7 +158,24 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="weapon">Startwaffe</param>
         public Player(Vector2 position, Vector2 velocity, int lives, Weapon weapon)
         {
-            throw new System.NotImplementedException();
+            Position = position;
+            startPosition = position;
+            Velocity = velocity;
+            baseVelocity = velocity;
+            Lives = lives;
+            Weapon = weapon;
+            Hitpoints = 1;
+            IsAlive = true;
+
+            GameItem.GameItemList.AddLast(this);
+
+            ActivePowerUps = null; //TODO: PowerUp-Liste initialisieren
+
+            Alien.ScoreGained += AddScore;
+            Mothership.ScoreGained += AddScore;
+            Miniboss.ScoreGained += AddScore;
+
+            Player.Created(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -137,9 +183,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         /// <param name="enemy">Gegner der das Event ausgelöst hat</param>
         /// <param name="e">EventArgs werden nich verwendet</param>
-        public void AddScore(Object enemy, EventArgs e)
+        public void AddScore(Object sender, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            Enemy enemy = (Enemy)sender;
+
+            Score += enemy.ScoreGain;
         }
     }
 }

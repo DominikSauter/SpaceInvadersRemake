@@ -17,13 +17,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public Vector2 FlightDirection
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -31,13 +26,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public ProjectileTypeEnum ProjectileType
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -64,9 +54,15 @@ namespace SpaceInvadersRemake.ModelSection
         /// Bewirkt das Bewegen des Projektils in Richtung "FlightDirection" in Abhängigkeit von "Velocity".
         /// </summary>
         /// <remarks>"Velocity" ist eine Modifikation für "FlightDirection", welche auf "Position" addiert wird, um die Bewegung zu simulieren.</remarks>
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            Position += FlightDirection * Velocity;
+
+            if ((Position.X < CoordinateConstants.LeftBorder) || (Position.X > CoordinateConstants.RightBorder)
+                || (Position.Y < CoordinateConstants.BottomBorder) || (Position.Y > CoordinateConstants.TopBorder))
+            {
+                Destroy();
+            }
         }
 
         /// <summary>
@@ -79,7 +75,24 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="velocity">maximale Geschwindigkeit</param>
         public Projectile(Vector2 position, Vector2 flightDirection, ProjectileTypeEnum projectileType, int hitpoints, Vector2 velocity)
         {
-            throw new System.NotImplementedException();
+            Position = position;
+            flightDirection = FlightDirection;
+            ProjectileType = projectileType;
+            Hitpoints = hitpoints;
+            Velocity = velocity;
+
+            IsAlive = true;
+
+            GameItem.GameItemList.AddLast(this);
+
+            Projectile.Created(this, EventArgs.Empty);
+        }
+
+        protected override void Destroy()
+        {
+            IsAlive = false;
+
+            Projectile.Destroyed(this, EventArgs.Empty);
         }
     }
 }

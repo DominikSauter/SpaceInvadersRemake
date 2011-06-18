@@ -58,5 +58,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// Dieses Event wird ausgelöst, wenn es für einen Abschuss Punkte gibt
         /// </summary>
         public static event EventHandler ScoreGained;
+
+        protected override void Destroy()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

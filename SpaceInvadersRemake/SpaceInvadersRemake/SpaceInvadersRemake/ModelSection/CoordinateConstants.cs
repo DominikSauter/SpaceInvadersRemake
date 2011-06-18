@@ -21,10 +21,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new Vector2(0.0f, 1.0f);
             }
         }
         /// <summary>
@@ -34,10 +31,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new Vector2(0.0f, -1.0f);
             }
         }
         /// <summary>
@@ -47,10 +41,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new Vector2(1.0f, 0.0f);
             }
         }
         /// <summary>
@@ -60,10 +51,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new Vector2(-1.0f, 0.0f);
             }
         }
 
@@ -74,10 +62,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return 1.0f; //HACK: vorläufiger unsinniger Wert
             }
         }
 
@@ -88,10 +73,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return -1.0f; //HACK: vorläufiger unsinniger Wert
             }
         }
 
@@ -102,10 +84,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return 1.0f; //HACK: vorläufiger unsinniger Wert
             }
         }
 
@@ -116,10 +95,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return -1.0f; //HACK: vorläufiger unsinniger Wert
             }
         }
     }

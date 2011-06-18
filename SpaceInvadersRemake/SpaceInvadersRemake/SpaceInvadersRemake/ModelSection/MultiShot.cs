@@ -53,5 +53,10 @@ namespace SpaceInvadersRemake.ModelSection
         {
             throw new System.NotImplementedException();
         }
+
+        protected override void Destroy()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -15,13 +15,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public Weapon Weapon
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
     }
 }

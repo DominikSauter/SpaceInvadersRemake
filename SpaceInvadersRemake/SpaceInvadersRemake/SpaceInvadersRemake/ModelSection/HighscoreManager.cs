@@ -48,7 +48,7 @@ namespace SpaceInvadersRemake.ModelSection
                 }
             }
 
-            // Sortiert die Highscore-Liste mit dem anonymen Delegate
+            // Sortiert die Highscore-Liste mit einem anonymen Vergleichs-Delegate
             highscore.Sort(delegate(HighscoreEntry a, HighscoreEntry b) 
                            { 
                                // TODO: Der Vergleich muss evlt. umgedreht werden, je nachdem wierum die Liste sortiert wird
@@ -134,10 +134,15 @@ namespace SpaceInvadersRemake.ModelSection
             highscore.Clear();
         }
 
-        // Hält den Pfad der Highscore-Datei
+        /// <summary>
+        /// Hält den Pfad der Highscore-Datei
+        /// </summary>
         private const string hscFilePath = "highscore.hsc";
 
-        // Lädt die Highscore-Daten aus der Highscore-Datei
+        /// <summary>
+        /// Lädt die Highscore-Daten aus der Highscore-Datei
+        /// </summary>
+        /// <returns>geladene Highscore-Liste</returns>
         private List<HighscoreEntry> loadHighscore()
         {
             // neue Highscore-Liste zur Rückgabe
