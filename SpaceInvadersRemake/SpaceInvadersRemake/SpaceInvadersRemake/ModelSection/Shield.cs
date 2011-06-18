@@ -27,7 +27,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
-            throw new NotImplementedException();
+            // nicht benötigt
         }
 
         /// <summary>
@@ -42,7 +42,22 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="hitpoints">Lebenspunkte</param>
         public Shield(Vector2 position, int hitpoints)
         {
-            throw new System.NotImplementedException();
+            Position = position;
+            Hitpoints = hitpoints;
+
+            Velocity = Vector2.Zero;
+            IsAlive = true;
+
+            GameItem.GameItemList.AddLast(this);
+
+            Shield.Created(this, EventArgs.Empty);
+        }
+
+        protected override void Destroy()
+        {
+            IsAlive = false;
+
+            Shield.Destroyed(this, EventArgs.Empty);
         }
     }
 }

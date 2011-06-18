@@ -15,13 +15,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public int ScoreGain
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            protected set;
         }
     }
 }

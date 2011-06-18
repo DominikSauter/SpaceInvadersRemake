@@ -19,9 +19,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        public override void Move(Microsoft.Xna.Framework.Vector2 direction)
+        public override void Move(Vector2 direction)
         {
-            throw new NotImplementedException();
+            direction.Normalize();
+
+            Position += Velocity * direction;
         }
 
         public override void IsCollidedWith(IGameItem collisionPartner)
@@ -29,20 +31,20 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            // nicht benötigt
         }
 
         public override void Shoot()
         {
-            throw new NotImplementedException();
+            //TODO: kann noch nicht implementiert werden wegen Problemen. siehe Player-Klasse
         }
 
         /// <summary>
         /// Dieses Event wird ausgelöst, wenn ein neues Objekt dieser Klasse erzeugt wurde.
         /// </summary>
-        public static event EventHandler Created;//HACK change EventHandler<ControllerEventArgs>
+        public static event EventHandler Created;
 
         /// <summary>
         /// Erzeugt ein Alien
@@ -54,12 +56,28 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="scoreGain">Punktwert des Aliens</param>
         public Alien(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int scoreGain)
         {
-            throw new System.NotImplementedException();
+            Position = position;
+            Velocity = velocity;
+            Hitpoints = hitpoints;
+            Weapon = weapon;
+            ScoreGain = scoreGain;
+            IsAlive = true;
+
+            GameItem.GameItemList.AddLast(this);
+
+            Alien.Created(this, EventArgs.Empty);
         }
 
         /// <summary>
         /// Dieses Event wird ausgelöst, wenn es für einen Abschuss Punkte gibt
         /// </summary>
         public static event EventHandler ScoreGained;
+
+        protected override void Destroy()
+        {
+            IsAlive = false;
+
+            Alien.Destroyed(this, EventArgs.Empty);
+        }
     }
 }
