@@ -41,7 +41,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ExitGame()
         {
-            throw new NotImplementedException();
+            HighscoreState newState = new HighscoreState(this.stateManager, this.game);
+            this.stateManager.State = newState;
+            this.Dispose();            
         }
     }
 }

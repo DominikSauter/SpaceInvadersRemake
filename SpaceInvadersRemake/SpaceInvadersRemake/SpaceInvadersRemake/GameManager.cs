@@ -91,8 +91,8 @@ namespace SpaceInvadersRemake
             // TODO: Apply your update logic here
 
             // <STST>
-            //this.StateManager.ControllerUpdate(gameTime); // TODO: Reihenfolge überdenken
-            //this.StateManager.ModelUpdate(gameTime);
+            this.StateManager.ModelUpdate(gameTime);
+            this.StateManager.ControllerUpdate(gameTime);
             // </STST>
 
             base.Update(gameTime);
@@ -117,7 +117,7 @@ namespace SpaceInvadersRemake
             // </View>
 
             // <STST>
-            //this.StateManager.ViewUpdate(gameTime);
+            this.StateManager.ViewUpdate(gameTime);
             // </STST>
 
             base.Draw(gameTime);

@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    // by STST
     /// <summary>
     /// Speichert den aktuellen State und gibt die Aufrufe von der Game-Klasse weiter.
     /// </summary>
@@ -14,13 +15,23 @@ namespace SpaceInvadersRemake.StateMachine
     /// </remarks>
     public class StateManager
     {
+        private Game game;
+
         /// <summary>
         /// Erstellt einen StateManager.
         /// </summary>
         /// <param name="gameManager">Weiterreichung der Game-Klasse</param>
         public StateManager(Game gameManager)
         {
+            this.game = gameManager;
+            MakeFirstState();
         }
+
+        private void MakeFirstState()
+        {
+            this.State = new IntroState(this, game);
+        }
+
 
         /// <summary>
         /// Hält den aktuellen State.
@@ -36,7 +47,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ModelUpdate(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            this.State.ModelUpdate(gameTime);
         }
 
         /// <summary>
@@ -44,7 +55,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ViewUpdate(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            this.State.ViewUpdate(gameTime);
         }
 
         /// <summary>
@@ -52,7 +63,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ControllerUpdate(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            this.State.ControllerUpdate(gameTime);
         }
     }
 }

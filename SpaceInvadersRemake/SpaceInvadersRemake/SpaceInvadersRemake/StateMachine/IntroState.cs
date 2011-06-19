@@ -40,7 +40,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void Exit()
         {
-            throw new NotImplementedException();
+            MainMenuState newState = new MainMenuState(this.stateManager, this.game);
+            this.stateManager.State = newState;
+            this.Dispose();
         }
     }
 }
