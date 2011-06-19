@@ -32,9 +32,19 @@ public class ControllerManager : IController
         throw new System.NotImplementedException();
         //TODO Subsribe to Created Event from ModelGod Class
         
+        //Registriere Player EventHandler
+        Player.Created += new EventHandler(this.CreatePlayerController);
+       
+        //Registriere AI EventHandler
+        WaveGenerator.WaveGenerated += new EventHandler<ControllerEventArgs>(this.CreateController);
+        
        
     }
 
+   //Private Fields
+
+
+    
     /// <summary>
     /// Getter/Setter der Controllers Liste.
     /// </summary>
@@ -45,11 +55,14 @@ public class ControllerManager : IController
     {
         get
         {
-            throw new System.NotImplementedException();
+            return Controllers;
         }
-        set
+       private set
         {
+            Controllers = value;
         }
+
+   
     }
 
     /// <summary>
@@ -69,13 +82,13 @@ public class ControllerManager : IController
     }
 
     /// <summary>
-    /// Generiert einen Controller.
+    /// Generiert einen Controller für eine KI Steuerung.
     /// </summary>
     /// <remarks>
-    /// Diese Methode ist bei dem EventHandler der ModelSection.Ship Klassen zu registrieren.
+    /// Diese Methode ist bei dem EventHandler der WaveGenerator Klasse zu registrieren.
     /// Die ControllerEventArgs enthalten die relevanten Daten zur Controller Generierung.
-    /// Das ControllerEnum beschreibt das vom Model gewünschte Verhalten.
-    /// <see cref="ModelSection.ControllerParameters"/>
+    /// Das BehaviourEnum beschreibt das vom Model gewünschte Verhalten.
+    /// <see cref="ModelSection.BehaviourEnum"/>
     /// </remarks>
     /// <param name="sender">Absender des Events.</param>
     /// <param name="desiredController">Gibt an welchen Controllers man generiert haben möchte.</param>
@@ -87,7 +100,20 @@ public class ControllerManager : IController
     }
 
 
+    /// <summary>
+    /// Creates the player controller.
+    /// </summary>
+    /// <param name="sender">Absender des Events</param>
+    /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
+    public void CreatePlayerController(object sender, EventArgs e) 
+    {
+        throw new System.NotImplementedException();
+    }
 
+
+    /// <summary>
+    /// Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.
+    /// </summary>
     public void Dispose()
     {
         throw new NotImplementedException();
