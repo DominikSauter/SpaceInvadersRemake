@@ -28,9 +28,10 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
         public BlockWaveAI(int shootingFrequency, ICollection<IGameItem> controllees) :base (shootingFrequency, controllees)
         {
-            //Nichts zu erledigen
+            //TODO Subsribe to MoveBack Event
         }
 
+            
         /// <summary>
         /// Entscheidet in welche Richtung sich das Controllees bewegen soll
         /// </summary>
@@ -84,10 +85,11 @@ namespace SpaceInvadersRemake.Controller
                     item.Move(currentDirection);
                     
                     //Überprüft ob eines der GameItem am Rand ist und setzt das Kommando im nächsten Frame runterzurücken.
-                    if (item.Position.X == CoordinateConstants.RightBorder || item.Position.X == CoordinateConstants.LeftBorder)
+                   /* if (item.Position.X == CoordinateConstants.RightBorder || item.Position.X == CoordinateConstants.LeftBorder)
                     {
                         moveDown = true;
                     }
+                   Wird in Event ausgelagert */
                 }
             }
 
@@ -97,9 +99,16 @@ namespace SpaceInvadersRemake.Controller
             */
             if (moveDown)
             {
-               //Hack für Performance 
+
+                //Hack für Performance 
                 //sofern Left * -1 = Right ist, kann current *(-1) stehen für gleichen Effekt.
                 currentDirection = BlockWaveAI.changeDirection(currentDirection);
+                
+                //Alle mann zurück!
+                foreach (IGameItem item in Controllees)
+                {
+                    item.Move(currentDirection);
+                }
             }
 
             //TODO Implement Shooting
@@ -136,5 +145,11 @@ namespace SpaceInvadersRemake.Controller
                 return CoordinateConstants.Left;
             }
         }
+
+        private void movingBack()
+        {
+            moveDown = true;
+        }
+
     }
 }
