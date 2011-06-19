@@ -613,13 +613,13 @@
       </Path>
     </AssociationLine>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAEAAAAAAACIAAABAAAAAQ=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAEAAAAAAADAAAABAAAAAQ=</HashCode>
       <FileName>View\ViewContent.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="RepresentationContent" />
       <Property Name="UIContent" />
-      <Property Name="EffectsContent" />
+      <Property Name="EffectContent" />
     </ShowAsAssociation>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelHitsphere">
@@ -710,7 +710,7 @@
       <FileName>View\RepresentationContent.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.EffectsContent">
+  <Class Name="SpaceInvadersRemake.EffectContent">
     <Position X="29" Y="3" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAggAAAAAAAgAAAAAAAAAAgAJCAQQAAAAAAAAJgAA=</HashCode>
