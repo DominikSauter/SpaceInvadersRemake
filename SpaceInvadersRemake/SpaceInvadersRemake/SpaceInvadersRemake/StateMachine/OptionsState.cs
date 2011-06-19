@@ -41,15 +41,17 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ShowAudioOptions()
         {
-            throw new NotImplementedException();
+            AudioOptionsState newState = new AudioOptionsState(this.stateManager, this.game, this);
+            this.stateManager.State = newState;
         }
 
         /// <summary>
         /// Wechselt in die Video-Optionen und damit den Zustand.
         /// </summary>
         public void ShowVideoOptions()
-        { 
-            throw new NotImplementedException(); 
+        {
+            VideoOptionsState newState = new VideoOptionsState(this.stateManager, this.game, this);
+            this.stateManager.State = newState;
         }
     }
 }

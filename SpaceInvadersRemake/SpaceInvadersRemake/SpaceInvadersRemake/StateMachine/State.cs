@@ -39,7 +39,7 @@ namespace SpaceInvadersRemake.StateMachine
     ///     public void End()
     ///     {
     ///         HighscoreState newState = new HighscoreState(this.stateManager, this.game);
-    ///         this.stateMachine.State = newState;
+    ///         this.stateManager.State = newState;
     ///         this.Dispose(); // für Zustandsverwerfung
     ///     }
     ///     
@@ -47,7 +47,7 @@ namespace SpaceInvadersRemake.StateMachine
     ///     {
     ///         // für Zustandsspeicherung
     ///         BreakState newState = new BreakState(this.stateManager, this.game, this);
-    ///         this.stateMachine.State = newState;
+    ///         this.stateManager.State = newState;
     ///     }
     /// }
     /// </code>
@@ -130,7 +130,10 @@ namespace SpaceInvadersRemake.StateMachine
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public virtual void ControllerUpdate(GameTime gameTime) { }
+        public virtual void ControllerUpdate(GameTime gameTime)
+        {
+            this.Controller.Update(this.game, gameTime, this); // TODO: was ist hier this?
+        }
 
         /// <summary>
         /// Spricht das Model im vorgegebenen Takt an.
@@ -139,7 +142,10 @@ namespace SpaceInvadersRemake.StateMachine
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public virtual void ModelUpdate(GameTime gameTime) { }
+        public virtual void ModelUpdate(GameTime gameTime) 
+        {
+            this.Model.Update(this.game, gameTime, this); // TODO: was ist hier this?
+        }
 
         /// <summary>
         /// Spricht die View im vorgegebenen Takt an.
@@ -148,7 +154,10 @@ namespace SpaceInvadersRemake.StateMachine
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
-        public virtual void ViewUpdate(GameTime gameTime) { }
+        public virtual void ViewUpdate(GameTime gameTime)
+        {
+            this.View.Update(this.game, gameTime, this); // TODO: was ist hier this?
+        }
 
         /// <summary>
         /// Initialisierungsmethode für den Controllers.

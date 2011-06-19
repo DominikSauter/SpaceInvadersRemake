@@ -10,6 +10,8 @@ namespace SpaceInvadersRemake.StateMachine
     /// </summary>
     public class HighscoreState : State
     {
+        private int? score = null;
+
         /// <summary>
         /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
         /// </summary>
@@ -20,7 +22,17 @@ namespace SpaceInvadersRemake.StateMachine
         {
         }
 
-        // TODO: 2. Konstruktor für Punkte Entgegennahme
+        /// <summary>
+        /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
+        /// </summary>
+        /// <param name="stateManager">Referenz zum StateManager</param>
+        /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
+        /// <param name="score">im Spiel erreichte Punkte</param>
+        public HighscoreState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager, int score)
+            : base(stateManager, gameManager)
+        {
+            this.score = score;
+        }
 
         protected override void ControllerInitialize()
         {
@@ -42,7 +54,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void Exit()
         {
-            throw new NotImplementedException();
+            MainMenuState newState = new MainMenuState(this.stateManager, this.game);
+            this.stateManager.State = newState;
+            this.Dispose();
         }
     }
 }

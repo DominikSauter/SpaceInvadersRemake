@@ -25,7 +25,8 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void Break()
         {
-            throw new NotImplementedException();
+            BreakState newState = new BreakState(this.stateManager, this.game, this);
+            this.stateManager.State = newState;
         }
 
         /// <summary>
@@ -34,7 +35,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="score">Punkte, die der Spieler im Spiel erreicht hat.</param>
         public void Exit(int score)
         {
-            throw new NotImplementedException();
+            HighscoreState newState = new HighscoreState(this.stateManager, this.game, score);
+            this.stateManager.State = newState;
+            this.Dispose();
         }
 
 

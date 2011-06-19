@@ -40,7 +40,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void StartGame()
         {
-            throw new NotImplementedException();
+            InGameState newState = new InGameState(this.stateManager, this.game);
+            this.stateManager.State = newState;
+            this.Dispose();
         }
 
         /// <summary>
@@ -48,7 +50,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ShowHighscore()
         {
-            throw new NotImplementedException();
+            HighscoreState newState = new HighscoreState(this.stateManager, this.game);
+            this.stateManager.State = newState;
+            this.Dispose();
         }
 
         /// <summary>
@@ -56,7 +60,8 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ShowCredits()
         {
-            throw new NotImplementedException();
+            CreditsState newState = new CreditsState(this.stateManager, this.game, this);
+            this.stateManager.State = newState;
         }
 
         /// <summary>
@@ -64,7 +69,8 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ShowOptions()
         {
-            throw new NotImplementedException();
+            OptionsState newState = new OptionsState(this.stateManager, this.game, this);
+            this.stateManager.State = newState;
         }
     }
 }
