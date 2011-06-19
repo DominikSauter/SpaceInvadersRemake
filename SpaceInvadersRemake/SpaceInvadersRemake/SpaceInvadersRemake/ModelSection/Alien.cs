@@ -9,6 +9,9 @@ namespace SpaceInvadersRemake.ModelSection
     public class Alien : Enemy
     {
 
+        //TODO Statisches Event MoveBack! benötigt das ausgelöst wird sofern jmd "Border" überschreitet -CK 
+
+
         /// <summary>
         /// Dieses Event wird ausgelöst, wenn ein Objekt der Klasse mit einem anderen Objekt kollidiert ist.
         /// </summary>

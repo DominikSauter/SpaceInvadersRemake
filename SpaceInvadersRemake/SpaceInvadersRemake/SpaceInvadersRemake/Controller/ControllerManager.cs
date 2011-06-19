@@ -37,8 +37,8 @@ public class ControllerManager : IController
        
         //Registriere AI EventHandler
         WaveGenerator.WaveGenerated += new EventHandler<ControllerEventArgs>(this.CreateController);
-        
-       
+
+
     }
 
    //Private Fields
