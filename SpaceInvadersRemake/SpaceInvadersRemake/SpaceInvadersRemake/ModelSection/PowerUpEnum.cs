@@ -6,12 +6,12 @@ using System.Text;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Enumeration bietet IDs für alle PowerUps und den Fall, dass ein PowerUp zufällig bestimmt werden soll.
+    /// Diese Enumeration bietet IDs für alle PowerUps und den Fall, dass ein PowerUps zufällig bestimmt werden soll.
     /// </summary>
     public enum PowerUpEnum
     {
         /// <summary>
-        /// zufälliges PowerUp
+        /// zufälliges PowerUps
         /// </summary>
         Random,
         PiercingShot,

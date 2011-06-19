@@ -59,7 +59,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Referenz auf das Mothership-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// Referenz auf das MothershipSound-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
         public ModelSection.Mothership MothershipGameItem
         {

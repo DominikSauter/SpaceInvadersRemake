@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Referenz auf ein PowerUp-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// Referenz auf ein PowerUps-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
         public ModelSection.PowerUp PowerUpGameItem
         {

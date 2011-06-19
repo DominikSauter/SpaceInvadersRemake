@@ -7,17 +7,17 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein aktives PowerUp dar, das beim Spieler wirksam ist.
+    /// Diese Klasse stellt ein aktives PowerUps dar, das beim Spieler wirksam ist.
     /// </summary>
-    /// <remarks>Die Ausführung der PowerUps auf dem Spieler wird über die Delegates <c>Apply</c> und <c>Remove</c> gelöst. Die Funtionen müssen von den <c>PowerUp</c>-Unterklassen bereitgestellt werden.</remarks>
+    /// <remarks>Die Ausführung der PowerUps auf dem Spieler wird über die Delegates <c>Apply</c> und <c>Remove</c> gelöst. Die Funtionen müssen von den <c>PowerUps</c>-Unterklassen bereitgestellt werden.</remarks>
     public class ActivePowerUp
     {
         /// <summary>
         /// Erzeugt ein <c>ActivePowerUp</c>
         /// </summary>
         /// <param name="timeLeft">Die Wirkungsdauer des PowerUps</param>
-        /// <param name="apply">Die Funktion, mit der das PowerUp angewendet wird</param>
-        /// <param name="remove">Die Funktion, mit der das PowerUp rückgängig gemacht wird</param>
+        /// <param name="apply">Die Funktion, mit der das PowerUps angewendet wird</param>
+        /// <param name="remove">Die Funktion, mit der das PowerUps rückgängig gemacht wird</param>
         public ActivePowerUp(float timeLeft, PowerUpAction apply, PowerUpAction remove)
         {
             throw new System.NotImplementedException();
@@ -38,7 +38,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die Funktion (Delegate), mit der das PowerUp rückgängig gemacht wird
+        /// Die Funktion (Delegate), mit der das PowerUps rückgängig gemacht wird
         /// </summary>
         public PowerUpAction Remove
         {
@@ -52,7 +52,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die Funktion (Delegate), mit der das PowerUp angewendet wird
+        /// Die Funktion (Delegate), mit der das PowerUps angewendet wird
         /// </summary>
         public PowerUpAction Apply
         {

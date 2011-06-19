@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein PiercingShot-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers,
+    /// Diese Klasse stellt ein PiercingShot-PowerUps dar. Dieses PowerUps verbessert die Waffe des Spielers,
     /// sodass die Projektile einen Gegner durchschlagen können.
     /// </summary>
     public class PiercingShot : PowerUp
@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.ModelSection
         private const float duration = 0.0f;
 
         /// <summary>
-        /// Erstellt ein PiercingShot-PowerUp
+        /// Erstellt ein PiercingShot-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>

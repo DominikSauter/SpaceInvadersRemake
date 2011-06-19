@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein StaticShield-PowerUp dar. Dieses PowerUp verleiht dem Spieler ein Schild,
+    /// Diese Klasse stellt ein StaticShield-PowerUps dar. Dieses PowerUps verleiht dem Spieler ein Schild,
     /// das er im Spiel platzieren kann.
     /// </summary>
     public class StaticShield : PowerUp
@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.ModelSection
         private const float duration = 0.0f;
 
         /// <summary>
-        /// Erstellt ein StaticShield-PowerUp
+        /// Erstellt ein StaticShield-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwinigkeit</param>

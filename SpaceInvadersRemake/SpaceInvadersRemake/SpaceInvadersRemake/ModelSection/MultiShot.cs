@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein MultiShot-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers,
+    /// Diese Klasse stellt ein MultiShot-PowerUps dar. Dieses PowerUps verbessert die Waffe des Spielers,
     /// sodass diese mehrere Projektile auf einmal abfeuern kann.
     /// </summary>
     public class MultiShot : PowerUp
@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.ModelSection
         private const float duration = 0.0f;
 
         /// <summary>
-        /// Erstellt ein MultiShot-PowerUp
+        /// Erstellt ein MultiShot-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>

@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Speedboost-PowerUp dar. Dieses PowerUp erhöht die Geschwindigkeit des Spielers.
+    /// Diese Klasse stellt ein Speedboost-PowerUps dar. Dieses PowerUps erhöht die Geschwindigkeit des Spielers.
     /// </summary>
     public class Speedboost : PowerUp
     {
@@ -44,7 +44,7 @@ namespace SpaceInvadersRemake.ModelSection
         private const float duration = 0.0f;
 
         /// <summary>
-        /// Erstellt ein Speedboost-PowerUp
+        /// Erstellt ein Speedboost-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
