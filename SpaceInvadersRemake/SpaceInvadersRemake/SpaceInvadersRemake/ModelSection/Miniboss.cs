@@ -39,7 +39,7 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
-        public static event EventHandler Created;//HACK change EventHandler<ControllerEventArgs>
+        public static event EventHandler Created;
 
         /// <summary>
         /// Erzeugt einen Miniboss
