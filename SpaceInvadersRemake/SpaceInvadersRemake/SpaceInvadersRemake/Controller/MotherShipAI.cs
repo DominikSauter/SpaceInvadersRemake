@@ -29,7 +29,7 @@ namespace SpaceInvadersRemake.Controller
         /// </returns>
         protected override Microsoft.Xna.Framework.Vector2 Movement()
         {
-            throw new NotImplementedException();
+            return CoordinateConstants.Left;
         }
 
         /// <summary>
