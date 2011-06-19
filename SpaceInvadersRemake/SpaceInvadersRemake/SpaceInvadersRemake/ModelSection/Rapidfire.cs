@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Rapidfire-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers,
+    /// Diese Klasse stellt ein Rapidfire-PowerUps dar. Dieses PowerUps verbessert die Waffe des Spielers,
     /// sodass diese in schneller Folge feuern kann.
     /// </summary>
     public class Rapidfire : PowerUp
@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.ModelSection
         private const float duration = 0.0f;
 
         /// <summary>
-        /// Erstellt ein Rapidfire-PowerUp
+        /// Erstellt ein Rapidfire-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>

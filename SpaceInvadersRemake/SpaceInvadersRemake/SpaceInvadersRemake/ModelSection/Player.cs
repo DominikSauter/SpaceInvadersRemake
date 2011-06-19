@@ -105,7 +105,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         public override void Update(GameTime gameTime)
         {
-            //TODO: PowerUp-System
+            //TODO: PowerUps-System
         }
 
         public override void Shoot()
@@ -121,16 +121,16 @@ namespace SpaceInvadersRemake.ModelSection
         public static event EventHandler Created;
 
         /// <summary>
-        /// Fügt der Liste der aktiven PowerUps ein neues PowerUp hinzu. Dabei wird das <c>Apply</c>-Delegate des übegebenen <c>ActivePowerUp</c>s ausgelöst.
+        /// Fügt der Liste der aktiven PowerUps ein neues PowerUps hinzu. Dabei wird das <c>Apply</c>-Delegate des übegebenen <c>ActivePowerUp</c>s ausgelöst.
         /// </summary>
         /// <remarks>
         /// Wenn bereits ein gleiches <c>ActivePowerUp</c> in der Liste ist, wird dieses gelöscht ohne das <c>Remove-</c>Delegate auszulösen.
-        /// Für weitere Informationen sollten unbedingt die Hinweise zur PowerUp-Liste <c>ActivePowerUps</c> beachtet werden.
+        /// Für weitere Informationen sollten unbedingt die Hinweise zur PowerUps-Liste <c>ActivePowerUps</c> beachtet werden.
         /// </remarks>
-        /// <param name="powerUpIcons">Das neue PowerUp</param>
+        /// <param name="powerUpIcons">Das neue PowerUps</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
-            //TODO: PowerUp-System
+            //TODO: PowerUps-System
         }
 
         /// <summary>
@@ -138,10 +138,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// In der <c>Update</c>-Methode wird bei allen aktiven PowerUps die Restzeit aktualisiert und diese gegebenenfalls entfernt, 
         /// wenn die Restzeit auf null oder darunter gefallen ist.
         /// </summary>
-        /// <remarks>Wird der Liste ein PowerUp hinzugefügt, wird dessen <c>Apply</c>-Delegate aufgerufen (in der <c>AddPowerUp</c>-Methode).
+        /// <remarks>Wird der Liste ein PowerUps hinzugefügt, wird dessen <c>Apply</c>-Delegate aufgerufen (in der <c>AddPowerUp</c>-Methode).
         /// Beim Entfernen aus der Liste wird das <c>Remove</c>-Delegate aufgerufen (in der <c>Update</c>-Methode). Ausnahme ist, 
-        /// wenn ein weiteres Waffen-PowerUp hinzugefügt wird oder ein PowerUp, das bereits aktiv ist. 
-        /// In diesem Fall wird das vorher aktive Waffen-PowerUp entfernt ohne <c>Remove</c> aufzurufen.
+        /// wenn ein weiteres Waffen-PowerUps hinzugefügt wird oder ein PowerUps, das bereits aktiv ist. 
+        /// In diesem Fall wird das vorher aktive Waffen-PowerUps entfernt ohne <c>Remove</c> aufzurufen.
         /// </remarks>
         public List<ActivePowerUp> ActivePowerUps
         {
@@ -169,7 +169,7 @@ namespace SpaceInvadersRemake.ModelSection
 
             GameItem.GameItemList.AddLast(this);
 
-            ActivePowerUps = null; //TODO: PowerUp-Liste initialisieren
+            ActivePowerUps = null; //TODO: PowerUps-Liste initialisieren
 
             Alien.ScoreGained += AddScore;
             Mothership.ScoreGained += AddScore;

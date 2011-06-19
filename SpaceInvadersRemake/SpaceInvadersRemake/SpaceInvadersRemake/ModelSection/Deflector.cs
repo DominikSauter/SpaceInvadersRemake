@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Deflector-PowerUp dar. Dieses PowerUp verbessert den Spieler, sodass er ein Schild hat, das einen Treffer absorbiert.
+    /// Diese Klasse stellt ein Deflector-PowerUps dar. Dieses PowerUps verbessert den Spieler, sodass er ein Schild hat, das einen Treffer absorbiert.
     /// </summary>
     public class Deflector : PowerUp
     {
@@ -44,7 +44,7 @@ namespace SpaceInvadersRemake.ModelSection
         private const float duration = 0.0f;
 
         /// <summary>
-        /// Erstellt ein Deflector-PowerUp
+        /// Erstellt ein Deflector-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>

@@ -16,14 +16,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
         /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUp angewendet werden soll.</param>
+        /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
         public abstract void Apply(Player player);
 
         /// <summary>
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler rückgängig zu machen.
         /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUp entfernt werden soll.</param>
+        /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
         public abstract void Remove(Player player);
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)

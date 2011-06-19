@@ -4,7 +4,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein SlowMotion-PowerUp dar. Dieses PowerUp verlangsamt die Spielzeit.
+    /// Diese Klasse stellt ein SlowMotion-PowerUps dar. Dieses PowerUps verlangsamt die Spielzeit.
     /// </summary>
     public class SlowMotion : PowerUp
     {
@@ -44,7 +44,7 @@ namespace SpaceInvadersRemake.ModelSection
         private const float duration = 0.0f;
 
         /// <summary>
-        /// Erstellt ein SlowMotion-PowerUp
+        /// Erstellt ein SlowMotion-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
