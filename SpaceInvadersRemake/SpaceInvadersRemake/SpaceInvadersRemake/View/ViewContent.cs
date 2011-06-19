@@ -38,7 +38,7 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        public static SpaceInvadersRemake.EffectsContent EffectsContent
+        public static SpaceInvadersRemake.EffectContent EffectContent
         {
             get
             {
@@ -54,9 +54,28 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static void LoadContent(ContentManager Content)
         {
-            GameBackgroundImage = Content.Load<Texture2D>("Images/InGame_Hintergrund");
-            MenuBackgroundImage = Content.Load<Texture2D>("Images/Menü_Hintergrund");
-            ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
+            //instanziieren der Content "Behälter"
+            UIContent = new UIContent();
+            EffectContent = new EffectContent();
+            RepresentationContent = new RepresentationContent();
+
+            //Laden des UI Contents
+            UIContent.GameBackgroundImage = Content.Load<Texture2D>("Images/InGame_Hintergrund");
+            UIContent.MenuBackgroundImage = Content.Load<Texture2D>("Images/Menü_Hintergrund");
+            UIContent.HUDBackground = Content.Load<Texture2D>("Graphics/hud_32x60");
+            UIContent.MenuButton = Content.Load<Texture2D>("Menu/button");
+            UIContent.SettingsBackground = Content.Load<Texture2D>("Menu/einstellungsfenster");
+            UIContent.SettingsButton = Content.Load<Texture2D>("Menu/auswahl");
+            UIContent.SettingsArrowLeft = Content.Load<Texture2D>("Menu/pfeil_links");
+            UIContent.SettingsArrowLeftEnd = Content.Load<Texture2D>("Menu/pfeil_links_ende");
+            UIContent.SettingsArrowRight = Content.Load<Texture2D>("Menu/pfeil_rechts");
+            UIContent.SettingsArrowRightEnd = Content.Load<Texture2D>("Menu/pfeil_rechts_ende");
+
+            //Laden des Representation Contents
+            RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
+            RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/Schild");
+
+            //Laden des EffectContents
         }
 
         /// <summary>
@@ -64,19 +83,16 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public static void ComputeHitspheres()
         {
-            PlayerHitsphere = computeBigModelHitsphere(PlayerModel);
-            Alien1Hitsphere = computeBigModelHitsphere(Alien1Model);
-            Alien2Hitsphere = computeBigModelHitsphere(Alien2Model);
-            Alien3Hitsphere = computeBigModelHitsphere(Alien3Model);
-            Alien4Hitsphere = computeBigModelHitsphere(Alien4Model);
-            Alien5Hitsphere = computeBigModelHitsphere(Alien5Model);
-            MothershipHitsphere = computeBigModelHitsphere(MothershipModel);
-            ShieldHitsphere = computeBigTextureHitsphere(ShieldTexture);
-            ProjectileNormalHitsphere = computeBigTextureHitsphere(ProjectileNormal);
+            //Berechnen der Hitboxen / Laden des Representation Contents
+            RepresentationContent.PlayerHitsphere = computeBigModelHitsphere(RepresentationContent.PlayerModel);
+            RepresentationContent.AlienHitsphere = computeBigModelHitsphere(RepresentationContent.AlienModel);
+            RepresentationContent.MothershipHitsphere = computeBigModelHitsphere(RepresentationContent.MothershipModel);
+            RepresentationContent.ShieldHitsphere = computeBigTextureHitsphere(RepresentationContent.ShieldTexture);
+            RepresentationContent.ProjectileNormalHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileNormal);
             //<WAHL>
-            //ProjectilePiercingHitsphere = computeBigTextureHitsphere(ProjectilePiercing);
-            //BossHitsphere = computeBigModelHitsphere(BossModel);
-            //ProjectileBossHitsphere = computeBigTextureHitsphere(BossProjectile);
+            //RepresentationContent.BossHitsphere = computeBigModelHitsphere(RepresentationContent.BossModel);
+            //RepresentationContent.ProjectilePiercingHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectilePiercing);
+            //RepresentationContent.ProjectileBossHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileBoss);
             //</WAHL>
 
         }
