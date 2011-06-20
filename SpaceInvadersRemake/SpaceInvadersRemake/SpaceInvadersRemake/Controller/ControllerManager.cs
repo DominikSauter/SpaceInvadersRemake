@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.StateMachine;
 using SpaceInvadersRemake.ModelSection;
+using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.Settings;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -29,14 +31,18 @@ public class ControllerManager : IController
         /// </remarks>
     public ControllerManager()
     {
-        throw new System.NotImplementedException();
-        //TODO Subsribe to Created Event from ModelGod Class
+       
+        //Init Liste
+        Controllers = new List<ICommander>();
+        
         
         //Registriere Player EventHandler
         Player.Created += new EventHandler(this.CreatePlayerController);
        
         //Registriere AI EventHandler
         WaveGenerator.WaveGenerated += new EventHandler<ControllerEventArgs>(this.CreateController);
+
+
 
 
     }
@@ -74,11 +80,14 @@ public class ControllerManager : IController
     /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
     /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
     /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
-    public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, State state)
+    public void Update(Game game,GameTime gameTime, State state)
     {
-       
-        
-         throw new NotImplementedException();
+
+
+        foreach (ICommander item in Controllers)
+        {
+            item.Update(game, gameTime,state);
+        }
     }
 
     /// <summary>
@@ -93,21 +102,64 @@ public class ControllerManager : IController
     /// <param name="sender">Absender des Events.</param>
     /// <param name="desiredController">Gibt an welchen Controllers man generiert haben möchte.</param>
     public void CreateController(object sender, ControllerEventArgs desiredController) 
-        
-
     {
-        throw new System.NotImplementedException();
+        //TODO Kommentare
+
+        IGameItem mySender = (IGameItem) sender;
+        ICollection<IGameItem> controllees = desiredController.Controllees;
+        int shootingFrequency = desiredController.DifficultyLevel.ShootingFrequency;
+        ICommander temp;
+
+        switch (desiredController.Behaviour)
+        {
+            case BehaviourEnum.BlockMovement:
+                
+                temp = new BlockWaveAI(shootingFrequency, controllees);
+
+                Controllers.Add(temp);
+               
+                break;
+            
+            case BehaviourEnum.MothershipMovement:
+                
+                temp = new MothershipAI(shootingFrequency, controllees.First());
+                Controllers.Add(temp);
+
+                break;
+           
+        }
+
+
     }
 
 
     /// <summary>
     /// Creates the player controller.
     /// </summary>
+    /// <remarks>
+    /// Sofern eine neue Eingabemöglichkeit Implementiert wurde, muss diese im SupportedInput aufgeführt werden 
+    /// und hier ein neuer case hinzugefügt werden.
+    /// </remarks>
     /// <param name="sender">Absender des Events</param>
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     public void CreatePlayerController(object sender, EventArgs e) 
     {
-        throw new System.NotImplementedException();
+        IGameItem  mycontrollee = (IGameItem) sender;
+     
+        
+        switch (GameConfig.Default.Input)
+        {
+            //HACK hier für neue Eingabemöglichkeit neuen case einfügen.
+            
+            case SupportedInputEnum.Keyboard: 
+            //Keyboard ist auch default, daher Durchreichung an Default case.
+            //Kein break
+            default:
+                Controllers.Add(new KeyboardController(mycontrollee));
+                break;
+
+
+        }
     }
 
 

@@ -135,6 +135,12 @@
     <Compile Include="ModelSection\PowerUpAction.cs" />
     <Compile Include="ModelSection\ProjectileTypeEnum.cs" />
     <Compile Include="ModelSection\PowerUpEnum.cs" />
+    <Compile Include="Settings\GameConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GameConfig.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SupportedInputEnum.cs" />
     <Compile Include="View\RepresentationContent.cs" />
     <Compile Include="View\SoundContent.cs" />
     <Compile Include="View\UIContent.cs" />
@@ -272,6 +278,10 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Controller\Controller.cd" />
+    <None Include="Settings\GameConfig.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GameConfig.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Settings\KeyboardConfig.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>KeyboardConfig.Designer.cs</LastGenOutput>
