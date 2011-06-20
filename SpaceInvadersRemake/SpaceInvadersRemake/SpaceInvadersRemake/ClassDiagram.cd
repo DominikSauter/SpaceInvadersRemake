@@ -558,7 +558,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="36.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgYABAEQACCAiAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
+      <HashCode>AgYABAEQACCAgAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -690,7 +690,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.PlayerRepresentation">
-    <Position X="36.75" Y="9" Width="1.5" />
+    <Position X="36.5" Y="9" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAgAAAAAAAAAFIAAAACAAAAAAAAAIQAA=</HashCode>
       <FileName>View\PlayerRepresentation.cs</FileName>
@@ -713,7 +713,7 @@
   <Class Name="SpaceInvadersRemake.EffectContent">
     <Position X="29" Y="3" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAggAAAAAAAgAAAAAAAAAAgAJCAQQAAAAAAAAJgAA=</HashCode>
+      <HashCode>AAAAggAAAAAAAgAAAAAAAAAAgAJCAQQAAAAAAAAJgAE=</HashCode>
       <FileName>View\EffectContent.cs</FileName>
     </TypeIdentifier>
   </Class>
