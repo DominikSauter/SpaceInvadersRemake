@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpaceInvadersRemakeContent"
 EndProject
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "ModelingProject", "ModelingProject\ModelingProject.modelproj", "{CD918BE6-C86C-4844-8267-C45DE9995736}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dokumente", "Dokumente\Dokumente.csproj", "{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -47,6 +49,16 @@ Global
 		{CD918BE6-C86C-4844-8267-C45DE9995736}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{CD918BE6-C86C-4844-8267-C45DE9995736}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{CD918BE6-C86C-4844-8267-C45DE9995736}.Release|x86.ActiveCfg = Release|Any CPU
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Debug|x86.ActiveCfg = Debug|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Debug|x86.Build.0 = Debug|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Release|Any CPU.ActiveCfg = Release|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Release|Mixed Platforms.Build.0 = Release|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Release|x86.ActiveCfg = Release|x86
+		{1DAFDF91-DFBA-4222-993C-FDD74B5056CE}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
