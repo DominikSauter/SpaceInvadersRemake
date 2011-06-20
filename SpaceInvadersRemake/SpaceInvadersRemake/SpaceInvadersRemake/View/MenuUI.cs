@@ -21,9 +21,16 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         /// <param name="buttonLabels">Beschriftungen der Controls</param>
         /// <param name="background">Hintergrundbild</param>
-        public MenuUI(string[] buttonLabels, Texture2D background)
+        public MenuUI(MenuControl[] buttons, Texture2D background)
         {
-            throw new System.NotImplementedException();
+            this.menuBackgroundImage = background;
+
+            ButtonRepresentation[] tmp = new ButtonRepresentation[buttons.Length];
+            for (int i = 0; i < tmp.Length; i++)
+            {
+                tmp[i] = AddButton(buttons[i]);
+            }
+
         }
 
         /// <summary>
@@ -53,7 +60,7 @@ namespace SpaceInvadersRemake.View
         /// Erstellt ein ButtonRepresentation Objekt welches zu der Liste hinzugefügt wird.
         /// </summary>
         /// <param name="button"> Von dem State übergebener Button</param>
-        public void AddButton(Button button)
+        public ButtonRepresentation AddButton(MenuControl button)
         {
             throw new System.NotImplementedException();
         }

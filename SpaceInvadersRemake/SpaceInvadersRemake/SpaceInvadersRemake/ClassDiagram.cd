@@ -481,7 +481,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.HighscoreManager">
-    <Position X="25.25" Y="30" Width="1.5" />
+    <Position X="25.25" Y="29.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAQAAIAAICAAAAAICAAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
       <FileName>ModelSection\HighscoreManager.cs</FileName>
@@ -564,7 +564,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.GameItemRepresentation">
-    <Position X="46.75" Y="2.5" Width="1.75" />
+    <Position X="48.25" Y="2.5" Width="1.75" />
     <TypeIdentifier>
       <HashCode>AAACAAAAABAAAgAAAAAAAAAAAAAAAAAAAAAAAAAQAAA=</HashCode>
       <FileName>View\GameItemRepresentation.cs</FileName>
@@ -572,23 +572,23 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.GameUI">
-    <Position X="39" Y="2.5" Width="2" />
+    <Position X="38.75" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAoAAAAAAAAAAgAAAAAAAAAAAAAAAAAAACQAAAAAAAA=</HashCode>
+      <HashCode>CAoAAAAAAAAAggAAAAAABAAAAAAAAAACACAAAAAEAAA=</HashCode>
       <FileName>View\GameUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.HighscoreUI">
-    <Position X="41.25" Y="2.5" Width="2.25" />
+    <Position X="41" Y="2.5" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAgAAAAAAAAAAAAAAAAAAgQAAAAAAAAA=</HashCode>
       <FileName>View\HighscoreUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.MenuUI">
-    <Position X="43.75" Y="2.5" Width="2" />
+    <Position X="43.5" Y="2.5" Width="2" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAIAAAAAAAAAAIAAAgA=</HashCode>
       <FileName>View\MenuUI.cs</FileName>
@@ -640,7 +640,7 @@
   <Class Name="SpaceInvadersRemake.View.SoundEffects">
     <Position X="57" Y="12.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAAAAAAAAAAACAAAAEAAAAABAAAoAIAAAgAAAA=</HashCode>
+      <HashCode>AAAgAAAAAAAAAAAEACAAAAEAAAEABACAoAIAAAgAAAA=</HashCode>
       <FileName>View\SoundEffects.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -720,9 +720,17 @@
   <Class Name="SpaceInvadersRemake.UIContent">
     <Position X="31.25" Y="3" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAgAAAAAAAAAAAAQQAAAAIACCAAQEAAACAAA=</HashCode>
+      <HashCode>AAAAAAAIAgAAAAAAAAAAAAQQAAQAIACCAAQEAAACAAA=</HashCode>
       <FileName>View\UIContent.cs</FileName>
     </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.CreditsUI">
+    <Position X="46" Y="2.5" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAEAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CreditsUI.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="41" Y="0.5" Width="1.5" />

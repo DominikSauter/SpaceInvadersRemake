@@ -73,5 +73,11 @@ namespace SpaceInvadersRemake
             get;
             set;
         }
+
+        public Texture2D LiveIcon
+        {
+            get;
+            set;
+        }
     }
 }

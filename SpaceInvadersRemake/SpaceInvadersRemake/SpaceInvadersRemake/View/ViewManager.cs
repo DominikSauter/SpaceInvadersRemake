@@ -1,9 +1,11 @@
-﻿using System;
+﻿//Implementiert von Dodo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
 {
@@ -41,21 +43,27 @@ namespace SpaceInvadersRemake.View
             //abhängig vom State wird hier die UI geladen.
             if (currentState is StateMachine.InGameState)
             {
-                //erzeugen einer neuen GameUI. PowerUpIcons werden auf null gesetzt da Wahl.
+                //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
                 this.ViewItemList.Add(new GameUI(ViewContent.UIContent.Font, ViewContent.UIContent.GameBackgroundImage,
-                                                ViewContent.UIContent.HUDBackground, null));
+                                                ViewContent.UIContent.HUDBackground, ViewContent.UIContent.LiveIcon, null));
                 this.EffectPlayer = new SoundEffects(ViewContent.EffectContent.PowerUpSound, ViewContent.EffectContent.ExplosionSound,
                                                     ViewContent.EffectContent.WeaponPlayer, ViewContent.EffectContent.WeaponPiercingshot,
                                                     ViewContent.EffectContent.WeaponMultishot, ViewContent.EffectContent.MothershipSound);
             }
             else if (currentState is StateMachine.IntroState)
             {
+                this.EffectPlayer = new Intro();
             }
             else if (currentState is StateMachine.HighscoreState)
             {
             }
+            else if (currentState is StateMachine.CreditsState)
+            {
+                this.ViewItemList.Add(new CreditsUI(ViewContent.UIContent.Font, ViewContent.UIContent.MenuBackgroundImage));
+            }
             else
             {
+                this.ViewItemList.Add(new MenuUI(((Menu)currentState.Model).Controls, ViewContent.UIContent.MenuBackgroundImage));
             }
         }
         /// <summary>
