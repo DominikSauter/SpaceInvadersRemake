@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -27,7 +28,11 @@ namespace SpaceInvadersRemake.StateMachine
 
         protected override void ModelInitialize()
         {
-            throw new NotImplementedException();
+            List<MenuControl> controls = new List<MenuControl>();
+
+            //TODO: Buttons einfügen
+
+            Model = new Menu(controls);
         }
 
         protected override void ViewInitialize()
