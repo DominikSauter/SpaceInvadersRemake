@@ -22,11 +22,15 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        public override void Move(Vector2 direction)
+        public override bool Move(Vector2 direction)
         {
             direction.Normalize();
 
             Position += Velocity * direction;
+
+            //TODO: false bei Randüberschreitung zurückgeben
+
+            return true;
         }
 
         public override void IsCollidedWith(IGameItem collisionPartner)

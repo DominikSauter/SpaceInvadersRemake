@@ -50,9 +50,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// </summary>
         /// <param name="direction"></param>
-        public virtual void Move(Vector2 direction)
+        public virtual bool Move(Vector2 direction)
         {
-            // Leerer Methodenrumpf, um bei Klassen, die nicht von einem Controller bewegt werden können Schreibarbeit zu sparen
+            // Standardmäßig Rückgabe von false, um bei Klassen, die nicht von einem Controller bewegt werden können Schreibarbeit zu sparen
+            return false;
         }
 
         /// <summary>
@@ -71,6 +72,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// </summary>
         public virtual void Shoot(GameTime gameTime)
+        {
+            // Leerer Methodenrumpf, um bei Klassen, die nicht von einem Controller kontrolliert werden können Schreibarbeit zu sparen
+        }
+
+        public virtual void Shoot(GameTime gameTime, Vector2 direction)
         {
             // Leerer Methodenrumpf, um bei Klassen, die nicht von einem Controller kontrolliert werden können Schreibarbeit zu sparen
         }
