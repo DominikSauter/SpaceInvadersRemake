@@ -1,0 +1,9 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpaceInvadersRemake.Settings" GeneratedClassName="GameConfig">
+  <Profiles />
+  <Settings>
+    <Setting Name="Input" Type="SpaceInvadersRemake.Settings.SupportedInputEnum" Scope="User">
+      <Value Profile="(Default)">Keyboard</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
