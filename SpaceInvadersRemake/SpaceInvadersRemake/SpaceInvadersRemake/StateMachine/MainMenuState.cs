@@ -28,11 +28,11 @@ namespace SpaceInvadersRemake.StateMachine
 
         protected override void ModelInitialize()
         {
-            List<MenuControl> controls = new List<MenuControl>();
+            List<MenuControl> controls = new List<MenuControl>(); //TB
 
             //TODO: Buttons einfügen
 
-            Model = new Menu(controls);
+            Model = new Menu(controls); //TB
         }
 
         protected override void ViewInitialize()
