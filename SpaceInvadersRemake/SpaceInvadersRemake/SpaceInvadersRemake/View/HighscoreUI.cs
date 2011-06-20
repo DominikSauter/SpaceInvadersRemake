@@ -5,6 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
 {
@@ -19,9 +20,15 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert die Highscoreoberfläche
         /// </summary>
-        public HighscoreUI(SpriteFont font, Texture2D background)
+        public HighscoreUI(SpriteFont font, Texture2D background, HighscoreEntry[] highscoreEntries)
         {
             throw new System.NotImplementedException();
+        }
+
+        public HighscoreEntry[] HighscoreEntries
+        {
+            get;
+            set;
         }
 
         /// <summary>

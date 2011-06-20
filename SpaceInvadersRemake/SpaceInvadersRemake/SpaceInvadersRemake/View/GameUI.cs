@@ -16,7 +16,8 @@ namespace SpaceInvadersRemake.View
         private Texture2D gameBackgroundImage;
         private Texture2D hudBackgroundTexture;
         private SpriteFont font;
-        private List<Texture2D> PowerUpIcons;
+        private List<Texture2D> powerUpIcons;
+        private Texture2D liveIcon;
     
         /// <summary>
         /// Initialisiert die Spieloberfläche
@@ -24,10 +25,32 @@ namespace SpaceInvadersRemake.View
         /// <param name="font">Schriftart mit welcher der HUD beschriftet wird.</param>
         /// <param name="background">Hintergrundbild</param>
         /// <param name="hud">HUD-Hintergrund</param>
-        /// <param name="powerUpIcons">Liste von PowerUpIcons</param>
-        public GameUI(SpriteFont font, Texture2D background, Texture2D hud, List<Texture2D> powerUpIcons)
+        /// <param name="powerUpIcons">Liste von powerUpIcons</param>
+        public GameUI(SpriteFont font, Texture2D background, Texture2D hud, Texture2D liveIcons, List<Texture2D> powerUpIcons)
         {
             throw new System.NotImplementedException();
+        }
+
+        public int Lives
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public int Points
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
         }
 
         /// <summary>
