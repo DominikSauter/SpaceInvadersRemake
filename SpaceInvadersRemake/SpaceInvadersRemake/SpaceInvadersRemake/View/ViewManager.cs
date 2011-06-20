@@ -44,26 +44,54 @@ namespace SpaceInvadersRemake.View
             if (currentState is StateMachine.InGameState)
             {
                 //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
-                this.ViewItemList.Add(new GameUI(ViewContent.UIContent.Font, ViewContent.UIContent.GameBackgroundImage,
-                                                ViewContent.UIContent.HUDBackground, ViewContent.UIContent.LiveIcon, null));
+                this.ViewItemList.Add(CreateGameUI());
                 this.EffectPlayer = new SoundEffects(ViewContent.EffectContent.PowerUpSound, ViewContent.EffectContent.ExplosionSound,
                                                     ViewContent.EffectContent.WeaponPlayer, ViewContent.EffectContent.WeaponPiercingshot,
                                                     ViewContent.EffectContent.WeaponMultishot, ViewContent.EffectContent.MothershipSound);
+                
+                //registrieren an den events [PFLICHT]
+                //created
+                Player.Created += CreatePlayer;
+                Alien.Created += CreateAlien;
+                Mothership.Created += CreateMothership;
+                Shield.Created += CreateShield;
+                Projectile.Created += CreateProjectile;
+
+                //[WAHL]
+                //destroyed
+                Player.Destroyed += ExplosionFX;
+                Alien.Destroyed += ExplosionFX;
+                Mothership.Destroyed += ExplosionFX;
+                Shield.Destroyed += ExplosionFX;
+
+                //weaponFired
+                PlayerNormalWeapon.WeaponFired += ShootSFX;
+                PiercingShotWeapon.WeaponFired += ShootSFX;
+                RapidfireWeapon.WeaponFired += ShootSFX;
+                MultiShotWeapon.WeaponFired += ShootSFX;
+                MothershipWeapon.WeaponFired += ShootSFX;
+
             }
             else if (currentState is StateMachine.IntroState)
             {
+                //da nur das Video abgespielt wird, benötigt man keine wirkliche Oberfläche.
                 this.EffectPlayer = new Intro();
             }
             else if (currentState is StateMachine.HighscoreState)
             {
+                //erzeugen einer HighscoreUI
+                this.ViewItemList.Add(CreateHighscoreUI(currentState);
             }
             else if (currentState is StateMachine.CreditsState)
             {
-                this.ViewItemList.Add(new CreditsUI(ViewContent.UIContent.Font, ViewContent.UIContent.MenuBackgroundImage));
+                //erzeugen einer CreditsUI
+                this.ViewItemList.Add(CreateCreditsUI());
             }
-            else
+            else if (currentState is StateMachine.AudioOptionsState || currentState is StateMachine.BreakState || currentState is StateMachine.MainMenuState
+                    || currentState is StateMachine.OptionsState || currentState is StateMachine.VideoOptionsState)
             {
-                this.ViewItemList.Add(new MenuUI(((Menu)currentState.Model).Controls, ViewContent.UIContent.MenuBackgroundImage));
+                //erzeugen einer MenuUI
+                this.ViewItemList.Add(CreateMenuUI(currentState));
             }
         }
         /// <summary>
@@ -82,7 +110,6 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Audioplayer um die Soundeffekte wiederzugeben.
         /// </summary>
-        
         //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         //GEHT DAS MIT DEM TYP?? -> GIBT JEDENFALLS KEINEN COMPILEFEHLER!
         //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
@@ -99,7 +126,22 @@ namespace SpaceInvadersRemake.View
         /// <param name="e">Ereignis Argumente</param>
         public void ShootSFX(object weapon, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            if (weapon is PlayerNormalWeapon)
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponPlayer);
+            }
+            else if (weapon is PiercingShotWeapon)
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponPiercingshot);
+            }
+            else if (weapon is MultiShotWeapon)
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponMultishot);
+            }
+            else if (weapon is RapidfireWeapon)
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponRapidFire);
+            }
         }
 
         /// <summary>
@@ -145,7 +187,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public PlayerRepresentation CreatePlayer(object player, EventArgs e)
+        public void CreatePlayer(object player, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -159,7 +201,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public AlienRepresentation CreateAlien(Object alien, EventArgs e)
+        public void CreateAlien(Object alien, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -173,7 +215,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public MothershipRepresentation CreateMothership(object mothership, EventArgs e)
+        public void CreateMothership(object mothership, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -187,7 +229,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public MinibossRepresentation CreateMiniboss(Object miniboss, EventArgs e)
+        public void CreateMiniboss(Object miniboss, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -201,7 +243,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public ShieldRepresentation CreateShield(object shield, EventArgs e)
+        public void CreateShield(object shield, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -215,7 +257,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public ProjectileRepresentation CreateProjectile(object projectile, EventArgs e)
+        public void CreateProjectile(object projectile, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -229,7 +271,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public PowerUpRepresentation CreatePowerUp(object powerUp, EventArgs e)
+        public void CreatePowerUp(object powerUp, EventArgs e)
         {
             throw new System.NotImplementedException();
         }
@@ -238,27 +280,34 @@ namespace SpaceInvadersRemake.View
         /// Erstellt eine GameUI-Objekt und fügt dieses in die ViewItemList ein.
         /// </summary>
         /// <returns>GameUI-Objekt, welches die Spieleroberfläche darstellt.</returns>
-        public GameUI CreateGameUI()
+        private GameUI CreateGameUI()
         {
-            throw new System.NotImplementedException();
+            return new GameUI(ViewContent.UIContent.Font, ViewContent.UIContent.GameBackgroundImage,
+                                                ViewContent.UIContent.HUDBackground, ViewContent.UIContent.LiveIcon, null);
         }
 
         /// <summary>
         /// Erstellt eine HighscoreUI-Objekt und fügt dieses in die ViewItemList ein.
         /// </summary>
         /// <returns>HighscoreUI-Objekt, welches die Highscoreansicht darstellt.</returns>
-        public HighscoreUI CreateHighscoreUI()
+        private HighscoreUI CreateHighscoreUI(StateMachine.State currentState)
         {
-            throw new System.NotImplementedException();
+            return new HighscoreUI(ViewContent.UIContent.Font, ViewContent.UIContent.MenuBackgroundImage,
+                                                        ((HighscoreManager)(currentState.Model)).HighscoreEntries);
         }
 
         /// <summary>
         /// Erstellt eine MenuUI-Objekt und fügt dieses in die ViewItemList ein.
         /// </summary>
         /// <returns>MenuUI-Objekt, welches das Menu darstellt.</returns>
-        public MenuUI CreateMenuUI()
+        private MenuUI CreateMenuUI(StateMachine.State currentState)
         {
-            throw new System.NotImplementedException();
+            return new MenuUI(((Menu)currentState.Model).Controls, ViewContent.UIContent.MenuBackgroundImage);
+        }
+
+        private CreditsUI CreateCreditsUI()
+        {
+            return new CreditsUI(ViewContent.UIContent.Font, ViewContent.UIContent.MenuBackgroundImage);
         }
 
         /// <summary>
@@ -269,7 +318,10 @@ namespace SpaceInvadersRemake.View
         /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
         {
-            throw new NotImplementedException();
+            foreach (IView listItem in ViewItemList)
+            {
+                listItem.Draw(gameTime);
+            }
         }
 
         /// <summary>
@@ -280,7 +332,28 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void Dispose()
         {
-            throw new NotImplementedException();
+            //abmelden der methoden
+            //created
+            Player.Created -= CreatePlayer;
+            Alien.Created -= CreateAlien;
+            Mothership.Created -= CreateMothership;
+            Shield.Created -= CreateShield;
+            Projectile.Created -= CreateProjectile;
+
+            //destroyed
+            Player.Destroyed -= ExplosionFX;
+            Alien.Destroyed -= ExplosionFX;
+            Mothership.Destroyed -= ExplosionFX;
+            Shield.Destroyed -= ExplosionFX;
+
+            //weaponFired
+            PlayerNormalWeapon.WeaponFired -= ShootSFX;
+            PiercingShotWeapon.WeaponFired -= ShootSFX;
+            RapidfireWeapon.WeaponFired -= ShootSFX;
+            MultiShotWeapon.WeaponFired -= ShootSFX;
+            MothershipWeapon.WeaponFired -= ShootSFX;
+
+            this.ViewItemList = null;
         }
     }
 }

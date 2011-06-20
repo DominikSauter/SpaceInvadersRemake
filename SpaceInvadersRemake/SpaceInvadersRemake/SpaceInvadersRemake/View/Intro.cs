@@ -13,8 +13,6 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class Intro : IMediaplayer
     {
-        private Video intro;
-
         /// <summary>
         /// Initialisiert das Introvideo
         /// </summary>

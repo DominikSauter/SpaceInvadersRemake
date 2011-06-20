@@ -19,35 +19,20 @@ namespace SpaceInvadersRemake.View
     {
         public static SpaceInvadersRemake.RepresentationContent RepresentationContent
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public static SpaceInvadersRemake.UIContent UIContent
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         public static SpaceInvadersRemake.EffectContent EffectContent
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -64,6 +49,7 @@ namespace SpaceInvadersRemake.View
             UIContent.GameBackgroundImage = Content.Load<Texture2D>("Images/InGame_Hintergrund");
             UIContent.MenuBackgroundImage = Content.Load<Texture2D>("Images/Menü_Hintergrund");
             UIContent.HUDBackground = Content.Load<Texture2D>("Graphics/hud_32x60");
+            UIContent.LiveIcon = Content.Load<Texture2D>("Graphics/LebensIcon");
             UIContent.MenuButton = Content.Load<Texture2D>("Menu/button");
             UIContent.SettingsBackground = Content.Load<Texture2D>("Menu/einstellungsfenster");
             UIContent.SettingsButton = Content.Load<Texture2D>("Menu/auswahl");
