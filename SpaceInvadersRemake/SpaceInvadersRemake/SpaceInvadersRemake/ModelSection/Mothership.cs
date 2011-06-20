@@ -34,7 +34,7 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
-        public override void Shoot()
+        public override void Shoot(GameTime gameTime)
         {
             throw new NotImplementedException();
         }

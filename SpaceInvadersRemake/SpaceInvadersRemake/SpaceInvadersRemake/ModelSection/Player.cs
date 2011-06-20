@@ -108,11 +108,9 @@ namespace SpaceInvadersRemake.ModelSection
             //TODO: PowerUps-System
         }
 
-        public override void Shoot()
+        public override void Shoot(GameTime gameTime)
         {
-            //TODO: Waffen abfeuern
-
-            // Problem: Fire() benötigt gameTime, Shoot() bekommt aber keine gameTime
+            Weapon.Fire(Position, CoordinateConstants.Up, gameTime);
         }
 
         /// <summary>

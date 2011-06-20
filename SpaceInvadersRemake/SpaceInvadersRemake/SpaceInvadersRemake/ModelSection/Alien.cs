@@ -39,9 +39,9 @@ namespace SpaceInvadersRemake.ModelSection
             // nicht benötigt
         }
 
-        public override void Shoot()
+        public override void Shoot(GameTime gameTime)
         {
-            //TODO: kann noch nicht implementiert werden wegen Problemen. siehe Player-Klasse
+            Weapon.Fire(Position, CoordinateConstants.Down, gameTime);
         }
 
         /// <summary>
