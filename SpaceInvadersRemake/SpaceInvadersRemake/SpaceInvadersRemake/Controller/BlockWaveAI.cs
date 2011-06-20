@@ -28,7 +28,7 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
         public BlockWaveAI(int shootingFrequency, ICollection<IGameItem> controllees) :base (shootingFrequency, controllees)
         {
-            //TODO Subsribe to MoveBack Event
+            
         }
 
             
@@ -82,14 +82,14 @@ namespace SpaceInvadersRemake.Controller
             {
                 foreach (IGameItem item in Controllees)
                 {
-                    item.Move(currentDirection);
-                    
-                    //Überprüft ob eines der GameItem am Rand ist und setzt das Kommando im nächsten Frame runterzurücken.
-                   /* if (item.Position.X == CoordinateConstants.RightBorder || item.Position.X == CoordinateConstants.LeftBorder)
+                    if (!item.Move(currentDirection))
                     {
                         moveDown = true;
+
                     }
-                   Wird in Event ausgelagert */
+                    
+                  
+                    
                 }
             }
 
@@ -146,10 +146,11 @@ namespace SpaceInvadersRemake.Controller
             }
         }
 
-        private void movingBack()
-        {
-            moveDown = true;
-        }
+        //TODO löschen demnächst
+        //private void movingBack()
+        //{
+        //    moveDown = true;
+        //}
 
     }
 }
