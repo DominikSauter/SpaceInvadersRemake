@@ -110,9 +110,9 @@ namespace SpaceInvadersRemake
 
             // <View>
             spriteBatch.Begin();
-            spriteBatch.Draw(View.ViewContent.MenuBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
-            spriteBatch.Draw(View.ViewContent.ProjectileNormal, new Rectangle(400, 360, 15, 45), Color.Red);
-            spriteBatch.Draw(View.ViewContent.ProjectileNormal, new Rectangle(500, 360, 15, 45), Color.Gold);
+            spriteBatch.Draw(View.ViewContent.UIContent.MenuBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
+            spriteBatch.Draw(View.ViewContent.RepresentationContent.ProjectileNormal, new Rectangle(400, 360, 15, 45), Color.Red);
+            spriteBatch.Draw(View.ViewContent.RepresentationContent.ProjectileNormal, new Rectangle(500, 360, 15, 45), Color.Gold);
             spriteBatch.End();
             // </View>
 

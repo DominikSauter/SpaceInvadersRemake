@@ -36,7 +36,27 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public ViewManager(StateMachine.State currentState)
         {
-            throw new System.NotImplementedException();
+            this.ViewItemList = new List<IView>();
+
+            //abhängig vom State wird hier die UI geladen.
+            if (currentState is StateMachine.InGameState)
+            {
+                //erzeugen einer neuen GameUI. PowerUpIcons werden auf null gesetzt da Wahl.
+                this.ViewItemList.Add(new GameUI(ViewContent.UIContent.Font, ViewContent.UIContent.GameBackgroundImage,
+                                                ViewContent.UIContent.HUDBackground, null));
+                this.EffectPlayer = new SoundEffects(ViewContent.EffectContent.PowerUpSound, ViewContent.EffectContent.ExplosionSound,
+                                                    ViewContent.EffectContent.WeaponPlayer, ViewContent.EffectContent.WeaponPiercingshot,
+                                                    ViewContent.EffectContent.WeaponMultishot, ViewContent.EffectContent.MothershipSound);
+            }
+            else if (currentState is StateMachine.IntroState)
+            {
+            }
+            else if (currentState is StateMachine.HighscoreState)
+            {
+            }
+            else
+            {
+            }
         }
         /// <summary>
         /// Liste mit den View Objekten
@@ -47,27 +67,21 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public List<IView> ViewItemList
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
         /// Audioplayer um die Soundeffekte wiederzugeben.
         /// </summary>
-        public SoundEffects EffectPlayer
+        
+        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        //GEHT DAS MIT DEM TYP?? -> GIBT JEDENFALLS KEINEN COMPILEFEHLER!
+        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        public IMediaplayer EffectPlayer
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
