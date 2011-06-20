@@ -13,24 +13,12 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class SoundEffects : IMediaplayer
     {
-        private SoundEffect explosion;
-        private SoundEffect fireWeaponPiercing;
-        private SoundEffect fireWeaponMulti;
-        private SoundEffect mothership;
-        private SoundEffect fireWeapon;
-        private SoundEffect dropPowerUp;
-
-
+        
         /// <summary>
         /// Erzeugt ein SoundEffects-Objekt, dass zum Abspielen von Effekten dient.
         /// </summary>
-        /// <param name="powerUp">PowerUp-Drop Sound</param>
-        /// <param name="explosion">Explosions Sound</param>
-        /// <param name="shoot">Feuern-Sound eines normalen Projektils</param>
-        /// <param name="piercing">Feuern-Sound eines durchschlagenden Projektils</param>
-        /// <param name="multishot">Feuern-Sound eines mehrfacher Projektile</param>
-        /// <param name="mothership">Mutterschiff-Erscheinen Sound</param>
-        public SoundEffects(SoundEffect powerUp, SoundEffect explosion, SoundEffect shoot, SoundEffect piercing, SoundEffect multishot, SoundEffect mothership)
+        
+        public SoundEffects()
         {
             throw new System.NotImplementedException();
         }

@@ -143,7 +143,7 @@
     </Compile>
     <Compile Include="Settings\SupportedInputEnum.cs" />
     <Compile Include="View\RepresentationContent.cs" />
-    <Compile Include="View\SoundContent.cs" />
+    <Compile Include="View\EffectContent.cs" />
     <Compile Include="View\UIContent.cs" />
     <Compile Include="View\PlaneProjector.cs" />
     <Compile Include="StateMachine\IController.cs" />

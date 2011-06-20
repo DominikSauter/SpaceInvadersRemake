@@ -13,8 +13,6 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class BackgroundMusic : IMediaplayer
     {
-        private Song menuSong;
-
         /// <summary>
         /// Initialisiert die Hintergrundmusik
         /// </summary>
@@ -58,8 +56,6 @@ namespace SpaceInvadersRemake.View
                 throw new NotImplementedException();
             }
         }
-
-        private Song gameSong;
 
         /// <summary>
         /// Stoppt die Wiedergabe der Hintergrundmusik
