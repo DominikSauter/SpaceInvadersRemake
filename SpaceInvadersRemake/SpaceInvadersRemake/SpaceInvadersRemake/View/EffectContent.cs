@@ -81,5 +81,11 @@ namespace SpaceInvadersRemake
             get;
             set;
         }
+
+        public SoundEffect WeaponRapidFire
+        {
+            get;
+            set;
+        }
     }
 }

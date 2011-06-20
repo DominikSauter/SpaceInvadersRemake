@@ -69,7 +69,6 @@ namespace SpaceInvadersRemake.View
                 PiercingShotWeapon.WeaponFired += ShootSFX;
                 RapidfireWeapon.WeaponFired += ShootSFX;
                 MultiShotWeapon.WeaponFired += ShootSFX;
-                MothershipWeapon.WeaponFired += ShootSFX;
 
             }
             else if (currentState is StateMachine.IntroState)
@@ -155,7 +154,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         private void MothershipSFX(object mothership, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            EffectPlayer.Play(ViewContent.EffectContent.MothershipSound);
         }
 
         /// <summary>
@@ -165,17 +164,8 @@ namespace SpaceInvadersRemake.View
         /// <param name="e">Ereignis Argumente</param>
         public void ExplosionFX(object gameItem, EventArgs e)
         {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Soundeffekt wenn ein "Kamikaze"-Alien sein Spezialmanöver startet.
-        /// </summary>
-        /// <param name="alien">Ereignissender</param>
-        /// <param name="e">Ereignis Argumente</param>
-        public void KamikazeSFX(object alien, EventArgs e)
-        {
-            throw new System.NotImplementedException();
+            EffectPlayer.Play(ViewContent.EffectContent.ExplosionSound);
+            //ANBINDUNG DER PARTIKEL ENGINGE NOCH ÜBERLEGEN!
         }
 
         /// <summary>
@@ -189,7 +179,8 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreatePlayer(object player, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.ViewItemList.Add(new PlayerRepresentation());
+            ((Player)player).ModelHitsphere = ViewContent.RepresentationContent.PlayerHitsphere;
         }
 
         /// <summary>
@@ -201,9 +192,10 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Beim Erstellen der Representation muss im Model die passendende <c>ModelHitsphere</c> gespeichert werden.
         /// </remarks>
-        public void CreateAlien(Object alien, EventArgs e)
+        public void CreateAlien(object alien, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.ViewItemList.Add(new AlienRepresentation());
+            ((Alien)alien).ModelHitsphere = ViewContent.RepresentationContent.AlienHitsphere;
         }
 
         /// <summary>
@@ -217,7 +209,8 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateMothership(object mothership, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.ViewItemList.Add(new MothershipRepresentation());
+            ((Mothership)mothership).ModelHitsphere = ViewContent.RepresentationContent.MothershipHitsphere;
         }
 
         /// <summary>
@@ -231,7 +224,8 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateMiniboss(Object miniboss, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.ViewItemList.Add(new MinibossRepresentation());
+            ((Miniboss)miniboss).ModelHitsphere = ViewContent.RepresentationContent.BossHitsphere;
         }
 
         /// <summary>
@@ -245,7 +239,8 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateShield(object shield, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.ViewItemList.Add(new ShieldRepresentation());
+            ((Shield)shield).ModelHitsphere = ViewContent.RepresentationContent.ShieldHitsphere;
         }
 
         /// <summary>
@@ -259,7 +254,22 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateProjectile(object projectile, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            this.ViewItemList.Add(new ProjectileRepresentation());
+            Projectile currentProjectile = (Projectile)projectile;
+
+            switch (currentProjectile.ProjectileType)
+            {
+                case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                    break;
+                case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                    break;
+                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectilePiercingHitsphere;
+                    break;
+                case ProjectileTypeEnum.MothershipProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileMothershipHitsphere;
+                    break;
+                case ProjectileTypeEnum.MinibossProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileBossHitsphere;
+                    break;
+            }
         }
 
         /// <summary>
@@ -351,7 +361,6 @@ namespace SpaceInvadersRemake.View
             PiercingShotWeapon.WeaponFired -= ShootSFX;
             RapidfireWeapon.WeaponFired -= ShootSFX;
             MultiShotWeapon.WeaponFired -= ShootSFX;
-            MothershipWeapon.WeaponFired -= ShootSFX;
 
             this.ViewItemList = null;
         }
