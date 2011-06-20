@@ -36,7 +36,7 @@ namespace SpaceInvadersRemake.StateMachine
 
         protected override void ControllerInitialize()
         {
-            throw new NotImplementedException();
+            Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 
         protected override void ModelInitialize()

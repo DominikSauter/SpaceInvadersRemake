@@ -38,7 +38,7 @@ namespace SpaceInvadersRemake.Controller
 
     
        /// <summary>
-       /// Eigenschaft Controllees (kontrollierte Objekt)
+       /// Eigenschaft Controllees (kontrolliertes Objekt)
        /// </summary>
        /// <remarks>Eigenschaft in der das kontrollierte GameItem gespeichert ist.
        /// <c>get</c>
@@ -77,7 +77,7 @@ namespace SpaceInvadersRemake.Controller
            
             if (this.Shooting())
             {
-                Controllee.Shoot();
+                Controllee.Shoot(gameTime);
             }
             
             
