@@ -93,6 +93,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <remarks>
         /// Wenn das Objekt nicht schießen kann, dann geschieht nichts.
         /// </remarks>
-        void Shoot();
+        /// <param name="gameTime">Spielzeit</param>
+        void Shoot(GameTime gameTime);
     }
 }

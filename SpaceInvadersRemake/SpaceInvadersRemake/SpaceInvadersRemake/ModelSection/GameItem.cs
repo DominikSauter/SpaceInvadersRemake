@@ -63,13 +63,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// </summary>
         /// <param name="gameTime"></param>
-        public abstract void Update(Microsoft.Xna.Framework.GameTime gameTime);
+        public virtual void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            // Leerer Methodenrumpf, um bei Klassen, die sich nicht selbst aktualisieren müssen Schreibarbeit zu sparen
+        }
 
         /// <summary>
         /// </summary>
-        public virtual void Shoot()
+        public virtual void Shoot(GameTime gameTime)
         {
-            // Leerer Methodenrumpf, um bei Klassen, die nicht von einem Controller bewegt werden können Schreibarbeit zu sparen
+            // Leerer Methodenrumpf, um bei Klassen, die nicht von einem Controller kontrolliert werden können Schreibarbeit zu sparen
         }
 
         /// <summary>
