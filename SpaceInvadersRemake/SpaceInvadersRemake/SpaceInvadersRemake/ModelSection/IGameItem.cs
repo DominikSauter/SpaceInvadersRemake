@@ -67,7 +67,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// Der übergebene Richtungsvektor wird vor der Multiplikation normalisiert.
         /// </remarks>
         /// <param name="direction">Bewegungsrichtung</param>
-        void Move(Vector2 direction);
+        /// <returns>Boole'scher Wert, der angibt ob die Bewegung ohne Probleme durchgeführt werden konnte. <c>true</c>: erfolg; <c>false</c>: es gab Probleme</returns>
+        bool Move(Vector2 direction);
 
         /// <summary>
         /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen. 
@@ -95,5 +96,12 @@ namespace SpaceInvadersRemake.ModelSection
         /// </remarks>
         /// <param name="gameTime">Spielzeit</param>
         void Shoot(GameTime gameTime);
+
+        /// <summary>
+        /// Überladung der <c>Shoot</c>-Methode, für den Fall, dass in eine bestimmte Richtung gechossen werden soll
+        /// </summary>
+        /// <param name="gameTime">Spielzeit</param>
+        /// <param name="direction">gewünschte Schussrichtung</param>
+        void Shoot(GameTime gameTime, Vector2 direction);
     }
 }
