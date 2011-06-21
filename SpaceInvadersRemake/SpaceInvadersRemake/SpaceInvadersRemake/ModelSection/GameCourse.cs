@@ -65,7 +65,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// bei jedem Aufruf die <c>waveStartingTime</c> auf die aktuelle <c>gameTime</c>.
         /// </summary>
         /// <param name="gameTime">Spielzeit</param>
-        public List<IGameItem> NextWave(GameTime gameTime)
+        public LinkedList<IGameItem> NextWave(GameTime gameTime)
         {
             throw new System.NotImplementedException();
         }
