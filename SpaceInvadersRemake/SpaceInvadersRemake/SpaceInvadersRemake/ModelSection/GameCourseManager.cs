@@ -17,14 +17,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die Aliens der aktuellen Welle.
         /// </summary>
-        private System.Collections.Generic.List<SpaceInvadersRemake.ModelSection.IGameItem> currentWave;
+        private List<IGameItem> currentWave = new List<IGameItem>();
 
         /// <summary>
         /// Konstruktor; erzeugt ein neues GameCourse-Objekt.
         /// </summary>
         public GameCourseManager()
         {
-            throw new System.NotImplementedException();
+            GameCourse = new GameCourse();
         }
 
         /// <summary>
@@ -34,10 +34,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return GameCourse;
             }
-            set
+            private set
             {
+                GameCourse = value;
             }
         }
 
@@ -49,7 +50,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="state">Weiterreichung des Zustands von dem aus die Methode aufgerufen wurde</param>
         public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
         {
-            throw new NotImplementedException();
+            UpdateGameItemList(gameTime);
+            UpdateGameCourse(gameTime, state);
         }
 
         /// <summary>
@@ -63,10 +65,31 @@ namespace SpaceInvadersRemake.ModelSection
         /// am Leben ist. Die neu erzeugte Welle wird in <c>currentWave</c> gespeichert.
         /// </remarks>
         /// <param name="gameTime">Spielzeit</param>
-        /// <param name="state">Weiterreichung des aufrufenden Zusatnds</param>
+        /// <param name="state">Weiterreichung des aufrufenden Zustands</param>
         private void UpdateGameCourse(Microsoft.Xna.Framework.GameTime gameTime, SpaceInvadersRemake.StateMachine.State state)
         {
-            throw new System.NotImplementedException();
+            if (GameCourse.Player.Lives <= 0)
+            {
+                state.Exit(Player.Score);
+            }
+            else
+            {
+                bool waveAlive = false;
+                for (int i = 0; i < currentWave.Count && !waveAlive; i++)
+                {
+                    if (currentWave[i].IsAlive)
+                    {
+                        waveAlive = true;
+                    }
+                }
+
+                if (!waveAlive)
+                {
+                    currentWave = GameCourse.NextWave(gameTime);
+                }
+            }
+
+            GameCourse.SpecialEvent(gameTime);
         }
 
         /// <summary>
@@ -74,9 +97,20 @@ namespace SpaceInvadersRemake.ModelSection
         /// <c>GameItem.GameItemList</c> iteriert, zerstörte Spielobjekte (<c>IsAlive</c>=<c>false</c>) aus der Liste entfernt 
         /// und auf den verbleibenden Objekten die <c>Update</c>-Methode aufgerufen.
         /// </summary>
-        private void UpdateGameItemList()
+        private void UpdateGameItemList(Microsoft.Xna.Framework.GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            Collider.CheckAllCollisions(GameItem.GameItemList);
+
+            foreach (IGameItem item in GameItem.GameItemList) {
+                if (!item.IsAlive)
+                {
+                    GameItem.GameItemList.Remove(item);
+                }
+                else
+                {
+                    item.Update(gameTime);
+                }
+            }
         }
 
 
