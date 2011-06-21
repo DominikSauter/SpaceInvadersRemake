@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 
 // Implementiert von D. Sauter
 
@@ -20,10 +19,11 @@ namespace SpaceInvadersRemake.ModelSection
         private LinkedList<IGameItem> currentWave = new LinkedList<IGameItem>();
 
         /// <summary>
-        /// Konstruktor; erzeugt ein neues GameCourse-Objekt.
+        /// Konstruktor; erzeugt eine neue GameItem.GameItemList, sowie ein neues GameCourse-Objekt (in dieser Reihenfolge).
         /// </summary>
         public GameCourseManager()
         {
+            GameItem.GameItemList = new LinkedList<IGameItem>();
             GameCourse = new GameCourse();
         }
 
@@ -124,7 +124,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <remarks>Konkret: Leeren der <c>GameItem.GameItemList</c>.</remarks>
         public void Dispose()
         {
-            throw new NotImplementedException();
+            GameItem.GameItemList = null;
         }
     }
 }
