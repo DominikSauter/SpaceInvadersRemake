@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
+// Implementiert von D. Sauter
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -17,7 +17,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die Aliens der aktuellen Welle.
         /// </summary>
-        private List<IGameItem> currentWave = new List<IGameItem>();
+        private LinkedList<IGameItem> currentWave = new LinkedList<IGameItem>();
 
         /// <summary>
         /// Konstruktor; erzeugt ein neues GameCourse-Objekt.
@@ -68,18 +68,21 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="state">Weiterreichung des aufrufenden Zustands</param>
         private void UpdateGameCourse(Microsoft.Xna.Framework.GameTime gameTime, SpaceInvadersRemake.StateMachine.State state)
         {
-            if (GameCourse.Player.Lives <= 0)
+            Player player = (Player)GameCourse.Player;
+            if (player.Lives <= 0)
             {
-                state.Exit(Player.Score);
+                SpaceInvadersRemake.StateMachine.InGameState inGameState = (SpaceInvadersRemake.StateMachine.InGameState)state;
+                inGameState.Exit(player.Score);
             }
             else
             {
                 bool waveAlive = false;
-                for (int i = 0; i < currentWave.Count && !waveAlive; i++)
+                foreach (IGameItem item in currentWave)
                 {
-                    if (currentWave[i].IsAlive)
+                    if (item.IsAlive)
                     {
                         waveAlive = true;
+                        break;
                     }
                 }
 
@@ -101,7 +104,8 @@ namespace SpaceInvadersRemake.ModelSection
         {
             Collider.CheckAllCollisions(GameItem.GameItemList);
 
-            foreach (IGameItem item in GameItem.GameItemList) {
+            foreach (IGameItem item in GameItem.GameItemList)
+            {
                 if (!item.IsAlive)
                 {
                     GameItem.GameItemList.Remove(item);
