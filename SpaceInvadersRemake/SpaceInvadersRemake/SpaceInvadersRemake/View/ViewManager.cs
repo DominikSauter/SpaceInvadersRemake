@@ -85,13 +85,13 @@ namespace SpaceInvadersRemake.View
             else if (currentState is StateMachine.CreditsState)
             {
                 //erzeugen einer CreditsUI
-                this.ViewItemList.Add(CreateCreditsUI());
+                this.ViewItemList.Add(CreateCreditsUI(graphics));
             }
             else if (currentState is StateMachine.AudioOptionsState || currentState is StateMachine.BreakState || currentState is StateMachine.MainMenuState
                     || currentState is StateMachine.OptionsState || currentState is StateMachine.VideoOptionsState)
             {
                 //erzeugen einer MenuUI
-                this.ViewItemList.Add(CreateMenuUI(currentState));
+                this.ViewItemList.Add(CreateMenuUI(currentState, graphics));
             }
         }
         /// <summary>
@@ -306,14 +306,14 @@ namespace SpaceInvadersRemake.View
         /// Erstellt eine MenuUI-Objekt und fügt dieses in die ViewItemList ein.
         /// </summary>
         /// <returns>MenuUI-Objekt, welches das Menu darstellt.</returns>
-        private MenuUI CreateMenuUI(StateMachine.State currentState)
+        private MenuUI CreateMenuUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            return new MenuUI(((Menu)currentState.Model).Controls, ViewContent.UIContent.MenuBackgroundImage);
+            return new MenuUI(((Menu)currentState.Model).Controls, graphics);
         }
 
-        private CreditsUI CreateCreditsUI()
+        private CreditsUI CreateCreditsUI(GraphicsDeviceManager graphics)
         {
-            return new CreditsUI(ViewContent.UIContent.Font, ViewContent.UIContent.MenuBackgroundImage);
+            return new CreditsUI(ViewContent.UIContent.Font, graphics);
         }
 
         /// <summary>
