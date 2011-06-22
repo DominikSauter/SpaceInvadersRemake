@@ -62,7 +62,10 @@ namespace SpaceInvadersRemake.View
             //Vektor mit Länge/Breite für den String welcher die Punktzahl darstellt
             Vector2 scoreStringLength = this.font.MeasureString(this.score.ToString());
 
-            /*Festlegen der Farben
+            /*  Festlegen der Farben:
+             *      1 Leben => ROT
+             *      2 Leben => GELB
+             *      3 Leben => GRÜN
              * */
             if (this.lives == 1)
             {
@@ -80,31 +83,28 @@ namespace SpaceInvadersRemake.View
 
             spriteBatch.Begin();
 
+            //zeichnet das Hintergrundbild in Abhängigkeit von der Auflösung des Fensters
             spriteBatch.Draw(this.gameBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
             
-            for(int tileCount = 0; tileCount < hudTileCount; tileCount++)
+            //zeichnet die HUD-Kacheln abhängig von der Breite des Fensters
+            for (int tileCount = 0; tileCount < hudTileCount; tileCount++)
             {
-                spriteBatch.Draw(this.hudBackgroundTexture, new Vector2((float)(tileCount*this.hudBackgroundTexture.Width),
+                spriteBatch.Draw(this.hudBackgroundTexture, new Vector2((float)(tileCount * this.hudBackgroundTexture.Width),
                     (float)(graphics.PreferredBackBufferHeight - this.hudBackgroundTexture.Height)), Color.White);
             }
 
-            for(int liveCount = 0; liveCount < this.lives; liveCount++)
+            //zeichnet 1-3 Lebens Icons
+            for (int liveCount = 0; liveCount < this.lives; liveCount++)
             {
-                spriteBatch.Draw(this.liveIcon, new Vector2((float)((liveCount+1)*this.liveIcon.Width),
-                    (float)(graphics.PreferredBackBufferHeight - this.liveIcon.Height)), Color.White);
+                spriteBatch.Draw(this.liveIcon, new Vector2((float)((liveCount + 1) * this.liveIcon.Width),
+                    (float)(graphics.PreferredBackBufferHeight - this.liveIcon.Height)), liveColor);
             }
 
+            //beschriftet den HUD mit der aktuellen Punktzahl
             spriteBatch.DrawString(this.font, this.score.ToString(), new Vector2((float)(graphics.PreferredBackBufferWidth - scoreStringLength.X),
                 (float)(graphics.PreferredBackBufferHeight - scoreStringLength.Y)), Color.Green);
 
             spriteBatch.End();
-        }
-
-        /// <summary>
-        /// Zeichnet Punkte und Leben des Spielers, sowie die Dauer des eingesammelten PowerUps
-        /// </summary>
-        private void labelHUD() {
-            throw new System.NotImplementedException();
         }
     }
 }
