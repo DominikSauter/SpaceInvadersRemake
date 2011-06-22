@@ -47,9 +47,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="3D Model Textures\" />
     <Folder Include="3D Models\" />
     <Folder Include="Music\" />
-    <Folder Include="Particle textures\" />
+    <Folder Include="Particle Textures\" />
     <Folder Include="Soundeffects\" />
   </ItemGroup>
   <ItemGroup>
