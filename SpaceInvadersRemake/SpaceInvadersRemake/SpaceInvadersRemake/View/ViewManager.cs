@@ -36,7 +36,7 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Die <c>ViewItemList</c> wird initialisiert und das passende UI Objekt hinzugefügt (GameUI, HighscoreUI, MenuUI).
         /// </remarks>
-        public ViewManager(StateMachine.State currentState)
+        public ViewManager(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
             this.ViewItemList = new List<IView>();
 
@@ -44,10 +44,8 @@ namespace SpaceInvadersRemake.View
             if (currentState is StateMachine.InGameState)
             {
                 //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
-                this.ViewItemList.Add(CreateGameUI());
-                this.EffectPlayer = new SoundEffects(ViewContent.EffectContent.PowerUpSound, ViewContent.EffectContent.ExplosionSound,
-                                                    ViewContent.EffectContent.WeaponPlayer, ViewContent.EffectContent.WeaponPiercingshot,
-                                                    ViewContent.EffectContent.WeaponMultishot, ViewContent.EffectContent.MothershipSound);
+                this.ViewItemList.Add(CreateGameUI(currentState, graphics));
+                this.EffectPlayer = new SoundEffects();
                 
                 //registrieren an den events [PFLICHT]
                 //created
@@ -79,7 +77,7 @@ namespace SpaceInvadersRemake.View
             else if (currentState is StateMachine.HighscoreState)
             {
                 //erzeugen einer HighscoreUI
-                this.ViewItemList.Add(CreateHighscoreUI(currentState);
+                this.ViewItemList.Add(CreateHighscoreUI(currentState));
             }
             else if (currentState is StateMachine.CreditsState)
             {
@@ -109,9 +107,6 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Audioplayer um die Soundeffekte wiederzugeben.
         /// </summary>
-        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-        //GEHT DAS MIT DEM TYP?? -> GIBT JEDENFALLS KEINEN COMPILEFEHLER!
-        //XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
         public IMediaplayer EffectPlayer
         {
             get;
@@ -290,10 +285,9 @@ namespace SpaceInvadersRemake.View
         /// Erstellt eine GameUI-Objekt und fügt dieses in die ViewItemList ein.
         /// </summary>
         /// <returns>GameUI-Objekt, welches die Spieleroberfläche darstellt.</returns>
-        private GameUI CreateGameUI()
+        private GameUI CreateGameUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            return new GameUI(ViewContent.UIContent.Font, ViewContent.UIContent.GameBackgroundImage,
-                                                ViewContent.UIContent.HUDBackground, ViewContent.UIContent.LiveIcon, null);
+            return new GameUI(((GameCourseManager)(currentState).Model), graphics);
         }
 
         /// <summary>
