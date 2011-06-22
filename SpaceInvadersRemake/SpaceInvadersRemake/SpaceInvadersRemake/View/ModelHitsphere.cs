@@ -63,7 +63,10 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public Matrix World
         {
-            get;
+            get
+            {
+                return World;
+            }
             set
             {
                 World = value;
