@@ -54,8 +54,8 @@ namespace SpaceInvadersRemake.View
             get;
             private set;
         }
-    
-        public void Draw(GameTime gameTime)
+
+        public void Draw()
         {
             spriteBatch.Begin();
 

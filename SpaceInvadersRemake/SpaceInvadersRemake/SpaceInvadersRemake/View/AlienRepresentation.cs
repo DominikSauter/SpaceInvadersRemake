@@ -61,8 +61,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet ein Alienschiff auf den Bildschirm.
         /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
-        public override void Draw(GameTime gameTime)
+        public override void Draw()
         {
             throw new NotImplementedException();
         }
