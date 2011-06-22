@@ -71,11 +71,11 @@ namespace SpaceInvadersRemake.View
         public static void ComputeHitspheres()
         {
             //Berechnen der Hitboxen / Laden des Representation Contents
-            RepresentationContent.PlayerHitsphere = computeBigModelHitsphere(RepresentationContent.PlayerModel);
-            RepresentationContent.AlienHitsphere = computeBigModelHitsphere(RepresentationContent.AlienModel);
-            RepresentationContent.MothershipHitsphere = computeBigModelHitsphere(RepresentationContent.MothershipModel);
-            RepresentationContent.ShieldHitsphere = computeBigTextureHitsphere(RepresentationContent.ShieldTexture);
-            RepresentationContent.ProjectileNormalHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileNormal);
+             RepresentationContent.PlayerHitsphere = computeBigModelHitsphere(RepresentationContent.PlayerModel);
+             RepresentationContent.AlienHitsphere = computeBigModelHitsphere(RepresentationContent.AlienModel);
+             RepresentationContent.MothershipHitsphere = computeBigModelHitsphere(RepresentationContent.MothershipModel);
+             RepresentationContent.ShieldHitsphere = computeBigTextureHitsphere(RepresentationContent.ShieldTexture);
+             RepresentationContent.ProjectileNormalHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileNormal);
             //<WAHL>
             //RepresentationContent.BossHitsphere = computeBigModelHitsphere(RepresentationContent.BossModel);
             //RepresentationContent.ProjectilePiercingHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectilePiercing);
