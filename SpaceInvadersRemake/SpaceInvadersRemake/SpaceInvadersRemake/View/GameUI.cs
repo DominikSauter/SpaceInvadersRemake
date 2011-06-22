@@ -37,8 +37,8 @@ namespace SpaceInvadersRemake.View
             this.graphics = graphics;
             this.spriteBatch = ViewManager.spriteBatch;
 
-            this.lives = ((Player)gameCourseMngr.GameCourse.Player).Lives;
-            this.score = ((Player)gameCourseMngr.GameCourse.Player).Score;
+            this.lives = gameCourseMngr.GameCourse.Player.Lives;
+            this.score = gameCourseMngr.GameCourse.Player.Score;
             this.font = ViewContent.UIContent.Font;
             this.gameBackgroundImage = ViewContent.UIContent.GameBackgroundImage;
             this.hudBackgroundTexture = ViewContent.UIContent.HUDBackground;
