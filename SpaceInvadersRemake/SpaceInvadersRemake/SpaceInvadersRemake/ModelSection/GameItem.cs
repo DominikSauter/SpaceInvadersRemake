@@ -95,7 +95,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         /// <summary>
         /// </summary>
-        public ModelHitsphere ModelHitsphere
+        public IBoundingVolume BoundingVolume
         {
             get;
             set;
