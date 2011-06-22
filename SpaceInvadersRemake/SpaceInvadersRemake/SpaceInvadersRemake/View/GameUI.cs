@@ -5,6 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
 {
@@ -13,6 +14,9 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class GameUI : IView
     {
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
+
         private Texture2D gameBackgroundImage;
         private Texture2D hudBackgroundTexture;
         private SpriteFont font;
@@ -26,31 +30,26 @@ namespace SpaceInvadersRemake.View
         /// <param name="background">Hintergrundbild</param>
         /// <param name="hud">HUD-Hintergrund</param>
         /// <param name="powerUpIcons">Liste von powerUpIcons</param>
-        public GameUI(SpriteFont font, Texture2D background, Texture2D hud, Texture2D liveIcons, List<Texture2D> powerUpIcons)
+        public GameUI(GameCourseManager gameCourseMngr, GraphicsDeviceManager graphics)
         {
-            throw new System.NotImplementedException();
+            this.graphics = graphics;
+            this.spriteBatch = new SpriteBatch(this.graphics.GraphicsDevice);
+
+            this.Lives = ((Player)gameCourseMngr.GameCourse.Player).Lives;
+            this.Score = ((Player)gameCourseMngr.GameCourse.Player).Score;
+
         }
 
         public int Lives
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
-        public int Points
+        public int Score
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -59,14 +58,32 @@ namespace SpaceInvadersRemake.View
         /// <param name="gameTime">Spielzeit</param>
         public void Draw(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            //Counter, der angibt wie oft die HUD Grafik (32x60) gezeichnet werden muss.
+            int hudTileCount = graphics.PreferredBackBufferWidth / this.hudBackgroundTexture.Width;
+
+
+            spriteBatch.Begin();
+
+            spriteBatch.Draw(this.gameBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
+            
+            for(int tileCount = 0; tileCount < hudTileCount; tileCount++)
+            {
+                spriteBatch.Draw(this.hudBackgroundTexture, new Vector2((float)(tileCount*this.hudBackgroundTexture.Width),
+                    (float)(graphics.PreferredBackBufferHeight - this.hudBackgroundTexture.Height)), Color.White);
+            }
+
+            for(int liveCount = 0; liveCount < this.Lives; liveCount++)
+            {
+
+            }
+
+            spriteBatch.End();
         }
 
         /// <summary>
         /// Zeichnet Punkte und Leben des Spielers, sowie die Dauer des eingesammelten PowerUps
         /// </summary>
-        private void labelHUD()
-        {
+        private void labelHUD() {
             throw new System.NotImplementedException();
         }
     }
