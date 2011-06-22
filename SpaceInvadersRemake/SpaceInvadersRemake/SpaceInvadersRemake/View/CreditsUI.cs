@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
@@ -11,7 +13,7 @@ namespace SpaceInvadersRemake.View
         private SpriteFont font;
         private Texture2D backgroundImage;
     
-        public CreditsUI(SpriteFont font, Texture2D background)
+        public CreditsUI(GraphicsDeviceManager graphics)
         {
             throw new System.NotImplementedException();
         }

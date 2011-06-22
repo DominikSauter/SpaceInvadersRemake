@@ -92,25 +92,15 @@ namespace SpaceInvadersRemake.View
         private static ModelHitsphere computeBigModelHitsphere(Model model3D)
         {
             double maxRadius = 0;
+            BoundingSphere finalSphere = new BoundingSphere(Vector3.Zero, 0.0f);
+            BoundingSphere tmpSphere;
             foreach (ModelMesh mesh in model3D.Meshes)
             {
-                //Mesh-Mittelpunkt
-                Vector3 meshCenter = mesh.BoundingSphere.Center;
-
-                //Vektornorm für den Abstand des Mesh-Mittelpunkt zum Model-Mittelpunkt
-                //(laut "http://sharky.bluecog.co.nz/?p=119" ist der Mesh-Mittelpunkt relativ zum Model-Mittelpunkt)
-                double centerDistance = Math.Sqrt(Math.Pow(meshCenter.X, 2.0) + Math.Pow(meshCenter.Y, 2.0) + Math.Pow(meshCenter.Z, 2.0));
-
-                //möglicher Radius für die Hitbox, anhand des Abstands zum Model-Zentrum und dem Radius der Hitbox um das Mesh
-                double possibleRadius = centerDistance + mesh.BoundingSphere.Radius;
-
-                if (possibleRadius > maxRadius)
-                {
-                    maxRadius = possibleRadius;
-                }
+                tmpSphere = mesh.BoundingSphere;
+                finalSphere = BoundingSphere.CreateMerged(finalSphere, tmpSphere
             }
 
-            return new ModelHitsphere((int)maxRadius, new List<ModelHitsphere>());
+            return new ModelHitsphere(finalSphere);
         }
 
         /// <summary>
@@ -125,9 +115,8 @@ namespace SpaceInvadersRemake.View
 
             //Obere linke Ecke der Grafik, welche die Position bestimmt
             Point location = graphic.Bounds.Location;
-            double maxRadius = Math.Sqrt(Math.Pow(center.X - location.X, 2.0) + Math.Pow(center.Y - location.Y, 2.0));
-
-            return new ModelHitsphere((int)maxRadius, new List<ModelHitsphere>());
+            float maxRadius = (float)Math.Sqrt((center.X - location.X) * (center.X - location.X) + (center.Y - location.Y)*(center.Y - location.Y));
+            return new ModelHitsphere(new BoundingSphere(Vector3.Zero, maxRadius));
         }
     }
 }

@@ -178,7 +178,7 @@ namespace SpaceInvadersRemake.View
         public void CreatePlayer(object player, EventArgs e)
         {
             this.ViewItemList.Add(new PlayerRepresentation());
-            ((Player)player).ModelHitsphere = ViewContent.RepresentationContent.PlayerHitsphere;
+            ((Player)player).BoundingVolume = ViewContent.RepresentationContent.PlayerHitsphere;
         }
 
         /// <summary>
@@ -193,7 +193,7 @@ namespace SpaceInvadersRemake.View
         public void CreateAlien(object alien, EventArgs e)
         {
             this.ViewItemList.Add(new AlienRepresentation());
-            ((Alien)alien).ModelHitsphere = ViewContent.RepresentationContent.AlienHitsphere;
+            ((Alien)alien).BoundingVolume = ViewContent.RepresentationContent.AlienHitsphere;
         }
 
         /// <summary>
@@ -208,7 +208,7 @@ namespace SpaceInvadersRemake.View
         public void CreateMothership(object mothership, EventArgs e)
         {
             this.ViewItemList.Add(new MothershipRepresentation());
-            ((Mothership)mothership).ModelHitsphere = ViewContent.RepresentationContent.MothershipHitsphere;
+            ((Mothership)mothership).BoundingVolume = ViewContent.RepresentationContent.MothershipHitsphere;
         }
 
         /// <summary>
@@ -223,7 +223,7 @@ namespace SpaceInvadersRemake.View
         public void CreateMiniboss(Object miniboss, EventArgs e)
         {
             this.ViewItemList.Add(new MinibossRepresentation());
-            ((Miniboss)miniboss).ModelHitsphere = ViewContent.RepresentationContent.BossHitsphere;
+            ((Miniboss)miniboss).BoundingVolume = ViewContent.RepresentationContent.BossHitsphere;
         }
 
         /// <summary>
@@ -238,7 +238,7 @@ namespace SpaceInvadersRemake.View
         public void CreateShield(object shield, EventArgs e)
         {
             this.ViewItemList.Add(new ShieldRepresentation());
-            ((Shield)shield).ModelHitsphere = ViewContent.RepresentationContent.ShieldHitsphere;
+            ((Shield)shield).BoundingVolume = ViewContent.RepresentationContent.ShieldHitsphere;
         }
 
         /// <summary>
@@ -257,15 +257,15 @@ namespace SpaceInvadersRemake.View
 
             switch (currentProjectile.ProjectileType)
             {
-                case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
                     break;
-                case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
                     break;
-                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectilePiercingHitsphere;
+                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectilePiercingHitsphere;
                     break;
-                case ProjectileTypeEnum.MothershipProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileMothershipHitsphere;
+                case ProjectileTypeEnum.MothershipProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileMothershipHitsphere;
                     break;
-                case ProjectileTypeEnum.MinibossProjectile: currentProjectile.ModelHitsphere = ViewContent.RepresentationContent.ProjectileBossHitsphere;
+                case ProjectileTypeEnum.MinibossProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileBossHitsphere;
                     break;
             }
         }
@@ -313,7 +313,7 @@ namespace SpaceInvadersRemake.View
 
         private CreditsUI CreateCreditsUI(GraphicsDeviceManager graphics)
         {
-            return new CreditsUI(ViewContent.UIContent.Font, graphics);
+            return new CreditsUI(graphics);
         }
 
         /// <summary>
