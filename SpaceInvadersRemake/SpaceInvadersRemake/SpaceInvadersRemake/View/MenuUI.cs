@@ -14,16 +14,21 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class MenuUI : IView
     {
-        private Texture2D menuBackgroundImage;
+        private Texture2D background;
+        private GraphicsDeviceManager graphics;
+        private SpriteBatch spriteBatch;
     
         /// <summary>
         /// Initialisiert die Menüoberfläche
         /// </summary>
         /// <param name="buttonLabels">Beschriftungen der Controls</param>
         /// <param name="background">Hintergrundbild</param>
-        public MenuUI(MenuControl[] buttons, Texture2D background)
+        public MenuUI(MenuControl[] buttons,  GraphicsDeviceManager graphics)
         {
-            this.menuBackgroundImage = background;
+            this.background = ViewContent.UIContent.MenuBackgroundImage;
+            this.graphics = graphics;
+            this.spriteBatch = ViewManager.spriteBatch;
+            
 
             ButtonRepresentation[] tmp = new ButtonRepresentation[buttons.Length];
             for (int i = 0; i < tmp.Length; i++)
