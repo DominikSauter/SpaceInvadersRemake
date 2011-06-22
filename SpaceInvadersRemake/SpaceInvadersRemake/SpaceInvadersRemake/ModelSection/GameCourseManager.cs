@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using SpaceInvadersRemake.StateMachine;
 
 // Implementiert von D. Sauter
 
@@ -68,11 +69,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="state">Weiterreichung des aufrufenden Zustands</param>
         private void UpdateGameCourse(Microsoft.Xna.Framework.GameTime gameTime, SpaceInvadersRemake.StateMachine.State state)
         {
-            Player player = (Player)GameCourse.Player;
-            if (player.Lives <= 0)
+            if (GameCourse.Player.Lives <= 0)
             {
-                SpaceInvadersRemake.StateMachine.InGameState inGameState = (SpaceInvadersRemake.StateMachine.InGameState)state;
-                inGameState.Exit(player.Score);
+                ((InGameState)state).Exit(GameCourse.Player.Score);
             }
             else
             {
