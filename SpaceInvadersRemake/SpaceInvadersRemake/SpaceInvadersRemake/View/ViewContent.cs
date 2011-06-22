@@ -97,7 +97,7 @@ namespace SpaceInvadersRemake.View
             foreach (ModelMesh mesh in model3D.Meshes)
             {
                 tmpSphere = mesh.BoundingSphere;
-                finalSphere = BoundingSphere.CreateMerged(finalSphere, tmpSphere
+                finalSphere = BoundingSphere.CreateMerged(finalSphere, tmpSphere);
             }
 
             return new ModelHitsphere(finalSphere);
