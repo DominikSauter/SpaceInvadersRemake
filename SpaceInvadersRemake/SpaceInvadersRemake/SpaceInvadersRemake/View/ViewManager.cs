@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+
 using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
@@ -24,6 +26,7 @@ namespace SpaceInvadersRemake.View
     {
         //Random Generator um zufällige AlienRepresentations zu erstellen.
         private Random random;
+        public static SpriteBatch spriteBatch;
 
         /// <summary>
         /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende
