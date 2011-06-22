@@ -2,51 +2,94 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
-namespace SpaceInvadersRemake
+// Implementiert von Dodo, Tobias
+
+namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Objekte dieser Klasse stellen eine Hitbox dar, welche um ein 3D-Model gelegt wird um Kollisionsüberprüfung
     /// zu ermöglichen.
     /// </summary>
-    public class ModelHitsphere
+    public class ModelHitsphere : ModelSection.IBoundingVolume
     {
         /// <summary>
-        /// Erzeugt eine kugelförmige Hitbox.
+        /// Erzeugt eine Hitsphere ohne innere Hitspheres
         /// </summary>
-        /// <param name="radius">Radius einer kugelförmigen Hitbox</param>
-        /// <param name="hitspheres">Liste mit Hitspheres um eine hierarchisches Kollisionsmodel zu ermöglichen.</param>
-        public ModelHitsphere(int radius, List<ModelHitsphere> hitspheres)
+        /// <param name="outerSphere">Die äußere Hitsphere</param>
+        public ModelHitsphere(BoundingSphere outerSphere)
         {
-            throw new System.NotImplementedException();
+            this.OuterSphere = outerSphere;
+            this.InnerSpheres = null;
+            this.World = Matrix.Identity;
+        }
+        
+        /// <summary>
+        /// Erzeugt eine Hitsphere mit inneren Hitspheres.
+        /// </summary>
+        /// <remarks>
+        /// Momentan ist noch keine hierarchische Kollisionsberechnung implementiert
+        /// </remarks>
+        /// <param name="outerSphere">Die äußere Hitsphere</param>
+        /// <param name="innerSpheres">Liste mit innere Hitspheres um eine hierarchisches Kollisionsmodel zu ermöglichen.</param>
+        public ModelHitsphere(BoundingSphere outerSphere, List<ModelHitsphere> innerSpheres)
+            : this(outerSphere)
+        {
+            this.InnerSpheres = innerSpheres;
         }
     
         /// <summary>
-        /// Liste von <c>ModelHitsphere</c> Objekten, um eine hierarchische Anordnung von Hitboxen
+        /// Liste von <c>ModelHitsphere</c> Objekten, um eine hierarchische Anordnung von Hitspheres
         /// um ein 3D-Model zu ermöglichen.
         /// </summary>
-        public System.Collections.Generic.List<ModelHitsphere> Hitspheres
+        public System.Collections.Generic.List<ModelHitsphere> InnerSpheres
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
-        /// Radius der kugelförmigen Hitbox.
+        /// Die äußere Hitsphere
         /// </summary>
-        public int Radius
+        public BoundingSphere OuterSphere
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get;
+            set;
+        }
+
+        /// <summary>
+        /// Die World-Matrix, mit der die Hitsphere vor der Kollisionserkennung Transformiert wird
+        /// </summary>
+        public Matrix World
+        {
+            get;
             set
             {
+                World = value;
+                if (InnerSpheres != null)
+                {
+                    foreach (ModelHitsphere sphere in InnerSpheres)
+                    {
+                        sphere.World = value;
+                    }
+                }
+            }
+        }
+
+        public bool Intersects(ModelSection.IBoundingVolume other)
+        {
+            //HACK: Innere Kugeln müssen noch betrachtet werden
+
+            ModelHitsphere otherSphere = (ModelHitsphere)other;
+
+            if (OuterSphere.Transform(World).Intersects(otherSphere.OuterSphere.Transform(otherSphere.World)))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
     }
