@@ -188,6 +188,9 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void Dispose()
         {
+            if (previousState != null)
+                previousState.Dispose();
+
             this.Model.Dispose();
             this.View.Dispose();
             this.Controller.Dispose();
