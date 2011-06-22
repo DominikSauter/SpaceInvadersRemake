@@ -48,7 +48,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Referenz auf das Spielerschiff-Objekt.
         /// </summary>
-        public SpaceInvadersRemake.ModelSection.IGameItem Player
+        public Player Player
         {
             get
             {
