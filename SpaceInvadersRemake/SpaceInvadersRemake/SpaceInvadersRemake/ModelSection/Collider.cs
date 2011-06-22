@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-// Implmentiert von Tobias Bast
+// Implmentiert von Tobias
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -20,7 +20,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner2">Kollisionspartner 2</param>
         private static void CheckCollision(IGameItem collisionPartner1, IGameItem collisionPartner2)
         {
-            //TODO: Kollisionsberechnung
+            if (collisionPartner1.BoundingVolume.Intersects(collisionPartner2.BoundingVolume))
+            {
+                collisionPartner1.IsCollidedWith(collisionPartner2);
+                collisionPartner2.IsCollidedWith(collisionPartner1);
+            }
         }
 
         /// <summary>
@@ -29,15 +33,17 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         /// <param name="gameItemList">Liste aller <c>GameItem</c>s</param>
         public static void CheckAllCollisions(LinkedList<IGameItem> gameItemList)
-        {
-            //HACK: Kann performanter gelöst werden, indem ItemB nur hinter ItemA in der Liste stehen kann
-            foreach (IGameItem ItemA in gameItemList)
-                foreach (IGameItem ItemB in gameItemList)
+        {          
+            LinkedListNode<IGameItem> ItemA;
+            LinkedListNode<IGameItem> ItemB;
+
+            for (ItemA = gameItemList.First; ItemA != gameItemList.Last; ItemA = ItemA.Next)
+                for (ItemB = ItemA; ItemB != gameItemList.Last; ItemB = ItemB.Next)
                 {
-                    if (ItemA.IsAlive && ItemB.IsAlive 
-                        && !ItemA.GetType().Equals(ItemB.GetType()))
+                    if (ItemA.Value.IsAlive && ItemB.Value.IsAlive
+                        && !ItemA.Value.GetType().Equals(ItemB.Value.GetType()))
                     {
-                        CheckCollision(ItemA, ItemB);
+                        CheckCollision(ItemA.Value, ItemB.Value);
                     }
                 }
         }
