@@ -24,18 +24,6 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Überprüft ob sich zwei Umgebungskugeln schneiden
-        /// </summary>
-        /// <param name="HitSphere1">Kugel 1</param>
-        /// <param name="HitSphere2"> Kugel 2</param>
-        /// <returns>true bei Überschneidung</returns>
-        private static bool HitSpheresIntersect(ModelHitsphere HitSphere1, ModelHitsphere HitSphere2)
-        {
-            //TODO: HitSphere überschneidung berechnen
-            return false;
-        }
-
-        /// <summary>
         /// Überprüft alle <c>GameItem</c>s in der angegebenen Liste auf Kollisionen in dem für jeweils ein Paar die <c>CheckCollision</c>-Methode aufgerufen wird. 
         /// Dabei wird ausgeschlossen, dass zwei gleichartige Objekte kollidieren.
         /// </summary>
