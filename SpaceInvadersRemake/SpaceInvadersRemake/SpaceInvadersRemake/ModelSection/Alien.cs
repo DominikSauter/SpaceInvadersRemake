@@ -9,9 +9,6 @@ namespace SpaceInvadersRemake.ModelSection
     public class Alien : Enemy
     {
 
-        //TODO Statisches Event MoveBack! benötigt das ausgelöst wird sofern jmd "Border" überschreitet -CK 
-
-
         /// <summary>
         /// Dieses Event wird ausgelöst, wenn ein Objekt der Klasse mit einem anderen Objekt kollidiert ist.
         /// </summary>
@@ -24,13 +21,19 @@ namespace SpaceInvadersRemake.ModelSection
 
         public override bool Move(Vector2 direction)
         {
+            bool result = true;
+
             direction.Normalize();
 
             Position += Velocity * direction;
 
-            //TODO: false bei Randüberschreitung zurückgeben
+            if ((Position.X < CoordinateConstants.LeftBorder) || (Position.X > CoordinateConstants.RightBorder)
+                || (Position.Y < CoordinateConstants.BottomBorder) || (Position.Y > CoordinateConstants.TopBorder))
+            {
+                result = false;
+            }
 
-            return true;
+            return result;
         }
 
         public override void IsCollidedWith(IGameItem collisionPartner)
