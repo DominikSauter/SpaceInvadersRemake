@@ -62,7 +62,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 1.0f; //HACK: vorläufiger unsinniger Wert
+                return 75.0f; 
             }
         }
 
@@ -73,7 +73,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return -1.0f; //HACK: vorläufiger unsinniger Wert
+                return -75.0f; 
             }
         }
 
@@ -84,7 +84,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 1.0f; //HACK: vorläufiger unsinniger Wert
+                return 100.0f; 
             }
         }
 
@@ -95,7 +95,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return -1.0f; //HACK: vorläufiger unsinniger Wert
+                return -100.0f; 
             }
         }
     }
