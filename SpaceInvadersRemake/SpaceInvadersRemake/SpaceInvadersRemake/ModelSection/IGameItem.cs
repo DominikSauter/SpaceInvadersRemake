@@ -54,7 +54,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Das begrenzende Volumen (Kugel) des Objekts für die Kollisionsberechnung
         /// </summary>
-        ModelHitsphere ModelHitsphere
+        IBoundingVolume BoundingVolume
         {
             get;
             set;
