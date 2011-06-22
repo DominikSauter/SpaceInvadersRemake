@@ -101,5 +101,24 @@ namespace SpaceInvadersRemake.ModelSection
             set;
         }
 
+        /// <summary>
+        /// Konstruktor in der Basisklasse um redundanten Code zu vermeiden.
+        /// </summary>
+        /// <remarks>
+        /// Setzt alle Grundeigenschaften des GameItems (außer BoundingVolume; wird von View gesetzt)
+        /// und fügt es der GameItemList hinzu.
+        /// </remarks>
+        /// <param name="position">StartPosition</param>
+        /// <param name="velocity">Maximale Geschwindigkeit</param>
+        /// <param name="Hitpoints">Lebenspunkte</param>
+        public GameItem(Vector2 position, Vector2 velocity, int Hitpoints)
+        {
+            this.Position = position;
+            this.Velocity = velocity;
+            this.Hitpoints = Hitpoints;
+            this.IsAlive = true;
+
+            GameItem.GameItemList.AddLast(this);
+        }
     }
 }

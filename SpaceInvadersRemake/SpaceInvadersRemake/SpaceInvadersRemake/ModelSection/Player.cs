@@ -68,7 +68,8 @@ namespace SpaceInvadersRemake.ModelSection
                 Reset();
             }
 
-            Player.Destroyed(this, EventArgs.Empty);
+            if (Player.Destroyed != null)
+                Player.Destroyed(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -107,7 +108,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         public override void Update(GameTime gameTime)
         {
-            throw new NotImplementedException();
+            //TODO: PowerUp-System im Wahlteil hinzufügen
         }
 
         public override void Shoot(GameTime gameTime)
@@ -156,18 +157,12 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="velocity">maximale Geschwindigkeit</param>
         /// <param name="lives">Anzahl Leben</param>
         /// <param name="weapon">Startwaffe</param>
-        public Player(Vector2 position, Vector2 velocity, int lives, Weapon weapon)
+        public Player(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int lives)
+            : base(position, velocity, hitpoints, weapon)
         {
-            Position = position;
-            startPosition = position;
-            Velocity = velocity;
-            baseVelocity = velocity;
-            Lives = lives;
-            Weapon = weapon;
-            Hitpoints = 1;
-            IsAlive = true;
-
-            GameItem.GameItemList.AddLast(this);
+            this.startPosition = position;
+            this.baseVelocity = velocity;
+            this.Lives = lives;
 
             ActivePowerUps = null; //TODO: PowerUps-Liste initialisieren
 
@@ -175,7 +170,8 @@ namespace SpaceInvadersRemake.ModelSection
             Mothership.ScoreGained += AddScore;
             Miniboss.ScoreGained += AddScore;
 
-            Player.Created(this, EventArgs.Empty);
+            if (Player.Created != null)
+                Player.Created(this, EventArgs.Empty);
         }
 
         /// <summary>

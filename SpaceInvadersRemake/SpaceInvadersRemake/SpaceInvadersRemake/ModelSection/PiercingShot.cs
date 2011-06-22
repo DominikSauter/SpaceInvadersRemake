@@ -50,6 +50,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
         public PiercingShot(Vector2 position, Vector2 velocity)
+            : base(position, velocity)
         {
             throw new System.NotImplementedException();
         }

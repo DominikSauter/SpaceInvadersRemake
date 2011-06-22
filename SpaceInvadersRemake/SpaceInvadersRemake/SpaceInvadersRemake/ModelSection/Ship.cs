@@ -20,5 +20,18 @@ namespace SpaceInvadersRemake.ModelSection
             set;
         }
 
+        /// <summary>
+        /// Konstruktor, um redundanten Code zu vermeiden.
+        /// </summary>
+        /// <param name="position">Startposition</param>
+        /// <param name="velocity">Maximale Geschwindigkeit</param>
+        /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="weapon">Waffe</param>
+        public Ship(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon)
+            : base(position, velocity, hitpoints)
+        {
+            this.Weapon = weapon;
+        }
+
     }
 }

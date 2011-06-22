@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -27,6 +25,12 @@ namespace SpaceInvadersRemake.ModelSection
         public abstract void Remove(Player player);
 
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            throw new NotImplementedException();
+        }
+
+        public PowerUp(Vector2 position, Vector2 velocity)
+            : base(position, velocity, 1)
         {
             throw new NotImplementedException();
         }

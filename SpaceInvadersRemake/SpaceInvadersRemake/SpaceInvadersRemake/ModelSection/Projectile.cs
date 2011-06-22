@@ -74,25 +74,21 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="hitpoints">Lebenspunkte</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
         public Projectile(Vector2 position, Vector2 flightDirection, ProjectileTypeEnum projectileType, int hitpoints, Vector2 velocity)
+            : base(position, velocity, hitpoints)
         {
-            Position = position;
-            flightDirection = FlightDirection;
-            ProjectileType = projectileType;
-            Hitpoints = hitpoints;
-            Velocity = velocity;
+            this.ProjectileType = projectileType;
+            this.FlightDirection = flightDirection;
 
-            IsAlive = true;
-
-            GameItem.GameItemList.AddLast(this);
-
-            Projectile.Created(this, EventArgs.Empty);
+            if (Projectile.Created != null)
+                Projectile.Created(this, EventArgs.Empty);
         }
 
         protected override void Destroy()
         {
             IsAlive = false;
 
-            Projectile.Destroyed(this, EventArgs.Empty);
+            if (Projectile.Destroyed != null)
+                Projectile.Destroyed(this, EventArgs.Empty);
         }
     }
 }

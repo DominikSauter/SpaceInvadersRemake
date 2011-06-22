@@ -50,6 +50,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="weapon">Waffe</param>
         /// <param name="scoreGain">Punktwert des Minibosses</param>
         public Miniboss(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int scoreGain)
+            : base(position, velocity, hitpoints, weapon, scoreGain)
         {
             throw new System.NotImplementedException();
         }
