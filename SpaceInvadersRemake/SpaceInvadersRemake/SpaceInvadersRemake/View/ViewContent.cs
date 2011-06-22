@@ -17,19 +17,19 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public static class ViewContent
     {
-        public static SpaceInvadersRemake.RepresentationContent RepresentationContent
+        public static RepresentationContent RepresentationContent
         {
             get;
             set;
         }
 
-        public static SpaceInvadersRemake.UIContent UIContent
+        public static UIContent UIContent
         {
             get;
             set;
         }
 
-        public static SpaceInvadersRemake.EffectContent EffectContent
+        public static EffectContent EffectContent
         {
             get;
             set;
