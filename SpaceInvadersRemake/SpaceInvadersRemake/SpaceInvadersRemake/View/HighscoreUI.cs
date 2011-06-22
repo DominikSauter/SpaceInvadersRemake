@@ -16,7 +16,6 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class HighscoreUI : IView
     {
-        private Texture2D highscoreBackgroundImage;
         private Texture2D frame;
         private SpriteFont font;
         private Texture2D background;
@@ -32,6 +31,9 @@ namespace SpaceInvadersRemake.View
             this.font = ViewContent.UIContent.Font;
             this.background = ViewContent.UIContent.MenuBackgroundImage;
             this.frame = ViewContent.UIContent.SettingsBackground;
+            this.spriteBatch = ViewManager.spriteBatch;
+            this.graphics = graphics;
+            this.highscoreManager = highscoreManager;
     
         }
 
@@ -43,7 +45,7 @@ namespace SpaceInvadersRemake.View
         {
             //Zeichnen des Hintergrundbildes
             spriteBatch.Begin();
-            spriteBatch.Draw(this.highscoreBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),Color.White);
+            spriteBatch.Draw(this.background, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
             
 
             //Zeichnen des Highscore Fensters
