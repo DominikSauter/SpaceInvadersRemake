@@ -19,6 +19,7 @@ namespace SpaceInvadersRemake.View
         private Texture2D highscoreBackgroundImage;
         private Texture2D frame;
         private SpriteFont font;
+        private Texture2D background;
         private HighscoreManager highscoreManager;
         private SpriteBatch spriteBatch;
         private GraphicsDeviceManager graphics; //um Auflösung zu verändern
@@ -26,7 +27,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert die Highscoreoberfläche
         /// </summary>
-        public HighscoreUI(SpriteFont font, Texture2D background, HighscoreManager highscoreManager, GraphicsDeviceManager graphics, Texture2D frame)
+        public HighscoreUI(HighscoreManager highscoreManager, GraphicsDeviceManager graphics)
         {
             this.font = ViewContent.UIContent.Font;
             this.background = ViewContent.UIContent.MenuBackgroundImage;

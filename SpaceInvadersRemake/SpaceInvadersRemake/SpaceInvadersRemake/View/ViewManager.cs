@@ -77,7 +77,7 @@ namespace SpaceInvadersRemake.View
             else if (currentState is StateMachine.HighscoreState)
             {
                 //erzeugen einer HighscoreUI
-                this.ViewItemList.Add(CreateHighscoreUI(currentState));
+                this.ViewItemList.Add(CreateHighscoreUI(currentState, graphics));
             }
             else if (currentState is StateMachine.CreditsState)
             {
@@ -294,10 +294,9 @@ namespace SpaceInvadersRemake.View
         /// Erstellt eine HighscoreUI-Objekt und fügt dieses in die ViewItemList ein.
         /// </summary>
         /// <returns>HighscoreUI-Objekt, welches die Highscoreansicht darstellt.</returns>
-        private HighscoreUI CreateHighscoreUI(StateMachine.State currentState)
+        private HighscoreUI CreateHighscoreUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            return new HighscoreUI(ViewContent.UIContent.Font, ViewContent.UIContent.MenuBackgroundImage,
-                                                        ((HighscoreManager)(currentState.Model)).HighscoreEntries);
+            return new HighscoreUI(((HighscoreManager)(currentState.Model)), graphics);
         }
 
         /// <summary>
