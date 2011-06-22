@@ -19,22 +19,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        public override bool Move(Microsoft.Xna.Framework.Vector2 direction)
-        {
-            throw new NotImplementedException();
-        }
-
         public override void IsCollidedWith(IGameItem collisionPartner)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
-        {
-            throw new NotImplementedException();
-        }
-
-        public override void Shoot(GameTime gameTime)
         {
             throw new NotImplementedException();
         }
@@ -53,8 +38,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="weapon">Waffe</param>
         /// <param name="scoreGain">Punktwert des Mutterschiffs</param>
         public Mothership(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int scoreGain)
+            : base(position, velocity, hitpoints, weapon, scoreGain)
         {
-            throw new System.NotImplementedException();
+            if (Mothership.Created != null)
+                Mothership.Created(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -64,7 +51,10 @@ namespace SpaceInvadersRemake.ModelSection
 
         protected override void Destroy()
         {
-            throw new NotImplementedException();
+            IsAlive = false;
+
+            if (Mothership.Destroyed != null)
+                Mothership.Destroyed(this, EventArgs.Empty);
         }
     }
 }

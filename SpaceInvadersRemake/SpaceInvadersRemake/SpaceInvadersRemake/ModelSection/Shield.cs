@@ -25,11 +25,6 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
-        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
-        {
-            // nicht benötigt
-        }
-
         /// <summary>
         /// Dieses Event wird ausgelöst, wenn ein neues Objekt dieser Klasse erzeugt wurde.
         /// </summary>
@@ -41,23 +36,18 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="position">Position</param>
         /// <param name="hitpoints">Lebenspunkte</param>
         public Shield(Vector2 position, int hitpoints)
+            : base(position, Vector2.Zero, hitpoints)
         {
-            Position = position;
-            Hitpoints = hitpoints;
-
-            Velocity = Vector2.Zero;
-            IsAlive = true;
-
-            GameItem.GameItemList.AddLast(this);
-
-            Shield.Created(this, EventArgs.Empty);
+            if (Shield.Created != null)
+                Shield.Created(this, EventArgs.Empty);
         }
 
         protected override void Destroy()
         {
             IsAlive = false;
 
-            Shield.Destroyed(this, EventArgs.Empty);
+            if (Shield.Destroyed != null)
+                Shield.Destroyed(this, EventArgs.Empty);
         }
     }
 }

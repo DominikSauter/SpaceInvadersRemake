@@ -19,36 +19,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        public override bool Move(Vector2 direction)
-        {
-            bool result = true;
-
-            direction.Normalize();
-
-            Position += Velocity * direction;
-
-            if ((Position.X < CoordinateConstants.LeftBorder) || (Position.X > CoordinateConstants.RightBorder)
-                || (Position.Y < CoordinateConstants.BottomBorder) || (Position.Y > CoordinateConstants.TopBorder))
-            {
-                result = false;
-            }
-
-            return result;
-        }
-
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            // nicht benötigt
-        }
-
-        public override void Shoot(GameTime gameTime)
-        {
-            Weapon.Fire(Position, CoordinateConstants.Down, gameTime);
         }
 
         /// <summary>
@@ -65,17 +38,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="weapon">Waffe</param>
         /// <param name="scoreGain">Punktwert des Aliens</param>
         public Alien(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int scoreGain)
+            : base(position, velocity, hitpoints, weapon, scoreGain)
         {
-            Position = position;
-            Velocity = velocity;
-            Hitpoints = hitpoints;
-            Weapon = weapon;
-            ScoreGain = scoreGain;
-            IsAlive = true;
-
-            GameItem.GameItemList.AddLast(this);
-
-            Alien.Created(this, EventArgs.Empty);
+            if (Alien.Created != null)
+                Alien.Created(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -87,7 +53,8 @@ namespace SpaceInvadersRemake.ModelSection
         {
             IsAlive = false;
 
-            Alien.Destroyed(this, EventArgs.Empty);
+            if (Alien.Destroyed != null)
+                Alien.Destroyed(this, EventArgs.Empty);
         }
     }
 }
