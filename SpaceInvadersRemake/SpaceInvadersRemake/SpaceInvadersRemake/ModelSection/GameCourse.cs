@@ -28,7 +28,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public GameCourse()
         {
-            throw new System.NotImplementedException();
+            random = new Random();
+            InitializeGame();
         }
 
         /// <summary>
@@ -38,10 +39,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return WaveCounter;
             }
-            set
+            private set
             {
+                WaveCounter = value;
             }
         }
 
@@ -52,10 +54,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return Player;
             }
-            set
+            private set
             {
+                Player = value;
             }
         }
 
@@ -67,7 +70,62 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public LinkedList<IGameItem> NextWave(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            waveStartingTime = gameTime;
+
+            if (WaveCounter == 0)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.EasyDifficulty);
+            }
+            else if (WaveCounter == 1)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.EasyDifficulty);
+            }
+            else if (WaveCounter == 2)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.CircleFormation, DifficultyLevel.EasyDifficulty);
+            }
+            else if (WaveCounter == 3)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.TriangleFormation, DifficultyLevel.MediumDifficulty);
+            }
+            else if (WaveCounter == 4)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.MediumDifficulty);
+            }
+            else if (WaveCounter == 5)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.MediumDifficulty);
+            }
+            else if (WaveCounter == 6)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.CircleFormation, DifficultyLevel.HardDifficulty);
+            }
+            else if (WaveCounter == 7)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.TriangleFormation, DifficultyLevel.HardDifficulty);
+            }
+            else if (WaveCounter == 8)
+            {
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.HardDifficulty);
+            }
+            else
+            {
+                int rnd = random.Next(4);
+                if (rnd == 0)
+                {
+                    Vector2[] formation = FormationGenerator.SkullFormation;
+                } else if (rnd == 1)
+                {
+                    Vector2[] formation = FormationGenerator.BlockFormation;
+                } else if (rnd == 2)
+                {
+                    Vector2[] formation = FormationGenerator.CircleFormation;
+                } else
+                {
+                    Vector2[] formation = FormationGenerator.TriangleFormation;
+                }
+                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.HardDifficulty);
+            }
         }
 
         /// <summary>

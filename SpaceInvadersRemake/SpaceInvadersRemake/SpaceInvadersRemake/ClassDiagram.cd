@@ -139,7 +139,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Collider">
     <Position X="21.75" Y="42.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAIAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAA=</HashCode>
       <FileName>ModelSection\Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -427,13 +427,6 @@
       <FileName>ModelSection\WaveGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.GameCourse">
-    <Position X="16.5" Y="33.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAIQAAAAAAAAAAAAYAAQCAAAA=</HashCode>
-      <FileName>ModelSection\GameCourse.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.GameCourseManager">
     <Position X="16.5" Y="30" Width="1.5" />
     <TypeIdentifier>
@@ -719,6 +712,13 @@
       <FileName>View\CreditsUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.GameCourse">
+    <Position X="16.5" Y="33.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAIQAAAAAAAAAAAAYAAQCAAAA=</HashCode>
+      <FileName>ModelSection\GameCourse.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="41" Y="0.5" Width="1.5" />
