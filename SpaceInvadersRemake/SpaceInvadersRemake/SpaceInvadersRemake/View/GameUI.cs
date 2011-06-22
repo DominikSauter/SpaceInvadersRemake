@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Dodo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace SpaceInvadersRemake.View
         private SpriteFont font;
         private List<Texture2D> powerUpIcons;
         private Texture2D liveIcon;
+        private int lives;
+        private int score;
     
         /// <summary>
         /// Initialisiert die Spieloberfläche
@@ -35,21 +38,14 @@ namespace SpaceInvadersRemake.View
             this.graphics = graphics;
             this.spriteBatch = new SpriteBatch(this.graphics.GraphicsDevice);
 
-            this.Lives = ((Player)gameCourseMngr.GameCourse.Player).Lives;
-            this.Score = ((Player)gameCourseMngr.GameCourse.Player).Score;
+            this.lives = ((Player)gameCourseMngr.GameCourse.Player).Lives;
+            this.score = ((Player)gameCourseMngr.GameCourse.Player).Score;
+            this.font = ViewContent.UIContent.Font;
+            this.gameBackgroundImage = ViewContent.UIContent.GameBackgroundImage;
+            this.hudBackgroundTexture = ViewContent.UIContent.HUDBackground;
+            this.liveIcon = ViewContent.UIContent.LiveIcon;
+            //this.powerUpIcons
 
-        }
-
-        public int Lives
-        {
-            get;
-            private set;
-        }
-
-        public int Score
-        {
-            get;
-            private set;
         }
 
         /// <summary>
@@ -72,7 +68,7 @@ namespace SpaceInvadersRemake.View
                     (float)(graphics.PreferredBackBufferHeight - this.hudBackgroundTexture.Height)), Color.White);
             }
 
-            for(int liveCount = 0; liveCount < this.Lives; liveCount++)
+            for(int liveCount = 0; liveCount < this.lives; liveCount++)
             {
 
             }
