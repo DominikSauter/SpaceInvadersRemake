@@ -46,6 +46,7 @@ namespace SpaceInvadersRemake.View
             RepresentationContent = new RepresentationContent();
 
             //Laden des UI Contents
+            UIContent.Font = Content.Load<SpriteFont>("Fonts/testfont");
             UIContent.GameBackgroundImage = Content.Load<Texture2D>("Images/InGame_Hintergrund");
             UIContent.MenuBackgroundImage = Content.Load<Texture2D>("Images/Menü_Hintergrund");
             UIContent.HUDBackground = Content.Load<Texture2D>("Graphics/hud_32x60");
