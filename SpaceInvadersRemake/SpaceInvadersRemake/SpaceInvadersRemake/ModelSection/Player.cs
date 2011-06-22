@@ -107,7 +107,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         public override void Update(GameTime gameTime)
         {
-            //TODO: PowerUps-System
+            throw new NotImplementedException();
         }
 
         public override void Shoot(GameTime gameTime)
@@ -130,7 +130,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="powerUpIcons">Das neue PowerUps</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
-            //TODO: PowerUps-System
+            throw new NotImplementedException();
         }
 
         /// <summary>
