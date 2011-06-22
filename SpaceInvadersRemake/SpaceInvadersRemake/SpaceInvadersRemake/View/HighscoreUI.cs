@@ -42,11 +42,11 @@ namespace SpaceInvadersRemake.View
         {
             //Zeichnen des Hintergrundbildes
             spriteBatch.Begin();
-            spriteBatch.Draw(highscoreBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),Color.White);
+            spriteBatch.Draw(this.highscoreBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight),Color.White);
             
 
             //Zeichnen des Highscore Fensters
-            spriteBatch.Draw(frame, new Rectangle(100, 100, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferWidth), Color.White);
+            spriteBatch.Draw(this.frame, new Rectangle(100, 100, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferWidth), Color.White);
 
             //Zeichnen der Highscore Einträge
             Vector2 name_Position = new Vector2(200, 200);
@@ -62,16 +62,16 @@ namespace SpaceInvadersRemake.View
                 //Wenn ein neuer Eintrag möglich ist, wird ein Cursor ("_") an die letze Stelle der Liste gesetzt, 
                 //wo der neue Eintrag erfolgt werden kann. Ansonsten wird der Name gezeichnet.
                 {
-                    spriteBatch.DrawString(font, name + writeEnabled, name_Position, Color.Cyan);
+                    spriteBatch.DrawString(this.font, name + writeEnabled, name_Position, Color.Cyan);
                 }
                 else 
                 {
-                    spriteBatch.DrawString(font, name, name_Position, Color.White);
+                    spriteBatch.DrawString(this.font, name, name_Position, Color.White);
                 }
 
                 //Scores
                 int score = highscoreManager.HighscoreEntries[i].Score;
-                spriteBatch.DrawString(font, score.ToString(), score_Position, Color.White);
+                spriteBatch.DrawString(this.font, score.ToString(), score_Position, Color.White);
 
                 name_Position.Y += name_Position.Y + i * 100;
                 score_Position.Y += score_Position.Y + i * 100;
