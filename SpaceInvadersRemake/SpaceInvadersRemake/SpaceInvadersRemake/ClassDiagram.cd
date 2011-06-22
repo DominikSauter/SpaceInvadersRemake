@@ -139,7 +139,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Collider">
     <Position X="21.75" Y="42.75" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAIAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAACAAAAAAIAAAAA=</HashCode>
       <FileName>ModelSection\Collider.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -574,7 +574,7 @@
   <Class Name="SpaceInvadersRemake.View.GameUI">
     <Position X="38.75" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAoAAAAAAAAAggAAAAAABAAAAAAAAAACACAAAAAEAAA=</HashCode>
+      <HashCode>CAoAAEAAAAAAAgAAAAAIBAAAAAIAAAgAACAAAAAEAAA=</HashCode>
       <FileName>View\GameUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -780,6 +780,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAAAAAA=</HashCode>
       <FileName>View\IMediaplayer.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="SpaceInvadersRemake.ModelSection.IBoundingVolume">
+    <Position X="19.5" Y="42.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\IBoundingVolume.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="SpaceInvadersRemake.ModelSection.ProjectileTypeEnum">
