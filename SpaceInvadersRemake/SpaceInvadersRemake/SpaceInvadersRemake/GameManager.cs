@@ -52,7 +52,7 @@ namespace SpaceInvadersRemake
             base.Initialize();
 
             //[VIEW]
-            View.ViewContent.ComputeHitspheres();
+            //View.ViewContent.ComputeHitspheres();
         }
 
         /// <summary>
