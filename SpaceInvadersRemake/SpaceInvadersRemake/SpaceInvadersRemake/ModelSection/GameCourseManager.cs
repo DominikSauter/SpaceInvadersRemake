@@ -83,6 +83,10 @@ namespace SpaceInvadersRemake.ModelSection
                         waveAlive = true;
                         break;
                     }
+                    else
+                    {
+                        currentWave.Remove(item);
+                    }
                 }
 
                 if (!waveAlive)
