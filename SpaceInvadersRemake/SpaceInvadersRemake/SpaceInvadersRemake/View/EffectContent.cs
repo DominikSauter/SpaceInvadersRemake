@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Media;
 
-namespace SpaceInvadersRemake
+namespace SpaceInvadersRemake.View
 {
     public class EffectContent
     {
