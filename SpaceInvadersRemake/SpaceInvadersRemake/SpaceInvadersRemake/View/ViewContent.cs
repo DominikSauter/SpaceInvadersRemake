@@ -60,7 +60,7 @@ namespace SpaceInvadersRemake.View
 
             //Laden des Representation Contents
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
-            RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/Schild");
+            RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/Schild_TextureAtlas");
 
             //Laden des EffectContents
         }
