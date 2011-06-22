@@ -177,7 +177,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreatePlayer(object player, EventArgs e)
         {
-            this.ViewItemList.Add(new PlayerRepresentation());
+            this.ViewItemList.Add(new PlayerRepresentation((Player)player));
             ((Player)player).BoundingVolume = ViewContent.RepresentationContent.PlayerHitsphere;
         }
 
@@ -326,7 +326,7 @@ namespace SpaceInvadersRemake.View
         {
             foreach (IView listItem in ViewItemList)
             {
-                listItem.Draw(gameTime);
+                listItem.Draw();
             }
         }
 

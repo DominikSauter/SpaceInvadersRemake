@@ -12,9 +12,8 @@ namespace SpaceInvadersRemake.View
     public interface IView
     {
         /// <summary>
-        /// <c>draw</c> Methode die von den Unterklassen implementiert wird.
+        /// 	<c>draw</c> Methode die von den Unterklassen implementiert wird.
         /// </summary>
-        /// <param name="gameTime">Spielzeit </param>
-        void Draw(GameTime gameTime);
+        void Draw();
     }
 }

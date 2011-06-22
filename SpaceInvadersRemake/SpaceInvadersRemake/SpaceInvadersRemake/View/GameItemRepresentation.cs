@@ -53,8 +53,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet das Objekt auf den Bildschirm
         /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
-        abstract public void Draw(GameTime gameTime);
+        abstract public void Draw();
 
     }
 }

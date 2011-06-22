@@ -6,6 +6,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using SpaceInvadersRemake.ModelSection;
+
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
@@ -23,7 +25,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation der Spielerfigur.
         /// </summary>
-        public PlayerRepresentation()
+        public PlayerRepresentation(Player PlayerGameItem)
         {
             throw new System.NotImplementedException();
         }
@@ -76,8 +78,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet das Spielerschiff auf den Bildschirm.
         /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
-        public override void Draw(GameTime gameTime)
+        public override void Draw()
         {
             throw new NotImplementedException();
         }

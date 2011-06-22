@@ -50,8 +50,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
-        public void Draw(GameTime gameTime)
+        public void Draw()
         {
             //Counter, der angibt wie oft die HUD Grafik (32x60) gezeichnet werden muss.
             int hudTileCount = graphics.PreferredBackBufferWidth / this.hudBackgroundTexture.Width;

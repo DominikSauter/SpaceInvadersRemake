@@ -603,13 +603,6 @@
       <FileName>View\ViewContent.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="SpaceInvadersRemake.ModelHitsphere">
-    <Position X="50.75" Y="2.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>View\ModelHitsphere.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="SpaceInvadersRemake.View.Intro">
     <Position X="54.75" Y="12.25" Width="2" />
     <TypeIdentifier>
@@ -708,17 +701,18 @@
   <Class Name="SpaceInvadersRemake.View.CreditsUI">
     <Position X="46" Y="2.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAEAAAgAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAIAAEAAAEBAAgAAAEAAAAAAAIAAAAgAAAAABAAAAAA=</HashCode>
       <FileName>View\CreditsUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SpaceInvadersRemake.ModelSection.GameCourse">
-    <Position X="16.5" Y="33.25" Width="1.5" />
+  <Class Name="SpaceInvadersRemake.View.ModelHitsphere">
+    <Position X="50.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAIQAAAAAAAAAAAAYAAQCAAAA=</HashCode>
-      <FileName>ModelSection\GameCourse.cs</FileName>
+      <HashCode>AAAAAACAABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
+      <FileName>View\ModelHitsphere.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="41" Y="0.5" Width="1.5" />

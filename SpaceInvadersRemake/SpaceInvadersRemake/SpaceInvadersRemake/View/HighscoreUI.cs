@@ -40,8 +40,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
-        /// <param name="gameTime">Spielzeit</param>
-        public void Draw(GameTime gameTime)
+        public void Draw()
         {
             //Zeichnen des Hintergrundbildes
             spriteBatch.Begin();
