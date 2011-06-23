@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake
     /// </summary>
     public class GameManager : Microsoft.Xna.Framework.Game
     {
-        GraphicsDeviceManager graphics;
+        public GraphicsDeviceManager graphics;
         public SpriteBatch spriteBatch;
 
         public GameManager()
