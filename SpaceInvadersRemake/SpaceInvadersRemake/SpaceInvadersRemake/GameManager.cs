@@ -47,7 +47,6 @@ namespace SpaceInvadersRemake
         {
             // TODO: Apply your initialization logic here
             // [View] Hier soll die Hintergrundmusik (GameSong, MenuSong) initialisiert werden
-            View.ViewManager.spriteBatch = this.spriteBatch;
             //[/View]
             base.Initialize();
 
