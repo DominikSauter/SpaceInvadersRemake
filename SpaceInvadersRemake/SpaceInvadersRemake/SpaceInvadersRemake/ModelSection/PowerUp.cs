@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 
+// Implementiert von Tobias
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -29,8 +31,13 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Konstruktor um Redundanz zu vermeiden
+        /// </summary>
+        /// <param name="position">Startposition</param>
+        /// <param name="velocity">Maximale Geschwindigkeit</param>
         public PowerUp(Vector2 position, Vector2 velocity)
-            : base(position, velocity, 1)
+            : base(position, velocity, 1, 0)
         {
             throw new NotImplementedException();
         }
