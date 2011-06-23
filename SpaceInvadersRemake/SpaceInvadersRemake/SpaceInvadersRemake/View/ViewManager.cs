@@ -26,6 +26,7 @@ namespace SpaceInvadersRemake.View
     {
         //Random Generator um zufällige AlienRepresentations zu erstellen.
         private Random random;
+        private GraphicsDeviceManager graphics;
 
         /// <summary>
         /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende
@@ -34,6 +35,7 @@ namespace SpaceInvadersRemake.View
         /// 
         /// <param name="currentState">Aktueller Zustand der <c>StateMachine</c> anhand dessen die passende
         /// UI erstellt wird.</param>
+        /// <param name="graphics"></param>
         /// 
         /// <remarks>
         /// Die <c>ViewItemList</c> wird initialisiert und das passende UI Objekt hinzugefügt (GameUI, HighscoreUI, MenuUI).
@@ -41,6 +43,7 @@ namespace SpaceInvadersRemake.View
         public ViewManager(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
             this.ViewItemList = new List<IView>();
+            this.graphics = graphics;
 
             //abhängig vom State wird hier die UI geladen.
             if (currentState is StateMachine.InGameState)
@@ -176,7 +179,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreatePlayer(object player, EventArgs e)
         {
-            this.ViewItemList.Add(new PlayerRepresentation((Player)player));
+            this.ViewItemList.Add(new PlayerRepresentation((Player)player, this.graphics));
             ((Player)player).BoundingVolume = ViewContent.RepresentationContent.PlayerHitsphere;
         }
 

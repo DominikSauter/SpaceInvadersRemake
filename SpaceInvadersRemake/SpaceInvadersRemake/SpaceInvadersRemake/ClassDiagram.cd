@@ -553,7 +553,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="36.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgYABEEQACCAgAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
+      <HashCode>AgYABAEQACCAgAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -597,7 +597,6 @@
       <FileName>View\ButtonRepresentation.cs</FileName>
       <NewMemberFileName>ButtonRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.ViewContent">
     <Position X="33.5" Y="0.5" Width="2.25" />

@@ -44,6 +44,8 @@ namespace SpaceInvadersRemake.View
             UIContent = new UIContent();
             EffectContent = new EffectContent();
             RepresentationContent = new RepresentationContent();
+            RepresentationContent.AlienTextures = new List<Texture2D>();
+            
 
             //Laden des UI Contents
             UIContent.Font = Content.Load<SpriteFont>("Fonts/testfont");
@@ -65,7 +67,7 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.AlienModel = Content.Load<Model>("3D Models/Alienschiff");
             RepresentationContent.PlayerModel = Content.Load<Model>("3D Models/Spielerschiff");
             RepresentationContent.MothershipModel = Content.Load<Model>("3D Models/Mutterschiff");
-            RepresentationContent.AlienTextures.Add(Content.Load<Texture2D>("3D Model Textures/psionic"));
+            RepresentationContent.AlienTextures.Add(Content.Load<Texture2D>("3D Model Textures/AlienTextur1"));
             //<WAHL>
             //RepresentationContent.BossModel = Content.Load<Model>("3D Models/Minibossschiff");
             //</WAHL>
