@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
+// Implementiert von Tobias
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -17,7 +15,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="score">Erreichte Punktzahl</param>
         public HighscoreEntry(string name, int score)
         {
-            throw new System.NotImplementedException();
+            this.Name = name;
+            this.Score = score;
         }
         /// <summary>
         /// Name des Spielers

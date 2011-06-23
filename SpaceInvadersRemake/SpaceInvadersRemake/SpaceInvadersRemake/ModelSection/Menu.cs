@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+// Implementiert von Tobias
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -46,14 +48,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public MenuControl ActiveControl
         {
-            get
-            {
-                return ActiveControl;
-            }
-            private set
-            {
-                ActiveControl = value;
-            }
+            get;
+            private set;
         }
 
         /// <summary>

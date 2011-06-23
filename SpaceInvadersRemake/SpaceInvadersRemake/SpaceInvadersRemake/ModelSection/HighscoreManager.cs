@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.IO;
+
+// Implementiert von Tobias
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -77,9 +77,6 @@ namespace SpaceInvadersRemake.ModelSection
             get
             {
                 return highscore.ToArray();
-            }
-            private set
-            {
             }
         }
 
