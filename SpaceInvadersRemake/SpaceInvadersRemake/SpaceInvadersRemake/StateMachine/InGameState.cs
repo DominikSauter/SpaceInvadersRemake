@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    // by STST
     /// <summary>
     /// Stellt den Spielzustand im Programm dar.
     /// </summary>

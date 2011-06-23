@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    // by STST
     /// <summary>
     /// Stellt einen Programmzustand dar und tauscht dabei das MVC aus. Des Weiteren werden die Bereiche Model, 
     /// View und Controllers zusammengehalten.

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
+using Microsoft.Xna.Framework;
 
 
 namespace SpaceInvadersRemake.Controller
@@ -15,7 +16,8 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Generiert eine neue Instanz der MothershipAI Controllers.
         /// </summary>
-        public MothershipAI(int shootingFrequency, IGameItem controllee) : base(shootingFrequency, controllee)
+        public MothershipAI(int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+            : base(shootingFrequency, controllee, velocityIncrease)
         {
             //Nichts zu erledigen.
         }

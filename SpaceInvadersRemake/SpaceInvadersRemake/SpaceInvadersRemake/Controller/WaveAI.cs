@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using SpaceInvadersRemake.ModelSection;
+using Microsoft.Xna.Framework;
 
+//Implementiert von Chris
 namespace SpaceInvadersRemake.Controller
 {
     /// <summary>
@@ -21,10 +23,10 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
-      protected  WaveAI(int shootingFrequency, ICollection<IGameItem> controllees)
-            : base(shootingFrequency, null) //null wird das single controllee gesetzt 
+      protected  WaveAI(int shootingFrequency, ICollection<IGameItem> controllees,Vector2 velocityIncrease)
+            : base(shootingFrequency, null, velocityIncrease) //null wird das single controllee gesetzt 
         {
-            this.ShootingFrequency = shootingFrequency;
+            
             this.Controllees = controllees;
         }
 

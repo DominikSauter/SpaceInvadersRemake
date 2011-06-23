@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    // by STST
     /// <summary>
     /// Muss von dem Haupteinstiegspunkt des Controllers implementiert werden.
     /// </summary>

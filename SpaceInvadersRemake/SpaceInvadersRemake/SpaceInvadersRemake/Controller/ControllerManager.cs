@@ -103,26 +103,29 @@ public class ControllerManager : IController
     /// <param name="desiredController">Gibt an welchen Controllers man generiert haben möchte.</param>
     public void CreateController(object sender, ControllerEventArgs desiredController) 
     {
-        //TODO Kommentare
-
+        
+        //Aus dem Event extrahierte Werte
         IGameItem mySender = (IGameItem) sender;
         ICollection<IGameItem> controllees = desiredController.Controllees;
         int shootingFrequency = desiredController.DifficultyLevel.ShootingFrequency;
+        Vector2 velocityIncrease = desiredController.DifficultyLevel.VelocityIncrease;
+        
+        //Zwischenspeicher für den generierten Controller
         ICommander temp;
 
         switch (desiredController.Behaviour)
         {
             case BehaviourEnum.BlockMovement:
-                
-                temp = new BlockWaveAI(shootingFrequency, controllees);
+
+                temp = new BlockWaveAI(shootingFrequency, controllees, velocityIncrease);
 
                 Controllers.Add(temp);
                
                 break;
             
             case BehaviourEnum.MothershipMovement:
-                
-                temp = new MothershipAI(shootingFrequency, controllees.First());
+
+                temp = new MothershipAI(shootingFrequency, controllees.First(), velocityIncrease);
                 Controllers.Add(temp);
 
                 break;
