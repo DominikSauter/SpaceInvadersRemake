@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -32,9 +33,13 @@ namespace SpaceInvadersRemake.StateMachine
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Erzeugt einen neuen ViewManager und übergibt den aktuellen State sowie einen GraphicsDeviceManager
+        /// </summary>
         protected override void ViewInitialize()
         {
-            throw new NotImplementedException();
+
+            this.View = new View.ViewManager(this, ((GameManager)this.game).graphics); //teilimplementiert von Dodo
         }
     }
 }
