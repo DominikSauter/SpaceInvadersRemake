@@ -43,8 +43,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public int Hitpoints
         {
-            get;
-            set;
+            get
+            {
+                return Hitpoints;
+            }
+            set
+            {
+                Hitpoints = value;
+                if (Hitpoints <= 0)
+                    Destroy();
+            }
         }
 
         /// <summary>
@@ -53,7 +61,7 @@ namespace SpaceInvadersRemake.ModelSection
         public int Damage
         {
             get;
-            protected set;
+            set;
         }
 
         /// <summary>

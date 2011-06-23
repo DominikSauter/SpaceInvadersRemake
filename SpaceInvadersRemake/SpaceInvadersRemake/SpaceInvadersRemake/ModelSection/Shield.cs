@@ -32,7 +32,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
-            throw new NotImplementedException();
+            // Schilde können mit allen Schiffen und allen Projektilen kollidieren
+
+            if ((collisionPartner is Ship) || (collisionPartner is Projectile))
+            {
+                if (Shield.Hit != null)
+                    Shield.Hit(this, EventArgs.Empty);
+                Hitpoints -= collisionPartner.Damage;
+            }
         }
 
         /// <summary>

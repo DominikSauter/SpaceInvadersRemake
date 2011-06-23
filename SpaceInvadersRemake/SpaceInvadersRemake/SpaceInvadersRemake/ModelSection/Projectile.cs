@@ -56,7 +56,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
-            throw new NotImplementedException();
+            // Projektile können mit Schilden und, je nachdem was für ein Projektiltyp es ist, mit bestimmten Schiffen kollidieren
+
+            if ((collisionPartner is Shield)
+                || ((collisionPartner is Enemy) && ((ProjectileType == ProjectileTypeEnum.PlayerNormalProjectile) || (ProjectileType == ProjectileTypeEnum.PiercingProjectile)))
+                || ((collisionPartner is Player) && ((ProjectileType == ProjectileTypeEnum.EnemyNormalProjectile) || (ProjectileType == ProjectileTypeEnum.MothershipProjectile) || (ProjectileType == ProjectileTypeEnum.MinibossProjectile))))
+            {
+                if (Projectile.Hit != null)
+                    Projectile.Hit(this, EventArgs.Empty);
+                Hitpoints -= collisionPartner.Damage;
+            }
         }
 
         /// <summary>

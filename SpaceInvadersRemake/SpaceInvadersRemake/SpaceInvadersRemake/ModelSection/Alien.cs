@@ -33,7 +33,27 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
-            throw new NotImplementedException();
+            // Aliens können mit dem Spieler, Spielerprojektilen und Schilden kollidieren
+
+            if (!(collisionPartner is Player)
+                && !(collisionPartner is Projectile)
+                && !(collisionPartner is Shield))
+                return;
+
+            if (collisionPartner is Projectile)
+            {
+                Projectile projectile = (Projectile)collisionPartner;
+
+                if (!(projectile.ProjectileType == ProjectileTypeEnum.PlayerNormalProjectile)
+                    && !(projectile.ProjectileType == ProjectileTypeEnum.PiercingProjectile))
+                    return;
+            }
+
+            // Wenn der Programmfluss hier ankommt, gibt es eine Kollision.
+
+            if (Alien.Hit != null)
+                Alien.Hit(this, EventArgs.Empty);
+            Hitpoints -= collisionPartner.Damage;
         }
 
         /// <summary>

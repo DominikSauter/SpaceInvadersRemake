@@ -132,7 +132,26 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
-            throw new NotImplementedException();
+            // Spieler können mit gegnerischen Projektilen und Schiffen kollidieren
+            // Außerdem auch mit PowerUps, ab das kommt erst im Wahlteil
+
+            if (!(collisionPartner is Enemy) && !(collisionPartner is Projectile))
+                return;
+
+            if (collisionPartner is Projectile)
+            {
+                Projectile projectile = (Projectile)collisionPartner;
+                if ((projectile.ProjectileType == ProjectileTypeEnum.PlayerNormalProjectile)
+                    || (projectile.ProjectileType == ProjectileTypeEnum.PiercingProjectile))
+                    return;
+            }
+
+            // Wenn der Programmfluss hier ankommt gibt es eine Kollision
+            if (Player.Hit != null)
+                Player.Hit(this, EventArgs.Empty);
+            Hitpoints -= collisionPartner.Damage;
+
+            //TODO: Kollision mit PowerUps ermöglichen
         }
 
 
