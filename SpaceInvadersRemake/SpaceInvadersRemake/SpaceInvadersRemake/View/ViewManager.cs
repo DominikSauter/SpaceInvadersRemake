@@ -26,7 +26,6 @@ namespace SpaceInvadersRemake.View
     {
         //Random Generator um zufällige AlienRepresentations zu erstellen.
         private Random random;
-        public static SpriteBatch spriteBatch;
 
         /// <summary>
         /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende

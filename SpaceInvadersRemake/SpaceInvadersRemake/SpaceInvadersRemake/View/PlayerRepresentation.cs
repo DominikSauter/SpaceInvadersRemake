@@ -21,14 +21,11 @@ namespace SpaceInvadersRemake.View
         private List<Texture2D> explosionTextures;
         private List<Texture2D> engineTextures;
         private Model model;
-    
+
         /// <summary>
-        /// Erstellt eine Representation der Spielerfigur.
+        /// Referenz auf das Player-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
-        public PlayerRepresentation(Player PlayerGameItem)
-        {
-            throw new System.NotImplementedException();
-        }
+        private Player PlayerGameItem;
 
         /// <summary>
         /// ParticleEmitter der einen Explosionseffekt erzeugt.
@@ -36,43 +33,35 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
         /// </remarks>
-        public Explosion Explosion
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        private Explosion Explosion;
 
         /// <summary>
         /// ParticleEmitter der einen Effekt erzeugt, welcher den Antrieb des Spielerschiffs darstellt.
         /// </summary>
-        public PlayerShipEngine PlayerShipEngine
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
+        private PlayerShipEngine PlayerShipEngine;
+    
         /// <summary>
-        /// Referenz auf das Player-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// Erstellt eine Representation der Spielerfigur.
         /// </summary>
-        public ModelSection.Player PlayerGameItem
+        public PlayerRepresentation(Player PlayerGameItem, GraphicsDeviceManager graphics)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            this.model = ViewContent.RepresentationContent.PlayerModel;
+            this.PlayerGameItem = PlayerGameItem;
+
+            /* Vorläufige Matrizen.
+             * Wir müssen noch besprechen wie groß unsre 3D Ebene wird (dementsprechend müssen wir Camera und Projection initialisieren)
+             * Das Model muss evtl noch gedreht werden.
+             * */
+            this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position), Vector3.Forward, Vector3.Up);
+            this.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 1000.0f, 50.0f), Vector3.Zero, Vector3.Up);
+            this.Projection = Matrix.CreatePerspectiveFieldOfView(90.0f, graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight,
+                                        0.1f, 2000.0f);
+            //<WAHL>
+            this.PlayerShipEngine = null;
+            this.Explosion = null;
+            this.engineTextures = null;
+            this.explosionTextures = null;
+            //<WAHL>
         }
 
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
@@ -82,7 +71,21 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            throw new NotImplementedException();
+            foreach (ModelMesh mesh in model.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.LightingEnabled = true;
+                    effect.SpecularColor = new Vector3(1.0f, 1.0f, 1.0f);
+                    effect.SpecularPower = 100.0f;
+                    effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
+                    effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position));
+                    effect.View = this.Camera;
+                    effect.Projection = this.Projection;
+                }
+
+                mesh.Draw();
+            }
         }
     }
 }
