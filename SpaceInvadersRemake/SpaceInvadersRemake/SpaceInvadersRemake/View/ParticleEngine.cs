@@ -11,7 +11,7 @@ namespace SpaceInvadersRemake.View
     /// <summary>
     /// Erzeugt und Verwaltet alle Partikel und dient als Partikel Emitter. 
     /// </summary>
-    public abstract class ParticleEngine
+    public abstract class ParticleEngine : IView
     {
         private Random random;
         private List<Particle> particles;
@@ -36,10 +36,6 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         abstract public void Update();
 
-        /// <summary>
-        /// Zeichnet alle Partikel indem es deren <c>Draw()</c> Methode aufruft.
-        /// </summary>
-        /// <param name="spriteBatch"></param>
         abstract public void Draw(SpriteBatch spriteBatch);
     }
 }

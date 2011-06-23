@@ -16,7 +16,6 @@ namespace SpaceInvadersRemake.View
     {
         private Texture2D background;
         private GraphicsDeviceManager graphics;
-        private SpriteBatch spriteBatch;
     
         /// <summary>
         /// Initialisiert die Menüoberfläche
@@ -27,7 +26,6 @@ namespace SpaceInvadersRemake.View
         {
             this.background = ViewContent.UIContent.MenuBackgroundImage;
             this.graphics = graphics;
-            this.spriteBatch = ViewManager.spriteBatch;
             
 
             ButtonRepresentation[] tmp = new ButtonRepresentation[buttons.Length];
@@ -55,7 +53,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch)
         {
             throw new System.NotImplementedException();
         }

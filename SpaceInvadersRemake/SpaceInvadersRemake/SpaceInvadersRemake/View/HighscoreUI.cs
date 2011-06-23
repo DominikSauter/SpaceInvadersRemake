@@ -20,7 +20,6 @@ namespace SpaceInvadersRemake.View
         private SpriteFont font;
         private Texture2D background;
         private HighscoreManager highscoreManager;
-        private SpriteBatch spriteBatch;
         private GraphicsDeviceManager graphics; //um Auflösung zu verändern
 
         /// <summary>
@@ -31,7 +30,6 @@ namespace SpaceInvadersRemake.View
             this.font = ViewContent.UIContent.Font;
             this.background = ViewContent.UIContent.MenuBackgroundImage;
             this.frame = ViewContent.UIContent.SettingsBackground;
-            this.spriteBatch = ViewManager.spriteBatch;
             this.graphics = graphics;
             this.highscoreManager = highscoreManager;
     
@@ -40,7 +38,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch)
         {
             //Zeichnen des Hintergrundbildes
             spriteBatch.Begin();

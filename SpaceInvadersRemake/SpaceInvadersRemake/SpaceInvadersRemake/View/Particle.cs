@@ -13,7 +13,7 @@ namespace SpaceInvadersRemake.View
     /// <c>PartikelEngine</c> erzeugt und verwaltet.
     /// 
     /// </summary>
-    public class Particle
+    public class Particle : IView
     {
         /// <summary>
         /// Erzeugt einen einzelnen Partikel.
@@ -121,13 +121,9 @@ namespace SpaceInvadersRemake.View
             throw new System.NotImplementedException();
         }
 
-        /// <summary>
-        /// Zeichnet mit Hilfe des <c>SpriteBatch</c> das Partikel auf den Bildschirm
-        /// </summary>
-        /// <param name="spriteBatch">Objekt zum Zeichnen von 2D Grafiken</param>
         public void Draw(SpriteBatch spriteBatch)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

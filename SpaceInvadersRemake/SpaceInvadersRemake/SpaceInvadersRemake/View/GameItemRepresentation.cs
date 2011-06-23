@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
@@ -53,7 +54,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet das Objekt auf den Bildschirm
         /// </summary>
-        abstract public void Draw();
+        abstract public void Draw(SpriteBatch spriteBatch);
 
     }
 }

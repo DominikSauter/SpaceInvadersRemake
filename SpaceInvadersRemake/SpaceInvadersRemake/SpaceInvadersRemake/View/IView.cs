@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
@@ -14,6 +15,6 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// 	<c>draw</c> Methode die von den Unterklassen implementiert wird.
         /// </summary>
-        void Draw();
+        void Draw(SpriteBatch spriteBatch);
     }
 }

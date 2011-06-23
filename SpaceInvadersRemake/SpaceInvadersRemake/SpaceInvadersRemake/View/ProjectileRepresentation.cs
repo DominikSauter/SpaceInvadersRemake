@@ -30,19 +30,16 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Zeichnet das Spielerschiff auf den Bildschirm.
-        /// </summary>
-        public override void Draw()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Erstellt eine Representation eines Projektils.
         /// </summary>
         public ProjectileRepresentation()
         {
             throw new System.NotImplementedException();
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            throw new NotImplementedException();
         }
     }
 }

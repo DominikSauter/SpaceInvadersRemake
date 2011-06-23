@@ -10,7 +10,6 @@ namespace SpaceInvadersRemake.View
 {
     public class CreditsUI : SpaceInvadersRemake.View.IView
     {
-        private SpriteBatch spriteBatch;
         private GraphicsDeviceManager graphics;
 
         private SpriteFont font;
@@ -23,7 +22,6 @@ namespace SpaceInvadersRemake.View
     
         public CreditsUI(GraphicsDeviceManager graphics)
         {
-            this.spriteBatch = ViewManager.spriteBatch;
             this.graphics = graphics;
 
             this.font = ViewContent.UIContent.Font;
@@ -55,7 +53,7 @@ namespace SpaceInvadersRemake.View
             private set;
         }
 
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Begin();
 
