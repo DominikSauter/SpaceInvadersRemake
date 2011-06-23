@@ -62,12 +62,19 @@ namespace SpaceInvadersRemake.View
             //Laden des Representation Contents
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
             RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/Schild_TextureAtlas");
+            RepresentationContent.AlienModel = Content.Load<Model>("3D Models/Alienschiff");
+            RepresentationContent.PlayerModel = Content.Load<Model>("3D Models/Spielerschiff");
+            RepresentationContent.MothershipModel = Content.Load<Model>("3D Models/Mutterschiff");
+            RepresentationContent.AlienTextures.Add(Content.Load<Texture2D>("3D Model Textures/psionic"));
+            //<WAHL>
+            //RepresentationContent.BossModel = Content.Load<Model>("3D Models/Minibossschiff");
+            //</WAHL>
 
             //Laden des EffectContents
         }
 
         /// <summary>
-        /// Berechnet die kugelförmigen Hitboxen der 3D Modelle
+        /// Berechnet die Hitspheres der 3D Modelle
         /// </summary>
         public static void ComputeHitspheres()
         {
@@ -86,15 +93,17 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Erstellt anhand eines 3D Models eine Hitbox, die das komplette Model umgibt.
+        /// Erstellt anhand eines 3D Models eine Hitsphere, die das komplette Model umgibt.
         /// </summary>
-        /// <param name="model3D">Model von dem die Hitbox zu berechnen ist.</param>
-        /// <returns>Hitbox für das 3D Model</returns>
+        /// <param name="model3D">Model von dem die Hitsphere zu berechnen ist.</param>
+        /// <returns>Hitsphere für das 3D Model</returns>
         private static ModelHitsphere computeBigModelHitsphere(Model model3D)
         {
-            double maxRadius = 0;
+            //Hitsphere, welche das gesamte Model umgibt
             BoundingSphere finalSphere = new BoundingSphere(Vector3.Zero, 0.0f);
             BoundingSphere tmpSphere;
+
+            //Es werden die BoundingSphere's alle Meshes zusammengeführt um am Ende die finale Hitsphere zu bekommen.
             foreach (ModelMesh mesh in model3D.Meshes)
             {
                 tmpSphere = mesh.BoundingSphere;
@@ -105,10 +114,10 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        ///  Erstellt anhand einer 2D Grafik eine Hitbox, welche die komplette Grafik umgibt.
+        ///  Erstellt anhand einer 2D Grafik eine Hitsphere, welche die komplette Grafik umgibt.
         /// </summary>
-        /// <param name="graphic">Grafik von der die Hitbox zu berechnen ist.</param>
-        /// <returns>Hitbox für die 2D Grafik</returns>
+        /// <param name="graphic">Grafik von der die Hitsphere zu berechnen ist.</param>
+        /// <returns>Hitsphere für die 2D Grafik</returns>
         private static ModelHitsphere computeBigTextureHitsphere(Texture2D graphic)
         {
             //Mittelpunkt der Grafik
