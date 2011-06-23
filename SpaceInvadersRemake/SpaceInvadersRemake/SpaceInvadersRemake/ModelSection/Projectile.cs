@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
+
+// Implementiert von Tobias
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -45,6 +44,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Hit;
 
+        /// <summary>
+        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen. 
+        /// Innerhalb der Methode wird der Schaden am übergebenen Objekt berechnet,
+        /// oder PowerUps angewendet. Außerdem wird das <c>Hit</c>-Event ausgelöst.
+        /// </summary>
+        /// <remarks>
+        /// Bei der Kollisionsprüfung wird nur verhindert, dass zwei gleichartige Objekte kollidieren. 
+        /// Deshalb muss in dieser Methode geprüft werden, ob eine Kollision mit dem übergebenen Objekt überhaupt sinnvoll ist.
+        /// </remarks>
+        /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
@@ -78,11 +87,16 @@ namespace SpaceInvadersRemake.ModelSection
         {
             this.ProjectileType = projectileType;
             this.FlightDirection = flightDirection;
+            this.FlightDirection.Normalize();
 
             if (Projectile.Created != null)
                 Projectile.Created(this, EventArgs.Empty);
         }
 
+        /// <summary>
+        /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
+        /// Sie sorgt dafür, dass das <c>Destroyed</c>-Event ausgelöst wird.
+        /// </summary>
         protected override void Destroy()
         {
             IsAlive = false;

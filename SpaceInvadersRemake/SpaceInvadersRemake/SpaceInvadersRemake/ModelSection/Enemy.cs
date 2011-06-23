@@ -1,5 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 
+// Implementiert von Tobias
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -16,6 +18,14 @@ namespace SpaceInvadersRemake.ModelSection
             protected set;
         }
 
+        /// <summary>
+        /// Bewegt das Objekt in die gewünschte Richtung, dabei werden die x- und die y-Komponente mit denen der maximalen Geschwindigkeit multipliziert.
+        /// </summary>
+        /// <remarks>
+        /// Der übergebene Richtungsvektor wird vor der Multiplikation normalisiert.
+        /// </remarks>
+        /// <param name="direction">Bewegungsrichtung</param>
+        /// <returns>Boole'scher Wert, der angibt ob die Bewegung ohne Probleme durchgeführt werden konnte. <c>true</c>: erfolg; <c>false</c>: es gab Probleme</returns>
         public override bool Move(Vector2 direction)
         {
             bool result = true;
@@ -33,14 +43,16 @@ namespace SpaceInvadersRemake.ModelSection
             return result;
         }
 
+        /// <summary>
+        /// Teilt dem Objekt mit, dass es versuchen soll zu schießen.
+        /// </summary>
+        /// <remarks>
+        /// Wenn das Objekt nicht schießen kann, dann geschieht nichts.
+        /// </remarks>
+        /// <param name="gameTime">Spielzeit</param>
         public override void Shoot(GameTime gameTime)
         {
             Weapon.Fire(Position, CoordinateConstants.Down, gameTime);
-        }
-
-        public override void Update(GameTime gameTime)
-        {
-            // leer, da Gegner nich geupdated werden müssen
         }
 
         /// <summary>
