@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
+// Implementiert von Tobias
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -51,6 +53,10 @@ namespace SpaceInvadersRemake.ModelSection
             Position = startPosition;
         }
 
+        /// <summary>
+        /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
+        /// Sie sorgt dafür, dass das <c>Destroyed</c>-Event ausgelöst wird.
+        /// </summary>
         protected override void Destroy()
         {
             Lives--;
@@ -82,6 +88,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
+        /// <summary>
+        /// Bewegt das Objekt in die gewünschte Richtung, dabei werden die x- und die y-Komponente mit denen der maximalen Geschwindigkeit multipliziert.
+        /// </summary>
+        /// <remarks>
+        /// Der übergebene Richtungsvektor wird vor der Multiplikation normalisiert.
+        /// </remarks>
+        /// <param name="direction">Bewegungsrichtung</param>
+        /// <returns>Boole'scher Wert, der angibt ob die Bewegung ohne Probleme durchgeführt werden konnte. <c>true</c>: erfolg; <c>false</c>: es gab Probleme</returns>
         public override bool Move(Vector2 direction)
         {
             direction.Normalize();
@@ -101,16 +115,38 @@ namespace SpaceInvadersRemake.ModelSection
             return true;
         }
 
+        /// <summary>
+        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen. 
+        /// Innerhalb der Methode wird der Schaden am übergebenen Objekt berechnet,
+        /// oder PowerUps angewendet. Außerdem wird das <c>Hit</c>-Event ausgelöst.
+        /// </summary>
+        /// <remarks>
+        /// Bei der Kollisionsprüfung wird nur verhindert, dass zwei gleichartige Objekte kollidieren. 
+        /// Deshalb muss in dieser Methode geprüft werden, ob eine Kollision mit dem übergebenen Objekt überhaupt sinnvoll ist.
+        /// </remarks>
+        /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
         }
 
+
+        /// <summary>
+        /// In dieser Methode werden alle Werte aktualisiert, die nicht durch einen Controller beeinflusst werden können.
+        /// </summary>
+        /// <param name="gameTime">Spielzeit</param>
         public override void Update(GameTime gameTime)
         {
             //TODO: PowerUp-System im Wahlteil hinzufügen
         }
 
+        /// <summary>
+        /// Teilt dem Objekt mit, dass es versuchen soll zu schießen.
+        /// </summary>
+        /// <remarks>
+        /// Wenn das Objekt nicht schießen kann, dann geschieht nichts.
+        /// </remarks>
+        /// <param name="gameTime">Spielzeit</param>
         public override void Shoot(GameTime gameTime)
         {
             Weapon.Fire(Position, CoordinateConstants.Up, gameTime);
