@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Dodo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +16,9 @@ namespace SpaceInvadersRemake.View
         private SpriteFont font;
         private Texture2D backgroundImage;
 
-        //TEST-TEST
+        /* ~~~~~~~~~~~~TEST~~~~~~~~~~~~~~~
+         * Folgende 3 Felder dienen zum Testen einer Laufschrift in den Credits
+         * */
         private Vector2 textPos;
         private float textSpeed;
         private bool textEnd;
@@ -27,12 +30,12 @@ namespace SpaceInvadersRemake.View
             this.font = ViewContent.UIContent.Font;
             this.backgroundImage = ViewContent.UIContent.MenuBackgroundImage;
 
-            //TEXT-TEST
+            /* ~~~~~~~~~~~~TEST~~~~~~~~~~~~~~~
+            * Folgende 4 Zuweisungen dienen zum Testen einer Laufschrift in den Credits
+            * */
             this.textPos = new Vector2(200.0f, 100.0f);
             this.textSpeed = 1.0f;
             textEnd = false;
-
-            //TEXT-TEST für die Credits
             this.CreditsText = "~ Space Invaders Remake ~\n"
                 + "~~~~~~~~~~~~~~~~~~~~~~~~\n"
                 + "\n"
@@ -62,6 +65,9 @@ namespace SpaceInvadersRemake.View
 
             spriteBatch.End();
 
+            /* ~~~~~~~~~~~~TEST~~~~~~~~~~~~~~~
+            * Folgende if-else-Anweisung dient zum Testen einer Laufschrift in den Credits
+            * */
             if (!this.textEnd)
             {
                 this.textPos.Y -= this.textSpeed;
