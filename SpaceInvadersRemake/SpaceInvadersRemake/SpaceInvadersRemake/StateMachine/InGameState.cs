@@ -21,6 +21,13 @@ namespace SpaceInvadersRemake.StateMachine
         {
         }
 
+        protected override void Initialise()
+        {
+            ViewInitialize();
+            ControllerInitialize();
+            ModelInitialize();
+        }
+
         /// <summary>
         /// Wechselt in den BreakState (Pausemenü).
         /// </summary>
