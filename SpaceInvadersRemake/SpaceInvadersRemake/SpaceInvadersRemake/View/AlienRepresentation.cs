@@ -58,17 +58,14 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        /// <summary>
-        /// Zeichnet ein Alienschiff auf den Bildschirm.
-        /// </summary>
-        public override void Draw()
-        {
-            throw new NotImplementedException();
-        }
-
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
         {
             throw new System.NotImplementedException();
+        }
+
+        public override void Draw(SpriteBatch spriteBatch)
+        {
+            throw new NotImplementedException();
         }
     }
 }

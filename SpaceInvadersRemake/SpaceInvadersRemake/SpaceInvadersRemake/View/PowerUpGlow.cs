@@ -51,11 +51,7 @@ namespace SpaceInvadersRemake.View
             throw new NotImplementedException();
         }
 
-        /// <summary>
-        /// Leitet die Draw()-Methode an die Partikel weiter.
-        /// </summary>
-        /// <param name="spriteBatch">Objekt zum Zeichnen von 2D Grafiken</param>
-        public override void Draw(Microsoft.Xna.Framework.Graphics.SpriteBatch spriteBatch)
+        public override void Draw(SpriteBatch spriteBatch)
         {
             throw new NotImplementedException();
         }

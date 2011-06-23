@@ -326,7 +326,7 @@ namespace SpaceInvadersRemake.View
         {
             foreach (IView listItem in ViewItemList)
             {
-                listItem.Draw();
+                listItem.Draw(((GameManager)game).spriteBatch);
             }
         }
 

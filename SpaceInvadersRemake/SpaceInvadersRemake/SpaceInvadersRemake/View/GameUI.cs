@@ -17,7 +17,6 @@ namespace SpaceInvadersRemake.View
     public class GameUI : IView
     {
         private GraphicsDeviceManager graphics;
-        private SpriteBatch spriteBatch;
 
         private Texture2D gameBackgroundImage;
         private Texture2D hudBackgroundTexture;
@@ -35,7 +34,6 @@ namespace SpaceInvadersRemake.View
         public GameUI(GameCourseManager gameCourseMngr, GraphicsDeviceManager graphics)
         {
             this.graphics = graphics;
-            this.spriteBatch = ViewManager.spriteBatch;
 
             this.lives = gameCourseMngr.GameCourse.Player.Lives;
             this.score = gameCourseMngr.GameCourse.Player.Score;
@@ -50,7 +48,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
-        public void Draw()
+        public void Draw(SpriteBatch spriteBatch)
         {
             //Counter, der angibt wie oft die HUD Grafik (32x60) gezeichnet werden muss.
             int hudTileCount = graphics.PreferredBackBufferWidth / this.hudBackgroundTexture.Width;

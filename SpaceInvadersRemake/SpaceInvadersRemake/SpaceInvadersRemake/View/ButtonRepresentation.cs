@@ -10,7 +10,7 @@ namespace SpaceInvadersRemake.View
     /// <summary>
     /// Diese Klasse kümmert sich um die Darstellung eines Controls.
     /// </summary>
-    public class ButtonRepresentation
+    public class ButtonRepresentation : IView
     {
         private Texture2D buttonTexture;
         private SpriteFont font;
@@ -26,6 +26,11 @@ namespace SpaceInvadersRemake.View
         private void labelButton(string buttonLabel)
         {
             throw new System.NotImplementedException();
+        }
+
+        public void Draw(SpriteBatch spriteBatch)
+        {
+            throw new NotImplementedException();
         }
     }
 }
