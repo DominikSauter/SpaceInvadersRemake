@@ -15,6 +15,9 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public static class PlaneProjector
     {
+        public static float scaleFactor = 10.0f;
+
+        //private static
         /// <summary>
         /// Rechnet einen Positionsvektor in der 2D Ebene in einen Positionsvektor im 3D Raum um.
         /// </summary>
@@ -22,7 +25,7 @@ namespace SpaceInvadersRemake.View
         /// <returns>3D Positionsvektor</returns>
         public static Vector3 Convert2DTo3D(Vector2 vector2D)
         {
-            throw new System.NotImplementedException();
+            return new Vector3(vector2D.X * scaleFactor, 0, vector2D.Y * scaleFactor);
         }
     }
 }
