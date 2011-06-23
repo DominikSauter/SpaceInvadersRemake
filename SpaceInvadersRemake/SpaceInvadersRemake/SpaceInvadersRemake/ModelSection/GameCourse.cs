@@ -70,6 +70,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public LinkedList<IGameItem> NextWave(GameTime gameTime)
         {
+            return null; //HACK: So ist wenigstens der Fehler weg - TB
+            //TODO: Methode ohne Fehler lauffähig machen - TB
             waveStartingTime = gameTime;
 
             if (WaveCounter == 0)
