@@ -27,14 +27,14 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Player">
     <Position X="12.5" Y="53" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAABBgAAAIAAAAAAABAAAQDAAAIAAQAEIA=</HashCode>
+      <HashCode>AgQAAAAAAIAABBgAQAIAAAAAAABAAAQDAAAIAAQAEIA=</HashCode>
       <FileName>ModelSection\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Enemy">
     <Position X="14.5" Y="53" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAAIAABAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAIAABAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -153,7 +153,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.GameItem">
     <Position X="16.5" Y="45.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AwQAAAAAAIAgBAAgAABAAAAAAARAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AwQAAACAAIAgBAAgAABAAAAAAARAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ModelSection\GameItem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.648" />
@@ -182,7 +182,7 @@
   <Class Name="SpaceInvadersRemake.Controller.AIController">
     <Position X="67.5" Y="42" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>Controller\AIController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -297,7 +297,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.State">
     <Position X="9.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAASACABAAAAAAAAAAAAANQAgIAAgAAgAAAAA=</HashCode>
+      <HashCode>AQAAAAAAASACARAAAAAAAAAAAAANQAgIAAgAAgAAAAA=</HashCode>
       <FileName>StateMachine\State.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -327,7 +327,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.InGameState">
     <Position X="5.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAEQAAAIAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAQAAAAAEAAAAAAAEQAAAIAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\InGameState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -569,7 +569,7 @@
   <Class Name="SpaceInvadersRemake.View.GameUI">
     <Position X="38.75" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAIAAEAAAAAAAgAAAAAIBAAAAAIAAAgAACAAAAAEAAA=</HashCode>
+      <HashCode>CAIAAAAAAAAAAgAAAAAIBAAAAAIAAAgAACAAAAAEAAA=</HashCode>
       <FileName>View\GameUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -585,7 +585,7 @@
   <Class Name="SpaceInvadersRemake.View.MenuUI">
     <Position X="43.5" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAAAAIAAIgA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAACAIAAIAA=</HashCode>
       <FileName>View\MenuUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -593,7 +593,7 @@
   <Class Name="SpaceInvadersRemake.View.ButtonRepresentation">
     <Position X="50.75" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAQAAAgAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAIAgAgAAAAAAAAAAAAAAACAAAAAgAAQAAA=</HashCode>
       <FileName>View\ButtonRepresentation.cs</FileName>
       <NewMemberFileName>ButtonRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -710,7 +710,7 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.ModelHitsphere">
-    <Position X="50.75" Y="3.25" Width="1.5" />
+    <Position X="50.75" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAACAABAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAIA=</HashCode>
       <FileName>View\ModelHitsphere.cs</FileName>
@@ -728,7 +728,7 @@
   <Interface Name="SpaceInvadersRemake.ModelSection.IGameItem">
     <Position X="16.5" Y="41.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AwQAAAAAAIAgBAAgAAAAAAAAAAQAAAAAAAAAAAAEAAA=</HashCode>
+      <HashCode>AwQAAACAAIAgBAAgAAAAAAAAAAQAAAAAAAAAAAAEAAA=</HashCode>
       <FileName>ModelSection\IGameItem.cs</FileName>
     </TypeIdentifier>
   </Interface>
