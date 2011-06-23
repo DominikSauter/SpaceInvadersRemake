@@ -45,8 +45,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         /// <param name="position">Position</param>
         /// <param name="hitpoints">Lebenspunkte</param>
-        public Shield(Vector2 position, int hitpoints)
-            : base(position, Vector2.Zero, hitpoints)
+        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
+        public Shield(Vector2 position, int hitpoints, int damage)
+            : base(position, Vector2.Zero, hitpoints, damage)
         {
             if (Shield.Created != null)
                 Shield.Created(this, EventArgs.Empty);

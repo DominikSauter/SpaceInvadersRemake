@@ -47,10 +47,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
         /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
         /// <param name="weapon">Waffe</param>
         /// <param name="scoreGain">Punktwert des Mutterschiffs</param>
-        public Mothership(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int scoreGain)
-            : base(position, velocity, hitpoints, weapon, scoreGain)
+        public Mothership(Vector2 position, Vector2 velocity, int hitpoints, int damage, Weapon weapon, int scoreGain)
+            : base(position, velocity, hitpoints, damage, weapon, scoreGain)
         {
             if (Mothership.Created != null)
                 Mothership.Created(this, EventArgs.Empty);

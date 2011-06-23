@@ -24,9 +24,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="position">Startposition</param>
         /// <param name="velocity">Maximale Geschwindigkeit</param>
         /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
         /// <param name="weapon">Waffe</param>
-        public Ship(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon)
-            : base(position, velocity, hitpoints)
+        public Ship(Vector2 position, Vector2 velocity, int hitpoints, int damage, Weapon weapon)
+            : base(position, velocity, hitpoints, damage)
         {
             this.Weapon = weapon;
         }

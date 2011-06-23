@@ -48,6 +48,15 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
+        /// Der Schaden, die einem anderen GameItem zugefügt wird
+        /// </summary>
+        public int Damage
+        {
+            get;
+            protected set;
+        }
+
+        /// <summary>
         /// Zeigt an ob das Objekt gelöscht werden kann.
         /// </summary>
         public bool IsAlive
@@ -143,12 +152,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// </remarks>
         /// <param name="position">StartPosition</param>
         /// <param name="velocity">Maximale Geschwindigkeit</param>
-        /// <param name="Hitpoints">Lebenspunkte</param>
-        public GameItem(Vector2 position, Vector2 velocity, int Hitpoints)
+        /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="damage">Schaden der anderen zugefügt wird</param>
+        public GameItem(Vector2 position, Vector2 velocity, int hitpoints, int damage)
         {
             this.Position = position;
             this.Velocity = velocity;
             this.Hitpoints = Hitpoints;
+            this.Damage = damage;
             this.IsAlive = true;
 
             GameItem.GameItemList.AddLast(this);

@@ -41,6 +41,15 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
+        /// Der Schaden, die einem anderen GameItem zugefügt wird
+        /// </summary>
+        int Damage
+        {
+            get;
+            set;
+        }
+
+        /// <summary>
         /// Zeigt an ob das Objekt gelöscht werden kann.
         /// </summary>
         bool IsAlive

@@ -23,6 +23,11 @@ namespace SpaceInvadersRemake.ModelSection
         private Vector2 startPosition;
 
         /// <summary>
+        /// Feld zum Speichern der Grundlebenspunkte des Spielers
+        /// </summary>
+        private int baseHitpoints;
+
+        /// <summary>
         /// Die aktuelle Punktzahl des Spielers
         /// </summary>
         public int Score
@@ -46,9 +51,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Reset()
         {
-            Hitpoints = 1;
+            Hitpoints = baseHitpoints;
             Weapon = new PlayerNormalWeapon();
-            ActivePowerUps.Clear();
+            //ActivePowerUps.Clear();
             Velocity = baseVelocity;
             Position = startPosition;
         }
@@ -164,7 +169,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Wenn bereits ein gleiches <c>ActivePowerUp</c> in der Liste ist, wird dieses gelöscht ohne das <c>Remove-</c>Delegate auszulösen.
         /// Für weitere Informationen sollten unbedingt die Hinweise zur PowerUps-Liste <c>ActivePowerUps</c> beachtet werden.
         /// </remarks>
-        /// <param name="powerUpIcons">Das neue PowerUps</param>
+        /// <param name="powerUp">Das neue PowerUps</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
             throw new NotImplementedException();
@@ -191,13 +196,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
+        /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
         /// <param name="lives">Anzahl Leben</param>
         /// <param name="weapon">Startwaffe</param>
-        public Player(Vector2 position, Vector2 velocity, int hitpoints, Weapon weapon, int lives)
-            : base(position, velocity, hitpoints, weapon)
+        public Player(Vector2 position, Vector2 velocity, int hitpoints, int damage, Weapon weapon, int lives)
+            : base(position, velocity, hitpoints, damage, weapon)
         {
             this.startPosition = position;
             this.baseVelocity = velocity;
+            this.baseHitpoints = hitpoints;
             this.Lives = lives;
 
             ActivePowerUps = null; //TODO: PowerUps-Liste initialisieren
@@ -213,7 +221,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Fügt der Punktzahl des Spielers Punkte hinzu. Wird verwendet um sich am <c>ScoreGained</c>-Event der Gegner-Klassen anzumelden.
         /// </summary>
-        /// <param name="enemy">Gegner der das Event ausgelöst hat</param>
+        /// <param name="sender">Gegner der das Event ausgelöst hat</param>
         /// <param name="e">EventArgs werden nich verwendet</param>
         public void AddScore(Object sender, EventArgs e)
         {
