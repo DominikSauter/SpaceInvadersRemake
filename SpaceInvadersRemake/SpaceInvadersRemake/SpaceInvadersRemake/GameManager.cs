@@ -53,6 +53,10 @@ namespace SpaceInvadersRemake
 
             //[VIEW]
             //View.ViewContent.ComputeHitspheres();
+
+            // <STST>
+            this.StateManager = new StateManager(this);
+            // </STST>
         }
 
         /// <summary>
