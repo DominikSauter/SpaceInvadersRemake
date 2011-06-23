@@ -82,8 +82,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="projectileType">Art des Projektils</param>
         /// <param name="hitpoints">Lebenspunkte</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
-        public Projectile(Vector2 position, Vector2 flightDirection, ProjectileTypeEnum projectileType, int hitpoints, Vector2 velocity)
-            : base(position, velocity, hitpoints)
+        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
+        public Projectile(Vector2 position, Vector2 flightDirection, ProjectileTypeEnum projectileType, int hitpoints, Vector2 velocity, int damage)
+            : base(position, velocity, hitpoints, damage)
         {
             this.ProjectileType = projectileType;
             this.FlightDirection = flightDirection;
