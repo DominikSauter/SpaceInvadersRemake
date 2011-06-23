@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.StateMachine;
 
 
+//Implementiert von Chris
 namespace SpaceInvadersRemake.Controller
 {
     /// <summary>
@@ -26,7 +27,8 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
-        public BlockWaveAI(int shootingFrequency, ICollection<IGameItem> controllees) :base (shootingFrequency, controllees)
+        public BlockWaveAI(int shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
+            : base(shootingFrequency, controllees, velocityIncrease)
         {
             
         }
@@ -74,7 +76,17 @@ namespace SpaceInvadersRemake.Controller
                 //Navigiert alle GameItem nach unten.
                 foreach (IGameItem item in Controllees)
                 {
-                    item.Move(CoordinateConstants.Down);
+                    if (item.IsAlive)
+                    {
+                        item.Move(CoordinateConstants.Down);
+                    }
+                    else 
+                    {
+                        //Entferne Tote GameItems
+                        this.Controllees.Remove(item);
+                    
+                    }
+                   
                 }
                 moveDown = false;
             }
@@ -82,11 +94,21 @@ namespace SpaceInvadersRemake.Controller
             {
                 foreach (IGameItem item in Controllees)
                 {
-                    if (!item.Move(currentDirection))
+                    if (item.IsAlive)
                     {
-                        moveDown = true;
+                        if (!item.Move(currentDirection))
+                        {
+                            moveDown = true;
+
+                        }
 
                     }
+                    else //Entferne Tote GameItems
+                    {
+                        this.Controllees.Remove(item);
+                    }
+
+                    
                     
                   
                     
@@ -107,7 +129,14 @@ namespace SpaceInvadersRemake.Controller
                 //Alle mann zurück!
                 foreach (IGameItem item in Controllees)
                 {
-                    item.Move(currentDirection);
+                    if (item.IsAlive)
+                    {
+                        item.Move(currentDirection);
+                    }
+                    else //Totes Item
+                    {
+                        this.Controllees.Remove(item);
+                    }
                 }
             }
 

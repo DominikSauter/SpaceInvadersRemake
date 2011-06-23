@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
+using Microsoft.Xna.Framework;
+
+//IMplementiert von Chris
 namespace SpaceInvadersRemake.Controller
 {
     /// <summary>
@@ -23,10 +26,11 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll.</param>
-       protected AIController(int shootingFrequency, IGameItem controllee)
+        protected AIController(int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
             : base(controllee)
         {
             this.ShootingFrequency = shootingFrequency;
+            this.VelocityIncrease = velocityIncrease;
         }
 
         /// <summary>
@@ -41,5 +45,7 @@ namespace SpaceInvadersRemake.Controller
 
            set;
        }
+
+       public Vector2 VelocityIncrease { get; set; }
     }
 }

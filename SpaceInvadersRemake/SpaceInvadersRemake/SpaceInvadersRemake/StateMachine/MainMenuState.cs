@@ -6,6 +6,7 @@ using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    // by STST
     /// <summary>
     /// Stellt das Hauptmenü dar.
     /// </summary>

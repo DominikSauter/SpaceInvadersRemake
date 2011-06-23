@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -23,8 +24,8 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll..</param>
-        protected AlienAI(int shootingFrequency, IGameItem controllee)
-            : base(shootingFrequency, controllee)
+        protected AlienAI(int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+            : base(shootingFrequency, controllee, velocityIncrease)
         {
             //Nichts zu erledigen
         }

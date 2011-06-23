@@ -5,6 +5,7 @@ using System.Text;
 
 namespace SpaceInvadersRemake.StateMachine
 {
+    // by STST
     /// <summary>
     /// Stellt die Pause im Spiel dar.
     /// </summary>
