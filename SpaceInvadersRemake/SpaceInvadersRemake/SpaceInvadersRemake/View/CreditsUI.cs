@@ -35,7 +35,8 @@ namespace SpaceInvadersRemake.View
             * */
             this.textSpeed = 1.0f;
             textEnd = false;
-            this.CreditsText = "~ Space Invaders Remake ~\n"
+            this.CreditsText = "~~~~~~~~~~~~~~~~~~~~~~~~\n"
+                + "~ Space Invaders Remake ~\n"
                 + "~~~~~~~~~~~~~~~~~~~~~~~~\n"
                 + "\n"
                 + "An diesem Projekt waren beteiligt:\n"
@@ -46,7 +47,7 @@ namespace SpaceInvadersRemake.View
                 + "Steffen Stehmann\n"
                 + "Tobias \"der Doofe\" Bast\n"
                 + "\n"
-                + "Wir danken einfach allen! Ihr seid super!!!";
+                + "Wir danken einfach allen!\nIhr seid super doof!!!";
             this.textPos = new Vector2((graphics.PreferredBackBufferWidth - font.MeasureString(this.CreditsText).X) / 2, graphics.PreferredBackBufferHeight);
         }
 
@@ -61,7 +62,7 @@ namespace SpaceInvadersRemake.View
             spriteBatch.Begin();
 
             spriteBatch.Draw(this.backgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
-            spriteBatch.DrawString(this.font, this.CreditsText, this.textPos, Color.LimeGreen);
+            spriteBatch.DrawString(this.font, this.CreditsText, this.textPos, Color.LightGreen);
 
             spriteBatch.End();
 
@@ -73,7 +74,7 @@ namespace SpaceInvadersRemake.View
                 this.textPos.Y -= this.textSpeed;
             }
 
-            if (this.textPos.Y == (graphics.PreferredBackBufferHeight - this.font.MeasureString(this.CreditsText).Y) / 2)
+            if (this.textPos.Y < (graphics.PreferredBackBufferHeight - this.font.MeasureString(this.CreditsText).Y) / 2)
             {
                 this.textEnd = true;
             }
