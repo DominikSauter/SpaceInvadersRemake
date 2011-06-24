@@ -165,7 +165,7 @@ namespace SpaceInvadersRemake.View
         public void ExplosionFX(object gameItem, EventArgs e)
         {
             EffectPlayer.Play(ViewContent.EffectContent.ExplosionSound);
-            //ANBINDUNG DER PARTIKEL ENGINGE NOCH ÜBERLEGEN!
+            //TODO Anbindung der PartikelEngine
         }
 
         /// <summary>
