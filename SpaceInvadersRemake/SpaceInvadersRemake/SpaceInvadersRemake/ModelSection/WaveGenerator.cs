@@ -25,7 +25,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="formation">gewünschte Formation der Welle</param>
         /// <param name="difficultyLevel">gewünschter Schwierigkeitsgrad</param>
         /// <returns>Eine Liste von Gegnern, die sie aktuelle Welle darstellen</returns>
-        public static List<IGameItem> CreateWave(BehaviourEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
+        public static LinkedList<IGameItem> CreateWave(BehaviourEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
         {
             throw new System.NotImplementedException();
             //SwitchCase über "Bestellung" 

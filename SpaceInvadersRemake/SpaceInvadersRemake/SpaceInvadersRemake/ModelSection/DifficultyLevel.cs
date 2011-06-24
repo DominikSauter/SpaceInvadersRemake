@@ -22,16 +22,18 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="hitpoints">Lebenspunkte der Gegner</param>
         /// <param name="shootingFrequency">Schussfrequenz der Gegner</param>
         /// <param name="velocityIncrease">Rate der Geschwindigkeitszunahme</param>
+        /// <param name="damage">Schaden der Gegner</param>
+        /// <param name="scoreGain">Punktzahl, die die Gegner bei Abschuss geben</param>
         /// <param name="velocity">Startgeschwindigkeit der Gegner</param>
-        private DifficultyLevel(int hitpoints, Vector2 velocity, int shootingFrequency, Vector2 velocityIncrease)
+        public DifficultyLevel(float hitpoints, Vector2 velocity, float shootingFrequency, Vector2 velocityIncrease, float damage, float scoreGain)
         {
             throw new System.NotImplementedException();
         }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Lebenspunkte der Aliens.
+        /// Schwierigkeitsspezifische Modifikation der Lebenspunkte der Aliens.
         /// </summary>
-        public int Hitpoints
+        public float Hitpoints
         {
             get
             {
@@ -41,7 +43,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Geschwindigkeit der Aliens.
+        /// Schwierigkeitsspezifische Modifikation der Geschwindigkeit der Aliens.
         /// </summary>
         public Vector2 Velocity
         {
@@ -53,9 +55,9 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Schussfrequenz der Aliens.
+        /// Schwierigkeitsspezifische Modifikation der Schussfrequenz der Aliens.
         /// </summary>
-        public int ShootingFrequency
+        public float ShootingFrequency
         {
             get
             {
@@ -65,7 +67,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Geschwindigkeitserhöhung der Aliens.
+        /// Schwierigkeitsspezifische Modifikation der Geschwindigkeitserhöhung der Aliens.
         /// </summary>
         public Vector2 VelocityIncrease
         {
@@ -108,6 +110,34 @@ namespace SpaceInvadersRemake.ModelSection
         /// Konfiguration der Parameter für die 3. Schwierigkeitsstufe ("schwer").
         /// </summary>
         public static DifficultyLevel HardDifficulty
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
+        /// Schwierigkeitsspezifische Modifikation des Schadens der Aliens.
+        /// </summary>
+        public float Damage
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
+        /// Schwierigkeitsspezifische Modifikation der Punktzahl, die der Spieler durch das Zerstören der Aliens erhält.
+        /// </summary>
+        public float ScoreGain
         {
             get
             {
