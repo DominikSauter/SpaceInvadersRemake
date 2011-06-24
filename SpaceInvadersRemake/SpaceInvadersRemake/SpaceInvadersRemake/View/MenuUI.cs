@@ -47,18 +47,18 @@ namespace SpaceInvadersRemake.View
             //TODO: position abhängig von fenster höhe, breite
             //TODO: unterscheidung zwischen einstellungsmenü und hauptmenü (state)
             //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
-            Vector2 position = new Vector2(200, 200);
+            Vector2 position = new Vector2(200, 100);
             spriteBatch.Begin();
 
             //Zeichnen des Hintergrunds
             spriteBatch.Draw(background , new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
 
-            spriteBatch.End(); // Hab das hierhin gesetzt, weil sonst ein Laufzeitfehler kommt - TB
+            spriteBatch.End();
 
             //Zeichnen der Buttons
             for (int i = 0; i < buttonRepresentation.Length; i++)
             {
-                position.Y += 100 * i;
+                position.Y += 50;
                 buttonRepresentation[i].Draw(spriteBatch, position);
             }           
         }
