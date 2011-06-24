@@ -52,7 +52,10 @@ namespace SpaceInvadersRemake.View
                 this.ViewItemList.Add(CreateGameUI(currentState, graphics));
                 this.EffectPlayer = new SoundEffects();
 
-                //Festlegen der Camera- und Projection-Matrix
+                /* Vorläufige Matrizen.
+                * Wir müssen noch besprechen wie groß unsre 3D Ebene wird (dementsprechend müssen wir Camera und Projection initialisieren)
+                * Das Model muss evtl noch gedreht werden.
+                * */
                 GameItemRepresentation.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 20.0f, -32.0f), new Vector3(0.0f, 0.0f, -116.0f), Vector3.Up);
                 GameItemRepresentation.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(27),
                     graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight, 1.0f, 392);
