@@ -33,7 +33,6 @@ namespace SpaceInvadersRemake.View
             /* ~~~~~~~~~~~~TEST~~~~~~~~~~~~~~~
             * Folgende 4 Zuweisungen dienen zum Testen einer Laufschrift in den Credits
             * */
-            this.textPos = new Vector2(200.0f, 100.0f);
             this.textSpeed = 1.0f;
             textEnd = false;
             this.CreditsText = "~ Space Invaders Remake ~\n"
@@ -48,6 +47,7 @@ namespace SpaceInvadersRemake.View
                 + "Tobias \"der Doofe\" Bast\n"
                 + "\n"
                 + "Wir danken einfach allen! Ihr seid super!!!";
+            this.textPos = new Vector2((graphics.PreferredBackBufferWidth - font.MeasureString(this.CreditsText).X) / 2, graphics.PreferredBackBufferHeight);
         }
 
         public String CreditsText
@@ -61,7 +61,7 @@ namespace SpaceInvadersRemake.View
             spriteBatch.Begin();
 
             spriteBatch.Draw(this.backgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
-            spriteBatch.DrawString(this.font, this.CreditsText, this.textPos, Color.White);
+            spriteBatch.DrawString(this.font, this.CreditsText, this.textPos, Color.LimeGreen);
 
             spriteBatch.End();
 
