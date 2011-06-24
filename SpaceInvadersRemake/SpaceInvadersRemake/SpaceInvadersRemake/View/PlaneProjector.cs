@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public static class PlaneProjector
     {
-        public static float scaleFactor = 10.0f;
+        public static float scaleFactor = 2.0f;
 
         //private static
         /// <summary>
@@ -24,9 +24,29 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         /// <param name="vector2D">2D Positionsvektor</param>
         /// <returns>3D Positionsvektor</returns>
-        public static Vector3 Convert2DTo3D(Vector2 vector2D)
+        public static Vector3 Convert2DTo3D(Vector2 itemPosition2D)
         {
-            return new Vector3(vector2D.X * scaleFactor, 0, vector2D.Y * scaleFactor);
+            return new Vector3(itemPosition2D.X * scaleFactor, 0, itemPosition2D.Y * scaleFactor);
+        }
+
+
+        /// <summary>
+        /// Berechnet eine 3D Position der Kamera anhand der 2D-Koordinaten und dem gewünschten Sichtwinkel
+        /// auf das Spielerschiff
+        /// </summary>
+        /// <param name="cameraPosition2D">Position der Kamera in der 2D Ebene</param>
+        /// <param name="angle">Winkel der Kamera in Abhängigkeit zum Spielerschiff</param>
+        /// <returns>Position der Kamera im 3D-Raum</returns>
+        /// <remarks>Wichtig an den 2D-Koordinaten ist eigentlich nur die Y-Koordinate,
+        /// da im Spiel eine Zentralperspektive benutzt wird.</remarks>
+        public static Vector3 ComputeCameraPosition(Vector2 cameraPosition2D, float angle)
+        {
+            /* Berechnen der Höhe abhänging von der Y-Position in der 2D-Ebene und dem
+             * gewünschten Sichtwinkel auf das Spielerschiff.
+             * */
+            float yCoord3D = cameraPosition2D.Y / Math.Tan(angle);
+
+            return new Vector3(cameraPosition2D.X, yCoord3D, cameraPosition2D.Y)
         }
     }
 }
