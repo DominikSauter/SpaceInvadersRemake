@@ -12,6 +12,8 @@ namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Die MenuUI(MenuUserInterface) Klasse stellt die Menüoberfläche des Spiels dar.
+    /// Sie bekommt eine Liste mit <c>MenuControl</c>-Objekten übergeben, anhand dieser <c>ButtonRepresentations</c>-Objekte erzeugt werden,
+    /// die das Menü letzendlich darstellen.
     /// </summary>
     public class MenuUI : IView
     {
@@ -22,21 +24,19 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert die Menüoberfläche
         /// </summary>
-        /// <param name="buttons">MenuControl Elemente</param>
+        /// <param name="buttons">MenuControls bzw. Buttons</param>
         /// <param name="graphics"></param>
         public MenuUI(MenuControl[] buttons,  GraphicsDeviceManager graphics)
         {
             this.background = ViewContent.UIContent.MenuBackgroundImage;
             this.graphics = graphics;
-
-
             this.buttonRepresentation = new ButtonRepresentation[buttons.Length];
 
+            //Instanziiert ButtonRepresentation-Objekt für jedes MenuControl
             for (int i = 0; i < buttons.Length; i++)
             {
-                buttonRepresentation[i] = AddButton(buttons[i]);
+                buttonRepresentation[i] = new ButtonRepresentation(buttons[i]);
             }
-
         }
 
         /// <summary>
@@ -44,8 +44,9 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
-
-            //TODO: unterscheidung zwischen ienstellungsmenü und hauptmenü (state)
+            //TODO: position abhängig von fenster höhe, breite
+            //TODO: unterscheidung zwischen einstellungsmenü und hauptmenü (state)
+            //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
             Vector2 position = new Vector2(200, 200);
             spriteBatch.Begin();
 
@@ -54,90 +55,12 @@ namespace SpaceInvadersRemake.View
 
             spriteBatch.End(); // Hab das hierhin gesetzt, weil sonst ein Laufzeitfehler kommt - TB
 
-                //probieren ob Array.draw geht
-            //Buttons zeichnen
+            //Zeichnen der Buttons
             for (int i = 0; i < buttonRepresentation.Length; i++)
             {
                 position.Y += 100 * i;
-
-                if (buttonRepresentation[i].buttonItem is Button)
-                {
-                    buttonRepresentation[i].DrawButton(spriteBatch, position);
-                }
-                else
-                {
-                    buttonRepresentation[i].DrawSelect(spriteBatch, position);
-                }
-            }
-
-
-            
-        }
-
-        /// <summary>
-        /// Erstellt ein ButtonRepresentation Objekt welches zu der Liste hinzugefügt wird.
-        /// </summary>
-        /// <param name="button"> Von dem State übergebener Button</param>
-        public ButtonRepresentation AddButton(MenuControl button)
-        {
-            Color activeColor = Color.AliceBlue;
-            Color normalColor = Color.White;
-            ButtonRepresentation buttonRepresentation;
-
-            //Wenn button
-            if (button is Button) 
-            {
-                //active
-                if (button.Active)
-                {
-                    buttonRepresentation = new ButtonRepresentation(button.Text, activeColor, button);
-                }
-                else 
-                {
-                    buttonRepresentation = new ButtonRepresentation(button.Text, normalColor, button);
-                }
-            }
-
-            else if (button is ListSelect<DisplayMode>) //prüfen ob eine intanz von ListSelect vom Typ DisplayMode
-            { 
-               if (((ListSelect<DisplayMode>)button).Active) 
-               {
-                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<DisplayMode>)button).SelectedItem.ToString(), activeColor, button);
-               } 
-               else 
-               {
-                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<DisplayMode>)button).SelectedItem.ToString(), normalColor, button);
-               }
-            }
-
-            else if (button is ListSelect<float>)
-            { 
-               if (((ListSelect<float>)button).Active) 
-               {
-                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<float>)button).SelectedItem.ToString(), activeColor, button);
-               } 
-               else 
-               {
-                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<float>)button).SelectedItem.ToString(), normalColor, button);
-               }            
-            }
-
-            else
-            { 
-               if (((ListSelect<bool>)button).Active) 
-               {
-                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<bool>)button).SelectedItem.ToString(), activeColor, button);
-               } 
-               else 
-               {
-                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<bool>)button).SelectedItem.ToString(), normalColor, button);
-               }            
-            }
-
-            return buttonRepresentation;
-
-         //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
-         
+                buttonRepresentation[i].Draw(spriteBatch, position);
+            }           
         }
     }
 }

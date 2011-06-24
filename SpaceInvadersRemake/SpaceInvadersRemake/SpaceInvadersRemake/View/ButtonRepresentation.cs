@@ -5,81 +5,123 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+
 using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
-    /// Diese Klasse kümmert sich um die Darstellung eines Controls.
+    /// Diese Klasse kümmert sich um die Darstellung eines <c>MenuControl</c> bzw. eines Schaltflächen-Objekts. 
     /// </summary>
     public class ButtonRepresentation
     {
+        private MenuControl menuControl;
         private Texture2D buttonTexture;
         private SpriteFont font;
-        private string buttonLabel;
-        private string settingLabel;
-        private Color color; //Schriftfarbe, bei Active gefärbt, sonst weis
+        private Color activeColor; //Farbe für aktive Menü-Elemente
+        private Color normalColor;
 
-        //Zeigt von welchem Menü Item Typ
-        public MenuControl buttonItem 
-        { 
-            get; 
-            private set; 
-        }
 
         /// <summary>
-        /// Initialisiert das Button Objekt
+        /// Initialisiert die Schaltflächen
         /// </summary>
-        public ButtonRepresentation(String buttonLabel, Color color, MenuControl menuControl)
+        /// <param name="menuControl">Schaltflächen-Objekt</param>
+        public ButtonRepresentation(MenuControl menuControl)
         {
+            this.menuControl = menuControl;
+            this.font = ViewContent.UIContent.Font;
             this.buttonTexture = ViewContent.UIContent.MenuButton;
-            this.buttonLabel = buttonLabel;
-            this.font = ViewContent.UIContent.Font;
-            this.settingLabel = null;
-            this.color = color;
-            this.buttonItem = menuControl;
+            this.normalColor = Color.White;
+            this.activeColor = Color.AliceBlue;         
         }
-
-        public ButtonRepresentation(String buttonLabel, String settingLabel, Color color, MenuControl menuControl) 
+        
+        /// <summary>
+        /// Zeichnet eine Schlatfläche
+        /// </summary>
+        /// <param name="spriteBatch"></param>
+        /// <param name="position">Position für die Beschriftung der Schaltfläche</param>
+        public void Draw(SpriteBatch spriteBatch, Vector2 position)
         {
-            this.buttonTexture = ViewContent.UIContent.SettingsButton; //TODO: Select Button Textur ändern
-            this.buttonLabel = buttonLabel;
-            this.font = ViewContent.UIContent.Font;
-            this.settingLabel = settingLabel;
-            this.color = color;
-            this.buttonItem = menuControl;
-        }
-
-        public void DrawButton(SpriteBatch spriteBatch, Vector2 position)
-        {
-            spriteBatch.Begin();
-
-            //zeichnet Textur
-            spriteBatch.Draw(buttonTexture, position, color);
-
-            //zeichnet Beschriftung
-            spriteBatch.DrawString(font, buttonLabel, position, color);
-
-            spriteBatch.End();
-        }
-
-        public void DrawSelect(SpriteBatch spriteBatch, Vector2 position)
-        {
-            Vector2 fontSize = font.MeasureString(buttonLabel);
+            Vector2 fontSize = font.MeasureString(menuControl.Text);
             Vector2 selectPosition = new Vector2(position.X + fontSize.X, fontSize.Y);
             Vector2 selectTextPosition = new Vector2(selectPosition.X + 20, selectPosition.Y);
 
             spriteBatch.Begin();
 
-            //zeichnet Textur
-            spriteBatch.Draw(buttonTexture, selectPosition, color);
+            //Zeichnen eines Buttons
+            if (menuControl is Button)
+            {
+                //Buttontextur
+                spriteBatch.Draw(buttonTexture, position, Color.White);
 
-            //zeichnet Beschriftung
-            spriteBatch.DrawString(font, buttonLabel, position, color);
-            spriteBatch.DrawString(font, settingLabel, selectTextPosition, color);
+                //Buttonbeschriftung
+                if (menuControl.Active)
+                {
+                    //Aktiver Button
+                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), activeColor);
+                }
+                else
+                {
+                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), normalColor);
+                }
+            }
 
-            spriteBatch.End();
+            //Zeichnen eines Select-Buttons
+            else 
+            {
+                //Textur des Select-Buttons
+                spriteBatch.Draw(buttonTexture, selectPosition, Color.White);
+
+                //Objekte vom Typ DisplayMode (Verstellen der Auflösung)
+                if (menuControl is ListSelect<DisplayMode>) //HACK: menuControl.GetType() == typeof(ListSelect<>): bin mir nicht sicher ob das so funktioniert (Es soll geprüft werden ob der menuControl vom Typ der ListSelect ist.)
+                {
+                    //Beschriftung des Select-Buttons
+                    spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).SelectedItem.ToString(), selectTextPosition, normalColor);
+
+                    if (menuControl.Active)
+                    {
+                        //Aktiver Select-Button
+                        spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).Text, position, activeColor);
+                    }
+                    else 
+                    { 
+                        spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).Text, position, normalColor);
+                    }
+                }
+
+                //Objekte vom Typ float (Lautstärkeregelung)
+                if (menuControl is ListSelect<float>) 
+                {
+                    spriteBatch.DrawString(font, ((ListSelect<float>)menuControl).SelectedItem.ToString(), selectTextPosition, normalColor);
+
+                    if (menuControl.Active)
+                    {
+                        spriteBatch.DrawString(font, ((ListSelect<float>)menuControl).Text, position, activeColor);
+                    }
+                    else 
+                    { 
+                        spriteBatch.DrawString(font, ((ListSelect<float>)menuControl).Text, position, normalColor);
+                    }
+                }
+
+                //Objekte vom Typ bool (Vollbild an/aus)
+                if (menuControl is ListSelect<bool>)
+                {
+                    spriteBatch.DrawString(font, ((ListSelect<bool>)menuControl).SelectedItem.ToString(), selectTextPosition, normalColor);
+
+                    if (menuControl.Active)
+                    {
+                        spriteBatch.DrawString(font, ((ListSelect<bool>)menuControl).Text, position, activeColor);
+                    }
+                    else 
+                    { 
+                        spriteBatch.DrawString(font, ((ListSelect<bool>)menuControl).Text, position, normalColor);
+                    }
+                }
+            }
+
+          spriteBatch.End(); 
+
         }
-
     }
 }
