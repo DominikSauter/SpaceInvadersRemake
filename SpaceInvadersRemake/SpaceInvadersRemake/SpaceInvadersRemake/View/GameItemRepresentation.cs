@@ -16,21 +16,16 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Projektionsmatrix, welche die 3D-Darstellung auf den 2D-Bildschirm projiziert.
         /// </summary>
-        public Matrix Projection
+        public static Matrix Projection
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
         /// Kameramatrix, welche die Kameraposition sowie Sichtweite und Blickrichtung festlegt.
         /// </summary>
-        public Matrix Camera
+        public static Matrix Camera
         {
             get;
             set;
@@ -39,16 +34,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Positionsmatrix, welche die Position des 3D Models im Raum festlegt.
         /// </summary>
-        public Matrix World
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        protected Matrix World;
 
 
         /// <summary>

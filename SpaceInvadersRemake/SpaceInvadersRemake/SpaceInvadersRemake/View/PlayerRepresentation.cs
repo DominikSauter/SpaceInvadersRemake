@@ -53,9 +53,7 @@ namespace SpaceInvadersRemake.View
              * Das Model muss evtl noch gedreht werden.
              * */
             this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position), Vector3.Forward, Vector3.Up);
-            this.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 1000.0f, 50.0f), Vector3.Zero, Vector3.Up);
-            this.Projection = Matrix.CreatePerspectiveFieldOfView(90.0f, graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight,
-                                        0.1f, 2000.0f);
+
             //<WAHL>
             this.PlayerShipEngine = null;
             this.Explosion = null;
@@ -80,8 +78,8 @@ namespace SpaceInvadersRemake.View
                     effect.SpecularPower = 100.0f;
                     effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
                     effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position));
-                    effect.View = this.Camera;
-                    effect.Projection = this.Projection;
+                    effect.View = Camera;
+                    effect.Projection = Projection;
                 }
 
                 mesh.Draw();
