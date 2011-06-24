@@ -32,7 +32,7 @@ namespace SpaceInvadersRemake.View
             this.font = ViewContent.UIContent.Font;
             this.buttonTexture = ViewContent.UIContent.MenuButton;
             this.normalColor = Color.White;
-            this.activeColor = Color.AliceBlue;         
+            this.activeColor = new Color(14, 255, 20);         
         }
         
         /// <summary>
@@ -51,18 +51,19 @@ namespace SpaceInvadersRemake.View
             //Zeichnen eines Buttons
             if (menuControl is Button)
             {
-                //Buttontextur
-                spriteBatch.Draw(buttonTexture, position, Color.White);
-
                 //Buttonbeschriftung
                 if (menuControl.Active)
                 {
                     //Aktiver Button
                     spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), activeColor);
+                    //Buttontextur
+                    spriteBatch.Draw(buttonTexture, position, activeColor);
                 }
                 else
                 {
                     spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), normalColor);
+                    //Buttontextur
+                    spriteBatch.Draw(buttonTexture, position, normalColor);
                 }
             }
 
