@@ -5,39 +5,49 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Diese Klasse kümmert sich um die Darstellung eines Controls.
     /// </summary>
-    public class ButtonRepresentation : IView
+    public class ButtonRepresentation
     {
         private Texture2D buttonTexture;
         private SpriteFont font;
         private string buttonLabel;
         private string settingLabel;
-        Color color; //Schriftfarbe, bei Active gefärbt, sonst weis
+        private Color color; //Schriftfarbe, bei Active gefärbt, sonst weis
+
+        //Zeigt von welchem Menü Item Typ
+        public MenuControl buttonItem 
+        { 
+            get; 
+            private set; 
+        }
 
         /// <summary>
         /// Initialisiert das Button Objekt
         /// </summary>
-        public ButtonRepresentation(String buttonLabel, Color color)
+        public ButtonRepresentation(String buttonLabel, Color color, MenuControl menuControl)
         {
             this.buttonTexture = ViewContent.UIContent.MenuButton;
             this.buttonLabel = buttonLabel;
             this.font = ViewContent.UIContent.Font;
             this.settingLabel = null;
             this.color = color;
+            this.buttonItem = menuControl;
         }
 
-        public ButtonRepresentation(String buttonLabel, String settingLabel, Color color) 
+        public ButtonRepresentation(String buttonLabel, String settingLabel, Color color, MenuControl menuControl) 
         {
             this.buttonTexture = ViewContent.UIContent.SettingsButton; //TODO: Select Button Textur ändern
             this.buttonLabel = buttonLabel;
             this.font = ViewContent.UIContent.Font;
             this.settingLabel = settingLabel;
             this.color = color;
+            this.buttonItem = menuControl;
         }
 
         public void DrawButton(SpriteBatch spriteBatch, Vector2 position)

@@ -73,8 +73,8 @@ namespace SpaceInvadersRemake.View
                 int score = highscoreManager.HighscoreEntries[i].Score;
                 spriteBatch.DrawString(this.font, score.ToString(), score_Position, Color.White);
 
-                name_Position.Y += name_Position.Y + i * 100;
-                score_Position.Y += score_Position.Y + i * 100;
+                name_Position.Y += i * 100;
+                score_Position.Y += i * 100;
             }
 
           spriteBatch.End();
