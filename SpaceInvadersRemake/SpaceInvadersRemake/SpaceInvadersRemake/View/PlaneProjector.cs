@@ -16,13 +16,16 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public static class PlaneProjector
     {
+        /// <summary>
+        /// Faktor um den die 2D-Spielebene skaliert wird
+        /// </summary>
         public static float scaleFactor = 2.0f;
 
         //private static
         /// <summary>
         /// Rechnet einen Positionsvektor in der 2D Ebene in einen Positionsvektor im 3D Raum um.
         /// </summary>
-        /// <param name="vector2D">2D Positionsvektor</param>
+        /// <param name="itemPosition2D">2D Positionsvektor</param>
         /// <returns>3D Positionsvektor</returns>
         public static Vector3 Convert2DTo3D(Vector2 itemPosition2D)
         {
