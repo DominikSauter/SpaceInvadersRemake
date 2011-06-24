@@ -22,8 +22,8 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert die Menüoberfläche
         /// </summary>
-        /// <param name="buttonLabels">Beschriftungen der Controls</param>
-        /// <param name="background">Hintergrundbild</param>
+        /// <param name="buttons">MenuControl Elemente</param>
+        /// <param name="graphics"></param>
         public MenuUI(MenuControl[] buttons,  GraphicsDeviceManager graphics)
         {
             this.background = ViewContent.UIContent.MenuBackgroundImage;
@@ -44,6 +44,9 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
+
+            //TODO: unterscheidung zwischen ienstellungsmenü und hauptmenü (state)
+            Vector2 position = new Vector2(200, 200);
             spriteBatch.Begin();
 
             //Zeichnen des Hintergrunds
@@ -52,6 +55,20 @@ namespace SpaceInvadersRemake.View
 
                 //probieren ob Array.draw geht
             //Buttons zeichnen
+            for (int i = 0; i < buttonRepresentation.Length; i++)
+            {
+                position.Y += 100 * i;
+
+                if (buttonRepresentation[i].buttonItem is Button)
+                {
+                    buttonRepresentation[i].DrawButton(spriteBatch, position);
+                }
+                else
+                {
+                    buttonRepresentation[i].DrawSelect(spriteBatch, position);
+                }
+            }
+
 
             spriteBatch.End();
         }
@@ -64,33 +81,61 @@ namespace SpaceInvadersRemake.View
         {
             Color activeColor = Color.AliceBlue;
             Color normalColor = Color.White;
+            ButtonRepresentation buttonRepresentation;
 
             //Wenn button
-            if(button is Button) 
+            if (button is Button) 
             {
                 //active
                 if (button.Active)
                 {
-                new ButtonRepresentation(button.Text, activeColor);
+                    buttonRepresentation = new ButtonRepresentation(button.Text, activeColor, button);
                 }
                 else 
                 {
-                    new ButtonRepresentation(button.Text, normalColor);
+                    buttonRepresentation = new ButtonRepresentation(button.Text, normalColor, button);
                 }
             }
-            throw new System.NotImplementedException();
- 
-           /* if (button is ListSelect<DisplayMode>) //prüfen ob eine intanz von ListSelect
-                if (button.GetType().GetGenericTypeDefinition() == ListSelect<>) { }
 
-                new ButtonRepresentation( );
-            } */
-            
+            else if (button is ListSelect<DisplayMode>) //prüfen ob eine intanz von ListSelect vom Typ DisplayMode
+            { 
+               if (((ListSelect<DisplayMode>)button).Active) 
+               {
+                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<DisplayMode>)button).SelectedItem.ToString(), activeColor, button);
+               } 
+               else 
+               {
+                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<DisplayMode>)button).SelectedItem.ToString(), normalColor, button);
+               }
+            }
 
-            //HACK: überlegen wie man eine instanz einer generischen Liste erzeugen kann
+            else if (button is ListSelect<float>)
+            { 
+               if (((ListSelect<float>)button).Active) 
+               {
+                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<float>)button).SelectedItem.ToString(), activeColor, button);
+               } 
+               else 
+               {
+                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<float>)button).SelectedItem.ToString(), normalColor, button);
+               }            
+            }
 
+            else
+            { 
+               if (((ListSelect<bool>)button).Active) 
+               {
+                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<bool>)button).SelectedItem.ToString(), activeColor, button);
+               } 
+               else 
+               {
+                   buttonRepresentation = new ButtonRepresentation(button.Text, ((ListSelect<bool>)button).SelectedItem.ToString(), normalColor, button);
+               }            
+            }
 
-            //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
+            return buttonRepresentation;
+
+         //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
          
         }
     }
