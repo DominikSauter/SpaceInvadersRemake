@@ -48,10 +48,7 @@ namespace SpaceInvadersRemake.View
             this.model = ViewContent.RepresentationContent.PlayerModel;
             this.PlayerGameItem = PlayerGameItem;
 
-            /* Vorläufige Matrizen.
-             * Wir müssen noch besprechen wie groß unsre 3D Ebene wird (dementsprechend müssen wir Camera und Projection initialisieren)
-             * Das Model muss evtl noch gedreht werden.
-             * */
+            
             this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position), Vector3.Forward, Vector3.Up);
 
             //<WAHL>
