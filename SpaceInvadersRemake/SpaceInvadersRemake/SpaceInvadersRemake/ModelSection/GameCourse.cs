@@ -70,64 +70,77 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public LinkedList<IGameItem> NextWave(GameTime gameTime)
         {
-            return null; //HACK: So ist wenigstens der Fehler weg - TB
-            //TODO: Methode ohne Fehler lauffähig machen - TB
             waveStartingTime = gameTime;
 
+            LinkedList<IGameItem> wave = null;
             if (WaveCounter == 0)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.EasyDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.EasyDifficulty);
             }
             else if (WaveCounter == 1)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.EasyDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.EasyDifficulty);
             }
             else if (WaveCounter == 2)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.CircleFormation, DifficultyLevel.EasyDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.ArrowFormation, DifficultyLevel.EasyDifficulty);
             }
             else if (WaveCounter == 3)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.TriangleFormation, DifficultyLevel.MediumDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.InfinityFormation, DifficultyLevel.MediumDifficulty);
             }
             else if (WaveCounter == 4)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.MediumDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.TriangleFormation, DifficultyLevel.MediumDifficulty);
             }
             else if (WaveCounter == 5)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.MediumDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.CircleFormation, DifficultyLevel.MediumDifficulty);
             }
             else if (WaveCounter == 6)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.CircleFormation, DifficultyLevel.HardDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.HardDifficulty);
             }
             else if (WaveCounter == 7)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.TriangleFormation, DifficultyLevel.HardDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.HardDifficulty);
             }
             else if (WaveCounter == 8)
             {
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.SkullFormation, DifficultyLevel.HardDifficulty);
+                wave =WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.ArrowFormation, DifficultyLevel.HardDifficulty);
             }
             else
             {
-                int rnd = random.Next(4);
+                int rnd = random.Next(6);
+                Vector2[] formation;
                 if (rnd == 0)
                 {
-                    Vector2[] formation = FormationGenerator.SkullFormation;
-                } else if (rnd == 1)
-                {
-                    Vector2[] formation = FormationGenerator.BlockFormation;
-                } else if (rnd == 2)
-                {
-                    Vector2[] formation = FormationGenerator.CircleFormation;
-                } else
-                {
-                    Vector2[] formation = FormationGenerator.TriangleFormation;
+                    formation = FormationGenerator.SkullFormation;
                 }
-                WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.BlockFormation, DifficultyLevel.HardDifficulty);
+                else if (rnd == 1)
+                {
+                    formation = FormationGenerator.BlockFormation;
+                }
+                else if (rnd == 2)
+                {
+                    formation = FormationGenerator.CircleFormation;
+                }
+                else if (rnd == 3)
+                {
+                    formation = FormationGenerator.TriangleFormation;
+                }
+                else if (rnd == 4)
+                {
+                    formation = FormationGenerator.ArrowFormation;
+                }
+                else
+                {
+                    formation = FormationGenerator.InfinityFormation;
+                }
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, formation, DifficultyLevel.HardDifficulty);
             }
+            WaveCounter++;
+            return wave;
         }
 
         /// <summary>

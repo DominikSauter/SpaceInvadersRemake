@@ -28,7 +28,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Positionsangaben für eine Totenkopf-Formation.
         /// </summary>
-        public static Microsoft.Xna.Framework.Vector2[] SkullFormation
+        public static Vector2[] SkullFormation
         {
             get
             {
@@ -57,6 +57,34 @@ namespace SpaceInvadersRemake.ModelSection
         /// Positionsangaben für eine Kreis-Formation.
         /// </summary>
         public static Vector2[] CircleFormation
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
+        /// Positionsangaben für eine Pfeil-Formation.
+        /// </summary>
+        public static Vector2[] ArrowFormation
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        /// <summary>
+        /// Positionsangaben für eine "Unendlich"-Formation.
+        /// </summary>
+        public static Vector2[] InfinityFormation
         {
             get
             {
