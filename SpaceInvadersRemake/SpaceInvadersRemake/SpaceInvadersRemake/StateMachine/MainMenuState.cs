@@ -20,6 +20,10 @@ namespace SpaceInvadersRemake.StateMachine
         public MainMenuState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
             : base (stateManager, gameManager)
         {
+            // Hab mal den Konstruktor gefüllt, damit das Menu mal sichtbar ist - TB
+            ModelInitialize();
+            ViewInitialize();
+            //TODO: ControllerInitialize() sobald der Controller fertig ist
         }
 
         protected override void ControllerInitialize()
@@ -31,7 +35,12 @@ namespace SpaceInvadersRemake.StateMachine
         {
             List<MenuControl> controls = new List<MenuControl>(); //TB
 
-            //TODO: Buttons einfügen
+            //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
+            controls.Add(new Button("Start Game", new Action(StartGame)));
+            controls.Add(new Button("Highscore", new Action(ShowHighscore)));
+            controls.Add(new Button("Options", new Action(ShowOptions)));
+            controls.Add(new Button("Credits", new Action(ShowCredits)));
+            controls.Add(new Button("Quit", new Action(StartGame)));
 
             Model = new Menu(controls); //TB
         }
@@ -80,6 +89,16 @@ namespace SpaceInvadersRemake.StateMachine
         {
             OptionsState newState = new OptionsState(this.stateManager, this.game, this);
             this.stateManager.State = newState;
+        }
+
+        // Hab die Methode hinzugefügt, weil ich die für den Quit-Button brauche - TB
+        /// <summary>
+        /// Beendet das Spiel
+        /// </summary>
+        public void Quit()
+        {
+            //TODO: evtl. noch aufräumarbeiten - TB
+            this.game.Exit();
         }
     }
 }

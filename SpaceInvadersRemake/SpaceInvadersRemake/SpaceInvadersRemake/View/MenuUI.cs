@@ -52,6 +52,7 @@ namespace SpaceInvadersRemake.View
             //Zeichnen des Hintergrunds
             spriteBatch.Draw(background , new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
 
+            spriteBatch.End(); // Hab das hierhin gesetzt, weil sonst ein Laufzeitfehler kommt - TB
 
                 //probieren ob Array.draw geht
             //Buttons zeichnen
@@ -70,7 +71,7 @@ namespace SpaceInvadersRemake.View
             }
 
 
-            spriteBatch.End();
+            
         }
 
         /// <summary>
