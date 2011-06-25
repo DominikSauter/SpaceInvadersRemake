@@ -98,8 +98,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Erzeugt eine Liste von Gegner-Objekten aus einem Vector2-Array.
         /// </summary>
-        /// <param name="hitpoints">Lebenspunkte der Gegner</param>
-        /// <param name="velocity">maximale Geschwindigkeit der Gegner</param>
+        /// <param name="hitpointsMultiplier">Lebenspunkte der Gegner</param>
+        /// <param name="velocityMultiplier">maximale Geschwindigkeit der Gegner</param>
         /// <param name="formation">Formation der Welle</param>
         /// <returns>Die generierte Liste von Gegnern</returns>
         public static List<IGameItem> CreateFormation(int hitpoints, Vector2 velocity, Vector2[] formation)

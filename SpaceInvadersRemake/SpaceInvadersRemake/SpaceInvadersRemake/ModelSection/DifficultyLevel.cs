@@ -10,8 +10,8 @@ namespace SpaceInvadersRemake.ModelSection
     /// Enthält Parameter, die den Schwierigkeitsgrad festlegen.
     /// </summary>
     /// <remarks>
-    /// Die vier Parameter <c>Hitpoints</c>, <c>Velocity</c> (für <c>FormationGenerator</c> relevant), 
-    /// sowie <c>ShootingFrequency</c> und <c>VelocityIncrease</c> (für Controller relevant) bestimmen den Schwierigkeitsgrad.
+    /// Die vier Parameter <c>HitpointsMultiplier</c>, <c>VelocityMultiplier</c> (für <c>FormationGenerator</c> relevant), 
+    /// sowie <c>ShootingFrequencyMultiplier</c> und <c>VelocityIncreaseMultiplier</c> (für Controller relevant) bestimmen den Schwierigkeitsgrad.
     /// </remarks>
     public class DifficultyLevel
     {
@@ -19,13 +19,13 @@ namespace SpaceInvadersRemake.ModelSection
         /// Konstruktor
         /// </summary>
         /// <remarks>Private deklariert.</remarks>
-        /// <param name="hitpoints">Lebenspunkte der Gegner</param>
-        /// <param name="shootingFrequency">Schussfrequenz der Gegner</param>
+        /// <param name="hitpointsMultiplier">Lebenspunkte der Gegner</param>
+        /// <param name="shootingFrequencyMultiplier">Schussfrequenz der Gegner</param>
         /// <param name="velocityIncrease">Rate der Geschwindigkeitszunahme</param>
-        /// <param name="damage">Schaden der Gegner</param>
-        /// <param name="scoreGain">Punktzahl, die die Gegner bei Abschuss geben</param>
-        /// <param name="velocity">Startgeschwindigkeit der Gegner</param>
-        public DifficultyLevel(float hitpoints, Vector2 velocity, float shootingFrequency, Vector2 velocityIncrease, float damage, float scoreGain)
+        /// <param name="damageMultiplier">Schaden der Gegner</param>
+        /// <param name="scoreGainMultiplier">Punktzahl, die die Gegner bei Abschuss geben</param>
+        /// <param name="velocityMultiplier">Startgeschwindigkeit der Gegner</param>
+        public DifficultyLevel(float hitpointsMultiplier, Vector2 velocityMultiplier, float shootingFrequencyMultiplier, Vector2 velocityIncreaseMultiplier, float damageMultiplier, float scoreGainMultiplier)
         {
             throw new System.NotImplementedException();
         }
@@ -33,7 +33,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Lebenspunkte der Aliens.
         /// </summary>
-        public float Hitpoints
+        public float HitpointsMultiplier
         {
             get
             {
@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Geschwindigkeit der Aliens.
         /// </summary>
-        public Vector2 Velocity
+        public Vector2 VelocityMultiplier
         {
             get
             {
@@ -57,7 +57,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Schussfrequenz der Aliens.
         /// </summary>
-        public float ShootingFrequency
+        public float ShootingFrequencyMultiplier
         {
             get
             {
@@ -69,7 +69,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Geschwindigkeitserhöhung der Aliens.
         /// </summary>
-        public Vector2 VelocityIncrease
+        public Vector2 VelocityIncreaseMultiplier
         {
             get
             {
@@ -123,7 +123,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation des Schadens der Aliens.
         /// </summary>
-        public float Damage
+        public float DamageMultiplier
         {
             get
             {
@@ -137,7 +137,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Punktzahl, die der Spieler durch das Zerstören der Aliens erhält.
         /// </summary>
-        public float ScoreGain
+        public float ScoreGainMultiplier
         {
             get
             {

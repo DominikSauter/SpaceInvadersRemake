@@ -47,7 +47,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein SlowMotion-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">maximale Geschwindigkeit</param>
+        /// <param name="velocityMultiplier">maximale Geschwindigkeit</param>
         public SlowMotion(Vector2 position, Vector2 velocity)
             : base (position, velocity)
         {

@@ -59,11 +59,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// Konstruktor, um redundanten Code zu vermeiden
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">Maximale Geschwindigkeit</param>
-        /// <param name="hitpoints">Lebenspunkte</param>
-        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
+        /// <param name="velocityMultiplier">Maximale Geschwindigkeit</param>
+        /// <param name="hitpointsMultiplier">Lebenspunkte</param>
+        /// <param name="damageMultiplier">Schaden, der anderen zugefügt wird</param>
         /// <param name="weapon">Waffe</param>
-        /// <param name="scoreGain">Punktzahl, die dem Spieler bei Zerstörung gutgeschrieben wird</param>
+        /// <param name="scoreGainMultiplier">Punktzahl, die dem Spieler bei Zerstörung gutgeschrieben wird</param>
         public Enemy(Vector2 position, Vector2 velocity, int hitpoints, int damage, Weapon weapon, int scoreGain)
             : base(position, velocity, hitpoints, damage, weapon)
         {

@@ -11,7 +11,7 @@ namespace SpaceInvadersRemake.ModelSection
     /// Sie enthält die gewünschte Controller-AI, eine Liste der zu kontrollierenden Aliens und das Schwierigkeitsgrad-Objekt.
     /// </summary>
     /// <remarks>
-    /// Das Objekt für den Schwierigkeitsgrad enthält die zwei Parameter <c>ShootingFrequency</c> und <c>VelocityIncrease</c>, die für den Controller bestimmt sind.
+    /// Das Objekt für den Schwierigkeitsgrad enthält die zwei Parameter <c>ShootingFrequencyMultiplier</c> und <c>VelocityIncreaseMultiplier</c>, die für den Controller bestimmt sind.
     /// </remarks>
     public class ControllerEventArgs: System.EventArgs
     {
@@ -57,7 +57,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Objekt, das Parameter enthält, die den Schwierigkeitsgrad festlegen.
         /// </summary>
         /// <remarks>
-        /// <c>ShootingFrequency</c> und <c>VelocityIncrease</c> sind für den Controller relevant.
+        /// <c>ShootingFrequencyMultiplier</c> und <c>VelocityIncreaseMultiplier</c> sind für den Controller relevant.
         /// </remarks>
         public DifficultyLevel DifficultyLevel
         {
