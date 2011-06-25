@@ -342,7 +342,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.MainMenuState">
     <Position X="14.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAgAAAAAAAAAAAAAAAgCAAEQAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAQAAAAgAAAAAAAAAAAAAAAgCAAEQAAAAAAAAgAAAQA=</HashCode>
       <FileName>StateMachine\MainMenuState.cs</FileName>
       <NewMemberFileName>MainMenuState.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -373,7 +373,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.DifficultyLevel">
     <Position X="11" Y="35" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAEEAQAAAAAAAAABAAEAEA=</HashCode>
+      <HashCode>AAAAAACAAAAAAAAAAAAAAAAEEAQAAIAAAAAABAAEAEA=</HashCode>
       <FileName>ModelSection\DifficultyLevel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -416,7 +416,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.FormationGenerator">
     <Position X="9" Y="35" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAgAAAAAAAAAAAAgAAAAAAACAgAA=</HashCode>
+      <HashCode>ABAAAAAAAAAAQAAAAgAAAAAAAAAAABgAAAAAAACAgAA=</HashCode>
       <FileName>ModelSection\FormationGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -553,7 +553,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="36.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgYABAEQACCAgAABABEAAQAAAAAAAAAQAAQAAAQAADI=</HashCode>
+      <HashCode>AgYABAEQACCAgAABABEAAQAAAAAAAAgQAAQAAAQAADI=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -585,7 +585,7 @@
   <Class Name="SpaceInvadersRemake.View.MenuUI">
     <Position X="43.5" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAACAIAAIAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAgAAAACAAAAIAA=</HashCode>
       <FileName>View\MenuUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -593,7 +593,7 @@
   <Class Name="SpaceInvadersRemake.View.ButtonRepresentation">
     <Position X="50.75" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAIAgAgAAAAAAAAAAAAAAACAAAAAgAAQAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAgAgAAAAAQAAAAAAAABAAAAAgAAAAAA=</HashCode>
       <FileName>View\ButtonRepresentation.cs</FileName>
       <NewMemberFileName>ButtonRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -715,6 +715,13 @@
       <FileName>View\ModelHitsphere.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.GameItemConstants">
+    <Position X="13.25" Y="40" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\GameItemConstants.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
     <Position X="41" Y="0.5" Width="1.5" />
