@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.Controller;
 
+// Implementiert von D. Sauter
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -24,12 +26,19 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="AI">gewünschtes Verhalten des Controllers</param>
         /// <param name="formation">gewünschte Formation der Welle</param>
         /// <param name="difficultyLevel">gewünschter Schwierigkeitsgrad</param>
-        /// <returns>Eine Liste von Gegnern, die sie aktuelle Welle darstellen</returns>
+        /// <returns>Eine Liste von Gegnern, die die aktuelle Welle darstellen</returns>
         public static LinkedList<IGameItem> CreateWave(BehaviourEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
         {
-            throw new System.NotImplementedException();
-            //SwitchCase über "Bestellung" 
-            //Private Methoden für konkrete Creatings um swichcase übersichtlich zu halten
+            int hitpoints = (int)(GameItemConstants.AlienHitpoints * difficultyLevel.HitpointsMultiplier);
+            Vector2 velocity;
+            velocity.X = GameItemConstants.AlienVelocity.X * difficultyLevel.VelocityMultiplier.X;
+            velocity.Y = GameItemConstants.AlienVelocity.Y * difficultyLevel.VelocityMultiplier.Y;
+
+            LinkedList<IGameItem> wave = FormationGenerator.CreateFormation(hitpoints, velocity, formation);
+
+            WaveGenerated(null, new ControllerEventArgs(AI, wave, difficultyLevel));
+
+            return wave;
         }
     }
 }
