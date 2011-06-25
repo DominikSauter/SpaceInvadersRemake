@@ -26,11 +26,17 @@ namespace SpaceInvadersRemake.StateMachine
             //TODO: ControllerInitialize() sobald der Controller fertig ist
         }
 
+        /// <summary>
+        /// Initialisierungsmethode für den Controllers.
+        /// </summary>
         protected override void ControllerInitialize()
         {
             Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 
+        /// <summary>
+        /// Initialisierungsmethode für das Model.
+        /// </summary>
         protected override void ModelInitialize()
         {
             List<MenuControl> controls = new List<MenuControl>(); //TB

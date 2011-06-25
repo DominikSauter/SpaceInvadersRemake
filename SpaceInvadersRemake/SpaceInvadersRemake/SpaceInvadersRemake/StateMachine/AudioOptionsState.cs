@@ -24,11 +24,17 @@ namespace SpaceInvadersRemake.StateMachine
         {
         }
 
+        /// <summary>
+        /// Initialisierungsmethode für den Controllers.
+        /// </summary>
         protected override void ControllerInitialize()
         {
             Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 
+        /// <summary>
+        /// Initialisierungsmethode für das Model.
+        /// </summary>
         protected override void ModelInitialize()
         {
             // von Tobias
@@ -41,7 +47,7 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
-        /// Erzeugt einen neuen ViewManager und übergibt den aktuellen State sowie einen GraphicsDeviceManager
+        /// Initialisierungsmethode für die View.
         /// </summary>
         protected override void ViewInitialize()
         {

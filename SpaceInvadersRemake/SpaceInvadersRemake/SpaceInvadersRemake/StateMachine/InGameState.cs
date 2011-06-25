@@ -22,6 +22,9 @@ namespace SpaceInvadersRemake.StateMachine
         {
         }
 
+        /// <summary>
+        /// Hier ist die Initialisierungsreihenfolge festgelegt.
+        /// </summary>
         protected override void Initialise()
         {
             ViewInitialize();
@@ -49,20 +52,24 @@ namespace SpaceInvadersRemake.StateMachine
             this.Dispose();
         }
 
-
-
+        /// <summary>
+        /// Initialisierungsmethode für den Controllers.
+        /// </summary>
         protected override void ControllerInitialize()
         {
             this.Controller = new SpaceInvadersRemake.Controller.ControllerManager();
         }
 
+        /// <summary>
+        /// Initialisierungsmethode für das Model.
+        /// </summary>
         protected override void ModelInitialize()
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Erzeugt einen neuen ViewManager und übergibt den aktuellen State sowie einen GraphicsDeviceManager
+        /// Initialisierungsmethode für die View.
         /// </summary>
         protected override void ViewInitialize()
         {

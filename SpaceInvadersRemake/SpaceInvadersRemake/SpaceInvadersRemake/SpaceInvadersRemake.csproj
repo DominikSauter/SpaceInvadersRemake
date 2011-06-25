@@ -51,7 +51,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <XnaCompressContent>false</XnaCompressContent>
     <DocumentationFile>bin\x86\Debug\SpaceInvadersRemake.XML</DocumentationFile>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet>BasicCorrectnessRules.ruleset</CodeAnalysisRuleSet>
     <RunCodeAnalysis>false</RunCodeAnalysis>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -122,6 +122,9 @@
     <Compile Include="ModelSection\ListSelect%28abstrakt%29.cs" />
     <Compile Include="ModelSection\GameItemConstants.cs" />
     <Compile Include="ModelSection\IBoundingVolume.cs" />
+    <Compile Include="StateMachine\ControllerDummy.cs" />
+    <Compile Include="StateMachine\ModelDummy.cs" />
+    <Compile Include="StateMachine\ViewDummy.cs" />
     <Compile Include="View\CreditsUI.cs" />
     <Compile Include="ModelSection\ListSelect.cs" />
     <Compile Include="ModelSection\MenuControl.cs" />
