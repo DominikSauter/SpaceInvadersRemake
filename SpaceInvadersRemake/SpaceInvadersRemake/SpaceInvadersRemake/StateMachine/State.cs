@@ -205,12 +205,19 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void Dispose()
         {
-            if (previousState != null)
-                previousState.Dispose();
+            // Wenn der previousState gelöscht wird, kann man nicht meht zu ihm zurückkehren.
+            // Deshalb hab ich da auskommentiert - TB
+            /*if (previousState != null)
+                previousState.Dispose();*/
 
             this.Model.Dispose();
             this.View.Dispose();
             this.Controller.Dispose();
+
+            // Hab mal zu Fehlersuche die Dummy-Objekte benutzt, sollten aber eigentlich nicht nötig sein - TB
+            this.Model = new ModelDummy();
+            this.View = new ViewDummy();
+            this.Controller = new ControllerDummy();
         }
 
         /// <summary>
