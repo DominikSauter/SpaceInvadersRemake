@@ -59,11 +59,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu\auswahl.png">
-      <Name>auswahl</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
     <Compile Include="Menu\button.png">
       <Name>button</Name>
       <Importer>TextureImporter</Importer>
@@ -194,6 +189,13 @@
   <ItemGroup>
     <Compile Include="3D Model Textures\specular.bmp">
       <Name>MutterschiffBump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Menu\auswahl_pfeile.png">
+      <Name>auswahl_pfeile</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

@@ -55,11 +55,7 @@ namespace SpaceInvadersRemake.View
             UIContent.LiveIcon = Content.Load<Texture2D>("Graphics/LebensIcon");
             UIContent.MenuButton = Content.Load<Texture2D>("Menu/button");
             UIContent.SettingsBackground = Content.Load<Texture2D>("Menu/einstellungsfenster");
-            UIContent.SettingsButton = Content.Load<Texture2D>("Menu/auswahl");
-            UIContent.SettingsArrowLeft = Content.Load<Texture2D>("Menu/pfeil_links");
-            UIContent.SettingsArrowLeftEnd = Content.Load<Texture2D>("Menu/pfeil_links_ende");
-            UIContent.SettingsArrowRight = Content.Load<Texture2D>("Menu/pfeil_rechts");
-            UIContent.SettingsArrowRightEnd = Content.Load<Texture2D>("Menu/pfeil_rechts_ende");
+            UIContent.SettingsButton = Content.Load<Texture2D>("Menu/auswahl_pfeile");
 
             //Laden des Representation Contents
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
