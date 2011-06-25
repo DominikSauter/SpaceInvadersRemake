@@ -40,13 +40,16 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
+            Vector2 framePosition = new Vector2((graphics.PreferredBackBufferWidth - this.frame.Width) / 2, (graphics.PreferredBackBufferHeight - this.frame.Height) / 2);
+
             //Zeichnen des Hintergrundbildes
             spriteBatch.Begin();
             spriteBatch.Draw(this.background, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
             
 
             //Zeichnen des Highscore Fensters
-            spriteBatch.Draw(this.frame, new Rectangle(100, 100, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferWidth), Color.White);
+            //[DODO] Hier Stand zuvor 'new Rectangle(100, 100, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferWidth)' als "Position"
+            spriteBatch.Draw(this.frame, framePosition, Color.White);
 
             //Zeichnen der Highscore Einträge
             Vector2 name_Position = new Vector2(200, 200);
