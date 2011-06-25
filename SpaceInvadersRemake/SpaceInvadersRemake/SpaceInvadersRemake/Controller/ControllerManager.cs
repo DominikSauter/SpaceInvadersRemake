@@ -36,7 +36,7 @@ public class ControllerManager : IController
         Controllers = new List<ICommander>();
         
         
-        //Registriere Player EventHandler
+        //Registriere PlayerDamage EventHandler
         Player.Created += new EventHandler(this.CreatePlayerController);
        
         //Registriere AI EventHandler

@@ -23,7 +23,7 @@ namespace SpaceInvadersRemake.View
         private Model model;
 
         /// <summary>
-        /// Referenz auf das Player-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// Referenz auf das PlayerDamage-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
         private Player PlayerGameItem;
 
