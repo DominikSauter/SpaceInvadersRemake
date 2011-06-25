@@ -36,6 +36,7 @@ namespace SpaceInvadersRemake.StateMachine
         protected override void ModelInitialize()
         {
             //Es gibt im Moment kein Model im CreditsState - TB
+            Model = new ModelDummy();
         }
 
         /// <summary>
