@@ -162,7 +162,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// <remarks>Konkret werden das Spielerschiff, sowie die statischen Schilde erzeugt.</remarks>
         private void InitializeGame()
         {
-            throw new System.NotImplementedException();
+            for (int i = 0; i < GameItemConstants.ShieldPositions.Length; i++)
+            {
+                new Shield(GameItemConstants.ShieldPositions[i], GameItemConstants.ShieldHitpoints, GameItemConstants.ShieldDamage);
+            }
+            Player = new Player(GameItemConstants.PlayerPosition, GameItemConstants.PlayerVelocity, GameItemConstants.PlayerHitpoints, GameItemConstants.PlayerDamage, GameItemConstants.PlayerWeapon, GameItemConstants.PlayerLives);
         }
     }
 }
