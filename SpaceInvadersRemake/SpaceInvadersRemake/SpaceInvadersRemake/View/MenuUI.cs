@@ -46,9 +46,9 @@ namespace SpaceInvadersRemake.View
         public void Draw(SpriteBatch spriteBatch)
         {
             //TODO: position abhängig von fenster höhe, breite [Check]
-            //TODO: unterscheidung zwischen einstellungsmenü und hauptmenü (state)
+            //TODO: unterscheidung zwischen einstellungsmenü und hauptmenü (entweder nen bool definieren und übergeben, oder den currentState vom ViewManager aus weiterreichen)
 
-            Vector2 position = new Vector2(graphics.PreferredBackBufferWidth / 4, graphics.PreferredBackBufferHeight / 4);
+            Vector2 position = new Vector2(graphics.PreferredBackBufferWidth / 3, graphics.PreferredBackBufferHeight / 3); //Unterscheiden zwischen Menü Arten
             spriteBatch.Begin();
 
             //Zeichnen des Hintergrunds
@@ -59,8 +59,8 @@ namespace SpaceInvadersRemake.View
             //Zeichnen der Buttons
             for (int i = 0; i < buttonRepresentation.Length; i++)
             {
-                position.Y += 50;
                 buttonRepresentation[i].Draw(spriteBatch, position);
+                position.Y += 50;
             }           
         }
     }
