@@ -14,12 +14,33 @@ namespace SpaceInvadersRemake.ModelSection
         /// zufälliges PowerUps
         /// </summary>
         Random,
+        /// <summary>
+        /// Durchschlagender Schuss
+        /// </summary>
         PiercingShot,
+        /// <summary>
+        /// Schnellfeuer
+        /// </summary>
         Rapidfire,
+        /// <summary>
+        /// Mehrfachschuss
+        /// </summary>
         MultiShot,
+        /// <summary>
+        /// Geschwindigkeitserhöhung
+        /// </summary>
         Speedboost,
+        /// <summary>
+        /// Schutzschild um Spielerschiff
+        /// </summary>
         Deflector,
+        /// <summary>
+        /// Statisches Schutzschild
+        /// </summary>
         StaticShield,
+        /// <summary>
+        /// Zeitlupe
+        /// </summary>
         SlowMotion,
     }
 }

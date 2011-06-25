@@ -39,6 +39,9 @@ namespace SpaceInvadersRemake.ModelSection
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Dieses Event wird ausgelöst, wenn ein neues Objekt dieser Klasse erzeugt wurde.
+        /// </summary>
         public static event EventHandler Created;
 
         /// <summary>

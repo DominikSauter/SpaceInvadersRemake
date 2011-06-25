@@ -51,6 +51,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public T SelectedItem { get; private set; }
 
+        /// <summary>
+        /// Gibt die Beschreibung des gewählten Elements zurück. Benutzt <c>ToString</c>
+        /// </summary>
         public override string SelectedItemText
         {
             get
@@ -98,12 +101,18 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        /// <summary>
+        /// Wählt das vorige Element in der Liste aus
+        /// </summary>
         public override void Prev()
         {
             int i = list.IndexOf(SelectedItem);
             SelectedItem = list[(i - 1) % list.Count];
         }
 
+        /// <summary>
+        /// Wählt das nächste Element in der Liste aus
+        /// </summary>
         public override void Next()
         {
             int i = list.IndexOf(SelectedItem);
