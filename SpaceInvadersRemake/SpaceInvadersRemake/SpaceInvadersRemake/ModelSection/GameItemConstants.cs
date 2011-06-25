@@ -153,10 +153,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new Vector2(10.0f, 10.0f);
             }
         }
     }

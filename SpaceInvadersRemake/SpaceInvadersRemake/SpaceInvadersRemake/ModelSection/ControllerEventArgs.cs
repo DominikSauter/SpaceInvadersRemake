@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         /// <param name="behaviour">gewünschtes Verhalten des Controllers</param>
         /// <param name="controllees">Liste der zu kontrollierenden Gegner</param>
-        /// <param name="difficultyLevel">Schwirigkeitsgrad der Gegner</param>
+        /// <param name="difficultyLevel">Schwierigkeitsgrad der Gegner</param>
         public ControllerEventArgs(BehaviourEnum behaviour, LinkedList<IGameItem> controllees, DifficultyLevel difficultyLevel)
         {
             throw new System.NotImplementedException();
