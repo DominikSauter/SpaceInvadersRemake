@@ -56,7 +56,7 @@ namespace SpaceInvadersRemake.Controller
             oldState = newState;
             newState = Keyboard.GetState();
 
-            if (KeyPressed(Keys.Escape))
+            if (KeyPressed(KBconfig.Back))
             {
                 if (state is HighscoreState)
                 {
@@ -80,32 +80,32 @@ namespace SpaceInvadersRemake.Controller
             {
                 Menu menu = (Menu)Controllee;
 
-                // Pfeil-Hoch wurde gedrückt
-                if (KeyPressed(Keys.Up))
+                // Hoch wurde gedrückt
+                if (KeyPressed(KBconfig.Up)) //geändert zu Settingsdatei -CK
                 {
                     menu.Up();
                 }
 
-                // Pfeil-Runter wurde gedrückt
-                if (KeyPressed(Keys.Down))
+                // -Runter wurde gedrückt
+                if (KeyPressed(KBconfig.Down)) //geändert zu Settingsdatei -CK
                 {
                     menu.Down();
                 }
 
-                // Pfeil-Links wurde gedrückt
-                if (KeyPressed(Keys.Left))
+                // Links wurde gedrückt
+                if (KeyPressed(KBconfig.Left)) //geändert zu Settingsdatei -CK
                 {
                     menu.Left();
                 }
 
-                // Pfeil-Rechts wurde gedrückt
-                if (KeyPressed(Keys.Right))
+                // Rechts wurde gedrückt
+                if (KeyPressed(KBconfig.Right)) //geändert zu Settingsdatei -CK
                 {
                     menu.Right();
                 }
 
-                // Enter wurde gedrückt
-                if (KeyPressed(Keys.Enter))
+                // Bestätigen wurde gedrückt
+                if (KeyPressed(KBconfig.Fire)) //geändert zu Settingsdatei -CK
                 {
                     menu.Action();
                 }
