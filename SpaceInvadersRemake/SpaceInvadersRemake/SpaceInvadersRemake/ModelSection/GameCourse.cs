@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
+// Implementiert von D. Sauter
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -152,7 +154,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public void SpecialEvent(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
         }
 
         /// <summary>
