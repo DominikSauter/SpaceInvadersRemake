@@ -44,30 +44,6 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
-        public Texture2D SettingsArrowLeft
-        {
-            get;
-            set;
-        }
-
-        public Texture2D SettingsArrowRight
-        {
-            get;
-            set;
-        }
-
-        public Microsoft.Xna.Framework.Graphics.Texture2D SettingsArrowLeftEnd
-        {
-            get;
-            set;
-        }
-
-        public Texture2D SettingsArrowRightEnd
-        {
-            get;
-            set;
-        }
-
         public Texture2D SettingsBackground
         {
             get;
