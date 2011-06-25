@@ -438,7 +438,7 @@
   <Class Name="SpaceInvadersRemake.Controller.MenuController">
     <Position X="68.75" Y="38.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAABAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAABAAKgAAAAAAAAAAAAAAAAAAAAAAAAAAABAAIA=</HashCode>
       <FileName>Controller\MenuController.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -491,7 +491,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.ListSelect&lt;T&gt;">
     <Position X="23" Y="38" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAABgAAAAAAAAAAAAAAAAgAAAAAAEAgABAAAAAAAAQ=</HashCode>
+      <HashCode>AgAABgAAAAAAAAAAAAAACAgAAAAAAEAgABAAIAAAAAQ=</HashCode>
       <FileName>ModelSection\ListSelect.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -593,7 +593,7 @@
   <Class Name="SpaceInvadersRemake.View.ButtonRepresentation">
     <Position X="50.75" Y="0.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAIAAAAAAAAAAgAgAAAAAQAAAAAAAABAAAAAgAAAAAA=</HashCode>
+      <HashCode>AAIAAAAAAAAAAgAgAAAAAQAAAAAACABAAAAAgAAAAAA=</HashCode>
       <FileName>View\ButtonRepresentation.cs</FileName>
       <NewMemberFileName>ButtonRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -728,6 +728,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\ListSelect(abstrakt).cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.GameCourse">
+    <Position X="16.5" Y="33" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAIQAAAAAAAAAAAAYAAQCAAAA=</HashCode>
+      <FileName>ModelSection\GameCourse.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
