@@ -373,7 +373,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.DifficultyLevel">
     <Position X="11" Y="35" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAACAAAAAAAAAAAAAAAAEEAQAAIAAAAAABAAEAEA=</HashCode>
+      <HashCode>AAAAAAAAACAAAAAAEAAAAEQEMAAAAAAAABAABAAAAAA=</HashCode>
       <FileName>ModelSection\DifficultyLevel.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -489,7 +489,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.ListSelect&lt;T&gt;">
-    <Position X="23" Y="36.5" Width="1.5" />
+    <Position X="23" Y="38" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAABgAAAAAAAAAAAAAAAAgAAAAAAEAgABAAAAAAAAQ=</HashCode>
       <FileName>ModelSection\ListSelect.cs</FileName>
@@ -721,6 +721,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAA=</HashCode>
       <FileName>ModelSection\GameItemConstants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.ListSelect">
+    <Position X="23" Y="36.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\ListSelect(abstrakt).cs</FileName>
     </TypeIdentifier>
   </Class>
   <Interface Name="SpaceInvadersRemake.View.IView">
