@@ -14,7 +14,7 @@ namespace SpaceInvadersRemake.ModelSection
     /// Der Typ, der in der Liste genutzt wird, muss die <c>ToString</c>-Methode vernünftig überschreiben,
     /// da diese zum Anzeigen des Wert benutzt wird.
     /// </remarks>
-    public class ListSelect<T> : MenuControl
+    public class ListSelect<T> : ListSelect
     {
         /// <summary>
         /// Speichert die mit dem Menüelement verbundene Funktion.
@@ -50,6 +50,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// Gibt den ausgewählten Wert zurück.
         /// </summary>
         public T SelectedItem { get; private set; }
+
+        public override string SelectedItemText
+        {
+            get
+            {
+                return SelectedItem.ToString();
+            }
+        }
 
         /// <summary>
         /// Zeigt an ob das Element aktiv ist.
