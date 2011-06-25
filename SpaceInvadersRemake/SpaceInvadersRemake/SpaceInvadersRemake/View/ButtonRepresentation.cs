@@ -17,7 +17,8 @@ namespace SpaceInvadersRemake.View
     public class ButtonRepresentation
     {
         private MenuControl menuControl;
-        private Texture2D buttonTexture;
+        private Texture2D buttonTexture; //property, falls Menu Zentrieren
+        private Texture2D selectTexture; //evtl. auch property, falls Menu Zentrieren
         private SpriteFont font;
         private Color activeColor; //Farbe für aktive Menü-Elemente
         private Color normalColor;
@@ -32,6 +33,7 @@ namespace SpaceInvadersRemake.View
             this.menuControl = menuControl;
             this.font = ViewContent.UIContent.Font;
             this.buttonTexture = ViewContent.UIContent.MenuButton;
+            this.selectTexture = ViewContent.UIContent.SettingsButton; //Der muss noch geändert werden
             this.normalColor = Color.White;
             this.activeColor = new Color(0, 255, 186);         
         }
@@ -45,13 +47,24 @@ namespace SpaceInvadersRemake.View
         {
 
             //TODO: Einrücken ausprobieren bei aktiven Buttons [Check]
-            //TODO: Schriftzug bei Buttons Zentrieren
+            //TODO: Schriftzug bei Buttons Zentrieren [Check]
             //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
                 //Idee: mit MeasureString längste Länge bestimmen, davon Abstand zu Select-Element
             Vector2 fontSize = font.MeasureString(menuControl.Text);
-            Vector2 selectPosition = new Vector2(position.X + fontSize.X, fontSize.Y);
-            Vector2 selectTextPosition = new Vector2(selectPosition.X + 20, selectPosition.Y);
-            Vector2 shiftPosition = new Vector2(position.X + 50, position.Y);
+            Vector2 fontCenter = fontSize / 2;
+            Vector2 gap = new Vector2(65, 4);
+
+            Vector2 selectPosition = new Vector2(position.X + fontSize.X, position.Y); //Position des SelectButtons
+            Vector2 selectTextPosition = new Vector2(selectPosition.X + 20, selectPosition.Y); //Position der SelectAnzeige //zentrieren?
+
+            Vector2 shiftPosition = new Vector2(position.X + 50, position.Y); //Eingerückte position
+
+            Vector2 buttonCenter = new Vector2(buttonTexture.Width / 2, buttonTexture.Height / 2); //Mittelpunkt des Buttons
+            Vector2 selectFieldCenter = new Vector2(selectTexture.Width / 2, selectTexture.Height / 2); //Mittelpunkt des Select-Feldes
+
+            Vector2 textCenter = position + buttonCenter; //Setzt den Mittelpunkt des Textzugs in die Mitte des Buttons
+            Vector2 shiftTextCenter = shiftPosition + buttonCenter; //Setzt den Mittelpunkt des eingerückten Textzugs in die Mitte des eingerückten Buttons
+            Vector2 selectTextCenter = selectPosition + selectFieldCenter; //Setzt den Mittelpunkt des Select-Textes in die Mitte des Select-Feldes
 
             spriteBatch.Begin();
 
@@ -64,14 +77,14 @@ namespace SpaceInvadersRemake.View
                     //Buttontextur
                     spriteBatch.Draw(buttonTexture, shiftPosition, activeColor);
                     //Aktiver Button
-                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(shiftPosition.X + 65, shiftPosition.Y + 4), activeColor);
+                    spriteBatch.DrawString(font, menuControl.Text, shiftTextCenter, activeColor, 0 , fontCenter, 1.0f, SpriteEffects.None, 0.5f);
                 }
                 else
                 {                    
                     //Buttontextur
                     spriteBatch.Draw(buttonTexture, position, normalColor);
 
-                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), normalColor);
+                    spriteBatch.DrawString(font, menuControl.Text, textCenter, normalColor, 0, fontCenter, 1.0f, SpriteEffects.None, 0.5f);
                 }
             }
 
@@ -80,20 +93,20 @@ namespace SpaceInvadersRemake.View
             else 
             {
                 //Textur des Select-Buttons
-                spriteBatch.Draw(buttonTexture, selectPosition, Color.White);
+                spriteBatch.Draw(selectTexture, selectPosition, Color.White);
 
                 //Objekte vom Typ DisplayMode (Verstellen der Auflösung)
                 if (menuControl is ListSelect<DisplayMode>) //HACK: menuControl.GetType() == typeof(ListSelect<>): bin mir nicht sicher ob das so funktioniert (Es soll geprüft werden ob der menuControl vom Typ der ListSelect ist.)
                 {
-                    //Beschriftung des Select-Buttons
-                    spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).SelectedItem.ToString(), selectTextPosition, normalColor);
+                    //Beschriftung des Select-Feldes
+                    spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).SelectedItem.ToString(), selectTextCenter, normalColor, 0, selectFieldCenter, 1.0f, SpriteEffects.None, 0.5f);
                     if (menuControl.Active)
                     {
-                        //Aktiver Select-Button
+                        //Titel des Select-Buttons
                         spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).Text, position, activeColor);
                     }
                     else 
-                    { 
+                    {
                         spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).Text, position, normalColor);
                     }
                 }
