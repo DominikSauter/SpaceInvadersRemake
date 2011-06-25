@@ -23,7 +23,7 @@ namespace SpaceInvadersRemake.StateMachine
             // Hab mal den Konstruktor gefüllt, damit das Menu mal sichtbar ist - TB
             ModelInitialize();
             ViewInitialize();
-            //TODO: ControllerInitialize() sobald der Controller fertig ist
+            ControllerInitialize();
         }
 
         /// <summary>
@@ -31,7 +31,8 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ControllerInitialize()
         {
-            Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
+            Controller = new ControllerDummy(); //HACK: solange der Menucontroller noch nicht fertig ist - TB
+            //Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 
         /// <summary>
