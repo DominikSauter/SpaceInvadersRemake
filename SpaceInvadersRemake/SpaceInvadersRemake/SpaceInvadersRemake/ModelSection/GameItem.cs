@@ -159,9 +159,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// und fügt es der GameItemList hinzu.
         /// </remarks>
         /// <param name="position">StartPosition</param>
-        /// <param name="velocityMultiplier">Maximale Geschwindigkeit</param>
-        /// <param name="hitpointsMultiplier">Lebenspunkte</param>
-        /// <param name="damageMultiplier">Schaden der anderen zugefügt wird</param>
+        /// <param name="velocity">Maximale Geschwindigkeit</param>
+        /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="damage">Schaden der anderen zugefügt wird</param>
         public GameItem(Vector2 position, Vector2 velocity, int hitpoints, int damage)
         {
             this.Position = position;

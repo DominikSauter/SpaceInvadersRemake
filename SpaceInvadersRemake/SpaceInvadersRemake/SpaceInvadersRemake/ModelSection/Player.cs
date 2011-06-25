@@ -214,9 +214,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erzeugt einen Spieler
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocityMultiplier">maximale Geschwindigkeit</param>
-        /// <param name="hitpointsMultiplier">Lebenspunkte</param>
-        /// <param name="damageMultiplier">Schaden, der anderen zugefügt wird</param>
+        /// <param name="velocity">maximale Geschwindigkeit</param>
+        /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
         /// <param name="lives">Anzahl Leben</param>
         /// <param name="weapon">Startwaffe</param>
         public Player(Vector2 position, Vector2 velocity, int hitpoints, int damage, Weapon weapon, int lives)

@@ -26,6 +26,9 @@ namespace SpaceInvadersRemake.ModelSection
             this.action += action;
         }
 
+        /// <summary>
+        /// Löst die mit dem Button verbundene Funktion aus.
+        /// </summary>
         public override void Action()
         {
             action();

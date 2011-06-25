@@ -26,6 +26,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
         public abstract void Remove(Player player);
 
+        /// <summary>
+        /// In dieser Methode werden alle Werte aktualisiert, die nicht durch einen Controller beeinflusst werden können.
+        /// </summary>
+        /// <param name="gameTime">Spielzeit</param>
         public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
         {
             throw new NotImplementedException();
@@ -35,7 +39,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Konstruktor um Redundanz zu vermeiden
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocityMultiplier">Maximale Geschwindigkeit</param>
+        /// <param name="velocity">Maximale Geschwindigkeit</param>
         public PowerUp(Vector2 position, Vector2 velocity)
             : base(position, velocity, 1, 0)
         {

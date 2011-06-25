@@ -8,6 +8,11 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public class SlowMotion : PowerUp
     {
+        /// <summary>
+        /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
+        /// dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
+        /// </summary>
+        /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
         public override void Apply(Player player)
         {
             throw new NotImplementedException();
@@ -23,6 +28,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
+        /// <summary>
+        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen. 
+        /// Innerhalb der Methode wird der Schaden am übergebenen Objekt berechnet,
+        /// oder PowerUps angewendet. Außerdem wird das <c>Hit</c>-Event ausgelöst.
+        /// </summary>
+        /// <remarks>
+        /// Bei der Kollisionsprüfung wird nur verhindert, dass zwei gleichartige Objekte kollidieren. 
+        /// Deshalb muss in dieser Methode geprüft werden, ob eine Kollision mit dem übergebenen Objekt überhaupt sinnvoll ist.
+        /// </remarks>
+        /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
             throw new NotImplementedException();
@@ -33,6 +48,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Created;
 
+        /// <summary>
+        /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
+        /// dazu benutzt den Effekt des PowerUps am Spieler rückgängig zu machen.
+        /// </summary>
+        /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
         public override void Remove(Player player)
         {
             throw new NotImplementedException();
@@ -47,13 +67,17 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein SlowMotion-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocityMultiplier">maximale Geschwindigkeit</param>
+        /// <param name="velocity">maximale Geschwindigkeit</param>
         public SlowMotion(Vector2 position, Vector2 velocity)
             : base (position, velocity)
         {
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
+        /// Sie sorgt dafür, dass das <c>Destroyed</c>-Event ausgelöst wird.
+        /// </summary>
         protected override void Destroy()
         {
             throw new NotImplementedException();
