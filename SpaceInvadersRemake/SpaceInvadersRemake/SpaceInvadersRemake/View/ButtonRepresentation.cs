@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Anji
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,7 +33,7 @@ namespace SpaceInvadersRemake.View
             this.font = ViewContent.UIContent.Font;
             this.buttonTexture = ViewContent.UIContent.MenuButton;
             this.normalColor = Color.White;
-            this.activeColor = new Color(14, 255, 20);         
+            this.activeColor = new Color(0, 255, 186);         
         }
         
         /// <summary>
@@ -42,9 +43,15 @@ namespace SpaceInvadersRemake.View
         /// <param name="position">Position für die Beschriftung der Schaltfläche</param>
         public void Draw(SpriteBatch spriteBatch, Vector2 position)
         {
+
+            //TODO: Einrücken ausprobieren bei aktiven Buttons [Check]
+            //TODO: Schriftzug bei Buttons Zentrieren
+            //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
+                //Idee: mit MeasureString längste Länge bestimmen, davon Abstand zu Select-Element
             Vector2 fontSize = font.MeasureString(menuControl.Text);
             Vector2 selectPosition = new Vector2(position.X + fontSize.X, fontSize.Y);
             Vector2 selectTextPosition = new Vector2(selectPosition.X + 20, selectPosition.Y);
+            Vector2 shiftPosition = new Vector2(position.X + 50, position.Y);
 
             spriteBatch.Begin();
 
@@ -54,19 +61,21 @@ namespace SpaceInvadersRemake.View
                 //Buttonbeschriftung
                 if (menuControl.Active)
                 {
-                    //Aktiver Button
-                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), activeColor);
                     //Buttontextur
-                    spriteBatch.Draw(buttonTexture, position, activeColor);
+                    spriteBatch.Draw(buttonTexture, shiftPosition, activeColor);
+                    //Aktiver Button
+                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(shiftPosition.X + 65, shiftPosition.Y + 4), activeColor);
                 }
                 else
-                {
-                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), normalColor);
+                {                    
                     //Buttontextur
                     spriteBatch.Draw(buttonTexture, position, normalColor);
+
+                    spriteBatch.DrawString(font, menuControl.Text, new Vector2(position.X + 65, position.Y + 4), normalColor);
                 }
             }
 
+            //TODO: evtl. Farbe bei aktiver Beschriftung auch setzen
             //Zeichnen eines Select-Buttons
             else 
             {
@@ -78,7 +87,6 @@ namespace SpaceInvadersRemake.View
                 {
                     //Beschriftung des Select-Buttons
                     spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).SelectedItem.ToString(), selectTextPosition, normalColor);
-
                     if (menuControl.Active)
                     {
                         //Aktiver Select-Button

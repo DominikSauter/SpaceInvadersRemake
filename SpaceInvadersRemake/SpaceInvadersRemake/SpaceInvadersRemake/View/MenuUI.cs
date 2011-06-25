@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Anji
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
@@ -44,10 +45,10 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
-            //TODO: position abhängig von fenster höhe, breite
+            //TODO: position abhängig von fenster höhe, breite [Check]
             //TODO: unterscheidung zwischen einstellungsmenü und hauptmenü (state)
-            //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
-            Vector2 position = new Vector2(200, 100);
+
+            Vector2 position = new Vector2(graphics.PreferredBackBufferWidth / 4, graphics.PreferredBackBufferHeight / 4);
             spriteBatch.Begin();
 
             //Zeichnen des Hintergrunds
