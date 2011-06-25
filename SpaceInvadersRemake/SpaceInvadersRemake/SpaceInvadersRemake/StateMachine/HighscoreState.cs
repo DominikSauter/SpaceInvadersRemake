@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -42,7 +43,14 @@ namespace SpaceInvadersRemake.StateMachine
 
         protected override void ModelInitialize()
         {
-            throw new NotImplementedException();
+            if (score.HasValue)
+            {
+                Model = new HighscoreManager(score.Value);
+            }
+            else
+            {
+                Model = new HighscoreManager();
+            }
         }
 
         /// <summary>

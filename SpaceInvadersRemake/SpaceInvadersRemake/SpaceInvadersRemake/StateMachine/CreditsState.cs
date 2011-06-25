@@ -29,7 +29,7 @@ namespace SpaceInvadersRemake.StateMachine
 
         protected override void ModelInitialize()
         {
-            throw new NotImplementedException();
+            //Es gibt im Moment kein Model im CreditsState - TB
         }
 
         /// <summary>

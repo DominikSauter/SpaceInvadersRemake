@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -29,7 +30,15 @@ namespace SpaceInvadersRemake.StateMachine
 
         protected override void ModelInitialize()
         {
-            throw new NotImplementedException();
+            // von Tobias
+            List<MenuControl> controls = new List<MenuControl>();
+
+            //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
+            controls.Add(new Button("Video", new Action(ShowVideoOptions)));
+            controls.Add(new Button("Audio", new Action(ShowAudioOptions)));
+            //TODO: SOllte es nicht noch einen State für das Steuerungsmenü geben? - TB
+
+            Model = new Menu(controls);
         }
 
         /// <summary>
