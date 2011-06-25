@@ -57,16 +57,23 @@ namespace SpaceInvadersRemake.Controller
 
             if (KeyPressed(Keys.Escape))
             {
-                try
+                if (state is HighscoreState)
                 {
-                    state.Back();
+                    ((HighscoreState)state).Exit();
                 }
-                catch (NullReferenceException e)
+                else
                 {
-                    //Vermeidet Absturz
+                    try
+                    {
+                        state.Back();
+                    }
+                    catch (NullReferenceException e)
+                    {
+                        //Vermeidet Absturz
+                    }
                 }
             }
-
+            
             // Prüfe ob das zu kontrollierende Objekt ein Menü ist
             if (Controllee is Menu)
             {
