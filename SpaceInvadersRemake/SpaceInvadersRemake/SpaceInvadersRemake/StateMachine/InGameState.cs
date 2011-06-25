@@ -1,4 +1,4 @@
-﻿//teilimplementiert von Dodo
+﻿// Teilimplementiert von Dodo & D. Sauter
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -65,7 +65,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ModelInitialize()
         {
-            throw new NotImplementedException();
+            this.Model = new SpaceInvadersRemake.ModelSection.GameCourseManager(); // D. Sauter
         }
 
         /// <summary>
