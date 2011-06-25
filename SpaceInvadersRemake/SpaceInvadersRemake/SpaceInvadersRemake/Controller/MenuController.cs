@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.ModelSection;
 
 // Implementiert von Tobias
+//TODO Keys hardcoding entfernen 
 
 namespace SpaceInvadersRemake.Controller
 {
