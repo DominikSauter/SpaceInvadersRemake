@@ -716,10 +716,10 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="SpaceInvadersRemake.GameItemConstants">
+  <Class Name="SpaceInvadersRemake.ModelSection.GameItemConstants">
     <Position X="13.25" Y="40" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAA=</HashCode>
       <FileName>ModelSection\GameItemConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
