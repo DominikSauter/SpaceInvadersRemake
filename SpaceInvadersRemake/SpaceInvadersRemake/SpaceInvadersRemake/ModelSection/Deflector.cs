@@ -47,7 +47,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein Deflector-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">maximale Geschwindigkeit</param>
+        /// <param name="velocityMultiplier">maximale Geschwindigkeit</param>
         public Deflector(Vector2 position, Vector2 velocity)
             : base(position, velocity)
         {

@@ -48,7 +48,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein StaticShield-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">maximale Geschwinigkeit</param>
+        /// <param name="velocityMultiplier">maximale Geschwinigkeit</param>
         public StaticShield(Vector2 position, Vector2 velocity)
             : base(position, velocity)
         {

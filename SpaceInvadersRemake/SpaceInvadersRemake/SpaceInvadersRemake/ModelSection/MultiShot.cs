@@ -48,7 +48,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein MultiShot-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">maximale Geschwindigkeit</param>
+        /// <param name="velocityMultiplier">maximale Geschwindigkeit</param>
         public MultiShot(Vector2 position, Vector2 velocity)
             : base(position, velocity)
         {

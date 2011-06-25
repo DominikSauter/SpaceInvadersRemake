@@ -47,7 +47,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erstellt ein Speedboost-PowerUps
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">maximale Geschwindigkeit</param>
+        /// <param name="velocityMultiplier">maximale Geschwindigkeit</param>
         public Speedboost(Vector2 position, Vector2 velocity)
             : base(position, velocity)
         {

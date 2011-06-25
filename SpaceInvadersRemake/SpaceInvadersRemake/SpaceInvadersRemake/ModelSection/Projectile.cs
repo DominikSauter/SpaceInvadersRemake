@@ -69,9 +69,9 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Bewirkt das Bewegen des Projektils in Richtung "FlightDirection" in Abhängigkeit von "Velocity".
+        /// Bewirkt das Bewegen des Projektils in Richtung "FlightDirection" in Abhängigkeit von "VelocityMultiplier".
         /// </summary>
-        /// <remarks>"Velocity" ist eine Modifikation für "FlightDirection", welche auf "Position" addiert wird, um die Bewegung zu simulieren.</remarks>
+        /// <remarks>"VelocityMultiplier" ist eine Modifikation für "FlightDirection", welche auf "Position" addiert wird, um die Bewegung zu simulieren.</remarks>
         public override void Update(GameTime gameTime)
         {
             Position += FlightDirection * Velocity;
@@ -89,9 +89,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="position">Position</param>
         /// <param name="flightDirection">Flugrichtung</param>
         /// <param name="projectileType">Art des Projektils</param>
-        /// <param name="hitpoints">Lebenspunkte</param>
-        /// <param name="velocity">maximale Geschwindigkeit</param>
-        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
+        /// <param name="hitpointsMultiplier">Lebenspunkte</param>
+        /// <param name="velocityMultiplier">maximale Geschwindigkeit</param>
+        /// <param name="damageMultiplier">Schaden, der anderen zugefügt wird</param>
         public Projectile(Vector2 position, Vector2 flightDirection, ProjectileTypeEnum projectileType, int hitpoints, Vector2 velocity, int damage)
             : base(position, velocity, hitpoints, damage)
         {

@@ -35,7 +35,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Konstruktor um Redundanz zu vermeiden
         /// </summary>
         /// <param name="position">Startposition</param>
-        /// <param name="velocity">Maximale Geschwindigkeit</param>
+        /// <param name="velocityMultiplier">Maximale Geschwindigkeit</param>
         public PowerUp(Vector2 position, Vector2 velocity)
             : base(position, velocity, 1, 0)
         {
