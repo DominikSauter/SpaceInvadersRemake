@@ -84,7 +84,7 @@ namespace SpaceInvadersRemake.StateMachine
             Initialise();
         }
 
-        // ADDED (STST): 23.06.2011
+        // ADDED (by STST): 23.06.2011
         /// <summary>
         /// Hier ist die Initialisierungsreihenfolge festgelegt.
         /// </summary>
@@ -146,21 +146,21 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
         public virtual void ControllerUpdate(GameTime gameTime)
         {
-            if (this.Controller != null)
-                this.Controller.Update(this.game, gameTime, this); // TODO: was ist hier this?
+            // if (this.Controller != null)
+            this.Controller.Update(this.game, gameTime, this);
         }
 
         /// <summary>
         /// Spricht das Model im vorgegebenen Takt an.
         /// </summary>
+        /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
         /// <remarks>
         /// Um den Aufruf muss sich nicht gekümmert werden.
         /// </remarks>
-        /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
         public virtual void ModelUpdate(GameTime gameTime) 
         {
-            if (this.Model != null)
-                this.Model.Update(this.game, gameTime, this); // TODO: was ist hier this?
+            // if (this.Model != null)
+            this.Model.Update(this.game, gameTime, this);
         }
 
         /// <summary>
@@ -172,8 +172,8 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
         public virtual void ViewUpdate(GameTime gameTime)
         {
-            if (this.View != null)
-                this.View.Update(this.game, gameTime, this); // TODO: was ist hier this?
+            // if (this.View != null)
+            this.View.Update(this.game, gameTime, this);
         }
 
         /// <summary>
