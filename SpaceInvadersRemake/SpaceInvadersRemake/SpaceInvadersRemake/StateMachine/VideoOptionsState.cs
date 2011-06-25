@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
+using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -40,7 +41,32 @@ namespace SpaceInvadersRemake.StateMachine
             List<MenuControl> controls = new List<MenuControl>();
 
             //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
-            //TODO: ListSelects einfügen, wenn klar ist woher die Daten dafür kommen
+            //TODO: DisplayMode durch eigene Klasse ersetzten mit bessere ToString-Methode
+
+            List<DisplayMode> displayModes = ((GameManager)game).GraphicsDevice.Adapter.SupportedDisplayModes.ToList();
+
+            controls.Add(new ListSelect<DisplayMode>("Resolution", 
+                                                     displayModes,
+                                                     ((GameManager)game).graphics.GraphicsDevice.Adapter.CurrentDisplayMode, 
+                                                     delegate(DisplayMode d) 
+                                                     {
+                                                         ((GameManager)game).graphics.PreferredBackBufferWidth = d.Width;
+                                                         ((GameManager)game).graphics.PreferredBackBufferHeight = d.Height;
+                                                         ((GameManager)game).graphics.ApplyChanges();
+                                                     }));
+
+            List<bool> fullscreen = new List<bool>();
+            fullscreen.Add(false);
+            fullscreen.Add(true);
+
+            controls.Add(new ListSelect<bool>("Fullscreen",
+                                              fullscreen,
+                                              ((GameManager)game).graphics.IsFullScreen,
+                                              delegate(bool b)
+                                              {
+                                                  ((GameManager)game).graphics.IsFullScreen = b;
+                                                  ((GameManager)game).graphics.ApplyChanges();
+                                              }));
 
             Model = new Menu(controls);
         }

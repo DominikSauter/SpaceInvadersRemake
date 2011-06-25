@@ -34,11 +34,13 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Erstellt ein ListSelect-Objekt
         /// </summary>
+        /// <param name="text">Beschriftung</param>
         /// <param name="list">Eine Liste von Elementen die verwaltet werden sollen</param>
         /// <param name="active">Der derzeit im Programm aktive Wert</param>
         /// <param name="action">Eine Funktion, die einen Parameter vom Typ in der Liste entgegennimmt, und diesen Parameter anwendet. Dadurch können über dieses Menüelement Daten an einer anderen Stelle des Programms geändert werden.</param>
-        public ListSelect(List<T> list, T active, Action<T> action)
+        public ListSelect(string text, List<T> list, T active, Action<T> action)
         {
+            this.Text = text;
             this.list = list;
             this.activeItem = active;
             this.action += action;
@@ -62,6 +64,7 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
+        private bool active;
         /// <summary>
         /// Zeigt an ob das Element aktiv ist.
         /// </summary>
@@ -73,11 +76,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return Active;
+                return active;
             }
             set
             {
-                this.Active = value;
+                this.active = value;
                 if (value == false)
                 {
                     SelectedItem = activeItem;
@@ -107,7 +110,7 @@ namespace SpaceInvadersRemake.ModelSection
         public override void Prev()
         {
             int i = list.IndexOf(SelectedItem);
-            SelectedItem = list[(i - 1) % list.Count];
+            SelectedItem = list[((i - 1) + list.Count) % list.Count];
         }
 
         /// <summary>
