@@ -109,7 +109,7 @@ namespace SpaceInvadersRemake.ModelSection
             }
             else if (WaveCounter == 8)
             {
-                wave =WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.ArrowFormation, DifficultyLevel.HardDifficulty);
+                wave = WaveGenerator.CreateWave(BehaviourEnum.BlockMovement, FormationGenerator.ArrowFormation, DifficultyLevel.HardDifficulty);
             }
             else
             {

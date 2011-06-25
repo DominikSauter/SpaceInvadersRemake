@@ -145,5 +145,19 @@ namespace SpaceInvadersRemake.ModelSection
                 return 10;
             }
         }
+
+        /// <summary>
+        /// Die standardmäßige Geschwindigkeit der Aliens in Distanz pro Sekunde.
+        /// </summary>
+        public static Vector2 AlienVelocity
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

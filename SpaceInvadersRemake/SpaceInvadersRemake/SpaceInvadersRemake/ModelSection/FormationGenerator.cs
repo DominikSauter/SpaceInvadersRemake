@@ -102,7 +102,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="velocityMultiplier">maximale Geschwindigkeit der Gegner</param>
         /// <param name="formation">Formation der Welle</param>
         /// <returns>Die generierte Liste von Gegnern</returns>
-        public static List<IGameItem> CreateFormation(int hitpoints, Vector2 velocity, Vector2[] formation)
+        public static LinkedList<IGameItem> CreateFormation(int hitpoints, Vector2 velocity, Vector2[] formation)
         {
             throw new System.NotImplementedException();
         }
