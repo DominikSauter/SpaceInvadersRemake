@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
-namespace SpaceInvadersRemake
+// Implementiert von D. Sauter
+
+namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
     /// Diese Klasse enthält Standardwerte der GameItems.
@@ -18,10 +20,7 @@ namespace SpaceInvadersRemake
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return 3.0f;
             }
         }
 
@@ -32,10 +31,7 @@ namespace SpaceInvadersRemake
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new Vector2(0.5f, 0.5f);
             }
         }
     }
