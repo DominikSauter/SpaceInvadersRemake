@@ -40,8 +40,19 @@ namespace SpaceInvadersRemake.StateMachine
             // von Tobias
             List<MenuControl> controls = new List<MenuControl>();
 
+            //TODO: Reinladen von Einstellungen
+            //TODO: Delegate zu ändern der Lautstärke hinzufügen
+            List<float> volume = new List<float>();
+
+            for (int i = 0; i < 11; i++)
+            {
+                volume.Add((float)i);
+            }
+
             //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
-            //TODO: ListSelects einfügen, wenn klar ist woher die Daten dafür kommen
+            controls.Add(new ListSelect<float>("Master Volume", volume, 10.0f, delegate(float i) { }));
+            controls.Add(new ListSelect<float>("Effect Volume", volume, 10.0f, delegate(float i) {}));
+            controls.Add(new ListSelect<float>("Music Volume", volume, 10.0f, delegate(float i) {}));
 
             Model = new Menu(controls);
         }
