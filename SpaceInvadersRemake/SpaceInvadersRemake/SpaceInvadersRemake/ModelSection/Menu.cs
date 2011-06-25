@@ -91,7 +91,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             ActiveControl.Active = false;
             int i = controls.IndexOf(ActiveControl);
-            ActiveControl = controls[(i - 1) % controls.Count];
+            ActiveControl = controls[((i - 1) + controls.Count) % controls.Count];
             ActiveControl.Active = true;
         }
 

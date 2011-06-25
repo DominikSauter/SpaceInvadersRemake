@@ -31,8 +31,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ControllerInitialize()
         {
-            Controller = new ControllerDummy(); //HACK: solange der Menucontroller noch nicht fertig ist - TB
-            //Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
+            Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 
         /// <summary>
