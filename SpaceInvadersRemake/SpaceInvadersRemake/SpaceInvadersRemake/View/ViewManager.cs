@@ -318,7 +318,8 @@ namespace SpaceInvadersRemake.View
         /// <returns>MenuUI-Objekt, welches das Menu darstellt.</returns>
         private MenuUI CreateMenuUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            return new MenuUI(((Menu)currentState.Model).Controls, graphics);
+            //[Anji] Weiterreichen des currentstates an die MenuUI
+            return new MenuUI(((Menu)currentState.Model).Controls, graphics, currentState); 
         }
 
         private CreditsUI CreateCreditsUI(GraphicsDeviceManager graphics)
