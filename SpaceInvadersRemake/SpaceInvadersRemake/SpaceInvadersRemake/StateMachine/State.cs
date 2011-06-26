@@ -105,6 +105,8 @@ namespace SpaceInvadersRemake.StateMachine
             this.stateManager = stateManager;
             this.previousState = null;
             this.game = gameManager;
+
+            Initialise();
         }
 
         /// <summary>
