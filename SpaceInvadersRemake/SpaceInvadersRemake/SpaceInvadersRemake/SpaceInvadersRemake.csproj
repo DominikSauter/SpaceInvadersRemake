@@ -122,6 +122,8 @@
     <Compile Include="ModelSection\ListSelect%28abstrakt%29.cs" />
     <Compile Include="ModelSection\GameItemConstants.cs" />
     <Compile Include="ModelSection\IBoundingVolume.cs" />
+    <Compile Include="OnOff.cs" />
+    <Compile Include="Resolution.cs" />
     <Compile Include="StateMachine\ControllerDummy.cs" />
     <Compile Include="StateMachine\ModelDummy.cs" />
     <Compile Include="StateMachine\ViewDummy.cs" />

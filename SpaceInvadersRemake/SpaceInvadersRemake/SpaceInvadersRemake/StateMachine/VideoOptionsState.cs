@@ -43,28 +43,43 @@ namespace SpaceInvadersRemake.StateMachine
             //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
             //TODO: DisplayMode durch eigene Klasse ersetzten mit bessere ToString-Methode
 
+            // Unterstützte Anzeigemodi von der Grafikkarte holen
             List<DisplayMode> displayModes = ((GameManager)game).GraphicsDevice.Adapter.SupportedDisplayModes.ToList();
 
-            controls.Add(new ListSelect<DisplayMode>("Resolution", 
-                                                     displayModes,
-                                                     ((GameManager)game).graphics.GraphicsDevice.Adapter.CurrentDisplayMode, 
-                                                     delegate(DisplayMode d) 
+            // Anzeigemodi in Auflösungsklassen überführen
+            List<Resolution> resolutionList = new List<Resolution>();
+            foreach (DisplayMode mode in displayModes)
+            {
+                resolutionList.Add(new Resolution(mode));
+            }
+
+            // Die aktuelle Auflösung auslesen
+            Resolution currentResolution = new Resolution(((GameManager)game).graphics.PreferredBackBufferWidth,
+                                                          ((GameManager)game).graphics.PreferredBackBufferHeight);
+
+            // Ein neues ListSelect samt anonymen Delegate hinzufügen
+            controls.Add(new ListSelect<Resolution>("Resolution", 
+                                                     resolutionList,
+                                                     currentResolution, 
+                                                     delegate(Resolution resolution) 
                                                      {
-                                                         ((GameManager)game).graphics.PreferredBackBufferWidth = d.Width;
-                                                         ((GameManager)game).graphics.PreferredBackBufferHeight = d.Height;
+                                                         ((GameManager)game).graphics.PreferredBackBufferWidth = resolution.Width;
+                                                         ((GameManager)game).graphics.PreferredBackBufferHeight = resolution.Height;
                                                          ((GameManager)game).graphics.ApplyChanges();
                                                      }));
 
-            List<bool> fullscreen = new List<bool>();
-            fullscreen.Add(false);
-            fullscreen.Add(true);
+            // Liste für Vollbild erstellen
+            List<OnOff> fullscreen = new List<OnOff>();
+            fullscreen.Add(new OnOff(false));
+            fullscreen.Add(new OnOff(true));
 
-            controls.Add(new ListSelect<bool>("Fullscreen",
+            // Ein neues ListSelect samt anonymen Delegate hinzufügen
+            controls.Add(new ListSelect<OnOff>("Fullscreen",
                                               fullscreen,
-                                              ((GameManager)game).graphics.IsFullScreen,
-                                              delegate(bool b)
+                                              new OnOff(((GameManager)game).graphics.IsFullScreen),
+                                              delegate(OnOff onOff)
                                               {
-                                                  ((GameManager)game).graphics.IsFullScreen = b;
+                                                  ((GameManager)game).graphics.IsFullScreen = onOff.On;
                                                   ((GameManager)game).graphics.ApplyChanges();
                                               }));
 
