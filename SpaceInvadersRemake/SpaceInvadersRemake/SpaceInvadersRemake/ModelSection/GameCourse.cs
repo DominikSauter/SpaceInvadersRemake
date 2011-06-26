@@ -29,6 +29,7 @@ namespace SpaceInvadersRemake.ModelSection
         public GameCourse()
         {
             random = new Random();
+            WaveCounter = 0;
             InitializeGame();
         }
 
