@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.View
         
         public SoundEffects()
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         /// <summary>
