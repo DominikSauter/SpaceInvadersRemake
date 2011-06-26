@@ -56,7 +56,7 @@ namespace SpaceInvadersRemake.View
 
             Vector2 position = new Vector2(graphics.PreferredBackBufferWidth / 3, graphics.PreferredBackBufferHeight / 3);
             Vector2 framePosition = new Vector2((graphics.PreferredBackBufferWidth - this.frame.Width) / 2, (graphics.PreferredBackBufferHeight - this.frame.Height) / 2);
-            Vector2 selectTitlePosition = framePosition + new Vector2(20, 70);
+            Vector2 selectTitlePosition = framePosition + new Vector2(20, 100);
             Vector2 titlePosition = framePosition + new Vector2(20, 20);
 
             spriteBatch.Begin();

@@ -46,14 +46,13 @@ namespace SpaceInvadersRemake.View
         public void Draw(SpriteBatch spriteBatch, Vector2 position)
         {
 
-            //TODO: Einrücken ausprobieren bei aktiven Buttons [Check]
-            //TODO: Schriftzug bei Buttons Zentrieren [Check]
+            //TODO: schauen welche Vektoren in die schleifen kommen
             //TODO: überlegen was tun wegen unterschiedlicher buttonLabel Länge, dass Select Buttons alle auf einer Ebene
                 //Idee: mit MeasureString längste Länge bestimmen, davon Abstand zu Select-Element
             Vector2 fontSize = font.MeasureString(menuControl.Text);
             Vector2 fontCenter = fontSize / 2;
 
-            Vector2 selectPosition = new Vector2(position.X + fontSize.X, position.Y); //Position des SelectButtons
+            Vector2 selectPosition = position + new Vector2(fontSize.X + 50, 0); //Position des SelectButtons
             Vector2 selectTextPosition = new Vector2(selectPosition.X + 20, selectPosition.Y); //Position der SelectAnzeige //zentrieren?
 
             Vector2 shiftPosition = new Vector2(position.X + 50, position.Y); //Eingerückte position
@@ -65,11 +64,12 @@ namespace SpaceInvadersRemake.View
             Vector2 shiftTextCenter = shiftPosition + buttonCenter; //Setzt den Mittelpunkt des eingerückten Textzugs in die Mitte des eingerückten Buttons
             Vector2 selectTextCenter = selectPosition + selectFieldCenter; //Setzt den Mittelpunkt des Select-Textes in die Mitte des Select-Feldes
 
-            spriteBatch.Begin();
 
             //Zeichnen eines Buttons
             if (menuControl is Button)
             {
+                spriteBatch.Begin();
+
                 //Buttonbeschriftung
                 if (menuControl.Active)
                 {
@@ -91,11 +91,16 @@ namespace SpaceInvadersRemake.View
             //Zeichnen eines Select-Buttons
             else if (menuControl is ListSelect) // Anpassung für beliebige ListSelect von Tobias
             {
-                //Textur des Select-Buttons
+                Vector2 selectFontSize = font.MeasureString(((ListSelect)menuControl).SelectedItemText);
+                Vector2 selectFontCenter = selectFontSize / 2;
+
+                spriteBatch.Begin();
+
+                //Textur des Select-Feldes
                 spriteBatch.Draw(selectTexture, selectPosition, Color.White);
 
                 //Beschriftung des Select-Feldes
-                spriteBatch.DrawString(font, ((ListSelect)menuControl).SelectedItemText, selectTextCenter, normalColor, 0, selectFieldCenter, 1.0f, SpriteEffects.None, 0.5f);
+                spriteBatch.DrawString(font, ((ListSelect)menuControl).SelectedItemText, selectTextCenter, normalColor, 0, selectFontCenter, 1.0f, SpriteEffects.None, 0.5f);
                 if (menuControl.Active)
                 {
                     //Titel des Select-Buttons
