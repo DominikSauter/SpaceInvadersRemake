@@ -14,6 +14,8 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class ModelHitsphere : ModelSection.IBoundingVolume
     {
+        private Matrix world;
+
         /// <summary>
         /// Erzeugt eine Hitsphere ohne innere Hitspheres
         /// </summary>
@@ -65,16 +67,16 @@ namespace SpaceInvadersRemake.View
         {
             get
             {
-                return World;
+                return this.world;
             }
             set
             {
-                World = value;
+                this.world = value;
                 if (InnerSpheres != null)
                 {
                     foreach (ModelHitsphere sphere in InnerSpheres)
                     {
-                        sphere.World = value;
+                        sphere.world = value;
                     }
                 }
             }
