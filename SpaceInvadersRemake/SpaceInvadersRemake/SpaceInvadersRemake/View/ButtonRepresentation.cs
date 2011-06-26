@@ -89,56 +89,23 @@ namespace SpaceInvadersRemake.View
 
             //TODO: evtl. Farbe bei aktiver Beschriftung auch setzen
             //Zeichnen eines Select-Buttons
-            else 
+            else if (menuControl is ListSelect) // Anpassung für beliebige ListSelect von Tobias
             {
                 //Textur des Select-Buttons
                 spriteBatch.Draw(selectTexture, selectPosition, Color.White);
 
-                //Objekte vom Typ DisplayMode (Verstellen der Auflösung)
-                if (menuControl is ListSelect<DisplayMode>) //HACK: menuControl.GetType() == typeof(ListSelect<>): bin mir nicht sicher ob das so funktioniert (Es soll geprüft werden ob der menuControl vom Typ der ListSelect ist.)
+                //Beschriftung des Select-Feldes
+                spriteBatch.DrawString(font, ((ListSelect)menuControl).SelectedItemText, selectTextCenter, normalColor, 0, selectFieldCenter, 1.0f, SpriteEffects.None, 0.5f);
+                if (menuControl.Active)
                 {
-                    //Beschriftung des Select-Feldes
-                    spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).SelectedItem.ToString(), selectTextCenter, normalColor, 0, selectFieldCenter, 1.0f, SpriteEffects.None, 0.5f);
-                    if (menuControl.Active)
-                    {
-                        //Titel des Select-Buttons
-                        spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).Text, position, activeColor);
-                    }
-                    else 
-                    {
-                        spriteBatch.DrawString(font, ((ListSelect<DisplayMode>)menuControl).Text, position, normalColor);
-                    }
+                    //Titel des Select-Buttons
+                    spriteBatch.DrawString(font, menuControl.Text, position, activeColor);
+                }
+                else
+                {
+                    spriteBatch.DrawString(font, menuControl.Text, position, normalColor);
                 }
 
-                //Objekte vom Typ float (Lautstärkeregelung)
-                if (menuControl is ListSelect<float>) 
-                {
-                    spriteBatch.DrawString(font, ((ListSelect<float>)menuControl).SelectedItem.ToString(), selectTextPosition, normalColor);
-
-                    if (menuControl.Active)
-                    {
-                        spriteBatch.DrawString(font, ((ListSelect<float>)menuControl).Text, position, activeColor);
-                    }
-                    else 
-                    { 
-                        spriteBatch.DrawString(font, ((ListSelect<float>)menuControl).Text, position, normalColor);
-                    }
-                }
-
-                //Objekte vom Typ bool (Vollbild an/aus)
-                if (menuControl is ListSelect<bool>)
-                {
-                    spriteBatch.DrawString(font, ((ListSelect<bool>)menuControl).SelectedItem.ToString(), selectTextPosition, normalColor);
-
-                    if (menuControl.Active)
-                    {
-                        spriteBatch.DrawString(font, ((ListSelect<bool>)menuControl).Text, position, activeColor);
-                    }
-                    else 
-                    { 
-                        spriteBatch.DrawString(font, ((ListSelect<bool>)menuControl).Text, position, normalColor);
-                    }
-                }
             }
 
           spriteBatch.End(); 
