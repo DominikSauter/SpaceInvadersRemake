@@ -147,13 +147,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Eigenschaft Controllees Liste (kontrollierte Objekte)
         /// </summary>
-        protected override ICollection<IGameItem> Controllees
-        {
-            get;
- 
-            set;
-
-        }
+        protected override ICollection<IGameItem> Controllees { get; set; }
 
         //Private Methoden
         
@@ -175,11 +169,6 @@ namespace SpaceInvadersRemake.Controller
             }
         }
 
-        //TODO löschen demnächst
-        //private void movingBack()
-        //{
-        //    moveDown = true;
-        //}
 
     }
 }

@@ -86,7 +86,7 @@ namespace SpaceInvadersRemake.Controller
                     menu.Up();
                 }
 
-                // -Runter wurde gedrückt
+                // Runter wurde gedrückt
                 if (KeyPressed(KBconfig.Down)) //geändert zu Settingsdatei -CK
                 {
                     menu.Down();

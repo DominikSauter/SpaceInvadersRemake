@@ -33,12 +33,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Eigenschaft Controllees Liste (kontrollierte Objekt)
         /// </summary>
-        protected abstract System.Collections.Generic.ICollection<IGameItem> Controllees
-        {
-            get;
+        protected abstract ICollection<IGameItem> Controllees { get; set; }
 
-           set; 
-
-        }
     }
 }
