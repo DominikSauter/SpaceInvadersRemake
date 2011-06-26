@@ -41,22 +41,25 @@ namespace SpaceInvadersRemake.View
         public void Draw(SpriteBatch spriteBatch)
         {
             Vector2 framePosition = new Vector2((graphics.PreferredBackBufferWidth - this.frame.Width) / 2, (graphics.PreferredBackBufferHeight - this.frame.Height) / 2);
+            Vector2 namePosition = framePosition + new Vector2(20, 70);
+            Vector2 scorePosition = framePosition + new Vector2(200, 70);
+            Vector2 titlePosition = framePosition + new Vector2(20, 20);
+            String writeEnabled = "_";
+
+            spriteBatch.Begin();
 
             //Zeichnen des Hintergrundbildes
-            spriteBatch.Begin();
             spriteBatch.Draw(this.background, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
             
+            //Zeichnen des Menü-Titels
+            spriteBatch.DrawString(this.font, "HIGHSCORE", titlePosition, Color.White);
 
             //Zeichnen des Highscore Fensters
             //[DODO] Hier Stand zuvor 'new Rectangle(100, 100, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferWidth)' als "Position"
             spriteBatch.Draw(this.frame, new Rectangle((int)framePosition.X, (int)framePosition.Y, frame.Width, frame.Height * (3/2)), Color.White);
 
             //Zeichnen der Highscore Einträge
-            Vector2 name_Position = new Vector2(200, 200);
-            Vector2 score_Position = new Vector2(400, 200);
-            String writeEnabled = "_";
-
-            //Incrementieren der Positionen und Zeichnen der Elemente an den Positionen
+            //Incrementieren der Positionen und dortiges Zeichnen der Elemente
             for (int i = 0; i < highscoreManager.HighscoreEntries.Length; i++) 
             {
                 //Names
@@ -65,19 +68,19 @@ namespace SpaceInvadersRemake.View
                 //Wenn ein neuer Eintrag möglich ist, wird ein Cursor ("_") an die letze Stelle der Liste gesetzt, 
                 //wo der neue Eintrag erfolgt werden kann. Ansonsten wird der Name gezeichnet.
                 {
-                    spriteBatch.DrawString(this.font, name + writeEnabled, name_Position, Color.Cyan);
+                    spriteBatch.DrawString(this.font, name + writeEnabled, namePosition, Color.Cyan);
                 }
                 else 
                 {
-                    spriteBatch.DrawString(this.font, name, name_Position, Color.White);
+                    spriteBatch.DrawString(this.font, name, namePosition, Color.White);
                 }
 
                 //Scores
                 int score = highscoreManager.HighscoreEntries[i].Score;
-                spriteBatch.DrawString(this.font, score.ToString(), score_Position, Color.White);
+                spriteBatch.DrawString(this.font, score.ToString(), scorePosition, Color.White);
 
-                name_Position.Y += i * 100;
-                score_Position.Y += i * 100;
+                namePosition.Y += 20;
+                scorePosition.Y += 20;
             }
 
           spriteBatch.End();
