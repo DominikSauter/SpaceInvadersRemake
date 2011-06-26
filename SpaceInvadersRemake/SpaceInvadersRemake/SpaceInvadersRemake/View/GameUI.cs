@@ -21,10 +21,9 @@ namespace SpaceInvadersRemake.View
         private Texture2D gameBackgroundImage;
         private Texture2D hudBackgroundTexture;
         private SpriteFont font;
-        private List<Texture2D> powerUpIcons;
+        //[WAHL] private List<Texture2D> powerUpIcons;
         private Texture2D liveIcon;
-        private int lives;
-        private int score;
+        private GameCourseManager gameCourseMngr;
 
         /// <summary>
         /// Initialisiert die Spieloberfläche
@@ -35,13 +34,12 @@ namespace SpaceInvadersRemake.View
         {
             this.graphics = graphics;
 
-            this.lives = gameCourseMngr.GameCourse.Player.Lives;
-            this.score = gameCourseMngr.GameCourse.Player.Lives;
+            this.gameCourseMngr = gameCourseMngr;
             this.font = ViewContent.UIContent.Font;
             this.gameBackgroundImage = ViewContent.UIContent.GameBackgroundImage;
             this.hudBackgroundTexture = ViewContent.UIContent.HUDBackground;
             this.liveIcon = ViewContent.UIContent.LiveIcon;
-            //this.powerUpIcons
+            //[WAHL] this.powerUpIcons
 
         }
 
@@ -50,6 +48,9 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
+            int lives = gameCourseMngr.GameCourse.Player.Lives;
+            int score = gameCourseMngr.GameCourse.Player.Lives;
+
             //Counter, der angibt wie oft die HUD Grafik (32x60) gezeichnet werden muss.
             int hudTileCount = graphics.PreferredBackBufferWidth / this.hudBackgroundTexture.Width;
 
@@ -57,18 +58,18 @@ namespace SpaceInvadersRemake.View
             Color liveColor;
 
             //Vektor mit Länge/Breite für den String welcher die Punktzahl darstellt
-            Vector2 scoreStringLength = this.font.MeasureString(this.score.ToString());
+            Vector2 scoreStringLength = this.font.MeasureString(score.ToString());
 
             /*  Festlegen der Farben:
              *      1 Leben => ROT
              *      2 Leben => GELB
              *      3 Leben => GRÜN
              * */
-            if (this.lives == 1)
+            if (lives == 1)
             {
                 liveColor = Color.Red;
             }
-            else if (this.lives == 2)
+            else if (lives == 2)
             {
                 liveColor = Color.Yellow;
             }
@@ -91,14 +92,14 @@ namespace SpaceInvadersRemake.View
             }
 
             //zeichnet 1-3 Lebens Icons
-            for (int liveCount = 0; liveCount < this.lives; liveCount++)
+            for (int liveCount = 0; liveCount < lives; liveCount++)
             {
                 spriteBatch.Draw(this.liveIcon, new Vector2((float)((liveCount + 1) * this.liveIcon.Width),
                     (float)(graphics.PreferredBackBufferHeight - this.liveIcon.Height)), liveColor);
             }
 
             //beschriftet den HUD mit der aktuellen Punktzahl
-            spriteBatch.DrawString(this.font, this.score.ToString(), new Vector2((float)(graphics.PreferredBackBufferWidth - scoreStringLength.X),
+            spriteBatch.DrawString(this.font, score.ToString(), new Vector2((float)(graphics.PreferredBackBufferWidth - scoreStringLength.X),
                 (float)(graphics.PreferredBackBufferHeight - scoreStringLength.Y)), Color.Green);
 
             spriteBatch.End();
