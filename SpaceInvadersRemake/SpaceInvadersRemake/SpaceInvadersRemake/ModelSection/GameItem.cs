@@ -38,6 +38,8 @@ namespace SpaceInvadersRemake.ModelSection
             set;
         }
 
+        private int hitpoints;
+
         /// <summary>
         /// Die Lebenspunkte des Objekts
         /// </summary>
@@ -45,12 +47,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return Hitpoints;
+                return hitpoints;
             }
             set
             {
-                Hitpoints = value;
-                if (Hitpoints <= 0)
+                hitpoints = value;
+                if (hitpoints <= 0)
                     Destroy();
             }
         }
