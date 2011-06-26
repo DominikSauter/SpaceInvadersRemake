@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+
+// Implementiert von D. Sauter
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -17,24 +15,29 @@ namespace SpaceInvadersRemake.ModelSection
         protected ProjectileTypeEnum projectileType;
 
         /// <summary>
-        /// Die Zeit, die zwischen der Erzeugung zweier Projektile vergehen muss.
+        /// Die Zeit, die zwischen der Erzeugung zweier Projektile vergehen muss in Sekunden.
         /// </summary>
-        protected int cooldown;
+        protected float cooldown;
 
         /// <summary>
-        /// Die Geschwindigkeit der Projektile.
+        /// Die Geschwindigkeit der Projektile in Distanz pro Sekunde.
         /// </summary>
         protected Vector2 projectileVelocity;
 
         /// <summary>
-        /// Der Zeitpunkt, an dem das letzte Projektil erzeugt wurde.
+        /// Der Zeitpunkt, an dem das letzte Projektil erzeugt wurde in Milisekunden seit Spielstart.
         /// </summary>
-        protected GameTime lastShot;
+        protected double lastShot;
 
         /// <summary>
         /// Die Lebenspunkte der Projektile.
         /// </summary>
         protected int projectileHitpoints;
+
+        /// <summary>
+        /// Der (Kollisions-)Schaden der Projektile.
+        /// </summary>
+        protected int projectileDamage;
 
         /// <summary>
         /// Diese Methode generiert ein neues Projektil-Objekt und wirft das Event "WeaponFired".

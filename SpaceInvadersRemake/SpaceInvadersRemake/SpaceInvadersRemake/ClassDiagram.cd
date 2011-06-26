@@ -118,7 +118,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Weapon">
     <Position X="5.75" Y="42.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAQAAAACAAAAAAAAAACAEAAAAAAAAAIAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAQAAAACAAAAAAAAAACAEAAAQAAAAAIAAAAA=</HashCode>
       <FileName>ModelSection\Weapon.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -696,7 +696,7 @@
   <Class Name="SpaceInvadersRemake.View.UIContent">
     <Position X="31.25" Y="3.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAgAAAAAAAAAAAAQQAAQAIACCAAQEAAACAAA=</HashCode>
+      <HashCode>AAAAAAAIAgAAAAAAAAAAAAQAAAQAIACCAAAAAAACAAA=</HashCode>
       <FileName>View\UIContent.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -717,9 +717,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.GameItemConstants">
-    <Position X="13.25" Y="40" Width="1.5" />
+    <Position X="13.75" Y="38.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAACAAAAAA=</HashCode>
+      <HashCode>ECAACAAiABAABMgAAQAAgAGAAAIAAgQAAAEBCAACAAA=</HashCode>
       <FileName>ModelSection\GameItemConstants.cs</FileName>
     </TypeIdentifier>
   </Class>

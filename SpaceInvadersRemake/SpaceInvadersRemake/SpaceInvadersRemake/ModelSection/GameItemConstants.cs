@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 // Implementiert von D. Sauter
 
@@ -187,6 +183,72 @@ namespace SpaceInvadersRemake.ModelSection
             get
             {
                 return 10;
+            }
+        }
+
+        /// <summary>
+        /// Der standardmäßige (Kollisions-)Schaden der PlayerNormalProjectiles.
+        /// </summary>
+        public static int PlayerNormalProjectileDamage
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßigen Lebenspunkte der PlayerNormalProjectiles.
+        /// </summary>
+        public static int PlayerNormalProjectileHitpoints
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßige Geschwindigkeit der PlayerNormalProjectiles in Distanz pro Sekunde.
+        /// </summary>
+        public static Vector2 PlayerNormalProjectileVelocity
+        {
+            get
+            {
+                return new Vector2(40.0f, 40.0f);
+            }
+        }
+
+        /// <summary>
+        /// Der standardmäßige (Kollisions-)Schaden der EnemyNormalProjectiles.
+        /// </summary>
+        public static int EnemyNormalProjectileDamage
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßigen Lebenspunkte der EnemyNormalProjectiles.
+        /// </summary>
+        public static int EnemyNormalProjectileHitpoints
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßige Geschwindigkeit der EnemyNormalProjectiles in Distanz pro Sekunde.
+        /// </summary>
+        public static Vector2 EnemyNormalProjectileVelocity
+        {
+            get
+            {
+                return new Vector2(40.0f, 40.0f);
             }
         }
     }
