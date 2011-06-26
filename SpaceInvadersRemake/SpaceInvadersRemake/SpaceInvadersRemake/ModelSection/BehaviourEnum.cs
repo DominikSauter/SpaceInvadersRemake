@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 // Implementiert von D. Sauter in Zusammenarbeit mit der Controller-Gruppe
 
 namespace SpaceInvadersRemake.ModelSection

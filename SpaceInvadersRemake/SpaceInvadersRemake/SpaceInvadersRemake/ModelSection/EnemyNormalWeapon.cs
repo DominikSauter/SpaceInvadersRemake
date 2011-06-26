@@ -1,8 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using Microsoft.Xna.Framework;
+
+// Implementiert von D. Sauter
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -21,12 +20,18 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public EnemyNormalWeapon()
         {
-            throw new System.NotImplementedException();
+            this.cooldown = 0.0f;
+            this.projectileDamage = GameItemConstants.EnemyNormalProjectileDamage;
+            this.projectileHitpoints = GameItemConstants.EnemyNormalProjectileHitpoints;
+            this.projectileType = ProjectileTypeEnum.EnemyNormalProjectile;
+            this.projectileVelocity = GameItemConstants.EnemyNormalProjectileVelocity;
         }
 
         public override void Fire(Vector2 position, Vector2 shootingDirection, GameTime gameTime)
         {
-            throw new NotImplementedException();
+            new Projectile(position, shootingDirection, projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
+
+            WeaponFired(this, null);
         }
     }
 }
