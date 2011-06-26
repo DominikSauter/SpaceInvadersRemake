@@ -52,7 +52,6 @@ namespace SpaceInvadersRemake.View
                 //Idee: mit MeasureString längste Länge bestimmen, davon Abstand zu Select-Element
             Vector2 fontSize = font.MeasureString(menuControl.Text);
             Vector2 fontCenter = fontSize / 2;
-            Vector2 gap = new Vector2(65, 4);
 
             Vector2 selectPosition = new Vector2(position.X + fontSize.X, position.Y); //Position des SelectButtons
             Vector2 selectTextPosition = new Vector2(selectPosition.X + 20, selectPosition.Y); //Position der SelectAnzeige //zentrieren?
