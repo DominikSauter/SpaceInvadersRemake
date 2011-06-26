@@ -57,19 +57,7 @@ public class ControllerManager : IController
     /// <value>
     /// Die Liste der Controller.
     /// </value>
-    public ICollection<ICommander> Controllers
-    {
-        get
-        {
-            return Controllers;
-        }
-       private set
-        {
-            Controllers = value;
-        }
-
-   
-    }
+    public ICollection<ICommander> Controllers { get; set; }
 
     /// <summary>
     /// Erlaubt die Ausführung der im Controllers enthalten Spielmechanik.

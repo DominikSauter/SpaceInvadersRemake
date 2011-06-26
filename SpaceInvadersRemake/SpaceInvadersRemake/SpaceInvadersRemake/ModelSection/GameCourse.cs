@@ -36,33 +36,14 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Zählt die Wellen mit.
         /// </summary>
-        public int WaveCounter
-        {
-            get
-            {
-                return WaveCounter;
-            }
-            private set
-            {
-                WaveCounter = value;
-            }
-        }
+        public int WaveCounter { get; private set; }
+
 
         /// <summary>
         /// Referenz auf das Spielerschiff-Objekt.
         /// </summary>
-        public Player Player
-        {
-            get
-            {
-                return Player;
-            }
-            private set
-            {
-                Player = value;
-            }
-        }
-
+        public Player Player { get; private set; }
+ 
         /// <summary>
         /// Erzeugt eine neue Welle, d.h. eine Liste von Aliens, die durch einen Controller gesteuert werden.
         /// Die Abfolge der Wellen ist hier anhand des WaveCounters festgelegt. Die Methode setzt außerdem 

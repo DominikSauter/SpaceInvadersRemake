@@ -35,15 +35,8 @@ namespace SpaceInvadersRemake.Controller
         /// <value>
         /// Die KBconfig.
         /// </value>
-        public Settings.KeyboardConfig KBconfig
-        {
-            get;
+       public Settings.KeyboardConfig KBconfig { get; set; }
 
-            //HACK sichtbarkeit falls Tastaturbelegung wärend laufendem Spiel änderbar sein soll.
-           private set;
-
-
-        }
 
         /// <summary>
         /// Entscheided in welche Richtung sich das Controllees bewegen soll

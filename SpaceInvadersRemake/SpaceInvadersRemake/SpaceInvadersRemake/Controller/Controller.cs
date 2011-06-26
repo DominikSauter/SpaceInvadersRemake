@@ -43,13 +43,8 @@ namespace SpaceInvadersRemake.Controller
        /// <remarks>Eigenschaft in der das kontrollierte GameItem gespeichert ist.
        /// <c>get</c>
        /// <c>set</c>setzt ein IGameItem als kontrolliertes GameItem ein.</remarks>
-        protected virtual IGameItem Controllee
-        {
-            get;
-
-            set;
-        }
-
+        protected virtual IGameItem Controllee { get; set; }
+     
  
 
 
