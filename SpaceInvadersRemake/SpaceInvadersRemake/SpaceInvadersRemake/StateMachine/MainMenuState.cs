@@ -42,7 +42,7 @@ namespace SpaceInvadersRemake.StateMachine
             controls.Add(new Button("Highscore", new Action(ShowHighscore)));
             controls.Add(new Button("Options", new Action(ShowOptions)));
             controls.Add(new Button("Credits", new Action(ShowCredits)));
-            controls.Add(new Button("Quit", new Action(StartGame)));
+            controls.Add(new Button("Quit", new Action(Quit)));
 
             Model = new Menu(controls); //TB
         }
