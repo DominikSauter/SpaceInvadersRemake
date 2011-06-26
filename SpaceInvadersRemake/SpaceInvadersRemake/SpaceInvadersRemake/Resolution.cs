@@ -57,7 +57,7 @@ namespace SpaceInvadersRemake
         {
             string result = "";
 
-            result += Width.ToString() + " x " + Height.ToString();
+            result += Width.ToString() + "x" + Height.ToString();
 
             return result;
         }
