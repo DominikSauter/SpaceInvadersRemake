@@ -33,8 +33,10 @@ namespace SpaceInvadersRemake.ModelSection
             Vector2 velocity;
             velocity.X = GameItemConstants.AlienVelocity.X * difficultyLevel.VelocityMultiplier.X;
             velocity.Y = GameItemConstants.AlienVelocity.Y * difficultyLevel.VelocityMultiplier.Y;
+            int damage = (int)(GameItemConstants.AlienDamage * difficultyLevel.DamageMultiplier);
+            int scoreGain = (int)(GameItemConstants.AlienScoreGain * difficultyLevel.ScoreGainMultiplier);
 
-            LinkedList<IGameItem> wave = FormationGenerator.CreateFormation(hitpoints, velocity, formation);
+            LinkedList<IGameItem> wave = FormationGenerator.CreateFormation(hitpoints, velocity, formation, damage, scoreGain);
 
             WaveGenerated(null, new ControllerEventArgs(AI, wave, difficultyLevel));
 

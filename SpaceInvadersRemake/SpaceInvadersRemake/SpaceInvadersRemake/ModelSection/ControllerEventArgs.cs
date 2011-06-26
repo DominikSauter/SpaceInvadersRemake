@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.Controller;
 
+// Implementiert von D. Sauter
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -23,8 +25,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="difficultyLevel">Schwierigkeitsgrad der Gegner</param>
         public ControllerEventArgs(BehaviourEnum behaviour, LinkedList<IGameItem> controllees, DifficultyLevel difficultyLevel)
         {
-            throw new System.NotImplementedException();
+            this.Behaviour = behaviour;
+            this.Controllees = controllees;
+            this.DifficultyLevel = difficultyLevel;
         }
+
         /// <summary>
         /// Die gewünschte Controller-AI.
         /// </summary>
@@ -32,24 +37,26 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return Behaviour;
             }
-            set
+            private set
             {
+                Behaviour = value;
             }
         }
 
         /// <summary>
         /// Die Liste der zu kontrollierenden Aliens.
         /// </summary>
-        public List<IGameItem> Controllees
+        public LinkedList<IGameItem> Controllees
         {
             get
             {
-                throw new System.NotImplementedException();
+                return Controllees;
             }
-            set
+            private set
             {
+                Controllees = value;
             }
         }
 
@@ -63,10 +70,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return DifficultyLevel;
             }
-            set
+            private set
             {
+                DifficultyLevel = value;
             }
         }
     }

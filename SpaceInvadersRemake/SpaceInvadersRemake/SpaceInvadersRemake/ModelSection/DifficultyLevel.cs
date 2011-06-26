@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
 
+// Implementiert von D. Sauter
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -18,16 +20,22 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Konstruktor
         /// </summary>
-        /// <remarks>Private deklariert.</remarks>
+        /// <remarks></remarks>
         /// <param name="hitpointsMultiplier">Lebenspunkte der Gegner</param>
         /// <param name="shootingFrequencyMultiplier">Schussfrequenz der Gegner</param>
+        /// <param name="velocityIncreaseMultiplier">Geschwindigkeitserhöhung der Gegner</param>
         /// <param name="velocityIncrease">Rate der Geschwindigkeitszunahme</param>
         /// <param name="damageMultiplier">Schaden der Gegner</param>
         /// <param name="scoreGainMultiplier">Punktzahl, die die Gegner bei Abschuss geben</param>
         /// <param name="velocityMultiplier">Startgeschwindigkeit der Gegner</param>
         public DifficultyLevel(float hitpointsMultiplier, Vector2 velocityMultiplier, float shootingFrequencyMultiplier, Vector2 velocityIncreaseMultiplier, float damageMultiplier, float scoreGainMultiplier)
         {
-            throw new System.NotImplementedException();
+            this.HitpointsMultiplier = hitpointsMultiplier;
+            this.VelocityMultiplier = velocityMultiplier;
+            this.ShootingFrequencyMultiplier = shootingFrequencyMultiplier;
+            this.VelocityIncreaseMultiplier = velocityIncreaseMultiplier;
+            this.DamageMultiplier = damageMultiplier;
+            this.ScoreGainMultiplier = scoreGainMultiplier;
         }
 
         /// <summary>
@@ -37,9 +45,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-}
-            set { }
+                return HitpointsMultiplier;
+            }
+            private set
+            {
+                HitpointsMultiplier = value;
+            }
         }
 
         /// <summary>
@@ -49,9 +60,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-}
-            set { }
+                return VelocityMultiplier;
+            }
+            private set
+            {
+                VelocityMultiplier = value;
+            }
         }
 
         /// <summary>
@@ -61,9 +75,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-}
-            set { }
+                return ShootingFrequencyMultiplier;
+            }
+            private set
+            {
+                ShootingFrequencyMultiplier = value;
+            }
         }
 
         /// <summary>
@@ -73,9 +90,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-}
-            set { }
+                return VelocityIncreaseMultiplier;
+            }
+            private set
+            {
+                VelocityIncreaseMultiplier = value;
+            }
         }
 
         /// <summary>
@@ -85,10 +105,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new DifficultyLevel(1.0f, new Vector2(1.0f, 1.0f), 1.0f, new Vector2(1.0f, 1.0f), 1.0f, 1.0f);
             }
         }
 
@@ -99,10 +116,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new DifficultyLevel(2.0f, new Vector2(1.5f, 1.5f), 2.0f, new Vector2(1.5f, 1.5f), 2.0f, 2.0f);
             }
         }
 
@@ -113,24 +127,22 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
+                return new DifficultyLevel(3.0f, new Vector2(2.0f, 2.0f), 3.0f, new Vector2(2.0f, 2.0f), 3.0f, 3.0f);
             }
         }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Modifikation des Schadens der Aliens.
+        /// Schwierigkeitsspezifische Modifikation des Kollisionsschadens der Aliens.
         /// </summary>
         public float DamageMultiplier
         {
             get
             {
-                throw new System.NotImplementedException();
+                return DamageMultiplier;
             }
-            set
+            private set
             {
+                DamageMultiplier = value;
             }
         }
 
@@ -141,10 +153,11 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                return ScoreGainMultiplier;
             }
-            set
+            private set
             {
+                ScoreGainMultiplier = value;
             }
         }
     }

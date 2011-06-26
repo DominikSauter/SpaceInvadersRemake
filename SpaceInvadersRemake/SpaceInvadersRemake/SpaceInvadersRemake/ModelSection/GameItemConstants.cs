@@ -58,13 +58,13 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Der standardmäßige Schaden des Spielers.
+        /// Der standardmäßige Kollisionsschaden des Spielers.
         /// </summary>
         public static int PlayerDamage
         {
             get
             {
-                return 10;
+                return (int)(AlienHitpoints * DifficultyLevel.HardDifficulty.HitpointsMultiplier + 1); // Ein Alien soll bei Kollision sterben
             }
         }
 
@@ -80,7 +80,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die Positionsangaben der statischen Schilde.
+        /// Die Positionsangaben der Schilde.
         /// </summary>
         public static Vector2[] ShieldPositions
         {
@@ -125,7 +125,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Der standardmäßige Schaden, den die Schilde bei Kollision verursachen.
+        /// Der standardmäßige Kollisionsschaden der Schilde.
         /// </summary>
         public static int ShieldDamage
         {
@@ -154,6 +154,39 @@ namespace SpaceInvadersRemake.ModelSection
             get
             {
                 return new Vector2(10.0f, 10.0f);
+            }
+        }
+
+        /// <summary>
+        /// Der standardmäßige Kollisionsschaden der Aliens.
+        /// </summary>
+        public static int AlienDamage
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Die Standard-Waffe der Aliens.
+        /// </summary>
+        public static Weapon AlienWeapon
+        {
+            get
+            {
+                return new EnemyNormalWeapon();
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßige Punktzahl, die der Spieler durch das Zerstören der Aliens bekommt.
+        /// </summary>
+        public static int AlienScoreGain
+        {
+            get
+            {
+                return 10;
             }
         }
     }
