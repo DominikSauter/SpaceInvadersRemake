@@ -22,7 +22,6 @@ namespace SpaceInvadersRemake.StateMachine
         public HighscoreState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
             : base (stateManager, gameManager)
         {
-            Initialise();
         }
 
         /// <summary>

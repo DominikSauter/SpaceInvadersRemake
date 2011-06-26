@@ -20,10 +20,6 @@ namespace SpaceInvadersRemake.StateMachine
         public MainMenuState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
             : base (stateManager, gameManager)
         {
-            // Hab mal den Konstruktor gefüllt, damit das Menu mal sichtbar ist - TB
-            ModelInitialize();
-            ViewInitialize();
-            ControllerInitialize();
         }
 
         /// <summary>
