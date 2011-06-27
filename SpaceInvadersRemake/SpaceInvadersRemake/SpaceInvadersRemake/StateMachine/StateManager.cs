@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -45,6 +46,16 @@ namespace SpaceInvadersRemake.StateMachine
             set;
         }
 
+        //Test
+
+     
+
+
+        public static KeyboardState oldState { get; private set; }
+        public static KeyboardState newState { get; private set; }
+
+        //Test
+
         /// <summary>
         /// Ruft die ModelUpdate-Methode vom aktuellen State auf.
         /// </summary>
@@ -66,6 +77,11 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void ControllerUpdate(GameTime gameTime)
         {
+            //CK
+            oldState = StateManager.newState;//
+            newState = Keyboard.GetState();//modiefied by ck
+            //CK
+            
             this.State.ControllerUpdate(gameTime);
         }
     }
