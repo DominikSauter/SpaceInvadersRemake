@@ -46,15 +46,27 @@ namespace SpaceInvadersRemake.StateMachine
             set;
         }
 
-        //Test
-
-     
 
 
+        /// <summary>
+        /// Liefert old state.
+        /// </summary>
+        /// <remarks>
+        /// Wird hier benötigt um jedem State die selbe sicht auf den alten KeyboardState zu geben.
+        /// Dadurch wird unbeabsichtiges Auslösen von Back verhindert
+        /// </remarks>
         public static KeyboardState oldState { get; private set; }
+        
+        /// <summary>
+        /// Liefert new state.
+        /// </summary>
+        /// <remarks>
+        /// Wird hier benötigt um jedem State die selbe sicht auf den neuen KeyboardState zu geben.
+        /// Dadurch wird unbeabsichtiges Auslösen von Back verhindert
+        /// </remarks>
         public static KeyboardState newState { get; private set; }
 
-        //Test
+
 
         /// <summary>
         /// Ruft die ModelUpdate-Methode vom aktuellen State auf.
