@@ -50,10 +50,6 @@ namespace SpaceInvadersRemake.Controller
         /// </value>
         public KeyboardConfig KBconfig { get; set; }
 
-        // Wird genutzt um einfachen Tastendruck zu erkennen
-        //private KeyboardState oldState;
-        //private KeyboardState newState;
-        //CK
 
 
         /// <summary>
@@ -61,8 +57,8 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         public void Update(Game game, GameTime gameTime, State state)
         {
-            //StateManager.oldState = StateManager.newState;//
-            //StateManager.newState = Keyboard.GetState();//modiefied by ck
+
+            //KeyboardState Variablen ausgelagert - CK
 
             if (KeyPressed(KBconfig.Back))
             {
@@ -120,7 +116,7 @@ namespace SpaceInvadersRemake.Controller
             }
         }
 
-        //HACK Auslagern in StateManager ? 
+        
         /// <summary>
         /// Überprüft ob eine Taste gedrückt wurde
         /// </summary>
