@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
+using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -35,19 +35,7 @@ namespace SpaceInvadersRemake.View
             * */
             this.textSpeed = 1.0f;
             textEnd = false;
-            this.CreditsText = "~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                + "~ Space Invaders Remake ~\n"
-                + "~~~~~~~~~~~~~~~~~~~~~~~~~\n"
-                + "\n"
-                + "An diesem Projekt waren beteiligt:\n"
-                + "     Anjela \"Anji\" Mayer\n"
-                + "     Christian Klotz\n"
-                + "     Dominik Sauter\n"
-                + "     Dominik \"Dodo\" Schaufelberger\n"
-                + "     Steffen Stehmann\n"
-                + "     Tobias \"der Doofe\" Bast\n"
-                + "\n"
-                + "Wir danken einfach allen!\nIhr seid super doof!!!";
+            this.CreditsText = Resource.Text_Credits; //UNDONE Diese Zeile dient zum Test einer Resource
             this.textPos = new Vector2((graphics.PreferredBackBufferWidth - font.MeasureString(this.CreditsText).X) / 4, graphics.PreferredBackBufferHeight);
         }
 

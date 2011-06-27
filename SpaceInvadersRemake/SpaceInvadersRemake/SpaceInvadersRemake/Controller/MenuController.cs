@@ -7,7 +7,7 @@ using SpaceInvadersRemake.ModelSection;
 
 // Implementiert von Tobias
 
-//TODO Entscheidung ob KEyboardstate Auslagerung Böse ist oder nicht 
+//TODO Entscheidung ob Keyboardstate Auslagerung Böse ist oder nicht 
 
 namespace SpaceInvadersRemake.Controller
 {

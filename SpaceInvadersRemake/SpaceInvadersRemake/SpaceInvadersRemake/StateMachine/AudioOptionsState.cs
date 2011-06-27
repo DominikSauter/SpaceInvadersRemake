@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.Settings;
 using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.StateMachine
@@ -49,10 +50,10 @@ namespace SpaceInvadersRemake.StateMachine
                 volume.Add((float)i);
             }
 
-            //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
-            controls.Add(new ListSelect<float>("Master Volume", volume, 10.0f, delegate(float i) { }));
-            controls.Add(new ListSelect<float>("Effect Volume", volume, 10.0f, delegate(float i) {}));
-            controls.Add(new ListSelect<float>("Music Volume", volume, 10.0f, delegate(float i) {}));
+            
+            controls.Add(new ListSelect<float>(Resource.Label_MasterVolume, volume, 10.0f, delegate(float i) { }));
+            controls.Add(new ListSelect<float>(Resource.Label_EffectVolume, volume, 10.0f, delegate(float i) {}));
+            controls.Add(new ListSelect<float>(Resource.Label_MusicVolume, volume, 10.0f, delegate(float i) {}));
 
             Model = new Menu(controls);
         }

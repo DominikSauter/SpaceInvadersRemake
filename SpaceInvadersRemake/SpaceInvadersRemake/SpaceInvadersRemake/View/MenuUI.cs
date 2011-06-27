@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Linq;
 using System.Text;
-
+using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceInvadersRemake.ModelSection;
@@ -76,11 +76,11 @@ namespace SpaceInvadersRemake.View
                     //Zeichnen des Menü-Titels
                     if (currentState is StateMachine.AudioOptionsState)
                     {
-                        spriteBatch.DrawString(this.font, "AUDIO OPTIONS", titlePosition, Color.White);
+                        spriteBatch.DrawString(this.font,Resource.Label_AUDIOOPTIONS, titlePosition, Color.White);
                     }
                     else
                     {
-                        spriteBatch.DrawString(this.font, "VIDEO OPTIONS", titlePosition, Color.White);
+                        spriteBatch.DrawString(this.font, Resource.Label_VIDEOOPTIONS, titlePosition, Color.White);
                     }
                     //Frame zeichhen
                     spriteBatch.Draw(this.frame, new Rectangle((int)framePosition.X, (int)framePosition.Y, frame.Width, frame.Height * (3 / 2)), Color.White);

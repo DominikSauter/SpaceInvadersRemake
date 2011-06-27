@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceInvadersRemake.Settings;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -40,7 +41,7 @@ namespace SpaceInvadersRemake.StateMachine
             // von Tobias
             List<MenuControl> controls = new List<MenuControl>();
 
-            //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
+            
             //TODO: DisplayMode durch eigene Klasse ersetzten mit bessere ToString-Methode
 
             // Unterstützte Anzeigemodi von der Grafikkarte holen
@@ -58,7 +59,7 @@ namespace SpaceInvadersRemake.StateMachine
                                                           ((GameManager)game).graphics.PreferredBackBufferHeight);
 
             // Ein neues ListSelect samt anonymen Delegate hinzufügen
-            controls.Add(new ListSelect<Resolution>("Resolution", 
+            controls.Add(new ListSelect<Resolution>(Resource.Label_Resolution, 
                                                      resolutionList,
                                                      currentResolution, 
                                                      delegate(Resolution resolution) 
@@ -74,7 +75,7 @@ namespace SpaceInvadersRemake.StateMachine
             fullscreen.Add(new OnOff(true));
 
             // Ein neues ListSelect samt anonymen Delegate hinzufügen
-            controls.Add(new ListSelect<OnOff>("Fullscreen",
+            controls.Add(new ListSelect<OnOff>(Resource.Label_Fullscreen,
                                               fullscreen,
                                               new OnOff(((GameManager)game).graphics.IsFullScreen),
                                               delegate(OnOff onOff)
