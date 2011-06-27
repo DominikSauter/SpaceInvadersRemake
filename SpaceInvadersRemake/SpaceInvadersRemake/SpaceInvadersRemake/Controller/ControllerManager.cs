@@ -91,21 +91,47 @@ public class ControllerManager : IController
     /// <param name="desiredController">Gibt an welchen Controllers man generiert haben möchte.</param>
     public void CreateController(object sender, ControllerEventArgs desiredController) 
     {
-        
-        //Aus dem Event extrahierte Werte
 
-        if (sender is IGameItem)
-        {
-             IGameItem mySender = (IGameItem) sender;
-        }
-       
-        ICollection<IGameItem> controllees = desiredController.Controllees;
-        float shootingFrequency = (float)desiredController.DifficultyLevel.ShootingFrequencyMultiplier; 
-        Vector2 velocityIncrease = desiredController.DifficultyLevel.VelocityIncreaseMultiplier;
+        //Für Extraktion der Werte des desired Controller
+        ICollection<IGameItem> controllees;
+        float shootingFrequency;
+        Vector2 velocityIncrease;
         
         //Zwischenspeicher für den generierten Controller
         ICommander temp;
 
+        //Aus dem Event extrahierte Werte und Überprüfung von desired Controller auf Korrektheit
+        if ((desiredController.Controllees is ICollection<IGameItem>) || desiredController.Controllees.Count >= 1)
+        {
+            controllees = desiredController.Controllees;
+        }
+        else 
+        { 
+            throw new ArgumentException("is no Collection of GameItem or Collection is Empty", "Controllees");
+        }
+
+
+        if (desiredController.DifficultyLevel.ShootingFrequencyMultiplier != null)
+        {
+            shootingFrequency = desiredController.DifficultyLevel.ShootingFrequencyMultiplier;
+        }
+        else
+        {
+            throw new ArgumentNullException("ShootingFrequencyMultiplier");
+        }
+
+        if (desiredController.DifficultyLevel.VelocityIncreaseMultiplier != null)
+        {
+             velocityIncrease = desiredController.DifficultyLevel.VelocityIncreaseMultiplier;
+        }
+        else
+        {
+            throw new ArgumentNullException("VelocityIncreaseMultiplier");
+        }
+       
+     
+
+        //Start der Controllererzeugung
         switch (desiredController.Behaviour)
         {
             case BehaviourEnum.BlockMovement:
@@ -140,22 +166,38 @@ public class ControllerManager : IController
     /// <param name="e">The <see cref="System.EventArgs"/> instance containing the event data.</param>
     public void CreatePlayerController(object sender, EventArgs e) 
     {
-        IGameItem  mycontrollee = (IGameItem) sender;
-     
-        
-        switch (GameConfig.Default.Input)
+        IGameItem mycontrollee;
+
+        if (sender is Player)
         {
-            //HACK hier für neue Eingabemöglichkeit neuen case einfügen.
-            
-            case SupportedInputEnum.Keyboard: 
-            //Keyboard ist auch default, daher Durchreichung an Default case.
-            //Kein break
-            default:
-                Controllers.Add(new KeyboardController(mycontrollee));
-                break;
+            mycontrollee = (IGameItem)sender;
+
+            switch (GameConfig.Default.Input)
+            {
+                //HACK hier für neue Eingabemöglichkeit neuen case einfügen.
+
+                case SupportedInputEnum.Keyboard:
+
+                //Keyboard ist auch default, daher Durchreichung an Default case.
+                //Kein break
+
+                default:
+                    Controllers.Add(new KeyboardController(mycontrollee));
+                    break;
+
+
+            }
 
 
         }
+        else 
+        {
+            throw new ArgumentException("is no Player object", "sender");
+        }
+       
+     
+        
+ 
     }
 
 
@@ -164,7 +206,17 @@ public class ControllerManager : IController
     /// </summary>
     public void Dispose()
     {
-        throw new NotImplementedException();
+        //Empty Liste
+        Controllers.Clear();
+
+
+        //Abmeldung PlayerDamage EventHandler
+        Player.Created -= new EventHandler(this.CreatePlayerController);
+
+        //Abmeldung AI EventHandler
+        WaveGenerator.WaveGenerated -= new EventHandler<ControllerEventArgs>(this.CreateController);
+
     }
+
     }
 }
