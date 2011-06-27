@@ -43,7 +43,7 @@ namespace SpaceInvadersRemake.Controller
         /// <c>false</c>
         protected override bool Shooting()
         {
-            //Hack für /FA11000W/ (Mutterschiff schießt)
+            //Hack für /FA11000W/ (Mutterschiff schießt) - ck
             return false;
         }
     }
