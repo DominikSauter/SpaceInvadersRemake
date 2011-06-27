@@ -122,8 +122,7 @@ namespace SpaceInvadersRemake.Controller
             if (moveDown)
             {
 
-                //Hack für Performance 
-                //sofern Left * -1 = Right ist, kann current *(-1) stehen für gleichen Effekt.
+
                 currentDirection = BlockWaveAI.changeDirection(currentDirection);
                 
                 //Alle mann zurück!
