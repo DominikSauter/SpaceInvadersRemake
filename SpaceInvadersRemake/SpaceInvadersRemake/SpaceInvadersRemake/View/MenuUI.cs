@@ -64,7 +64,7 @@ namespace SpaceInvadersRemake.View
             //Im Break-State wird kein Hintergrund gezeichnet
             if (currentState is StateMachine.BreakState)
             {
-                //TODO: Entweder Frame zeichnen oder durchsichtigen, schwarzen Vordergrund (Hintergrund schwärzen)
+                //TODO: Entweder Frame zeichnen oder durchsichtigen, schwarzen Vordergrund (Hintergrund abdunkeln)
             }
             else 
             {
