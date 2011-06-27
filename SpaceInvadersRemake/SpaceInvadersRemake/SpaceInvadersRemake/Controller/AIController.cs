@@ -26,7 +26,7 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         /// <param name="shootingFrequencyMultiplier">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll.</param>
-        protected AIController(int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+        protected AIController(float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
             : base(controllee)
         {
             this.ShootingFrequency = shootingFrequency;
@@ -39,7 +39,7 @@ namespace SpaceInvadersRemake.Controller
         /// <value>
         /// Die Schussfrequenz.
         /// </value>
-       protected int ShootingFrequency { get; set; }
+        protected float ShootingFrequency { get; set; }
    
 
        public Vector2 VelocityIncrease { get; set; }

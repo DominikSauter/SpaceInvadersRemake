@@ -93,9 +93,14 @@ public class ControllerManager : IController
     {
         
         //Aus dem Event extrahierte Werte
-        IGameItem mySender = (IGameItem) sender;
+
+        if (sender is IGameItem)
+        {
+             IGameItem mySender = (IGameItem) sender;
+        }
+       
         ICollection<IGameItem> controllees = desiredController.Controllees;
-        int shootingFrequency = (int)desiredController.DifficultyLevel.ShootingFrequencyMultiplier; //HACK: Schnell den Fehler gefixt, bitte unbedingt float einbauen - TB
+        float shootingFrequency = (float)desiredController.DifficultyLevel.ShootingFrequencyMultiplier; 
         Vector2 velocityIncrease = desiredController.DifficultyLevel.VelocityIncreaseMultiplier;
         
         //Zwischenspeicher für den generierten Controller

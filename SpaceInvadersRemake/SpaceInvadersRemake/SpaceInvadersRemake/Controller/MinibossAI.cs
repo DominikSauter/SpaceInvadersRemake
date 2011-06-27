@@ -23,7 +23,7 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         /// <param name="shootingFrequencyMultiplier">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll.</param>
-        protected MinibossAI(int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+        protected MinibossAI(float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
             : base(shootingFrequency, controllee, velocityIncrease)
         {
            //Nichts zu erledigen
