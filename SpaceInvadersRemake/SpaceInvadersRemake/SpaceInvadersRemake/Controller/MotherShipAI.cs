@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Generiert eine neue Instanz der MothershipAI Controllers.
         /// </summary>
-        public MothershipAI(int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+        public MothershipAI(float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
             : base(shootingFrequency, controllee, velocityIncrease)
         {
             //Nichts zu erledigen.

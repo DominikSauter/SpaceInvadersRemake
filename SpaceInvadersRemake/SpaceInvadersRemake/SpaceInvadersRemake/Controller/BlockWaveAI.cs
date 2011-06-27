@@ -27,7 +27,7 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         /// <param name="shootingFrequencyMultiplier">Die Schussfrequenz.</param>
         /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
-        public BlockWaveAI(int shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
+        public BlockWaveAI(float shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
             : base(shootingFrequency, controllees, velocityIncrease)
         {
             
