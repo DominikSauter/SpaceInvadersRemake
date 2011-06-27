@@ -35,7 +35,7 @@ namespace SpaceInvadersRemake.View
             this.buttonTexture = ViewContent.UIContent.MenuButton;
             this.selectTexture = ViewContent.UIContent.SettingsButton; //Der muss noch geändert werden
             this.normalColor = Color.White;
-            this.activeColor = new Color(0, 255, 186);         
+            this.activeColor = new Color(0, 234, 255);     //0, 228, 255
         }
         
         /// <summary>
