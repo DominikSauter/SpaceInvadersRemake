@@ -1,4 +1,5 @@
-﻿
+﻿using SpaceInvadersRemake.Settings;
+
 //Implementiert von Tobias
 
 // Wusste nicht genau wo ich die Klasse hinstecken soll, deshalb ist sie ertmal im Obernamespace
@@ -40,11 +41,11 @@ namespace SpaceInvadersRemake
             //TODO: An eine Ressource-Datei binden
             if (On)
             {
-                result += "On";
+                result += Resource.Label_ON;
             }
             else
             {
-                result += "Off";
+                result += Resource.Label_OFF;
             }
 
             return result;

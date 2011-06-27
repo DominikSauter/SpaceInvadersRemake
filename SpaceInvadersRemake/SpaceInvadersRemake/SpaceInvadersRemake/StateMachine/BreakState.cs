@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
+using SpaceInvadersRemake.Settings;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -39,10 +40,10 @@ namespace SpaceInvadersRemake.StateMachine
             // von Tobias
             List<MenuControl> controls = new List<MenuControl>();
 
-            //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
-            controls.Add(new Button("Return To Game", new Action(Back)));
+            
+            controls.Add(new Button(Resource.Label_ReturnToGame, new Action(Back)));
             //TODO: Wollten wir nicht vom Pausemenü ins Optionsmenu kommen? - TB
-            controls.Add(new Button("Quit Game", new Action(ExitGame)));
+            controls.Add(new Button(Resource.Label_QuitGame, new Action(ExitGame)));
 
             Model = new Menu(controls);
         }

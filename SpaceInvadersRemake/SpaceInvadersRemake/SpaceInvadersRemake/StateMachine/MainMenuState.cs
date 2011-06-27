@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
+using SpaceInvadersRemake.Settings;
 
 namespace SpaceInvadersRemake.StateMachine
 {
@@ -37,12 +38,12 @@ namespace SpaceInvadersRemake.StateMachine
         {
             List<MenuControl> controls = new List<MenuControl>(); //TB
 
-            //HACK: Fürs erste Buttons mit fixer Beschriftung hinzugefügt, bis Ressource-File verfügbar - TB
-            controls.Add(new Button("Start Game", new Action(StartGame)));
-            controls.Add(new Button("Highscore", new Action(ShowHighscore)));
-            controls.Add(new Button("Options", new Action(ShowOptions)));
-            controls.Add(new Button("Credits", new Action(ShowCredits)));
-            controls.Add(new Button("Quit", new Action(Quit)));
+            
+            controls.Add(new Button(Resource.Label_StartGame, new Action(StartGame)));
+            controls.Add(new Button(Resource.Label_Highscore, new Action(ShowHighscore)));
+            controls.Add(new Button(Resource.Label_Options, new Action(ShowOptions)));
+            controls.Add(new Button(Resource.Label_Credits, new Action(ShowCredits)));
+            controls.Add(new Button(Resource.Label_Quit, new Action(Quit)));
 
             Model = new Menu(controls); //TB
         }
