@@ -6,7 +6,8 @@ using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.ModelSection;
 
 // Implementiert von Tobias
-//TODO Keys hardcoding entfernen 
+
+//TODO Entscheidung ob KEyboardstate Auslagerung Böse ist oder nicht 
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -29,7 +30,8 @@ namespace SpaceInvadersRemake.Controller
         {
             this.KBconfig = KeyboardConfig.Default;
             this.Controllee = controllee;
-            newState = Keyboard.GetState();
+            
+            
         }
 
         /// <summary>
@@ -40,12 +42,18 @@ namespace SpaceInvadersRemake.Controller
         /// </value>
         public IModel Controllee { get; set; }
 
-
+        /// <summary>
+        /// Getter/Setter der Tastatur Konfiguration
+        /// </summary>
+        /// <value>
+        /// Die KBconfig.
+        /// </value>
         public KeyboardConfig KBconfig { get; set; }
 
         // Wird genutzt um einfachen Tastendruck zu erkennen
-        private KeyboardState oldState;
-        private KeyboardState newState;
+        //private KeyboardState oldState;
+        //private KeyboardState newState;
+        //CK
 
 
         /// <summary>
@@ -53,8 +61,8 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         public void Update(Game game, GameTime gameTime, State state)
         {
-            oldState = newState;
-            newState = Keyboard.GetState();
+            //StateManager.oldState = StateManager.newState;//
+            //StateManager.newState = Keyboard.GetState();//modiefied by ck
 
             if (KeyPressed(KBconfig.Back))
             {
@@ -112,14 +120,15 @@ namespace SpaceInvadersRemake.Controller
             }
         }
 
+        //HACK Auslagern in StateManager ? 
         /// <summary>
         /// Überprüft ob eine Taste gedrückt wurde
         /// </summary>
         /// <param name="key">Taste die überprüft werden soll</param>
         /// <returns>ob Taste gedrückt wurde</returns>
-        private bool KeyPressed(Keys key)
+        private static bool KeyPressed(Keys key)
         {
-            if (newState.IsKeyDown(key) && !oldState.IsKeyDown(key))
+            if (StateManager.newState.IsKeyDown(key) && !StateManager.oldState.IsKeyDown(key)) //modified by ck
             {
                 return true;
             }
