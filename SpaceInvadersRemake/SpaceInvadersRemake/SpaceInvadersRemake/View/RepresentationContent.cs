@@ -44,6 +44,12 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
+        public Texture2D PlayerTexture
+        {
+            get;
+            set;
+        }
+
         public ModelHitsphere PlayerHitsphere
         {
             get;
@@ -51,6 +57,12 @@ namespace SpaceInvadersRemake.View
         }
 
         public Model MothershipModel
+        {
+            get;
+            set;
+        }
+
+        public Model MothershipTexture
         {
             get;
             set;

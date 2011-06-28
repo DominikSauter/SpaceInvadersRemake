@@ -64,6 +64,8 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.PlayerModel = Content.Load<Model>("3D Models/Spielerschiff");
             RepresentationContent.MothershipModel = Content.Load<Model>("3D Models/Mutterschiff");
             RepresentationContent.AlienTextures.Add(Content.Load<Texture2D>("3D Model Textures/AlienTextur1"));
+            RepresentationContent.PlayerTexture = Content.Load<Texture2D>("3D Model Textures/Spieler");
+            RepresentationContent.MothershipTexture = Content.Load<Texture2D>("3D Model Textures/Mutterschiff");
             //<WAHL>
             //RepresentationContent.BossModel = Content.Load<Model>("3D Models/Minibossschiff");
             //</WAHL>
