@@ -40,8 +40,14 @@ namespace SpaceInvadersRemake.Controller
         /// Die Schussfrequenz.
         /// </value>
         protected float ShootingFrequency { get; set; }
-   
 
+
+        /// <summary>
+        /// Getter/Setter der Geschwindigkeitserhöhung.
+        /// </summary>
+        /// <value>
+        /// Die Geschwindigkeitserhöhung.
+        /// </value>
        public Vector2 VelocityIncrease { get; set; }
     }
 }
