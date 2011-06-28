@@ -59,8 +59,10 @@ namespace SpaceInvadersRemake.Controller
         {
 
             //KeyboardState Variablen ausgelagert - CK
+            //Eingabe erfolgt durch Benutzertastenbelegung sowie einer Standardtaste
+            
 
-            if (KeyPressed(KBconfig.Back))
+            if (KeyPressed(KBconfig.Back)|| KeyPressed(Keys.Escape))
             {
                 if (state is HighscoreState)
                 {
@@ -85,31 +87,31 @@ namespace SpaceInvadersRemake.Controller
                 Menu menu = (Menu)Controllee;
 
                 // Hoch wurde gedrückt
-                if (KeyPressed(KBconfig.Up)) //geändert zu Settingsdatei -CK
+                if (KeyPressed(KBconfig.Up)|| KeyPressed(Keys.Up)) //geändert zu Settingsdatei -CK
                 {
                     menu.Up();
                 }
 
                 // Runter wurde gedrückt
-                if (KeyPressed(KBconfig.Down)) //geändert zu Settingsdatei -CK
+                if (KeyPressed(KBconfig.Down)|| KeyPressed(Keys.Down)) //geändert zu Settingsdatei -CK
                 {
                     menu.Down();
                 }
 
                 // Links wurde gedrückt
-                if (KeyPressed(KBconfig.Left)) //geändert zu Settingsdatei -CK
+                if (KeyPressed(KBconfig.Left)|| KeyPressed(Keys.Left)) //geändert zu Settingsdatei -CK
                 {
                     menu.Left();
                 }
 
                 // Rechts wurde gedrückt
-                if (KeyPressed(KBconfig.Right)) //geändert zu Settingsdatei -CK
+                if (KeyPressed(KBconfig.Right)|| KeyPressed(Keys.Right)) //geändert zu Settingsdatei -CK
                 {
                     menu.Right();
                 }
 
                 // Bestätigen wurde gedrückt
-                if (KeyPressed(KBconfig.Fire)) //geändert zu Settingsdatei -CK
+                if (KeyPressed(KBconfig.Fire)|| KeyPressed(Keys.Enter)) //geändert zu Settingsdatei -CK
                 {
                     menu.Action();
                 }
