@@ -54,7 +54,6 @@ namespace SpaceInvadersRemake.View
 
                 /* Vorläufige Matrizen.
                 * Wir müssen noch besprechen wie groß unsre 3D Ebene wird (dementsprechend müssen wir Camera und Projection initialisieren)
-                * Das Model muss evtl noch gedreht werden.
                 * */
                 GameItemRepresentation.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 20.0f, -32.0f), new Vector3(0.0f, 0.0f, -116.0f), Vector3.Up);
                 GameItemRepresentation.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(27),
@@ -68,7 +67,17 @@ namespace SpaceInvadersRemake.View
                 Shield.Created += CreateShield;
                 Projectile.Created += CreateProjectile;
 
-                //[WAHL]
+                /* [WAHL]
+                 * (created)
+                 * Miniboss.Created += CreateMiniboss;
+                 * PowerUp... += CreatePowerUp;
+                 * 
+                 * (weaponFired)
+                 * PiercingShotWeapon.WeaponFired += ShootSFX;
+                 * RapidfireWeapon.WeaponFired += ShootSFX;
+                 * MultiShotWeapon.WeaponFired += ShootSFX;
+                 * */
+
                 //destroyed
                 Player.Destroyed += ExplosionFX;
                 Alien.Destroyed += ExplosionFX;
@@ -77,9 +86,6 @@ namespace SpaceInvadersRemake.View
 
                 //weaponFired
                 PlayerNormalWeapon.WeaponFired += ShootSFX;
-                PiercingShotWeapon.WeaponFired += ShootSFX;
-                RapidfireWeapon.WeaponFired += ShootSFX;
-                MultiShotWeapon.WeaponFired += ShootSFX;
 
             }
             else if (currentState is StateMachine.IntroState)
@@ -187,7 +193,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreatePlayer(object player, EventArgs e)
         {
-            this.ViewItemList.Add(new PlayerRepresentation((Player)player, this.graphics));
+            this.ViewItemList.Add(new PlayerRepresentation((Player)player));
             ((Player)player).BoundingVolume = ViewContent.RepresentationContent.PlayerHitsphere;
         }
 
@@ -202,7 +208,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateAlien(object alien, EventArgs e)
         {
-            this.ViewItemList.Add(new AlienRepresentation());
+            this.ViewItemList.Add(new AlienRepresentation((Alien)alien));
             ((Alien)alien).BoundingVolume = ViewContent.RepresentationContent.AlienHitsphere;
         }
 
@@ -217,7 +223,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateMothership(object mothership, EventArgs e)
         {
-            this.ViewItemList.Add(new MothershipRepresentation());
+            this.ViewItemList.Add(new MothershipRepresentation((Mothership)mothership));
             ((Mothership)mothership).BoundingVolume = ViewContent.RepresentationContent.MothershipHitsphere;
         }
 
