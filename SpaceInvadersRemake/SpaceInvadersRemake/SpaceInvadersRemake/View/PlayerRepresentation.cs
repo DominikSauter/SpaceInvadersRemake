@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Dodo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,14 +19,12 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public class PlayerRepresentation : GameItemRepresentation
     {
-        private List<Texture2D> explosionTextures;
-        private List<Texture2D> engineTextures;
         private Model model;
 
         /// <summary>
         /// Referenz auf das PlayerDamage-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
-        private Player PlayerGameItem;
+        private Player playerGameItem;
 
         /// <summary>
         /// ParticleEmitter der einen Explosionseffekt erzeugt.
@@ -33,29 +32,27 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
         /// </remarks>
-        private Explosion Explosion;
+        private Explosion explosion;
 
         /// <summary>
         /// ParticleEmitter der einen Effekt erzeugt, welcher den Antrieb des Spielerschiffs darstellt.
         /// </summary>
-        private PlayerShipEngine PlayerShipEngine;
+        private PlayerShipEngine playerShipEngine;
     
         /// <summary>
         /// Erstellt eine Representation der Spielerfigur.
         /// </summary>
-        public PlayerRepresentation(Player PlayerGameItem, GraphicsDeviceManager graphics)
+        public PlayerRepresentation(Player playerGameItem)
         {
             this.model = ViewContent.RepresentationContent.PlayerModel;
-            this.PlayerGameItem = PlayerGameItem;
+            this.playerGameItem = playerGameItem;
 
             
-            this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position), Vector3.Forward, Vector3.Up);
+            this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.playerGameItem.Position), Vector3.Backward, Vector3.Up);
 
             //<WAHL>
-            this.PlayerShipEngine = null;
-            this.Explosion = null;
-            this.engineTextures = null;
-            this.explosionTextures = null;
+            this.playerShipEngine = null;
+            this.explosion = null;
             //<WAHL>
         }
 
@@ -74,7 +71,7 @@ namespace SpaceInvadersRemake.View
                     effect.SpecularColor = new Vector3(1.0f, 1.0f, 1.0f);
                     effect.SpecularPower = 100.0f;
                     effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
-                    effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position));
+                    effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.playerGameItem.Position));
                     effect.View = Camera;
                     effect.Projection = Projection;
                 }

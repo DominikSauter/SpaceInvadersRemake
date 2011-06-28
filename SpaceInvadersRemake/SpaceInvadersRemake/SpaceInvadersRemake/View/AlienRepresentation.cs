@@ -6,6 +6,8 @@ using System.Text;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
+using SpaceInvadersRemake.ModelSection;
+
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
@@ -16,30 +18,12 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public class AlienRepresentation : GameItemRepresentation
     {
-        private Texture2D explosionTexture;
         private Model model;
-
-        /// <summary>
-        /// Erstellt eine Representation eines Aliens.
-        /// </summary>
-        public AlienRepresentation()
-        {
-            throw new System.NotImplementedException();
-        }
 
         /// <summary>
         /// Referenz auf ein Alien-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
-        public ModelSection.Alien AlienGameItem
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        private Alien alienGameItem;
 
         /// <summary>
         /// ParticleEmitter der einen Explosionseffekt erzeugt.
@@ -47,15 +31,21 @@ namespace SpaceInvadersRemake.View
         /// <remarks>
         /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
         /// </remarks>
-        public Explosion Explosion
+        private Explosion explosion;
+
+        /// <summary>
+        /// Erstellt eine Representation eines Aliens.
+        /// </summary>
+        public AlienRepresentation(Alien alienGameItem)
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            this.model = ViewContent.RepresentationContent.AlienModel;
+            this.alienGameItem = alienGameItem;
+
+            this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.alienGameItem.Position), Vector3.Forward, Vector3.Up);
+
+            //[WAHL]
+            this.explosion = null;
+            //[/WAHL]
         }
 
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
@@ -65,7 +55,21 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            throw new NotImplementedException();
+            foreach (ModelMesh mesh in model.Meshes)
+            {
+                foreach (BasicEffect effect in mesh.Effects)
+                {
+                    effect.LightingEnabled = true;
+                    effect.SpecularColor = new Vector3(1.0f, 1.0f, 1.0f);
+                    effect.SpecularPower = 100.0f;
+                    effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
+                    effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.alienGameItem.Position));
+                    effect.View = Camera;
+                    effect.Projection = Projection;
+                }
+
+                mesh.Draw();
+            }
         }
     }
 }
