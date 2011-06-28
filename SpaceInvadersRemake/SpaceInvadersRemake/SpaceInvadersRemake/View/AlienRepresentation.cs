@@ -19,6 +19,7 @@ namespace SpaceInvadersRemake.View
     public class AlienRepresentation : GameItemRepresentation
     {
         private Model model;
+        private Texture2D alienTexture;
 
         /// <summary>
         /// Referenz auf ein Alien-Modelobjekt um jegliche Abfragen im Model zu tätigen.
@@ -33,15 +34,19 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         private Explosion explosion;
 
-        /// <summary>
+        
+        /// /// <summary>
         /// Erstellt eine Representation eines Aliens.
         /// </summary>
-        public AlienRepresentation(Alien alienGameItem)
+        /// <param name="alienGameItem">Alien Datenmodell</param>
+        /// <param name="randomTexture">Wird zufällig generiert und kann unterschiedliche Texturen zuordnen.</param>
+        public AlienRepresentation(Alien alienGameItem, int randomTexture)
         {
             this.model = ViewContent.RepresentationContent.AlienModel;
             this.alienGameItem = alienGameItem;
-
             this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.alienGameItem.Position), Vector3.Forward, Vector3.Up);
+
+            this.alienTexture = ViewContent.RepresentationContent.AlienTextures[randomTexture];
 
             //[WAHL]
             this.explosion = null;
@@ -66,6 +71,7 @@ namespace SpaceInvadersRemake.View
                     effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.alienGameItem.Position));
                     effect.View = Camera;
                     effect.Projection = Projection;
+                    effect.Texture = this.alienTexture;
                 }
 
                 mesh.Draw();

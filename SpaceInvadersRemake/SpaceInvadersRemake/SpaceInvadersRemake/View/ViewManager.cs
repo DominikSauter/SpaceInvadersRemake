@@ -24,9 +24,8 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public class ViewManager : SpaceInvadersRemake.StateMachine.IView
     {
-        //Random Generator um zufällige AlienRepresentations zu erstellen.
-        private Random random;
         private GraphicsDeviceManager graphics;
+        private Random random;
 
         /// <summary>
         /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende
@@ -51,6 +50,7 @@ namespace SpaceInvadersRemake.View
                 //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
                 this.ViewItemList.Add(CreateGameUI(currentState, graphics));
                 this.EffectPlayer = new SoundEffects();
+                this.random = new Random();
 
                 /* Vorläufige Matrizen.
                 * Wir müssen noch besprechen wie groß unsre 3D Ebene wird (dementsprechend müssen wir Camera und Projection initialisieren)
@@ -208,7 +208,9 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateAlien(object alien, EventArgs e)
         {
-            this.ViewItemList.Add(new AlienRepresentation((Alien)alien));
+            int randomTexture = this.random.Next(ViewContent.RepresentationContent.AlienTextures.Count);
+
+            this.ViewItemList.Add(new AlienRepresentation((Alien)alien, randomTexture));
             ((Alien)alien).BoundingVolume = ViewContent.RepresentationContent.AlienHitsphere;
         }
 

@@ -20,6 +20,7 @@ namespace SpaceInvadersRemake.View
     public class PlayerRepresentation : GameItemRepresentation
     {
         private Model model;
+        private Texture2D playerTexture;
 
         /// <summary>
         /// Referenz auf das PlayerDamage-Modelobjekt um jegliche Abfragen im Model zu tätigen.
@@ -46,8 +47,7 @@ namespace SpaceInvadersRemake.View
         {
             this.model = ViewContent.RepresentationContent.PlayerModel;
             this.playerGameItem = playerGameItem;
-
-            
+            this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
             this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.playerGameItem.Position), Vector3.Backward, Vector3.Up);
 
             //<WAHL>
@@ -71,6 +71,7 @@ namespace SpaceInvadersRemake.View
                     effect.SpecularColor = new Vector3(1.0f, 1.0f, 1.0f);
                     effect.SpecularPower = 100.0f;
                     effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
+                    effect.Texture = this.playerTexture;
                     effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.playerGameItem.Position));
                     effect.View = Camera;
                     effect.Projection = Projection;
