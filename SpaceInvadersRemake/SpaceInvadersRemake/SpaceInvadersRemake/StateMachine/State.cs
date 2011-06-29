@@ -207,22 +207,12 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         public void Dispose()
         {
-            // HACK: Wenn der previousState gelöscht wird, kann man nicht meht zu ihm zurückkehren.
-            // Deshalb hab ich da auskommentiert - TB
-            /*if (previousState != null)
-                previousState.Dispose();*/
-            // <STST>
-            // Fehler wahrscheinlich in der Back-Methode diese darf keinen Dispose-Aufruf haben
-            // </STST>
+            if (previousState != null)
+                previousState.Dispose();
 
             this.Model.Dispose();
             this.View.Dispose();
             this.Controller.Dispose();
-
-            // HACK: Hab mal zu Fehlersuche die Dummy-Objekte benutzt, sollten aber eigentlich nicht nötig sein - TB
-            this.Model = new ModelDummy();
-            this.View = new ViewDummy();
-            this.Controller = new ControllerDummy();
         }
 
         /// <summary>
@@ -234,7 +224,6 @@ namespace SpaceInvadersRemake.StateMachine
             if (this.previousState == null)
                 throw new NullReferenceException("Back hier nicht verwendet werden, da keiner definiert wurde.");
             this.stateManager.State = this.previousState;
-            Dispose();
         }
     }
 }
