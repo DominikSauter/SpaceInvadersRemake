@@ -67,7 +67,7 @@ namespace SpaceInvadersRemake.Controller
         public virtual void Update(Game game,GameTime gameTime, State state)
         {
             //Richtungsanweisung an das Controllee (ermittelt durch konkreten Controller)
-            Controllee.Move(this.Movement());
+            Controllee.Move(this.Movement(), gameTime);
 
            
             if (this.Shooting())
