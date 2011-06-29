@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Xml.Serialization;
+using System.IO;
 
 // Implementiert von D. Sauter
 
@@ -9,6 +11,8 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public static class GameItemConstants
     {
+     
+
         /// <summary>
         /// Die standardmäßige Schussfrequenz der Aliens in Schussanzahl pro Sekunde.
         /// </summary>
@@ -16,7 +20,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 3.0f;
+                return 3.0f;              
             }
         }
 
