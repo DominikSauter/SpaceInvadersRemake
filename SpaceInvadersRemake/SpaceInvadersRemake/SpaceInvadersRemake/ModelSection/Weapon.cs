@@ -15,9 +15,9 @@ namespace SpaceInvadersRemake.ModelSection
         protected ProjectileTypeEnum projectileType;
 
         /// <summary>
-        /// Die Zeit, die zwischen der Erzeugung zweier Projektile vergehen muss in Sekunden.
+        /// Die Zeit, die zwischen der Erzeugung zweier Projektile vergehen muss in Milisekunden.
         /// </summary>
-        protected float cooldown;
+        protected int cooldown;
 
         /// <summary>
         /// Die Geschwindigkeit der Projektile in Distanz pro Sekunde.
@@ -25,9 +25,9 @@ namespace SpaceInvadersRemake.ModelSection
         protected Vector2 projectileVelocity;
 
         /// <summary>
-        /// Der Zeitpunkt, an dem das letzte Projektil erzeugt wurde in Milisekunden seit Spielstart.
+        /// Der Zeitpunkt, an dem das letzte Projektil erzeugt wurde in Milisekunden seit Spielstart plus Cooldown.
         /// </summary>
-        protected double lastShot;
+        protected int lastShot;
 
         /// <summary>
         /// Die Lebenspunkte der Projektile.
