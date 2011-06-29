@@ -20,17 +20,23 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public EnemyNormalWeapon()
         {
+            this.cooldown = 200;
             this.projectileDamage = GameItemConstants.EnemyNormalProjectileDamage;
             this.projectileHitpoints = GameItemConstants.EnemyNormalProjectileHitpoints;
             this.projectileType = ProjectileTypeEnum.EnemyNormalProjectile;
             this.projectileVelocity = GameItemConstants.EnemyNormalProjectileVelocity;
+            this.lastShot = -cooldown;
         }
 
         public override void Fire(Vector2 position, Vector2 shootingDirection, GameTime gameTime)
         {
-            new Projectile(position, shootingDirection, projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
+            if (gameTime.TotalGameTime.Milliseconds >= lastShot)
+            {
+                new Projectile(position, shootingDirection, projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
+                lastShot = gameTime.TotalGameTime.Milliseconds + cooldown;
 
-            WeaponFired(this, null);
+                WeaponFired(this, null);
+            }
         }
     }
 }

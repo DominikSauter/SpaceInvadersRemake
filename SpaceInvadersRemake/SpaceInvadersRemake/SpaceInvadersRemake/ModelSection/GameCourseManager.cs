@@ -31,17 +31,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Referenz auf das im Konstruktor erzeugte GameCourse-Objekt.
         /// </summary>
-        public GameCourse GameCourse
-        {
-            get
-            {
-                return GameCourse;
-            }
-            private set
-            {
-                GameCourse = value;
-            }
-        }
+        public GameCourse GameCourse { get; private set; }
 
         /// <summary>
         /// Ruft die beiden Untermethoden <c>UpdateGameItemList</c> und <c>UpdateGameCourse</c> auf (in dieser Reihenfolge).

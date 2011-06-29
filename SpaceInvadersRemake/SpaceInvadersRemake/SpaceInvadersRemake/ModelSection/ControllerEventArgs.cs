@@ -29,32 +29,12 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die gewünschte Controller-AI.
         /// </summary>
-        public BehaviourEnum Behaviour 
-        {
-            get
-            {
-                return Behaviour;
-            }
-            private set
-            {
-                Behaviour = value;
-            }
-        }
+        public BehaviourEnum Behaviour { get; private set; }
 
         /// <summary>
         /// Die Liste der zu kontrollierenden Aliens.
         /// </summary>
-        public LinkedList<IGameItem> Controllees
-        {
-            get
-            {
-                return Controllees;
-            }
-            private set
-            {
-                Controllees = value;
-            }
-        }
+        public LinkedList<IGameItem> Controllees { get; private set; }
 
         /// <summary>
         /// Objekt, das Parameter enthält, die den Schwierigkeitsgrad festlegen.
@@ -62,16 +42,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <remarks>
         /// <c>ShootingFrequencyMultiplier</c> und <c>VelocityIncreaseMultiplier</c> sind für den Controller relevant.
         /// </remarks>
-        public DifficultyLevel DifficultyLevel
-        {
-            get
-            {
-                return DifficultyLevel;
-            }
-            private set
-            {
-                DifficultyLevel = value;
-            }
-        }
+        public DifficultyLevel DifficultyLevel { get; private set; }
+
     }
 }
