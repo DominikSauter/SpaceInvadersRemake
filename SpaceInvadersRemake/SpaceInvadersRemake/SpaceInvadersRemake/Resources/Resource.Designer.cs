@@ -223,6 +223,18 @@ namespace SpaceInvadersRemake.Resources {
         }
         
         /// <summary>
+
+        ///   Looks up a localized string similar to Chuck Norris.
+        /// </summary>
+        public static string NoName {
+            get {
+                return ResourceManager.GetString("NoName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ~~~~~~~~~~~~~~~~~~~~~~~~~
+
         ///   Sucht eine lokalisierte Zeichenfolge, die ~~~~~~~~~~~~~~~~~~~~~~~~~
         ///~ Space Invaders Remake ~
         ///~~~~~~~~~~~~~~~~~~~~~~~~~

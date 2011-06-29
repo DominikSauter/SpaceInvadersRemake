@@ -210,12 +210,6 @@ public class ControllerManager : IController
         Controllers.Clear();
 
 
-        //Abmeldung PlayerDamage EventHandler
-        Player.Created -= new EventHandler(this.CreatePlayerController);
-
-        //Abmeldung AI EventHandler
-        WaveGenerator.WaveGenerated -= new EventHandler<ControllerEventArgs>(this.CreateController);
-
     }
 
     }
