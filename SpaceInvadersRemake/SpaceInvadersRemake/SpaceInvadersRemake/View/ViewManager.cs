@@ -49,7 +49,12 @@ namespace SpaceInvadersRemake.View
             {
                 //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
                 this.ViewItemList.Add(CreateGameUI(currentState, graphics));
-                this.EffectPlayer = new SoundEffects();
+
+
+                //AUSKOMMENTIERT ZUM AUSFÜHREN!
+                //this.EffectPlayer = new SoundEffects();
+
+
                 this.random = new Random();
 
                 /* Vorläufige Matrizen.
@@ -64,8 +69,10 @@ namespace SpaceInvadersRemake.View
                 Player.Created += CreatePlayer;
                 Alien.Created += CreateAlien;
                 Mothership.Created += CreateMothership;
-                Shield.Created += CreateShield;
-                Projectile.Created += CreateProjectile;
+
+                //AUSKOMMENTIERT ZUM AUSFÜHREN!
+                //Shield.Created += CreateShield;
+                //Projectile.Created += CreateProjectile;
 
                 /* [WAHL]
                  * (created)
@@ -78,14 +85,17 @@ namespace SpaceInvadersRemake.View
                  * MultiShotWeapon.WeaponFired += ShootSFX;
                  * */
 
+
+                //AUSKOMMENTIERT ZUM AUSFÜHREN!
                 //destroyed
-                Player.Destroyed += ExplosionFX;
+                /*Player.Destroyed += ExplosionFX;
                 Alien.Destroyed += ExplosionFX;
                 Mothership.Destroyed += ExplosionFX;
                 Shield.Destroyed += ExplosionFX;
 
                 //weaponFired
                 PlayerNormalWeapon.WeaponFired += ShootSFX;
+                 * */
 
             }
             else if (currentState is StateMachine.IntroState)
