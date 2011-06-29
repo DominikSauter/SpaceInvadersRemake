@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public static event EventHandler Destroyed;
 
-        public override bool Move(Microsoft.Xna.Framework.Vector2 direction)
+        public override bool Move(Vector2 direction, GameTime gameTime)
         {
             throw new NotImplementedException();
         }
