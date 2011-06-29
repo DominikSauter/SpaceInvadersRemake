@@ -18,7 +18,44 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public class BlockWaveAI : WaveAI
     {
-       //Private Felder
+        // ADDED (by STST): 29.06.2011
+        // Grund: ich kann mit dem gegebenen Entwurf nicht arbeiten und will mit dieser Klassen-Namenskonflikten ausweichen.
+        private class STSTHelpers
+        {
+            BlockWaveAI outerClass;
+
+            public STSTHelpers(BlockWaveAI outerClass)
+            {
+                this.outerClass = outerClass;
+            }
+
+            public void Shooting(Game game, GameTime gameTime)
+            {
+                const int POINT_SHIFTING = 1000;
+
+                float alienFreq = GetAlienShootingFrequency(game);
+                if (alienFreq > 1)
+                    throw new Exception("Frequenz ist zu hoch um mit dem Algorithmus klar zu kommen.");
+
+                // zu der Wahrscheinlichkeit soll jetzt jedes Alien was schießen kann, schießen:
+                Random rnd = new Random();
+                foreach (LinkedList<IGameItem> col in outerClass.AlienMatrix)
+                {
+                    int iAlienFreq = (int)(alienFreq * POINT_SHIFTING);
+                    int iRnd = rnd.Next(POINT_SHIFTING);
+                    if (iRnd <= iAlienFreq)
+                        if (col.Last != null)
+                            col.Last.Value.Shoot(gameTime);
+                }
+            }
+            
+            private float GetAlienShootingFrequency(Game game)
+            {
+                return outerClass.ShootingFrequency / outerClass.AlienMatrix.Count / (float)game.TargetElapsedTime.TotalSeconds;
+            }
+        }
+
+        //Private Felder
         private bool moveDown = false;
         private Vector2 currentDirection = CoordinateConstants.Right;
         
@@ -44,7 +81,6 @@ namespace SpaceInvadersRemake.Controller
         //Nicht brauchbar in dieser Klasse.
         protected override Microsoft.Xna.Framework.Vector2 Movement()
         {
-            
             return Vector2.Zero;
         }
 
@@ -60,7 +96,6 @@ namespace SpaceInvadersRemake.Controller
             throw new NotImplementedException();
         }
 
-
         /// <summary>
         /// Erlaubt die Ausführung der Steuerung.
         /// </summary>
@@ -69,7 +104,6 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
         public override void Update(Game game, GameTime gameTime, State state)
         {
-
             //Ausführung des Runter Kommandos aus vorigem Frame.
             if (moveDown)
             {
@@ -82,15 +116,23 @@ namespace SpaceInvadersRemake.Controller
 
                         //GameItem werden schneller
                         item.Velocity += this.VelocityIncrease;
-
                     }
                     else 
                     {
                         //Entferne Tote GameItems
                         this.Controllees.Remove(item);
-                    
+                        // <STST>
+                        // Alien aus AlienMatrix
+                        foreach (var col in this.AlienMatrix)
+                        {
+                            if (col.Contains(item))
+                            {
+                                col.Remove(item);
+                                break;
+                            }
+                        }
+                        // </STST>
                     }
-                   
                 }
                 moveDown = false;
             }
@@ -103,19 +145,12 @@ namespace SpaceInvadersRemake.Controller
                         if (!item.Move(currentDirection, gameTime))
                         {
                             moveDown = true;
-
                         }
-
                     }
                     else //Entferne Tote GameItems
                     {
                         this.Controllees.Remove(item);
                     }
-
-                    
-                    
-                  
-                    
                 }
             }
 
@@ -125,8 +160,6 @@ namespace SpaceInvadersRemake.Controller
             */
             if (moveDown)
             {
-
-
                 currentDirection = BlockWaveAI.changeDirection(currentDirection);
                 
                 //Alle mann zurück!
@@ -143,8 +176,9 @@ namespace SpaceInvadersRemake.Controller
                 }
             }
 
-            //TODO Implement Shooting
-
+            // <STST>
+            new STSTHelpers(this).Shooting(game, gameTime);
+            // </STST>
           }
 
         /// <summary>
