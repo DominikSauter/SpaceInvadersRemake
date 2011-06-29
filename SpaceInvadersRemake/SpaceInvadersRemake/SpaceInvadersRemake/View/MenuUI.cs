@@ -8,6 +8,7 @@ using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceInvadersRemake.ModelSection;
+using SpaceInvadersRemake.Resources;
 
 namespace SpaceInvadersRemake.View
 {

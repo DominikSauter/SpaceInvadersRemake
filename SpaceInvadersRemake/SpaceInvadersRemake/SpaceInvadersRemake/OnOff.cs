@@ -1,4 +1,5 @@
 ﻿using SpaceInvadersRemake.Settings;
+using SpaceInvadersRemake.Resources;
 
 //Implementiert von Tobias
 

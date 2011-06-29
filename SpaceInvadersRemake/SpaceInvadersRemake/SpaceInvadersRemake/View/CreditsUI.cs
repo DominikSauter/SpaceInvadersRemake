@@ -6,6 +6,7 @@ using System.Text;
 using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
+using SpaceInvadersRemake.Resources;
 
 namespace SpaceInvadersRemake.View
 {
