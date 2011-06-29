@@ -43,7 +43,8 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Eigenschaft Controllees Liste (kontrollierte Objekt)
         /// </summary>
-        protected ICollection<IGameItem> Controllees { get; set; }
+        // DESIGN (by STST): 29.06.2011
+        protected virtual ICollection<IGameItem> Controllees { get; set; }
 
         // by STST
         // ADDED (by STST): 29.06.2011

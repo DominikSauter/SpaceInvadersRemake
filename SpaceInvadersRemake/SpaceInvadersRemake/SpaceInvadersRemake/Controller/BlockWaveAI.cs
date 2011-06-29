@@ -150,6 +150,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Eigenschaft Controllees Liste (kontrollierte Objekte)
         /// </summary>
+        // DESIGN (by STST): 29.06.2011
         protected override ICollection<IGameItem> Controllees { get; set; }
 
         //Private Methoden
