@@ -78,7 +78,7 @@ namespace SpaceInvadersRemake.Controller
                 {
                     if (item.IsAlive)
                     {
-                        item.Move(CoordinateConstants.Down);
+                        item.Move(CoordinateConstants.Down, gameTime);
 
                         //GameItem werden schneller
                         item.Velocity += this.VelocityIncrease;
@@ -100,7 +100,7 @@ namespace SpaceInvadersRemake.Controller
                 {
                     if (item.IsAlive)
                     {
-                        if (!item.Move(currentDirection))
+                        if (!item.Move(currentDirection, gameTime))
                         {
                             moveDown = true;
 
@@ -134,7 +134,7 @@ namespace SpaceInvadersRemake.Controller
                 {
                     if (item.IsAlive)
                     {
-                        item.Move(currentDirection);
+                        item.Move(currentDirection, gameTime);
                     }
                     else //Totes Item
                     {
