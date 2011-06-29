@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Settings;
+using SpaceInvadersRemake.Resources;
 
 namespace SpaceInvadersRemake.StateMachine
 {

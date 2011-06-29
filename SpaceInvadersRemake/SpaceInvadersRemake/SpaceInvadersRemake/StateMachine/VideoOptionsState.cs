@@ -5,6 +5,7 @@ using System.Text;
 using SpaceInvadersRemake.ModelSection;
 using Microsoft.Xna.Framework.Graphics;
 using SpaceInvadersRemake.Settings;
+using SpaceInvadersRemake.Resources;
 
 namespace SpaceInvadersRemake.StateMachine
 {

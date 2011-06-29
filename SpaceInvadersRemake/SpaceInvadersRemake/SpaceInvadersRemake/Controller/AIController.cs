@@ -24,8 +24,9 @@ namespace SpaceInvadersRemake.Controller
         /// <remarks>
         /// Da dies eine Abstrakte Klasse ist, wird dieser Konstruktor innerhalb des Konstruktors der konkreten Klasse aufgerufen.
         /// </remarks>
-        /// <param name="shootingFrequencyMultiplier">Die Schussfrequenz.</param>
+        /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll.</param>
+        /// <param name="velocityIncrease">Geschwindigkeitserhöhung</param>
         protected AIController(float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
             : base(controllee)
         {

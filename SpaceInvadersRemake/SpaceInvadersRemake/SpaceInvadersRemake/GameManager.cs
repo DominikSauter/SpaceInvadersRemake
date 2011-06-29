@@ -26,6 +26,10 @@ namespace SpaceInvadersRemake
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            // <STST>
+            // Mehrsprachigkeit:
+            SpaceInvadersRemake.Resources.Resource.Culture = System.Threading.Thread.CurrentThread.CurrentCulture;
+            // </STST>
         }
 
         /// <summary>
