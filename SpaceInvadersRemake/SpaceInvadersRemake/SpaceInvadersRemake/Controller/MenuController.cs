@@ -155,7 +155,7 @@ namespace SpaceInvadersRemake.Controller
                             //Es wurde kein Name angegeben
                             else
                             {
-                                highscore.NewEntry.Name = Resource.NoName;
+                                highscore.NewEntry.Name = Resources.Resource.NoName;
                             }
 
                             mystring = "";

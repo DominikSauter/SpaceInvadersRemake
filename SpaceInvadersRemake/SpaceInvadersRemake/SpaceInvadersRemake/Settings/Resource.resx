@@ -121,49 +121,49 @@
     <value>Audio</value>
   </data>
   <data name="Label_AUDIOOPTIONS" xml:space="preserve">
-    <value>AUDIO OPTIONEN</value>
+    <value>AUDIO OPTIONS</value>
   </data>
   <data name="Label_Credits" xml:space="preserve">
     <value>Credits</value>
   </data>
   <data name="Label_EffectVolume" xml:space="preserve">
-    <value>Effekt Lautstärke</value>
+    <value>Effect Volume</value>
   </data>
   <data name="Label_Fullscreen" xml:space="preserve">
-    <value>Vollbild</value>
+    <value>Fullscreen</value>
   </data>
   <data name="Label_Highscore" xml:space="preserve">
     <value>Highscore</value>
   </data>
   <data name="Label_MasterVolume" xml:space="preserve">
-    <value>Lautstärke</value>
+    <value>Master Volume</value>
   </data>
   <data name="Label_MusicVolume" xml:space="preserve">
-    <value>Musiklautstärke</value>
+    <value>Music Volume</value>
   </data>
   <data name="Label_OFF" xml:space="preserve">
-    <value>Aus</value>
+    <value>Off</value>
   </data>
   <data name="Label_ON" xml:space="preserve">
-    <value>An</value>
+    <value>On</value>
   </data>
   <data name="Label_Options" xml:space="preserve">
-    <value>Optionen</value>
+    <value>Options</value>
   </data>
   <data name="Label_Quit" xml:space="preserve">
-    <value>Beenden</value>
+    <value>Quit</value>
   </data>
   <data name="Label_QuitGame" xml:space="preserve">
-    <value>Spiel beenden</value>
+    <value>Quit Game</value>
   </data>
   <data name="Label_Resolution" xml:space="preserve">
-    <value>Auflösung</value>
+    <value>Resolution</value>
   </data>
   <data name="Label_ReturnToGame" xml:space="preserve">
-    <value>Zurück ins Spiel</value>
+    <value>Return To Game</value>
   </data>
   <data name="Label_StartGame" xml:space="preserve">
-    <value>Spiel starten</value>
+    <value>Start Game</value>
   </data>
   <data name="Label_Video" xml:space="preserve">
     <value>Video</value>
@@ -188,6 +188,6 @@ An diesem Projekt waren beteiligt:
 Wir danken einfach allen!</value>
   </data>
   <data name="NoName" xml:space="preserve">
-    <value>Thomas Hermanns</value>
+    <value>Chuck Norris</value>
   </data>
 </root>
