@@ -62,7 +62,7 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
-        public Model MothershipTexture
+        public Texture2D MothershipTexture
         {
             get;
             set;
