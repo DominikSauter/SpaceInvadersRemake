@@ -56,7 +56,7 @@ namespace SpaceInvadersRemake.Controller
         protected abstract Vector2 Movement();
 
         /// <summary>
-        /// Entscheided ob Controllees schießen soll
+        /// Entscheidet ob Controllee schießen soll
         /// </summary>
         /// <c>true</c> = schießen andererseits <c>false</c>
         protected abstract bool Shooting();

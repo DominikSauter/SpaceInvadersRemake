@@ -56,8 +56,9 @@ namespace SpaceInvadersRemake
 
             //[VIEW]
             //View.ViewContent.ComputeHitspheres();
-            graphics.PreferredBackBufferWidth = 800;
-            graphics.PreferredBackBufferHeight = 600;
+            graphics.PreferredBackBufferWidth = Settings.GameConfig.Default.graphicsWidth;
+            graphics.PreferredBackBufferHeight = Settings.GameConfig.Default.graphicsHeight;
+            graphics.IsFullScreen = Settings.GameConfig.Default.Fullscreen;
             graphics.ApplyChanges();
 
             // <STST>
