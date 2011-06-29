@@ -68,6 +68,11 @@ namespace SpaceInvadersRemake.StateMachine
                                                          ((GameManager)game).graphics.PreferredBackBufferWidth = resolution.Width;
                                                          ((GameManager)game).graphics.PreferredBackBufferHeight = resolution.Height;
                                                          ((GameManager)game).graphics.ApplyChanges();
+                                                         //In Settingsdatei speichern
+                                                         Settings.GameConfig.Default.graphicsWidth = ((GameManager)game).graphics.PreferredBackBufferWidth;
+                                                         Settings.GameConfig.Default.graphicsHeight = ((GameManager)game).graphics.PreferredBackBufferHeight;
+                                                         Settings.GameConfig.Default.Save();
+
                                                      }));
 
             // Liste für Vollbild erstellen
@@ -83,6 +88,9 @@ namespace SpaceInvadersRemake.StateMachine
                                               {
                                                   ((GameManager)game).graphics.IsFullScreen = onOff.On;
                                                   ((GameManager)game).graphics.ApplyChanges();
+                                                  //Speichert in Setting
+                                                  Settings.GameConfig.Default.Fullscreen = onOff.On;
+                                                  Settings.GameConfig.Default.Save();
                                               }));
 
             Model = new Menu(controls);
