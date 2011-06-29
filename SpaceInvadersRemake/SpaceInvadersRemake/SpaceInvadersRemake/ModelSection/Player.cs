@@ -100,8 +100,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// Der übergebene Richtungsvektor wird vor der Multiplikation normalisiert.
         /// </remarks>
         /// <param name="direction">Bewegungsrichtung</param>
+        /// <param name="gameTime">Spielzeit</param>
         /// <returns>Boole'scher Wert, der angibt ob die Bewegung ohne Probleme durchgeführt werden konnte. <c>true</c>: erfolg; <c>false</c>: es gab Probleme</returns>
-        public override bool Move(Vector2 direction)
+        public override bool Move(Vector2 direction, GameTime gameTime)
         {
             direction.Normalize();
 
