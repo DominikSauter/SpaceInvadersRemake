@@ -318,7 +318,7 @@ namespace SpaceInvadersRemake.View
         /// <returns>GameUI-Objekt, welches die Spieleroberfläche darstellt.</returns>
         private GameUI CreateGameUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            return new GameUI(((GameCourseManager)(currentState).Model), graphics);
+            return new GameUI((StateMachine.InGameState)currentState, graphics);
         }
 
         /// <summary>

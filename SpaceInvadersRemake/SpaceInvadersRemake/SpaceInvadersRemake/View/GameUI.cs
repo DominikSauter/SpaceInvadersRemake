@@ -23,18 +23,18 @@ namespace SpaceInvadersRemake.View
         private SpriteFont font;
         //[WAHL] private List<Texture2D> powerUpIcons;
         private Texture2D liveIcon;
-        private GameCourseManager gameCourseMngr;
+        private StateMachine.InGameState inGameState;
 
         /// <summary>
         /// Initialisiert die Spieloberfläche
         /// </summary>
-        /// <param name="gameCourseMngr"></param>
+        /// <param name="currentState"></param>
         /// <param name="graphics"></param>
-        public GameUI(GameCourseManager gameCourseMngr, GraphicsDeviceManager graphics)
+        public GameUI(StateMachine.InGameState currentState, GraphicsDeviceManager graphics)
         {
             this.graphics = graphics;
 
-            this.gameCourseMngr = gameCourseMngr;
+            this.inGameState = currentState;
             this.font = ViewContent.UIContent.Font;
             this.gameBackgroundImage = ViewContent.UIContent.GameBackgroundImage;
             this.hudBackgroundTexture = ViewContent.UIContent.HUDBackground;
@@ -48,8 +48,9 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
+            GameCourseManager gameCourseMngr = (GameCourseManager)this.inGameState.Model;
             int lives = gameCourseMngr.GameCourse.Player.Lives;
-            int score = gameCourseMngr.GameCourse.Player.Lives;
+            int score = gameCourseMngr.GameCourse.Player.Score;
 
             //Counter, der angibt wie oft die HUD Grafik (32x60) gezeichnet werden muss.
             int hudTileCount = graphics.PreferredBackBufferWidth / this.hudBackgroundTexture.Width;
@@ -94,7 +95,7 @@ namespace SpaceInvadersRemake.View
             //zeichnet 1-3 Lebens Icons
             for (int liveCount = 0; liveCount < lives; liveCount++)
             {
-                spriteBatch.Draw(this.liveIcon, new Vector2((float)((liveCount + 1) * this.liveIcon.Width),
+                spriteBatch.Draw(this.liveIcon, new Vector2((float)((liveCount) * this.liveIcon.Width),
                     (float)(graphics.PreferredBackBufferHeight - this.liveIcon.Height)), liveColor);
             }
 
