@@ -169,7 +169,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             this.Position = position;
             this.Velocity = velocity;
-            this.Hitpoints = Hitpoints;
+            this.Hitpoints = hitpoints;
             this.Damage = damage;
             this.IsAlive = true;
 
