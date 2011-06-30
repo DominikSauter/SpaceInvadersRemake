@@ -66,9 +66,22 @@ namespace SpaceInvadersRemake.ModelSection
             else
             {
                 bool waveAlive = false;
-                foreach (IGameItem item in currentWave)
+                /*foreach (IGameItem item in currentWave)
                 {
                     if (item.IsAlive)
+                    {
+                        waveAlive = true;
+                        break;
+                    }
+                    else
+                    {
+                        currentWave.Remove(item);
+                    }
+                }*/
+                // In for-Schleife gepackt - TB
+                for (LinkedListNode<IGameItem> item = currentWave.First; item != currentWave.Last; item = item.Next)
+                {
+                    if (item.Value.IsAlive)
                     {
                         waveAlive = true;
                         break;
@@ -97,7 +110,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             Collider.CheckAllCollisions(GameItem.GameItemList);
 
-            foreach (IGameItem item in GameItem.GameItemList)
+            /*foreach (IGameItem item in GameItem.GameItemList)
             {
                 if (!item.IsAlive)
                 {
@@ -107,7 +120,22 @@ namespace SpaceInvadersRemake.ModelSection
                 {
                     item.Update(gameTime);
                 }
+            }*/
+            // In for-Schleife gepackt - TB
+            for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != GameItem.GameItemList.Last; item = item.Next)
+            {
+                if (item.Value.IsAlive)
+                {
+                    item.Value.Update(gameTime);
+                }
+                else
+                {
+                    GameItem.GameItemList.Remove(item);
+                }
             }
+
+
+            
         }
 
 
