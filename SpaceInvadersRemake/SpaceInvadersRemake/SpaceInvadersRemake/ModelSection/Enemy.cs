@@ -33,7 +33,8 @@ namespace SpaceInvadersRemake.ModelSection
 
             direction.Normalize();
 
-            Position += Velocity * direction;
+            //Muss vll wieder geändert werden
+            Position += Velocity * direction * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             if ((Position.X < CoordinateConstants.LeftBorder) || (Position.X > CoordinateConstants.RightBorder)
                 || (Position.Y < CoordinateConstants.BottomBorder) || (Position.Y > CoordinateConstants.TopBorder))
