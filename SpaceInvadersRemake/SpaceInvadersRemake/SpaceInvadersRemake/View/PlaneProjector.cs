@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Faktor um den die 2D-Spielebene skaliert wird
         /// </summary>
-        public static float scaleFactor = 2.0f;
+        public static float scaleFactor = 1.0f;
 
         //private static
         /// <summary>
@@ -29,7 +29,18 @@ namespace SpaceInvadersRemake.View
         /// <returns>3D Positionsvektor</returns>
         public static Vector3 Convert2DTo3D(Vector2 itemPosition2D)
         {
-            return new Vector3(itemPosition2D.X * scaleFactor, 0, itemPosition2D.Y * scaleFactor);
+            float zPosition = 0.0f;
+
+            if ((int)itemPosition2D.Y > 0)
+            {
+                zPosition = -itemPosition2D.Y * scaleFactor;
+            }
+            else
+            {
+                zPosition = itemPosition2D.Y * scaleFactor;
+            }
+
+            return new Vector3(itemPosition2D.X * scaleFactor, 0, zPosition);
         }
     }
 }
