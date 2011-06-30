@@ -44,7 +44,7 @@ namespace SpaceInvadersRemake.View
         {
             this.model = ViewContent.RepresentationContent.AlienModel;
             this.alienGameItem = alienGameItem;
-            this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.alienGameItem.Position), Vector3.Forward, Vector3.Up);
+            this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.alienGameItem.Position), Vector3.Backward, Vector3.Up);
 
             this.alienTexture = ViewContent.RepresentationContent.AlienTextures[randomTexture];
 
