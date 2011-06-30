@@ -52,7 +52,9 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         protected virtual void Alien_Destroyed(object sender, System.EventArgs e)
         {
-            this.Controllees.Remove((IGameItem)sender);
+            IGameItem item = (IGameItem)sender;
+
+            this.Controllees.Remove(item);
             // <STST>
             // Alien aus AlienMatrix
             foreach (var col in this.AlienMatrix)
