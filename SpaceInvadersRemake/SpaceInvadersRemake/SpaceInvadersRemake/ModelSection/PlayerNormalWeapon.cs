@@ -35,7 +35,7 @@ namespace SpaceInvadersRemake.ModelSection
                 new Projectile(position, shootingDirection, projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
                 lastShot = gameTime.TotalGameTime.Milliseconds + cooldown;
 
-                //WeaponFired(this, null);
+                //WeaponFired(this, null); //Auskommentiert um Exception zu vermeiden zum Testen: Dodo
             }
         }
     }
