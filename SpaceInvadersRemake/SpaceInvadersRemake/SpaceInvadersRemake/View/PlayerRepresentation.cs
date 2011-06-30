@@ -68,10 +68,18 @@ namespace SpaceInvadersRemake.View
         public override void Draw(SpriteBatch spriteBatch)
         {
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.playerGameItem.Position);
-            if (currentPosition.X > this.lastPosition.X || currentPosition.X < lastPosition.X)
+            float direction = 0.0f;
+            if (currentPosition.X > this.lastPosition.X)
             {
                 playerMoved = true;
                 this.lastPosition = currentPosition;
+                direction = -1.0f;
+            }
+            else if (currentPosition.X < lastPosition.X)
+            {
+                playerMoved = true;
+                this.lastPosition = currentPosition;
+                direction = 1.0f;
             }
 
             foreach (ModelMesh mesh in model.Meshes)
@@ -87,7 +95,7 @@ namespace SpaceInvadersRemake.View
                     effect.Projection = Projection;
                     if (this.playerMoved)
                     {
-                        effect.World = this.World * Matrix.CreateTranslation(currentPosition.X, 0, 0);
+                        effect.World = this.World * Matrix.CreateRotationZ(MathHelper.ToRadians(direction * 25)) * Matrix.CreateTranslation(currentPosition.X, 0, 0);
                     }
                     else
                     {
