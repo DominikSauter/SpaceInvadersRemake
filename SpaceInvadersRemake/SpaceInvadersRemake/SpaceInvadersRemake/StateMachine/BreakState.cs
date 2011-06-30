@@ -58,6 +58,20 @@ namespace SpaceInvadersRemake.StateMachine
         }
 
         /// <summary>
+        /// Spricht die View im vorgegebenen Takt an.
+        /// </summary>
+        /// <remarks>
+        /// Um den Aufruf muss sich nicht gekümmert werden.
+        /// </remarks>
+        /// <param name="gameTime">Weiterreichung von der Game-Klasse</param>
+        public override void ViewUpdate(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            //Sorgt dafür, dass das Spiel im Hintergrund des Pausemenüs gerendert wird - TB
+            previousState.ViewUpdate(gameTime);
+            base.ViewUpdate(gameTime);
+        }
+
+        /// <summary>
         /// Beendet das Spiel und wechselt damit den Zustand ins Hauptmenü.
         /// </summary>
         public void ExitGame()
