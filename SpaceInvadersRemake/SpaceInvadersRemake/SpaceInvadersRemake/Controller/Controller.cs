@@ -44,37 +44,39 @@ namespace SpaceInvadersRemake.Controller
        /// <c>get</c>
        /// <c>set</c>setzt ein IGameItem als kontrolliertes GameItem ein.</remarks>
         protected virtual IGameItem Controllee { get; set; }
-     
- 
 
 
-    
-        /// <summary>
-        /// Entscheidet in welche Richtung sich das Controllees bewegen soll
-        /// </summary>
-        /// <returns>2D Richtungsvektor</returns>
-        protected abstract Vector2 Movement();
+
+
 
         /// <summary>
-        /// Entscheidet ob Controllee schießen soll
+        /// Kümmert sich um die Bewegung der GameItem
         /// </summary>
-        /// <c>true</c> = schießen andererseits <c>false</c>
-        protected abstract bool Shooting();
+        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        protected abstract void Movement(Game game,GameTime gameTime);
+
+        /// <summary>
+        /// Kümmert sich um das Schießen der GameItem
+        /// </summary>
+        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        protected abstract void Shooting(Game game, GameTime gameTime);
 
         /// <summary>
         /// Erlaubt die Ausführung der Steuerung.
         /// </summary>
+        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
         public virtual void Update(Game game,GameTime gameTime, State state)
         {
             //Richtungsanweisung an das Controllee (ermittelt durch konkreten Controller)
-            Controllee.Move(this.Movement(), gameTime);
+            this.Movement(game,gameTime);
 
-           
-            if (this.Shooting())
-            {
-                Controllee.Shoot(gameTime);
-            }
-            
+
+            this.Shooting(game, gameTime);
+          
             
         }
     }

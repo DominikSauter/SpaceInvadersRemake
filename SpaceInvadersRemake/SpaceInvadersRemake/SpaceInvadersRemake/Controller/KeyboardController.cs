@@ -38,15 +38,14 @@ namespace SpaceInvadersRemake.Controller
        public Settings.KeyboardConfig KBconfig { get; set; }
 
 
-        /// <summary>
-        /// Entscheided in welche Richtung sich das Controllees bewegen soll
-        /// </summary>
-        /// <remarks>Dies geschieht indem der Benutzer die Tasten für die Bewegungsrichtungen drückt.
-        /// Welche Tasten dies sind, ist in der Eigenschaft <c>KBconfig</c> hinterlegt</remarks>
-        /// <returns>
-        /// 2D Richtungsvektor
-        /// </returns>
-        protected override Vector2 Movement()
+
+
+       /// <summary>
+       /// Kümmert sich um die Bewegung der GameItem
+       /// </summary>
+       /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+       /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        protected override void Movement(Game game,GameTime gameTime)
         {
             KeyboardState kState = Keyboard.GetState();
             Vector2 direction = Vector2.Zero;
@@ -62,7 +61,7 @@ namespace SpaceInvadersRemake.Controller
             }
 
 
-            return direction;
+            this.Controllee.Move(direction, gameTime);
             
              
         }
@@ -76,16 +75,16 @@ namespace SpaceInvadersRemake.Controller
         /// <returns>
         ///   <c>true</c> = schießen andererseits <c>false</c>
         /// </returns>
-        protected override bool Shooting()
+        protected override void Shooting(Game game,GameTime gameTime)
         {
-            bool shoot = false;
+            
 
             if (kState.IsKeyDown(KBconfig.Fire))
             {
-                shoot = true;
+                this.Controllee.Shoot(gameTime);
             }
 
-            return shoot;
+            
         }
     }
 }

@@ -29,22 +29,21 @@ namespace SpaceInvadersRemake.Controller
         /// <returns>
         /// 2D Richtungsvektor
         /// </returns>
-        protected override Microsoft.Xna.Framework.Vector2 Movement()
+        protected override void Movement(Game game,GameTime gameTime)
         {
-            return CoordinateConstants.Right;
+            this.Controllee.Move(CoordinateConstants.Right,gameTime);
         }
 
+
         /// <summary>
-        /// Entscheided ob Controllee schießen soll
+        /// Kümmert sich um das Schießen der GameItem
         /// </summary>
-        /// <returns></returns>
-        /// <c>true</c>
-        ///  = schießen andererseits 
-        /// <c>false</c>
-        protected override bool Shooting()
+        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+        protected override void Shooting(Game game, GameTime gameTime)
         {
             //Hack für /FA11000W/ (Mutterschiff schießt) - ck
-            return false;
+
         }
     }
 }

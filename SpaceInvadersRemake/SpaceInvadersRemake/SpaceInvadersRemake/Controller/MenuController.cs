@@ -4,6 +4,7 @@ using SpaceInvadersRemake.StateMachine;
 using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.ModelSection;
+using System.Text;
 
 // Implementiert von Tobias
 
@@ -35,7 +36,9 @@ namespace SpaceInvadersRemake.Controller
         }
 
         //Private Felder
-        private Keys[] validKeys = { Keys.Q, Keys.W, Keys.E, Keys.R, Keys.T, Keys.Z, Keys.U, Keys.I, Keys.P, Keys.A, Keys.S, Keys.D, Keys.F, Keys.G, Keys.H, Keys.J, Keys.K, Keys.L, Keys.Y, Keys.X, Keys.C, Keys.V, Keys.B, Keys.N, Keys.M };
+        private Keys[] validKeys = { Keys.Q, Keys.W, Keys.E, Keys.R, Keys.T, Keys.Z, Keys.U, Keys.I, 
+                                       Keys.P, Keys.A, Keys.S, Keys.D, Keys.F, Keys.G, Keys.H, Keys.J, 
+                                       Keys.K, Keys.L, Keys.Y, Keys.X, Keys.C, Keys.V, Keys.B, Keys.N, Keys.M };
         private string mystring = "";
 
         /// <summary>
@@ -65,84 +68,39 @@ namespace SpaceInvadersRemake.Controller
             //KeyboardState Variablen ausgelagert - CK
             //Eingabe erfolgt durch Benutzertastenbelegung sowie einer Standardtaste
 
-
-
-            #region MenuBack
             if (KeyPressed(KBconfig.Back) || KeyPressed(Keys.Escape))
             {
-                if (state is HighscoreState)
-                {
-                    ((HighscoreState)state).Exit();
-                }
-                else
-                {
-                    try
-                    {
-                        state.Back();
-                    }
-                    catch (NullReferenceException e)
-                    {
-                        //Vermeidet Absturz
-                    }
-                }
+                MenuBack(state);
             }
 
-            #endregion
-
-            #region MenuNavigation
             // Prüfe ob das zu kontrollierende Objekt ein Menü ist
             if (Controllee is Menu)
             {
-                Menu menu = (Menu)Controllee;
-
-                // Hoch wurde gedrückt
-                if (KeyPressed(KBconfig.Up) || KeyPressed(Keys.Up)) //geändert zu Settingsdatei -CK
-                {
-                    menu.Up();
-                }
-
-                // Runter wurde gedrückt
-                if (KeyPressed(KBconfig.Down) || KeyPressed(Keys.Down)) //geändert zu Settingsdatei -CK
-                {
-                    menu.Down();
-                }
-
-                // Links wurde gedrückt
-                if (KeyPressed(KBconfig.Left) || KeyPressed(Keys.Left)) //geändert zu Settingsdatei -CK
-                {
-                    menu.Left();
-                }
-
-                // Rechts wurde gedrückt
-                if (KeyPressed(KBconfig.Right) || KeyPressed(Keys.Right)) //geändert zu Settingsdatei -CK
-                {
-                    menu.Right();
-                }
-
-                // Bestätigen wurde gedrückt
-                if (KeyPressed(KBconfig.Fire) || KeyPressed(Keys.Enter)) //geändert zu Settingsdatei -CK
-                {
-                    menu.Action();
-                }
+                MenuNavigation();
 
             }
-
-            #endregion
-
-            #region HighscoreNamenseingabe
+           
             //Eingabe des Namens im Hghscore
             if (Controllee is HighscoreManager)
-            {
-                HighscoreManager highscore = (HighscoreManager)Controllee;
-                if (highscore.NewEntry != null)
-                {
-                    Keys[] input = StateManager.newState.GetPressedKeys();
+                HighscoreInput();
+            
+        }
 
-                    //Erlaube nur ein Key gleichzeitig
-                    if (input.GetLength(0) == 1)
+        /// <summary>
+        /// Kümmert sich darum das ein neuer Eintrag im Highscore eingegeben wird
+        /// </summary>
+        private void HighscoreInput()
+        {
+            HighscoreManager highscore = (HighscoreManager)Controllee;
+            if (highscore.NewEntry != null)
+            {
+                Keys[] input = StateManager.newState.GetPressedKeys();
+
+                //Erlaube nur ein Key gleichzeitig
+                if (input.GetLength(0) == 1)
+                {
+                    if (KeyPressed(input[0]))
                     {
-                        if (KeyPressed(input[0])) 
-                        {
 
                         //Usereingabe mit Enter beendet --> Übergabe des Strings an Higscore
                         if ((input[0].Equals(Keys.Enter)))
@@ -159,14 +117,15 @@ namespace SpaceInvadersRemake.Controller
                             }
 
                             mystring = "";
-                            
+
                         }
                         else if (input[0].Equals(Keys.Back))
                         {
                             //HACK falls Back löscht zuviel zeichen
-                            mystring.Remove(mystring.Length - 2);
+                            mystring.Remove(mystring.Length - 1);
+
                         }
-                            
+
 
                       //Namenseingabe Zeichenbasiert
                         else
@@ -181,16 +140,75 @@ namespace SpaceInvadersRemake.Controller
                             }
                         }
 
-                      }
-
-
-
-         
                     }
 
+
+
+
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// Navigiert ein Menu zurück
+        /// </summary>
+        /// <param name="state">Der aktuelle State.</param>
+        private static void MenuBack(State state)
+        {
+            if (state is HighscoreState)
+            {
+                ((HighscoreState)state).Exit();
+            }
+            else
+            {
+                try
+                {
+                    state.Back();
+                }
+                catch (NullReferenceException e)
+                {
+                    //Vermeidet Absturz
                 }
             }
-            #endregion
+        }
+
+        /// <summary>
+        /// Navigiert durchs Menu.
+        /// </summary>
+        private void MenuNavigation()
+        {
+            Menu menu = (Menu)Controllee;
+
+            // Hoch wurde gedrückt
+            if (KeyPressed(KBconfig.Up) || KeyPressed(Keys.Up)) //geändert zu Settingsdatei -CK
+            {
+                menu.Up();
+            }
+
+            // Runter wurde gedrückt
+            if (KeyPressed(KBconfig.Down) || KeyPressed(Keys.Down)) //geändert zu Settingsdatei -CK
+            {
+                menu.Down();
+            }
+
+            // Links wurde gedrückt
+            if (KeyPressed(KBconfig.Left) || KeyPressed(Keys.Left)) //geändert zu Settingsdatei -CK
+            {
+                menu.Left();
+            }
+
+            // Rechts wurde gedrückt
+            if (KeyPressed(KBconfig.Right) || KeyPressed(Keys.Right)) //geändert zu Settingsdatei -CK
+            {
+                menu.Right();
+            }
+
+            // Bestätigen wurde gedrückt
+            if (KeyPressed(KBconfig.Fire) || KeyPressed(Keys.Enter)) //geändert zu Settingsdatei -CK
+            {
+                menu.Action();
+            }
         }
 
         
