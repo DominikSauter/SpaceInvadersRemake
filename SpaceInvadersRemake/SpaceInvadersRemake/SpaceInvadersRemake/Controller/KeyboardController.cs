@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework.Input;
+using SpaceInvadersRemake.StateMachine;
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -37,7 +38,34 @@ namespace SpaceInvadersRemake.Controller
         /// </value>
        public Settings.KeyboardConfig KBconfig { get; set; }
 
+       /// <summary>
+       /// Erlaubt die Ausführung der Steuerung.
+       /// </summary>
+       /// <remarks>
+       /// Fügt der Base.Update die Erneuerung des Keyboardstates und den Pausemenüaufruf hinzu
+       /// </remarks>
+       /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
+       /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
+       /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
+       public override void Update(Game game, GameTime gameTime, StateMachine.State state)
+       {
+          
+           kState = Keyboard.GetState();
+           
+           //Pausemenüaufruf
+           if (kState.IsKeyDown(KBconfig.Back) || kState.IsKeyDown(Keys.Escape))
+           {
+               if (state is InGameState)
+               {
+                   ((InGameState)state).Break();
+               }
+      
 
+           }
+
+           //Ruft Movement und Shooting auf
+           base.Update(game, gameTime, state);
+       }
 
 
        /// <summary>
@@ -47,8 +75,9 @@ namespace SpaceInvadersRemake.Controller
        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Movement(Game game,GameTime gameTime)
         {
-            KeyboardState kState = Keyboard.GetState();
+            
             Vector2 direction = Vector2.Zero;
+
 
             if (kState.IsKeyDown(KBconfig.Left))
             {
