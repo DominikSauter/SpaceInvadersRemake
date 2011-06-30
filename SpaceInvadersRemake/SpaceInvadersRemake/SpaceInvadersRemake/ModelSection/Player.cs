@@ -104,7 +104,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// <returns>Boole'scher Wert, der angibt ob die Bewegung ohne Probleme durchgeführt werden konnte. <c>true</c>: erfolg; <c>false</c>: es gab Probleme</returns>
         public override bool Move(Vector2 direction, GameTime gameTime)
         {
-            //HACK geändert wegen absturz -ck
             if (direction != Vector2.Zero)
             {
                 direction.Normalize();
