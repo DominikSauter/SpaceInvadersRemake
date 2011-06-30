@@ -31,7 +31,10 @@ namespace SpaceInvadersRemake.ModelSection
         {
             bool result = true;
 
-            direction.Normalize();
+            if (direction != Vector2.Zero)
+            {
+                direction.Normalize();
+            }
 
             //Muss vll wieder geändert werden
             Position += Velocity * direction * (float)gameTime.ElapsedGameTime.TotalSeconds;
