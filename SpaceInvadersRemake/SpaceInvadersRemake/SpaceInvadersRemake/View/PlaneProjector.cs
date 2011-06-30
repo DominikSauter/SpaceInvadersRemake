@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Faktor um den die 2D-Spielebene skaliert wird
         /// </summary>
-        public static float scaleFactor = 15.0f;
+        public static float scaleFactor = 4.0f;
 
         //private static
         /// <summary>

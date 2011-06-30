@@ -20,7 +20,6 @@ namespace SpaceInvadersRemake.View
     {
         private Model model;
         private Texture2D alienTexture;
-        private bool alienMoved;
         private Vector3 lastPosition;
 
 
@@ -47,7 +46,6 @@ namespace SpaceInvadersRemake.View
         {
             this.model = ViewContent.RepresentationContent.AlienModel;
             this.alienGameItem = alienGameItem;
-            this.alienMoved = false;
             this.lastPosition = PlaneProjector.Convert2DTo3D(this.alienGameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Backward, Vector3.Up);
 
@@ -66,10 +64,11 @@ namespace SpaceInvadersRemake.View
         public override void Draw(SpriteBatch spriteBatch)
         {
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.alienGameItem.Position);
-            if (currentPosition.Y > this.lastPosition.Y || currentPosition.Y < this.lastPosition.Y
-                || currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X)
+            if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X
+                || currentPosition.Z > this.lastPosition.Z || currentPosition.Z < this.lastPosition.Z)
             {
-                this.alienMoved = true;
+                this.World *= Matrix.CreateTranslation(currentPosition);
+                this.lastPosition = currentPosition;
             }
 
             foreach (ModelMesh mesh in model.Meshes)
@@ -83,14 +82,7 @@ namespace SpaceInvadersRemake.View
                     effect.Texture = this.alienTexture;
                     effect.View = Camera;
                     effect.Projection = Projection;
-                    if (alienMoved)
-                    {
-                        effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.alienGameItem.Position));
-                    }
-                    else
-                    {
-                        effect.World = this.World;
-                    }
+                    effect.World = this.World;
                 }
 
                 mesh.Draw();
