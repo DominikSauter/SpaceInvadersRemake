@@ -36,27 +36,11 @@ namespace SpaceInvadersRemake.Controller
 
 
 
-
-
-        /// <summary>
-        /// Erlaubt die Ausführung der Steuerung.
-        /// </summary>
-        /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
-        /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
-        /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
-        public override void Update(Game game, GameTime gameTime, State state)
-        {
-
-
-
-            //TODO Implement Shooting
-
-        }
-
         /// <summary>
         /// Eigenschaft Controllees Liste (kontrollierte Objekte)
         /// </summary>
         // DESIGN (by STST): 29.06.2011
+        //Hack: Wieso override mit identischer implementierung ?
         protected override ICollection<IGameItem> Controllees { get; set; }
 
         //Private Methoden
@@ -115,7 +99,7 @@ namespace SpaceInvadersRemake.Controller
                 foreach (IGameItem item in Controllees)
                 {
                     
-                        if (!item.Move(currentDirection, gameTime))
+                        if (!(item.Move(currentDirection, gameTime)))
                         {
                             moveDown = true;
 
@@ -151,7 +135,10 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Shooting(Game game, GameTime gameTime)
         {
-            throw new NotImplementedException();
+            //TODO Implement Shooting 
+            //throw new NotImplementedException();
+            
+            //Auskommentiert damit rest getestet werden kann 
         }
     }
 }
