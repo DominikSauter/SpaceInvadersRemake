@@ -59,7 +59,7 @@ namespace SpaceInvadersRemake.View
 
             //Laden des Representation Contents
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
-            RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/1");
+            RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/Schild1");
             RepresentationContent.AlienModel = Content.Load<Model>("3D Models/Alienschiff");
             RepresentationContent.PlayerModel = Content.Load<Model>("3D Models/Spielerschiff");
             RepresentationContent.MothershipModel = Content.Load<Model>("3D Models/Mutterschiff");
