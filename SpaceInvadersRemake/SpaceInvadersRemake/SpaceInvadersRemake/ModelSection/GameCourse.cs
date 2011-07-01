@@ -38,7 +38,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public int WaveCounter { get; private set; }
 
-
         /// <summary>
         /// Referenz auf das Spielerschiff-Objekt.
         /// </summary>
