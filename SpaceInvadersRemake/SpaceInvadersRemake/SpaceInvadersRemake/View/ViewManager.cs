@@ -71,8 +71,8 @@ namespace SpaceInvadersRemake.View
                 Mothership.Created += CreateMothership;
 
                 //AUSKOMMENTIERT ZUM AUSFÜHREN!
-                //Shield.Created += CreateShield;
-                //Projectile.Created += CreateProjectile;
+                Shield.Created += CreateShield;
+                Projectile.Created += CreateProjectile;
 
                 /* [WAHL]
                  * (created)
@@ -265,7 +265,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateShield(object shield, EventArgs e)
         {
-            this.ViewItemList.Add(new ShieldRepresentation());
+            this.ViewItemList.Add(new ShieldRepresentation((Shield) shield, graphics));
             ((Shield)shield).BoundingVolume = ViewContent.RepresentationContent.ShieldHitsphere;
         }
 
@@ -280,8 +280,9 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateProjectile(object projectile, EventArgs e)
         {
-            this.ViewItemList.Add(new ProjectileRepresentation());
+    
             Projectile currentProjectile = (Projectile)projectile;
+            Texture2D texture = ViewContent.RepresentationContent.ProjectileNormal;
 
             switch (currentProjectile.ProjectileType)
             {
@@ -296,6 +297,22 @@ namespace SpaceInvadersRemake.View
                 case ProjectileTypeEnum.MinibossProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileBossHitsphere;
                     break;
             }
+
+            switch (currentProjectile.ProjectileType)
+            {
+                case ProjectileTypeEnum.PlayerNormalProjectile: texture = ViewContent.RepresentationContent.ProjectileNormal;
+                    break;
+                case ProjectileTypeEnum.EnemyNormalProjectile: texture = ViewContent.RepresentationContent.ProjectileNormal;
+                    break;
+                case ProjectileTypeEnum.PiercingProjectile: texture = ViewContent.RepresentationContent.ProjectilePiercing;
+                    break;
+                case ProjectileTypeEnum.MothershipProjectile: texture = ViewContent.RepresentationContent.ProjectileMothership;
+                    break;
+                case ProjectileTypeEnum.MinibossProjectile: texture = ViewContent.RepresentationContent.ProjectileBoss;
+                    break;
+            }
+
+            this.ViewItemList.Add(new ProjectileRepresentation((Projectile)projectile, texture, graphics));
         }
 
         /// <summary>
