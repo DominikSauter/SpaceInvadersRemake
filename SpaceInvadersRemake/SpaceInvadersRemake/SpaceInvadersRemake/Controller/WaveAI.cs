@@ -39,35 +39,34 @@ namespace SpaceInvadersRemake.Controller
             this.AlienMatrix = AliensInMatrix();
             // </STST>
 
-           
+            Alien.Destroyed += new System.EventHandler(Alien_Destroyed);
         }
 
-        //TODO Löschen !
-        ///// <summary>
-        ///// Löscht tote IGameItem aus der Controllees Liste
-        ///// </summary>
-        ///// <param name="sender">Das zu löschende Alien</param>
-        ///// <param name="e">Leere event args</param>
-        ///// <remarks>
-        ///// Behandelt das Destroyed Ereignis der Alienklasse
-        ///// </remarks>
-        //protected virtual void Alien_Destroyed(object sender, System.EventArgs e)
-        //{
-        //    IGameItem item = (IGameItem)sender;
+        /// <summary>
+        /// Löscht tote IGameItem aus der Controllees Liste
+        /// </summary>
+        /// <param name="sender">Das zu löschende Alien</param>
+        /// <param name="e">Leere event args</param>
+        /// <remarks>
+        /// Behandelt das Destroyed Ereignis der Alienklasse
+        /// </remarks>
+        protected virtual void Alien_Destroyed(object sender, System.EventArgs e)
+        {
+            IGameItem item = (IGameItem)sender;
 
-        //    this.Controllees.Remove(item);
-        //    // <STST>
-        //    // Alien aus AlienMatrix
-        //    foreach (var col in this.AlienMatrix)
-        //    {
-        //        if (col.Contains(item))
-        //        {
-        //            col.Remove(item); // HACK: Hier gibt's wohl ne Fehler
-        //            break;
-        //        }
-        //    }
-        //    // </STST>
-        //}
+            this.Controllees.Remove(item);
+            // <STST>
+            // Alien aus AlienMatrix
+            foreach (var col in this.AlienMatrix)
+            {
+                if (col.Contains(item))
+                {
+                    col.Remove(item); // HACK: Hier gibt's wohl ne Fehler
+                    break;
+                }
+            }
+            // </STST>
+        }
 
         /// <summary>
         /// Eigenschaft Controllees Liste (kontrollierte Objekt)
