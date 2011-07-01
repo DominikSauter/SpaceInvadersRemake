@@ -62,10 +62,10 @@ namespace SpaceInvadersRemake.View
 
             spriteBatch.Begin();
 
-            //Im Break-State wird kein Hintergrund gezeichnet
+            //Im Break-State wird ein schwarzer durchsichtiger Hintergrund gezeichnet
             if (currentState is StateMachine.BreakState)
             {
-                //TODO: Entweder Frame zeichnen oder durchsichtigen, schwarzen Vordergrund (Hintergrund abdunkeln)
+                spriteBatch.Draw(background, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), new Color(0, 0, 0, 0.5f));
             }
             else 
             {
