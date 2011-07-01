@@ -12,8 +12,6 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public static class GameItemConstants
     {
-     
-
         /// <summary>
         /// Die standardmäßige Schussfrequenz der Aliens in Schussanzahl pro Sekunde.
         /// </summary>
