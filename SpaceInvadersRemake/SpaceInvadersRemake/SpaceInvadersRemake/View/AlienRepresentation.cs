@@ -67,7 +67,10 @@ namespace SpaceInvadersRemake.View
             if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X
                 || currentPosition.Z > this.lastPosition.Z || currentPosition.Z < this.lastPosition.Z)
             {
-                this.World *= Matrix.CreateTranslation(currentPosition);
+                //Falsche Positionierung im 3D-Raum gefixt - TB
+                this.World = Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up);
+                //Damit verschiebst du die Aliens in jedem Frame um ihre eigene Position, das geht nicht gut - TB
+                //UNDONE: this.World *= Matrix.CreateTranslation(currentPosition); - TB
                 this.lastPosition = currentPosition;
             }
 
