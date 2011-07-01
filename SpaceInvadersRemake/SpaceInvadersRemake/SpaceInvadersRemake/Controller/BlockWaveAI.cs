@@ -127,10 +127,23 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Shooting(Game game, GameTime gameTime)
         {
-            //TODO Implement Shooting 
-            //throw new NotImplementedException();
-            
-            //Auskommentiert damit rest getestet werden kann 
+            const int POINT_SHIFTING = 1000; // TODO: reicht der aus?
+
+            float alienFreqInHz = this.ShootingFrequency / this.AlienMatrix.Count;
+            float alienFreqInFrame = alienFreqInHz * (float)game.TargetElapsedTime.TotalSeconds;
+            if (alienFreqInFrame > 1)
+                throw new Exception("Frequenz ist zu hoch um mit dem Algorithmus klar zu kommen.");
+
+            // zu der Wahrscheinlichkeit soll jetzt jedes Alien was schießen kann, schießen:
+            Random rnd = new Random();
+            foreach (LinkedList<IGameItem> col in this.AlienMatrix)
+            {
+                int iAlienFreq = (int)(alienFreqInFrame * POINT_SHIFTING);
+                int iRnd = rnd.Next(POINT_SHIFTING);
+                if (iRnd <= iAlienFreq)
+                    if (col.Last != null)
+                        col.Last.Value.Shoot(gameTime);
+            }
         }
     }
 }
