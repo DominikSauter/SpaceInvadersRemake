@@ -124,7 +124,6 @@
       <Processor>ModelProcessor</Processor>
       <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
       <ProcessorParameters_RotationY>-90</ProcessorParameters_RotationY>
-      <ProcessorParameters_Scale>2.3</ProcessorParameters_Scale>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -134,7 +133,7 @@
       <Processor>ModelProcessor</Processor>
       <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
       <ProcessorParameters_RotationY>90</ProcessorParameters_RotationY>
-      <ProcessorParameters_Scale>4</ProcessorParameters_Scale>
+      <ProcessorParameters_Scale>3</ProcessorParameters_Scale>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -199,6 +198,41 @@
   <ItemGroup>
     <Compile Include="Graphics\Schild1.png">
       <Name>Schild1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3D Model Textures\AlienTextur2.jpg">
+      <Name>AlienTextur2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3D Model Textures\AlienTextur3.jpg">
+      <Name>AlienTextur3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3D Model Textures\AlienTextur4.jpg">
+      <Name>AlienTextur4</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3D Model Textures\AlienTextur5.jpg">
+      <Name>AlienTextur5</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="3D Model Textures\AlienTextur6.jpg">
+      <Name>AlienTextur6</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

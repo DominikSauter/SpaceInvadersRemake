@@ -60,9 +60,9 @@ namespace SpaceInvadersRemake.View
                 /* Vorläufige Matrizen.
                 * Wir müssen noch besprechen wie groß unsre 3D Ebene wird (dementsprechend müssen wir Camera und Projection initialisieren)
                 * */
-                GameItemRepresentation.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 600.0f, 800.0f), new Vector3(0.0f, 0.0f, 0.0f), Vector3.Up);
+                GameItemRepresentation.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 800.0f, 500.0f), new Vector3(0.0f, 0.0f, 0.0f), Vector3.Up);
                 GameItemRepresentation.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(60),
-                    graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight, 0.1f, 2000.0f);
+                    graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight, 0.1f, 1000.0f);
                 
                 //registrieren an den events [PFLICHT]
                 //created
