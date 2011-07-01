@@ -39,24 +39,20 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public float HitpointsMultiplier { get; private set; }
 
-
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Geschwindigkeit der Aliens.
         /// </summary>
         public Vector2 VelocityMultiplier { get; private set; }
       
-
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Schussfrequenz der Aliens.
         /// </summary>
         public float ShootingFrequencyMultiplier { get; private set; }
       
-
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Geschwindigkeitserhöhung der Aliens.
         /// </summary>
         public Vector2 VelocityIncreaseMultiplier { get; private set; }
-   
 
         /// <summary>
         /// Konfiguration der Parameter für die 1. Schwierigkeitsstufe ("leicht").
@@ -95,7 +91,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// Schwierigkeitsspezifische Modifikation des Kollisionsschadens der Aliens.
         /// </summary>
         public float DamageMultiplier { get; private set; }
-  
 
         /// <summary>
         /// Schwierigkeitsspezifische Modifikation der Punktzahl, die der Spieler durch das Zerstören der Aliens erhält.

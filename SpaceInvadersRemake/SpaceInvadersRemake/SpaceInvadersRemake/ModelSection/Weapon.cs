@@ -53,5 +53,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="shootingDirection">Bewegungsrichtung der Projektile</param>
         /// <param name="gameTime">Spielzeit</param>
         public abstract void Fire(Vector2 position, Vector2 shootingDirection, GameTime gameTime);
+
     }
 }
