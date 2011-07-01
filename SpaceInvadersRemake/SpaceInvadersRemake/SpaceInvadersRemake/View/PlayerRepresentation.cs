@@ -74,14 +74,14 @@ namespace SpaceInvadersRemake.View
                 playerMoved = true;
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
                 this.lastPosition = currentPosition;
-                direction = 1.0f;
+                direction = -1.0f;
             }
             else if (currentPosition.X < lastPosition.X)
             {
                 playerMoved = true;
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
                 this.lastPosition = currentPosition;
-                direction = -1.0f;
+                direction = 1.0f;
             }
 
             foreach (ModelMesh mesh in model.Meshes)
