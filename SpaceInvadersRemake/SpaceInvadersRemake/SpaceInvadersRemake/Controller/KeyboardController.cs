@@ -50,10 +50,10 @@ namespace SpaceInvadersRemake.Controller
        public override void Update(Game game, GameTime gameTime, StateMachine.State state)
        {
           
-           kState = Keyboard.GetState();
+           kState = StateManager.newState;
            
            //Pausemenüaufruf
-           if (kState.IsKeyDown(KBconfig.Back) || kState.IsKeyDown(Keys.Escape))
+           if (MenuController.KeyPressed(KBconfig.Back) || MenuController.KeyPressed(Keys.Escape))
            {
                if (state is InGameState)
                {
@@ -89,6 +89,7 @@ namespace SpaceInvadersRemake.Controller
                 direction += CoordinateConstants.Right;
             }
 
+            
 
             this.Controllee.Move(direction, gameTime);
             
@@ -96,7 +97,7 @@ namespace SpaceInvadersRemake.Controller
         }
 
         /// <summary>
-        /// Entscheided ob Controllees schießen soll
+        /// Entscheidet ob Controllee schießen soll
         /// </summary>
         /// <remarks>Dies geschieht indem der Benutzer die Taste für schießen drückt.
         /// Welche Taste dies ist, ist in der Eigenschaft <c>KBconfig</c> hinterlegt

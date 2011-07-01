@@ -217,7 +217,7 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         /// <param name="key">Taste die überprüft werden soll</param>
         /// <returns>ob Taste gedrückt wurde</returns>
-        private static bool KeyPressed(Keys key)
+        public static bool KeyPressed(Keys key)
         {
             if (StateManager.newState.IsKeyDown(key) && !StateManager.oldState.IsKeyDown(key)) //modified by ck
             {

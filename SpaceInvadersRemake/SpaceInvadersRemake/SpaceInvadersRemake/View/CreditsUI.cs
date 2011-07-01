@@ -36,7 +36,7 @@ namespace SpaceInvadersRemake.View
             * */
             this.textSpeed = 1.0f;
             textEnd = false;
-            this.CreditsText = Resource.Text_Credits; //UNDONE Diese Zeile dient zum Test einer Resource
+            this.CreditsText = Resource.Text_Credits; 
             this.textPos = new Vector2((graphics.PreferredBackBufferWidth - font.MeasureString(this.CreditsText).X) / 4, graphics.PreferredBackBufferHeight);
         }
 
