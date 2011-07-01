@@ -76,20 +76,12 @@ namespace SpaceInvadersRemake.Controller
                 //Navigiert alle GameItem nach unten.
                 foreach (IGameItem item in Controllees)
                 {
-                    if (item.IsAlive)
-                    {
+                    
                         item.Move(CoordinateConstants.Down, gameTime);
 
                         //GameItem werden schneller
                         item.Velocity += this.VelocityIncrease;
 
-                    }
-                    else
-                    {
-                        //Entferne Tote GameItems
-                        this.Controllees.Remove(item);
-
-                    }
 
                 }
                 moveDown = false;

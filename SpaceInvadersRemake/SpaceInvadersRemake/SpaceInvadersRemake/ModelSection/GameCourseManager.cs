@@ -99,7 +99,7 @@ namespace SpaceInvadersRemake.ModelSection
 
             for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != GameItem.GameItemList.Last; item = item.Next)
             {
-                if (item.Value.IsAlive)
+                if (item.Value.IsAlive) //HACK BUG ID 5
                 {
                     item.Value.Update(gameTime);
                 }
