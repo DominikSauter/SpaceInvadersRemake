@@ -134,6 +134,7 @@
       <ProcessorParameters_RotationX>-90</ProcessorParameters_RotationX>
       <ProcessorParameters_RotationY>90</ProcessorParameters_RotationY>
       <ProcessorParameters_Scale>3</ProcessorParameters_Scale>
+      <ProcessorParameters_RotationZ>180</ProcessorParameters_RotationZ>
     </Compile>
   </ItemGroup>
   <ItemGroup>
