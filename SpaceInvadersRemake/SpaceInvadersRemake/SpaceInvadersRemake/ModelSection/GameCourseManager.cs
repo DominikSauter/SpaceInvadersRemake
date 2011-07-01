@@ -66,19 +66,6 @@ namespace SpaceInvadersRemake.ModelSection
             else
             {
                 bool waveAlive = false;
-                /*foreach (IGameItem item in currentWave)
-                {
-                    if (item.IsAlive)
-                    {
-                        waveAlive = true;
-                        break;
-                    }
-                    else
-                    {
-                        currentWave.Remove(item);
-                    }
-                }*/
-                // In for-Schleife gepackt - TB
                 for (LinkedListNode<IGameItem> item = currentWave.First; item != currentWave.Last; item = item.Next)
                 {
                     if (item.Value.IsAlive)
@@ -110,18 +97,6 @@ namespace SpaceInvadersRemake.ModelSection
         {
             Collider.CheckAllCollisions(GameItem.GameItemList);
 
-            /*foreach (IGameItem item in GameItem.GameItemList)
-            {
-                if (!item.IsAlive)
-                {
-                    GameItem.GameItemList.Remove(item);
-                }
-                else
-                {
-                    item.Update(gameTime);
-                }
-            }*/
-            // In for-Schleife gepackt - TB
             for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != GameItem.GameItemList.Last; item = item.Next)
             {
                 if (item.Value.IsAlive)
@@ -133,11 +108,7 @@ namespace SpaceInvadersRemake.ModelSection
                     GameItem.GameItemList.Remove(item);
                 }
             }
-
-
-            
         }
-
 
         /// <summary>
         /// Erledigt die Arbeit, die anfällt, wenn der <c>State</c> entgültig zerstört wird, im Bereich des Models.
