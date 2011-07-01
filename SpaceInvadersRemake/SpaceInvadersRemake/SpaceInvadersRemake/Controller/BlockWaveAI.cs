@@ -127,6 +127,8 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Shooting(Game game, GameTime gameTime)
         {
+            //UNDONE: [Dodo] auskommentiert, weil sonst NPE auftritt. Hängt wohl mit BUG ID 5 zusammen!
+            /* 
             const int POINT_SHIFTING = 1000; // TODO: reicht der aus?
 
             float alienFreqInHz = this.ShootingFrequency / this.AlienMatrix.Count;
@@ -144,6 +146,7 @@ namespace SpaceInvadersRemake.Controller
                     if (col.Last != null)
                         col.Last.Value.Shoot(gameTime);
             }
+             * */
         }
     }
 }
