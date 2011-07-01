@@ -52,7 +52,7 @@ namespace SpaceInvadersRemake.View
             this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
             this.playerMoved = false;
             this.lastPosition = PlaneProjector.Convert2DTo3D(this.playerGameItem.Position);
-            this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Backward, Vector3.Up);
+            this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Forward, Vector3.Up);
 
             //<WAHL>
             this.playerShipEngine = null;
@@ -72,14 +72,16 @@ namespace SpaceInvadersRemake.View
             if (currentPosition.X > this.lastPosition.X)
             {
                 playerMoved = true;
+                this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
                 this.lastPosition = currentPosition;
-                direction = -1.0f;
+                direction = 1.0f;
             }
             else if (currentPosition.X < lastPosition.X)
             {
                 playerMoved = true;
+                this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
                 this.lastPosition = currentPosition;
-                direction = 1.0f;
+                direction = -1.0f;
             }
 
             foreach (ModelMesh mesh in model.Meshes)
@@ -95,11 +97,11 @@ namespace SpaceInvadersRemake.View
                     effect.Projection = Projection;
                     if (this.playerMoved)
                     {
-                        effect.World = this.World * Matrix.CreateRotationZ(MathHelper.ToRadians(direction * 25)) * Matrix.CreateTranslation(currentPosition.X, 0, 0);
+                        effect.World = Matrix.CreateRotationZ(MathHelper.ToRadians(direction * 25)) * this.World;
                     }
                     else
                     {
-                        effect.World = this.World * Matrix.CreateTranslation(lastPosition.X, 0, 0);
+                        effect.World = this.World;
                     }
                 }
 
