@@ -37,7 +37,10 @@ namespace SpaceInvadersRemake.ModelSection
 
             LinkedList<IGameItem> wave = FormationGenerator.CreateFormation(hitpoints, velocity, formation, damage, scoreGain);
 
-            WaveGenerated(null, new ControllerEventArgs(AI, wave, difficultyLevel));
+            if (WaveGenerated != null)
+            {
+                WaveGenerated(null, new ControllerEventArgs(AI, wave, difficultyLevel));
+            }
 
             return wave;
         }
