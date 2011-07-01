@@ -69,8 +69,6 @@ namespace SpaceInvadersRemake.View
                 Player.Created += CreatePlayer;
                 Alien.Created += CreateAlien;
                 Mothership.Created += CreateMothership;
-
-                //AUSKOMMENTIERT ZUM AUSFÜHREN!
                 Shield.Created += CreateShield;
                 Projectile.Created += CreateProjectile;
 

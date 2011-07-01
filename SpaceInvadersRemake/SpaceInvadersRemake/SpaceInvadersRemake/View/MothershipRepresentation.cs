@@ -19,7 +19,8 @@ namespace SpaceInvadersRemake.View
     public class MothershipRepresentation : GameItemRepresentation
     {
         private Model model;
-        private Texture2D mothershiptTexture;
+        private Texture2D mothershipTexture;
+        private Vector3 lastPosition;
         
         /// <summary>
         /// ParticleEmitter der einen Explosionseffekt erzeugt.
@@ -46,8 +47,9 @@ namespace SpaceInvadersRemake.View
         {
             this.model = ViewContent.RepresentationContent.MothershipModel;
             this.mothershipGameItem = mothershipGameItem;
-            this.mothershiptTexture = ViewContent.RepresentationContent.MothershipTexture;
-            this.World = Matrix.CreateWorld(PlaneProjector.Convert2DTo3D(this.mothershipGameItem.Position), Vector3.Right, Vector3.Up);
+            this.mothershipTexture = ViewContent.RepresentationContent.MothershipTexture;
+            this.lastPosition = PlaneProjector.Convert2DTo3D(this.mothershipGameItem.Position);
+            this.World = Matrix.CreateWorld(lastPosition, Vector3.Right, Vector3.Up);
 
             //[WAHL]
             this.mothershipEngine = null;
@@ -55,17 +57,15 @@ namespace SpaceInvadersRemake.View
             //[/WAHL]
         }
 
-        
-
-        
-
-        private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
-        {
-            throw new System.NotImplementedException();
-        }
-
         public override void Draw(SpriteBatch spriteBatch)
         {
+            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.mothershipGameItem.Position);
+            if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X)
+            {
+                this.World = Matrix.CreateWorld(currentPosition, Vector3.Right, Vector3.Up);
+                this.lastPosition = currentPosition;
+            }
+
             foreach (ModelMesh mesh in model.Meshes)
             {
                 foreach (BasicEffect effect in mesh.Effects)
@@ -74,8 +74,8 @@ namespace SpaceInvadersRemake.View
                     effect.SpecularColor = new Vector3(1.0f, 1.0f, 1.0f);
                     effect.SpecularPower = 100.0f;
                     effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
-                    effect.Texture = this.mothershiptTexture;
-                    effect.World = this.World * Matrix.CreateTranslation(PlaneProjector.Convert2DTo3D(this.mothershipGameItem.Position));
+                    effect.Texture = this.mothershipTexture;
+                    effect.World = this.World;
                     effect.View = Camera;
                     effect.Projection = Projection;
                 }
