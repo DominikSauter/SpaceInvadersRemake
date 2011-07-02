@@ -45,20 +45,6 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        /// <summary>
-        /// Referenz auf das Miniboss-Modelobjekt um jegliche Abfragen im Model zu tätigen.
-        /// </summary>
-        public ModelSection.Miniboss MinibossGameItem
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
         {
             throw new System.NotImplementedException();

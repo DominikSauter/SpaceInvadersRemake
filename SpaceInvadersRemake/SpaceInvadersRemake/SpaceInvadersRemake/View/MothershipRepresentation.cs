@@ -36,21 +36,12 @@ namespace SpaceInvadersRemake.View
         private MothershipEngine mothershipEngine;
 
         /// <summary>
-        /// Referenz auf das MothershipSound-Modelobjekt um jegliche Abfragen im Model zu tätigen.
-        /// </summary>
-        public Mothership MothershipGameItem
-        {
-            get;
-            private set;
-        }
-
-        /// <summary>
         /// Erstellt eine Representation des Mutterschiff-Aliens.
         /// </summary>
         public MothershipRepresentation(Mothership mothershipGameItem)
         {
             this.model = ViewContent.RepresentationContent.MothershipModel;
-            this.MothershipGameItem = mothershipGameItem;
+            GameItem = mothershipGameItem;
             this.mothershipTexture = ViewContent.RepresentationContent.MothershipTexture;
             this.lastPosition = PlaneProjector.Convert2DTo3D(this.MothershipGameItem.Position);
             this.World = Matrix.CreateWorld(lastPosition, Vector3.Right, Vector3.Up);
