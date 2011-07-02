@@ -28,6 +28,19 @@ namespace SpaceInvadersRemake.ModelSection
             this.lastShot = -cooldown;
         }
 
+        /// <summary>
+        /// Diese Methode generiert ein neues Projektil-Objekt und wirft das Event "WeaponFired".
+        /// </summary>
+        /// <remarks>
+        /// Es wird nur dann ein Projektil-Objekt erzeugt, wenn die Zeit <c>cooldown</c> seit dem letzten erzeugten
+        /// Projektil vergangen ist. Der Zeitpunkt, an dem das letzte Projektil abgefeuert wurde, wird in 
+        /// <c>lastShot</c> gespeichert. Dem Projektil werden neben <c>position</c> und <c>shootingDirection</c>
+        /// die waffenspezifischen Werte <c>projectileHitpoints</c>, <c>projectileType</c>, <c>projectileVelocity</c> und <c>projectileDamage</c> 
+        /// im Konstruktor übergeben.
+        /// </remarks>
+        /// <param name="position">Position der abgefeuerten Projektile</param>
+        /// <param name="shootingDirection">Bewegungsrichtung der Projektile</param>
+        /// <param name="gameTime">Spielzeit</param>
         public override void Fire(Vector2 position, Vector2 shootingDirection, GameTime gameTime)
         {
             if (gameTime.TotalGameTime.TotalMilliseconds >= lastShot)
