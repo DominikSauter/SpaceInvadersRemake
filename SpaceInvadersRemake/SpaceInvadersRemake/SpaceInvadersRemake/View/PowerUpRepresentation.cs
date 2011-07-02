@@ -40,20 +40,6 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        /// <summary>
-        /// Referenz auf ein PowerUps-Modelobjekt um jegliche Abfragen im Model zu tätigen.
-        /// </summary>
-        public ModelSection.PowerUp PowerUpGameItem
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
         {
             throw new System.NotImplementedException();

@@ -27,10 +27,6 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Referenz auf das PlayerGameItem-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
-        public Player PlayerGameItem {
-            get;
-            private set;
-        }
 
         /// <summary>
         /// ParticleEmitter der einen Explosionseffekt erzeugt.
@@ -51,7 +47,7 @@ namespace SpaceInvadersRemake.View
         public PlayerRepresentation(Player playerGameItem)
         {
             this.model = ViewContent.RepresentationContent.PlayerModel;
-            this.PlayerGameItem = playerGameItem;
+            GameItem = playerGameItem;
             this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
             this.playerMoved = false;
             this.lastPosition = PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position);

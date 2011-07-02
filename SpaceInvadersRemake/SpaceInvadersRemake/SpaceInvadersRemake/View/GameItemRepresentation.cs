@@ -33,13 +33,8 @@ namespace SpaceInvadersRemake.View
 
         public ModelSection.IGameItem GameItem
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            protected set;
         }
 
         /// <summary>

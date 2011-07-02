@@ -22,16 +22,6 @@ namespace SpaceInvadersRemake.View
         private Texture2D alienTexture;
         private Vector3 lastPosition;
 
-
-        /// <summary>
-        /// Referenz auf ein Alien-Modelobjekt um jegliche Abfragen im Model zu tätigen.
-        /// </summary>
-        public Alien AlienGameItem
-        {
-            get;
-            private set;
-        }
-
         /// <summary>
         /// ParticleEmitter der einen Explosionseffekt erzeugt.
         /// </summary>
@@ -49,7 +39,7 @@ namespace SpaceInvadersRemake.View
         public AlienRepresentation(Alien alienGameItem, int randomTexture)
         {
             this.model = ViewContent.RepresentationContent.AlienModel;
-            this.AlienGameItem = alienGameItem;
+            GameItem = alienGameItem;
             this.lastPosition = PlaneProjector.Convert2DTo3D(this.AlienGameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Backward, Vector3.Up);
 
