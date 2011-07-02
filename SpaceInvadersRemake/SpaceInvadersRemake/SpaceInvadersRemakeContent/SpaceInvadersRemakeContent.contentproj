@@ -238,18 +238,20 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Music\Cognitive Dissonance.mp3">
-      <Name>Cognitive Dissonance</Name>
+    <Compile Include="Music\Spiel2.mp3">
+      <Name>Spiel2</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
-    <Compile Include="Music\The Whip Theme.mp3">
-      <Name>The Whip Theme</Name>
+    <Compile Include="Music\Menü.mp3">
+      <Name>Menü</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
-    <Compile Include="Music\Zap Beat.mp3">
-      <Name>Zap Beat</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Music\Spiel1.mp3">
+      <Name>Spiel1</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
     </Compile>
