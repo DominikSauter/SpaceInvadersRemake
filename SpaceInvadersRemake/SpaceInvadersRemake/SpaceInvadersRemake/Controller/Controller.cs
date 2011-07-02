@@ -21,6 +21,8 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class Controller : ICommander
     {
+        // ADDED (by STST): 2.7.2011
+        protected readonly ControllerManager controllerManager;
 
         
         /// <summary>
@@ -29,10 +31,12 @@ namespace SpaceInvadersRemake.Controller
         /// <remarks>
         /// Da dies eine Abstrakte Klasse ist, wird dieser innerhalb des Konstruktors der konkreten Klasse aufgerufen.
         /// </remarks>
-        /// <param name="controllee"></param>
-        protected Controller(IGameItem controllee)
+        /// <param name="controllerManager">Verweis auf Verwaltungsklasse</param>
+        /// <param name="controllee">Controllee des Controllers</param>
+        protected Controller(ControllerManager controllerManager, IGameItem controllee)
         {
             this.Controllee = controllee;
+            this.controllerManager = controllerManager;
         }
   
 

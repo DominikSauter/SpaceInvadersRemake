@@ -15,7 +15,7 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class AlienAI : AIController
     {
-
+        // MODIFIED (by STST): 2.7.2011
         /// <summary>
         /// Erstellt eine Instanz eines allgemeinen AlienAI Controllers.
         /// </summary>
@@ -24,8 +24,9 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         /// <param name="shootingFrequencyMultiplier">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll..</param>
-        protected AlienAI(int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
-            : base(shootingFrequency, controllee, velocityIncrease)
+        /// <param name="controllerManager">Verweis auf Verwaltungsklasse</param>
+        protected AlienAI(ControllerManager controllerManager, int shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+            : base(controllerManager, shootingFrequency, controllee, velocityIncrease)
         {
             //Nichts zu erledigen
         }

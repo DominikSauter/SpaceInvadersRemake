@@ -22,6 +22,7 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         protected LinkedList<LinkedList<IGameItem>> AlienMatrix;
 
+        // MODIFIED (by STST): 2.7.2011
         /// <summary>
         /// Erstellt eine neue Instanz eines allgemeinen WaveAI Controllers.
         /// </summary>
@@ -31,15 +32,14 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
         /// <param name="velocityIncrease">Geschwindigkeitserhöhung</param>
-        protected WaveAI(float shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
-            : base(shootingFrequency, null, velocityIncrease) //null wird das single controllee gesetzt 
+        /// <param name="controllerManager">Verweis auf Verwaltungsklasse</param>
+        protected WaveAI(ControllerManager controllerManager, float shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
+            : base(controllerManager, shootingFrequency, null, velocityIncrease) //null wird das single controllee gesetzt 
         {
             this.Controllees = controllees;
             // <STST>
             this.AlienMatrix = AliensInMatrix();
             // </STST>
-
-            Alien.Destroyed += new System.EventHandler(Alien_Destroyed);
         }
 
         /// <summary>
@@ -50,17 +50,23 @@ namespace SpaceInvadersRemake.Controller
         /// <remarks>
         /// Behandelt das Destroyed Ereignis der Alienklasse
         /// </remarks>
-        protected virtual void Alien_Destroyed(object sender, System.EventArgs e)
+        protected override void Alien_Destroyed(object sender, System.EventArgs e)
         {
             IGameItem item = (IGameItem)sender;
 
-            this.Controllees.Remove(item);
-            // <STST>
-            // Alien aus AlienMatrix
-            LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
-            if (remList != null)
-                remList.Remove(item);
-            // </STST>
+            // STST
+            if (this.Controllees.Count == 0)
+                controllerManager.Controllers.Remove(this);
+            else
+            {
+                this.Controllees.Remove(item);
+                // <STST>
+                // Alien aus AlienMatrix
+                LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
+                if (remList != null)
+                    remList.Remove(item);
+                // </STST>
+            }
         }
 
         /// <summary>
