@@ -31,6 +31,17 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
+        public ModelSection.IGameItem GameItem
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
         /// <summary>
         /// Positionsmatrix, welche die Position des 3D Models im Raum festlegt.
         /// </summary>
