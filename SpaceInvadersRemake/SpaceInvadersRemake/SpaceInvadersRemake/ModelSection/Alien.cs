@@ -54,6 +54,12 @@ namespace SpaceInvadersRemake.ModelSection
             if (Alien.Hit != null)
                 Alien.Hit(this, EventArgs.Empty);
             Hitpoints -= collisionPartner.Damage;
+
+            if (Hitpoints <= 0)
+            {
+                if (Alien.ScoreGained != null)
+                    Alien.ScoreGained(this, EventArgs.Empty);
+            }
         }
 
         /// <summary>
