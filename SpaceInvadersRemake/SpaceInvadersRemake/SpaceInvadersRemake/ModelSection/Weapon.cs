@@ -46,7 +46,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Es wird nur dann ein Projektil-Objekt erzeugt, wenn die Zeit <c>cooldown</c> seit dem letzten erzeugten
         /// Projektil vergangen ist. Der Zeitpunkt, an dem das letzte Projektil abgefeuert wurde, wird in 
         /// <c>lastShot</c> gespeichert. Dem Projektil werden neben <c>position</c> und <c>shootingDirection</c>
-        /// die waffenspezifischen Werte <c>projectileHitpoints</c>, <c>projectileType</c> und <c>projectileVelocity</c> 
+        /// die waffenspezifischen Werte <c>projectileHitpoints</c>, <c>projectileType</c>, <c>projectileVelocity</c> und <c>projectileDamage</c> 
         /// im Konstruktor übergeben.
         /// </remarks>
         /// <param name="position">Position der abgefeuerten Projektile</param>
