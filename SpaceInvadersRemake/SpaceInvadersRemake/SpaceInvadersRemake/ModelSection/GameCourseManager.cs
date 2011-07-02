@@ -75,7 +75,8 @@ namespace SpaceInvadersRemake.ModelSection
                     }
                     else
                     {
-                        currentWave.Remove(item);
+                        item = item.Previous;   // HACK: Evt. schönere Lösung für das item=null-Problem bei gelöschten items suchen
+                        currentWave.Remove(item.Next);
                     }
                 }
 
@@ -99,13 +100,14 @@ namespace SpaceInvadersRemake.ModelSection
 
             for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != GameItem.GameItemList.Last; item = item.Next)
             {
-                if (item.Value.IsAlive) // HACK: BUG ID 5
+                if (item.Value.IsAlive)
                 {
                     item.Value.Update(gameTime);
                 }
                 else
                 {
-                    GameItem.GameItemList.Remove(item);
+                    item = item.Previous;   // HACK: Evt. schönere Lösung für das item=null-Problem bei gelöschten items suchen
+                    GameItem.GameItemList.Remove(item.Next);
                 }
             }
         }
