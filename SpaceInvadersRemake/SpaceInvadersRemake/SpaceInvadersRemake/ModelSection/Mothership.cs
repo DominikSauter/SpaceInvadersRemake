@@ -54,6 +54,12 @@ namespace SpaceInvadersRemake.ModelSection
             if (Mothership.Hit != null)
                 Mothership.Hit(this, EventArgs.Empty);
             Hitpoints -= collisionPartner.Damage;
+
+            if (Hitpoints <= 0)
+            {
+                if (Mothership.ScoreGained != null)
+                    Mothership.ScoreGained(this, EventArgs.Empty);
+            }
         }
 
         /// <summary>
