@@ -57,14 +57,9 @@ namespace SpaceInvadersRemake.Controller
             this.Controllees.Remove(item);
             // <STST>
             // Alien aus AlienMatrix
-            foreach (var col in this.AlienMatrix)
-            {
-                if (col.Contains(item))
-                {
-                    col.Remove(item); // HACK: Hier gibt's wohl ne Fehler
-                    break;
-                }
-            }
+            LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
+            if (remList != null)
+                remList.Remove(item);
             // </STST>
         }
 
