@@ -73,17 +73,17 @@ namespace SpaceInvadersRemake.View
             float scaleHeight = 0.1f;
 
             //Positionen der Eckpunkte berechnen abhängig von der Skalierung und der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
-            Vector3 leftBot =  PlaneProjector.Convert2DTo3D(new Vector2(position.X - texture.Width * scaleWidth, position.Y - texture.Height * scaleHeight));
-            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X - texture.Width * scaleWidth, position.Y + texture.Height * scaleHeight));
-            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width * scaleWidth, position.Y - texture.Height * scaleHeight));
-            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width * scaleWidth, position.Y + texture.Height * scaleHeight ));
+            Vector3 leftBot = this.position + PlaneProjector.Convert2DTo3D(new Vector2(- texture.Width * scaleWidth, - texture.Height * scaleHeight));
+            Vector3 leftTop = this.position + PlaneProjector.Convert2DTo3D(new Vector2(- texture.Width * scaleWidth, texture.Height * scaleHeight));
+            Vector3 rightBot = this.position + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * scaleWidth, - texture.Height * scaleHeight));
+            Vector3 rightTop = this.position + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * scaleWidth, texture.Height * scaleHeight));
 
             //Eckpunkte des Vierecks bzw. der Polygone eintragen
             vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, new Vector2(0, 0));
             vertices[1] = new VertexPositionColorTexture(leftTop, Color.Green, new Vector2(0, 1));
             vertices[2] = new VertexPositionColorTexture(rightBot, Color.Yellow, new Vector2(1, 0));
             vertices[3] = new VertexPositionColorTexture(rightTop, Color.Blue, new Vector2(1, 1));
-   
+
             ////Eckpunkte des Vierecks bzw. der Polygone abhängig von der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
             //vertices[0] = new VertexPositionColorTexture(this.position, Color.Red, new Vector2(0, 0));
             //vertices[1] = new VertexPositionColorTexture(this.position + PlaneProjector.Convert2DTo3D(new Vector2(0, texture.Height / 5)), Color.Green, new Vector2(0, 1));
