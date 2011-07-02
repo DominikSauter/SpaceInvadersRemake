@@ -44,8 +44,8 @@ namespace SpaceInvadersRemake.ModelSection
             LinkedListNode<IGameItem> ItemA;
             LinkedListNode<IGameItem> ItemB;
 
-            for (ItemA = gameItemList.First; ItemA != gameItemList.Last; ItemA = ItemA.Next)
-                for (ItemB = ItemA; ItemB != gameItemList.Last; ItemB = ItemB.Next)
+            for (ItemA = gameItemList.First; ItemA != null; ItemA = ItemA.Next)
+                for (ItemB = ItemA; ItemB != null; ItemB = ItemB.Next)
                 {
                     if (ItemA.Value.IsAlive && ItemB.Value.IsAlive
                         && !ItemA.Value.GetType().Equals(ItemB.Value.GetType()))
