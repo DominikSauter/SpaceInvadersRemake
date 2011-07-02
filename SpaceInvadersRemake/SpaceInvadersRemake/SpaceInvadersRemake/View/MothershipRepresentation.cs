@@ -38,7 +38,11 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Referenz auf das MothershipSound-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
-        public Mothership mothershipGameItem;
+        public Mothership MothershipGameItem
+        {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// Erstellt eine Representation des Mutterschiff-Aliens.
@@ -46,9 +50,9 @@ namespace SpaceInvadersRemake.View
         public MothershipRepresentation(Mothership mothershipGameItem)
         {
             this.model = ViewContent.RepresentationContent.MothershipModel;
-            this.mothershipGameItem = mothershipGameItem;
+            this.MothershipGameItem = mothershipGameItem;
             this.mothershipTexture = ViewContent.RepresentationContent.MothershipTexture;
-            this.lastPosition = PlaneProjector.Convert2DTo3D(this.mothershipGameItem.Position);
+            this.lastPosition = PlaneProjector.Convert2DTo3D(this.MothershipGameItem.Position);
             this.World = Matrix.CreateWorld(lastPosition, Vector3.Right, Vector3.Up);
 
             //[WAHL]
@@ -59,7 +63,7 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.mothershipGameItem.Position);
+            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.MothershipGameItem.Position);
             if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X)
             {
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Right, Vector3.Up);

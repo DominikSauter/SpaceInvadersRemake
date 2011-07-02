@@ -25,9 +25,12 @@ namespace SpaceInvadersRemake.View
         private bool playerMoved;
 
         /// <summary>
-        /// Referenz auf das PlayerDamage-Modelobjekt um jegliche Abfragen im Model zu tätigen.
+        /// Referenz auf das PlayerGameItem-Modelobjekt um jegliche Abfragen im Model zu tätigen.
         /// </summary>
-        private Player playerGameItem;
+        public Player PlayerGameItem {
+            get;
+            private set;
+        }
 
         /// <summary>
         /// ParticleEmitter der einen Explosionseffekt erzeugt.
@@ -48,10 +51,10 @@ namespace SpaceInvadersRemake.View
         public PlayerRepresentation(Player playerGameItem)
         {
             this.model = ViewContent.RepresentationContent.PlayerModel;
-            this.playerGameItem = playerGameItem;
+            this.PlayerGameItem = playerGameItem;
             this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
             this.playerMoved = false;
-            this.lastPosition = PlaneProjector.Convert2DTo3D(this.playerGameItem.Position);
+            this.lastPosition = PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Forward, Vector3.Up);
 
             //<WAHL>
@@ -67,7 +70,7 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.playerGameItem.Position);
+            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position);
             float direction = 0.0f;
             if (currentPosition.X > this.lastPosition.X)
             {

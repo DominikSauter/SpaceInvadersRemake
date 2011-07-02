@@ -285,28 +285,19 @@ namespace SpaceInvadersRemake.View
             switch (currentProjectile.ProjectileType)
             {
                 case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                    texture = ViewContent.RepresentationContent.ProjectileNormal;
                     break;
                 case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                    texture = ViewContent.RepresentationContent.ProjectileNormal;
                     break;
                 case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectilePiercingHitsphere;
+                    texture = ViewContent.RepresentationContent.ProjectilePiercing;
                     break;
                 case ProjectileTypeEnum.MothershipProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileMothershipHitsphere;
+                    texture = ViewContent.RepresentationContent.ProjectileMothership;
                     break;
                 case ProjectileTypeEnum.MinibossProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileBossHitsphere;
-                    break;
-            }
-
-            switch (currentProjectile.ProjectileType)
-            {
-                case ProjectileTypeEnum.PlayerNormalProjectile: texture = ViewContent.RepresentationContent.ProjectileNormal;
-                    break;
-                case ProjectileTypeEnum.EnemyNormalProjectile: texture = ViewContent.RepresentationContent.ProjectileNormal;
-                    break;
-                case ProjectileTypeEnum.PiercingProjectile: texture = ViewContent.RepresentationContent.ProjectilePiercing;
-                    break;
-                case ProjectileTypeEnum.MothershipProjectile: texture = ViewContent.RepresentationContent.ProjectileMothership;
-                    break;
-                case ProjectileTypeEnum.MinibossProjectile: texture = ViewContent.RepresentationContent.ProjectileBoss;
+                    texture = ViewContent.RepresentationContent.ProjectileBoss;
                     break;
             }
 
@@ -368,9 +359,18 @@ namespace SpaceInvadersRemake.View
         /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
         {
-            foreach (IView listItem in ViewItemList)
+            for (int listCount = this.ViewItemList.Count - 1; listCount > -1; listCount--)
             {
-                listItem.Draw(((GameManager)game).spriteBatch);
+                IView item = ViewItemList[listCount];
+                if (item is GameItemRepresentation)
+                {
+                    if (!((GameItemRepresentation)item).GameItem.IsAlive)
+                    {
+                        this.ViewItemList.Remove(item);
+                    }
+                }
+
+                item.Draw(((GameManager)game).spriteBatch);
             }
         }
 
