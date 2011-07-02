@@ -49,7 +49,6 @@ namespace SpaceInvadersRemake
         /// </summary>
         protected override void Initialize()
         {
-            // TODO: Apply your initialization logic here
             // [View] Hier soll die Hintergrundmusik (GameSong, MenuSong) initialisiert werden
             //[/View]
             base.Initialize();
@@ -78,7 +77,6 @@ namespace SpaceInvadersRemake
             //[VIEW]
             View.ViewContent.LoadContent(this.Content);
 
-            // TODO: use this.Content to load your game content here
         }
 
         /// <summary>
@@ -87,7 +85,6 @@ namespace SpaceInvadersRemake
         /// </summary>
         protected override void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
         }
 
         /// <summary>
@@ -101,7 +98,6 @@ namespace SpaceInvadersRemake
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
-            // TODO: Apply your update logic here
 
             // <STST>
             this.StateManager.ModelUpdate(gameTime);
@@ -119,7 +115,6 @@ namespace SpaceInvadersRemake
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            // TODO: Apply your drawing code here
 
             // <STST>
             this.StateManager.ViewUpdate(gameTime);
