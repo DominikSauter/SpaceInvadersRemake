@@ -13,11 +13,12 @@ namespace SpaceInvadersRemake.Controller
     /// </summary>
     public class MothershipAI : AIController
     {
+        // MODIFIED (by STST): 2.7.2011
         /// <summary>
         /// Generiert eine neue Instanz der MothershipAI Controllers.
         /// </summary>
-        public MothershipAI(float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
-            : base(shootingFrequency, controllee, velocityIncrease)
+        public MothershipAI(ControllerManager controllerManager, float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+            : base(controllerManager, shootingFrequency, controllee, velocityIncrease)
         {
             //Nichts zu erledigen.
         }

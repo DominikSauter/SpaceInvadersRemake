@@ -27,11 +27,33 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll.</param>
         /// <param name="velocityIncrease">Geschwindigkeitserhöhung</param>
-        protected AIController(float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
-            : base(controllee)
+        /// <param name="controllerManager">Verweis auf Verwaltungsklasse</param>
+        protected AIController(ControllerManager controllerManager, float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+            : base(controllerManager, controllee)
         {
             this.ShootingFrequency = shootingFrequency;
             this.VelocityIncrease = velocityIncrease;
+
+            // STST
+            Alien.Destroyed += new System.EventHandler(Alien_Destroyed);
+        }
+
+
+        // ADDED (by STST): 2.7.2011
+        /// <summary>
+        /// Löscht sich aus ControllerManager.Controllers-Liste, falls Alien zerstört wurde.
+        /// </summary>
+        /// <param name="sender">Das zu löschende Alien</param>
+        /// <param name="e">Leere event args</param>
+        /// <remarks>
+        /// Behandelt das Destroyed Ereignis der Alienklasse
+        /// </remarks>
+        protected virtual void Alien_Destroyed(object sender, System.EventArgs e)
+        {
+            IGameItem item = (IGameItem)sender;
+
+            if (this.Controllee == item)
+                controllerManager.Controllers.Remove(this);
         }
 
         /// <summary>

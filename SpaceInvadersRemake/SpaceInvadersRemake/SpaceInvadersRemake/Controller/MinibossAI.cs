@@ -15,6 +15,7 @@ namespace SpaceInvadersRemake.Controller
     /// </remarks>
     public abstract class MinibossAI : AIController
     {
+        // MODIFIED (by STST): 2.7.2011
         /// <summary>
         /// Erstellt eine neue Instanz eines allgemeinen MinibossAI Kontrollers.
         /// </summary>
@@ -23,8 +24,8 @@ namespace SpaceInvadersRemake.Controller
         /// </remarks>
         /// <param name="shootingFrequencyMultiplier">Die Schussfrequenz.</param>
         /// <param name="controllee">Das GameItem, das der Controller kontrollieren soll.</param>
-        protected MinibossAI(float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
-            : base(shootingFrequency, controllee, velocityIncrease)
+        protected MinibossAI(ControllerManager controllerManager, float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
+            : base(controllerManager, shootingFrequency, controllee, velocityIncrease)
         {
            //Nichts zu erledigen
         }

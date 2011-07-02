@@ -136,7 +136,7 @@ public class ControllerManager : IController
         {
             case BehaviourEnum.BlockMovement:
 
-                temp = new BlockWaveAI(shootingFrequency, controllees, velocityIncrease);
+                temp = new BlockWaveAI(this, shootingFrequency, controllees, velocityIncrease);
 
                 Controllers.Add(temp);
                
@@ -144,7 +144,7 @@ public class ControllerManager : IController
             
             case BehaviourEnum.MothershipMovement:
 
-                temp = new MothershipAI(shootingFrequency, controllees.First(), velocityIncrease);
+                temp = new MothershipAI(this, shootingFrequency, controllees.First(), velocityIncrease);
                 Controllers.Add(temp);
 
                 break;
@@ -182,7 +182,7 @@ public class ControllerManager : IController
                 //Kein break
 
                 default:
-                    Controllers.Add(new KeyboardController(mycontrollee));
+                    Controllers.Add(new KeyboardController(this, mycontrollee));
                     break;
 
 

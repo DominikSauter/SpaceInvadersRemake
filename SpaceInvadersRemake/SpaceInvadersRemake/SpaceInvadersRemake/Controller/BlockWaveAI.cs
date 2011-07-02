@@ -23,14 +23,16 @@ namespace SpaceInvadersRemake.Controller
         private Vector2 currentDirection = CoordinateConstants.Right;
 
         // by STST
+        // MODIFIED (by STST): 2.7.2011
         /// <summary>
         /// Generiert eine neue BlockWaveAI Klasse.
         /// </summary>
         /// <param name="shootingFrequency">Die Schussfrequenz.</param>
         /// <param name="controllees">Die GameItem, die der Controller kontrollieren soll.</param>
         /// <param name="velocityIncrease">Geschwindigkeitserhöhung</param>
-        public BlockWaveAI(float shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
-            : base(shootingFrequency, controllees, velocityIncrease)
+        /// <param name="controllerManager">Verweis auf Verwaltungsklasse</param>
+        public BlockWaveAI(ControllerManager controllerManager, float shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
+            : base(controllerManager, shootingFrequency, controllees, velocityIncrease)
         {
         }
 

@@ -18,11 +18,12 @@ namespace SpaceInvadersRemake.Controller
     /// mithilfe der Tastatur bestimmt</remarks>
     public class KeyboardController : PlayerController
     {
+        // MODIFIED (by STST): 2.7.2011
         /// <summary>
         /// Generiert eine neue Instanz der <see cref="KeyboardController"/> Klasse.
         /// </summary>
-        public KeyboardController(IGameItem controllee)
-            : base(controllee)
+        public KeyboardController(ControllerManager controllerManager, IGameItem controllee)
+            : base(controllerManager, controllee: controllee)
         {
             this.KBconfig = KeyboardConfig.Default;
         }
