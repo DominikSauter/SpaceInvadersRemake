@@ -61,6 +61,15 @@ namespace SpaceInvadersRemake.Resources {
         }
         
         /// <summary>
+        ///   Sucht eine lokalisierte Zeichenfolge, die Space Invaders Remake ähnelt.
+        /// </summary>
+        public static string Game_Titel {
+            get {
+                return ResourceManager.GetString("Game_Titel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Sucht eine lokalisierte Zeichenfolge, die Audio ähnelt.
         /// </summary>
         public static string Label_Audio {
@@ -223,8 +232,7 @@ namespace SpaceInvadersRemake.Resources {
         }
         
         /// <summary>
-
-        ///   Looks up a localized string similar to Chuck Norris.
+        ///   Sucht eine lokalisierte Zeichenfolge, die Chuck Norris ähnelt.
         /// </summary>
         public static string NoName {
             get {
@@ -233,8 +241,6 @@ namespace SpaceInvadersRemake.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to ~~~~~~~~~~~~~~~~~~~~~~~~~
-
         ///   Sucht eine lokalisierte Zeichenfolge, die ~~~~~~~~~~~~~~~~~~~~~~~~~
         ///~ Space Invaders Remake ~
         ///~~~~~~~~~~~~~~~~~~~~~~~~~

@@ -190,4 +190,7 @@ Wir danken einfach allen!</value>
   <data name="NoName" xml:space="preserve">
     <value>Chuck Norris</value>
   </data>
+  <data name="Game_Titel" xml:space="preserve">
+    <value>Space Invaders Remake</value>
+  </data>
 </root>
