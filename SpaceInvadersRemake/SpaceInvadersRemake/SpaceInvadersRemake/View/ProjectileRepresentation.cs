@@ -27,14 +27,6 @@ namespace SpaceInvadersRemake.View
         //Hilfs-Array zum Zusammensetzen der Polygone
         private int[] indices;
 
-        /// <summary>
-        /// Referenz auf ein Projectile-Modelobjekt um jegliche Abfragen im Model zu tätigen.
-        /// </summary>
-        public ModelSection.Projectile ProjectileGameItem
-        {
-            get;
-            private set;
-        }
 
         /// <summary>
         /// Erstellt eine Representation eines Projektils.
@@ -42,8 +34,8 @@ namespace SpaceInvadersRemake.View
         public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics)
         {
             this.texture = texture;
-            this.ProjectileGameItem = projectile;
-            this.position = PlaneProjector.Convert2DTo3D(this.ProjectileGameItem.Position);
+            GameItem = projectile;
+            this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
@@ -69,7 +61,7 @@ namespace SpaceInvadersRemake.View
         /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 newPosition = PlaneProjector.Convert2DTo3D(this.ProjectileGameItem.Position);
+            Vector3 newPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
 
             if (newPosition.Z > this.position.Z || newPosition.Z < this.position.Z)
             {

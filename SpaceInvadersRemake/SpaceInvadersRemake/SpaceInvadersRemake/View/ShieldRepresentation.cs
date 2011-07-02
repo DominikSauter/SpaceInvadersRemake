@@ -28,16 +28,6 @@ namespace SpaceInvadersRemake.View
 
         private int[] indices;
 
-        /// <summary>
-        /// Referenz auf ein Shield-Modelobjekt um jegliche Abfragen im Model zu tätigen.
-        /// </summary>
-        public ModelSection.Shield ShieldGameItem
-        {
-            get;
-            private set;
-
-        }
-
 
         /// <summary>
         /// Erstellt eine Representation eines stationären Schildes.
@@ -45,8 +35,8 @@ namespace SpaceInvadersRemake.View
         public ShieldRepresentation(Shield shield, GraphicsDeviceManager graphics)
         {
             this.texture = ViewContent.RepresentationContent.ShieldTexture;
-            this.ShieldGameItem = shield;
-            this.position = PlaneProjector.Convert2DTo3D(this.ShieldGameItem.Position);
+            GameItem = shield;
+            this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position,Vector3.Forward,Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
@@ -58,11 +48,20 @@ namespace SpaceInvadersRemake.View
             //6 Punkte für zwei polygone, um ein Rechteck zu zeichnen
             this.indices = new int[6];
 
+            //Eckpunkte
+            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(position.X - (texture.Width / 2), position.Y - texture.Height / 2));
+            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X - texture.Width / 2, position.Y + texture.Height / 2));
+            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2));
+            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width / 2, position.Y - texture.Height / 2));
+
+            //Eckpunkte in 3D ebene "Aufstellen"
+            Vector3 erect = new Vector3(0, 100, 0);
+
             //Eckpunkte des Vierecks bzw. der Polygone abhängig von der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
-            vertices[0] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.ShieldGameItem.Position), Color.Red, new Vector2(0, 0));
-            vertices[1] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.ShieldGameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(0, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(0, 1));
-            vertices[2] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.ShieldGameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, 0)), Color.Green, new Vector2(1, 0));
-            vertices[3] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.ShieldGameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(1, 1));
+            vertices[0] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position), Color.Red, new Vector2(0, 0));
+            vertices[1] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(0, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(0, 1));
+            vertices[2] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, 0)), Color.Green, new Vector2(1, 0));
+            vertices[3] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(1, 1));
 
             //1. Polygon: Punkte 0,1,2 im Urzeigersinn
             indices[0] = 0;
