@@ -52,7 +52,7 @@ namespace SpaceInvadersRemake.ModelSection
         public void Reset()
         {
             Hitpoints = baseHitpoints;
-            Weapon = new PlayerNormalWeapon();
+            Weapon = GameItemConstants.PlayerWeapon;
             //ActivePowerUps.Clear();
             Velocity = baseVelocity;
             Position = startPosition;
