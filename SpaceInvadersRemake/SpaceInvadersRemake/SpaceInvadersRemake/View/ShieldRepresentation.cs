@@ -51,9 +51,9 @@ namespace SpaceInvadersRemake.View
 
             //Eckpunkte des Vierecks bzw. der Polygone abhängig von der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
             vertices[0] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.shieldGameItem.Position), Color.Red, new Vector2(0,0));
-            vertices[1] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.shieldGameItem.Position + new Vector2(0, texture.Height / 3)), Color.Green, new Vector2(0,1));
-            vertices[2] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.shieldGameItem.Position + new Vector2(texture.Width * 0.4f, 0)), Color.Green, new Vector2(1,0));
-            vertices[3] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.shieldGameItem.Position + new Vector2(texture.Width * 0.4f, texture.Height / 3)), Color.Green, new Vector2(1, 1));
+            vertices[1] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.shieldGameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(0, texture.Height / 3)) + new Vector3(0,80,0), Color.Green, new Vector2(0,1));
+            vertices[2] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.shieldGameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, 0)), Color.Green, new Vector2(1,0));
+            vertices[3] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(this.shieldGameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, texture.Height / 3)) + new Vector3(0, 80, 0), Color.Green, new Vector2(1, 1));
 
             //1. Polygon: Punkte 0,1,2 im Urzeigersinn
             indices[0] = 0;

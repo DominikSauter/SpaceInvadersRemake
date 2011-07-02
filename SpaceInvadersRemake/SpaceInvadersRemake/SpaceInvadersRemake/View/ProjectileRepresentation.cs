@@ -16,12 +16,9 @@ namespace SpaceInvadersRemake.View
     public class ProjectileRepresentation : GameItemRepresentation
     {
         private Texture2D texture;
-        private Projectile projectileGameItem;
+        private Projectile projectile;
         private Vector3 position;
-        private Vector2 projectileCenter;
         private GraphicsDeviceManager graphics;
-        private bool moved;
-        private int scale;
 
         //Punkte der Polygone wo die Textur gezeichnet werden soll
         private VertexPositionColorTexture[] vertices;
@@ -50,24 +47,15 @@ namespace SpaceInvadersRemake.View
         public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics)
         {
             this.texture = texture;
-            this.projectileGameItem = projectile;
-            this.projectileCenter = this.projectileGameItem.Position;
-            this.position = PlaneProjector.Convert2DTo3D(projectileCenter);
+            this.projectile = projectile;
+            this.position = PlaneProjector.Convert2DTo3D(this.projectile.Position);
             this.graphics = graphics;
-            this.moved = false;
-            this.scale = 3 / 2;
-            this.World = Matrix.CreateWorld(this.position, Vector3.Backward, Vector3.Up);
+            this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
             //Eckpunkte des Rechtecks
             this.vertices = new VertexPositionColorTexture[4];
             //6 Punkte für zwei polygone, um ein Rechteck zu zeichnen
             this.indices = new int[6];
-
-            //Eckpunkte des Vierecks bzw. der Polygone abhängig von der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
-            vertices[0] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(projectileCenter + new Vector2(-texture.Width / 2, -texture.Height / 2)), Color.Red, new Vector2(0, 0));
-            vertices[1] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(projectileCenter + new Vector2(-texture.Width / 2, texture.Height / 2)), Color.Green, new Vector2(0, 1));
-            vertices[2] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(projectileCenter + new Vector2(texture.Width / 2, -texture.Height / 2)), Color.Green, new Vector2(1, 0));
-            vertices[3] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(projectileCenter + new Vector2(texture.Width / 2, texture.Height / 2)), Color.Green, new Vector2(1, 1));
 
             //1. Polygon: Punkte 0,1,2 im Urzeigersinn
             indices[0] = 0;
@@ -77,6 +65,7 @@ namespace SpaceInvadersRemake.View
             indices[3] = 1;
             indices[4] = 3;
             indices[5] = 2;
+
         }
 
         /// <summary>
@@ -85,24 +74,24 @@ namespace SpaceInvadersRemake.View
         /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.projectileGameItem.Position);
+            Vector3 newPosition = PlaneProjector.Convert2DTo3D(this.projectile.Position);
 
-            if (currentPosition.Y > position.Y)
+            if (newPosition.Z > this.position.Z || newPosition.Z < this.position.Z)
             {
-                this.position = currentPosition;
-                this.moved = true;
+                this.position = newPosition;
             }
 
-            effect.World = this.World;
+            //Eckpunkte des Vierecks bzw. der Polygone abhängig von der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
+            vertices[0] = new VertexPositionColorTexture(this.position, Color.Red, new Vector2(0, 0));
+            vertices[1] = new VertexPositionColorTexture(this.position + PlaneProjector.Convert2DTo3D(new Vector2(0, texture.Height / 5)), Color.Green, new Vector2(0, 1));
+            vertices[2] = new VertexPositionColorTexture(this.position + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width / 8, 0)), Color.Yellow, new Vector2(1, 0));
+            vertices[3] = new VertexPositionColorTexture(this.position + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width / 8, texture.Height / 5)), Color.Blue, new Vector2(1, 1));
+
             effect.TextureEnabled = true;
             effect.Texture = texture;
             effect.View = Camera;
             effect.Projection = Projection;
-
-            if (moved)
-            {
-                effect.World = this.World * Matrix.CreateTranslation(0, currentPosition.Y, currentPosition.Z);
-            }
+            effect.World = this.World;
 
             foreach (EffectPass pass in effect.CurrentTechnique.Passes)
             {
