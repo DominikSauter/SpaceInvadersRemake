@@ -20,7 +20,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="hitpointsMultiplier">Lebenspunkte der Gegner</param>
         /// <param name="shootingFrequencyMultiplier">Schussfrequenz der Gegner</param>
         /// <param name="velocityIncreaseMultiplier">Geschwindigkeitserhöhung der Gegner</param>
-        /// <param name="velocityIncrease">Rate der Geschwindigkeitszunahme</param>
         /// <param name="damageMultiplier">Schaden der Gegner</param>
         /// <param name="scoreGainMultiplier">Punktzahl, die die Gegner bei Abschuss geben</param>
         /// <param name="velocityMultiplier">Startgeschwindigkeit der Gegner</param>

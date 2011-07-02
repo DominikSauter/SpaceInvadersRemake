@@ -103,8 +103,6 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Erzeugt eine Liste von Gegner-Objekten aus einem Vector2-Array.
         /// </summary>
-        /// <param name="hitpointsMultiplier">Lebenspunkte der Gegner</param>
-        /// <param name="velocityMultiplier">maximale Geschwindigkeit der Gegner</param>
         /// <param name="hitpoints">Lebenspunkte</param>
         /// <param name="velocity">Geschwindigkeit</param>
         /// <param name="formation">Formation der Welle</param>
