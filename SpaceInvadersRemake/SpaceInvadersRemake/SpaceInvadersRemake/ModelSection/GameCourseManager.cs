@@ -66,7 +66,7 @@ namespace SpaceInvadersRemake.ModelSection
             else
             {
                 bool waveAlive = false;
-                for (LinkedListNode<IGameItem> item = currentWave.First; item != currentWave.Last; item = item.Next)
+                for (LinkedListNode<IGameItem> item = currentWave.First; item != null; item = item.Next)
                 {
                     if (item.Value.IsAlive)
                     {
@@ -98,7 +98,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             Collider.CheckAllCollisions(GameItem.GameItemList);
 
-            for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != GameItem.GameItemList.Last; item = item.Next)
+            for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != null; item = item.Next)
             {
                 if (item.Value.IsAlive)
                 {
