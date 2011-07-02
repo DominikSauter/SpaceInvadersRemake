@@ -359,9 +359,11 @@ namespace SpaceInvadersRemake.View
         /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
         {
-            for (int listCount = this.ViewItemList.Count - 1; listCount > -1; listCount--)
+            /*
+             * Diese Schleife funktioniert auf jedenfall
+            for (int listCount = ViewItemList.Count; listCount > 0; listCount--)
             {
-                IView item = ViewItemList[listCount];
+                IView item = ViewItemList[listCount - 1];
                 if (item is GameItemRepresentation)
                 {
                     if (!((GameItemRepresentation)item).GameItem.IsAlive)
@@ -369,7 +371,26 @@ namespace SpaceInvadersRemake.View
                         this.ViewItemList.Remove(item);
                     }
                 }
+            }*/
 
+            /*
+             * RemoveAll entfernt alle Element die die Bedingung im Delegate erfüllen.
+             * Dazu wird ein anonymes Deleaget erstellt welches die Bedingungen beinhaltet.
+             * */
+            this.ViewItemList.RemoveAll(delegate(IView item)
+            {
+                if (item is GameItemRepresentation)
+                {
+                    return !((GameItemRepresentation)item).GameItem.IsAlive;
+                }
+                else
+                {
+                    return false;
+                }
+            });
+
+            foreach (IView item in this.ViewItemList)
+            {
                 item.Draw(((GameManager)game).spriteBatch);
             }
         }
