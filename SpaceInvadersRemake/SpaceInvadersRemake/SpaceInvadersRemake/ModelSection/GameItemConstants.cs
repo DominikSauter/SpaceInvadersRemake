@@ -1,7 +1,4 @@
 ﻿using Microsoft.Xna.Framework;
-using System.Xml.Serialization;
-using System.IO;
-using Microsoft.Xna.Framework.Graphics;
 
 // Implementiert von D. Sauter
 
@@ -19,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 3.0f;              
+                return 3.0f;
             }
         }
 
@@ -52,7 +49,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(50.0f, 0.0f);    //von 20.0f erhöht zum Testen: Dodo
+                return new Vector2(40.0f, 40.0f);
             }
         }
 
@@ -97,7 +94,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(0.0f, -75.0f);   //von -65.0f umpositioniert zum Testen: Dodo
+                return new Vector2(0.0f, -60.0f);
             }
         }
 
@@ -152,7 +149,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(10.0f, 10.0f);
+                return new Vector2(20.0f, 20.0f);
             }
         }
 
