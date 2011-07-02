@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Anji
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,6 @@ namespace SpaceInvadersRemake.View
     public class ProjectileRepresentation : GameItemRepresentation
     {
         private Texture2D texture;
-        private Projectile projectile;
         private Vector3 position;
         private GraphicsDeviceManager graphics;
 
@@ -32,13 +32,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public ModelSection.Projectile ProjectileGameItem
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -47,8 +42,8 @@ namespace SpaceInvadersRemake.View
         public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics)
         {
             this.texture = texture;
-            this.projectile = projectile;
-            this.position = PlaneProjector.Convert2DTo3D(this.projectile.Position);
+            this.ProjectileGameItem = projectile;
+            this.position = PlaneProjector.Convert2DTo3D(this.ProjectileGameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
@@ -74,7 +69,7 @@ namespace SpaceInvadersRemake.View
         /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 newPosition = PlaneProjector.Convert2DTo3D(this.projectile.Position);
+            Vector3 newPosition = PlaneProjector.Convert2DTo3D(this.ProjectileGameItem.Position);
 
             if (newPosition.Z > this.position.Z || newPosition.Z < this.position.Z)
             {
