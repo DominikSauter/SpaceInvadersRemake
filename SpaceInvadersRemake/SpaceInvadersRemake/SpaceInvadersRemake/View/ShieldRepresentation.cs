@@ -48,20 +48,32 @@ namespace SpaceInvadersRemake.View
             //6 Punkte für zwei polygone, um ein Rechteck zu zeichnen
             this.indices = new int[6];
 
-            //Eckpunkte
-            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(position.X - (texture.Width / 2), position.Y - texture.Height / 2));
-            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X - texture.Width / 2, position.Y + texture.Height / 2));
-            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width / 2, position.Y + texture.Height / 2));
-            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width / 2, position.Y - texture.Height / 2));
+            //Skalierung
+            float widthScale = 0.1f;
+            float heightScale = 0.05f;
 
             //Eckpunkte in 3D ebene "Aufstellen"
-            Vector3 erect = new Vector3(0, 100, 0);
+            Vector3 erect = new Vector3(0, 50, 0);
 
-            //Eckpunkte des Vierecks bzw. der Polygone abhängig von der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
-            vertices[0] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position), Color.Red, new Vector2(0, 0));
-            vertices[1] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(0, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(0, 1));
-            vertices[2] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, 0)), Color.Green, new Vector2(1, 0));
-            vertices[3] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(1, 1));
+            //Positionen der Eckpunkte berechnen abhängig von der Skalierung und der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
+            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(position.X - texture.Width*widthScale, position.Y - texture.Height*heightScale));
+            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X - texture.Width * widthScale, position.Y + texture.Height * heightScale)) + erect;
+            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width * widthScale, position.Y + texture.Height * heightScale)) + erect;
+            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(position.X + texture.Width * widthScale, position.Y - texture.Height * heightScale));
+
+
+
+            //Eckpunkte des Vierecks bzw. der Polygone eintragen
+            vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, new Vector2(0, 0));
+            vertices[1] = new VertexPositionColorTexture(leftTop, Color.Green, new Vector2(0, 1));
+            vertices[2] = new VertexPositionColorTexture(rightBot, Color.Green, new Vector2(1, 0));
+            vertices[3] = new VertexPositionColorTexture(rightTop, Color.Green, new Vector2(1, 1));
+
+            ////Eckpunkte des Vierecks bzw. der Polygone abhängig von der 2DPosition des Models-Bereichs (Position = Mittelpunkt des Rechtecks)
+            //vertices[0] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position), Color.Red, new Vector2(0, 0));
+            //vertices[1] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(0, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(0, 1));
+            //vertices[2] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, 0)), Color.Green, new Vector2(1, 0));
+            //vertices[3] = new VertexPositionColorTexture(PlaneProjector.Convert2DTo3D(GameItem.Position) + PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * 0.4f, texture.Height / 3)) + new Vector3(0, 100, 0), Color.Green, new Vector2(1, 1));
 
             //1. Polygon: Punkte 0,1,2 im Urzeigersinn
             indices[0] = 0;
