@@ -27,10 +27,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Der Zeitpunkt, an dem das letzte Projektil erzeugt wurde in Milisekunden seit Spielstart plus Cooldown.
         /// </summary>
-        // <STST>
-        // protected int lastShot;
         protected double lastShot;
-        // </STST>
 
         /// <summary>
         /// Die Lebenspunkte der Projektile.

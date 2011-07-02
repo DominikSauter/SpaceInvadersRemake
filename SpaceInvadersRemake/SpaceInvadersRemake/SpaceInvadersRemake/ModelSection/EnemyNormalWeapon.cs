@@ -30,10 +30,10 @@ namespace SpaceInvadersRemake.ModelSection
 
         public override void Fire(Vector2 position, Vector2 shootingDirection, GameTime gameTime)
         {
-            if (gameTime.TotalGameTime.Milliseconds >= lastShot)
+            if (gameTime.TotalGameTime.TotalMilliseconds >= lastShot)
             {
                 new Projectile(position, shootingDirection, projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
-                lastShot = gameTime.TotalGameTime.Milliseconds + cooldown;
+                lastShot = gameTime.TotalGameTime.TotalMilliseconds + cooldown;
 
                 if (WeaponFired != null)
                 {
