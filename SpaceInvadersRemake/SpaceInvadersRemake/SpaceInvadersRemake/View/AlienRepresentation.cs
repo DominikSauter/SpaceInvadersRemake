@@ -40,7 +40,7 @@ namespace SpaceInvadersRemake.View
         {
             this.model = ViewContent.RepresentationContent.AlienModel;
             GameItem = alienGameItem;
-            this.lastPosition = PlaneProjector.Convert2DTo3D(this.AlienGameItem.Position);
+            this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Backward, Vector3.Up);
 
             this.alienTexture = ViewContent.RepresentationContent.AlienTextures[randomTexture];            
@@ -57,7 +57,7 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.AlienGameItem.Position);
+            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X
                 || currentPosition.Z > this.lastPosition.Z || currentPosition.Z < this.lastPosition.Z)
             {

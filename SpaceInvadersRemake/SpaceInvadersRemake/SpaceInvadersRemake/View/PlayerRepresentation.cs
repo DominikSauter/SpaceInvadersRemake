@@ -50,7 +50,7 @@ namespace SpaceInvadersRemake.View
             GameItem = playerGameItem;
             this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
             this.playerMoved = false;
-            this.lastPosition = PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position);
+            this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Forward, Vector3.Up);
 
             //<WAHL>
@@ -66,7 +66,7 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.PlayerGameItem.Position);
+            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             float direction = 0.0f;
             if (currentPosition.X > this.lastPosition.X)
             {

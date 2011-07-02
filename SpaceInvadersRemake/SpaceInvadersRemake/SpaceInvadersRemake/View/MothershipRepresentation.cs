@@ -43,7 +43,7 @@ namespace SpaceInvadersRemake.View
             this.model = ViewContent.RepresentationContent.MothershipModel;
             GameItem = mothershipGameItem;
             this.mothershipTexture = ViewContent.RepresentationContent.MothershipTexture;
-            this.lastPosition = PlaneProjector.Convert2DTo3D(this.MothershipGameItem.Position);
+            this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(lastPosition, Vector3.Right, Vector3.Up);
 
             //[WAHL]
@@ -54,7 +54,7 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(this.MothershipGameItem.Position);
+            Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X)
             {
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Right, Vector3.Up);
