@@ -42,8 +42,6 @@ namespace SpaceInvadersRemake.StateMachine
             // von Tobias
             List<MenuControl> controls = new List<MenuControl>();
 
-            
-            //TODO: DisplayMode durch eigene Klasse ersetzten mit bessere ToString-Methode
 
             // Unterstützte Anzeigemodi von der Grafikkarte holen
             List<DisplayMode> displayModes = ((GameManager)game).GraphicsDevice.Adapter.SupportedDisplayModes.ToList();
