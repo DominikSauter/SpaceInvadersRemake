@@ -38,8 +38,6 @@ namespace SpaceInvadersRemake
         {
             string result = "";
 
-
-            //TODO: An eine Ressource-Datei binden
             if (On)
             {
                 result += Resource.Label_ON;

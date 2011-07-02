@@ -51,7 +51,6 @@ namespace SpaceInvadersRemake.ModelSection
             // Sortiert die Highscore-Liste mit einem anonymen Vergleichs-Delegate
             highscore.Sort(delegate(HighscoreEntry a, HighscoreEntry b) 
                            { 
-                               // TODO: Der Vergleich muss evlt. umgedreht werden, je nachdem wierum die Liste sortiert wird
                                if (a.Score < b.Score) 
                                    return -1; 
                                else if (a.Score == b.Score) 
