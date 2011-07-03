@@ -62,6 +62,10 @@ namespace SpaceInvadersRemake
             //[/View]
             base.Initialize();
 
+            graphics.PreferredBackBufferWidth = Settings.GameConfig.Default.graphicsWidth;
+            graphics.PreferredBackBufferHeight = Settings.GameConfig.Default.graphicsHeight;
+            graphics.ApplyChanges();
+
             //[VIEW]
             //Hack hitsphere berechnung aktiviert -ck
             View.ViewContent.ComputeHitspheres();

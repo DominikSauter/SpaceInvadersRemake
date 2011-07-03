@@ -53,9 +53,42 @@ namespace SpaceInvadersRemake.StateMachine
             }
 
             
-            controls.Add(new ListSelect<float>(Resource.Label_MasterVolume, volume, 10.0f, delegate(float i) { }));
-            controls.Add(new ListSelect<float>(Resource.Label_EffectVolume, volume, 10.0f, delegate(float i) {}));
-            controls.Add(new ListSelect<float>(Resource.Label_MusicVolume, volume, 10.0f, delegate(float i) {}));
+            controls.Add(new ListSelect<float>(Resource.Label_MasterVolume, 
+                                               volume, 
+                                               Settings.GameConfig.Default.MasterVolume * 10.0f, 
+                                               delegate(float i) 
+                                               {
+                                                   // Wert übernehmen
+                                                   //TODO: SoundFX anpassen
+                                                   GameManager.MusicPlayer.Volume = (i / 10.0f) * Settings.GameConfig.Default.MusicVolume;
+                                                   //Settings speichern
+                                                   Settings.GameConfig.Default.MasterVolume = i / 10.0f;
+                                                   Settings.GameConfig.Default.Save();
+                                               }));
+
+            controls.Add(new ListSelect<float>(Resource.Label_EffectVolume,
+                                               volume, 
+                                               Settings.GameConfig.Default.EffectVolume * 10.0f,
+                                               delegate(float i) 
+                                               {
+                                                   // Wert übernehmen
+                                                   //TODO: SoundFX anpassen
+                                                   // Settings speichern
+                                                   Settings.GameConfig.Default.EffectVolume = i / 10.0f;
+                                                   Settings.GameConfig.Default.Save();
+                                               }));
+
+            controls.Add(new ListSelect<float>(Resource.Label_MusicVolume, 
+                                               volume, 
+                                               Settings.GameConfig.Default.MusicVolume * 10.0f, 
+                                               delegate(float i) 
+                                               {
+                                                   // Wert übernehmen
+                                                   GameManager.MusicPlayer.Volume = Settings.GameConfig.Default.MasterVolume * (i / 10.0f);
+                                                   // Settings speichern
+                                                   Settings.GameConfig.Default.MusicVolume = i / 10.0f;
+                                                   Settings.GameConfig.Default.Save();
+                                               }));
 
             Model = new Menu(controls);
         }
