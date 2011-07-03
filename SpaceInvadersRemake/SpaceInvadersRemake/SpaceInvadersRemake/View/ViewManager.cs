@@ -95,7 +95,7 @@ namespace SpaceInvadersRemake.View
 
                 //weaponFired
                 PlayerNormalWeapon.WeaponFired += ShootSFX;
-
+                EnemyNormalWeapon.WeaponFired += ShootSFX;
             }
             else if (currentState is StateMachine.IntroState)
             {
@@ -163,6 +163,10 @@ namespace SpaceInvadersRemake.View
             else if (weapon is RapidfireWeapon)
             {
                 EffectPlayer.Play(ViewContent.EffectContent.WeaponRapidFire);
+            }
+            else if (weapon is EnemyNormalWeapon)
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponEnemy);
             }
         }
 

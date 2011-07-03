@@ -256,13 +256,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Soundeffects\39458__THE_bizniss__laser_4.wav">
-      <Name>39458__THE_bizniss__laser_4</Name>
+    <Compile Include="Soundeffects\Laser_Spieler_Normal.wav">
+      <Name>Laser_Spieler_Normal</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
-    <Compile Include="Soundeffects\Laser_Spieler_Normal.wav">
-      <Name>Laser_Spieler_Normal</Name>
+    <Compile Include="Soundeffects\Laser_Alien_Normal.wav">
+      <Name>Laser_Alien_Normal</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
