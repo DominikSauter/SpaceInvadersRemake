@@ -80,6 +80,8 @@ namespace SpaceInvadersRemake.View
             //</WAHL>
 
             //Laden des EffectContents
+            EffectContent.MenuSong = Content.Load<Song>("Music/Menü");
+            EffectContent.GameSong = Content.Load<Song>("Music/Spiel1");
         }
 
         /// <summary>

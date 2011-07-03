@@ -11,7 +11,7 @@ namespace SpaceInvadersRemake.View
     /// <summary>
     /// Diese Klasse kümmert sich um die Wiedergabe der Sound Effekte.
     /// </summary>
-    public class SoundEffects : IMediaplayer
+    public class SoundEffects
     {
         
         /// <summary>
@@ -20,7 +20,6 @@ namespace SpaceInvadersRemake.View
         
         public SoundEffects()
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -32,31 +31,8 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public float Volume
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        /// <summary>
-        /// Wahrheitswert, der festlegt ob ein Effekt wiederholt werden soll.
-        /// true: Effekt wird wiederholt
-        /// false: Effekt wird einmalig wiedergegeben
-        /// </summary>
-        public bool Repeat
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -68,43 +44,11 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Pausiert die Wiedergabe eines Sound Effekts
-        /// </summary>
-        public void Pause()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Setzt die Wiedergabe des Sound Effekts fort 
-        /// </summary>
-        public void Resume()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// Wiedergabe der Soundeffekte
         /// </summary>
         public void Play(SoundEffect SoundFX)
         {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Wiedergabe der Hintergrundmusik
-        /// </summary>
-        public void Play(Song Background)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Wiedergabe des Intros
-        /// </summary>
-        public void Play(Video intro)
-        {
-            throw new NotImplementedException();
+            SoundFX.Play();
         }
     }
 }
