@@ -149,8 +149,8 @@ namespace SpaceInvadersRemake.Controller
                 int iAlienFreq = (int)(alienFreqInFrame * POINT_SHIFTING);
                 int iRnd = rnd.Next(POINT_SHIFTING);
                 if (iRnd <= iAlienFreq)
-                    if (col.Last != null)
-                        col.Last.Value.Shoot(gameTime);
+                    if (col.First != null)
+                        col.First.Value.Shoot(gameTime);
             }
             
         }
