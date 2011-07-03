@@ -41,6 +41,12 @@ namespace SpaceInvadersRemake
             set;
         }
 
+        public SpaceInvadersRemake.View.BackgroundMusic MusicPlayer
+        {
+            get;
+            set;
+        }
+
         /// <summary>
         /// Allows the game to perform any initialization it needs to before starting to run.
         /// This is where it can query for any required services and load any non-graphic
@@ -55,6 +61,7 @@ namespace SpaceInvadersRemake
 
             //[VIEW]
             //View.ViewContent.ComputeHitspheres();
+            this.MusicPlayer = new View.BackgroundMusic();
 
             // <STST>
             this.StateManager = new StateManager(this);
