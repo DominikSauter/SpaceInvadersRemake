@@ -48,52 +48,55 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-        public bool Playing
-        {
-            get;
-            set;
-        }
+        /// <summary>
+        /// Gibt an ob die Wiedergabe gerade läuft.
+        /// true: Hintergrundmusik wird abgespielt
+        /// false: Hintergrundmusik wird nicht abgespielt
+        /// </summary>
+        private bool Playing;
 
+        private bool repeat;
         /// <summary>
         /// Wahrheitswert für die Wiederholung der Hintergrundmusik.
         /// true: Hintergrundmusik wird wiederholt
         /// false: Hintergrundmusik wird einmalig abgespielt
         /// </summary>
-        public bool Repeat
+        protected bool Repeat
         {
-            get;
-            set;
+            get
+            {
+                return this.repeat;
+            }
+            set
+            {
+                this.repeat = value;
+                MediaPlayer.IsRepeating = value;
+            }
+
         }
 
         /// <summary>
         /// Stoppt die Wiedergabe der Hintergrundmusik
         /// </summary>
-        public void Stop()
+        private void Stop()
         {
             MediaPlayer.Stop();
             this.Playing = false;
         }
 
         /// <summary>
-        /// Langsames Einblenden der Hintegrundmusik
+        /// Pausiert die Wiedergabe der Hintergrundmusik
         /// </summary>
-        public void FadeIn()
+        private void Pause()
         {
-            while (Volume < 1.0f)
-            {
-                Volume += 0.001f;
-            }
+            MediaPlayer.Pause();
+            this.Playing = false;
         }
 
-        /// <summary>
-        /// Langsames Ausblenden der Hintergrundmusik
-        /// </summary>
-        public void FadeOut()
+        private void Resume()
         {
-            while (Volume > 0.0f)
-            {
-                Volume -= 0.001f;
-            }
+            MediaPlayer.Resume();
+            this.Playing = true;
         }
 
         /// <summary>
@@ -102,7 +105,6 @@ namespace SpaceInvadersRemake.View
         /// <param name="Background">Hintergrundmusik</param>
         public void Play(Song Background)
         {
-            MediaPlayer.IsRepeating = this.Repeat;
             MediaPlayer.Play(Background);
             this.Playing = true;
         }
@@ -122,18 +124,17 @@ namespace SpaceInvadersRemake.View
             }
             else if (currentState is BreakState && lastState is InGameState)
             {
-                FadeOut();
+                Pause();
                 lastState = currentState;
             }
             else if (currentState is InGameState && lastState is BreakState)
             {
-                FadeIn();
+                Resume();
                 lastState = currentState;
             }
             else if (currentState is HighscoreState && (lastState is InGameState || lastState is BreakState))
             {
                 Stop();
-                FadeIn();
                 lastState = currentState;
             }
             else if (currentState is MainMenuState && !this.Playing)
