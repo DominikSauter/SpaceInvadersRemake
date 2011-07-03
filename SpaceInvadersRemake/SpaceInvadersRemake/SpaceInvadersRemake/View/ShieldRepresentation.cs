@@ -107,6 +107,8 @@ namespace SpaceInvadersRemake.View
         public override void Draw(SpriteBatch spriteBatch)
         {
 
+            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;     //[Dodo]
+
             effect.World = this.World;
             effect.TextureEnabled = true;
             effect.Texture = texture;
