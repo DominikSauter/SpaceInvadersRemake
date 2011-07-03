@@ -25,6 +25,8 @@ namespace SpaceInvadersRemake.View
         //Eckpunkte des 3D-Rechteck-Models
         private VertexPositionColorTexture[] vertices;
         private BasicEffect effect;
+        private GameTime gameTime;
+        private float updateTime; //für die Animation
 
         private int[] indices;
 
@@ -32,15 +34,16 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation eines stationären Schildes.
         /// </summary>
-        public ShieldRepresentation(Shield shield, GraphicsDeviceManager graphics)
+        public ShieldRepresentation(Shield shield, GraphicsDeviceManager graphics, GameTime gameTime)
         {
             this.texture = ViewContent.RepresentationContent.ShieldTexture;
             GameItem = shield;
+            this.gameTime = gameTime;
             this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
-
+            this.updateTime = 0;
 
 
             //Eckpunkte des Rechtecks
@@ -56,15 +59,37 @@ namespace SpaceInvadersRemake.View
             Vector3 erect = new Vector3(0, 50, 0);
 
             //Viereck aufbauen
-            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(- texture.Width, -texture.Height));
+            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, -texture.Height));
             Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, texture.Height));
             Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, -texture.Height));
             Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, texture.Height));
 
-            vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, new Vector2(0,0));
-            vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, new Vector2(0, 1));
-            vertices[2] = new VertexPositionColorTexture(rightBot, Color.Red, new Vector2(1, 0));
-            vertices[3] = new VertexPositionColorTexture(rightTop, Color.Red, new Vector2(1, 1));
+            //Animation
+            int columns = 5;
+            int rows = 5;
+            int colum = 0;
+            int row = 0;
+            float frameLength = 1 / 5; // 1 wäre die Gesamtlänge vom Texture Atlas
+
+            //Bei jedem 5ten Update
+            //if (updateTime == 5)
+            //{
+            //    Vector2 textureLeftBot = new Vector2(0, 0);
+            //    Vector2 textureLeftTop = new Vector2(0, 1);
+            //    Vector2 textureRightBot = new Vector2(1, 0);
+            //    Vector2 textureRightTop = new Vector2(1, 1);
+            //}
+
+
+            Vector2 textureLeftBot = new Vector2(0, 0);
+            Vector2 textureLeftTop = new Vector2(0, 1);
+            Vector2 textureRightBot = new Vector2(1, 0);
+            Vector2 textureRightTop = new Vector2(1, 1);
+
+            vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, textureLeftBot);
+            vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, textureLeftTop);
+            vertices[2] = new VertexPositionColorTexture(rightBot, Color.Red, textureRightBot);
+            vertices[3] = new VertexPositionColorTexture(rightTop, Color.Red, textureRightTop);
 
             //Positionieren
             this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * (Matrix.CreateRotationX(MathHelper.ToRadians(45)) * Matrix.CreateTranslation(this.position));
@@ -120,6 +145,8 @@ namespace SpaceInvadersRemake.View
                 pass.Apply();
                 graphics.GraphicsDevice.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, vertices, 0, 4, indices, 0, 2);
             }
+
+            //updateTime += (float)gameTime.ElapsedGameTime.TotalSeconds; 
         }
     }
 }

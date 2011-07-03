@@ -27,6 +27,7 @@ namespace SpaceInvadersRemake.View
         private GraphicsDeviceManager graphics;
         private Random random;
         private BasicEffect effect;
+        private GameTime gameTime; //[Anji] für die Schildanimation
 
         /// <summary>
         /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende
@@ -268,7 +269,8 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateShield(object shield, EventArgs e)
         {
-            this.ViewItemList.Add(new ShieldRepresentation((Shield) shield, graphics));
+            //[Anji] Weiterreichen der gameTime  für die Schildanimation
+            this.ViewItemList.Add(new ShieldRepresentation((Shield) shield, graphics, gameTime));
             ((Shield)shield).BoundingVolume = ViewContent.RepresentationContent.ShieldHitsphere;
         }
 
@@ -366,6 +368,7 @@ namespace SpaceInvadersRemake.View
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
         {
             GameManager gameMngr = (GameManager)game;
+            this.gameTime = gameTime; //[Anji] für die Schildanimation
             /*
              * Diese Schleife funktioniert auf jedenfall
             for (int listCount = ViewItemList.Count; listCount > 0; listCount--)
