@@ -54,24 +54,19 @@ namespace SpaceInvadersRemake.Controller
         {
             IGameItem item = (IGameItem)sender;
 
-          //Hack by CK nötig weil sonst Count nie 0
             this.Controllees.Remove(item);
                
             // <STST>
-               
             // Alien aus AlienMatrix
             LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
-                if (remList != null)
-                    remList.Remove(item);
-                // </STST>
+            if (remList != null)
+                remList.Remove(item);
+            // </STST>
 
-
-                if (this.Controllees.Count == 0)
-                {
-                    controllerManager.Controllers.Remove(this);
-                }
-                
-  
+            if (this.Controllees.Count == 0)
+            {
+                controllerManager.Controllers.Remove(this);
+            }
         }
 
         /// <summary>
@@ -114,6 +109,7 @@ namespace SpaceInvadersRemake.Controller
         /// </summary>
         /// <remarks>
         /// Eine Spalte ist ein float-x-Wert.
+        /// Der kleinster y-Wert ist unten.
         /// </remarks>
         /// <returns>Anordnung: [Spalte][Zeile]</returns>
         protected LinkedList<LinkedList<IGameItem>> AliensInMatrix()
