@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Particle Textures\" />
-    <Folder Include="Soundeffects\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Graphics\Projektil.png">
@@ -254,6 +253,18 @@
       <Name>Spiel1</Name>
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Soundeffects\39458__THE_bizniss__laser_4.wav">
+      <Name>39458__THE_bizniss__laser_4</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+    <Compile Include="Soundeffects\39459__THE_bizniss__laser.wav">
+      <Name>39459__THE_bizniss__laser</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
