@@ -49,17 +49,17 @@ namespace SpaceInvadersRemake.View
             this.indices = new int[6];
 
             //Skalierung
-            float widthScale = 0.1f;
-            float heightScale = 0.1f;
+            float scaleWidth = 0.1f;
+            float scaleHeight = 0.1f;
 
             //Eckpunkte in 3D ebene "Aufstellen"
             Vector3 erect = new Vector3(0, 50, 0);
 
             //Viereck aufbauen
-            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(- texture.Width * widthScale, -texture.Height * heightScale));
-            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width * widthScale, texture.Height * heightScale)) + erect;
-            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * widthScale, -texture.Height * heightScale));
-            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * widthScale, texture.Height * heightScale)) + erect;
+            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(- texture.Width, -texture.Height));
+            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, texture.Height));
+            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, -texture.Height));
+            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, texture.Height));
 
             vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, new Vector2(0,0));
             vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, new Vector2(0, 1));
@@ -67,7 +67,7 @@ namespace SpaceInvadersRemake.View
             vertices[3] = new VertexPositionColorTexture(rightTop, Color.Red, new Vector2(1, 1));
 
             //Positionieren
-            this.World = Matrix.CreateTranslation(this.position);
+            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * (Matrix.CreateRotationX(MathHelper.ToRadians(45)) * Matrix.CreateTranslation(this.position));
 
             //1. Polygon: Punkte 0,1,2 im Urzeigersinn
             indices[0] = 0;

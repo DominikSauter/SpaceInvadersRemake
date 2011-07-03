@@ -280,6 +280,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateProjectile(object projectile, EventArgs e)
         {
+            bool player = false;
             Projectile currentProjectile = (Projectile)projectile;
             Texture2D texture = ViewContent.RepresentationContent.ProjectileNormal;
 
@@ -287,6 +288,7 @@ namespace SpaceInvadersRemake.View
             {
                 case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
+                    player = true;
                     break;
                 case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
@@ -302,7 +304,7 @@ namespace SpaceInvadersRemake.View
                     break;
             }
 
-            this.ViewItemList.Add(new ProjectileRepresentation((Projectile)projectile, texture, graphics , effect));
+            this.ViewItemList.Add(new ProjectileRepresentation((Projectile)projectile, texture, graphics , effect, player));
         }
 
         /// <summary>

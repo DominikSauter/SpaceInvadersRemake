@@ -19,6 +19,8 @@ namespace SpaceInvadersRemake.View
         private Texture2D texture;
         private Vector3 position;
         private GraphicsDeviceManager graphics;
+        private bool player;
+        private Vector3 color;
 
         //Punkte der Polygone wo die Textur gezeichnet werden soll
         private VertexPositionColorTexture[] vertices;
@@ -31,10 +33,11 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation eines Projektils.
         /// </summary>
-        public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics, BasicEffect effect)
+        public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics, BasicEffect effect, bool player)
         {
             this.texture = texture;
             GameItem = projectile;
+            this.player = player;
             this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
@@ -53,6 +56,29 @@ namespace SpaceInvadersRemake.View
             indices[4] = 3;
             indices[5] = 2;
 
+            //Viereck aufbauen
+            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, -texture.Height));
+            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, texture.Height));
+            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, -texture.Height));
+            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, texture.Height));
+
+            vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, new Vector2(0, 0));
+            vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, new Vector2(0, 1));
+            vertices[2] = new VertexPositionColorTexture(rightBot, Color.Red, new Vector2(1, 0));
+            vertices[3] = new VertexPositionColorTexture(rightTop, Color.Red, new Vector2(1, 1));
+
+            //Projektilfarbe
+            if (player)
+            {
+                this.color = new Vector3(0, 255, 0);
+            }
+            else
+            {
+                this.color = new Vector3(255, 0, 0);
+            }
+
+            
+
         }
 
         /// <summary>
@@ -63,32 +89,24 @@ namespace SpaceInvadersRemake.View
         {
             Vector3 newPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
 
+
             if (newPosition.Z > this.position.Z || newPosition.Z < this.position.Z)
             {
                 this.position = newPosition;
             }
 
+
             //Skalierung
             float scaleWidth = 0.05f;
             float scaleHeight = 0.1f;
 
-            //Viereck aufbauen
-            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width * scaleWidth, -texture.Height * scaleHeight));
-            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width * scaleWidth, texture.Height * scaleHeight));
-            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * scaleWidth, -texture.Height * scaleHeight));
-            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width * scaleWidth, texture.Height * scaleHeight));
-
-            vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, new Vector2(0, 0));
-            vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, new Vector2(0, 1));
-            vertices[2] = new VertexPositionColorTexture(rightBot, Color.Red, new Vector2(1, 0));
-            vertices[3] = new VertexPositionColorTexture(rightTop, Color.Red, new Vector2(1, 1));
-
             //Positionieren
-            this.World = Matrix.CreateTranslation(this.position);
+            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * Matrix.CreateTranslation(this.position);
 
             effect.TextureEnabled = true;
             effect.Texture = texture;
             effect.View = Camera;
+            effect.DiffuseColor = this.color;
             effect.Projection = Projection;
             effect.World = this.World;
 
