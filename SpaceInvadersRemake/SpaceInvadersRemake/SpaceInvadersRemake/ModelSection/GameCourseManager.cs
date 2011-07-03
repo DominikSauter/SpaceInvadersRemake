@@ -1,6 +1,5 @@
 ﻿using System.Collections.Generic;
 using SpaceInvadersRemake.StateMachine;
-using System.Linq;
 
 // Implementiert von D. Sauter
 
@@ -66,33 +65,25 @@ namespace SpaceInvadersRemake.ModelSection
             }
             else
             {
-                // <STST>
-                bool waveAlive;
-                
-                List<IGameItem> deadItems = new List<IGameItem>(currentWave.Where(x => x.IsAlive == false));
-                
-                if (deadItems.Count == 0)
-                    waveAlive = true;
-                else
-                    waveAlive = false;
+                bool waveAlive = false;
+                for (LinkedListNode<IGameItem> item = currentWave.First; item != null; /*item = item.Next*/)
+                {
+                    LinkedListNode<IGameItem> temp = item.Next;
 
-                foreach (var item in deadItems)
-                    currentWave.Remove(item);
-                // </STST>
-                //bool waveAlive = false;
-                //for (LinkedListNode<IGameItem> item = currentWave.First; item != null; item = item.Next)
-                //{
-                //    if (item.Value.IsAlive)
-                //    {
-                //        waveAlive = true;
-                //        break;
-                //    }
-                //    else
-                //    {
-                //        item = item.Previous;   // HACK: Evt. schönere Lösung für das item=null-Problem bei gelöschten items suchen
-                //        currentWave.Remove(item.Next);
-                //    }
-                //}
+                    if (item.Value.IsAlive)
+                    {
+                        waveAlive = true;
+                        break;
+                    }
+                    else
+                    {
+                        //UNDONE: schönere Lösung gefunden - TB
+                        //item = item.Previous;  
+                        currentWave.Remove(item);
+                    }
+
+                    item = temp; 
+                }
 
                 if (!waveAlive)
                 {
@@ -112,26 +103,23 @@ namespace SpaceInvadersRemake.ModelSection
         {
             Collider.CheckAllCollisions(GameItem.GameItemList);
 
-            // <STST>
-            List<IGameItem> deadItems = new List<IGameItem>(GameItem.GameItemList.Where(x => x.IsAlive == false));
-            foreach (var item in deadItems)
-                GameItem.GameItemList.Remove(item);
+            for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != null; /*item = item.Next*/)
+            {
+                LinkedListNode<IGameItem> temp = item.Next;
 
-            foreach (var item in GameItem.GameItemList)
-                item.Update(gameTime);
-            // </STST>
-            //for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != null; item = item.Next)
-            //{
-            //    if (item.Value.IsAlive)
-            //    {
-            //        item.Value.Update(gameTime);
-            //    }
-            //    else
-            //    {
-            //        item = item.Previous;   // HACK: Evt. schönere Lösung für das item=null-Problem bei gelöschten items suchen
-            //        GameItem.GameItemList.Remove(item.Next);
-            //    }
-            //}
+                if (item.Value.IsAlive)
+                {
+                    item.Value.Update(gameTime);
+                }
+                else
+                {
+                    //UNDONE: schönere Lösung gefunden - TB
+                    //item = item.Previous;   
+                    GameItem.GameItemList.Remove(item);
+                }
+
+                item = temp;
+            }
         }
 
         /// <summary>
