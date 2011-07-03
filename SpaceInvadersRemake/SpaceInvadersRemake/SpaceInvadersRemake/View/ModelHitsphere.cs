@@ -40,6 +40,17 @@ namespace SpaceInvadersRemake.View
         {
             this.InnerSpheres = innerSpheres;
         }
+
+        /// <summary>
+        /// Kopierkonstruktor, erstellt eine seichte Kopie der BoundingSpheres erstellt aber eine neue World-Matrix
+        /// </summary>
+        /// <param name="modelHitsphere">Die originale ModelHitsphere</param>
+        public ModelHitsphere(ModelHitsphere modelHitsphere)
+        {
+            this.OuterSphere = modelHitsphere.OuterSphere;
+            this.InnerSpheres = modelHitsphere.InnerSpheres;
+            this.World = Matrix.Identity;
+        }
     
         /// <summary>
         /// Liste von <c>ModelHitsphere</c> Objekten, um eine hierarchische Anordnung von Hitspheres
@@ -72,13 +83,13 @@ namespace SpaceInvadersRemake.View
             set
             {
                 this.world = value;
-                if (InnerSpheres != null)
+                /*if (InnerSpheres != null)
                 {
                     foreach (ModelHitsphere sphere in InnerSpheres)
                     {
                         sphere.world = value;
                     }
-                }
+                }*/
             }
         }
 
