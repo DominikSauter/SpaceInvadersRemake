@@ -21,6 +21,7 @@ namespace SpaceInvadersRemake.Controller
         //Private Felder
         private bool moveDown = false;
         private Vector2 currentDirection = CoordinateConstants.Right;
+        private Random rnd;
 
         // by STST
         // MODIFIED (by STST): 2.7.2011
@@ -34,6 +35,7 @@ namespace SpaceInvadersRemake.Controller
         public BlockWaveAI(ControllerManager controllerManager, float shootingFrequency, ICollection<IGameItem> controllees, Vector2 velocityIncrease)
             : base(controllerManager, shootingFrequency, controllees, velocityIncrease)
         {
+            rnd = new Random();
         }
 
 
@@ -129,17 +131,19 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Shooting(Game game, GameTime gameTime)
         {
-            //UNDONE: [Dodo] auskommentiert, weil sonst NPE auftritt. Hängt wohl mit BUG ID 5 zusammen!
-            /* 
+            //UNDONE: [CK] auskommentierung aufgehoben, da keine Fehler mehr auftreten.
+            
             const int POINT_SHIFTING = 1000; // TODO: reicht der aus?
 
             float alienFreqInHz = this.ShootingFrequency / this.AlienMatrix.Count;
             float alienFreqInFrame = alienFreqInHz * (float)game.TargetElapsedTime.TotalSeconds;
-            if (alienFreqInFrame > 1)
-                throw new Exception("Frequenz ist zu hoch um mit dem Algorithmus klar zu kommen.");
+           
+            //Hack by CK Fehlerüberprüfung in Controller Creation ausgelagert.
 
             // zu der Wahrscheinlichkeit soll jetzt jedes Alien was schießen kann, schießen:
-            Random rnd = new Random();
+           
+            //new Random-Erzeugung in Konstruktor verlagert um Performance zu sparen -CK
+
             foreach (LinkedList<IGameItem> col in this.AlienMatrix)
             {
                 int iAlienFreq = (int)(alienFreqInFrame * POINT_SHIFTING);
@@ -148,7 +152,7 @@ namespace SpaceInvadersRemake.Controller
                     if (col.Last != null)
                         col.Last.Value.Shoot(gameTime);
             }
-             * */
+            
         }
     }
 }

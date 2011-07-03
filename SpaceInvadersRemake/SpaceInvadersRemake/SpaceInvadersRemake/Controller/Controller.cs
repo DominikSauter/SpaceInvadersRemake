@@ -52,7 +52,6 @@ namespace SpaceInvadersRemake.Controller
 
 
 
-
         /// <summary>
         /// Kümmert sich um die Bewegung der GameItem
         /// </summary>
@@ -75,6 +74,8 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
         public virtual void Update(Game game,GameTime gameTime, State state)
         {
+          
+            
             //Richtungsanweisung an das Controllee (ermittelt durch konkreten Controller)
             this.Movement(game,gameTime);
 

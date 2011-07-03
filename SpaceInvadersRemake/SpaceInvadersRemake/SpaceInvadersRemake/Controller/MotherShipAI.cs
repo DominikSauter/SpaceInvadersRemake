@@ -20,7 +20,16 @@ namespace SpaceInvadersRemake.Controller
         public MothershipAI(ControllerManager controllerManager, float shootingFrequency, IGameItem controllee, Vector2 velocityIncrease)
             : base(controllerManager, shootingFrequency, controllee, velocityIncrease)
         {
-            //Nichts zu erledigen.
+            Mothership.Destroyed += new EventHandler(Mothership_Destroyed);
+        }
+
+
+        //MothershipController aus Liste von ControllerManager austragen 
+       private void Mothership_Destroyed(object sender, EventArgs e)
+        {
+            
+                this.controllerManager.Controllers.Remove(this);
+
         }
 
 

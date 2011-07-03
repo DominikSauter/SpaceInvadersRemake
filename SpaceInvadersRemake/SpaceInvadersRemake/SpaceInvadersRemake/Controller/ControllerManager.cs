@@ -101,6 +101,7 @@ public class ControllerManager : IController
         ICommander temp;
 
         //Aus dem Event extrahierte Werte und Überprüfung von desired Controller auf Korrektheit
+        
         if ((desiredController.Controllees is ICollection<IGameItem>) || desiredController.Controllees.Count >= 1)
         {
             controllees = desiredController.Controllees;
@@ -110,15 +111,11 @@ public class ControllerManager : IController
             throw new ArgumentException("is no Collection of GameItem or Collection is Empty", "Controllees");
         }
 
-
-        if (desiredController.DifficultyLevel.ShootingFrequencyMultiplier != null)
-        {
-            shootingFrequency = desiredController.DifficultyLevel.ShootingFrequencyMultiplier;
-        }
-        else
-        {
-            throw new ArgumentNullException("ShootingFrequencyMultiplier");
-        }
+        
+        shootingFrequency = desiredController.DifficultyLevel.ShootingFrequencyMultiplier;
+        
+        if (shootingFrequency > 1)
+            throw new ArgumentException("Frequenz ist zu hoch um mit dem Algorithmus klar zu kommen.");
 
         if (desiredController.DifficultyLevel.VelocityIncreaseMultiplier != null)
         {
@@ -208,6 +205,12 @@ public class ControllerManager : IController
     {
         //Empty Liste
         Controllers.Clear();
+
+        //Deregistriere PlayerDamage EventHandler
+        Player.Created -= new EventHandler(this.CreatePlayerController);
+
+        //Deregistriere AI EventHandler
+        WaveGenerator.WaveGenerated -= new EventHandler<ControllerEventArgs>(this.CreateController);
 
 
     }
