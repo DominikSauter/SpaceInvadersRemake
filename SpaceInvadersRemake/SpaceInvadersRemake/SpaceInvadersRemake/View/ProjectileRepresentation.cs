@@ -31,14 +31,14 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation eines Projektils.
         /// </summary>
-        public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics)
+        public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics, BasicEffect effect)
         {
             this.texture = texture;
             GameItem = projectile;
             this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
-            this.effect = new BasicEffect(graphics.GraphicsDevice);
+            this.effect = effect;
             //Eckpunkte des Rechtecks
             this.vertices = new VertexPositionColorTexture[4];
             //6 Punkte für zwei polygone, um ein Rechteck zu zeichnen
