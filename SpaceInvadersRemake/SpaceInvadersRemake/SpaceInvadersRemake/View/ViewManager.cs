@@ -54,9 +54,7 @@ namespace SpaceInvadersRemake.View
 
 
                 //AUSKOMMENTIERT ZUM AUSFÜHREN!
-                //this.EffectPlayer = new SoundEffects();
-                
-
+                this.EffectPlayer = new SoundEffects();
 
                 this.random = new Random();
 
@@ -93,10 +91,10 @@ namespace SpaceInvadersRemake.View
                 Alien.Destroyed += ExplosionFX;
                 Mothership.Destroyed += ExplosionFX;
                 Shield.Destroyed += ExplosionFX;
+                 * */
 
                 //weaponFired
                 PlayerNormalWeapon.WeaponFired += ShootSFX;
-                 * */
 
             }
             else if (currentState is StateMachine.IntroState)

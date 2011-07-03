@@ -498,7 +498,7 @@
   <Class Name="SpaceInvadersRemake.View.MothershipRepresentation">
     <Position X="40.5" Y="9" Width="2.25" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAgAAAAAgAAAAAAAAAAAAAABAAAAAAAAQAIAAA=</HashCode>
+      <HashCode>AAAAgAAgAAAAAgAAAAAAAAAAAAAABAgAAAAAAQAIAAA=</HashCode>
       <FileName>View\MothershipRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -528,7 +528,7 @@
   <Class Name="SpaceInvadersRemake.View.ProjectileRepresentation">
     <Position X="49.5" Y="9" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAASAAAAAAAAgAAAAAAIAAAAAAQAggAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAASAAAAAAAAgAAAAAAIAAAAAAQAgiBAAAAAAAAAAA=</HashCode>
       <FileName>View\ProjectileRepresentation.cs</FileName>
       <NewMemberFileName>ProjectileRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -616,14 +616,15 @@
   <Class Name="SpaceInvadersRemake.View.SoundEffects">
     <Position X="57" Y="12.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAAAAAA=</HashCode>
+      <HashCode>AASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAACAAA=</HashCode>
       <FileName>View\SoundEffects.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.View.BackgroundMusic">
     <Position X="59.25" Y="12.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAyAAAAAAACAAAAAAAAAAAAIAAAAAAAAoAIAAAACAAA=</HashCode>
+      <HashCode>AAwgAAAAAAAAAAAAAAAAAAAIAAAAAgAAoAIAAAgCAAA=</HashCode>
       <FileName>View\BackgroundMusic.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -658,7 +659,7 @@
   <Class Name="SpaceInvadersRemake.View.AlienRepresentation">
     <Position X="38.5" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAAAgAAAAAEAAAAAAAABCAAAAAAAAAIAAA=</HashCode>
+      <HashCode>AAAAgAAAAAAAAgAAAAAEAAAAAAAABCgAAAAAAAAIAAA=</HashCode>
       <FileName>View\AlienRepresentation.cs</FileName>
       <NewMemberFileName>AlienRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -666,7 +667,7 @@
   <Class Name="SpaceInvadersRemake.View.PlayerRepresentation">
     <Position X="36.5" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAgAAAAAAACgAAgAAAAAAAAAAABCAAAAAAAAAIIAA=</HashCode>
+      <HashCode>AAAAgAAAAAAACgAAgAAAAAAAAAAABCgAAAAAAAAIIAA=</HashCode>
       <FileName>View\PlayerRepresentation.cs</FileName>
     </TypeIdentifier>
   </Class>

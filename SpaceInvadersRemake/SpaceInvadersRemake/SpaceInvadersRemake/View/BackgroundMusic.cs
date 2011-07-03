@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Dodo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,7 +25,6 @@ namespace SpaceInvadersRemake.View
             this.Volume = Settings.GameConfig.Default.MasterVolume * Settings.GameConfig.Default.MusicVolume;
             this.Repeat = true;
             this.Playing = false;
-            // this.Volume = Model Wert auslesen bzw unten eine Update() methode implementieren.
         }
 
         private float volume;

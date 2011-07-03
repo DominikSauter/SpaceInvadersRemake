@@ -261,8 +261,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
-    <Compile Include="Soundeffects\39459__THE_bizniss__laser.wav">
-      <Name>39459__THE_bizniss__laser</Name>
+    <Compile Include="Soundeffects\Laser_Spieler_Normal.wav">
+      <Name>Laser_Spieler_Normal</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
