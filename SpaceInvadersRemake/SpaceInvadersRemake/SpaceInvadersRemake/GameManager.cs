@@ -63,7 +63,8 @@ namespace SpaceInvadersRemake
             base.Initialize();
 
             //[VIEW]
-            //View.ViewContent.ComputeHitspheres();
+            //Hack hitsphere berechnung aktiviert -ck
+            View.ViewContent.ComputeHitspheres();
             MusicPlayer = new View.BackgroundMusic();
 
             // <STST>
