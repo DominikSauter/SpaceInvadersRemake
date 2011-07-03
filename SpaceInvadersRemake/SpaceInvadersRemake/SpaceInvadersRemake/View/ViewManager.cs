@@ -26,6 +26,7 @@ namespace SpaceInvadersRemake.View
     {
         private GraphicsDeviceManager graphics;
         private Random random;
+        private BasicEffect effect;
 
         /// <summary>
         /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende
@@ -43,6 +44,7 @@ namespace SpaceInvadersRemake.View
         {
             this.ViewItemList = new List<IView>();
             this.graphics = graphics;
+            this.effect = new BasicEffect(graphics.GraphicsDevice);
 
             //abhängig vom State wird hier die UI geladen.
             if (currentState is StateMachine.InGameState)
@@ -278,7 +280,6 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateProjectile(object projectile, EventArgs e)
         {
-    
             Projectile currentProjectile = (Projectile)projectile;
             Texture2D texture = ViewContent.RepresentationContent.ProjectileNormal;
 
@@ -301,7 +302,7 @@ namespace SpaceInvadersRemake.View
                     break;
             }
 
-            this.ViewItemList.Add(new ProjectileRepresentation((Projectile)projectile, texture, graphics));
+            this.ViewItemList.Add(new ProjectileRepresentation((Projectile)projectile, texture, graphics , effect));
         }
 
         /// <summary>
