@@ -72,7 +72,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                Vector2[] formation = {new Vector2(-40f, 10f), new Vector2(-10f, 10f), new Vector2(0f, 10f), new Vector2(10f, 10f), new Vector2(40f, 10f),
+                                          new Vector2(-20f, 20f), new Vector2(-10f, 20f), new Vector2(10f, 20f), new Vector2(20f, 20f),
+                                          new Vector2(-30f, 30f), new Vector2(-20f, 30f), new Vector2(0f, 30f), new Vector2(20f, 30f), new Vector2(30f, 30f),
+                                          new Vector2(-20f, 40f), new Vector2(-10f, 40f), new Vector2(10f, 40f), new Vector2(20f, 40f),
+                                          new Vector2(-40f, 50f), new Vector2(-10f, 50f), new Vector2(0f, 50f), new Vector2(10f, 50f), new Vector2(40f, 50f)};
+                return formation;
             }
         }
 
@@ -84,7 +89,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                Vector2[] formation = {new Vector2(-30f, 10f), new Vector2(30f, 10f),
+                                          new Vector2(-40f, 20f), new Vector2(-30f, 20f), new Vector2(-20f, 20f), new Vector2(20f, 20f), new Vector2(30f, 20f), new Vector2(40f, 20f),
+                                          new Vector2(-50f, 30f), new Vector2(-30f, 30f), new Vector2(-10f, 30f), new Vector2(10f, 30f), new Vector2(30f, 30f), new Vector2(50f, 30f),
+                                          new Vector2(-30f, 40f), new Vector2(30f, 40f),
+                                          new Vector2(-30f, 50f), new Vector2(30f, 50f)};
+                return formation;
             }
         }
 
@@ -96,7 +106,12 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                throw new System.NotImplementedException();
+                Vector2[] formation = {new Vector2(-30f, 10f), new Vector2(-20f, 10f), new Vector2(20f, 10f), new Vector2(30f, 10f),
+                                          new Vector2(-40f, 20f), new Vector2(-10f, 20f), new Vector2(10f, 20f), new Vector2(40f, 20f),
+                                          new Vector2(-50f, 30f), new Vector2(0f, 30f), new Vector2(50f, 30f),
+                                          new Vector2(-40f, 40f), new Vector2(-10f, 40f), new Vector2(10f, 40f), new Vector2(40f, 40f),
+                                          new Vector2(-30f, 50f), new Vector2(-20f, 50f), new Vector2(20f, 50f), new Vector2(30f, 50f)};
+                return formation;
             }
         }
 
