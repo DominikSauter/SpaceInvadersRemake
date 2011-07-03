@@ -68,6 +68,11 @@ namespace SpaceInvadersRemake
 
             //[VIEW]
             //Hack hitsphere berechnung aktiviert -ck
+            /*
+             * //[Dodo] auskommentiert, weil das noch fehlerhaft ist und Exceptions verursacht.
+             * Ladet doch bitte nur funktionierende Lösungen hoch.. Ihr haltet uns nur auf wenn ihr nicht laufenden
+             * Code hochladet und wir suchen müssen, obs an uns liegt oder jemand was einkommentiert hat was noch nich geht..
+             * */
             View.ViewContent.ComputeHitspheres();
             MusicPlayer = new View.BackgroundMusic();
 
