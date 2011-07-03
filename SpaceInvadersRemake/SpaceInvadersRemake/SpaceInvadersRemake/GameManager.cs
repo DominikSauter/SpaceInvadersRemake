@@ -58,8 +58,6 @@ namespace SpaceInvadersRemake
         /// </summary>
         protected override void Initialize()
         {
-            // [View] Hier soll die Hintergrundmusik (GameSong, MenuSong) initialisiert werden
-            //[/View]
             base.Initialize();
 
             graphics.PreferredBackBufferWidth = Settings.GameConfig.Default.graphicsWidth;
