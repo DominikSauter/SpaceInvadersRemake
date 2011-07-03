@@ -11,16 +11,22 @@ namespace SpaceInvadersRemake.View
     /// <summary>
     /// Diese Klasse kümmert sich um die Wiedergabe der Hintergrundmusik.
     /// </summary>
-    public class BackgroundMusic : IMediaplayer
+    public class BackgroundMusic
     {
+        private StateMachine.State lastState;
+
         /// <summary>
         /// Initialisiert die Hintergrundmusik
         /// </summary>
         public BackgroundMusic()
         {
-            throw new System.NotImplementedException();
+            this.Volume = 1.0f;     //muss noch vom model oder aus ner resource datei ausgelesn werden.
+            this.Repeat = true;
+            this.Playing = false;
+            // this.Volume = Model Wert auslesen bzw unten eine Update() methode implementieren.
         }
 
+        private float volume;
         /// <summary>
         /// Lautstärkeregelung
         /// </summary>
@@ -32,12 +38,19 @@ namespace SpaceInvadersRemake.View
         {
             get
             {
-                throw new NotImplementedException();
+                return this.volume;
             }
             set
             {
-                throw new NotImplementedException();
+                this.volume = value;
+                MediaPlayer.Volume = value;
             }
+        }
+
+        public bool Playing
+        {
+            get;
+            set;
         }
 
         /// <summary>
@@ -47,14 +60,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public bool Repeat
         {
-            get
-            {
-                throw new NotImplementedException();
-            }
-            set
-            {
-                throw new NotImplementedException();
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -62,7 +69,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Stop()
         {
-            throw new NotImplementedException();
+            MediaPlayer.Stop();
+            this.Playing = false;
         }
 
         /// <summary>
@@ -70,7 +78,10 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void FadeIn()
         {
-            throw new System.NotImplementedException();
+            while (Volume < 1.0f)
+            {
+                Volume += 0.001f;
+            }
         }
 
         /// <summary>
@@ -78,16 +89,10 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void FadeOut()
         {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Wiedergabe der Soundeffekte
-        /// </summary>
-        /// <param name="SoundFX">Soundeffekt</param>
-        public void Play(SoundEffect SoundFX)
-        {
-            throw new NotImplementedException();
+            while (Volume > 0.0f)
+            {
+                Volume -= 0.001f;
+            }
         }
 
         /// <summary>
@@ -96,16 +101,17 @@ namespace SpaceInvadersRemake.View
         /// <param name="Background">Hintergrundmusik</param>
         public void Play(Song Background)
         {
-            throw new NotImplementedException();
+            MediaPlayer.IsRepeating = this.Repeat;
+            MediaPlayer.Play(Background);
+            this.Playing = true;
         }
 
-        /// <summary>
-        /// Wiedergabe des Intros
-        /// </summary>
-        /// <param name="intro">Introvideo</param>
-        public void Play(Video intro)
+        public void Update(StateMachine.State currentState)
         {
-            throw new NotImplementedException();
+            if (lastState == null)
+            {
+                lastState = currentState;
+            }
         }
     }
 }
