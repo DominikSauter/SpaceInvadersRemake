@@ -103,7 +103,7 @@ namespace SpaceInvadersRemake.View
             float scaleHeight = 0.1f;
 
             //Positionieren
-            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * Matrix.CreateTranslation(this.position);
+            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * Matrix.CreateTranslation(this.position + new Vector3(0, -6, 0));
 
             effect.TextureEnabled = true;
             effect.Texture = texture;
