@@ -66,8 +66,10 @@ namespace SpaceInvadersRemake.ModelSection
             else
             {
                 bool waveAlive = false;
-                for (LinkedListNode<IGameItem> item = currentWave.First; item != null; item = item.Next)
+                for (LinkedListNode<IGameItem> item = currentWave.First; item != null; /*item = item.Next*/)
                 {
+                    LinkedListNode<IGameItem> temp = item.Next;
+
                     if (item.Value.IsAlive)
                     {
                         waveAlive = true;
@@ -75,9 +77,12 @@ namespace SpaceInvadersRemake.ModelSection
                     }
                     else
                     {
-                        item = item.Previous;   // HACK: Evt. schönere Lösung für das item=null-Problem bei gelöschten items suchen
-                        currentWave.Remove(item.Next);
+                        //UNDONE: schönere Lösung gefunden - TB
+                        //item = item.Previous;  
+                        currentWave.Remove(item);
                     }
+
+                    item = temp;
                 }
 
                 if (!waveAlive)
@@ -98,17 +103,22 @@ namespace SpaceInvadersRemake.ModelSection
         {
             Collider.CheckAllCollisions(GameItem.GameItemList);
 
-            for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != null; item = item.Next)
+            for (LinkedListNode<IGameItem> item = GameItem.GameItemList.First; item != null; /*item = item.Next*/)
             {
+                LinkedListNode<IGameItem> temp = item.Next;
+
                 if (item.Value.IsAlive)
                 {
                     item.Value.Update(gameTime);
                 }
                 else
                 {
-                    item = item.Previous;   // HACK: Evt. schönere Lösung für das item=null-Problem bei gelöschten items suchen
-                    GameItem.GameItemList.Remove(item.Next);
+                    //UNDONE: schönere Lösung gefunden - TB
+                    //item = item.Previous;   
+                    GameItem.GameItemList.Remove(item);
                 }
+
+                item = temp;
             }
         }
 
