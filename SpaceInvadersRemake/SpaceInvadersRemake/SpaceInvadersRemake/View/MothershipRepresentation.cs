@@ -18,6 +18,7 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public class MothershipRepresentation : GameItemRepresentation
     {
+        private GraphicsDeviceManager graphics;
         private Model model;
         private Texture2D mothershipTexture;
         private Vector3 lastPosition;
@@ -38,8 +39,9 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation des Mutterschiff-Aliens.
         /// </summary>
-        public MothershipRepresentation(Mothership mothershipGameItem)
+        public MothershipRepresentation(Mothership mothershipGameItem, GraphicsDeviceManager graphics)
         {
+            this.graphics = graphics;
             this.model = ViewContent.RepresentationContent.MothershipModel;
             GameItem = mothershipGameItem;
             this.mothershipTexture = ViewContent.RepresentationContent.MothershipTexture;
@@ -60,6 +62,8 @@ namespace SpaceInvadersRemake.View
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Right, Vector3.Up);
                 this.lastPosition = currentPosition;
             }
+
+            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
             foreach (ModelMesh mesh in model.Meshes)
             {

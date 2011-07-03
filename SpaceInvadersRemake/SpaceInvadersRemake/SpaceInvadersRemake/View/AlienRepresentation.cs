@@ -18,6 +18,7 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public class AlienRepresentation : GameItemRepresentation
     {
+        private GraphicsDeviceManager graphics;
         private Model model;
         private Texture2D alienTexture;
         private Vector3 lastPosition;
@@ -36,8 +37,9 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         /// <param name="alienGameItem">Alien Datenmodell</param>
         /// <param name="randomTexture">Wird zufällig generiert und kann unterschiedliche Texturen zuordnen.</param>
-        public AlienRepresentation(Alien alienGameItem, int randomTexture)
+        public AlienRepresentation(Alien alienGameItem, int randomTexture, GraphicsDeviceManager graphics)
         {
+            this.graphics = graphics;
             this.model = ViewContent.RepresentationContent.AlienModel;
             GameItem = alienGameItem;
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
@@ -67,6 +69,9 @@ namespace SpaceInvadersRemake.View
                 //UNDONE: this.World *= Matrix.CreateTranslation(currentPosition); - TB
                 this.lastPosition = currentPosition;
             }
+
+
+            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
             foreach (ModelMesh mesh in model.Meshes)
             {

@@ -19,6 +19,7 @@ namespace SpaceInvadersRemake.View
     /// </remarks>
     public class PlayerRepresentation : GameItemRepresentation
     {
+        private GraphicsDeviceManager graphics;
         private Model model;
         private Texture2D playerTexture;
         private Vector3 lastPosition;
@@ -44,8 +45,9 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation der Spielerfigur.
         /// </summary>
-        public PlayerRepresentation(Player playerGameItem)
+        public PlayerRepresentation(Player playerGameItem, GraphicsDeviceManager graphics)
         {
+            this.graphics = graphics;
             this.model = ViewContent.RepresentationContent.PlayerModel;
             GameItem = playerGameItem;
             this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
@@ -82,6 +84,8 @@ namespace SpaceInvadersRemake.View
                 this.lastPosition = currentPosition;
                 direction = 1.0f;
             }
+
+            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
             foreach (ModelMesh mesh in model.Meshes)
             {

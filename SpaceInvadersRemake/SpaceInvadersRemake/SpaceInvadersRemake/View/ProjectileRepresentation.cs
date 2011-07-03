@@ -87,6 +87,8 @@ namespace SpaceInvadersRemake.View
         /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
+            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+
             Vector3 newPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
 
 
