@@ -54,19 +54,24 @@ namespace SpaceInvadersRemake.Controller
         {
             IGameItem item = (IGameItem)sender;
 
-            // STST
-            if (this.Controllees.Count == 0)
-                controllerManager.Controllers.Remove(this);
-            else
-            {
-                this.Controllees.Remove(item);
-                // <STST>
-                // Alien aus AlienMatrix
-                LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
+          //Hack by CK nötig weil sonst Count nie 0
+            this.Controllees.Remove(item);
+               
+            // <STST>
+               
+            // Alien aus AlienMatrix
+            LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
                 if (remList != null)
                     remList.Remove(item);
                 // </STST>
-            }
+
+
+                if (this.Controllees.Count == 0)
+                {
+                    controllerManager.Controllers.Remove(this);
+                }
+                
+  
         }
 
         /// <summary>
