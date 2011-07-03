@@ -26,7 +26,15 @@ namespace SpaceInvadersRemake.View
         private VertexPositionColorTexture[] vertices;
         private BasicEffect effect;
         private GameTime gameTime;
-        private float updateTime; //für die Animation
+        private float updateTimer = 0; //für die Animation
+        private int update;
+
+        int columns = 5;
+        int rows = 5;
+        int column = 0;
+        int row = 0;
+        float frameSize = 1 / 5f; // 1 wäre die Gesamtlänge vom Texture Atlas
+
 
         private int[] indices;
 
@@ -43,7 +51,8 @@ namespace SpaceInvadersRemake.View
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
-            this.updateTime = 0;
+            this.update = 0;
+            //this.updateTimer = 0;
 
 
             //Eckpunkte des Rechtecks
@@ -52,8 +61,8 @@ namespace SpaceInvadersRemake.View
             this.indices = new int[6];
 
             //Skalierung
-            float scaleWidth = 0.1f;
-            float scaleHeight = 0.1f;
+            float scaleWidth = 0.015f;
+            float scaleHeight = 0.015f;
 
             //Eckpunkte in 3D ebene "Aufstellen"
             Vector3 erect = new Vector3(0, 50, 0);
@@ -64,32 +73,18 @@ namespace SpaceInvadersRemake.View
             Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, -texture.Height));
             Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, texture.Height));
 
-            //Animation
-            int columns = 5;
-            int rows = 5;
-            int colum = 0;
-            int row = 0;
-            float frameLength = 1 / 5; // 1 wäre die Gesamtlänge vom Texture Atlas
-
-            //Bei jedem 5ten Update
-            //if (updateTime == 5)
-            //{
-            //    Vector2 textureLeftBot = new Vector2(0, 0);
-            //    Vector2 textureLeftTop = new Vector2(0, 1);
-            //    Vector2 textureRightBot = new Vector2(1, 0);
-            //    Vector2 textureRightTop = new Vector2(1, 1);
-            //}
-
-
             Vector2 textureLeftBot = new Vector2(0, 0);
-            Vector2 textureLeftTop = new Vector2(0, 1);
-            Vector2 textureRightBot = new Vector2(1, 0);
-            Vector2 textureRightTop = new Vector2(1, 1);
+            Vector2 textureLeftTop = new Vector2(0, 1 / 5f);
+            Vector2 textureRightBot = new Vector2(1 / 5f, 0);
+            Vector2 textureRightTop = new Vector2(1 / 5f, 1 / 5f);
 
-            vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, textureLeftBot);
-            vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, textureLeftTop);
-            vertices[2] = new VertexPositionColorTexture(rightBot, Color.Red, textureRightBot);
-            vertices[3] = new VertexPositionColorTexture(rightTop, Color.Red, textureRightTop);
+            Color color2 = new Color(0, 150, 255);
+            Color color1 = new Color(0, 210, 255);
+            vertices[0] = new VertexPositionColorTexture(leftBot, color1, textureLeftBot);
+            vertices[1] = new VertexPositionColorTexture(leftTop, color1, textureLeftTop);
+            vertices[2] = new VertexPositionColorTexture(rightBot, color2, textureRightBot);
+            vertices[3] = new VertexPositionColorTexture(rightTop, color2, textureRightTop);
+
 
             //Positionieren
             this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * (Matrix.CreateRotationX(MathHelper.ToRadians(45)) * Matrix.CreateTranslation(this.position));
@@ -131,14 +126,58 @@ namespace SpaceInvadersRemake.View
 
         public override void Draw(SpriteBatch spriteBatch)
         {
-
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;     //[Dodo]
+            //this.updateTimer += gameTime.TotalGameTime.Seconds; 
+
+
+            //Animation
+
+            this.update++;
+
+            //Alle 2 Sekunden
+            if (this.update == 1 /*this.updateTimer >= 2*/)
+            {
+                //this.updateTimer = 0;
+                this.update = 0;
+
+                float positionColumn = this.column * this.frameSize;
+                float positionRow = this.row * this.frameSize;
+
+
+                Vector2 textureLeftBot = new Vector2(positionColumn, positionRow);
+                Vector2 textureLeftTop = new Vector2(positionColumn, positionRow + frameSize);
+                Vector2 textureRightBot = new Vector2(positionColumn + frameSize, positionRow);
+                Vector2 textureRightTop = new Vector2(positionColumn + frameSize, positionRow + frameSize);
+
+                vertices[0].TextureCoordinate = textureLeftBot;
+                vertices[1].TextureCoordinate = textureLeftTop;
+                vertices[2].TextureCoordinate = textureRightBot;
+                vertices[3].TextureCoordinate = textureRightTop;
+
+                this.column++;
+
+                if (this.column == (this.columns - 1))
+                {
+                    this.column = 0;
+                    if (this.row == (this.rows - 1))
+                    {
+                        this.row = 0;
+                    }
+                    else
+                    {
+                        this.row++;
+                    }
+                }
+
+            }
 
             effect.World = this.World;
             effect.TextureEnabled = true;
             effect.Texture = texture;
             effect.View = Camera;
             effect.Projection = Projection;
+            //effect.DiffuseColor = new Vector3(0, 144, 255);
+            effect.VertexColorEnabled = true;
 
             foreach (EffectPass pass in effect.CurrentTechnique.Passes)
             {
@@ -146,7 +185,6 @@ namespace SpaceInvadersRemake.View
                 graphics.GraphicsDevice.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, vertices, 0, 4, indices, 0, 2);
             }
 
-            //updateTime += (float)gameTime.ElapsedGameTime.TotalSeconds; 
         }
     }
 }
