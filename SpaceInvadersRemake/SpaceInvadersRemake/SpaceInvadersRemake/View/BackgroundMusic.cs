@@ -21,7 +21,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public BackgroundMusic()
         {
-            this.Volume = 1.0f;     //muss noch vom model oder aus ner resource datei ausgelesn werden.
+            this.Volume = Settings.GameConfig.Default.MasterVolume * Settings.GameConfig.Default.MusicVolume;
             this.Repeat = true;
             this.Playing = false;
             // this.Volume = Model Wert auslesen bzw unten eine Update() methode implementieren.
