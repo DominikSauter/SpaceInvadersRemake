@@ -55,6 +55,7 @@ namespace SpaceInvadersRemake.View
 
                 //AUSKOMMENTIERT ZUM AUSFÜHREN!
                 //this.EffectPlayer = new SoundEffects();
+                
 
 
                 this.random = new Random();
@@ -64,7 +65,7 @@ namespace SpaceInvadersRemake.View
                 * */
                 GameItemRepresentation.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 800.0f, 500.0f), new Vector3(0.0f, 0.0f, 0.0f), Vector3.Up);
                 GameItemRepresentation.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(60),
-                    graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight, 0.1f, 2000.0f);
+                    graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight, 0.1f, 5000.0f);
                 
                 //registrieren an den events [PFLICHT]
                 //created
@@ -203,7 +204,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreatePlayer(object player, EventArgs e)
         {
-            this.ViewItemList.Add(new PlayerRepresentation((Player)player));
+            this.ViewItemList.Add(new PlayerRepresentation((Player)player, this.graphics));
             ((Player)player).BoundingVolume = ViewContent.RepresentationContent.PlayerHitsphere;
         }
 
@@ -220,7 +221,7 @@ namespace SpaceInvadersRemake.View
         {
             int randomTexture = this.random.Next(ViewContent.RepresentationContent.AlienTextures.Count);
 
-            this.ViewItemList.Add(new AlienRepresentation((Alien)alien, randomTexture));
+            this.ViewItemList.Add(new AlienRepresentation((Alien)alien, randomTexture, this.graphics));
             ((Alien)alien).BoundingVolume = ViewContent.RepresentationContent.AlienHitsphere;
         }
 
@@ -235,7 +236,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateMothership(object mothership, EventArgs e)
         {
-            this.ViewItemList.Add(new MothershipRepresentation((Mothership)mothership));
+            this.ViewItemList.Add(new MothershipRepresentation((Mothership)mothership, this.graphics));
             ((Mothership)mothership).BoundingVolume = ViewContent.RepresentationContent.MothershipHitsphere;
         }
 
@@ -362,6 +363,7 @@ namespace SpaceInvadersRemake.View
         /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
         {
+            GameManager gameMngr = (GameManager)game;
             /*
              * Diese Schleife funktioniert auf jedenfall
             for (int listCount = ViewItemList.Count; listCount > 0; listCount--)
@@ -392,9 +394,25 @@ namespace SpaceInvadersRemake.View
                 }
             });
 
+            if (state is StateMachine.InGameState || state is StateMachine.BreakState)
+            {
+                if (!gameMngr.MusicPlayer.Playing)
+                {
+                    gameMngr.MusicPlayer.Play(ViewContent.EffectContent.GameSong);
+                }
+            }
+            else if (state is StateMachine.AudioOptionsState || state is StateMachine.MainMenuState
+                    || state is StateMachine.OptionsState || state is StateMachine.VideoOptionsState)
+            {
+                if (gameMngr.MusicPlayer.Playing)
+                {
+                    gameMngr.MusicPlayer.Stop();
+                }
+            }
+
             foreach (IView item in this.ViewItemList)
             {
-                item.Draw(((GameManager)game).spriteBatch);
+                item.Draw(gameMngr.spriteBatch);
             }
         }
 
