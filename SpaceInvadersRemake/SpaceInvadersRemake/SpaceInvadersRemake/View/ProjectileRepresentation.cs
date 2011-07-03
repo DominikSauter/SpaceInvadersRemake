@@ -103,7 +103,7 @@ namespace SpaceInvadersRemake.View
             float scaleHeight = 0.1f;
 
             //Projektil nach 'unten' versetzen, damit es unter dem Schiff erscheint
-            Vector3 lower = new Vector3(0, -6, 0)
+            Vector3 lower = new Vector3(0, -6, 0);
 
             //Positionieren
             this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * Matrix.CreateTranslation(this.position + lower);
