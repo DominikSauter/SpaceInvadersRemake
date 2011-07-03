@@ -5,6 +5,7 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+using SpaceInvadersRemake.StateMachine;
 
 namespace SpaceInvadersRemake.View
 {
@@ -106,10 +107,43 @@ namespace SpaceInvadersRemake.View
             this.Playing = true;
         }
 
-        public void Update(StateMachine.State currentState)
+        public void Update(State currentState)
         {
             if (lastState == null)
             {
+                lastState = currentState;
+            }
+            
+            if (currentState is InGameState && lastState is MainMenuState)
+            {
+                Stop();
+                Play(ViewContent.EffectContent.GameSong);
+                lastState = currentState;
+            }
+            else if (currentState is BreakState && lastState is InGameState)
+            {
+                FadeOut();
+                lastState = currentState;
+            }
+            else if (currentState is InGameState && lastState is BreakState)
+            {
+                FadeIn();
+                lastState = currentState;
+            }
+            else if (currentState is HighscoreState && (lastState is InGameState || lastState is BreakState))
+            {
+                Stop();
+                FadeIn();
+                lastState = currentState;
+            }
+            else if (currentState is MainMenuState && !this.Playing)
+            {
+                Play(ViewContent.EffectContent.MenuSong);
+                lastState = currentState;
+            }
+            else if (currentState is MainMenuState && lastState is HighscoreState && !this.Playing)
+            {
+                Play(ViewContent.EffectContent.MenuSong);
                 lastState = currentState;
             }
         }
