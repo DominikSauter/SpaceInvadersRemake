@@ -1,4 +1,5 @@
-﻿using System;
+﻿//Implementiert von Dodo
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,16 +12,18 @@ namespace SpaceInvadersRemake.View
     /// <summary>
     /// Diese Klasse kümmert sich um die Wiedergabe der Sound Effekte.
     /// </summary>
-    public class SoundEffects
+    public class SoundEffects : IMediaplayer
     {
         private float volume;
+        private List<SoundEffectInstance> soundEffects;
 
         /// <summary>
         /// Erzeugt ein SoundEffects-Objekt, dass zum Abspielen von Effekten dient.
         /// </summary>
-        
         public SoundEffects()
         {
+            this.soundEffects = new List<SoundEffectInstance>();
+            this.Volume = Settings.GameConfig.Default.MasterVolume * Settings.GameConfig.Default.EffectVolume;
         }
 
         /// <summary>
@@ -32,16 +35,15 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public float Volume
         {
-            get;
-            set;
-        }
-
-        /// <summary>
-        /// Stoppt die Wiedergabe eines Sound Effekts
-        /// </summary>
-        public void Stop()
-        {
-            throw new NotImplementedException();
+            get
+            {
+                return this.volume;
+            }
+            set
+            {
+                this.volume = value;
+                SoundEffect.MasterVolume = value;
+            }
         }
 
         /// <summary>
@@ -49,7 +51,35 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Play(SoundEffect SoundFX)
         {
-            SoundFX.Play();
+            this.soundEffects.Add(SoundFX.CreateInstance());
+            this.soundEffects[this.soundEffects.Count - 1].Play();
+        }
+
+        public void Update()
+        {
+        }
+
+
+        public bool Repeat
+        {
+            get;
+            set;
+        }
+
+        public void Play(Song Background)
+        {
+        }
+
+        public void Play(Video intro)
+        {
+        }
+
+        public void Stop()
+        {
+            foreach (SoundEffectInstance effect in this.soundEffects)
+            {
+                effect.Stop();
+            }
         }
     }
 }
