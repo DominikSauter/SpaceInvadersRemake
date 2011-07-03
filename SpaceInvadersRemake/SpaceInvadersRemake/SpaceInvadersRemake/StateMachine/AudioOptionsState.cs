@@ -42,9 +42,6 @@ namespace SpaceInvadersRemake.StateMachine
             // von Tobias
             List<MenuControl> controls = new List<MenuControl>();
 
-            //TODO: Reinladen von Einstellungen
-            //
-            //TODO: Delegate zu ändern der Lautstärke hinzufügen
             List<float> volume = new List<float>();
 
             for (int i = 0; i < 11; i++)
