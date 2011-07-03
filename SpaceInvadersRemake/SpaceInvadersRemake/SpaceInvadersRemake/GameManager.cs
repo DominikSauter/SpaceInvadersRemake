@@ -41,6 +41,9 @@ namespace SpaceInvadersRemake
             set;
         }
 
+        /// <summary>
+        /// Der Musikplayer für die Hintergrundmusik
+        /// </summary>
         public static SpaceInvadersRemake.View.BackgroundMusic MusicPlayer
         {
             get;
