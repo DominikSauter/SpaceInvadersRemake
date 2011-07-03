@@ -52,14 +52,17 @@ namespace SpaceInvadersRemake.View
             int lives = gameCourseMngr.GameCourse.Player.Lives;
             int score = gameCourseMngr.GameCourse.Player.Score;
 
-            //Counter, der angibt wie oft die HUD Grafik (32x60) gezeichnet werden muss.
-            int hudTileCount = graphics.PreferredBackBufferWidth / this.hudBackgroundTexture.Width;
+            //Counter, der angibt wie oft die HUD Grafik (32x60) gezeichnet werden muss. 1 Kachel mehr, da nicht alle Maße durch 32 teilbar sind.
+            int hudTileCount = graphics.PreferredBackBufferWidth / this.hudBackgroundTexture.Width + 1;
 
             //Farbe für die Spielerleben Icons, abhängig von der Anzahl der Leben
             Color liveColor;
 
             //Vektor mit Länge/Breite für den String welcher die Punktzahl darstellt
             Vector2 scoreStringLength = this.font.MeasureString(score.ToString());
+
+            //Zentrierte Y Position der Punktzahl im HUD
+            float scoreCenterPosition = (this.hudBackgroundTexture.Height - scoreStringLength.Y) / 2.0f;
 
             /*  Festlegen der Farben:
              *      1 Leben => ROT
@@ -95,13 +98,14 @@ namespace SpaceInvadersRemake.View
             //zeichnet 1-3 Lebens Icons
             for (int liveCount = 0; liveCount < lives; liveCount++)
             {
+                //Zentrierung erfolgt dadurch, dass beide Grafiken 50Pixel hoch sind.
                 spriteBatch.Draw(this.liveIcon, new Vector2((float)((liveCount) * this.liveIcon.Width),
-                    (float)(graphics.PreferredBackBufferHeight - this.liveIcon.Height)), liveColor);
+                    (float)(graphics.PreferredBackBufferHeight - this.hudBackgroundTexture.Height)), liveColor);
             }
 
             //beschriftet den HUD mit der aktuellen Punktzahl
-            spriteBatch.DrawString(this.font, score.ToString(), new Vector2((float)(graphics.PreferredBackBufferWidth - scoreStringLength.X),
-                (float)(graphics.PreferredBackBufferHeight - scoreStringLength.Y)), Color.Green);
+            spriteBatch.DrawString(this.font, score.ToString(), new Vector2((float)(graphics.PreferredBackBufferWidth - scoreStringLength.X - 20.0f),
+                (float)(graphics.PreferredBackBufferHeight - this.hudBackgroundTexture.Height + scoreCenterPosition)), Color.Green);
 
             spriteBatch.End();
         }

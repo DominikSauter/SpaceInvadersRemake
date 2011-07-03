@@ -69,13 +69,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Graphics\hud_32x60.png">
-      <Name>hud_32x60</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Graphics\Schild.png">
       <Name>Schild</Name>
       <Importer>TextureImporter</Importer>
@@ -263,6 +256,13 @@
   <ItemGroup>
     <Compile Include="Graphics\LebensIcon.png">
       <Name>LebensIcon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Graphics\hud_32x50.png">
+      <Name>hud_32x50</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
