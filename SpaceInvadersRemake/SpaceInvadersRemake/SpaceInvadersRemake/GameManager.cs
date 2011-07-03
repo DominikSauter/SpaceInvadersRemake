@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake
             set;
         }
 
-        public SpaceInvadersRemake.View.BackgroundMusic MusicPlayer
+        public static SpaceInvadersRemake.View.BackgroundMusic MusicPlayer
         {
             get;
             set;
@@ -61,7 +61,7 @@ namespace SpaceInvadersRemake
 
             //[VIEW]
             //View.ViewContent.ComputeHitspheres();
-            this.MusicPlayer = new View.BackgroundMusic();
+            MusicPlayer = new View.BackgroundMusic();
 
             // <STST>
             this.StateManager = new StateManager(this);
@@ -100,7 +100,6 @@ namespace SpaceInvadersRemake
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
 
             // <STST>
             this.StateManager.ModelUpdate(gameTime);

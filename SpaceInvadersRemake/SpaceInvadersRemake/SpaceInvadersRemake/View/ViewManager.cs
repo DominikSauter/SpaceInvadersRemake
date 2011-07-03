@@ -394,22 +394,6 @@ namespace SpaceInvadersRemake.View
                 }
             });
 
-            if (state is StateMachine.InGameState || state is StateMachine.BreakState)
-            {
-                if (!gameMngr.MusicPlayer.Playing)
-                {
-                    gameMngr.MusicPlayer.Play(ViewContent.EffectContent.GameSong);
-                }
-            }
-            else if (state is StateMachine.AudioOptionsState || state is StateMachine.MainMenuState
-                    || state is StateMachine.OptionsState || state is StateMachine.VideoOptionsState)
-            {
-                if (gameMngr.MusicPlayer.Playing)
-                {
-                    gameMngr.MusicPlayer.Stop();
-                }
-            }
-
             foreach (IView item in this.ViewItemList)
             {
                 item.Draw(gameMngr.spriteBatch);

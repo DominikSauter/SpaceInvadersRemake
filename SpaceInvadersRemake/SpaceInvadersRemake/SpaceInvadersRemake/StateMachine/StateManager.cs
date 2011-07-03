@@ -82,6 +82,7 @@ namespace SpaceInvadersRemake.StateMachine
         public void ViewUpdate(GameTime gameTime)
         {
             this.State.ViewUpdate(gameTime);
+            GameManager.MusicPlayer.Update(this.State);     //[Dodo] updated den MusicPlayer
         }
 
         /// <summary>
