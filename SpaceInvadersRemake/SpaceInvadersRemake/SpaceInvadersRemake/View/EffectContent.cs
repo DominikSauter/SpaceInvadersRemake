@@ -87,5 +87,11 @@ namespace SpaceInvadersRemake.View
             get;
             set;
         }
+
+        public SoundEffect WeaponEnemy
+        {
+            get;
+            set;
+        }
     }
 }
