@@ -130,39 +130,45 @@ namespace SpaceInvadersRemake.View
             //this.updateTimer += gameTime.TotalGameTime.Seconds; 
 
 
-            //Animation
+            //Animation: Fängt bei erstem Frame (hier links unten) an und geht nach rechts und nach oben alle Frames durch
 
             this.update++;
 
-            //Alle 2 Sekunden
-            if (this.update == 1 /*this.updateTimer >= 2*/)
+            //Nächster Frame bei jedem Update
+            if (this.update == 1) //this.updateTimer >= 2
             {
                 //this.updateTimer = 0;
                 this.update = 0;
 
+                //Aktueller Frame
                 float positionColumn = this.column * this.frameSize;
                 float positionRow = this.row * this.frameSize;
 
-
+                //Texturkoordinaten anpassen (zum nächsten Frame bewegen)
                 Vector2 textureLeftBot = new Vector2(positionColumn, positionRow);
                 Vector2 textureLeftTop = new Vector2(positionColumn, positionRow + frameSize);
                 Vector2 textureRightBot = new Vector2(positionColumn + frameSize, positionRow);
                 Vector2 textureRightTop = new Vector2(positionColumn + frameSize, positionRow + frameSize);
 
+                //neue FrameTextur setzen
                 vertices[0].TextureCoordinate = textureLeftBot;
                 vertices[1].TextureCoordinate = textureLeftTop;
                 vertices[2].TextureCoordinate = textureRightBot;
                 vertices[3].TextureCoordinate = textureRightTop;
 
+                //nächster Frame
                 this.column++;
 
+                //wenn letze Spalte fange von Spalte 0 an
                 if (this.column == (this.columns - 1))
                 {
                     this.column = 0;
+                    // wenn letzte Reihe fange von Reihe 0 an
                     if (this.row == (this.rows - 1))
                     {
                         this.row = 0;
                     }
+                        // ansonsten nächte Reihe
                     else
                     {
                         this.row++;
