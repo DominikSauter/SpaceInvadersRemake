@@ -94,7 +94,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(0.0f, -75.0f);
+                return new Vector2(0.0f, -75.0f);       //[Dodo] von -60 auf -75 gesetzt. Sonst verschwenden wir 15Einheiten wo absolut nichts geschieht..
             }
         }
 
