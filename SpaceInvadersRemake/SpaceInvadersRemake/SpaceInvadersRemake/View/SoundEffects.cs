@@ -13,7 +13,8 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class SoundEffects
     {
-        
+        private float volume;
+
         /// <summary>
         /// Erzeugt ein SoundEffects-Objekt, dass zum Abspielen von Effekten dient.
         /// </summary>
