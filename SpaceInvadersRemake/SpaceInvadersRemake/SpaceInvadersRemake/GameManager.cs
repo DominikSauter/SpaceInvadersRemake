@@ -71,7 +71,7 @@ namespace SpaceInvadersRemake
              * Ladet doch bitte nur funktionierende Lösungen hoch.. Ihr haltet uns nur auf wenn ihr nicht laufenden
              * Code hochladet und wir suchen müssen, obs an uns liegt oder jemand was einkommentiert hat was noch nich geht..
              * */
-            View.ViewContent.ComputeHitspheres();
+            //View.ViewContent.ComputeHitspheres();
             MusicPlayer = new View.BackgroundMusic();
 
             // <STST>
