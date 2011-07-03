@@ -84,20 +84,26 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
         public override void Update(Game game, GameTime gameTime, StateMachine.State state)
         {
-            
-            //UNDONE Test BUG ID5
-           // Controllees.Last().IsAlive = false;
-          
-            
+            //Suche Tote GameItem und schreibe sie in Liste
+            List<IGameItem> deadItems = new List<IGameItem>(this.Controllees.Where(x => x.IsAlive == false));
+
             //Entferne Tote GameItem
-            foreach (IGameItem item in Controllees.ToArray())
-            {
-                if (!(item.IsAlive))
-                {
-                    Controllees.Remove(item);
-                }
-                
+            foreach (var item in deadItems) 
+            { 
+                this.Controllees.Remove(item);
             }
+                
+
+
+            //modified by CK 
+            //foreach (IGameItem item in Controllees.ToArray())
+            //{
+            //    if (!(item.IsAlive))
+            //    {
+            //        Controllees.Remove(item);
+            //    }
+                
+            //}
 
             base.Update(game, gameTime, state);
         }
