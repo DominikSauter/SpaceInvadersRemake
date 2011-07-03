@@ -20,6 +20,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner2">Kollisionspartner 2</param>
         private static void CheckCollision(IGameItem collisionPartner1, IGameItem collisionPartner2)
         {
+            // TODO: rausnehmen 
             if ((collisionPartner1.BoundingVolume == null)
                 || (collisionPartner2.BoundingVolume == null))
                 return;
