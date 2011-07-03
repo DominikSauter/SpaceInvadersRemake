@@ -19,7 +19,7 @@ namespace SpaceInvadersRemake.View
         private Texture2D texture;
         private Vector3 position;
         private GraphicsDeviceManager graphics;
-        private bool player;
+        private bool player; //Gibt an ob das Projektil vom Player stamm
         private Vector3 color;
 
         //Punkte der Polygone wo die Textur gezeichnet werden soll
@@ -102,8 +102,11 @@ namespace SpaceInvadersRemake.View
             float scaleWidth = 0.05f;
             float scaleHeight = 0.1f;
 
+            //Projektil nach 'unten' versetzen, damit es unter dem Schiff erscheint
+            Vector3 lower = new Vector3(0, -6, 0)
+
             //Positionieren
-            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * Matrix.CreateTranslation(this.position + new Vector3(0, -6, 0));
+            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * Matrix.CreateTranslation(this.position + lower);
 
             effect.TextureEnabled = true;
             effect.Texture = texture;
