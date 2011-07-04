@@ -79,6 +79,7 @@ namespace SpaceInvadersRemake.View
                  * Falsche Positionierung im 3D-Raum gefixt - TB
                  * */
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up);
+                ((ModelHitsphere)GameItem.BoundingVolume).World = World;
                 //Position aktualisieren
                 this.lastPosition = currentPosition;
             }

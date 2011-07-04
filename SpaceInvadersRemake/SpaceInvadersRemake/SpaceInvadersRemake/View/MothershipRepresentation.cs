@@ -61,6 +61,7 @@ namespace SpaceInvadersRemake.View
             if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X)
             {
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Right, Vector3.Up);
+                ((ModelHitsphere)GameItem.BoundingVolume).World = World;
                 this.lastPosition = currentPosition;
             }
 

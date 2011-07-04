@@ -207,8 +207,10 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreatePlayer(object player, EventArgs e)
         {
-            this.ViewItemList.Add(new PlayerRepresentation((Player)player, this.graphics));
-            ((Player)player).BoundingVolume = ViewContent.RepresentationContent.PlayerHitsphere;
+            PlayerRepresentation playerRepresentation = new PlayerRepresentation((Player)player, this.graphics);
+            this.ViewItemList.Add(playerRepresentation);
+            ((Player)player).BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.PlayerHitsphere);
+            ((ModelHitsphere)((Player)player).BoundingVolume).World = playerRepresentation.World;
         }
 
         /// <summary>
@@ -224,8 +226,10 @@ namespace SpaceInvadersRemake.View
         {
             int randomTexture = this.random.Next(ViewContent.RepresentationContent.AlienTextures.Count);
 
-            this.ViewItemList.Add(new AlienRepresentation((Alien)alien, randomTexture, this.graphics));
-            ((Alien)alien).BoundingVolume = ViewContent.RepresentationContent.AlienHitsphere;
+            AlienRepresentation alienRepresentation = new AlienRepresentation((Alien)alien, randomTexture, this.graphics);
+            this.ViewItemList.Add(alienRepresentation);
+            ((Alien)alien).BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.AlienHitsphere);
+            ((ModelHitsphere)((Alien)alien).BoundingVolume).World = alienRepresentation.World;
         }
 
         /// <summary>
@@ -239,8 +243,10 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateMothership(object mothership, EventArgs e)
         {
-            this.ViewItemList.Add(new MothershipRepresentation((Mothership)mothership, this.graphics));
-            ((Mothership)mothership).BoundingVolume = ViewContent.RepresentationContent.MothershipHitsphere;
+            MothershipRepresentation motherShiprepresentation = new MothershipRepresentation((Mothership)mothership, this.graphics);
+            this.ViewItemList.Add(motherShiprepresentation);
+            ((Mothership)mothership).BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.MothershipHitsphere);
+            ((ModelHitsphere)((Mothership)mothership).BoundingVolume).World = motherShiprepresentation.World;
         }
 
         /// <summary>
@@ -270,8 +276,10 @@ namespace SpaceInvadersRemake.View
         public void CreateShield(object shield, EventArgs e)
         {
             //[Anji] Weiterreichen der gameTime  für die Schildanimation
-            this.ViewItemList.Add(new ShieldRepresentation((Shield) shield, graphics, gameTime));
-            ((Shield)shield).BoundingVolume = ViewContent.RepresentationContent.ShieldHitsphere;
+            ShieldRepresentation shieldRepresentation = new ShieldRepresentation((Shield)shield, graphics, gameTime);
+            this.ViewItemList.Add(shieldRepresentation);
+            ((Shield)shield).BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ShieldHitsphere);
+            ((ModelHitsphere)((Shield)shield).BoundingVolume).World = shieldRepresentation.World;
         }
 
         /// <summary>
@@ -291,25 +299,27 @@ namespace SpaceInvadersRemake.View
 
             switch (currentProjectile.ProjectileType)
             {
-                case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileNormalHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
                     player = true;
                     break;
-                case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileNormalHitsphere;
+                case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileNormalHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
                     break;
-                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectilePiercingHitsphere;
+                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectilePiercingHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectilePiercing;
                     break;
-                case ProjectileTypeEnum.MothershipProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileMothershipHitsphere;
+                case ProjectileTypeEnum.MothershipProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileMothershipHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileMothership;
                     break;
-                case ProjectileTypeEnum.MinibossProjectile: currentProjectile.BoundingVolume = ViewContent.RepresentationContent.ProjectileBossHitsphere;
+                case ProjectileTypeEnum.MinibossProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileBossHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileBoss;
                     break;
             }
 
-            this.ViewItemList.Add(new ProjectileRepresentation((Projectile)projectile, texture, graphics , effect, player));
+            ProjectileRepresentation projectileRepresentation = new ProjectileRepresentation((Projectile)projectile, texture, graphics, effect, player);
+            this.ViewItemList.Add(projectileRepresentation);
+            ((ModelHitsphere)((Projectile)projectile).BoundingVolume).World = projectileRepresentation.World;
         }
 
         /// <summary>

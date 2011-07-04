@@ -134,12 +134,19 @@ namespace SpaceInvadersRemake.View
         private static ModelHitsphere computeBigTextureHitsphere(Texture2D graphic)
         {
             //Mittelpunkt der Grafik
-            Point center = graphic.Bounds.Center;
+           /* Point center = graphic.Bounds.Center;
 
             //Obere linke Ecke der Grafik, welche die Position bestimmt
             Point location = graphic.Bounds.Location;
             float maxRadius = (float)Math.Sqrt((center.X - location.X) * (center.X - location.X) + (center.Y - location.Y)*(center.Y - location.Y));
-            return new ModelHitsphere(new BoundingSphere(Vector3.Zero, maxRadius));
+            return new ModelHitsphere(new BoundingSphere(Vector3.Zero, maxRadius));*/
+
+            Vector2 corner2 = new Vector2(graphic.Width/2.0f, graphic.Height/2.0f);
+            Vector3 corner3 = PlaneProjector.Convert2DTo3D(corner2);
+
+            float radius = corner3.Length();
+
+            return new ModelHitsphere(new BoundingSphere(Vector3.Zero, radius));
         }
     }
 }

@@ -40,7 +40,11 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Positionsmatrix, welche die Position des 3D Models im Raum festlegt.
         /// </summary>
-        protected Matrix World;
+        public Matrix World
+        {
+            get;
+            protected set;
+        }
 
 
         /// <summary>
