@@ -49,7 +49,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(40.0f, 40.0f);
+                return new Vector2(60.0f, 60.0f);
             }
         }
 
@@ -82,7 +82,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                Vector2[] positions = {new Vector2(-50.0f, -40.0f), new Vector2(0.0f, -40.0f), new Vector2(50.0f, -40.0f)};
+                Vector2[] positions = {new Vector2(-50.0f, -60.0f), new Vector2(0.0f, -60.0f), new Vector2(50.0f, -60.0f)};
                 return positions;
             }
         }
@@ -94,7 +94,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(0.0f, -75.0f);       //[Dodo] von -60 auf -75 gesetzt. Sonst verschwenden wir 15Einheiten wo absolut nichts geschieht..
+                return new Vector2(0.0f, -100.0f);
             }
         }
 
@@ -149,7 +149,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(20.0f, 20.0f);
+                return new Vector2(30.0f, 30.0f);
             }
         }
 
@@ -215,7 +215,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(40.0f, 40.0f);
+                return new Vector2(100.0f, 100.0f);
             }
         }
 
@@ -248,7 +248,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(40.0f, 40.0f);
+                return new Vector2(100.0f, 100.0f);
             }
         }
     }
