@@ -62,12 +62,13 @@ namespace SpaceInvadersRemake
 
             graphics.PreferredBackBufferWidth = Settings.GameConfig.Default.graphicsWidth;
             graphics.PreferredBackBufferHeight = Settings.GameConfig.Default.graphicsHeight;
+            graphics.IsFullScreen = Settings.GameConfig.Default.Fullscreen;
             graphics.ApplyChanges();
 
             //[VIEW]
      
-            //UNDONE von Dodo auskommentiert aufgrund unvollständigen Codes.
-            //View.ViewContent.ComputeHitspheres();
+            
+            View.ViewContent.ComputeHitspheres();
             MusicPlayer = new View.BackgroundMusic();
 
             // <STST>

@@ -61,17 +61,17 @@ namespace SpaceInvadersRemake.View
             this.indices = new int[6];
 
             //Skalierung
-            float scaleWidth = 0.015f;
-            float scaleHeight = 0.015f;
+            float scaleWidth = 0.03f;
+            float scaleHeight = 0.03f;
 
             //Eckpunkte in 3D ebene "Aufstellen"
             Vector3 erect = new Vector3(0, 50, 0);
 
             //Viereck aufbauen
-            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, -texture.Height));
-            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, texture.Height));
-            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, -texture.Height));
-            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, texture.Height));
+            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width / 2.0f, -texture.Height / 2.0f));
+            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width / 2.0f, texture.Height / 2.0f));
+            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width / 2.0f, -texture.Height/2.0f));
+            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width / 2.0f, texture.Height / 2.0f));
 
             Vector2 textureLeftBot = new Vector2(0, 0);
             Vector2 textureLeftTop = new Vector2(0, 1 / 5f);
@@ -87,7 +87,7 @@ namespace SpaceInvadersRemake.View
 
 
             //Positionieren
-            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * (Matrix.CreateRotationX(MathHelper.ToRadians(45)) * Matrix.CreateTranslation(this.position));
+            this.World = Matrix.CreateScale(scaleWidth, 0.0f, scaleHeight) * (Matrix.CreateRotationX(MathHelper.ToRadians(45)) * Matrix.CreateTranslation(this.position));
 
             //1. Polygon: Punkte 0,1,2 im Urzeigersinn
             indices[0] = 0;

@@ -84,6 +84,7 @@ namespace SpaceInvadersRemake.View
                 this.lastPosition = currentPosition;
                 direction = 1.0f;
             }
+            ((ModelHitsphere)GameItem.BoundingVolume).World = World;
 
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 

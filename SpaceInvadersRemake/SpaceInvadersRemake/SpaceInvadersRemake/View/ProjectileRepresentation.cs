@@ -57,10 +57,10 @@ namespace SpaceInvadersRemake.View
             indices[5] = 2;
 
             //Viereck aufbauen
-            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, -texture.Height));
-            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width, texture.Height));
-            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, -texture.Height));
-            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width, texture.Height));
+            Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width / 2.0f, -texture.Height / 2.0f));
+            Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width / 2.0f, texture.Height / 2.0f));
+            Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width / 2.0f, -texture.Height / 2.0f));
+            Vector3 rightTop = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width / 2.0f, texture.Height / 2.0f));
 
             vertices[0] = new VertexPositionColorTexture(leftBot, Color.Red, new Vector2(0, 0));
             vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, new Vector2(0, 1));
@@ -99,14 +99,17 @@ namespace SpaceInvadersRemake.View
 
 
             //Skalierung
-            float scaleWidth = 0.05f;
+            float scaleWidth = 0.1f;
             float scaleHeight = 0.1f;
+            
 
             //Projektil nach 'unten' versetzen, damit es unter dem Schiff erscheint
             Vector3 lower = new Vector3(0, -6, 0);
 
             //Positionieren
-            this.World = Matrix.CreateScale(scaleWidth, 1, scaleHeight) * Matrix.CreateTranslation(this.position + lower);
+            this.World = Matrix.CreateScale(scaleWidth, 0.0f, scaleHeight) * Matrix.CreateTranslation(this.position + lower);
+            ((ModelHitsphere)GameItem.BoundingVolume).World = World;
+
 
             effect.TextureEnabled = true;
             effect.Texture = texture;
