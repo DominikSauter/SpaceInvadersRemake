@@ -28,6 +28,7 @@ namespace SpaceInvadersRemake.View
         private GameTime gameTime;
         private float updateTimer = 0; //für die Animation
         private int update;
+        private int totalHitpoints;
 
         int columns = 5;
         int rows = 5;
@@ -52,6 +53,7 @@ namespace SpaceInvadersRemake.View
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
             this.update = 0;
+            this.totalHitpoints = GameItem.Hitpoints;
             //this.updateTimer = 0;
 
 
@@ -156,6 +158,7 @@ namespace SpaceInvadersRemake.View
                 vertices[2].TextureCoordinate = textureRightBot;
                 vertices[3].TextureCoordinate = textureRightTop;
 
+
                 //nächster Frame
                 this.column++;
 
@@ -174,8 +177,25 @@ namespace SpaceInvadersRemake.View
                         this.row++;
                     }
                 }
-
             }
+
+            //Hitpointsabhängige Colorierung der schilde
+            //TODO: Passendere Fraben finden
+              if (GameItem.Hitpoints < totalHitpoints * 2 / 3) {
+                for (int i = 0; i < vertices.Length; i++) 
+                {
+                    vertices[i].Color = Color.Yellow;
+                }
+
+                if (GameItem.Hitpoints < totalHitpoints * 1 / 3)
+                {
+                    for (int i = 0; i < vertices.Length; i++)
+                    {
+                        vertices[i].Color = Color.Red;
+                    }
+                }
+            }
+
 
             effect.World = this.World;
             effect.TextureEnabled = true;
