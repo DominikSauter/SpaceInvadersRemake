@@ -25,8 +25,7 @@ namespace SpaceInvadersRemake.View
         private ButtonRepresentation[] buttonRepresentation;
         private StateMachine.State currentState;
         private SpriteFont font;
-
-        private string gameTitle;   //[Dodo] Spieltitel
+        private Texture2D gameTitle;
     
         /// <summary>
         /// Initialisiert die Menüoberfläche
@@ -41,8 +40,7 @@ namespace SpaceInvadersRemake.View
             this.buttonRepresentation = new ButtonRepresentation[buttons.Length];
             this.currentState = currentState;
             this.font = ViewContent.UIContent.Font;
-
-            this.gameTitle = Resource.Game_Titel;
+            this.gameTitle = ViewContent.UIContent.GameTitle;
 
             //Instanziiert ButtonRepresentation-Objekt für jedes MenuControl
             for (int i = 0; i < buttons.Length; i++)
@@ -56,17 +54,12 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
-            //TODO: position abhängig von fenster höhe, breite [Check]
-            //TODO: unterscheidung zwischen einstellungsmenü und hauptmenü (entweder nen bool definieren und übergeben, oder den currentState vom ViewManager aus weiterreichen)
 
-            Vector2 position = new Vector2(graphics.PreferredBackBufferWidth / 3, graphics.PreferredBackBufferHeight / 3);
+            Vector2 position = new Vector2(graphics.PreferredBackBufferWidth / 4, graphics.PreferredBackBufferHeight / 2);
             Vector2 framePosition = new Vector2((graphics.PreferredBackBufferWidth - this.frame.Width) / 2, (graphics.PreferredBackBufferHeight - this.frame.Height) / 2);
             Vector2 selectTitlePosition = framePosition + new Vector2(20, 100);
             Vector2 titlePosition = framePosition + new Vector2(20, 20);
-
-            //[Dodo] Größe und Position des Spieltitels
-            Vector2 gameTitleSize = font.MeasureString(this.gameTitle);
-            Vector2 gameTitlePosition = new Vector2((graphics.PreferredBackBufferWidth - gameTitleSize.X) / 2, 20);
+            Vector2 gameTitlePosition = new Vector2((graphics.PreferredBackBufferWidth - this.gameTitle.Width) / 2, 20);
 
             spriteBatch.Begin();
 
@@ -97,8 +90,7 @@ namespace SpaceInvadersRemake.View
                 }
                 else if (currentState is StateMachine.MainMenuState)
                 {
-                    //[Dodo] else-if Bedingung für den Spieltitel, welcher nur im Hauptmenü gezeigt werden soll
-                    spriteBatch.DrawString(this.font, this.gameTitle, gameTitlePosition, new Color(14, 255, 20));
+                    spriteBatch.Draw(gameTitle, new Rectangle((int)gameTitlePosition.X, (int)gameTitlePosition.Y, gameTitle.Width, gameTitle.Height), Color.White);
                 }
             }
          spriteBatch.End();
