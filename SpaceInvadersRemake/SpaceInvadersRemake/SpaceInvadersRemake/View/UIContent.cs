@@ -55,5 +55,12 @@ namespace SpaceInvadersRemake.View
             get;
             set;
         }
+
+        //[Anji]
+        public Texture2D GameTitle
+        {
+            get;
+            set;
+        }
     }
 }

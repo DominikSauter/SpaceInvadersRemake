@@ -56,6 +56,7 @@ namespace SpaceInvadersRemake.View
             UIContent.MenuButton = Content.Load<Texture2D>("Menu/button");
             UIContent.SettingsBackground = Content.Load<Texture2D>("Menu/einstellungsfenster");
             UIContent.SettingsButton = Content.Load<Texture2D>("Menu/auswahl_pfeile");
+            UIContent.GameTitle = Content.Load<Texture2D>("Menu/GameTitle"); //[Anji]
 
             //Laden des Representation Contents
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
