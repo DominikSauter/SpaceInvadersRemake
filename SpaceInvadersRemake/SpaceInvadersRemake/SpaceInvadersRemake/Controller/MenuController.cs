@@ -8,7 +8,7 @@ using System.Text;
 
 // Implementiert von Tobias
 
-//TODO Entscheidung ob Keyboardstate Auslagerung Böse ist oder nicht 
+
 
 namespace SpaceInvadersRemake.Controller
 {
@@ -135,6 +135,7 @@ namespace SpaceInvadersRemake.Controller
                                 if (item.Equals(input[0]))
                                 {
                                     mystring += item.ToString();
+                                    break; //mod by ck 4.7.11
 
                                 }
                             }
