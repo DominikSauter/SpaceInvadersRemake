@@ -42,6 +42,7 @@ namespace SpaceInvadersRemake.Controller
             // </STST>
         }
 
+        
         /// <summary>
         /// Löscht tote IGameItem aus der Controllees Liste
         /// </summary>
@@ -54,18 +55,25 @@ namespace SpaceInvadersRemake.Controller
         {
             IGameItem item = (IGameItem)sender;
 
-            this.Controllees.Remove(item);
-               
-            // <STST>
-            // Alien aus AlienMatrix
-            LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
-            if (remList != null)
-                remList.Remove(item);
-            // </STST>
-
-            if (this.Controllees.Count == 0)
+            /* modified by CK 4.7.11
+             * Überprüft ob Eventsender ein Alien dieses Controllers ist.Wenn ja,
+             * wird Alien aus den Listen dieses Controllers gelöscht und geg. Falls
+             * löscht sich der gesammte Controller
+            */
+            if (this.Controllees.Remove(item))
             {
-                controllerManager.Controllers.Remove(this);
+
+                // <STST>
+                // Alien aus AlienMatrix
+                LinkedList<IGameItem> remList = this.AlienMatrix.Where(x => x.Contains(item)).SingleOrDefault();
+                if (remList != null)
+                    remList.Remove(item);
+                // </STST>
+
+                if (this.Controllees.Count == 0)
+                {
+                    controllerManager.Controllers.Remove(this);
+                }
             }
         }
 

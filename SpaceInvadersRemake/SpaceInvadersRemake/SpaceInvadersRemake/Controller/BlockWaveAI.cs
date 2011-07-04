@@ -131,8 +131,7 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Shooting(Game game, GameTime gameTime)
         {
-            //UNDONE: [CK] auskommentierung aufgehoben, da keine Fehler mehr auftreten.
-            
+                        
             const int POINT_SHIFTING = 1000; // TODO: reicht der aus?
 
             float alienFreqInHz = this.ShootingFrequency / this.AlienMatrix.Count;
