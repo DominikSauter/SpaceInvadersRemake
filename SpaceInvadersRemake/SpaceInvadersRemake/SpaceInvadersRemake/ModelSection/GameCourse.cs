@@ -24,6 +24,11 @@ namespace SpaceInvadersRemake.ModelSection
         private Random random;
 
         /// <summary>
+        /// Speichert den Zeitpunkt, an dem das Mutterschiff das letzte mal aufgetaucht ist in Milisekunden seit Spielstart plus einen Cooldown-Wert.
+        /// </summary>
+        private double lastMothership;
+
+        /// <summary>
         /// Konstruktor
         /// </summary>
         public GameCourse()
@@ -133,6 +138,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public void SpecialEvent(GameTime gameTime)
         {
+            if (gameTime.TotalGameTime.TotalMilliseconds >= lastMothership)
+            {
+            }
         }
 
         /// <summary>
