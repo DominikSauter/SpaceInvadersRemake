@@ -39,7 +39,7 @@ namespace SpaceInvadersRemake.Controller
         private Keys[] validKeys = { Keys.Q, Keys.W, Keys.E, Keys.R, Keys.T, Keys.Z, Keys.U, Keys.I, 
                                        Keys.P, Keys.A, Keys.S, Keys.D, Keys.F, Keys.G, Keys.H, Keys.J, 
                                        Keys.K, Keys.L, Keys.Y, Keys.X, Keys.C, Keys.V, Keys.B, Keys.N, Keys.M };
-        private string mystring = "";
+        
 
         /// <summary>
         /// Eigenschaft Controllees (kontrolliertes Objekt)
@@ -106,23 +106,24 @@ namespace SpaceInvadersRemake.Controller
                         if ((input[0].Equals(Keys.Enter)))
                         {
 
-                            if (mystring.Length > 0)
+                            if (highscore.NewEntry.Name.Length > 0)
                             {
-                                highscore.NewEntry.Name = mystring;
+                                highscore.Save();
                             }
                             //Es wurde kein Name angegeben
                             else
                             {
                                 highscore.NewEntry.Name = Resources.Resource.NoName;
+                                highscore.Save();
                             }
 
-                            mystring = "";
+                            
 
                         }
                         else if (input[0].Equals(Keys.Back))
                         {
                             //HACK falls Back löscht zuviel zeichen
-                            mystring.Remove(mystring.Length - 1);
+                            highscore.NewEntry.Name.Remove(highscore.NewEntry.Name.Length - 1);
 
                         }
 
@@ -134,7 +135,7 @@ namespace SpaceInvadersRemake.Controller
                             {
                                 if (item.Equals(input[0]))
                                 {
-                                    mystring += item.ToString();
+                                    highscore.NewEntry.Name += item.ToString();
                                     break; //mod by ck 4.7.11
 
                                 }
