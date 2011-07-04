@@ -134,6 +134,12 @@ public class ControllerManager : IController
             case BehaviourEnum.BlockMovement:
 
                 temp = new BlockWaveAI(this, shootingFrequency, controllees, velocityIncrease);
+                
+            //TODO Löschen nach Testphase by CK
+            //TODO Enable für Test folgender Bugs: 12,
+            //temp = new MoveDownTestAI(this, shootingFrequency, controllees, velocityIncrease);
+            //Ende
+
 
                 Controllers.Add(temp);
                

@@ -120,6 +120,7 @@
   <ItemGroup>
     <Compile Include="Controller\ICommander.cs" />
     <Compile Include="Controller\MenuController.cs" />
+    <Compile Include="Controller\MoveDownTestAI.cs" />
     <Compile Include="ModelSection\ListSelect%28abstrakt%29.cs" />
     <Compile Include="ModelSection\GameItemConstants.cs" />
     <Compile Include="ModelSection\IBoundingVolume.cs" />
