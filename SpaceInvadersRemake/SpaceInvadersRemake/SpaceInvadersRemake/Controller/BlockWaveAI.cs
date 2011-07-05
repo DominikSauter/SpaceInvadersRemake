@@ -137,7 +137,8 @@ namespace SpaceInvadersRemake.Controller
             float alienFreqInHz = this.ShootingFrequency / this.AlienMatrix.Count;
             float alienFreqInFrame = alienFreqInHz * (float)game.TargetElapsedTime.TotalSeconds;
 
-            //UNDONE @Steffen überprüfe ob Eception hier korrekt
+            if (!game.IsFixedTimeStep)
+                throw new ArgumentException("Game.isFixedTimeStep = true, sonst funktioniert der Algorithmus nicht richtig.");
             if (alienFreqInFrame > 1)
                 throw new ArgumentException("Frequenz ist zu hoch um mit dem Algorithmus klar zu kommen.");
 
