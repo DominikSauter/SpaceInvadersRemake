@@ -19,7 +19,8 @@ namespace SpaceInvadersRemake.ModelSection
         public override void Apply(Player player)
         {
             // Setzt neue Waffe
-            player.Weapon = new PiercingShotWeapon();
+            //TODO: wieder einkommentieren, wenn Waffen fertig sind
+            //player.Weapon = new PiercingShotWeapon();
         }
 
         /// <summary>
