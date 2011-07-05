@@ -94,7 +94,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(0.0f, -100.0f);
+                return new Vector2(0.0f, CoordinateConstants.BottomBorder);
             }
         }
 
@@ -251,5 +251,69 @@ namespace SpaceInvadersRemake.ModelSection
                 return new Vector2(100.0f, 100.0f);
             }
         }
+
+        /// <summary>
+        /// Die Startposition des Mutterschiffs.
+        /// </summary>
+        public static Vector2 MothershipPosition
+        {
+            get
+            {
+                return new Vector2(CoordinateConstants.LeftBorder, CoordinateConstants.TopBorder);
+            }
+        }
+
+
+
+        /*
+         * Evt. in Zukunft benötigte Properties
+         * 
+
+        /// <summary>
+        /// Die standardmäßige Geschwindigkeit des Mutterschiffs in Distanz pro Sekunde.
+        /// </summary>
+        public static Vector2 MothershipVelocity
+        {
+            get
+            {
+                return new Vector2(45.0f, 45.0f);
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßigen Lebenspunkte des Mutterschiffs.
+        /// </summary>
+        public static int MothershipHitpoints
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Der standardmäßige (Kollisions-)Schaden des Mutterschiffs.
+        /// </summary>
+        public static int MothershipDamage
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßige Punktzahl, die der Spieler durch das Zerstören des Mutterschiffs bekommt.
+        /// </summary>
+        public static int MothershipScoreGain
+        {
+            get
+            {
+                return 100;
+            }
+        }
+
+         */
+
     }
 }

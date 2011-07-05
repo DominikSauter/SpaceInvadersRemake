@@ -29,12 +29,19 @@ namespace SpaceInvadersRemake.ModelSection
         private double lastMothership;
 
         /// <summary>
+        /// Die Zeit, die zwischen dem Auftauchen und dem erneuten Auftauchen des Mutterschiffs vergehen muss in Milisekunden.
+        /// </summary>
+        private int mothershipCooldown;
+
+        /// <summary>
         /// Konstruktor
         /// </summary>
         public GameCourse()
         {
             random = new Random();
             WaveCounter = 0;
+            mothershipCooldown = 30000;
+            lastMothership = -mothershipCooldown;
             InitializeGame();
         }
 
@@ -140,6 +147,14 @@ namespace SpaceInvadersRemake.ModelSection
         {
             if (gameTime.TotalGameTime.TotalMilliseconds >= lastMothership)
             {
+                if (random.Next(10000) <= 6)    // Mutterschiff-Wahrscheinlichkeit etwa 1/30 pro Sekunde
+                {
+                    Vector2[] formation = { GameItemConstants.MothershipPosition };
+                    DifficultyLevel difficultyLevel = new DifficultyLevel(1.0f, new Vector2(1.5f, 1.5f), 1.0f, new Vector2(1.0f, 1.0f), 1.0f, 10.0f);
+                    WaveGenerator.CreateWave(BehaviourEnum.MothershipMovement, formation, difficultyLevel);
+
+                    lastMothership = gameTime.TotalGameTime.TotalMilliseconds + mothershipCooldown;
+                }
             }
         }
 
