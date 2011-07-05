@@ -41,6 +41,8 @@ namespace SpaceInvadersRemake.ModelSection
             : base(position, velocity)
         {
             type = PowerUpEnum.Speedboost;
+            //TODO: In GameItemConstants auslagern
+            duration = 15.0f;
         }
     }
 }

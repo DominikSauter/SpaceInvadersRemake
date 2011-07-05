@@ -43,6 +43,8 @@ namespace SpaceInvadersRemake.ModelSection
             : base(position, velocity)
         {
             type = PowerUpEnum.PiercingShot;
+            //TODO: In GameItemConstants auslagern
+            duration = 15.0f;
         }
     }
 }
