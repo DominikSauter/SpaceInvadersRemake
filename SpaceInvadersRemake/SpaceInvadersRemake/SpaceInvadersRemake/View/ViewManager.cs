@@ -84,15 +84,17 @@ namespace SpaceInvadersRemake.View
                  * */
 
 
-                /*
-                 * [Dodo] Wird vorerst nicht benötigt, da Wahl mit niedriger Prio!
-                 * *
+                //[Dodo] PartikelEffekt wird vorerst nicht benötigt, da Wahl mit niedriger Prio!
                 //destroyed
-                /*Player.Destroyed += ExplosionFX;
-                Alien.Destroyed += ExplosionFX;
-                Mothership.Destroyed += ExplosionFX;
-                Shield.Destroyed += ExplosionFX;
-                 * */
+                //Alien.Destroyed += ExplosionFX;
+                //Mothership.Destroyed += ExplosionFX;
+                //Shield.Destroyed += ExplosionFX;
+
+                //hit
+                Shield.Hit += HitSFX;
+                Player.Hit += HitSFX;
+                Alien.Hit += HitSFX;
+                Mothership.Hit += HitSFX;
 
                 //weaponFired
                 PlayerNormalWeapon.WeaponFired += ShootSFX;
@@ -196,6 +198,22 @@ namespace SpaceInvadersRemake.View
             //TODO Anbindung der PartikelEngine
         }
 
+        public void HitSFX(object gameItem, EventArgs e)
+        {
+            if (gameItem is Shield)
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.ShieldHit);
+            }
+            else if (gameItem is Player)
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.PlayerHit);
+            }
+            else
+            {
+                EffectPlayer.Play(ViewContent.EffectContent.EnemyHit);
+            }
+        }
+
         /// <summary>
         /// Behandelt ein Created-Event aus Model. Eine <c>PlayerRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
@@ -247,6 +265,8 @@ namespace SpaceInvadersRemake.View
             this.ViewItemList.Add(motherShiprepresentation);
             ((Mothership)mothership).BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.MothershipHitsphere);
             ((ModelHitsphere)((Mothership)mothership).BoundingVolume).World = motherShiprepresentation.World;
+
+            EffectPlayer.Play(ViewContent.EffectContent.MothershipSound);
         }
 
         /// <summary>

@@ -298,8 +298,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Soundeffects\Alien_Hit.wav">
-      <Name>Alien_Hit</Name>
+    <Compile Include="Soundeffects\Hit.wav">
+      <Name>Hit</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
@@ -332,6 +332,13 @@
     </Compile>
     <Compile Include="Soundeffects\Treffer2.wav">
       <Name>Treffer2</Name>
+      <Importer>WavImporter</Importer>
+      <Processor>SoundEffectProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Soundeffects\Mutterschiff.wav">
+      <Name>Mutterschiff</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
