@@ -40,7 +40,7 @@ namespace SpaceInvadersRemake.ModelSection
             : base(position, velocity)
         {
             type = PowerUpEnum.Deflector;
-            duration = 0.0f
+            duration = 0.0f;
         }
     }
 }
