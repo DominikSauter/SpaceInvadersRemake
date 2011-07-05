@@ -56,7 +56,8 @@ namespace SpaceInvadersRemake.StateMachine
                                                delegate(float i) 
                                                {
                                                    // Wert übernehmen
-                                                   //TODO: SoundFX anpassen
+                                                   if (SpaceInvadersRemake.View.ViewManager.EffectPlayer != null)
+                                                        SpaceInvadersRemake.View.ViewManager.EffectPlayer.Volume = (i / 10.0f) * Settings.GameConfig.Default.EffectVolume;
                                                    GameManager.MusicPlayer.Volume = (i / 10.0f) * Settings.GameConfig.Default.MusicVolume;
                                                    //Settings speichern
                                                    Settings.GameConfig.Default.MasterVolume = i / 10.0f;
@@ -69,7 +70,8 @@ namespace SpaceInvadersRemake.StateMachine
                                                delegate(float i) 
                                                {
                                                    // Wert übernehmen
-                                                   //TODO: SoundFX anpassen
+                                                   if (SpaceInvadersRemake.View.ViewManager.EffectPlayer != null)
+                                                       SpaceInvadersRemake.View.ViewManager.EffectPlayer.Volume = (i / 10.0f) * Settings.GameConfig.Default.MasterVolume;
                                                    // Settings speichern
                                                    Settings.GameConfig.Default.EffectVolume = i / 10.0f;
                                                    Settings.GameConfig.Default.Save();

@@ -53,7 +53,7 @@ namespace SpaceInvadersRemake.View
                 //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
                 this.ViewItemList.Add(CreateGameUI(currentState, graphics));
 
-                this.EffectPlayer = new SoundEffects();
+                EffectPlayer = new SoundEffects();
 
                 this.random = new Random();
 
@@ -101,7 +101,7 @@ namespace SpaceInvadersRemake.View
             else if (currentState is StateMachine.IntroState)
             {
                 //da nur das Video abgespielt wird, benötigt man keine wirkliche Oberfläche.
-                this.EffectPlayer = new Intro();
+                EffectPlayer = new Intro();
             }
             else if (currentState is StateMachine.HighscoreState)
             {
@@ -136,7 +136,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Audioplayer um die Soundeffekte wiederzugeben.
         /// </summary>
-        public IMediaplayer EffectPlayer
+        public static IMediaplayer EffectPlayer
         {
             get;
             private set;
