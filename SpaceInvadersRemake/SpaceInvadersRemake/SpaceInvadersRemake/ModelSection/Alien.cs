@@ -59,6 +59,8 @@ namespace SpaceInvadersRemake.ModelSection
             {
                 if (Alien.ScoreGained != null)
                     Alien.ScoreGained(this, EventArgs.Empty);
+                //TODO: POWERUP_ENABLE hier Kommentar wegmachen
+                //PowerUpGenerator.GeneratePowerUp(PowerUpEnum.Random, Position);
             }
         }
 

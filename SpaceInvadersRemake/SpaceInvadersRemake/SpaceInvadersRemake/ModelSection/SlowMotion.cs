@@ -1,5 +1,6 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+
+// Implementiert von Tobias
 
 namespace SpaceInvadersRemake.ModelSection
 {
@@ -15,38 +16,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
         public override void Apply(Player player)
         {
-            throw new NotImplementedException();
+            //TODO: Es muss noch eine möglichkeit geben, einen globalen Faktor für die Spielzeit zu setzen
         }
-
-        /// <summary>
-        /// Dieses Event wird ausgelöst, wenn ein Objekt der Klasse mit einem anderen Objekt kollidiert ist.
-        /// </summary>
-        public static event EventHandler Hit;
-
-        /// <summary>
-        /// Dieses Event wird ausgelöst, wenn ein Objekt der Klasse zerstört wurde, d.h. dessen Lebenspunkte auf 0 gesunken sind.
-        /// </summary>
-        public static event EventHandler Destroyed;
-
-        /// <summary>
-        /// Diese Methode wird bei einer Kollision mit einem anderen Objekt aufgerufen. 
-        /// Innerhalb der Methode wird der Schaden am übergebenen Objekt berechnet,
-        /// oder PowerUps angewendet. Außerdem wird das <c>Hit</c>-Event ausgelöst.
-        /// </summary>
-        /// <remarks>
-        /// Bei der Kollisionsprüfung wird nur verhindert, dass zwei gleichartige Objekte kollidieren. 
-        /// Deshalb muss in dieser Methode geprüft werden, ob eine Kollision mit dem übergebenen Objekt überhaupt sinnvoll ist.
-        /// </remarks>
-        /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
-        public override void IsCollidedWith(IGameItem collisionPartner)
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
-        /// Dieses Event wird ausgelöst, wenn ein neues Objekt dieser Klasse erzeugt wurde.
-        /// </summary>
-        public static event EventHandler Created;
 
         /// <summary>
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
@@ -55,13 +26,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
         public override void Remove(Player player)
         {
-            throw new NotImplementedException();
+            //TODO: Spielgeschwindigkeit zurücksetzen, siehe Apply()
         }
-
-        /// <summary>
-        /// Konstante, die die Wirkungsdauer des PowerUps festlegt
-        /// </summary>
-        private const float duration = 0.0f;
 
         /// <summary>
         /// Erstellt ein SlowMotion-PowerUps
@@ -71,16 +37,7 @@ namespace SpaceInvadersRemake.ModelSection
         public SlowMotion(Vector2 position, Vector2 velocity)
             : base (position, velocity)
         {
-            throw new System.NotImplementedException();
-        }
-
-        /// <summary>
-        /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
-        /// Sie sorgt dafür, dass das <c>Destroyed</c>-Event ausgelöst wird.
-        /// </summary>
-        protected override void Destroy()
-        {
-            throw new NotImplementedException();
+            type = PowerUpEnum.SlowMotion;
         }
     }
 }

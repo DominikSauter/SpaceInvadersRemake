@@ -62,56 +62,56 @@
   <Class Name="SpaceInvadersRemake.ModelSection.PowerUp">
     <Position X="26" Y="50.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgQAAAIAABAAAAAAAAIABAAAAABBAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\PowerUp.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.MultiShot">
     <Position X="24.25" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\MultiShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.PiercingShot">
     <Position X="20.75" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\PiercingShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Rapidfire">
     <Position X="22.5" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\Rapidfire.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Speedboost">
     <Position X="26" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\Speedboost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Deflector">
     <Position X="27.75" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\Deflector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.SlowMotion">
     <Position X="31.25" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\SlowMotion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.StaticShield">
     <Position X="29.5" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ModelSection\StaticShield.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -416,7 +416,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.FormationGenerator">
     <Position X="9" Y="35" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAQAAAAgAAAAAAAAAAABgAAAAAAACAgAA=</HashCode>
+      <HashCode>ABAAAAAAAAAAQAQAAgAAAAAAAAAAABgAAAAAAACAiAA=</HashCode>
       <FileName>ModelSection\FormationGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -695,7 +695,7 @@
   <Class Name="SpaceInvadersRemake.View.UIContent">
     <Position X="31.25" Y="3.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAgAAAAAAAAAAAAQAAAQAIACCAAAAAAACAAA=</HashCode>
+      <HashCode>AAAAAAAIAgAAAAAAAAAAAAQAAAQAIACCAgAAAAACAAA=</HashCode>
       <FileName>View\UIContent.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -718,7 +718,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.GameItemConstants">
     <Position X="13.75" Y="38.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ECAACAAiABAABMgAAQAAgAGAAAIAAgQAAAEBCAACAAA=</HashCode>
+      <HashCode>ECAACABiABAABMgAAQAAgAGAAAIAAgQAAAEBCAACAAA=</HashCode>
       <FileName>ModelSection\GameItemConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -732,7 +732,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.GameCourse">
     <Position X="16.5" Y="33" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAQAAAAAAAIRAAAAAAAAAAAAYAAQCAAAA=</HashCode>
+      <HashCode>AAAAQAAAAAAAQAAAAAAAIRAAAAAAAAAAAAYAAQCAAAA=</HashCode>
       <FileName>ModelSection\GameCourse.cs</FileName>
     </TypeIdentifier>
   </Class>

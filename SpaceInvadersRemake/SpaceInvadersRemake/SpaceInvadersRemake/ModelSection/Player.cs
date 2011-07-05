@@ -28,6 +28,22 @@ namespace SpaceInvadersRemake.ModelSection
         private int baseHitpoints;
 
         /// <summary>
+        /// Gibt an wie lange der Spieler noch unverwundbar ist
+        /// </summary>
+        private float invincibleTime;
+
+        /// <summary>
+        /// Gibt an ob der Spieler unverwundbar ist
+        /// </summary>
+        public bool IsInvincible
+        {
+            get
+            {
+                return (invincibleTime > 0.0f);
+            }
+        }
+
+        /// <summary>
         /// Die aktuelle Punktzahl des Spielers
         /// </summary>
         public int Score
@@ -51,11 +67,22 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Reset()
         {
+            //Spielerwerte zurücksetzen
             Hitpoints = baseHitpoints;
             Weapon = GameItemConstants.PlayerWeapon;
-            //ActivePowerUps.Clear();
             Velocity = baseVelocity;
             Position = startPosition;
+
+            //TODO: if rauswerfen, wenn PowerUps endgültig aktiiert sind
+            if (ActivePowerUps != null)
+            {
+                //PowerUpList leeren
+                ActivePowerUps.Clear();
+            }
+
+            // Spieler für kurze Zeit unverwundbar machen
+            //TODO: Wert in GameItemConstants auslagern
+            invincibleTime = 5.0f;
         }
 
         /// <summary>
@@ -138,8 +165,12 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner">Das GameItem mit dem die Kollision stattfand.</param>
         public override void IsCollidedWith(IGameItem collisionPartner)
         {
+            // Wenn der Spieler unverwundbar ist, kann hier schon abgebrochen werden
+            if (IsInvincible)
+                return;
+
             // Spieler können mit gegnerischen Projektilen und Schiffen kollidieren
-            // Außerdem auch mit PowerUps, ab das kommt erst im Wahlteil
+            // Außerdem auch mit PowerUps, aber die müssen hier nicht behandelt werden, sondern nur in deren IsCollidedWith-Methode
 
             if (!(collisionPartner is Enemy) && !(collisionPartner is Projectile))
                 return;
@@ -156,8 +187,6 @@ namespace SpaceInvadersRemake.ModelSection
             if (Player.Hit != null)
                 Player.Hit(this, EventArgs.Empty);
             Hitpoints -= collisionPartner.Damage;
-
-            //TODO: Kollision mit PowerUps ermöglichen
         }
 
 
@@ -167,7 +196,33 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public override void Update(GameTime gameTime)
         {
-            //TODO: PowerUp-System im Wahlteil hinzufügen
+            // Update den Unerwundbarkeits-Timer wenn nötig
+            if (IsInvincible)
+            {
+                invincibleTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
+            }
+
+            //TODO: if rauswerfen, wenn PowerUps entgültig aktiviert sind
+            if (ActivePowerUps != null)
+            {
+                // Update alle aktiven PowerUps
+                foreach (ActivePowerUp powerUp in ActivePowerUps)
+                {
+                    powerUp.Update(gameTime);
+                }
+                // Werfe alle abgelaufenen PowerUps aus der Liste und führe dabei das Remove-Delegate aus
+                ActivePowerUps.RemoveAll(delegate(ActivePowerUp powerUp)
+                                         {
+                                             bool timeOver = (powerUp.TimeLeft <= 0.0f);
+                                             if (timeOver)
+                                             {
+                                                 // Remove-Delegate ausführen
+                                                 if (powerUp.Remove != null)
+                                                     powerUp.Remove(this);
+                                             }
+                                             return timeOver;
+                                         });
+            }
         }
 
         /// <summary>
@@ -197,7 +252,31 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="powerUp">Das neue PowerUps</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
-            throw new NotImplementedException();
+            // Wenn das PowerUp ein Waffen-PowerUp ist, dann müssen alle anderen Waffen-PowerUps 
+            // aus der Liste entfernt werden, damit immer nur ein Waffen-PowerUp aktiv ist.
+            if ((powerUp.Type == PowerUpEnum.MultiShot)
+                    || (powerUp.Type == PowerUpEnum.PiercingShot)
+                    || (powerUp.Type == PowerUpEnum.Rapidfire))
+            {
+                ActivePowerUps.RemoveAll(delegate(ActivePowerUp p)
+                                         {
+                                             if ((p.Type == PowerUpEnum.MultiShot)
+                                                    || (p.Type == PowerUpEnum.PiercingShot)
+                                                    || (p.Type == PowerUpEnum.Rapidfire))
+                                             {
+                                                 return true;
+                                             }
+                                             else
+                                             {
+                                                 return false;
+                                             }
+                                         });
+            }
+
+            // Das neue PowerUp wird hinzugefügt und dessen Apply-Delegate ausgeführt
+            ActivePowerUps.Add(powerUp);
+            if (powerUp.Apply != null)
+                powerUp.Apply(this);
         }
 
         /// <summary>
@@ -233,7 +312,13 @@ namespace SpaceInvadersRemake.ModelSection
             this.baseHitpoints = hitpoints;
             this.Lives = lives;
 
-            ActivePowerUps = null; //TODO: PowerUps-Liste initialisieren
+            //TODO: Wert in GameItemConstants auslagern
+            this.invincibleTime = 5.0f;
+
+            
+            ActivePowerUps = null; //TODO: rauswerfen, wenn PowerUps endgültig aktiviert
+            //TODO: POWERUP_ENABLE hier Kommentar wegmachen
+            //ActivePowerUps = new List<ActivePowerUp>();
 
             Alien.ScoreGained += AddScore;
             Mothership.ScoreGained += AddScore;
