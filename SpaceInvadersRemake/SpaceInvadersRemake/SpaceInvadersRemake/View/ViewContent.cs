@@ -87,6 +87,11 @@ namespace SpaceInvadersRemake.View
             EffectContent.GameSong = Content.Load<Song>("Music/Spiel1");
             EffectContent.WeaponPlayer = Content.Load<SoundEffect>("Soundeffects/Laser_Spieler_Normal");
             EffectContent.WeaponEnemy = Content.Load<SoundEffect>("Soundeffects/Laser_Alien_Normal");
+            EffectContent.MothershipSound = Content.Load<SoundEffect>("Soundeffects/Mutterschiff");
+            EffectContent.ShieldHit = Content.Load<SoundEffect>("Soundeffects/SchildTreffer1");
+            EffectContent.ExplosionSound = Content.Load<SoundEffect>("Soundeffects/Explosion1");
+            EffectContent.EnemyHit = Content.Load<SoundEffect>("Soundeffects/Treffer1");
+            EffectContent.PlayerHit = Content.Load<SoundEffect>("Soundeffects/Treffer2");
         }
 
         /// <summary>

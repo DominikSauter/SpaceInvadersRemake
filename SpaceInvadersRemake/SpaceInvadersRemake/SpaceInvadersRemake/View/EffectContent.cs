@@ -34,6 +34,24 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
+        public SoundEffect ShieldHit
+        {
+            get;
+            set;
+        }
+
+        public SoundEffect PlayerHit
+        {
+            get;
+            set;
+        }
+
+        public SoundEffect EnemyHit
+        {
+            get;
+            set;
+        }
+
         public Song GameSong
         {
             get;
