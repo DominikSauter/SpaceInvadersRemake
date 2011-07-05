@@ -16,11 +16,15 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erzeugt ein <c>ActivePowerUp</c>
         /// </summary>
         /// <param name="timeLeft">Die Wirkungsdauer des PowerUps</param>
+        /// <param name="type">Art des PowerUps</param>
         /// <param name="apply">Die Funktion, mit der das PowerUps angewendet wird</param>
         /// <param name="remove">Die Funktion, mit der das PowerUps rückgängig gemacht wird</param>
-        public ActivePowerUp(float timeLeft, PowerUpAction apply, PowerUpAction remove)
+        public ActivePowerUp(float timeLeft, PowerUpEnum type, PowerUpAction apply, PowerUpAction remove)
         {
-            throw new System.NotImplementedException();
+            this.TimeLeft = timeLeft;
+            this.Type = type;
+            this.Apply = apply;
+            this.Remove = remove;
         }
 
         /// <summary>
@@ -28,13 +32,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public float TimeLeft
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -42,13 +41,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public PowerUpAction Remove
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -56,13 +50,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public PowerUpAction Apply
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -70,13 +59,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public PowerUpEnum Type
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            private set;
         }
 
         /// <summary>
@@ -85,7 +69,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">aktuelle Spielzeit</param>
         public void Update(GameTime gameTime)
         {
-            throw new System.NotImplementedException();
+            TimeLeft -= (float)gameTime.ElapsedGameTime.TotalSeconds;
         }
     }
 }
