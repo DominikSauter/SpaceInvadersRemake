@@ -78,7 +78,7 @@ namespace SpaceInvadersRemake.View
 
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             Matrix rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(this.angle));
-            this.World = Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up) * rotation;
+            this.World = rotation * Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up);
 
             ((ModelHitsphere)GameItem.BoundingVolume).World = this.World;
 
