@@ -114,8 +114,6 @@ public class ControllerManager : IController
         
         shootingFrequency = desiredController.DifficultyLevel.ShootingFrequencyMultiplier;
         
-        if (shootingFrequency > 1)
-            throw new ArgumentException("Frequenz ist zu hoch um mit dem Algorithmus klar zu kommen.");
 
         if (desiredController.DifficultyLevel.VelocityIncreaseMultiplier != null)
         {
@@ -177,7 +175,7 @@ public class ControllerManager : IController
 
             switch (GameConfig.Default.Input)
             {
-                //HACK hier für neue Eingabemöglichkeit neuen case einfügen.
+                //TODO hier für neue Eingabemöglichkeit neuen case einfügen.
 
                 case SupportedInputEnum.Keyboard:
 

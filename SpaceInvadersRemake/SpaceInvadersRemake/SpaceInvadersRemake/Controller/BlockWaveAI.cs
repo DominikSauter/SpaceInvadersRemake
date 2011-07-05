@@ -136,8 +136,10 @@ namespace SpaceInvadersRemake.Controller
 
             float alienFreqInHz = this.ShootingFrequency / this.AlienMatrix.Count;
             float alienFreqInFrame = alienFreqInHz * (float)game.TargetElapsedTime.TotalSeconds;
-           
-            //Hack by CK Fehlerüberprüfung in Controller Creation ausgelagert.
+
+            //UNDONE @Steffen überprüfe ob Eception hier korrekt
+            if (alienFreqInFrame > 1)
+                throw new ArgumentException("Frequenz ist zu hoch um mit dem Algorithmus klar zu kommen.");
 
             // zu der Wahrscheinlichkeit soll jetzt jedes Alien was schießen kann, schießen:
            
