@@ -73,12 +73,8 @@ namespace SpaceInvadersRemake.ModelSection
             Velocity = baseVelocity;
             Position = startPosition;
 
-            //TODO: if rauswerfen, wenn PowerUps endgültig aktiiert sind
-            if (ActivePowerUps != null)
-            {
-                //PowerUpList leeren
-                ActivePowerUps.Clear();
-            }
+            //PowerUpList leeren
+            ActivePowerUps.Clear();
 
             // Spieler für kurze Zeit unverwundbar machen
             //TODO: Wert in GameItemConstants auslagern
@@ -202,27 +198,23 @@ namespace SpaceInvadersRemake.ModelSection
                 invincibleTime -= (float)gameTime.ElapsedGameTime.TotalSeconds;
             }
 
-            //TODO: if rauswerfen, wenn PowerUps entgültig aktiviert sind
-            if (ActivePowerUps != null)
+            // Update alle aktiven PowerUps
+            foreach (ActivePowerUp powerUp in ActivePowerUps)
             {
-                // Update alle aktiven PowerUps
-                foreach (ActivePowerUp powerUp in ActivePowerUps)
-                {
-                    powerUp.Update(gameTime);
-                }
-                // Werfe alle abgelaufenen PowerUps aus der Liste und führe dabei das Remove-Delegate aus
-                ActivePowerUps.RemoveAll(delegate(ActivePowerUp powerUp)
-                                         {
-                                             bool timeOver = (powerUp.TimeLeft <= 0.0f);
-                                             if (timeOver)
-                                             {
-                                                 // Remove-Delegate ausführen
-                                                 if (powerUp.Remove != null)
-                                                     powerUp.Remove(this);
-                                             }
-                                             return timeOver;
-                                         });
+                powerUp.Update(gameTime);
             }
+            // Werfe alle abgelaufenen PowerUps aus der Liste und führe dabei das Remove-Delegate aus
+            ActivePowerUps.RemoveAll(delegate(ActivePowerUp powerUp)
+                                        {
+                                            bool timeOver = (powerUp.TimeLeft <= 0.0f);
+                                            if (timeOver)
+                                            {
+                                                // Remove-Delegate ausführen
+                                                if (powerUp.Remove != null)
+                                                    powerUp.Remove(this);
+                                            }
+                                            return timeOver;
+                                        });
         }
 
         /// <summary>
@@ -312,13 +304,12 @@ namespace SpaceInvadersRemake.ModelSection
             this.baseHitpoints = hitpoints;
             this.Lives = lives;
 
+            // Spieler für kurze Zeit unverwundbar machen
             //TODO: Wert in GameItemConstants auslagern
             this.invincibleTime = 5.0f;
 
-            
-            ActivePowerUps = null; //TODO: rauswerfen, wenn PowerUps endgültig aktiviert
-            //TODO: POWERUP_ENABLE hier Kommentar wegmachen
-            //ActivePowerUps = new List<ActivePowerUp>();
+            //PowerUp-Liste initialisieren
+            ActivePowerUps = new List<ActivePowerUp>();
 
             Alien.ScoreGained += AddScore;
             Mothership.ScoreGained += AddScore;
