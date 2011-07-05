@@ -116,7 +116,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 100;
+                return 400;
             }
         }
 
