@@ -179,9 +179,19 @@ namespace SpaceInvadersRemake.View
                 }
             }
 
+            // Setzt die Schildfarbe abhängig von den relativen HP - TB
+            float relativeHP = (float)GameItem.Hitpoints / (float)GameItemConstants.ShieldHitpoints;
+            Color shieldColor = new Color(1.0f - relativeHP, relativeHP, 0.0f);
+
+            for (int i = 0; i < vertices.Length; i++)
+            {
+                vertices[i].Color = shieldColor;
+            }
+
+            //UNDONE: Falls der neue Code irgenwie noch Probleme macht - TB
             //Hitpointsabhängige Colorierung der schilde
             //TODO: Passendere Fraben finden
-              if (GameItem.Hitpoints < totalHitpoints * 2 / 3) {
+            /*  if (GameItem.Hitpoints < totalHitpoints * 2 / 3) {
                 for (int i = 0; i < vertices.Length; i++) 
                 {
                     vertices[i].Color = Color.Yellow;
@@ -194,7 +204,7 @@ namespace SpaceInvadersRemake.View
                         vertices[i].Color = Color.Red;
                     }
                 }
-            }
+            }*/
 
 
             effect.World = this.World;
