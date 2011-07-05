@@ -84,7 +84,7 @@ namespace SpaceInvadersRemake.View
                 rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(25));
                 this.lastPosition = currentPosition;
             }
-            ((ModelHitsphere)GameItem.BoundingVolume).World = World;
+            ((ModelHitsphere)GameItem.BoundingVolume).World = this.World;
 
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
