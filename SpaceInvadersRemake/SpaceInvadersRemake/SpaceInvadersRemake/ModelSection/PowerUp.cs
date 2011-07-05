@@ -100,6 +100,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         protected override void Destroy()
         {
+            IsAlive = false;
             if (PowerUp.Destroyed != null)
                 PowerUp.Destroyed(this, EventArgs.Empty);
         }
