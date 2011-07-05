@@ -53,8 +53,6 @@ namespace SpaceInvadersRemake.View
                 //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
                 this.ViewItemList.Add(CreateGameUI(currentState, graphics));
 
-
-                //AUSKOMMENTIERT ZUM AUSFÜHREN!
                 this.EffectPlayer = new SoundEffects();
 
                 this.random = new Random();
@@ -73,11 +71,11 @@ namespace SpaceInvadersRemake.View
                 Mothership.Created += CreateMothership;
                 Shield.Created += CreateShield;
                 Projectile.Created += CreateProjectile;
+                PowerUp.Created += CreatePowerUp;
 
                 /* [WAHL]
                  * (created)
                  * Miniboss.Created += CreateMiniboss;
-                 * PowerUp... += CreatePowerUp;
                  * 
                  * (weaponFired)
                  * PiercingShotWeapon.WeaponFired += ShootSFX;
@@ -86,7 +84,9 @@ namespace SpaceInvadersRemake.View
                  * */
 
 
-                //AUSKOMMENTIERT ZUM AUSFÜHREN!
+                /*
+                 * [Dodo] Wird vorerst nicht benötigt, da Wahl mit niedriger Prio!
+                 * *
                 //destroyed
                 /*Player.Destroyed += ExplosionFX;
                 Alien.Destroyed += ExplosionFX;
@@ -317,9 +317,9 @@ namespace SpaceInvadersRemake.View
                     break;
             }
 
-            ProjectileRepresentation projectileRepresentation = new ProjectileRepresentation((Projectile)projectile, texture, graphics, effect, player);
+            ProjectileRepresentation projectileRepresentation = new ProjectileRepresentation(currentProjectile, texture, graphics, effect, player);
             this.ViewItemList.Add(projectileRepresentation);
-            ((ModelHitsphere)((Projectile)projectile).BoundingVolume).World = projectileRepresentation.World;
+            ((ModelHitsphere)(currentProjectile).BoundingVolume).World = projectileRepresentation.World;
         }
 
         /// <summary>
@@ -333,7 +333,22 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreatePowerUp(object powerUp, EventArgs e)
         {
-            throw new System.NotImplementedException();
+            Texture2D texture;
+            PowerUp PowerUpItem = (PowerUp)powerUp;
+
+            if (powerUp is PiercingShot || powerUp is Rapidfire || powerUp is MultiShot)
+            {
+                texture = ViewContent.RepresentationContent.PowerUpTextureWeapon;
+            }
+            else //if (powerUp is Speedboost || powerUp is Deflector || powerUp is SlowMotion)
+            {
+                texture = ViewContent.RepresentationContent.PowerUpTextureUtility;
+            }
+
+            PowerUpRepresentation powerUpRepresentation = new PowerUpRepresentation(PowerUpItem, texture, graphics);
+            PowerUpItem.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.PowerUpHitsphere);
+            this.ViewItemList.Add(powerUpRepresentation);
+            ((ModelHitsphere)(PowerUpItem).BoundingVolume).World = powerUpRepresentation.World;
         }
 
         /// <summary>
@@ -379,20 +394,7 @@ namespace SpaceInvadersRemake.View
         {
             GameManager gameMngr = (GameManager)game;
             this.gameTime = gameTime; //[Anji] für die Schildanimation
-            /*
-             * Diese Schleife funktioniert auf jedenfall
-            for (int listCount = ViewItemList.Count; listCount > 0; listCount--)
-            {
-                IView item = ViewItemList[listCount - 1];
-                if (item is GameItemRepresentation)
-                {
-                    if (!((GameItemRepresentation)item).GameItem.IsAlive)
-                    {
-                        this.ViewItemList.Remove(item);
-                    }
-                }
-            }*/
-
+            
             /*
              * RemoveAll entfernt alle Element die die Bedingung im Delegate erfüllen.
              * Dazu wird ein anonymes Deleaget erstellt welches die Bedingungen beinhaltet.
@@ -430,12 +432,7 @@ namespace SpaceInvadersRemake.View
             Mothership.Created -= CreateMothership;
             Shield.Created -= CreateShield;
             Projectile.Created -= CreateProjectile;
-
-            //destroyed
-            Player.Destroyed -= ExplosionFX;
-            Alien.Destroyed -= ExplosionFX;
-            Mothership.Destroyed -= ExplosionFX;
-            Shield.Destroyed -= ExplosionFX;
+            PowerUp.Created -= CreatePowerUp;
 
             //weaponFired
             PlayerNormalWeapon.WeaponFired -= ShootSFX;

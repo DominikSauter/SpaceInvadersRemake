@@ -66,7 +66,9 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.MothershipModel = Content.Load<Model>("3D Models/Mutterschiff");
             RepresentationContent.PlayerTexture = Content.Load<Texture2D>("3D Model Textures/Spieler");
             RepresentationContent.MothershipTexture = Content.Load<Texture2D>("3D Model Textures/Mutterschiff");
-
+            RepresentationContent.PowerUp = Content.Load<Model>("3D Models/PowerUp");
+            RepresentationContent.PowerUpTextureWeapon = Content.Load<Texture2D>("3D Model Textures/BoxTexturWeapon");
+            RepresentationContent.PowerUpTextureUtility = Content.Load<Texture2D>("3D Model Textures/BoxTexturUtility");
             /*
              * Schleife zum Laden der Alientexturen. Diese sind/müssen mit "AlienTextur#" benannt sein
              * wobei # die Nummer der Textur ist.
@@ -93,11 +95,13 @@ namespace SpaceInvadersRemake.View
         public static void ComputeHitspheres()
         {
             //Berechnen der Hitboxen / Laden des Representation Contents
-             RepresentationContent.PlayerHitsphere = computeBigModelHitsphere(RepresentationContent.PlayerModel);
-             RepresentationContent.AlienHitsphere = computeBigModelHitsphere(RepresentationContent.AlienModel);
-             RepresentationContent.MothershipHitsphere = computeBigModelHitsphere(RepresentationContent.MothershipModel);
-             RepresentationContent.ShieldHitsphere = computeBigTextureHitsphere(RepresentationContent.ShieldTexture);
-             RepresentationContent.ProjectileNormalHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileNormal);
+            RepresentationContent.PlayerHitsphere = computeBigModelHitsphere(RepresentationContent.PlayerModel);
+            RepresentationContent.AlienHitsphere = computeBigModelHitsphere(RepresentationContent.AlienModel);
+            RepresentationContent.MothershipHitsphere = computeBigModelHitsphere(RepresentationContent.MothershipModel);
+            RepresentationContent.ShieldHitsphere = computeBigTextureHitsphere(RepresentationContent.ShieldTexture);
+            RepresentationContent.ProjectileNormalHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileNormal);
+            RepresentationContent.PowerUpHitsphere = computeBigModelHitsphere(RepresentationContent.PowerUp);
+            
             //<WAHL>
             //RepresentationContent.BossHitsphere = computeBigModelHitsphere(RepresentationContent.BossModel);
             //RepresentationContent.ProjectilePiercingHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectilePiercing);

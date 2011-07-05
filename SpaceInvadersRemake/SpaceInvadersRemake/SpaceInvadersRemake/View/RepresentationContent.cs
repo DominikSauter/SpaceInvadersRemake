@@ -86,7 +86,25 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
-        public List<Texture2D> PowerUps
+        public Texture2D PowerUpTextureUtility
+        {
+            get;
+            set;
+        }
+
+        public Texture2D PowerUpTextureWeapon
+        {
+            get;
+            set;
+        }
+
+        public Model PowerUp
+        {
+            get;
+            set;
+        }
+
+        public ModelHitsphere PowerUpHitsphere
         {
             get;
             set;
