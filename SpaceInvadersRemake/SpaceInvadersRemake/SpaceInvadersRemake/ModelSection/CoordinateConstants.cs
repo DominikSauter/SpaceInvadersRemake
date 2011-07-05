@@ -64,7 +64,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 100.0f;  // HACK: Spielfeldgröße wie besprochen angepasst (von 75.0f) [D. Sauter]
+                return 100.0f;  
             }
         }
 
@@ -75,7 +75,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return -100.0f; // HACK: Spielfeldgröße wie besprochen angepasst (von -75.0f) [D. Sauter]
+                return -100.0f;
             }
         }
 
