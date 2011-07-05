@@ -73,6 +73,7 @@ namespace SpaceInvadersRemake.Controller
                 MenuBack(state);
             }
 
+
             // Prüfe ob das zu kontrollierende Objekt ein Menü ist
             if (Controllee is Menu)
             {
@@ -122,7 +123,7 @@ namespace SpaceInvadersRemake.Controller
                         }
                         else if (input[0].Equals(Keys.Back))
                         {
-                            //HACK falls Back löscht zuviel zeichen
+                            //TODO falls Back löscht zuviel zeichen
                             highscore.NewEntry.Name.Remove(highscore.NewEntry.Name.Length - 1);
 
                         }

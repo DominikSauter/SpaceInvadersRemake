@@ -52,7 +52,7 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Shooting(Game game, GameTime gameTime)
         {
-            //Hack für /FA11000W/ (Mutterschiff schießt) - ck
+            //TODO für /FA11000W/ (Mutterschiff schießt) - ck
 
         }
     }
