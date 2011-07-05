@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake.ModelSection
 
                     // Überprüfe ob ein neues Power generiert werden soll, breche ab falls nicht
                     double rand = random.NextDouble();
-                    if (powerUpProbability > rand)
+                    if (powerUpProbability < rand)
                         return;
 
                     //HACK: Wert muss irgenwo anders gespeichert werden
