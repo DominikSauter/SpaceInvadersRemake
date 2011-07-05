@@ -69,20 +69,20 @@ namespace SpaceInvadersRemake.View
         public override void Draw(SpriteBatch spriteBatch)
         {
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
-            float direction = 0.0f;
+            Matrix rotation = Matrix.Identity;
             if (currentPosition.X > this.lastPosition.X)
             {
                 playerMoved = true;
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
+                rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(-25));
                 this.lastPosition = currentPosition;
-                direction = -1.0f;
             }
             else if (currentPosition.X < lastPosition.X)
             {
                 playerMoved = true;
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
+                rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(25));
                 this.lastPosition = currentPosition;
-                direction = 1.0f;
             }
             ((ModelHitsphere)GameItem.BoundingVolume).World = World;
 
@@ -99,14 +99,7 @@ namespace SpaceInvadersRemake.View
                     effect.Texture = this.playerTexture;
                     effect.View = Camera;
                     effect.Projection = Projection;
-                    if (this.playerMoved)
-                    {
-                        effect.World = Matrix.CreateRotationZ(MathHelper.ToRadians(direction * 25)) * this.World;
-                    }
-                    else
-                    {
-                        effect.World = this.World;
-                    }
+                    effect.World = rotation * this.World;
                 }
 
                 mesh.Draw();
