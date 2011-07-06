@@ -35,6 +35,14 @@ namespace SpaceInvadersRemake.View
         //Hilfsarray, welches die Reihenfolge der Vertices festlegt
         private int[] indices;
 
+        //Texture Atlas Informationen
+        int columns = 5;
+        int rows = 5;
+        int column = 0;
+        int row = 0;
+        float frameSize = 1 / 5f; // 1 wäre die Gesamtlänge vom Texture-Atlas
+
+
 
         /// <summary>
         /// Erstellt eine Representation eines stationären Schildes.
@@ -93,6 +101,7 @@ namespace SpaceInvadersRemake.View
             indices[4] = 3;
             indices[5] = 2;
 
+
         }
 
         /// <summary>
@@ -130,13 +139,6 @@ namespace SpaceInvadersRemake.View
             //Update Zähler um zu wissen wann das Frame welchseln soll.
             this.update++;
 
-            //Texture Atlas Informationen
-            int columns = 5;
-            int rows = 5;
-            int column = 0;
-            int row = 0;
-            float frameSize = 1 / 5f; // 1 wäre die Gesamtlänge vom Texture-Atlas
-
             //Animation: Fängt bei erstem Frame, in diesem Fall links unten, an und geht nach rechts und nach oben alle Frames durch
             //Geht zum nächsten Frame bei jedem Update
             if (this.update == 1) 
@@ -161,22 +163,22 @@ namespace SpaceInvadersRemake.View
                 vertices[3].TextureCoordinate = textureRightTop;
 
                 //nächster Frame
-                column++;
+                this.column++;
 
                 //Wenn die letzte Spalte erreicht ist, gehe zur ersten Spalte.
-                if (column == (columns - 1))
+                if (this.column == (this.columns - 1))
                 {
-                    column = 0;
+                    this.column = 0;
 
                     //Wenn die letze Reihe erreicht ist, fange wieder von vorne an.
-                    if (row == (rows - 1))
+                    if (this.row == (this.rows - 1))
                     {
-                        row = 0;
+                        this.row = 0;
                     }
                     //nächste Reihe
                     else
                     {
-                        row++;
+                        this.row++;
                     }
                 }
             }
