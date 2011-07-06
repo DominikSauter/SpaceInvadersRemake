@@ -80,5 +80,15 @@ namespace SpaceInvadersRemake.StateMachine
             this.stateManager.State = newState;
             this.Dispose();            
         }
+
+        // ADDED (by STST): 06.07.2010
+        /// <summary>
+        /// Zeigt die Optionen an und wechselt damit den Zustand.
+        /// </summary>
+        public void ShowOptions()
+        {
+            OptionsState newState = new OptionsState(this.stateManager, this.game, this);
+            this.stateManager.State = newState;
+        }
     }
 }
