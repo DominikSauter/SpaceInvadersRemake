@@ -16,9 +16,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
         public override void Apply(Player player)
         {
-            //TODO: Wert anpassen
             // Spielergeschwindigkeit erhöhen
-            player.Velocity = 1.5f * GameItemConstants.PlayerVelocity;
+            player.Velocity = GameItemConstants.SpeedboostFactor * GameItemConstants.PlayerVelocity;
         }
 
         /// <summary>
@@ -41,8 +40,7 @@ namespace SpaceInvadersRemake.ModelSection
             : base(position, velocity)
         {
             type = PowerUpEnum.Speedboost;
-            //TODO: In GameItemConstants auslagern
-            duration = 15.0f;
+            duration = GameItemConstants.SpeedboostDuration;
         }
     }
 }

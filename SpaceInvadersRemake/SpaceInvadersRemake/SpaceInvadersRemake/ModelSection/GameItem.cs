@@ -12,6 +12,27 @@ namespace SpaceInvadersRemake.ModelSection
     {
 
         /// <summary>
+        /// Faktor zur Zeitbeeinflussung
+        /// </summary>
+        private static float timeFactor = 1.0f;
+
+        /// <summary>
+        /// Gibt den Faktor der Zeitbeeinflussung zurück und setzt ihn, wenn der neue Wert über 0 ist
+        /// </summary>
+        public static float TimeFactor
+        {
+            get
+            {
+                return timeFactor;
+            }
+            set
+            {
+                if (value > 0.0f)
+                    timeFactor = value;
+            }
+        }
+
+        /// <summary>
         /// Diese Methode wird aufgerufen, wenn die Lebenspunkte auf den Wert 0 oder darunter sinken.
         /// Sie sorgt dafür, dass das <c>Destroyed</c>-Event ausgelöst wird.
         /// </summary>

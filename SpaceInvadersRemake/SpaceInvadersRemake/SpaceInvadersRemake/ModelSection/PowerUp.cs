@@ -56,10 +56,10 @@ namespace SpaceInvadersRemake.ModelSection
         public override void Update(GameTime gameTime)
         {
             // Bewegt das PowerUp nach unten
-            Position += Velocity * CoordinateConstants.Down * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            Position += Velocity * CoordinateConstants.Down * (float)gameTime.ElapsedGameTime.TotalSeconds * GameItem.TimeFactor;
 
             // Wenn das PowerUp aus dem Spielfeld fliegt, dann wird es Zerstört
-            if (Position.Y < CoordinateConstants.BottomBorder)
+            if (Position.Y < 1.25 * CoordinateConstants.BottomBorder)
             {
                 Hitpoints = 0;
             }

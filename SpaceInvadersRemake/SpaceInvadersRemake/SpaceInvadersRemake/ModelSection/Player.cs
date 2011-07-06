@@ -77,8 +77,7 @@ namespace SpaceInvadersRemake.ModelSection
             ActivePowerUps.Clear();
 
             // Spieler für kurze Zeit unverwundbar machen
-            //TODO: Wert in GameItemConstants auslagern
-            invincibleTime = 5.0f;
+            invincibleTime = GameItemConstants.PlayerInvincibleTime;
         }
 
         /// <summary>
@@ -134,7 +133,7 @@ namespace SpaceInvadersRemake.ModelSection
             
 
             //Muss vll wieder geändert werden
-            Position += Velocity * direction * (float)gameTime.ElapsedGameTime.TotalSeconds;
+            Position += Velocity * direction * (float)gameTime.ElapsedGameTime.TotalSeconds * GameItem.TimeFactor;
 
             if (Position.X < CoordinateConstants.LeftBorder)
             {
@@ -305,8 +304,7 @@ namespace SpaceInvadersRemake.ModelSection
             this.Lives = lives;
 
             // Spieler für kurze Zeit unverwundbar machen
-            //TODO: Wert in GameItemConstants auslagern
-            this.invincibleTime = 5.0f;
+            this.invincibleTime = GameItemConstants.PlayerInvincibleTime;
 
             //PowerUp-Liste initialisieren
             ActivePowerUps = new List<ActivePowerUp>();

@@ -361,5 +361,115 @@ namespace SpaceInvadersRemake.ModelSection
                 return new Vector2(80.0f, 80.0f);
             }
         }
+
+        /// <summary>
+        /// Wirkungsdauer eines MultiShot-PowerUps
+        /// </summary>
+        public static float MultiShotDuration
+        {
+            get
+            {
+                return 15.0f;
+            }
+        }
+
+        /// <summary>
+        /// Wirkungsdauer eines PiercingShot-PowerUps
+        /// </summary>
+        public static float PiercingShotDuration
+        {
+            get
+            {
+                return 15.0f;
+            }
+        }
+
+        /// <summary>
+        /// Zeitspanne, in der der Spieler, nach einem Treffer und nach Spielstart, unverwundbar ist
+        /// </summary>
+        public static float PlayerInvincibleTime
+        {
+            get
+            {
+                return 3.0f;
+            }
+        }
+
+        /// <summary>
+        /// Geschwindigkeit der PowerUps
+        /// </summary>
+        public static Vector2 PowerUpVelocity
+        {
+            get
+            {
+                return new Vector2(40.0f, 40.0f);
+            }
+        }
+
+        /// <summary>
+        /// Wahrscheinlichkeit, dass ein PowerUp von einem Zerstörten Alien fallengelassen wird
+        /// </summary>
+        public static double PowerUpProbability
+        {
+            get
+            {
+                return 0.1;
+            }
+        }
+
+        /// <summary>
+        /// Wirkungsdauer eines Rapidfire-PowerUps
+        /// </summary>
+        public static float RapidfireDuration
+        {
+            get
+            {
+                return 15.0f;
+            }
+        }
+
+        /// <summary>
+        /// Wirkungsdauer eines SlowMotion-PowerUps
+        /// </summary>
+        public static float SlowMotionDuration
+        {
+            get
+            {
+                return 5.0f;
+            }
+        }
+
+        /// <summary>
+        /// Wirkungsdauer eines Speedboost-PowerUps
+        /// </summary>
+        public static float SpeedboostDuration
+        {
+            get
+            {
+                return 15.0f;
+            }
+        }
+
+        /// <summary>
+        /// Der Faktor, mit dem die Spielergeschwindigkeit beim Speedboost multipliziert wird
+        /// </summary>
+        public static float SpeedboostFactor
+        {
+            get
+            {
+                return 1.5f;
+            }
+        }
+
+        /// <summary>
+        /// Gibt den Faktor der Zeitlupe an
+        /// </summary>
+        public static float SlowMotionFactor
+        {
+            get
+            {
+                return 0.5f;
+            }
+        }
     }
 }

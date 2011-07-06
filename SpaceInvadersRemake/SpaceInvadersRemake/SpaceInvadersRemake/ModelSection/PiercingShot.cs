@@ -19,7 +19,6 @@ namespace SpaceInvadersRemake.ModelSection
         public override void Apply(Player player)
         {
             // Setzt neue Waffe
-            //TODO: wieder einkommentieren, wenn Waffen fertig sind
             player.Weapon = new PiercingShotWeapon();
         }
 
@@ -43,8 +42,7 @@ namespace SpaceInvadersRemake.ModelSection
             : base(position, velocity)
         {
             type = PowerUpEnum.PiercingShot;
-            //TODO: In GameItemConstants auslagern
-            duration = 15.0f;
+            duration = GameItemConstants.PiercingShotDuration;
         }
     }
 }

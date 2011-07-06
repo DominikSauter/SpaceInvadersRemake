@@ -99,5 +99,19 @@ namespace SpaceInvadersRemake.ModelSection
             if (Mothership.Destroyed != null)
                 Mothership.Destroyed(this, EventArgs.Empty);
         }
+
+        /// <summary>
+        /// In dieser Methode werden alle Werte aktualisiert, die nicht durch einen Controller beeinflusst werden können.
+        /// </summary>
+        /// <param name="gameTime">Spielzeit</param>
+        public override void Update(Microsoft.Xna.Framework.GameTime gameTime)
+        {
+            // Zerstöre das Mutterschiff, wenn es zu weit aus dem Spielfeld fliegt
+            if ((Position.X > 2.0f * CoordinateConstants.RightBorder)
+                || (Position.X < 2.0f * CoordinateConstants.LeftBorder))
+            {
+                Hitpoints = 0;
+            }
+        }
     }
 }

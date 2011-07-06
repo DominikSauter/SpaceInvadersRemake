@@ -18,8 +18,7 @@ namespace SpaceInvadersRemake.ModelSection
         public override void Apply(Player player)
         {
             // Neue Waffe setzen
-            //TODO: wieder einkommentieren, wenn Waffen fertig sind
-            //player.Weapon = new RapidfireWeapon();
+            player.Weapon = new RapidfireWeapon();
         }
 
         /// <summary>
@@ -42,8 +41,7 @@ namespace SpaceInvadersRemake.ModelSection
             : base(position, velocity)
         {
             type = PowerUpEnum.Rapidfire;
-            //TODO: In GameItemConstants auslagern
-            duration = 15.0f;
+            duration = GameItemConstants.RapidfireDuration;
         }
     }
 }
