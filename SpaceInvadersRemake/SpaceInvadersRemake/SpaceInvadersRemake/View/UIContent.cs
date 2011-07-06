@@ -62,5 +62,17 @@ namespace SpaceInvadersRemake.View
             get;
             set;
         }
+
+        public List<Texture2D> PowerUpIcons
+        {
+            get;
+            set;
+        }
+
+        public Texture2D StarAnimation
+        {
+            get;
+            set;
+        }
     }
 }

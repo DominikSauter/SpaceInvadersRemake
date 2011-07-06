@@ -21,9 +21,16 @@ namespace SpaceInvadersRemake.View
         private Texture2D gameBackgroundImage;
         private Texture2D hudBackgroundTexture;
         private SpriteFont font;
-        //[WAHL] private List<Texture2D> powerUpIcons;
+        private List<Texture2D> powerUpIcons;
         private Texture2D liveIcon;
         private StateMachine.InGameState inGameState;
+
+        //Textur, Rectangles und float's um die Sternenanimation zu ermöglichen
+        private Texture2D starAnimation;
+        private Rectangle starsTarget_1;
+        private Rectangle starsTarget_2;
+        private float starsOffset;
+        private float starsSpeed;
 
         /// <summary>
         /// Initialisiert die Spieloberfläche
@@ -39,8 +46,14 @@ namespace SpaceInvadersRemake.View
             this.gameBackgroundImage = ViewContent.UIContent.GameBackgroundImage;
             this.hudBackgroundTexture = ViewContent.UIContent.HUDBackground;
             this.liveIcon = ViewContent.UIContent.LiveIcon;
-            //[WAHL] this.powerUpIcons
+            this.powerUpIcons = ViewContent.UIContent.PowerUpIcons;
 
+            //Rectangles werden übereinander positioniert, das 2te ausserhalb des bildes.
+            this.starAnimation = ViewContent.UIContent.StarAnimation;
+            this.starsTarget_1 = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+            this.starsTarget_2 = new Rectangle(0, -graphics.PreferredBackBufferHeight, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
+            this.starsOffset = 0.0f;
+            this.starsSpeed = 0.1f;
         }
 
         /// <summary>
@@ -82,12 +95,34 @@ namespace SpaceInvadersRemake.View
                 liveColor = Color.Green;
             }
 
+            this.starsTarget_1.Y += (int)this.starsOffset;
+            this.starsTarget_2.Y += (int)this.starsOffset;
+            if (starsTarget_1.Y > graphics.PreferredBackBufferHeight)
+            {
+                this.starsTarget_1.Y = 0;
+                this.starsTarget_2.Y = -graphics.PreferredBackBufferHeight;
+            }
+            this.starsOffset += this.starsSpeed;
+            if (this.starsOffset >= 1.1f)
+            {
+                this.starsOffset = 0.0f;
+            }
+
+            //neuer DepthStencilState, damit keine Objekte über dem HUD gezeichnet werden.
+            DepthStencilState drawStencil = new DepthStencilState();
+            drawStencil.StencilEnable = true;
+
 
             spriteBatch.Begin();
 
             //zeichnet das Hintergrundbild in Abhängigkeit von der Auflösung des Fensters
             spriteBatch.Draw(this.gameBackgroundImage, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
-            
+            spriteBatch.Draw(this.starAnimation, starsTarget_1, Color.White);
+            spriteBatch.Draw(this.starAnimation, this.starsTarget_2, Color.White);
+
+            spriteBatch.End();
+
+            spriteBatch.Begin(SpriteSortMode.Immediate, null, null, drawStencil, null);
             //zeichnet die HUD-Kacheln abhängig von der Breite des Fensters
             for (int tileCount = 0; tileCount < hudTileCount; tileCount++)
             {
