@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public PiercingShotWeapon()
         {
-            this.cooldown = GameItemConstants.PlayerNormalWeaponCooldown / 3;
+            this.cooldown = (int)(GameItemConstants.PlayerNormalWeaponCooldown * 1.5f);
             this.projectileDamage = GameItemConstants.PiercingProjectileDamage;
             this.projectileHitpoints = GameItemConstants.PiercingProjectileHitpoints;
             this.projectileType = ProjectileTypeEnum.PiercingProjectile;
