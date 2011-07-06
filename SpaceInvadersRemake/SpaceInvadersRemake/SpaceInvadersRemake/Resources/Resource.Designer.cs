@@ -61,7 +61,7 @@ namespace SpaceInvadersRemake.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Hyperspace Pirates *A.R.R*.
+        ///   Looks up a localized string similar to Hyperspace Pirates *A.R.R.*.
         /// </summary>
         public static string Game_Titel {
             get {
