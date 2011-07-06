@@ -259,7 +259,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(CoordinateConstants.LeftBorder, CoordinateConstants.TopBorder);
+                return new Vector2(-200.0f, CoordinateConstants.TopBorder);
             }
         }
 
