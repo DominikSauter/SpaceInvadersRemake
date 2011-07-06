@@ -40,15 +40,10 @@ namespace SpaceInvadersRemake.Controller
 
 
 
-        /// <summary>
-        /// Eigenschaft Controllees Liste (kontrollierte Objekte)
-        /// </summary>
-        // DESIGN (by STST): 29.06.2011
-        //Hack: Wieso override mit identischer implementierung ?
-        protected override ICollection<IGameItem> Controllees { get; set; }
+        //Private Felder
+        private Vector2 VelocityIncreasePerFrame;
 
-        //Private Methoden
-
+        #region Private Methoden
         /// <summary>
         /// Ändert die Richtung.
         /// </summary>
@@ -65,7 +60,8 @@ namespace SpaceInvadersRemake.Controller
             {
                 return CoordinateConstants.Left;
             }
-        }
+        } 
+        #endregion
 
         /// <summary>
         /// Kümmert sich um die Bewegung der GameItem
@@ -74,32 +70,39 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         protected override void Movement(Game game, GameTime gameTime)
         {
+
+            //Umrechnung von V/s in V/frame
+            VelocityIncreasePerFrame = (this.VelocityIncrease * (float)game.TargetElapsedTime.TotalSeconds);
+
+            
             //Ausführung des Runter Kommandos aus vorigem Frame.
             if (moveDown)
             {
                 //Navigiert alle GameItem nach unten.
                 foreach (IGameItem item in Controllees)
                 {
-                    
-                        item.Move(CoordinateConstants.Down, gameTime);
-
-                        //GameItem werden schneller
-                        item.Velocity += this.VelocityIncrease;
-
-
+                    // Geschwindigkeitserhöhung
+                    item.Velocity += VelocityIncreasePerFrame;
+    
+                    //Befehl an GameItem
+                    item.Move(CoordinateConstants.Down, gameTime);
                 }
+                
+                //MoveDown ausgeführt !
                 moveDown = false;
             }
             else //Bewegung in Richtung aktuelle Richtung.
             {
                 foreach (IGameItem item in Controllees)
                 {
-                    
-                        if (!(item.Move(currentDirection, gameTime)))
-                        {
-                            moveDown = true;
 
-                        }
+                    // Geschwindigkeitserhöhung
+                    item.Velocity += VelocityIncreasePerFrame;
+    
+                    if (!(item.Move(currentDirection, gameTime)))
+                    {
+                        moveDown = true;
+                    }
 
                 }
             }
