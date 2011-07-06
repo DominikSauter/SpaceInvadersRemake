@@ -43,9 +43,10 @@ namespace SpaceInvadersRemake.StateMachine
 
             
             controls.Add(new Button(Resource.Label_ReturnToGame, new Action(Back)));
-            //TODO: Wollten wir nicht vom Pausemenü ins Optionsmenu kommen? - TB
+            // STST
+            controls.Add(new Button(Resource.Label_Options, new Action(ShowOptions)));
             controls.Add(new Button(Resource.Label_QuitGame, new Action(ExitGame)));
-
+            
             Model = new Menu(controls);
         }
 
