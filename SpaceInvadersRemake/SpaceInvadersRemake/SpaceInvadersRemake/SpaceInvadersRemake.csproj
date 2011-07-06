@@ -299,10 +299,12 @@
     <None Include="Settings\GameConfig.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>GameConfig.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="Settings\KeyboardConfig.settings">
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>KeyboardConfig.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </None>
     <None Include="StateMachine\StateMachine.cd" />
   </ItemGroup>

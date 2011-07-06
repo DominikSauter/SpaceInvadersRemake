@@ -100,6 +100,8 @@ namespace SpaceInvadersRemake.Controller
                 //Erlaube nur ein Key gleichzeitig
                 if (input.GetLength(0) == 1)
                 {
+
+                    
                     if (KeyPressed(input[0]))
                     {
 
@@ -123,22 +125,33 @@ namespace SpaceInvadersRemake.Controller
                         }
                         else if (input[0].Equals(Keys.Back))
                         {
-                            //TODO falls Back löscht zuviel zeichen
-                            highscore.NewEntry.Name.Remove(highscore.NewEntry.Name.Length - 1);
-
+                            if (highscore.NewEntry.Name.Length > 0)
+                            {
+                                /*
+                                 * Vom Getter erhält man nur eine Kopie des Strings, daher
+                                 * muss die Modifikation des Strings anschließend in der Namens Property gesetzt werden.
+                                 */
+                                highscore.NewEntry.Name = highscore.NewEntry.Name.Remove(highscore.NewEntry.Name.Length - 1);
+                                
+                            }
                         }
 
 
                       //Namenseingabe Zeichenbasiert
                         else
                         {
-                            foreach (Keys item in validKeys)
-                            {
-                                if (item.Equals(input[0]))
-                                {
-                                    highscore.NewEntry.Name += item.ToString();
-                                    break; //mod by ck 4.7.11
 
+                            //Maximale Zeichenlänge für Namen = 15
+                            if (highscore.NewEntry.Name.Length < 15)   
+                            {
+                                foreach (Keys item in validKeys)
+                                {
+                                    if (item.Equals(input[0]))
+                                    {
+                                        highscore.NewEntry.Name += item.ToString();
+                                        break; //mod by ck 4.7.11
+
+                                    } 
                                 }
                             }
                         }
