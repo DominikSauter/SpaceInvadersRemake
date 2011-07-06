@@ -44,7 +44,7 @@ namespace SpaceInvadersRemake.ModelSection
             }
 
             // Wenn der Gegner nah unten aus dem Spielfeld fliegt, wird er zum Löschen markiert
-            if (Position.X < 1.25f * CoordinateConstants.BottomBorder)
+            if (Position.Y < 1.25f * CoordinateConstants.BottomBorder)
             {
                 IsAlive = false;
             }
