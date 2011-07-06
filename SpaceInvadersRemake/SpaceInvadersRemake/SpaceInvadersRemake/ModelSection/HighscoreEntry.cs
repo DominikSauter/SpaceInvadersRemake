@@ -8,6 +8,13 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public class HighscoreEntry
     {
+        // ADDED (by STST): 06.07.2011
+        /// <summary>
+        /// Erstellt einen neuen Highscore-Eintrag
+        /// </summary>
+        public HighscoreEntry()
+        { }
+
         /// <summary>
         /// Erstellt einen neuen Highscore-Eintrag
         /// </summary>
@@ -18,6 +25,7 @@ namespace SpaceInvadersRemake.ModelSection
             this.Name = name;
             this.Score = score;
         }
+
         /// <summary>
         /// Name des Spielers
         /// </summary>
@@ -33,7 +41,9 @@ namespace SpaceInvadersRemake.ModelSection
         public int Score
         {
             get;
-            private set;
+            // MODIFIED (by STST): 06.07.2011
+            //private set;
+            set;
         }
     }
 }
