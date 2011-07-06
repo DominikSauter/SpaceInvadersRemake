@@ -150,8 +150,7 @@ namespace SpaceInvadersRemake.ModelSection
                 if (random.Next(10000) <= 6)    // Mutterschiff-Wahrscheinlichkeit etwa 1/30 pro Sekunde
                 {
                     Vector2[] formation = { GameItemConstants.MothershipPosition };
-                    DifficultyLevel difficultyLevel = new DifficultyLevel(1.0f, new Vector2(1.5f, 1.5f), 1.0f, new Vector2(1.0f, 1.0f), 1.0f, 10.0f);
-                    WaveGenerator.CreateWave(BehaviourEnum.MothershipMovement, formation, difficultyLevel);
+                    WaveGenerator.CreateWave(BehaviourEnum.MothershipMovement, formation, DifficultyLevel.EasyDifficulty);
 
                     lastMothership = gameTime.TotalGameTime.TotalMilliseconds + mothershipCooldown;
                 }

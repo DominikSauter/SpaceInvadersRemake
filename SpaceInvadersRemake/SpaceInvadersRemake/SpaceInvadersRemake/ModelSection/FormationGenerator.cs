@@ -130,18 +130,29 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Erzeugt eine Liste von Gegner-Objekten aus einem Vector2-Array.
         /// </summary>
+        /// <param name="AI">Art der Welle</param>
         /// <param name="hitpoints">Lebenspunkte</param>
         /// <param name="velocity">Geschwindigkeit</param>
         /// <param name="formation">Formation der Welle</param>
         /// <param name="damage">Kollisionsschaden</param>
         /// <param name="scoreGain">Abschusspunktzahl</param>
         /// <returns>Die generierte Liste von Gegnern</returns>
-        public static LinkedList<IGameItem> CreateFormation(int hitpoints, Vector2 velocity, Vector2[] formation, int damage, int scoreGain)
+        public static LinkedList<IGameItem> CreateFormation(BehaviourEnum AI, int hitpoints, Vector2 velocity, Vector2[] formation, int damage, int scoreGain)
         {
             LinkedList<IGameItem> wave = new LinkedList<IGameItem>();
-            for (int i = 0; i < formation.Length; i++)
+            if (AI.Equals(BehaviourEnum.MothershipMovement))
             {
-                wave.AddLast(new Alien(formation[i], velocity, hitpoints, damage, GameItemConstants.AlienWeapon, scoreGain));
+                for (int i = 0; i < formation.Length; i++)
+                {
+                    wave.AddLast(new Mothership(formation[i], velocity, hitpoints, damage, GameItemConstants.MothershipWeapon, scoreGain));
+                }
+            }
+            else
+            {
+                for (int i = 0; i < formation.Length; i++)
+                {
+                    wave.AddLast(new Alien(formation[i], velocity, hitpoints, damage, GameItemConstants.AlienWeapon, scoreGain));
+                }
             }
             return wave;
         }

@@ -28,14 +28,31 @@ namespace SpaceInvadersRemake.ModelSection
         /// <returns>Eine Liste von Gegnern, die die aktuelle Welle darstellen</returns>
         public static LinkedList<IGameItem> CreateWave(BehaviourEnum AI, Vector2[] formation, DifficultyLevel difficultyLevel)
         {
-            int hitpoints = (int)(GameItemConstants.AlienHitpoints * difficultyLevel.HitpointsMultiplier);
+            int hitpoints;
             Vector2 velocity;
-            velocity.X = GameItemConstants.AlienVelocity.X * difficultyLevel.VelocityMultiplier.X;
-            velocity.Y = GameItemConstants.AlienVelocity.Y * difficultyLevel.VelocityMultiplier.Y;
-            int damage = (int)(GameItemConstants.AlienDamage * difficultyLevel.DamageMultiplier);
-            int scoreGain = (int)(GameItemConstants.AlienScoreGain * difficultyLevel.ScoreGainMultiplier);
+            int damage;
+            int scoreGain;
+            LinkedList<IGameItem> wave = null;
+            if (AI.Equals(BehaviourEnum.MothershipMovement))
+            {
+                hitpoints = (int)(GameItemConstants.MothershipHitpoints * difficultyLevel.HitpointsMultiplier);
+                velocity.X = GameItemConstants.MothershipVelocity.X * difficultyLevel.VelocityMultiplier.X;
+                velocity.Y = GameItemConstants.MothershipVelocity.Y * difficultyLevel.VelocityMultiplier.Y;
+                damage = (int)(GameItemConstants.MothershipDamage * difficultyLevel.DamageMultiplier);
+                scoreGain = (int)(GameItemConstants.MothershipScoreGain * difficultyLevel.ScoreGainMultiplier);
 
-            LinkedList<IGameItem> wave = FormationGenerator.CreateFormation(hitpoints, velocity, formation, damage, scoreGain);
+                wave = FormationGenerator.CreateFormation(BehaviourEnum.MothershipMovement, hitpoints, velocity, formation, damage, scoreGain);
+            }
+            else
+            {
+                hitpoints = (int)(GameItemConstants.AlienHitpoints * difficultyLevel.HitpointsMultiplier);
+                velocity.X = GameItemConstants.AlienVelocity.X * difficultyLevel.VelocityMultiplier.X;
+                velocity.Y = GameItemConstants.AlienVelocity.Y * difficultyLevel.VelocityMultiplier.Y;
+                damage = (int)(GameItemConstants.AlienDamage * difficultyLevel.DamageMultiplier);
+                scoreGain = (int)(GameItemConstants.AlienScoreGain * difficultyLevel.ScoreGainMultiplier);
+
+                wave = FormationGenerator.CreateFormation(BehaviourEnum.BlockMovement, hitpoints, velocity, formation, damage, scoreGain);
+            }
 
             if (WaveGenerated != null)
             {
