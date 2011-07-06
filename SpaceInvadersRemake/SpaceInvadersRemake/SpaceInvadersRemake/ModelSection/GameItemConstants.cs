@@ -317,5 +317,49 @@ namespace SpaceInvadersRemake.ModelSection
                 return new MothershipWeapon();
             }
         }
+
+        /// <summary>
+        /// Der standardmäßige Cooldown der PlayerNormalWeapon in Milisekunden.
+        /// </summary>
+        public static int PlayerNormalWeaponCooldown
+        {
+            get
+            {
+                return 1000;
+            }
+        }
+
+        /// <summary>
+        /// Der standardmäßige (Kollisions-)Schaden der PiercingProjectiles.
+        /// </summary>
+        public static int PiercingProjectileDamage
+        {
+            get
+            {
+                return 10;
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßigen Lebenspunkte der PiercingProjectiles.
+        /// </summary>
+        public static int PiercingProjectileHitpoints
+        {
+            get
+            {
+                return 60;
+            }
+        }
+
+        /// <summary>
+        /// Die standardmäßige Geschwindigkeit der PiercingProjectiles.
+        /// </summary>
+        public static Vector2 PiercingProjectileVelocity
+        {
+            get
+            {
+                return new Vector2(80.0f, 80.0f);
+            }
+        }
     }
 }
