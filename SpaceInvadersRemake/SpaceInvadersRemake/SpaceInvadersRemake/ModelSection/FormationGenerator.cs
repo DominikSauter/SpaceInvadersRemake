@@ -154,6 +154,7 @@ namespace SpaceInvadersRemake.ModelSection
                     wave.AddLast(new Alien(formation[i], velocity, hitpoints, damage, GameItemConstants.AlienWeapon, scoreGain));
                 }
             }
+
             return wave;
         }
     }
