@@ -49,7 +49,7 @@ namespace SpaceInvadersRemake.ModelSection
             if (gameTime.TotalGameTime.TotalMilliseconds >= lastShot)
             {
                 new Projectile(position, shootingDirection, projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
-                lastShot = gameTime.TotalGameTime.TotalMilliseconds + cooldown;
+                lastShot = gameTime.TotalGameTime.TotalMilliseconds + (cooldown * (1 / GameItem.TimeFactor));
 
                 if (WeaponFired != null)
                 {
