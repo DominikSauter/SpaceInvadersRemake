@@ -69,11 +69,13 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                Vector2[] formation = {new Vector2(0f, 10f),
-                                          new Vector2(-10f, 20f), new Vector2(0f, 20f), new Vector2(10f, 20f),
-                                          new Vector2(-20f, 30f), new Vector2(-10f, 30f), new Vector2(0f, 30f), new Vector2(10f, 30f), new Vector2(20f, 30f),
-                                          new Vector2(-30f, 40f), new Vector2(-20f, 40f), new Vector2(-10f, 40f), new Vector2(10f, 40f), new Vector2(20f, 40f), new Vector2(30f, 40f),
-                                          new Vector2(-40f, 50f), new Vector2(-30f, 50f), new Vector2(-20f, 50f), new Vector2(0f, 50f), new Vector2(20f, 50f), new Vector2(30f, 50f), new Vector2(40f, 50f)};
+                float ad = alienDistance;
+                Vector2 bp = basePoint;
+                Vector2[] formation = {new Vector2(bp.X, bp.Y),
+                                          new Vector2(bp.X - ad, bp.Y + ad), new Vector2(bp.X, bp.Y + ad), new Vector2(bp.X + ad, bp.Y + ad),
+                                          new Vector2(bp.X - (2 * ad), bp.Y + (2 * ad)), new Vector2(bp.X - ad, bp.Y + (2 * ad)), new Vector2(bp.X, bp.Y + (2 * ad)), new Vector2(bp.X + ad, bp.Y + (2 * ad)), new Vector2(bp.X + (2 * ad), bp.Y + (2 * ad)),
+                                          new Vector2(bp.X - (3 * ad), bp.Y + (3 * ad)), new Vector2(bp.X - (2 * ad), bp.Y + (3 * ad)), new Vector2(bp.X - ad, bp.Y + (3 * ad)), new Vector2(bp.X + ad, bp.Y + (3 * ad)), new Vector2(bp.X + (2 * ad), bp.Y + (3 * ad)), new Vector2(bp.X + (3 * ad), bp.Y + (3 * ad)),
+                                          new Vector2(bp.X - (4 * ad), bp.Y + (4 * ad)), new Vector2(bp.X - (3 * ad), bp.Y + (4 * ad)), new Vector2(bp.X - (2 * ad), bp.Y + (4 * ad)), new Vector2(bp.X, bp.Y + (4 * ad)), new Vector2(bp.X + (2 * ad), bp.Y + (4 * ad)), new Vector2(bp.X + (3 * ad), bp.Y + (4 * ad)), new Vector2(bp.X + (4 * ad), bp.Y + (4 * ad))};
                 return formation;
             }
         }
