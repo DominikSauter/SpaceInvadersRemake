@@ -36,7 +36,7 @@ namespace SpaceInvadersRemake.Controller
         }
 
         //Private Felder
-        private Keys[] validKeys = { Keys.Q, Keys.W, Keys.E, Keys.R, Keys.T, Keys.Z, Keys.U, Keys.I, 
+        private Keys[] validKeys = { Keys.Q, Keys.W, Keys.E, Keys.R, Keys.T, Keys.Z, Keys.U, Keys.I, Keys.O,
                                        Keys.P, Keys.A, Keys.S, Keys.D, Keys.F, Keys.G, Keys.H, Keys.J, 
                                        Keys.K, Keys.L, Keys.Y, Keys.X, Keys.C, Keys.V, Keys.B, Keys.N, Keys.M };
         
