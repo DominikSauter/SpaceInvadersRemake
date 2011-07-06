@@ -106,7 +106,9 @@ namespace SpaceInvadersRemake.ModelSection
             // Speichert die Highscore-Liste ab
             for (int i = 0; i < highscore.Count; i++)
             {
-                swOutput.WriteLine(highscore[i].Name + " " + highscore[i].Score.ToString());
+                //UNDONE Trennzeichen geändert
+                //swOutput.WriteLine(highscore[i].Name + " " + highscore[i].Score.ToString());
+                swOutput.WriteLine(highscore[i].Name + "#" + highscore[i].Score.ToString());
             }
 
             // Schließt die Datei
@@ -169,7 +171,10 @@ namespace SpaceInvadersRemake.ModelSection
             // Dabei wird sichergestellt, dass maximal 10 Einträge eingelesen werden.
             while (((line = srInput.ReadLine()) != null) && (count < 10))
             {
-                entryData = line.Split(' ');
+              
+                //UNDONE Trennzeichen geändert
+                // entryData = line.Split(' ');
+                entryData = line.Split('#');
                
                 name = entryData[0];
                 score = Convert.ToInt32(entryData[1]);
