@@ -55,11 +55,6 @@ namespace SpaceInvadersRemake.View
             this.soundEffects[this.soundEffects.Count - 1].Play();
         }
 
-        public void Update()
-        {
-        }
-
-
         public bool Repeat
         {
             get;

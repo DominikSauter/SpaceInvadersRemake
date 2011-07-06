@@ -34,7 +34,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ModelInitialize()
         {
-            throw new NotImplementedException();
+            Model = new ModelDummy();
         }
 
         /// <summary>

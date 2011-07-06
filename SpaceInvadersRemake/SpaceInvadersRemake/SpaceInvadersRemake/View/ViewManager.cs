@@ -144,6 +144,12 @@ namespace SpaceInvadersRemake.View
             private set;
         }
 
+        public static IMediaplayer VideoPlayer
+        {
+            get;
+            private set;
+        }
+
         /// <summary>
         /// Soundeffekt für das Abfeuern der Spielerwaffe.
         /// </summary>
@@ -431,9 +437,18 @@ namespace SpaceInvadersRemake.View
                 }
             });
 
-            foreach (IView item in this.ViewItemList)
+            if (EffectPlayer is Intro)
             {
-                item.Draw(gameMngr.spriteBatch);
+                Intro video = (Intro)EffectPlayer;
+                video.Play(ViewContent.EffectContent.IntroVideo);
+                video.drawVideo(gameMngr.spriteBatch);
+            }
+            else
+            {
+                foreach (IView item in this.ViewItemList)
+                {
+                    item.Draw(gameMngr.spriteBatch);
+                }
             }
         }
 
