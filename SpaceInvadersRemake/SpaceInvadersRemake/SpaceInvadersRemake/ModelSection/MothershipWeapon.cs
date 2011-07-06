@@ -16,17 +16,10 @@ namespace SpaceInvadersRemake.ModelSection
         public static event EventHandler WeaponFired;
 
         /// <summary>
-        /// Referenz auf das Spielerobjekt.
-        /// </summary>
-        private Player player;
-
-        /// <summary>
         /// Konstruktor
         /// </summary>
-        /// <param name="player">Spielerobjekt</param>
-        public MothershipWeapon(Player player)
+        public MothershipWeapon()
         {
-            this.player = player;
         }
 
         /// <summary>
