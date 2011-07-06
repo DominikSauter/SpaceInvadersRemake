@@ -5,6 +5,8 @@ using System.Text;
 
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
+using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.View
 {
@@ -13,12 +15,18 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class Intro : IMediaplayer
     {
+        private VideoPlayer videoPlayer;
+        private float volume;
+        private bool repeat;
+
         /// <summary>
         /// Initialisiert das Introvideo
         /// </summary>
         public Intro()
         {
-            throw new System.NotImplementedException();
+            this.videoPlayer = new VideoPlayer();
+            this.Volume = Settings.GameConfig.Default.MasterVolume;
+            this.Repeat = false;
         }
 
         /// <summary>
@@ -32,11 +40,12 @@ namespace SpaceInvadersRemake.View
         {
             get
             {
-                throw new NotImplementedException();
+                return this.volume;
             }
             set
             {
-                throw new NotImplementedException();
+                this.volume = value;
+                this.videoPlayer.Volume = value;
             }
         }
 
@@ -49,11 +58,12 @@ namespace SpaceInvadersRemake.View
         {
             get
             {
-                throw new NotImplementedException();
+                return this.repeat;
             }
             set
             {
-                throw new NotImplementedException();
+                this.repeat = value;
+                this.videoPlayer.IsLooped = value;
             }
         }
 
@@ -62,7 +72,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public void Stop()
         {
-            throw new NotImplementedException();
+            this.videoPlayer.Stop();
         }
 
         /// <summary>
@@ -71,7 +81,6 @@ namespace SpaceInvadersRemake.View
         /// <param name="SoundFX">Soundeffekt</param>
         public void Play(SoundEffect SoundFX)
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -80,7 +89,6 @@ namespace SpaceInvadersRemake.View
         /// <param name="Background">Hintergrundmusik</param>
         public void Play(Song Background)
         {
-            throw new NotImplementedException();
         }
 
         /// <summary>
@@ -89,7 +97,28 @@ namespace SpaceInvadersRemake.View
         /// <param name="intro">Introvideo</param>
         public void Play(Video intro)
         {
-            throw new NotImplementedException();
+            if (videoPlayer.State == MediaState.Stopped)
+            {
+                videoPlayer.Play(intro);
+            }
+        }
+
+        public void drawVideo(SpriteBatch spriteBatch)
+        {
+            Texture2D videoTexture = null;
+
+            if (videoPlayer.State != MediaState.Stopped)
+            {
+                videoTexture = videoPlayer.GetTexture();
+            }
+                
+
+            if (videoTexture != null)
+            {
+                spriteBatch.Begin();
+                spriteBatch.Draw(videoTexture, new Rectangle(0, 0, 400, 300), Color.White);
+                spriteBatch.End();
+            }
         }
     }
 }

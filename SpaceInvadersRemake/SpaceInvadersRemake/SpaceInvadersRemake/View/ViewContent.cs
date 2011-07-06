@@ -83,6 +83,7 @@ namespace SpaceInvadersRemake.View
             //</WAHL>
 
             //Laden des EffectContents
+            EffectContent.IntroVideo = Content.Load<Video>("Videos/Intro");
             EffectContent.MenuSong = Content.Load<Song>("Music/Menü");
             EffectContent.GameSong = Content.Load<Song>("Music/Spiel1");
             EffectContent.WeaponPlayer = Content.Load<SoundEffect>("Soundeffects/Laser_Spieler_Normal");
