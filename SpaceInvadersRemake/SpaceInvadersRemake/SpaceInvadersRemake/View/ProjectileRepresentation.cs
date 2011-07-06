@@ -13,6 +13,9 @@ namespace SpaceInvadersRemake.View
 {
     /// <summary>
     /// Stellt die vom Spieler oder von Gegnern abgefeuerten Projektile dar.
+    /// Dabei wird ein 3D Objekt (Rechteck) erzeugt, auf das die ProjektilTextur gezeichnet wird.
+    /// Unterschiedliche Projektile, z.B. von Spieler und Aliens werden unterschiedlich dargestellt,
+    /// sowie die verschiedenen Projektilarten an sich.
     /// </summary>
     public class ProjectileRepresentation : GameItemRepresentation
     {
@@ -25,24 +28,31 @@ namespace SpaceInvadersRemake.View
         private VertexPositionColorTexture[] vertices;
         private BasicEffect effect;
 
-        //Hilfs-Array zum Zusammensetzen der Polygone
+        //Hilfsarray, welches die Reihenfolge der Vertices festlegt
         private int[] indices;
 
 
         /// <summary>
         /// Erstellt eine Representation eines Projektils.
         /// </summary>
+        /// <param name="projectile">Projektil(typ)</param>
+        /// <param name="texture">Projektiltextur</param>
+        /// <param name="graphics">DeviceManager</param>
+        /// <param name="effect">BasicEffect</param>
+        /// <param name="color">Projektilfärbung</param>
         public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics, BasicEffect effect, Vector3 color)
         {
-            this.texture = texture;
             GameItem = projectile;
+            this.texture = texture;
             this.colorProjectile = color;
             this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
-            this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = effect;
+            this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
+
             //Eckpunkte des Rechtecks
             this.vertices = new VertexPositionColorTexture[4];
+
             //6 Punkte für zwei polygone, um ein Rechteck zu zeichnen
             this.indices = new int[6];
 
@@ -55,7 +65,7 @@ namespace SpaceInvadersRemake.View
             indices[4] = 3;
             indices[5] = 2;
 
-            //Viereck aufbauen
+            //3-dimensionales Rechteck aufbauen für die 3 dimensionale Darstellung des Projektils (mit Hitsphere)
             Vector3 leftBot = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width / 2.0f, -texture.Height / 2.0f));
             Vector3 leftTop = PlaneProjector.Convert2DTo3D(new Vector2(-texture.Width / 2.0f, texture.Height / 2.0f));
             Vector3 rightBot = PlaneProjector.Convert2DTo3D(new Vector2(texture.Width / 2.0f, -texture.Height / 2.0f));
@@ -69,22 +79,26 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// 
+        /// Zeichnet das Projektil
         /// </summary>
-        /// <param name="spriteBatch"></param>
+        /// <param name="spriteBatch">spriteBatch</param>
         public override void Draw(SpriteBatch spriteBatch)
         {
+            //DephStencilState setzen damit 3D und 2D Objekte gleichzeitig richtig angezeigt werden können
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+
+            //Rotationsmatrix für Projektile mit schräger Flugrichtung
             Matrix rotate = Matrix.Identity; 
 
+            //Neue, aktuelle Position des Projektil GameItems
             Vector3 newPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
 
-
+            //Wenn sich die X-Richtung verändert, also das Projektil schräg fliegt soll es auch schräg gezeichnet werden
             if (newPosition.Z > this.position.Z || newPosition.Z < this.position.Z)
             {
-                //Wenn es schräg zur seite geht drehen
                 if (newPosition.X > this.position.X || newPosition.X < this.position.X) //In den konstruktor
-                { //nach rechts/links drehen abhängig von der Projektil Flugrichtung
+                { 
+                     //Nach rechts/links drehen abhängig von der Flugrichtung
                      rotate = Matrix.CreateRotationZ(MathHelper.ToRadians((float)(Math.Atan((newPosition.X - this.position.X) / (newPosition.Z - this.position.Z)))));
                 }
                 this.position = newPosition;
@@ -99,8 +113,10 @@ namespace SpaceInvadersRemake.View
             //Projektil nach 'unten' versetzen, damit es unter dem Schiff erscheint
             Vector3 lower = new Vector3(0, -6, 0);
 
-            //Positionieren
+            //Im Raum Positionieren
             this.World = rotate * Matrix.CreateScale(scaleWidth, 0.0f, scaleHeight) * Matrix.CreateTranslation(this.position + lower);
+
+            //Hitsphere setzen
             ((ModelHitsphere)GameItem.BoundingVolume).World = World;
 
 
@@ -114,7 +130,8 @@ namespace SpaceInvadersRemake.View
             foreach (EffectPass pass in effect.CurrentTechnique.Passes)
             {
                 pass.Apply();
-
+                
+                //Das Primitive Rechteck zeichnen
                 graphics.GraphicsDevice.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, vertices, 0, 4, indices, 0, 2);
             }
         }

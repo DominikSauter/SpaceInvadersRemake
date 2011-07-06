@@ -16,6 +16,10 @@ namespace SpaceInvadersRemake.View
     /// Die MenuUI(MenuUserInterface) Klasse stellt die Menüoberfläche des Spiels dar.
     /// Sie bekommt eine Liste mit <c>MenuControl</c>-Objekten übergeben, anhand dieser <c>ButtonRepresentations</c>-Objekte erzeugt werden,
     /// die das Menü letzendlich darstellen.
+    /// Im Hauptmenü und im Pause-Menü werden Buttons auf dem Hintegrundbild gezeichnet. Im Pause-Menü wird das Bild lediglich schwarz
+    /// gefärbt und durchsichtig gemacht. 
+    /// Im den Einstellungsmenüs wird zusätzlich noch ein Rahmen(Frame) gezeichnet, der die Einstellungsflächen beinhaltet.
+    /// Eine Einstellungsfläche besteht aus einer Bezeichnung und einem Select-Feld, wo die Einstellungen vorgenomen werden.
     /// </summary>
     public class MenuUI : IView
     {
@@ -31,7 +35,8 @@ namespace SpaceInvadersRemake.View
         /// Initialisiert die Menüoberfläche
         /// </summary>
         /// <param name="buttons">MenuControls bzw. Buttons</param>
-        /// <param name="graphics"></param>
+        /// <param name="graphics">GraphicsDeviceManager</param>
+        /// <param name="currentState">aktueller State</param>
         public MenuUI(MenuControl[] buttons,  GraphicsDeviceManager graphics, StateMachine.State currentState)
         {
             this.background = ViewContent.UIContent.MenuBackgroundImage;
@@ -42,7 +47,7 @@ namespace SpaceInvadersRemake.View
             this.font = ViewContent.UIContent.Font;
             this.gameTitle = ViewContent.UIContent.GameTitle;
 
-            //Instanziiert ButtonRepresentation-Objekt für jedes MenuControl
+            //Instanziiert ein ButtonRepresentation-Objekt für jedes MenuControl
             for (int i = 0; i < buttons.Length; i++)
             {
                 buttonRepresentation[i] = new ButtonRepresentation(buttons[i]);
@@ -63,14 +68,14 @@ namespace SpaceInvadersRemake.View
 
             spriteBatch.Begin();
 
-            //Im Break-State wird ein schwarzer durchsichtiger Hintergrund gezeichnet
+            //Im Break-State wird ein schwarzer, durchsichtiger Hintergrund gezeichnet
             if (currentState is StateMachine.BreakState)
             {
                 spriteBatch.Draw(background, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), new Color(0, 0, 0, 0.5f));
             }
             else 
             {
-                //Zeichnen des Hintergrunds
+                //Zeichnen des Hintergrundbilds
                 spriteBatch.Draw(background, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
 
                 if (currentState is StateMachine.AudioOptionsState || currentState is StateMachine.VideoOptionsState) 
@@ -84,7 +89,7 @@ namespace SpaceInvadersRemake.View
                     {
                         spriteBatch.DrawString(this.font, Resource.Label_VIDEOOPTIONS, titlePosition, Color.White);
                     }
-                    //Frame zeichhen
+                    //Zeichnen des (Einstellungs-)Frames
                     spriteBatch.Draw(this.frame, new Rectangle((int)framePosition.X, (int)framePosition.Y, frame.Width, frame.Height * (3 / 2)), Color.White);
                     position = selectTitlePosition;
                 }
