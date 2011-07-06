@@ -74,6 +74,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// <remarks>"VelocityMultiplier" ist eine Modifikation für "FlightDirection", welche auf "Position" addiert wird, um die Bewegung zu simulieren.</remarks>
         public override void Update(GameTime gameTime)
         {
+            FlightDirection.Normalize();
+
             Position += FlightDirection * Velocity * (float)gameTime.ElapsedGameTime.TotalSeconds * GameItem.TimeFactor;
 
             if ((Position.X < 2.0f * CoordinateConstants.LeftBorder) || (Position.X > 2.0f * CoordinateConstants.RightBorder)
