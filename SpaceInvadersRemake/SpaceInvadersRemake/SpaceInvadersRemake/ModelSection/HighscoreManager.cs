@@ -248,7 +248,11 @@ namespace SpaceInvadersRemake.ModelSection
                 using (FileStream fs = new FileStream(hscFilePath, FileMode.Open))
                 {
                     XmlSerializer ser = new XmlSerializer(typeof(List<HighscoreEntry>));
-                    hsc = (List<HighscoreEntry>)ser.Deserialize(fs);
+                    using(System.Xml.XmlReader reader = System.Xml.XmlReader.Create(fs))
+                        if (ser.CanDeserialize(reader))
+                            hsc = (List<HighscoreEntry>)ser.Deserialize(fs);
+                        else
+                            hsc = new List<HighscoreEntry>();
                 }
             else
                 hsc = new List<HighscoreEntry>();
