@@ -175,9 +175,10 @@
     <value>~~~~~~~~~~~~~~~~~~~~~~~~~
 ~ Space Invaders Remake ~
 ~~~~~~~~~~~~~~~~~~~~~~~~~
-           ~preAlpha~
+           ~Alpha~
 
-An diesem Projekt waren beteiligt:
+Game Producing Team
+
      Anjela Mayer
      Christian Klotz
      Dominik Sauter
@@ -185,12 +186,12 @@ An diesem Projekt waren beteiligt:
      Steffen Stehmann
      Tobias Bast
 
-Wir danken einfach allen!</value>
+Special Thanks to all of you guys!</value>
   </data>
   <data name="NoName" xml:space="preserve">
     <value>Chuck Norris</value>
   </data>
   <data name="Game_Titel" xml:space="preserve">
-    <value>Space Invaders Remake</value>
+    <value>Hyperspace Pirates *A.R.R*</value>
   </data>
 </root>
