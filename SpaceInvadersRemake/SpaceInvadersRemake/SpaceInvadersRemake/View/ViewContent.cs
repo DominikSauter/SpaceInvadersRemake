@@ -60,6 +60,7 @@ namespace SpaceInvadersRemake.View
 
             //Laden des Representation Contents
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
+            RepresentationContent.ProjectilePiercing = Content.Load<Texture2D>("Graphics/Projektil_Piercing");
             RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/Schild_TextureAtlas");
             RepresentationContent.AlienModel = Content.Load<Model>("3D Models/Alienschiff");
             RepresentationContent.PlayerModel = Content.Load<Model>("3D Models/Spielerschiff");
@@ -107,6 +108,7 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.MothershipHitsphere = computeBigModelHitsphere(RepresentationContent.MothershipModel);
             RepresentationContent.ShieldHitsphere = computeBigTextureHitsphere(RepresentationContent.ShieldTexture);
             RepresentationContent.ProjectileNormalHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileNormal);
+            RepresentationContent.ProjectilePiercingHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectilePiercing);
             RepresentationContent.PowerUpHitsphere = computeBigModelHitsphere(RepresentationContent.PowerUp);
             
             //<WAHL>
