@@ -103,7 +103,8 @@ namespace SpaceInvadersRemake.View
             else if (currentState is StateMachine.IntroState)
             {
                 //da nur das Video abgespielt wird, benötigt man keine wirkliche Oberfläche.
-                EffectPlayer = new Intro();
+                EffectPlayer = new Intro(this.graphics);
+                this.ViewItemList.Add((Intro)EffectPlayer);
             }
             else if (currentState is StateMachine.HighscoreState)
             {
@@ -437,18 +438,13 @@ namespace SpaceInvadersRemake.View
                 }
             });
 
-            if (EffectPlayer is Intro)
+            foreach (IView item in this.ViewItemList)
             {
-                Intro video = (Intro)EffectPlayer;
-                video.Play(ViewContent.EffectContent.IntroVideo);
-                video.drawVideo(gameMngr.spriteBatch);
-            }
-            else
-            {
-                foreach (IView item in this.ViewItemList)
+                if (item is Intro)
                 {
-                    item.Draw(gameMngr.spriteBatch);
+                    ((Intro)item).Play(ViewContent.EffectContent.IntroVideo);
                 }
+                item.Draw(gameMngr.spriteBatch);
             }
         }
 

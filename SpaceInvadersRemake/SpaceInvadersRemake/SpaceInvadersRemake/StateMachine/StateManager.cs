@@ -33,6 +33,7 @@ namespace SpaceInvadersRemake.StateMachine
             this.State = new MainMenuState(this, game);
 
             // Wahl:
+            //UNDONE INTRO VIDEO Wer das Introvideo angezeigt bekommen will muss hier die Kommentation beides "this.State" Statements ändern. [Dodo]
             //this.State = new IntroState(this, game);
         }
 
