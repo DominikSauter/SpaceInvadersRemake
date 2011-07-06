@@ -42,8 +42,7 @@ namespace SpaceInvadersRemake.ModelSection
             : base(position, velocity)
         {
             type = PowerUpEnum.MultiShot;
-            //TODO: In GameItemConstants auslagern
-            duration = 15.0f;
+            duration = GameItemConstants.MultiShotDuration;
         }
     }
 }

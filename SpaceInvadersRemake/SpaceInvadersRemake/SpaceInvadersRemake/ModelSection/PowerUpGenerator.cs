@@ -28,23 +28,20 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="position">Position, an der das PowerUp erstellt werden soll</param>
         public static void GeneratePowerUp(PowerUpEnum type, Vector2 position)
         {
-            //TODO: Geschwindigkeit in GameItemConstants stecken, vll noch randomisieren
-            Vector2 velocity = new Vector2(40.0f, 40.0f);
+            Vector2 velocity = GameItemConstants.PowerUpVelocity;
 
             switch (type)
             {
                 case PowerUpEnum.Random:
 
-                    //TODO: Wert für PowerUp-Wahrscheinlichkeit in GameItemConstants auslagern
-                    //HACK: Wahrscheinlichkeit 1 zum testen
-                    double powerUpProbability = 1.0;
+                    double powerUpProbability = GameItemConstants.PowerUpProbability;
 
                     // Überprüfe ob ein neues Power generiert werden soll, breche ab falls nicht
                     double rand = random.NextDouble();
                     if (powerUpProbability < rand)
                         return;
 
-                    //HACK: Wert muss irgenwo anders gespeichert werden
+                    //HACK: Wert muss irgendwo anders gespeichert werden
                     // Wahrscheinlichkeit für einzelnes PowerUp berechnen
                     int numPowerUpTypes = 6;
                     double singleProbabiliy = 1.0 / (double)numPowerUpTypes;

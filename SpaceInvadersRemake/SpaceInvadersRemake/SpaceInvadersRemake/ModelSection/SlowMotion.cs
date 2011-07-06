@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
         public override void Apply(Player player)
         {
-            //TODO: Es muss noch eine möglichkeit geben, einen globalen Faktor für die Spielzeit zu setzen
+            GameItem.TimeFactor = GameItemConstants.SlowMotionFactor;
         }
 
         /// <summary>
@@ -26,7 +26,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
         public override void Remove(Player player)
         {
-            //TODO: Spielgeschwindigkeit zurücksetzen, siehe Apply()
+            GameItem.TimeFactor = 1.0f;
         }
 
         /// <summary>
@@ -38,8 +38,7 @@ namespace SpaceInvadersRemake.ModelSection
             : base (position, velocity)
         {
             type = PowerUpEnum.SlowMotion;
-            //TODO: In GameItemConstants auslagern
-            duration = 15.0f;
+            duration = GameItemConstants.SlowMotionDuration;
         }
     }
 }
