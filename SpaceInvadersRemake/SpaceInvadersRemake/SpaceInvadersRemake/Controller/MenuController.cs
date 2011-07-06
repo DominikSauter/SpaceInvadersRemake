@@ -176,6 +176,10 @@ namespace SpaceInvadersRemake.Controller
             {
                 ((HighscoreState)state).Exit();
             }
+            else if (state is IntroState)
+            {
+                ((IntroState)state).Exit();
+            }
             else
             {
                 try
