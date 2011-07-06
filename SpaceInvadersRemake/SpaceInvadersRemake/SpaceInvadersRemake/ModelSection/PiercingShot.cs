@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             // Setzt neue Waffe
             //TODO: wieder einkommentieren, wenn Waffen fertig sind
-            //player.Weapon = new PiercingShotWeapon();
+            player.Weapon = new PiercingShotWeapon();
         }
 
         /// <summary>

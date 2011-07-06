@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public PlayerNormalWeapon()
         {
-            this.cooldown = 1000;
+            this.cooldown = GameItemConstants.PlayerNormalWeaponCooldown;
             this.projectileDamage = GameItemConstants.PlayerNormalProjectileDamage;
             this.projectileHitpoints = GameItemConstants.PlayerNormalProjectileHitpoints;
             this.projectileType = ProjectileTypeEnum.PlayerNormalProjectile;
