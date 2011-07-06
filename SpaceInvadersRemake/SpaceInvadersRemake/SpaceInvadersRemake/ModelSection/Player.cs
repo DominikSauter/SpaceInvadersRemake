@@ -243,6 +243,13 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="powerUp">Das neue PowerUps</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
+            // Wenn ein gleiches PowerUp in der Liste ist, wird dieses gelöscht
+            PowerUpEnum newType = powerUp.Type;
+            ActivePowerUps.RemoveAll(delegate(ActivePowerUp p)
+                                     {
+                                         return (p.Type == newType);
+                                     });
+
             // Wenn das PowerUp ein Waffen-PowerUp ist, dann müssen alle anderen Waffen-PowerUps 
             // aus der Liste entfernt werden, damit immer nur ein Waffen-PowerUp aktiv ist.
             if ((powerUp.Type == PowerUpEnum.MultiShot)
