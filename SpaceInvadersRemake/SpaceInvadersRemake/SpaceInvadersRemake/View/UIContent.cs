@@ -74,5 +74,11 @@ namespace SpaceInvadersRemake.View
             get;
             set;
         }
+
+        public Texture2D SpeedUpIcon
+        {
+            get;
+            set;
+        }
     }
 }
