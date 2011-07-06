@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Gibt den Abstand zwischen zwei direkt benachbarten Aliens in einer Formation an und damit die Größe/Skalierung der Formation.
         /// </summary>
-        private static float alienDistance = 20.0f;
+        private static float alienDistance = 15.0f;
 
         /// <summary>
         /// Gibt den Fußpunkt einer Formation an, d.h. den mittigen X-Wert und den kleinsten Y-Wert der Formation.
@@ -105,11 +105,13 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                Vector2[] formation = {new Vector2(-30f, 10f), new Vector2(30f, 10f),
-                                          new Vector2(-40f, 20f), new Vector2(-30f, 20f), new Vector2(-20f, 20f), new Vector2(20f, 20f), new Vector2(30f, 20f), new Vector2(40f, 20f),
-                                          new Vector2(-50f, 30f), new Vector2(-30f, 30f), new Vector2(-10f, 30f), new Vector2(10f, 30f), new Vector2(30f, 30f), new Vector2(50f, 30f),
-                                          new Vector2(-30f, 40f), new Vector2(30f, 40f),
-                                          new Vector2(-30f, 50f), new Vector2(30f, 50f)};
+                float ad = alienDistance;
+                Vector2 bp = basePoint;
+                Vector2[] formation = {new Vector2(bp.X - (3 * ad), bp.Y), new Vector2(bp.X + (3 * ad), bp.Y),
+                                          new Vector2(bp.X - (4 * ad), bp.Y + ad), new Vector2(bp.X - (3 * ad), bp.Y + ad), new Vector2(bp.X - (2 * ad), bp.Y + ad), new Vector2(bp.X + (2 * ad), bp.Y + ad), new Vector2(bp.X + (3 * ad), bp.Y + ad), new Vector2(bp.X + (4 * ad), bp.Y + ad),
+                                          new Vector2(bp.X - (5 * ad), bp.Y + (2 * ad)), new Vector2(bp.X - (3 * ad), bp.Y + (2 * ad)), new Vector2(bp.X - ad, bp.Y + (2 * ad)), new Vector2(bp.X + ad, bp.Y + (2 * ad)), new Vector2(bp.X + (3 * ad), bp.Y + (2 * ad)), new Vector2(bp.X + (5 * ad), bp.Y + (2 * ad)),
+                                          new Vector2(bp.X - (3 * ad), bp.Y + (3 * ad)), new Vector2(bp.X + (3 * ad), bp.Y + (3 * ad)),
+                                          new Vector2(bp.X - (3 * ad), bp.Y + (4 * ad)), new Vector2(bp.X + (3 * ad), bp.Y + (4 * ad))};
                 return formation;
             }
         }
