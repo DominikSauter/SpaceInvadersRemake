@@ -159,12 +159,6 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
-        public List<Texture2D> PowerUpIcons
-        {
-            get;
-            set;
-        }
-
         public Vector3 PlayerProjektileColor
         {
             get;
