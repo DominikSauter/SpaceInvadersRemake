@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
-
+using SpaceInvadersRemake.Resources;
 using SpaceInvadersRemake.StateMachine;
 
 
@@ -26,10 +26,12 @@ namespace SpaceInvadersRemake
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
-            // <STST>
-            // Mehrsprachigkeit:
-            SpaceInvadersRemake.Resources.Resource.Culture = System.Threading.Thread.CurrentThread.CurrentCulture;
-            // </STST>
+            // <STST><ck>
+            // Mehrsprachigkeit: In der GameConfig.Language einstellbar: Englisch = en-US Deutsch = de-DE
+            Resource.Culture = System.Globalization.CultureInfo.CreateSpecificCulture(Settings.GameConfig.Default.Language);
+            //UNDONE Ersetzt durch Eintrag in Config Datei
+            //System.Threading.Thread.CurrentThread.CurrentCulture;
+            // </STST></CK>
         }
 
         /// <summary>
