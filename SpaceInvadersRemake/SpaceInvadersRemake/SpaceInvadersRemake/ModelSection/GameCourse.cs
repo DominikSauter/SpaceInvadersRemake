@@ -38,10 +38,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public GameCourse()
         {
-            random = new Random();
-            WaveCounter = 0;
             mothershipCooldown = 30000;
             lastMothership = -mothershipCooldown;
+            random = new Random();
+            WaveCounter = 0;
             InitializeGame();
         }
 
@@ -147,6 +147,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             if (gameTime.TotalGameTime.TotalMilliseconds >= lastMothership)
             {
+                // TODO: Evt. noch andere Wahrscheinlichkeitsberechnung implementieren
                 if (random.Next(10000) <= 6)    // Mutterschiff-Wahrscheinlichkeit etwa 1/30 pro Sekunde
                 {
                     Vector2[] formation = { GameItemConstants.MothershipPosition };

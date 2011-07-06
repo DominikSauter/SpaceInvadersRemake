@@ -45,6 +45,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             if (gameTime.TotalGameTime.TotalMilliseconds >= lastShot)
             {
+                // TODO: Schussrichtung-Berechnung neu überdenken (jetzige Berechnung nicht allgemein gültig)
                 int shots = 3;
                 float distance = 0.2f;
                 for (int i = 0; i < shots; i++)
