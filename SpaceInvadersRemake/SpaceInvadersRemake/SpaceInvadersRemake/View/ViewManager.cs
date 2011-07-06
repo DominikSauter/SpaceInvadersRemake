@@ -27,7 +27,6 @@ namespace SpaceInvadersRemake.View
         private GraphicsDeviceManager graphics;
         private Random random;
         private BasicEffect effect;
-        private GameTime gameTime; //[Anji] für die Schildanimation
 
         /// <summary>
         /// Erzeugt abhängig vom aktuellen Zustand in der <c>StateMachine</c> das passende
@@ -303,7 +302,7 @@ namespace SpaceInvadersRemake.View
         public void CreateShield(object shield, EventArgs e)
         {
             //[Anji] Weiterreichen der gameTime  für die Schildanimation
-            ShieldRepresentation shieldRepresentation = new ShieldRepresentation((Shield)shield, graphics, gameTime);
+            ShieldRepresentation shieldRepresentation = new ShieldRepresentation((Shield)shield, graphics);
             this.ViewItemList.Add(shieldRepresentation);
             ((Shield)shield).BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ShieldHitsphere);
             ((ModelHitsphere)((Shield)shield).BoundingVolume).World = shieldRepresentation.World;
@@ -320,7 +319,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void CreateProjectile(object projectile, EventArgs e)
         {
-            bool player = false;
+            Vector3 color = new Vector3(255, 255, 255);
             Projectile currentProjectile = (Projectile)projectile;
             Texture2D texture = ViewContent.RepresentationContent.ProjectileNormal;
 
@@ -328,23 +327,27 @@ namespace SpaceInvadersRemake.View
             {
                 case ProjectileTypeEnum.PlayerNormalProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileNormalHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
-                    player = true;
+                    color = ViewContent.RepresentationContent.PlayerProjektileColor;
                     break;
                 case ProjectileTypeEnum.EnemyNormalProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileNormalHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
+                    color = ViewContent.RepresentationContent.AlienProjektileColor;
                     break;
-                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectilePiercingHitsphere);
-                    texture = ViewContent.RepresentationContent.ProjectilePiercing;
+                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileNormalHitsphere);
+                    texture = ViewContent.RepresentationContent.ProjectileNormal;
+                    color = ViewContent.RepresentationContent.PlayerPiercingShotProjektileColor;
                     break;
                 case ProjectileTypeEnum.MothershipProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileMothershipHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileMothership;
+                    color = ViewContent.RepresentationContent.MothershipProjektileColor;
                     break;
                 case ProjectileTypeEnum.MinibossProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileBossHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileBoss;
+                    color = ViewContent.RepresentationContent.BossProjektileColor;
                     break;
             }
 
-            ProjectileRepresentation projectileRepresentation = new ProjectileRepresentation(currentProjectile, texture, graphics, effect, player);
+            ProjectileRepresentation projectileRepresentation = new ProjectileRepresentation(currentProjectile, texture, graphics, effect, color);
             this.ViewItemList.Add(projectileRepresentation);
             ((ModelHitsphere)(currentProjectile).BoundingVolume).World = projectileRepresentation.World;
         }
@@ -420,7 +423,6 @@ namespace SpaceInvadersRemake.View
         public void Update(Game game, GameTime gameTime, StateMachine.State state)
         {
             GameManager gameMngr = (GameManager)game;
-            this.gameTime = gameTime; //[Anji] für die Schildanimation
             
             /*
              * RemoveAll entfernt alle Element die die Bedingung im Delegate erfüllen.

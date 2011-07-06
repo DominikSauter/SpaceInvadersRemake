@@ -70,6 +70,11 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.PowerUp = Content.Load<Model>("3D Models/PowerUp");
             RepresentationContent.PowerUpTextureWeapon = Content.Load<Texture2D>("3D Model Textures/BoxTexturWeapon");
             RepresentationContent.PowerUpTextureUtility = Content.Load<Texture2D>("3D Model Textures/BoxTexturUtility");
+            RepresentationContent.PlayerProjektileColor = new Vector3(0, 255, 0);
+            RepresentationContent.AlienProjektileColor = new Vector3(255, 0, 0);
+            RepresentationContent.PlayerPiercingShotProjektileColor = new Vector3(0, 234, 255);
+            RepresentationContent.MothershipProjektileColor = new Vector3(255, 0, 03);
+            RepresentationContent.BossProjektileColor = new Vector3(255, 0, 0);
 
             /*
              * Schleife zum Laden der Alientexturen. Diese sind/müssen mit "AlienTextur#" benannt sein
