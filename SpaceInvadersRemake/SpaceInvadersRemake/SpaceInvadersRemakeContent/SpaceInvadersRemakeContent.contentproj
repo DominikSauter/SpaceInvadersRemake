@@ -354,8 +354,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\InGame_Hintergrund2.png">
-      <Name>InGame_Hintergrund2</Name>
+    <Compile Include="Images\InGame_Hintergrund.png">
+      <Name>InGame_Hintergrund</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
