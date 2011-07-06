@@ -23,13 +23,20 @@ namespace SpaceInvadersRemake.Controller
         /// Generiert eine neue Instanz der <see cref="KeyboardController"/> Klasse.
         /// </summary>
         public KeyboardController(ControllerManager controllerManager, IGameItem controllee)
-            : base(controllerManager, controllee: controllee)
+            : base(controllerManager,controllee)
         {
             this.KBconfig = KeyboardConfig.Default;
+
+            if (this.Controllee is Player)
+            {
+                myPlayer = (Player)Controllee;
+            }
+
         }
 
         //Private fields
         private KeyboardState kState;
+        private readonly Player myPlayer;
 
 
         /// <summary>
@@ -109,11 +116,18 @@ namespace SpaceInvadersRemake.Controller
         /// </returns>
         protected override void Shooting(Game game, GameTime gameTime)
         {
-            // STST
-            //if (kState.IsKeyDown(KBconfig.Fire))
+            
+            //Für Normale Waffen hierbei muss Feuertaste losgelassen werden
             if (MenuController.KeyPressed(KBconfig.Fire))
             {
                 this.Controllee.Shoot(gameTime);
+
+            }
+
+            //Für schnellfeuer Waffen Feuertaste kann gedrückt bleiben
+            else if (myPlayer.Weapon is RapidfireWeapon && this.kState.IsKeyDown(KBconfig.Fire))
+            {
+                this.myPlayer.Shoot(gameTime);
             }
         }
     }
