@@ -19,8 +19,7 @@ namespace SpaceInvadersRemake.ModelSection
         public override void Apply(Player player)
         {
             // Neue Waffe setzen
-            //TODO: wieder einkommentieren, wenn Waffen fertig sind
-            //player.Weapon = new MultiShotWeapon();
+            player.Weapon = new MultiShotWeapon();
         }
 
         /// <summary>
