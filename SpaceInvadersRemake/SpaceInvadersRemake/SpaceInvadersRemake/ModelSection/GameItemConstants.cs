@@ -27,7 +27,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new Vector2(0.5f, 0.5f);
+                return new Vector2(0.001f, 0.001f);
             }
         }
 
@@ -160,7 +160,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 10;
+                return 30;
             }
         }
 
