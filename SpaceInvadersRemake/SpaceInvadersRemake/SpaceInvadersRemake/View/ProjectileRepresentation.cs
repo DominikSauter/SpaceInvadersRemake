@@ -88,12 +88,18 @@ namespace SpaceInvadersRemake.View
         public override void Draw(SpriteBatch spriteBatch)
         {
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
+            Matrix rotate = Matrix.Identity;
 
             Vector3 newPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
 
 
             if (newPosition.Z > this.position.Z || newPosition.Z < this.position.Z)
             {
+                //Wenn es schräg zur seite geht drehen
+                if (newPosition.X > this.position.X || newPosition.X < this.position.X)
+                { //nach rechts/links drehen abhängig von der Projektil Flugrichtung
+                    rotate = Matrix.CreateRotationZ((float)Math.Atan((newPosition.Z - this.position.Z) / (newPosition.X - this.position.X)));
+                }
                 this.position = newPosition;
             }
 
@@ -107,7 +113,7 @@ namespace SpaceInvadersRemake.View
             Vector3 lower = new Vector3(0, -6, 0);
 
             //Positionieren
-            this.World = Matrix.CreateScale(scaleWidth, 0.0f, scaleHeight) * Matrix.CreateTranslation(this.position + lower);
+            this.World = rotate * Matrix.CreateScale(scaleWidth, 0.0f, scaleHeight) * Matrix.CreateTranslation(this.position + lower);
             ((ModelHitsphere)GameItem.BoundingVolume).World = World;
 
 
