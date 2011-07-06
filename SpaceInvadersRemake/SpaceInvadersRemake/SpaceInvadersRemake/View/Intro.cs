@@ -13,20 +13,24 @@ namespace SpaceInvadersRemake.View
     /// <summary>
     /// Diese Klasse kümmert sich um die Wiedergabe des Introvideos zum Spiel.
     /// </summary>
-    public class Intro : IMediaplayer
+    public class Intro : IMediaplayer, IView
     {
+        private GraphicsDeviceManager graphics;
         private VideoPlayer videoPlayer;
         private float volume;
         private bool repeat;
+        private bool isPlaying;
 
         /// <summary>
         /// Initialisiert das Introvideo
         /// </summary>
-        public Intro()
+        public Intro(GraphicsDeviceManager graphics)
         {
+            this.graphics = graphics;
             this.videoPlayer = new VideoPlayer();
             this.Volume = Settings.GameConfig.Default.MasterVolume;
             this.Repeat = false;
+            this.isPlaying = false;
         }
 
         /// <summary>
@@ -97,13 +101,14 @@ namespace SpaceInvadersRemake.View
         /// <param name="intro">Introvideo</param>
         public void Play(Video intro)
         {
-            if (videoPlayer.State == MediaState.Stopped)
+            if (!this.isPlaying)
             {
                 videoPlayer.Play(intro);
+                this.isPlaying = true;
             }
         }
 
-        public void drawVideo(SpriteBatch spriteBatch)
+        public void Draw(SpriteBatch spriteBatch)
         {
             Texture2D videoTexture = null;
 
@@ -111,12 +116,11 @@ namespace SpaceInvadersRemake.View
             {
                 videoTexture = videoPlayer.GetTexture();
             }
-                
 
             if (videoTexture != null)
             {
                 spriteBatch.Begin();
-                spriteBatch.Draw(videoTexture, new Rectangle(0, 0, 400, 300), Color.White);
+                spriteBatch.Draw(videoTexture, new Rectangle(0,0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
                 spriteBatch.End();
             }
         }
