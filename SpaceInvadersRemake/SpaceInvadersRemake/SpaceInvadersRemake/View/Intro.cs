@@ -16,6 +16,7 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public class Intro : IMediaplayer, IView
     {
+        private StateMachine.IntroState currentState;
         private GraphicsDeviceManager graphics;
         private VideoPlayer videoPlayer;
         private float volume;
@@ -25,8 +26,9 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert das Introvideo
         /// </summary>
-        public Intro(GraphicsDeviceManager graphics)
+        public Intro(GraphicsDeviceManager graphics, StateMachine.IntroState state)
         {
+            this.currentState = state;
             this.graphics = graphics;
             this.videoPlayer = new VideoPlayer();
             this.Volume = Settings.GameConfig.Default.MasterVolume;
@@ -116,6 +118,10 @@ namespace SpaceInvadersRemake.View
             if (videoPlayer.State != MediaState.Stopped)
             {
                 videoTexture = videoPlayer.GetTexture();
+            }
+            else
+            {
+                this.currentState.Exit();
             }
 
             if (videoTexture != null)
