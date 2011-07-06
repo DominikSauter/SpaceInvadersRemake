@@ -53,7 +53,7 @@ namespace SpaceInvadersRemake.View
             this.starsTarget_1 = new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             this.starsTarget_2 = new Rectangle(0, -graphics.PreferredBackBufferHeight, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight);
             this.starsOffset = 0.0f;
-            this.starsSpeed = 0.1f;
+            this.starsSpeed = 0.2f;
         }
 
         /// <summary>
