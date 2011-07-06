@@ -352,7 +352,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Die standardmäßige Geschwindigkeit der PiercingProjectiles.
+        /// Die standardmäßige Geschwindigkeit der PiercingProjectiles in Distanz pro Sekunde.
         /// </summary>
         public static Vector2 PiercingProjectileVelocity
         {
