@@ -144,6 +144,7 @@ namespace SpaceInvadersRemake.ModelSection
             return newEntry;
         }
 
+        // ADDED (by STST): 06.07.2011
         private HighscoreEntry GetNewEntry(int score)
         {
             return new HighscoreEntry("", score);
