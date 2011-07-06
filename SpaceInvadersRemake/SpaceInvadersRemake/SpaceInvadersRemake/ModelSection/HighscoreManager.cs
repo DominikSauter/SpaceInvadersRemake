@@ -52,10 +52,10 @@ namespace SpaceInvadersRemake.ModelSection
             highscore.Sort(delegate(HighscoreEntry a, HighscoreEntry b) 
                            { 
                                if (a.Score < b.Score) 
-                                   return -1; 
+                                   return 1; 
                                else if (a.Score == b.Score) 
                                    return 0; 
-                               else return 1; 
+                               else return -1; 
                            });
         }
 
@@ -106,7 +106,6 @@ namespace SpaceInvadersRemake.ModelSection
             // Speichert die Highscore-Liste ab
             for (int i = 0; i < highscore.Count; i++)
             {
-                //UNDONE Trennzeichen geändert
                 //swOutput.WriteLine(highscore[i].Name + " " + highscore[i].Score.ToString());
                 swOutput.WriteLine(highscore[i].Name + "#" + highscore[i].Score.ToString());
             }
@@ -162,6 +161,7 @@ namespace SpaceInvadersRemake.ModelSection
             string line = null;
             string name = null;
             string[] entryData = null;
+            bool corrupt = false;
 
             // Öffne die Highscore-Datei und erstelle ein StreamReader-Objekt zum zeilenwiesen Auslesen
             FileStream inputFile = new FileStream(hscFilePath, FileMode.OpenOrCreate, FileAccess.Read);
@@ -172,16 +172,36 @@ namespace SpaceInvadersRemake.ModelSection
             while (((line = srInput.ReadLine()) != null) && (count < 10))
             {
               
-                //UNDONE Trennzeichen geändert
                 // entryData = line.Split(' ');
                 entryData = line.Split('#');
-               
+
+                if (entryData.Length != 2)
+                {
+                    // Highscore-Datei fehlerhaft
+                    corrupt = true;
+                    break;
+                }
+
                 name = entryData[0];
-                score = Convert.ToInt32(entryData[1]);
+                try
+                {
+                    score = Convert.ToInt32(entryData[1]);
+                }
+                catch (FormatException e)
+                {
+                    corrupt = true;
+                    break;
+                }
 
                 hscList.Add(new HighscoreEntry(name, score));
 
                 count++;
+            }
+
+            // Leere Highscore-Liste, falls es einen Fehler gab
+            if (corrupt)
+            {
+                hscList.Clear();
             }
 
             // Schließe die Datei
