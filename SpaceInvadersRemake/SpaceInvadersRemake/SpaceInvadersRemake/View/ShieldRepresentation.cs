@@ -43,7 +43,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation eines stationären Schildes.
         /// </summary>
-        public ShieldRepresentation(Shield shield, GraphicsDeviceManager graphics, GameTime gameTime)
+        public ShieldRepresentation(Shield shield, GraphicsDeviceManager graphics)
         {
             this.texture = ViewContent.RepresentationContent.ShieldTexture;
             GameItem = shield;

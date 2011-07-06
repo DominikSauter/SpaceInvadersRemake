@@ -19,8 +19,7 @@ namespace SpaceInvadersRemake.View
         private Texture2D texture;
         private Vector3 position;
         private GraphicsDeviceManager graphics;
-        private bool player; //Gibt an ob das Projektil vom Player stamm
-        private Vector3 color;
+        private Vector3 colorProjectile;
 
         //Punkte der Polygone wo die Textur gezeichnet werden soll
         private VertexPositionColorTexture[] vertices;
@@ -33,11 +32,11 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation eines Projektils.
         /// </summary>
-        public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics, BasicEffect effect, bool player)
+        public ProjectileRepresentation(Projectile projectile, Texture2D texture, GraphicsDeviceManager graphics, BasicEffect effect, Vector3 color)
         {
             this.texture = texture;
             GameItem = projectile;
-            this.player = player;
+            this.colorProjectile = color;
             this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
@@ -66,18 +65,6 @@ namespace SpaceInvadersRemake.View
             vertices[1] = new VertexPositionColorTexture(leftTop, Color.Red, new Vector2(0, 1));
             vertices[2] = new VertexPositionColorTexture(rightBot, Color.Red, new Vector2(1, 0));
             vertices[3] = new VertexPositionColorTexture(rightTop, Color.Red, new Vector2(1, 1));
-
-            //Projektilfarbe
-            if (player)
-            {
-                this.color = new Vector3(0, 255, 0);
-            }
-            else
-            {
-                this.color = new Vector3(255, 0, 0);
-            }
-
-            
 
         }
 
@@ -120,7 +107,7 @@ namespace SpaceInvadersRemake.View
             effect.TextureEnabled = true;
             effect.Texture = texture;
             effect.View = Camera;
-            effect.DiffuseColor = this.color;
+            effect.DiffuseColor = this.colorProjectile;
             effect.Projection = Projection;
             effect.World = this.World;
 

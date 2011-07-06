@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
+using Microsoft.Xna.Framework;
 
 namespace SpaceInvadersRemake.View
 {
@@ -159,6 +160,36 @@ namespace SpaceInvadersRemake.View
         }
 
         public List<Texture2D> PowerUpIcons
+        {
+            get;
+            set;
+        }
+
+        public Vector3 PlayerProjektileColor
+        {
+            get;
+            set;
+        }
+
+        public Vector3 AlienProjektileColor
+        {
+            get;
+            set;
+        }
+
+        public Vector3 PlayerPiercingShotProjektileColor
+        {
+            get;
+            set;
+        }
+
+        public Vector3 MothershipProjektileColor
+        {
+            get;
+            set;
+        }
+
+        public Vector3 BossProjektileColor
         {
             get;
             set;
