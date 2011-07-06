@@ -20,7 +20,7 @@ namespace SpaceInvadersRemake.View
         private SpriteFont font;
         private Texture2D background;
         private HighscoreManager highscoreManager;
-        private GraphicsDeviceManager graphics; //um Auflösung zu verändern
+        private GraphicsDeviceManager graphics;
 
         /// <summary>
         /// Initialisiert die Highscoreoberfläche
@@ -55,7 +55,6 @@ namespace SpaceInvadersRemake.View
             spriteBatch.DrawString(this.font, "HIGHSCORE", titlePosition, Color.White);
 
             //Zeichnen des Highscore Fensters
-            //[DODO] Hier Stand zuvor 'new Rectangle(100, 100, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferWidth)' als "Position"
             spriteBatch.Draw(this.frame, new Rectangle((int)framePosition.X, (int)framePosition.Y, frame.Width, frame.Height * (3/2)), Color.White);
 
             //Zeichnen der Highscore Einträge

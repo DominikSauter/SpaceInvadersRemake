@@ -37,6 +37,7 @@ namespace SpaceInvadersRemake.View
             this.model = ViewContent.RepresentationContent.PowerUp;
             this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
+
             //Winkel in °
             this.angle = 0.0f;
             this.rotationSpeed = 1.0f;
@@ -67,21 +68,21 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// 
+        /// Zeichnet das PowerUp.
         /// </summary>
         /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
-
             this.angle += rotationSpeed;
 
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             Matrix rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(this.angle));
             this.World = rotation * Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up);
 
+            //Setzen der Hitsphere
             ((ModelHitsphere)GameItem.BoundingVolume).World = this.World;
 
+            //DephStencilState setzen damit 3D und 2D Objekte gleichzeitig richtig angezeigt werden können
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
             foreach (ModelMesh mesh in model.Meshes)

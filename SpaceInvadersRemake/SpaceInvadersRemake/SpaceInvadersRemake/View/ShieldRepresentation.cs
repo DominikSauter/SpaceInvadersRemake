@@ -11,7 +11,10 @@ using SpaceInvadersRemake.ModelSection;
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
-    /// Stellt die auf dem Bildschirm sichtbaren Schilde dar.
+    /// Stellt die auf dem Bildschirm sichtbaren Schilde dar (genauer gesagt ein Exemplar).
+    /// Dabei wird ein 3 dimensionales Rechteck erstellt, auf welches eine animierte Textur gesetzt wird.
+    /// Bei der Textur haldelt es sich um ein Texture-Atlas, der mehrere 'Frames' beinhaltet. Bei jedem Update() bzw. 
+    /// Draw() Aufruf wird der nächste Frame angezeigt, sodass eine Animation entsteht.
     /// </summary>
     /// <remarks>
     /// Hält die PartikelEngines für Explosionen.
@@ -20,23 +23,16 @@ namespace SpaceInvadersRemake.View
     {
         private Texture2D texture;
         private GraphicsDeviceManager graphics;
+
         //3D Raumposition des Schildes
         private Vector3 position;
+
         //Eckpunkte des 3D-Rechteck-Models
         private VertexPositionColorTexture[] vertices;
         private BasicEffect effect;
-        private GameTime gameTime;
-        private float updateTimer = 0; //für die Animation
         private int update;
-        private int totalHitpoints;
 
-        int columns = 5;
-        int rows = 5;
-        int column = 0;
-        int row = 0;
-        float frameSize = 1 / 5f; // 1 wäre die Gesamtlänge vom Texture Atlas
-
-
+        //Hilfsarray, welches die Reihenfolge der Vertices festlegt
         private int[] indices;
 
 
@@ -47,14 +43,11 @@ namespace SpaceInvadersRemake.View
         {
             this.texture = ViewContent.RepresentationContent.ShieldTexture;
             GameItem = shield;
-            this.gameTime = gameTime;
             this.position = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.graphics = graphics;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
             this.effect = new BasicEffect(graphics.GraphicsDevice);
             this.update = 0;
-            this.totalHitpoints = GameItem.Hitpoints;
-            //this.updateTimer = 0;
 
 
             //Eckpunkte des Rechtecks
@@ -120,31 +113,40 @@ namespace SpaceInvadersRemake.View
         }
 
 
-
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
         {
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Zeichnet das animierte Schild.
+        /// </summary>
+        /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
-            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;     //[Dodo]
-            //this.updateTimer += gameTime.TotalGameTime.Seconds; 
+            //DephStencilState setzen damit 3D und 2D Objekte gleichzeitig richtig angezeigt werden können
+            this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;   
 
-
-            //Animation: Fängt bei erstem Frame (hier links unten) an und geht nach rechts und nach oben alle Frames durch
-
+            //Update Zähler um zu wissen wann das Frame welchseln soll.
             this.update++;
 
-            //Nächster Frame bei jedem Update
-            if (this.update == 1) //this.updateTimer >= 2
+            //Texture Atlas Informationen
+            int columns = 5;
+            int rows = 5;
+            int column = 0;
+            int row = 0;
+            float frameSize = 1 / 5f; // 1 wäre die Gesamtlänge vom Texture-Atlas
+
+            //Animation: Fängt bei erstem Frame, in diesem Fall links unten, an und geht nach rechts und nach oben alle Frames durch
+            //Geht zum nächsten Frame bei jedem Update
+            if (this.update == 1) 
             {
-                //this.updateTimer = 0;
+                //Zähler zurücksetzen
                 this.update = 0;
 
                 //Aktueller Frame
-                float positionColumn = this.column * this.frameSize;
-                float positionRow = this.row * this.frameSize;
+                float positionColumn = column * frameSize;
+                float positionRow = row * frameSize;
 
                 //Texturkoordinaten anpassen (zum nächsten Frame bewegen)
                 Vector2 textureLeftBot = new Vector2(positionColumn, positionRow);
@@ -158,66 +160,51 @@ namespace SpaceInvadersRemake.View
                 vertices[2].TextureCoordinate = textureRightBot;
                 vertices[3].TextureCoordinate = textureRightTop;
 
-
                 //nächster Frame
-                this.column++;
+                column++;
 
-                //wenn letze Spalte fange von Spalte 0 an
-                if (this.column == (this.columns - 1))
+                //Wenn die letzte Spalte erreicht ist, gehe zur ersten Spalte.
+                if (column == (columns - 1))
                 {
-                    this.column = 0;
-                    // wenn letzte Reihe fange von Reihe 0 an
-                    if (this.row == (this.rows - 1))
+                    column = 0;
+
+                    //Wenn die letze Reihe erreicht ist, fange wieder von vorne an.
+                    if (row == (rows - 1))
                     {
-                        this.row = 0;
+                        row = 0;
                     }
-                        // ansonsten nächte Reihe
+                    //nächste Reihe
                     else
                     {
-                        this.row++;
+                        row++;
                     }
                 }
             }
 
-            // Setzt die Schildfarbe abhängig von den relativen HP - TB
+            //Setzt die Schildfarbe abhängig von den relativen HitPoints
             float relativeHP = (float)GameItem.Hitpoints / (float)GameItemConstants.ShieldHitpoints;
+
+            //Verlauf von Grün über Gelb nach Rot
             Color shieldColor = new Color(1.0f - relativeHP, relativeHP, 0.0f);
 
+            //Eckpunkte Einfärben, die die Schildfarbe definieren
             for (int i = 0; i < vertices.Length; i++)
             {
                 vertices[i].Color = shieldColor;
             }
-
-            //UNDONE: Falls der neue Code irgenwie noch Probleme macht - TB
-            //Hitpointsabhängige Colorierung der schilde
-            //TODO: Passendere Fraben finden
-            /*  if (GameItem.Hitpoints < totalHitpoints * 2 / 3) {
-                for (int i = 0; i < vertices.Length; i++) 
-                {
-                    vertices[i].Color = Color.Yellow;
-                }
-
-                if (GameItem.Hitpoints < totalHitpoints * 1 / 3)
-                {
-                    for (int i = 0; i < vertices.Length; i++)
-                    {
-                        vertices[i].Color = Color.Red;
-                    }
-                }
-            }*/
-
 
             effect.World = this.World;
             effect.TextureEnabled = true;
             effect.Texture = texture;
             effect.View = Camera;
             effect.Projection = Projection;
-            //effect.DiffuseColor = new Vector3(0, 144, 255);
             effect.VertexColorEnabled = true;
 
             foreach (EffectPass pass in effect.CurrentTechnique.Passes)
             {
                 pass.Apply();
+
+                //Zeichnen des Rechteck Primitives mit der Schildtextur
                 graphics.GraphicsDevice.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, vertices, 0, 4, indices, 0, 2);
             }
 
