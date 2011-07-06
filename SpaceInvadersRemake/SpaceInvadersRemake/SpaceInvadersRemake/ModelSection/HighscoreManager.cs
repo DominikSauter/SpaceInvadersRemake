@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Xml.Serialization;
+using System.Linq;
 
 // Implementiert von Tobias
 
@@ -12,6 +14,12 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public class HighscoreManager : SpaceInvadersRemake.StateMachine.IModel
     {
+        // ADDED (by STST): 06.07.2011
+        /// <summary>
+        /// Max.-Anzahl der Einträge in der Highscore
+        /// </summary>
+        private const int MAX_ENTRIES = 10;
+
         /// <summary>
         /// Die Liste der Highscore-Einträge
         /// </summary>
@@ -28,35 +36,38 @@ namespace SpaceInvadersRemake.ModelSection
             highscore = loadHighscore();
             NewEntry = null;
 
-            if (highscore.Count < 10) // falls noch nicht 10 Eintäge vorhanden, wird der neue Eintrag einfach eingefügt
-            {
-                NewEntry = new HighscoreEntry("", score);
-                highscore.Add(NewEntry);
-                
-            }
-            else // falls schon alle 10 Einträge vorhanden sind, dann wird überprüft ob die Punktzahl hoch genug ist
-            {
-                for (int i = 0; i < 10; i++)
-                {
-                    if (score > highscore[i].Score)
-                    {
-                        highscore.RemoveAt(i);
-                        NewEntry = new HighscoreEntry("", score);
-                        highscore.Add(NewEntry);
-                        break;
-                    }
-                }
-            }
+            // STST
+            NewEntry = NewEntryInHighscore(score, NewEntry);
 
-            // Sortiert die Highscore-Liste mit einem anonymen Vergleichs-Delegate
-            highscore.Sort(delegate(HighscoreEntry a, HighscoreEntry b) 
-                           { 
-                               if (a.Score < b.Score) 
-                                   return 1; 
-                               else if (a.Score == b.Score) 
-                                   return 0; 
-                               else return -1; 
-                           });
+            //if (highscore.Count < 10) // falls noch nicht 10 Eintäge vorhanden, wird der neue Eintrag einfach eingefügt
+            //{
+            //    NewEntry = new HighscoreEntry("", score);
+            //    highscore.Add(NewEntry);
+
+            //}
+            //else // falls schon alle 10 Einträge vorhanden sind, dann wird überprüft ob die Punktzahl hoch genug ist
+            //{
+            //    for (int i = 0; i < 10; i++)
+            //    {
+            //        if (score > highscore[i].Score)
+            //        {
+            //            highscore.RemoveAt(i);
+            //            NewEntry = new HighscoreEntry("", score);
+            //            highscore.Add(NewEntry);
+            //            break;
+            //        }
+            //    }
+            //}
+
+            //// Sortiert die Highscore-Liste mit einem anonymen Vergleichs-Delegate
+            //highscore.Sort(delegate(HighscoreEntry a, HighscoreEntry b)
+            //               {
+            //                   if (a.Score < b.Score)
+            //                       return -1;
+            //                   else if (a.Score == b.Score)
+            //                       return 0;
+            //                   else return 1;
+            //               });
         }
 
         /// <summary>
@@ -67,7 +78,77 @@ namespace SpaceInvadersRemake.ModelSection
             highscore = loadHighscore();
             NewEntry = null;
         }
-        
+
+        // ADDED (by STST): 06.07.2011
+        private HighscoreEntry NewEntryInHighscore(int score, HighscoreEntry newEntry)
+        {
+            // Annahmen:
+            // - Liste wird in diesem Abschnitt mit Insertion-Sort sortiert.
+            // - größte Punktzahl ist erster Eintrag
+            
+
+            if (newEntry != null)
+                throw new Exception("newEntry ist nicht null.");
+
+
+            // Sonderbehandlung, falls die Liste leer ist:
+            if (this.highscore.Count == 0)
+            {
+                newEntry = GetNewEntry(score);
+                this.highscore.Add(newEntry);
+            }
+            else
+            {
+                bool bNewEntry;
+
+                if (this.highscore.Count == MAX_ENTRIES)
+                {
+                    int min = this.highscore[this.highscore.Count - 1].Score;
+                    if (score > min)
+                    {
+                        this.highscore.RemoveAt(MAX_ENTRIES - 1);
+                        bNewEntry = true;
+                    }
+                    else
+                        bNewEntry = false;
+                }
+                else
+                {
+                    bNewEntry = true;
+                }
+
+
+                if (bNewEntry)
+                {
+                    newEntry = GetNewEntry(score);
+                    List<HighscoreEntry> newHighscore = new List<HighscoreEntry>(this.highscore.Capacity);
+
+                    HighscoreEntry addAfterThis = this.highscore.Where(x => x.Score >= score).LastOrDefault();
+                    if (addAfterThis == null)
+                    {
+                        newHighscore.Add(newEntry);
+                        newHighscore.AddRange(this.highscore);
+                    }
+                    else
+                        foreach (var item in this.highscore)
+                        {
+                            newHighscore.Add(item);
+                            if (item == addAfterThis)
+                                newHighscore.Add(newEntry);
+                        }
+
+                    this.highscore = newHighscore;
+                }
+            }
+
+            return newEntry;
+        }
+
+        private HighscoreEntry GetNewEntry(int score)
+        {
+            return new HighscoreEntry("", score);
+        }
+
         /// <summary>
         /// Gibt die Highscore-Liste als Array zurück.
         /// </summary>
@@ -99,20 +180,27 @@ namespace SpaceInvadersRemake.ModelSection
                 // Misserfolg!!!!
                 return false;
 
-            // Ertellt bei jedem Abspeichern eine neue Highscore-Datei
-            FileStream outputFile = new FileStream(hscFilePath, FileMode.Create, FileAccess.Write);
-            StreamWriter swOutput = new StreamWriter(outputFile);
-
-            // Speichert die Highscore-Liste ab
-            for (int i = 0; i < highscore.Count; i++)
+            // <STST>
+            using (FileStream fs = new FileStream(hscFilePath, FileMode.Create))
             {
-                //swOutput.WriteLine(highscore[i].Name + " " + highscore[i].Score.ToString());
-                swOutput.WriteLine(highscore[i].Name + "#" + highscore[i].Score.ToString());
+                XmlSerializer ser = new XmlSerializer(typeof(List<HighscoreEntry>));
+                ser.Serialize(fs, highscore);
             }
+            // </STST>
 
-            // Schließt die Datei
-            swOutput.Close();
-            outputFile.Close();
+            //// Ertellt bei jedem Abspeichern eine neue Highscore-Datei
+            //FileStream outputFile = new FileStream(hscFilePath, FileMode.Create, FileAccess.Write);
+            //StreamWriter swOutput = new StreamWriter(outputFile);
+
+            //// Speichert die Highscore-Liste ab
+            //for (int i = 0; i < highscore.Count; i++)
+            //{
+            //    swOutput.WriteLine(highscore[i].Name + " " + highscore[i].Score.ToString());
+            //}
+
+            //// Schließt die Datei
+            //swOutput.Close();
+            //outputFile.Close();
 
             // Verhindert, dass der Eintrag weiter bearbeitet werden kann
             NewEntry = null;
@@ -127,7 +215,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="game">Referenz des Games aus dem XNA Framework.</param>
         /// <param name="gameTime">Bietet die aktuelle Spielzeit an.</param>
         /// <param name="state">Gibt den aktuellen State an von dem diese Funktion aufgerufen wurde.</param>
-        
+
         public void Update(Microsoft.Xna.Framework.Game game, Microsoft.Xna.Framework.GameTime gameTime, StateMachine.State state)
         {
             // nicht benötigt
@@ -152,64 +240,56 @@ namespace SpaceInvadersRemake.ModelSection
         /// <returns>geladene Highscore-Liste</returns>
         private List<HighscoreEntry> loadHighscore()
         {
-            // neue Highscore-Liste zur Rückgabe
-            List<HighscoreEntry> hscList = new List<HighscoreEntry>();
+            // <STST>
+            // HACK: Fehlerbehandlung?
+            List<HighscoreEntry> hsc;
 
-            // temporäre Variablen
-            int count = 0;
-            int score = 0;
-            string line = null;
-            string name = null;
-            string[] entryData = null;
-            bool corrupt = false;
-
-            // Öffne die Highscore-Datei und erstelle ein StreamReader-Objekt zum zeilenwiesen Auslesen
-            FileStream inputFile = new FileStream(hscFilePath, FileMode.OpenOrCreate, FileAccess.Read);
-            StreamReader srInput = new StreamReader(inputFile);
-
-            // Lese nacheinander jede Zeile der Datei ein un wandle sie in einen Highscore-Eintrag um.
-            // Dabei wird sichergestellt, dass maximal 10 Einträge eingelesen werden.
-            while (((line = srInput.ReadLine()) != null) && (count < 10))
-            {
-              
-                // entryData = line.Split(' ');
-                entryData = line.Split('#');
-
-                if (entryData.Length != 2)
+            if (File.Exists(hscFilePath))
+                using (FileStream fs = new FileStream(hscFilePath, FileMode.Open))
                 {
-                    // Highscore-Datei fehlerhaft
-                    corrupt = true;
-                    break;
+                    XmlSerializer ser = new XmlSerializer(typeof(List<HighscoreEntry>));
+                    hsc = (List<HighscoreEntry>)ser.Deserialize(fs);
                 }
+            else
+                hsc = new List<HighscoreEntry>();
 
-                name = entryData[0];
-                try
-                {
-                    score = Convert.ToInt32(entryData[1]);
-                }
-                catch (FormatException e)
-                {
-                    corrupt = true;
-                    break;
-                }
+            return hsc;
+            // </STST>
 
-                hscList.Add(new HighscoreEntry(name, score));
+            //// neue Highscore-Liste zur Rückgabe
+            //List<HighscoreEntry> hscList = new List<HighscoreEntry>();
 
-                count++;
-            }
+            //// temporäre Variablen
+            //int count = 0;
+            //int score = 0;
+            //string line = null;
+            //string name = null;
+            //string[] entryData = null;
 
-            // Leere Highscore-Liste, falls es einen Fehler gab
-            if (corrupt)
-            {
-                hscList.Clear();
-            }
+            //// Öffne die Highscore-Datei und erstelle ein StreamReader-Objekt zum zeilenwiesen Auslesen
+            //FileStream inputFile = new FileStream(hscFilePath, FileMode.OpenOrCreate, FileAccess.Read);
+            //StreamReader srInput = new StreamReader(inputFile);
 
-            // Schließe die Datei
-            srInput.Close();
-            inputFile.Close();
+            //// Lese nacheinander jede Zeile der Datei ein un wandle sie in einen Highscore-Eintrag um.
+            //// Dabei wird sichergestellt, dass maximal 10 Einträge eingelesen werden.
+            //while (((line = srInput.ReadLine()) != null) && (count < 10))
+            //{
+            //    entryData = line.Split(' ');
 
-            // Gebe die Liste zurück
-            return hscList;
+            //    name = entryData[0];
+            //    score = Convert.ToInt32(entryData[1]);
+
+            //    hscList.Add(new HighscoreEntry(name, score));
+
+            //    count++;
+            //}
+
+            //// Schließe die Datei
+            //srInput.Close();
+            //inputFile.Close();
+
+            //// Gebe die Liste zurück
+            //return hscList;
         }
     }
 }
