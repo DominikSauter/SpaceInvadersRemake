@@ -102,7 +102,7 @@ namespace SpaceInvadersRemake.View
             else if (currentState is StateMachine.IntroState)
             {
                 //da nur das Video abgespielt wird, benötigt man keine wirkliche Oberfläche.
-                EffectPlayer = new Intro(this.graphics);
+                EffectPlayer = new Intro(this.graphics, (StateMachine.IntroState)currentState);
                 this.ViewItemList.Add((Intro)EffectPlayer);
             }
             else if (currentState is StateMachine.HighscoreState)
