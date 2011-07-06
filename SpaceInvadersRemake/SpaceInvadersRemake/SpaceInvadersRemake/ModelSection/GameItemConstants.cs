@@ -263,12 +263,6 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
-
-
-        /*
-         * Evt. in Zukunft benötigte Properties
-         * 
-
         /// <summary>
         /// Die standardmäßige Geschwindigkeit des Mutterschiffs in Distanz pro Sekunde.
         /// </summary>
@@ -313,7 +307,15 @@ namespace SpaceInvadersRemake.ModelSection
             }
         }
 
-         */
-
+        /// <summary>
+        /// Die Standard-Waffe des Mutterschiffs.
+        /// </summary>
+        public static Weapon MothershipWeapon
+        {
+            get
+            {
+                return new MothershipWeapon();
+            }
+        }
     }
 }
