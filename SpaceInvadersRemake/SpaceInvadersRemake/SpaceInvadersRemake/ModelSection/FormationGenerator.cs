@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Gibt den Abstand zwischen zwei direkt benachbarten Aliens in einer Formation an und damit die Größe/Skalierung der Formation.
         /// </summary>
-        private static float alienDistance = 15.0f;
+        private static float alienDistance = 20.0f;
 
         /// <summary>
         /// Gibt den Fußpunkt einer Formation an, d.h. den mittigen X-Wert und den kleinsten Y-Wert der Formation.
