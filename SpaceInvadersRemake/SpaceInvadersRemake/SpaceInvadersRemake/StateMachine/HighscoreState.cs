@@ -21,8 +21,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
         public HighscoreState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
             : base (stateManager, gameManager)
-        {
-        }
+        { }
 
         /// <summary>
         /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
@@ -34,6 +33,9 @@ namespace SpaceInvadersRemake.StateMachine
             : base(stateManager, gameManager)
         {
             this.score = score;
+
+            // HACK: unschöne Lösung:
+            Initialise();
         }
 
 
