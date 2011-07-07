@@ -38,10 +38,14 @@ namespace SpaceInvadersRemake.Controller
             rnd = new Random();
         }
 
-
+        /// <summary>
+        /// Eigenschaft Controllees Liste (kontrollierte Objekte)
+        /// </summary>
+        //Hack: Wieso override mit identischer implementierung ? @ck
+        protected override ICollection<IGameItem> Controllees { get; set; }
 
         //Private Felder
-        private Vector2 VelocityIncreasePerFrame;
+        private Vector2 VelocityIncreasePerFrame
 
         #region Private Methoden
         /// <summary>
