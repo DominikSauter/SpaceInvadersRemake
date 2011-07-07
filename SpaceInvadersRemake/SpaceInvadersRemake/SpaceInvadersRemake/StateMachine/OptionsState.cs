@@ -41,13 +41,41 @@ namespace SpaceInvadersRemake.StateMachine
             // von Tobias
             List<MenuControl> controls = new List<MenuControl>();
 
-         
-            
-            
+            // Buttons für Video- und Audiomenü einfügen
             controls.Add(new Button(Resource.Label_Video, new Action(ShowVideoOptions)));
             controls.Add(new Button(Resource.Label_Audio, new Action(ShowAudioOptions)));
-            //TODO: SOllte es nicht noch einen State für das Steuerungsmenü geben? - TB
 
+            // Hier wird die Sprachauswahl initialisiert
+
+            // Liste von Sprachen anlegen
+            List<string> languageList = new List<string>();
+            string german = Resources.Resource.Language_de_DE;
+            languageList.Add(german);
+            string english = Resources.Resource.Language_en_US;
+            languageList.Add(english);
+
+            // Aktive Sprache setzen
+            //TODO: @ck Bitte hier abhängig von der aktuell gesetzten Sprache die richtige auswählen
+            string activeLanguage = english;
+
+            // Erstelle das neue ListSelect
+            controls.Add(new ListSelect<string>(Resources.Resource.Label_Language,
+                         languageList,
+                         activeLanguage,
+                         delegate(string language)
+                         {
+                             //HACK: If-Konstrukt nur gewählt, weil es nur zwei verschieden Sprachen gibt. Bei mehr Sprachen müssen eigene Klassen ähnlich wie Resolution angelegt werden
+                             if (language.Equals(german))
+                             { 
+                                 //TODO: @ck Bitte hier die richtige Sprache setzen und speichern
+                             }
+                             else if (language.Equals(english))
+                             {
+                                 //TODO: @ck Bitte hier die richtige Sprache setzen und speichern
+                             }
+                         }));
+
+            // Neues Menü mit den angelegten Steuerelementen erstellen
             Model = new Menu(controls);
         }
 

@@ -194,4 +194,13 @@ Special Thanks to all of you guys!</value>
   <data name="Game_Titel" xml:space="preserve">
     <value>Hyperspace Pirates *A.R.R.*</value>
   </data>
+  <data name="Language_de_DE" xml:space="preserve">
+    <value>Deutsch</value>
+  </data>
+  <data name="Language_en_US" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="Label_Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
 </root>
