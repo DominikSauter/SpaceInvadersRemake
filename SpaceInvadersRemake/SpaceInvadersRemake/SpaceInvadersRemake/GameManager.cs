@@ -73,6 +73,9 @@ namespace SpaceInvadersRemake
             View.ViewContent.ComputeHitspheres();
             MusicPlayer = new View.BackgroundMusic();
 
+            //[Model]
+            ModelSection.PowerUpGenerator.InitializePowerUpSystem();
+
             // <STST>
             this.StateManager = new StateManager(this);
             // </STST>
