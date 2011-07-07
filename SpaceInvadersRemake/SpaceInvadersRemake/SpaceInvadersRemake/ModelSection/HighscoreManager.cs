@@ -242,7 +242,6 @@ namespace SpaceInvadersRemake.ModelSection
         private List<HighscoreEntry> loadHighscore()
         {
             // <STST>
-            // HACK: Fehlerbehandlung?
             List<HighscoreEntry> hsc;
 
             if (File.Exists(hscFilePath))
