@@ -1,10 +1,9 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
-using SpaceInvadersRemake.StateMachine;
-using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.ModelSection;
-using System.Text;
+using SpaceInvadersRemake.Settings;
+using SpaceInvadersRemake.StateMachine;
 
 // Implementiert von Tobias
 
@@ -35,7 +34,7 @@ namespace SpaceInvadersRemake.Controller
             
         }
 
-        //Private Felder
+        //Private Felder by CK
         private Keys[] validKeys = { Keys.Q, Keys.W, Keys.E, Keys.R, Keys.T, Keys.Z, Keys.U, Keys.I, Keys.O,
                                        Keys.P, Keys.A, Keys.S, Keys.D, Keys.F, Keys.G, Keys.H, Keys.J, 
                                        Keys.K, Keys.L, Keys.Y, Keys.X, Keys.C, Keys.V, Keys.B, Keys.N, Keys.M };
@@ -65,9 +64,9 @@ namespace SpaceInvadersRemake.Controller
         public void Update(Game game, GameTime gameTime, State state)
         {
 
-            //KeyboardState Variablen ausgelagert - CK
+            //KeyboardState Variablen ausgelagert
             //Eingabe erfolgt durch Benutzertastenbelegung sowie einer Standardtaste
-
+            //CK
             if (KeyPressed(KBconfig.Back) || KeyPressed(Keys.Escape))
             {
                 MenuBack(state);
@@ -90,6 +89,7 @@ namespace SpaceInvadersRemake.Controller
         /// <summary>
         /// Kümmert sich darum das ein neuer Eintrag im Highscore eingegeben wird
         /// </summary>
+        //Implemntiert von Christian (ck)
         private void HighscoreInput()
         {
             HighscoreManager highscore = (HighscoreManager)Controllee;
@@ -176,10 +176,12 @@ namespace SpaceInvadersRemake.Controller
             {
                 ((HighscoreState)state).Exit();
             }
+            //<ck>
             else if (state is IntroState)
             {
                 ((IntroState)state).Exit();
             }
+            //</ck>
             else
             {
                 try

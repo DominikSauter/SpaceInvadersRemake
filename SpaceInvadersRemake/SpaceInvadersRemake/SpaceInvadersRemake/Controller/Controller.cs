@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.StateMachine;
 
+//Implemntiert von Christian (ck)
 namespace SpaceInvadersRemake.Controller
 {
 

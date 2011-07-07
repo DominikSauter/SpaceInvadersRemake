@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
-using SpaceInvadersRemake.ModelSection;
-using Microsoft.Xna.Framework;
 using System.Linq;
+using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.ModelSection;
 
 
 //Implementiert von Chris

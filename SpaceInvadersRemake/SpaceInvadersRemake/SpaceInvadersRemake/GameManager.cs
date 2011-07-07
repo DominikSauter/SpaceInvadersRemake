@@ -1,13 +1,6 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Audio;
-using Microsoft.Xna.Framework.Content;
-using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using Microsoft.Xna.Framework.Media;
 using SpaceInvadersRemake.Resources;
 using SpaceInvadersRemake.StateMachine;
 
@@ -27,10 +20,18 @@ namespace SpaceInvadersRemake
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
             // <STST><ck>
-            // Mehrsprachigkeit: In der GameConfig.Language einstellbar: Englisch = en-US Deutsch = de-DE
-            Resource.Culture = System.Globalization.CultureInfo.CreateSpecificCulture(Settings.GameConfig.Default.Language);
-            //UNDONE Ersetzt durch Eintrag in Config Datei
-            //System.Threading.Thread.CurrentThread.CurrentCulture;
+            //Beim Ersten Spielstart wird Sprache vom System gelesen und in Gameconfig eingetragen. 
+            //Auch in der GameConfig.Language einstellbar: Englisch = en-US Deutsch = de-DE
+            if (Settings.GameConfig.Default.FirstRun)
+            {
+                Settings.GameConfig.Default.Language = System.Threading.Thread.CurrentThread.CurrentCulture;
+                Settings.GameConfig.Default.FirstRun = false;
+                Settings.GameConfig.Default.Save();
+
+            }
+
+            //Zuweisen der Sprache aus der Gameconfig
+            Resource.Culture = Settings.GameConfig.Default.Language;
             // </STST></CK>
         }
 
