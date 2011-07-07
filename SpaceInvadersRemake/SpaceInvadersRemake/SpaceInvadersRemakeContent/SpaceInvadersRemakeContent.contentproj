@@ -368,8 +368,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Videos\INTRO.wmv">
-      <Name>INTRO</Name>
+    <Compile Include="Videos\Intro.wmv">
+      <Name>Intro</Name>
       <Importer>WmvImporter</Importer>
       <Processor>VideoProcessor</Processor>
     </Compile>
