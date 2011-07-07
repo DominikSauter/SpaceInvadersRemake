@@ -1,4 +1,7 @@
 ﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!--Erstellt von Christian (ck)-->
+
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SpaceInvadersRemake.Settings" GeneratedClassName="GameConfig">
   <Profiles />
   <Settings>
@@ -23,8 +26,11 @@
     <Setting Name="MusicVolume" Type="System.Single" Scope="User">
       <Value Profile="(Default)">1</Value>
     </Setting>
-    <Setting Name="Language" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">en-US</Value>
+    <Setting Name="Language" Type="System.Globalization.CultureInfo" Scope="User">
+      <Value Profile="(Default)">(Default)</Value>
+    </Setting>
+    <Setting Name="FirstRun" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

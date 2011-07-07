@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using SpaceInvadersRemake.StateMachine;
-using SpaceInvadersRemake.ModelSection;
 using Microsoft.Xna.Framework;
+using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Settings;
+using SpaceInvadersRemake.StateMachine;
 
+//Implemntiert von Christian (ck)
 namespace SpaceInvadersRemake.Controller
 {
 
@@ -47,7 +47,6 @@ public class ControllerManager : IController
 
     }
 
-   //Private Fields
 
 
     

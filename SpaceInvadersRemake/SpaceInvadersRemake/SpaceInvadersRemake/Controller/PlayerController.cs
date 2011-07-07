@@ -1,6 +1,6 @@
-﻿using System;
-using SpaceInvadersRemake.ModelSection;
+﻿using SpaceInvadersRemake.ModelSection;
 
+//Implemntiert von Christian (ck)
 namespace SpaceInvadersRemake.Controller
 {
     /// <summary>

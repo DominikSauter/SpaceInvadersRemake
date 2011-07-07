@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
-using SpaceInvadersRemake.Settings;
+﻿using System.Collections.Generic;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Resources;
 
@@ -31,6 +26,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ControllerInitialize()
         {
+            //von Christian
             Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 
@@ -72,9 +68,10 @@ namespace SpaceInvadersRemake.StateMachine
                                                    // Wert übernehmen
                                                    if (SpaceInvadersRemake.View.ViewManager.EffectPlayer != null)
                                                        SpaceInvadersRemake.View.ViewManager.EffectPlayer.Volume = (i / 10.0f) * Settings.GameConfig.Default.MasterVolume;
-                                                   // Settings speichern
+                                                   //<ck> Settings speichern 
                                                    Settings.GameConfig.Default.EffectVolume = i / 10.0f;
                                                    Settings.GameConfig.Default.Save();
+                                                   //</ck>
                                                }));
 
             controls.Add(new ListSelect<float>(Resource.Label_MusicVolume, 
@@ -84,9 +81,10 @@ namespace SpaceInvadersRemake.StateMachine
                                                {
                                                    // Wert übernehmen
                                                    GameManager.MusicPlayer.Volume = Settings.GameConfig.Default.MasterVolume * (i / 10.0f);
-                                                   // Settings speichern
+                                                   //<ck> Settings speichern
                                                    Settings.GameConfig.Default.MusicVolume = i / 10.0f;
                                                    Settings.GameConfig.Default.Save();
+                                                   //</ck>
                                                }));
 
             Model = new Menu(controls);

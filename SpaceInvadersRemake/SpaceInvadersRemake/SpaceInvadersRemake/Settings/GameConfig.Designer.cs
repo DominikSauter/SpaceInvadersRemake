@@ -107,12 +107,27 @@ namespace SpaceInvadersRemake.Settings {
             }
         }
         
-        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("en-US")]
-        public string Language {
+        [global::System.Configuration.DefaultSettingValueAttribute("(Default)")]
+        public global::System.Globalization.CultureInfo Language {
             get {
-                return ((string)(this["Language"]));
+                return ((global::System.Globalization.CultureInfo)(this["Language"]));
+            }
+            set {
+                this["Language"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool FirstRun {
+            get {
+                return ((bool)(this["FirstRun"]));
+            }
+            set {
+                this["FirstRun"] = value;
             }
         }
     }

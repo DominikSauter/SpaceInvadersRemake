@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿
 namespace SpaceInvadersRemake.StateMachine
 {
     // by STST
@@ -27,6 +23,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ControllerInitialize()
         {
+            //CK
             Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 

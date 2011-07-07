@@ -1,12 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using SpaceInvadersRemake.ModelSection;
 using Microsoft.Xna.Framework;
-using SpaceInvadersRemake.StateMachine;
-using System.Linq;
+using SpaceInvadersRemake.ModelSection;
 
 
-//Implementiert von Chris
+//Implemntiert von Christian (ck)
 namespace SpaceInvadersRemake.Controller
 {
     /// <summary>

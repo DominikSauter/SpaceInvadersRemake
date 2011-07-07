@@ -31,6 +31,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ControllerInitialize()
         {
+            //CK
             Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 
@@ -66,11 +67,11 @@ namespace SpaceInvadersRemake.StateMachine
                                                          ((GameManager)game).graphics.PreferredBackBufferWidth = resolution.Width;
                                                          ((GameManager)game).graphics.PreferredBackBufferHeight = resolution.Height;
                                                          ((GameManager)game).graphics.ApplyChanges();
-                                                         //In Settingsdatei speichern
+                                                         //<ck> In Settingsdatei speichern
                                                          Settings.GameConfig.Default.graphicsWidth = ((GameManager)game).graphics.PreferredBackBufferWidth;
                                                          Settings.GameConfig.Default.graphicsHeight = ((GameManager)game).graphics.PreferredBackBufferHeight;
                                                          Settings.GameConfig.Default.Save();
-
+                                                         //</ck>
                                                      }));
 
             // Liste für Vollbild erstellen
@@ -86,9 +87,10 @@ namespace SpaceInvadersRemake.StateMachine
                                               {
                                                   ((GameManager)game).graphics.IsFullScreen = onOff.On;
                                                   ((GameManager)game).graphics.ApplyChanges();
-                                                  //Speichert in Setting
+                                                  //<ck> Speichert in Settings
                                                   Settings.GameConfig.Default.Fullscreen = onOff.On;
                                                   Settings.GameConfig.Default.Save();
+                                                  //</ck>
                                               }));
 
             Model = new Menu(controls);

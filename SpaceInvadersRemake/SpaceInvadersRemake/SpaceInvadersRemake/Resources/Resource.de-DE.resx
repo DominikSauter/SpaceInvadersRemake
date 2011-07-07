@@ -192,6 +192,7 @@ Wir danken einfach allen!</value>
   </data>
   <data name="Game_Titel" xml:space="preserve">
     <value>Hyperspace Pirates *A.R.R.*</value>
+    <comment>Resource Übersetzt ins Deutsche von Steffen</comment>
   </data>
   <data name="Label_Language" xml:space="preserve">
     <value>Sprache</value>

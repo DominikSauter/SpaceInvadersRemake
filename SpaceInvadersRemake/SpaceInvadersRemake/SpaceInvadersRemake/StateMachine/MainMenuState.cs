@@ -29,6 +29,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ControllerInitialize()
         {
+            //CK
             Controller = new SpaceInvadersRemake.Controller.MenuController(this.Model);
         }
 

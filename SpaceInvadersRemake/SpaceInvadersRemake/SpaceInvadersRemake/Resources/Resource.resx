@@ -193,6 +193,7 @@ Special Thanks to all of you guys!</value>
   </data>
   <data name="Game_Titel" xml:space="preserve">
     <value>Hyperspace Pirates *A.R.R.*</value>
+    <comment>Resource erstellt und größtenteils hardcoded Strings ersetzt von Christian</comment>
   </data>
   <data name="Language_de_DE" xml:space="preserve">
     <value>Deutsch</value>

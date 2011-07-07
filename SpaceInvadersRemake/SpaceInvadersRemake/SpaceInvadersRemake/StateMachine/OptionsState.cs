@@ -54,9 +54,26 @@ namespace SpaceInvadersRemake.StateMachine
             string english = Resources.Resource.Language_en_US;
             languageList.Add(english);
 
-            // Aktive Sprache setzen
-            //TODO: @ck Bitte hier abhängig von der aktuell gesetzten Sprache die richtige auswählen
-            string activeLanguage = english;
+            
+            
+            //<ck>
+            // Aktive Sprache
+            string activeLanguage;
+
+            // Aktive Sprache auf Deutsch setzen sofern GameConfig CultureInfo auf Deutsch gesetzt ist
+            if (Settings.GameConfig.Default.Language.CompareInfo.Name.Equals("de-DE"))
+            {
+                activeLanguage = german;
+            }
+
+
+            //Aktive Sprache auf Englisch setzen sofern GameConfig CultureInfo nicht auf Deutsch gesetzt ist
+            else
+            {
+                activeLanguage = english;
+            }
+            //</ck>
+
 
             // Erstelle das neue ListSelect
             controls.Add(new ListSelect<string>(Resources.Resource.Label_Language,
@@ -66,12 +83,21 @@ namespace SpaceInvadersRemake.StateMachine
                          {
                              //HACK: If-Konstrukt nur gewählt, weil es nur zwei verschieden Sprachen gibt. Bei mehr Sprachen müssen eigene Klassen ähnlich wie Resolution angelegt werden
                              if (language.Equals(german))
-                             { 
-                                 //TODO: @ck Bitte hier die richtige Sprache setzen und speichern
+                             {
+                                 //<ck>
+                                 //Setze die Sprache auf Deutsch und speichere dies in GameConfig
+                                 Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("de-DE");
+                                 Settings.GameConfig.Default.Save();
+                              
                              }
                              else if (language.Equals(english))
                              {
-                                 //TODO: @ck Bitte hier die richtige Sprache setzen und speichern
+                                 //<ck>
+                                 //Setze die Sprache auf Englisch und speichere dies in GameConfig
+                                 Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("en-US");
+                                 Settings.GameConfig.Default.Save();
+                                 //</ck>
+
                              }
                          }));
 

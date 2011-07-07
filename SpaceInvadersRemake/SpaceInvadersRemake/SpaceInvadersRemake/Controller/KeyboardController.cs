@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Settings;
-using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.StateMachine;
 
+//Implemntiert von Christian (ck)
 namespace SpaceInvadersRemake.Controller
 {
 
@@ -34,7 +31,7 @@ namespace SpaceInvadersRemake.Controller
 
         }
 
-        //Private fields
+        //Private Felder
         private KeyboardState kState;
         private readonly Player myPlayer;
 
