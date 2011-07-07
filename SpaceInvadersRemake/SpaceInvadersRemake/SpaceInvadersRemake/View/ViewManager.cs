@@ -46,6 +46,7 @@ namespace SpaceInvadersRemake.View
             this.graphics = graphics;
             this.effect = new BasicEffect(graphics.GraphicsDevice);
 
+
             //abhängig vom State wird hier die UI geladen.
             if (currentState is StateMachine.InGameState)
             {
@@ -458,6 +459,9 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         public void Dispose()
         {
+            //beenden des EffectPlayers
+            EffectPlayer.Stop();
+
             //abmelden der methoden
             //created
             Player.Created -= CreatePlayer;
