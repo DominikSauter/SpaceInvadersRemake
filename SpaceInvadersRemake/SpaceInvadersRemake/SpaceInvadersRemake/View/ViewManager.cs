@@ -73,6 +73,7 @@ namespace SpaceInvadersRemake.View
                 Projectile.Created += CreateProjectile;
                 PowerUp.Created += CreatePowerUp;
 
+                //TODO weitere Waffensounds
                 /* [WAHL]
                  * (created)
                  * Miniboss.Created += CreateMiniboss;
@@ -84,7 +85,7 @@ namespace SpaceInvadersRemake.View
                  * */
 
 
-                //[Dodo] PartikelEffekt wird vorerst nicht benötigt, da Wahl mit niedriger Prio!
+                //TODO Eventuell noch Explosionssounds
                 //destroyed
                 //Alien.Destroyed += ExplosionFX;
                 //Mothership.Destroyed += ExplosionFX;
@@ -463,7 +464,6 @@ namespace SpaceInvadersRemake.View
             EffectPlayer.Stop();
 
             //abmelden der methoden
-            //created
             Player.Created -= CreatePlayer;
             Alien.Created -= CreateAlien;
             Mothership.Created -= CreateMothership;
@@ -471,11 +471,15 @@ namespace SpaceInvadersRemake.View
             Projectile.Created -= CreateProjectile;
             PowerUp.Created -= CreatePowerUp;
 
+            //hit
+            Shield.Hit -= HitSFX;
+            Player.Hit -= HitSFX;
+            Alien.Hit -= HitSFX;
+            Mothership.Hit -= HitSFX;
+
             //weaponFired
             PlayerNormalWeapon.WeaponFired -= ShootSFX;
-            PiercingShotWeapon.WeaponFired -= ShootSFX;
-            RapidfireWeapon.WeaponFired -= ShootSFX;
-            MultiShotWeapon.WeaponFired -= ShootSFX;
+            EnemyNormalWeapon.WeaponFired -= ShootSFX;
 
             this.ViewItemList = null;
         }
