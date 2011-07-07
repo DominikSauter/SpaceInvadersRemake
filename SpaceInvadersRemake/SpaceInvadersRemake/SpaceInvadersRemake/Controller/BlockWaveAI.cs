@@ -45,7 +45,7 @@ namespace SpaceInvadersRemake.Controller
         protected override ICollection<IGameItem> Controllees { get; set; }
 
         //Private Felder
-        private Vector2 VelocityIncreasePerFrame
+        private Vector2 VelocityIncreasePerFrame;
 
         #region Private Methoden
         /// <summary>
