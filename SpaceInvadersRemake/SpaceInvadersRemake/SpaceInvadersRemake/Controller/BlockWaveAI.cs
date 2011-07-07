@@ -139,7 +139,7 @@ namespace SpaceInvadersRemake.Controller
         protected override void Shooting(Game game, GameTime gameTime)
         {
                         
-            const int POINT_SHIFTING = 1000; // TODO: reicht der aus?
+            const int POINT_SHIFTING = 1000; // HACK: reicht der aus?
 
             float alienFreqInHz = this.ShootingFrequency / this.AlienMatrix.Count;
             float alienFreqInFrame = alienFreqInHz * (float)game.TargetElapsedTime.TotalSeconds;

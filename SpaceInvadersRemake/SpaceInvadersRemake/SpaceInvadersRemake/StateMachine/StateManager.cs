@@ -30,7 +30,7 @@ namespace SpaceInvadersRemake.StateMachine
 
         private void MakeFirstState()
         {
-            //UNDONE [Dodo] Auskommentiert, da wir den State nichtmehr als ersten State brauchen, ausser evtl zum Testen.
+            //[Dodo] Auskommentiert, da wir den State nichtmehr als ersten State brauchen, ausser evtl zum Testen.
             //this.State = new MainMenuState(this, game);
 
             // Wahl:
