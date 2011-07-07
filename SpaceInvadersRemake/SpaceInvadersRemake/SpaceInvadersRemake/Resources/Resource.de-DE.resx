@@ -169,7 +169,7 @@
     <value>Video</value>
   </data>
   <data name="Label_VIDEOOPTIONS" xml:space="preserve">
-    <value>VIDEO OPTIONS</value>
+    <value>VIDEO OPTIONEN</value>
   </data>
   <data name="Text_Credits" xml:space="preserve">
     <value>~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -192,5 +192,8 @@ Wir danken einfach allen!</value>
   </data>
   <data name="Game_Titel" xml:space="preserve">
     <value>Hyperspace Pirates *A.R.R.*</value>
+  </data>
+  <data name="Label_Language" xml:space="preserve">
+    <value>Sprache</value>
   </data>
 </root>
