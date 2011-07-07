@@ -45,7 +45,6 @@ namespace SpaceInvadersRemake.View
             EffectContent = new EffectContent();
             RepresentationContent = new RepresentationContent();
             RepresentationContent.AlienTextures = new List<Texture2D>();
-            UIContent.PowerUpIcons = new List<Texture2D>();
             
 
             //Laden des UI Contents
@@ -60,6 +59,10 @@ namespace SpaceInvadersRemake.View
             UIContent.SettingsButton = Content.Load<Texture2D>("Menu/auswahl_pfeile");
             UIContent.GameTitle = Content.Load<Texture2D>("Menu/GameTitle"); //[Anji]
             UIContent.SpeedUpIcon = Content.Load<Texture2D>("Graphics/SpeedUp");
+            UIContent.SlowMotionIcon = Content.Load<Texture2D>("Graphics/SlowMotion");
+            UIContent.MultishotIcon = Content.Load<Texture2D>("Graphics/MultiShot");
+            UIContent.PiercingShotIcon = Content.Load<Texture2D>("Graphics/PiercingShot");
+            UIContent.RapidFireIcon = Content.Load<Texture2D>("Graphics/RapidFire");
 
             //Laden des Representation Contents
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");

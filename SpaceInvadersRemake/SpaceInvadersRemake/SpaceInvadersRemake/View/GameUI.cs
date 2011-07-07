@@ -163,9 +163,10 @@ namespace SpaceInvadersRemake.View
 
             for (int i = 0; i < powerUpIcons.Count; i++)
             {
-                Rectangle position = new Rectangle(10 , 70 * i, powerUpIcons[i].Width, powerUpIcons[i].Height);
-                spriteBatch.Draw(powerUpIcons[i], position, Color.White);
-                spriteBatch.DrawString(this.font, ((int)powerUps[i].TimeLeft).ToString(), new Vector2(10, 70 * i), Color.Yellow);
+                Texture2D icon = powerUpIcons[i];
+                Rectangle position = new Rectangle(10 , 70 * i, icon.Width, icon.Height);
+                spriteBatch.Draw(icon, position, Color.White);
+                spriteBatch.DrawString(this.font, ((int)powerUps[i].TimeLeft).ToString(), new Vector2(icon.Width * 2, 70 * i), Color.Yellow);
             }
 
             spriteBatch.End();
@@ -183,15 +184,19 @@ namespace SpaceInvadersRemake.View
                 }
                 else if (item.Type == PowerUpEnum.MultiShot)
                 {
+                    icons.Add(ViewContent.UIContent.MultishotIcon);
                 }
                 else if (item.Type == PowerUpEnum.PiercingShot)
                 {
+                    icons.Add(ViewContent.UIContent.PiercingShotIcon);
                 }
                 else if (item.Type == PowerUpEnum.Rapidfire)
                 {
+                    icons.Add(ViewContent.UIContent.RapidFireIcon);
                 }
                 else if (item.Type == PowerUpEnum.SlowMotion)
                 {
+                    icons.Add(ViewContent.UIContent.SlowMotionIcon);
                 }
             }
 

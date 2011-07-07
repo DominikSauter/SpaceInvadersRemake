@@ -63,12 +63,6 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
-        public List<Texture2D> PowerUpIcons
-        {
-            get;
-            set;
-        }
-
         public Texture2D StarAnimation
         {
             get;
@@ -76,6 +70,30 @@ namespace SpaceInvadersRemake.View
         }
 
         public Texture2D SpeedUpIcon
+        {
+            get;
+            set;
+        }
+
+        public Texture2D SlowMotionIcon
+        {
+            get;
+            set;
+        }
+
+        public Texture2D MultishotIcon
+        {
+            get;
+            set;
+        }
+
+        public Texture2D RapidFireIcon
+        {
+            get;
+            set;
+        }
+
+        public Texture2D PiercingShotIcon
         {
             get;
             set;
