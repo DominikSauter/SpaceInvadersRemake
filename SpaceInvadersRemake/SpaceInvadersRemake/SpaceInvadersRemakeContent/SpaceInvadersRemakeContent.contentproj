@@ -48,7 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Particle Textures\" />
-    <Folder Include="Videos\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Graphics\Projektil.png">
@@ -366,6 +365,13 @@
       <Name>SpeedUp</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Videos\INTRO.wmv">
+      <Name>INTRO</Name>
+      <Importer>WmvImporter</Importer>
+      <Processor>VideoProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />
