@@ -9,6 +9,54 @@ namespace SpaceInvadersRemake.ModelSection
     /// Diese abstrakte Klasse ist die Überklasse aller PowerUps die von abgeschossenen Gegnern erzeugt
     /// werden und vom Spieler eingesammelt werden können.
     /// </summary>
+    /// <remarks>
+    /// <para>Für jedes abgeleitete PowerUp muss ein neuer Eintrag im <c>PowerUpEnum</c> erstellt werden.</para>
+    ///
+    /// <para>Um eine abgeleitetes PowerUp zufällig oder explizit vom <c>PowerUpGenerator</c> generieren zu 
+    /// lassen muss ein statischer Konstuktor geschrieben werden, der das PowerUp beim <c>PowerUpGenerator</c>
+    /// registriert.</para>  
+    /// 
+    /// <para>WORKAROUND: Ein statischer Konstruktor wird erst aufgerufen, wenn ein Objekt der Klasse erzeugt
+    /// wird oder auf einen statischen Member verwiesen wird. Deshalb muss zum Registrieren eines PowerUps noch
+    /// ein statischer Member eingefürt werden, der in <c>PowerUpGenerator.InitializePowerUpSystem()</c>
+    /// gesetzt wird. Dazu wird <c>public static bool IsRegistered</c> empfohlen.</para>
+    /// 
+    /// <para>Das beigefügte Bespiel erläutert die Vorgehensweise</para>
+    /// </remarks>
+    /// <example>
+    /// Beispiel für nötigen Code zu registrierung in der PowerUp-Unterklasse:
+    /// 
+    /// <code>
+    /// public MyPowerUp : PowerUp
+    /// {
+    ///     public MyPowerUp(Vector2 position, Vector2 velocity)
+    ///     {
+    ///         //...
+    ///     }
+    ///     
+    ///     //HACK: Workaround
+    ///     public static bool IsRegistered = false;
+    /// 
+    ///     static MyPowerUp() 
+    ///     {
+    ///         PowerUpGenerator.AddAvailablePowerUp(PowerUpEnum.MyPowerUpType, 1000, delegate(Vector2 pos, Vector2 vel)
+    ///                                                                               {
+    ///                                                                                    new MyPowerUp(pos, vel);
+    ///                                                                               });
+    ///     }
+    ///     
+    ///     //...
+    /// 
+    /// }
+    /// </code>
+    /// 
+    /// Beispiel für Initialisierung in PowerUpGenerator.InitializePowerUpSystem
+    /// 
+    /// <code>
+    /// //Hack: Workaround
+    /// MyPowerUp.IsInitialized = true;
+    /// </code>
+    /// </example>
     public abstract class PowerUp : GameItem
     {
         /// <summary>

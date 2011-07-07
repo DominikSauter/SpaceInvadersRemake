@@ -11,6 +11,24 @@ namespace SpaceInvadersRemake.ModelSection
     public class Rapidfire : PowerUp
     {
         /// <summary>
+        /// Statischer Konstruktor, der das PowerUp beim <c>PowerUpGenerator</c> registriert.
+        /// </summary>
+        static Rapidfire()
+        {
+            PowerUpGenerator.AddAvailablePowerUp(PowerUpEnum.Rapidfire,
+                                                 GameItemConstants.RapidfireFrequency,
+                                                 delegate(Vector2 pos, Vector2 vel)
+                                                 {
+                                                     new Rapidfire(pos, vel);
+                                                 });
+        }
+
+        /// <summary>
+        /// Zeigt an ob das PowerUp beim PowerUpGenerator registriert ist
+        /// </summary>
+        public static bool IsRegistered = false;
+
+        /// <summary>
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
         /// </summary>

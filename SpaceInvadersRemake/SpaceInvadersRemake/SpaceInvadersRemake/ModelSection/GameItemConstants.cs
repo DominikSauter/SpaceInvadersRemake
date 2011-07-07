@@ -471,5 +471,71 @@ namespace SpaceInvadersRemake.ModelSection
                 return 0.5f;
             }
         }
+
+        /// <summary>
+        /// Gibt die Häufigkeit des Deflector-PowerUps an
+        /// </summary>
+        public static int DeflectorFrequency
+        {
+            get
+            {
+                return 1000;
+            }
+        }
+
+        /// <summary>
+        /// Gibt die Häufigkeit des MultiShot-PowerUps an
+        /// </summary>
+        public static int MultiShotFrequency
+        {
+            get
+            {
+                return 1000;
+            }
+        }
+
+        /// <summary>
+        /// Gibt die Häufigkeit des PiercingShot-PowerUps an
+        /// </summary>
+        public static int PiercingShotFrequency
+        {
+            get
+            {
+                return 1000;
+            }
+        }
+
+        /// <summary>
+        /// Gibt die Häufigkeit des Rapidfire-PowerUps an
+        /// </summary>
+        public static int RapidfireFrequency
+        {
+            get
+            {
+                return 1000;
+            }
+        }
+
+        /// <summary>
+        /// Gibt die Häufigkeit des SlowMotion-PowerUps an
+        /// </summary>
+        public static int SlowMotionFrequency
+        {
+            get
+            {
+                return 1000;
+            }
+        }
+
+        /// <summary>
+        /// Gibt die Häufigkeit des Speedboost-PowerUps an
+        /// </summary>
+        public static int SpeedboostFrequency
+        {
+            get
+            {
+                return 1000;
+            }
+        }
     }
 }
