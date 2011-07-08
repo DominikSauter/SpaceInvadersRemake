@@ -48,16 +48,22 @@ namespace SpaceInvadersRemake.View
             
 
             //Laden des UI Contents
+            //Schriften
             UIContent.Font = Content.Load<SpriteFont>("Fonts/testfont");
+            UIContent.FontScore = Content.Load<SpriteFont>("Fonts/FontScore");
+            //Hintergrundbilder
             UIContent.GameBackgroundImage = Content.Load<Texture2D>("Images/InGame_Hintergrund");
             UIContent.MenuBackgroundImage = Content.Load<Texture2D>("Images/Menü_Hintergrund");
             UIContent.StarAnimation = Content.Load<Texture2D>("Images/Sterne");
+            //UI Grafiken
             UIContent.HUDBackground = Content.Load<Texture2D>("Graphics/hud_32x50");
             UIContent.LiveIcon = Content.Load<Texture2D>("Graphics/LebensIcon");
             UIContent.MenuButton = Content.Load<Texture2D>("Menu/button");
             UIContent.SettingsBackground = Content.Load<Texture2D>("Menu/einstellungsfenster");
             UIContent.SettingsButton = Content.Load<Texture2D>("Menu/auswahl_pfeile");
+            //Titelgrafik
             UIContent.GameTitle = Content.Load<Texture2D>("Menu/GameTitle"); //[Anji]
+            //UI PowerUp Icons
             UIContent.SpeedUpIcon = Content.Load<Texture2D>("Graphics/SpeedUp");
             UIContent.SlowMotionIcon = Content.Load<Texture2D>("Graphics/SlowMotion");
             UIContent.MultishotIcon = Content.Load<Texture2D>("Graphics/MultiShot");
@@ -65,21 +71,25 @@ namespace SpaceInvadersRemake.View
             UIContent.RapidFireIcon = Content.Load<Texture2D>("Graphics/RapidFire");
 
             //Laden des Representation Contents
+            //2D Grafiken
             RepresentationContent.ProjectileNormal = Content.Load<Texture2D>("Graphics/Projektil");
             RepresentationContent.ProjectilePiercing = Content.Load<Texture2D>("Graphics/Projektil_Piercing");
             RepresentationContent.ShieldTexture = Content.Load<Texture2D>("Graphics/Schild_TextureAtlas");
+            //3D Models
             RepresentationContent.AlienModel = Content.Load<Model>("3D Models/Alienschiff");
             RepresentationContent.PlayerModel = Content.Load<Model>("3D Models/Spielerschiff");
             RepresentationContent.MothershipModel = Content.Load<Model>("3D Models/Mutterschiff");
+            //3D Model Texturen
             RepresentationContent.PlayerTexture = Content.Load<Texture2D>("3D Model Textures/Spieler");
             RepresentationContent.MothershipTexture = Content.Load<Texture2D>("3D Model Textures/Mutterschiff");
-            RepresentationContent.PowerUp = Content.Load<Model>("3D Models/PowerUp");
             RepresentationContent.PowerUpTextureWeapon = Content.Load<Texture2D>("3D Model Textures/BoxTexturWeapon");
             RepresentationContent.PowerUpTextureUtility = Content.Load<Texture2D>("3D Model Textures/BoxTexturUtility");
+            RepresentationContent.PowerUp = Content.Load<Model>("3D Models/PowerUp");
+            //Projektilfarben
             RepresentationContent.PlayerProjektileColor = new Vector3(0, 255, 0);
             RepresentationContent.AlienProjektileColor = new Vector3(255, 0, 0);
             RepresentationContent.PlayerPiercingShotProjektileColor = new Vector3(0, 234, 255);
-            RepresentationContent.MothershipProjektileColor = new Vector3(255, 0, 03);
+            RepresentationContent.MothershipProjektileColor = new Vector3(255, 0, 3);
             RepresentationContent.BossProjektileColor = new Vector3(255, 0, 0);
 
             /*
@@ -96,9 +106,12 @@ namespace SpaceInvadersRemake.View
             //</WAHL>
 
             //Laden des EffectContents
+            //Video
             EffectContent.IntroVideo = Content.Load<Video>("Videos/Intro");
+            //Hintergrundmusik
             EffectContent.MenuSong = Content.Load<Song>("Music/Menü");
             EffectContent.GameSong = Content.Load<Song>("Music/Spiel1");
+            //Soundeffekte
             EffectContent.WeaponPlayer = Content.Load<SoundEffect>("Soundeffects/Laser_Spieler_Normal");
             EffectContent.WeaponEnemy = Content.Load<SoundEffect>("Soundeffects/Laser_Alien_Normal");
             EffectContent.MothershipSound = Content.Load<SoundEffect>("Soundeffects/Mutterschiff");
@@ -158,18 +171,12 @@ namespace SpaceInvadersRemake.View
         /// <returns>Hitsphere für die 2D Grafik</returns>
         private static ModelHitsphere computeBigTextureHitsphere(Texture2D graphic)
         {
-            //Mittelpunkt der Grafik
-           /* Point center = graphic.Bounds.Center;
-
-            //Obere linke Ecke der Grafik, welche die Position bestimmt
-            Point location = graphic.Bounds.Location;
-            float maxRadius = (float)Math.Sqrt((center.X - location.X) * (center.X - location.X) + (center.Y - location.Y)*(center.Y - location.Y));
-            return new ModelHitsphere(new BoundingSphere(Vector3.Zero, maxRadius));*/
-
-            Vector2 corner2 = new Vector2(graphic.Width/2.0f, graphic.Height/2.0f);
-            Vector3 corner3 = PlaneProjector.Convert2DTo3D(corner2);
-
-            float radius = corner3.Length();
+            //Berechnen einer halben Diagonalen der Textur
+            Vector2 corner = new Vector2(graphic.Width/2.0f, graphic.Height/2.0f);
+            //Konvertierung von 2D in 3D
+            Vector3 corner2 = PlaneProjector.Convert2DTo3D(corner);
+            //Vektornorm bilden um den Radius der Hitsphere zu bestimmen
+            float radius = corner2.Length();
 
             return new ModelHitsphere(new BoundingSphere(Vector3.Zero, radius));
         }
