@@ -127,7 +127,8 @@ namespace SpaceInvadersRemake.View
             if (videoTexture != null)
             {
                 spriteBatch.Begin();
-                spriteBatch.Draw(videoTexture, new Rectangle(0,0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
+
+                spriteBatch.Draw(videoTexture, new Rectangle(0, 0, graphics.PreferredBackBufferWidth, graphics.PreferredBackBufferHeight), Color.White);
                 spriteBatch.End();
             }
         }

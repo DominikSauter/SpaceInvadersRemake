@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake.View
             this.graphics = graphics;
 
             this.inGameState = currentState;
-            this.font = ViewContent.UIContent.Font;
+            this.font = ViewContent.UIContent.FontScore;
             this.gameBackgroundImage = ViewContent.UIContent.GameBackgroundImage;
             this.hudBackgroundTexture = ViewContent.UIContent.HUDBackground;
             this.liveIcon = ViewContent.UIContent.LiveIcon;
