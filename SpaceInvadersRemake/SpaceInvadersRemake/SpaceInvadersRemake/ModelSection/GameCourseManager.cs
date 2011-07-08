@@ -25,6 +25,7 @@ namespace SpaceInvadersRemake.ModelSection
         public GameCourseManager()
         {
             GameItem.GameItemList = new LinkedList<IGameItem>();
+            GameItem.TimeFactor = 1.0f; // SlowMotion-Bugfix - TB
             GameCourse = new GameCourse();
         }
 
