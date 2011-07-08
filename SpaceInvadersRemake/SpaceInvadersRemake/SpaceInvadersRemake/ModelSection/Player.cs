@@ -51,14 +51,18 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         public void Reset()
         {
+            //PowerUpList leeren, dabei Remove ausführen
+            foreach (ActivePowerUp powerUp in ActivePowerUps)
+            {
+                powerUp.Remove(this);
+            }
+            ActivePowerUps.Clear();
+
             //Spielerwerte zurücksetzen
             Hitpoints = GameItemConstants.PlayerHitpoints;
             Weapon = GameItemConstants.PlayerWeapon;
             Velocity = GameItemConstants.PlayerVelocity;
             Position = GameItemConstants.PlayerPosition;
-
-            //PowerUpList leeren
-            ActivePowerUps.Clear();
 
             // Spieler für kurze Zeit unverwundbar machen
             invincibleTime = GameItemConstants.PlayerInvincibleTime;
