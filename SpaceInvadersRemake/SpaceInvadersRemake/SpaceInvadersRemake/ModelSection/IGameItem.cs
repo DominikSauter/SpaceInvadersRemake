@@ -59,7 +59,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Das begrenzende Volumen (Kugel) des Objekts für die Kollisionsberechnung
+        /// Das begrenzende Volumen des Objekts für die Kollisionsberechnung
         /// </summary>
         IBoundingVolume BoundingVolume
         {

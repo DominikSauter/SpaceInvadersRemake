@@ -11,22 +11,6 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public class Player : Ship
     {
-
-        /// <summary>
-        /// Feld zum Speichern der Grundgeschwindigkeit des Spielers
-        /// </summary>
-        private Vector2 baseVelocity;
-
-        /// <summary>
-        /// Feld zum Speichern der Startposition des Spielers
-        /// </summary>
-        private Vector2 startPosition;
-
-        /// <summary>
-        /// Feld zum Speichern der Grundlebenspunkte des Spielers
-        /// </summary>
-        private int baseHitpoints;
-
         /// <summary>
         /// Gibt an wie lange der Spieler noch unverwundbar ist
         /// </summary>
@@ -68,10 +52,10 @@ namespace SpaceInvadersRemake.ModelSection
         public void Reset()
         {
             //Spielerwerte zurücksetzen
-            Hitpoints = baseHitpoints;
+            Hitpoints = GameItemConstants.PlayerHitpoints;
             Weapon = GameItemConstants.PlayerWeapon;
-            Velocity = baseVelocity;
-            Position = startPosition;
+            Velocity = GameItemConstants.PlayerVelocity;
+            Position = GameItemConstants.PlayerPosition;
 
             //PowerUpList leeren
             ActivePowerUps.Clear();
@@ -86,18 +70,22 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         protected override void Destroy()
         {
+            // Ein Leben abziehen
             Lives--;
 
-            if (Lives <= 0)
+            if (Lives <= 0) // Falls Spieler keine Leben mehr hat
             {
+                // Spieler zum Löschen markieren
                 IsAlive = false;
 
+                // Registrierung am ScoreGained-Event wieder Rückgängig machen, damit der Spieler keine Punkte mehr bekommt
                 Alien.ScoreGained -= AddScore;
                 Mothership.ScoreGained -= AddScore;
                 Miniboss.ScoreGained -= AddScore;
             }
-            else
+            else // Falls der Spieler noh Leben zur Verfügung hat
             {
+                // Spieler zurücksetzen
                 Reset();
             }
 
@@ -126,23 +114,25 @@ namespace SpaceInvadersRemake.ModelSection
         /// <returns>Boole'scher Wert, der angibt ob die Bewegung ohne Probleme durchgeführt werden konnte. <c>true</c>: erfolg; <c>false</c>: es gab Probleme</returns>
         public override bool Move(Vector2 direction, GameTime gameTime)
         {
+            // Bewegungsrichtung normalisieren, wenn sie nicht 0 ist
             if (direction != Vector2.Zero)
             {
                 direction.Normalize();
             }
             
 
-            //Muss vll wieder geändert werden
+            // Spieler mit seiner Geschwindigkeit in die angegebene Richtung bewegen. TimeFactor ermöglicht Zeitlupeneffekt
             Position += Velocity * direction * (float)gameTime.ElapsedGameTime.TotalSeconds * GameItem.TimeFactor;
 
+            // Verhindern, dass der Spieler das Spielfeld nach rechts/links verlässt
             if (Position.X < CoordinateConstants.LeftBorder)
             {
-                Position = new Vector2(CoordinateConstants.LeftBorder, startPosition.Y);
+                Position = new Vector2(CoordinateConstants.LeftBorder, GameItemConstants.PlayerPosition.Y);
             }
 
             if (Position.X > CoordinateConstants.RightBorder)
             {
-                Position = new Vector2(CoordinateConstants.RightBorder, startPosition.Y);
+                Position = new Vector2(CoordinateConstants.RightBorder, GameItemConstants.PlayerPosition.Y);
             }
 
             return true;
@@ -166,12 +156,12 @@ namespace SpaceInvadersRemake.ModelSection
 
             // Spieler können mit gegnerischen Projektilen und Schiffen kollidieren
             // Außerdem auch mit PowerUps, aber die müssen hier nicht behandelt werden, sondern nur in deren IsCollidedWith-Methode
-
             if (!(collisionPartner is Enemy) && !(collisionPartner is Projectile))
                 return;
 
-            if (collisionPartner is Projectile)
+            if (collisionPartner is Projectile) 
             {
+                // Spieler kann nicht mit seinen eigenen Projektilen kollidieren
                 Projectile projectile = (Projectile)collisionPartner;
                 if ((projectile.ProjectileType == ProjectileTypeEnum.PlayerNormalProjectile)
                     || (projectile.ProjectileType == ProjectileTypeEnum.PiercingProjectile))
@@ -208,7 +198,6 @@ namespace SpaceInvadersRemake.ModelSection
                                             bool timeOver = (powerUp.TimeLeft <= 0.0f);
                                             if (timeOver)
                                             {
-                                                // Remove-Delegate ausführen
                                                 if (powerUp.Remove != null)
                                                     powerUp.Remove(this);
                                             }
@@ -234,13 +223,13 @@ namespace SpaceInvadersRemake.ModelSection
         public static event EventHandler Created;
 
         /// <summary>
-        /// Fügt der Liste der aktiven PowerUps ein neues PowerUps hinzu. Dabei wird das <c>Apply</c>-Delegate des übegebenen <c>ActivePowerUp</c>s ausgelöst.
+        /// Fügt der Liste der aktiven PowerUps ein neues PowerUp hinzu. Dabei wird das <c>Apply</c>-Delegate des übegebenen <c>ActivePowerUp</c>s ausgelöst.
         /// </summary>
         /// <remarks>
         /// Wenn bereits ein gleiches <c>ActivePowerUp</c> in der Liste ist, wird dieses gelöscht ohne das <c>Remove-</c>Delegate auszulösen.
         /// Für weitere Informationen sollten unbedingt die Hinweise zur PowerUps-Liste <c>ActivePowerUps</c> beachtet werden.
         /// </remarks>
-        /// <param name="powerUp">Das neue PowerUps</param>
+        /// <param name="powerUp">Das neue PowerUp</param>
         public void AddPowerUp(ActivePowerUp powerUp)
         {
             // Wenn ein gleiches PowerUp in der Liste ist, wird dieses gelöscht
@@ -282,10 +271,10 @@ namespace SpaceInvadersRemake.ModelSection
         /// In der <c>Update</c>-Methode wird bei allen aktiven PowerUps die Restzeit aktualisiert und diese gegebenenfalls entfernt, 
         /// wenn die Restzeit auf null oder darunter gefallen ist.
         /// </summary>
-        /// <remarks>Wird der Liste ein PowerUps hinzugefügt, wird dessen <c>Apply</c>-Delegate aufgerufen (in der <c>AddPowerUp</c>-Methode).
+        /// <remarks>Wird der Liste ein PowerUp hinzugefügt, wird dessen <c>Apply</c>-Delegate aufgerufen (in der <c>AddPowerUp</c>-Methode).
         /// Beim Entfernen aus der Liste wird das <c>Remove</c>-Delegate aufgerufen (in der <c>Update</c>-Methode). Ausnahme ist, 
-        /// wenn ein weiteres Waffen-PowerUps hinzugefügt wird oder ein PowerUps, das bereits aktiv ist. 
-        /// In diesem Fall wird das vorher aktive Waffen-PowerUps entfernt ohne <c>Remove</c> aufzurufen.
+        /// wenn ein weiteres Waffen-PowerUps hinzugefügt wird oder ein PowerUp, das bereits aktiv ist. 
+        /// In diesem Fall wird das vorher aktive (Waffen-)PowerUp entfernt ohne <c>Remove</c> aufzurufen.
         /// </remarks>
         public List<ActivePowerUp> ActivePowerUps
         {
@@ -305,9 +294,6 @@ namespace SpaceInvadersRemake.ModelSection
         public Player(Vector2 position, Vector2 velocity, int hitpoints, int damage, Weapon weapon, int lives)
             : base(position, velocity, hitpoints, damage, weapon)
         {
-            this.startPosition = position;
-            this.baseVelocity = velocity;
-            this.baseHitpoints = hitpoints;
             this.Lives = lives;
 
             // Spieler für kurze Zeit unverwundbar machen

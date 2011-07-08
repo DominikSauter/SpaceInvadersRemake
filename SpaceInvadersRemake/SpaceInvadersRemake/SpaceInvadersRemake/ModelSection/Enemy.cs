@@ -31,19 +31,23 @@ namespace SpaceInvadersRemake.ModelSection
         {
             bool result = true;
 
+            // Normalisiere Vektor, fall er nicht 0 ist
             if (direction != Vector2.Zero)
             {
                 direction.Normalize();
             }
+
+            // Bewege das Schiff mir seiner Geschwindigkeit in die angegebene Richtung. TimeFactor ermöglicht Zeitlupeneffekt
             Position += Velocity * direction * (float)gameTime.ElapsedGameTime.TotalSeconds * GameItem.TimeFactor;
 
+            // Rückmeldung, falls Schiff das Spielfeld verlässt
             if ((Position.X < CoordinateConstants.LeftBorder) || (Position.X > CoordinateConstants.RightBorder)
                 || (Position.Y < CoordinateConstants.BottomBorder) || (Position.Y > CoordinateConstants.TopBorder))
             {
                 result = false;
             }
 
-            // Wenn der Gegner nah unten aus dem Spielfeld fliegt, wird er zum Löschen markiert
+            // Wenn der Gegner nach unten aus dem Spielfeld fliegt, wird er zum Löschen markiert
             if (Position.Y < 1.25f * CoordinateConstants.BottomBorder)
             {
                 IsAlive = false;

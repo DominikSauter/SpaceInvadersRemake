@@ -1,14 +1,15 @@
-﻿// Implementiert von Tobias
+﻿
+// Implementiert von Tobias
 
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Enumeration bietet IDs für alle PowerUps und den Fall, dass ein PowerUps zufällig bestimmt werden soll.
+    /// Diese Enumeration bietet IDs für alle PowerUps und den Fall, dass ein PowerUp zufällig bestimmt werden soll.
     /// </summary>
     public enum PowerUpEnum
     {
         /// <summary>
-        /// zufälliges PowerUps
+        /// zufälliges PowerUp
         /// </summary>
         Random,
         /// <summary>

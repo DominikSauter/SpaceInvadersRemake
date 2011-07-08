@@ -59,7 +59,9 @@ namespace SpaceInvadersRemake.ModelSection
             // Projektile können mit Schilden und, je nachdem was für ein Projektiltyp es ist, mit bestimmten Schiffen kollidieren
 
             if ((collisionPartner is Shield)
+                // Wenn der Kollisionspartner ein Gegner ist, muss es sich um ein Spielerprojektil handeln
                 || ((collisionPartner is Enemy) && ((ProjectileType == ProjectileTypeEnum.PlayerNormalProjectile) || (ProjectileType == ProjectileTypeEnum.PiercingProjectile)))
+                // Wenn der Kollisionspartner ein Spieler ist, muss es sich um ein gegnerisches Projektil handel
                 || ((collisionPartner is Player) && ((ProjectileType == ProjectileTypeEnum.EnemyNormalProjectile) || (ProjectileType == ProjectileTypeEnum.MothershipProjectile) || (ProjectileType == ProjectileTypeEnum.MinibossProjectile))))
             {
                 if (Projectile.Hit != null)
@@ -74,14 +76,18 @@ namespace SpaceInvadersRemake.ModelSection
         /// <remarks>"VelocityMultiplier" ist eine Modifikation für "FlightDirection", welche auf "Position" addiert wird, um die Bewegung zu simulieren.</remarks>
         public override void Update(GameTime gameTime)
         {
+            // Normalisieren der Flugrichtung
             FlightDirection.Normalize();
 
+            // Bewegt das Projektil mit seiner Geschwindigkeit in die gewünschte Richtung. TimeFactor bewirkt Zeitlupeneffekt
             Position += FlightDirection * Velocity * (float)gameTime.ElapsedGameTime.TotalSeconds * GameItem.TimeFactor;
 
+            // Wenn das Projektil das Spielfeld verlässt (mit Puffer, damit es besser aussieht), dann wird es zerstört.
             if ((Position.X < 2.0f * CoordinateConstants.LeftBorder) || (Position.X > 2.0f * CoordinateConstants.RightBorder)
                 || (Position.Y < 2.0f * CoordinateConstants.BottomBorder) || (Position.Y > 2.0f * CoordinateConstants.TopBorder))
             {
-                Destroy();
+                // Das Destroyed-Event soll dabei nicht ausgelöst werden. Deshalb wird IsAlive direkt auf false gesetzt.
+                IsAlive = false;
             }
         }
 

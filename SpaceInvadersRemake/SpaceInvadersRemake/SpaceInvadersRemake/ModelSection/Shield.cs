@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.Xna.Framework;
 
+// Implementiert von Tobias
+
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
@@ -51,8 +53,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// Erzeugt ein Schild
         /// </summary>
         /// <param name="position">Position</param>
-        /// <param name="hitpointsMultiplier">Lebenspunkte</param>
-        /// <param name="damageMultiplier">Schaden, der anderen zugefügt wird</param>
+        /// <param name="hitpoints">Lebenspunkte</param>
+        /// <param name="damage">Schaden, der anderen zugefügt wird</param>
         public Shield(Vector2 position, int hitpoints, int damage)
             : base(position, Vector2.Zero, hitpoints, damage)
         {

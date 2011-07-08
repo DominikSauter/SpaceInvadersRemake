@@ -59,10 +59,13 @@ namespace SpaceInvadersRemake.ModelSection
             set;
         }
 
+        /// <summary>
+        /// Die Lebenspunkte des Objekts
+        /// </summary>
         private int hitpoints;
 
         /// <summary>
-        /// Die Lebenspunkte des Objekts
+        /// Zugriff auf die Lebenspunkte des Objekts
         /// </summary>
         public int Hitpoints
         {
@@ -167,7 +170,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Das begrenzende Volumen (Kugel) des Objekts für die Kollisionsberechnung
+        /// Das begrenzende Volumen des Objekts für die Kollisionsberechnung
         /// </summary>
         public IBoundingVolume BoundingVolume
         {

@@ -6,7 +6,7 @@ using Microsoft.Xna.Framework;
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein MultiShot-PowerUps dar. Dieses PowerUps verbessert die Waffe des Spielers,
+    /// Diese Klasse stellt ein MultiShot-PowerUp dar. Dieses PowerUp verbessert die Waffe des Spielers,
     /// sodass diese mehrere Projektile auf einmal abfeuern kann.
     /// </summary>
     public class MultiShot : PowerUp
@@ -33,7 +33,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
         /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
+        /// <param name="player">Der Spieler bei dem das PowerUp angewendet werden soll.</param>
         public override void Apply(Player player)
         {
             // Neue Waffe setzen
@@ -44,7 +44,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler rückgängig zu machen.
         /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
+        /// <param name="player">Der Spieler bei dem das PowerUp entfernt werden soll.</param>
         public override void Remove(Player player)
         {
             // Normale Waffe zurücksetzen
@@ -52,7 +52,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Erstellt ein MultiShot-PowerUps
+        /// Erstellt ein MultiShot-PowerUp
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>

@@ -1,7 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
+using System;
 
 // Implmentiert von Tobias
 
@@ -20,6 +18,13 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner2">Kollisionspartner 2</param>
         private static void CheckCollision(IGameItem collisionPartner1, IGameItem collisionPartner2)
         {
+            if ((collisionPartner1.BoundingVolume == null)
+                || (collisionPartner2.BoundingVolume == null))
+            {
+                throw new ArgumentException("BoundingVolume eines GameItems wurde nicht gesetzt!");
+            }
+
+            // Überprüfe die GameItems auf Kollision und rufe, wenn nötig IsCollidedWith auf
             if (collisionPartner1.BoundingVolume.Intersects(collisionPartner2.BoundingVolume))
             {
                 collisionPartner1.IsCollidedWith(collisionPartner2);
@@ -34,12 +39,16 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameItemList">Liste aller <c>GameItem</c>s</param>
         public static void CheckAllCollisions(LinkedList<IGameItem> gameItemList)
         {
-            if (gameItemList.Count == 0)
+            // Solange nicht mehr als ein GameItem in der Liste ist, macht Kollisionsberechnung keinen Sinn
+            if (gameItemList.Count <= 1)
                 return;
 
+            
             LinkedListNode<IGameItem> ItemA;
             LinkedListNode<IGameItem> ItemB;
 
+
+            // Durchlaufe die Liste mit zwei Zeigern, wobei ItemB immer hinter oder gleich ItemA ist
             for (ItemA = gameItemList.First; ItemA != null; ItemA = ItemA.Next)
                 for (ItemB = ItemA; ItemB != null; ItemB = ItemB.Next)
                 {
