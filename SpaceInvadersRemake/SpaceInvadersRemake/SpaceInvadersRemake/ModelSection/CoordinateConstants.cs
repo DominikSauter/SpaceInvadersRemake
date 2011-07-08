@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 // Implementiert von Tobias
 
@@ -13,9 +9,6 @@ namespace SpaceInvadersRemake.ModelSection
     /// </summary>
     public static class CoordinateConstants
     {
-        //Directions Definitions
-
-
         /// <summary>
         /// Oben
         /// </summary>

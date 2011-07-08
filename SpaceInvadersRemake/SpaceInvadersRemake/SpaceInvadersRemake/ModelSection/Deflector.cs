@@ -1,12 +1,11 @@
-﻿using System;
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 
 // Implementiert von Tobias
 
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Deflector-PowerUps dar. Dieses PowerUps verbessert den Spieler, sodass er ein Schild hat, das einen Treffer absorbiert.
+    /// Diese Klasse stellt ein Deflector-PowerUp dar. Dieses PowerUp verbessert den Spieler, sodass er ein Schild hat, das einen Treffer absorbiert.
     /// </summary>
     public class Deflector : PowerUp
     {
@@ -33,7 +32,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
         /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
+        /// <param name="player">Der Spieler bei dem das PowerUp angewendet werden soll.</param>
         public override void Apply(Player player)
         {
             //HACK: Im Moment verdoppelt der Deflector nur die HP, evtl. muss noch eine bessere Lösung gefunden werden
@@ -42,7 +41,7 @@ namespace SpaceInvadersRemake.ModelSection
 
         /// <summary>
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
-        /// dazu benutzt den Effekt des PowerUps am Spieler rückgängig zu machen.
+        /// dazu benutzt den Effekt des PowerUp am Spieler rückgängig zu machen.
         /// </summary>
         /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
         public override void Remove(Player player)
@@ -51,7 +50,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Erstellt ein Deflector-PowerUps
+        /// Erstellt ein Deflector-PowerUp
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>

@@ -23,6 +23,11 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="controls">Die Liste der Menüeinträge</param>
         public Menu(List<MenuControl> controls)
         {
+            if (controls.Count == 0)
+            {
+                throw new ArgumentException("Ein leeres Menü macht keinen Sinn!");
+            }
+
             this.controls = controls;
             controls[0].Active = true;
             ActiveControl = controls[0];
@@ -37,9 +42,6 @@ namespace SpaceInvadersRemake.ModelSection
             get
             {
                 return controls.ToArray();
-            }
-            private set
-            {
             }
         }
 

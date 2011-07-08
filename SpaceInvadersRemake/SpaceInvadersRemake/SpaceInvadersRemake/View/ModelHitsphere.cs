@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
 // Implementiert von Dodo, Tobias
@@ -12,6 +9,9 @@ namespace SpaceInvadersRemake.View
     /// Objekte dieser Klasse stellen eine Hitbox dar, welche um ein 3D-Model gelegt wird um Kollisionsüberprüfung
     /// zu ermöglichen.
     /// </summary>
+    /// <remarks>
+    /// Hierarische Kollisionsprüfung wird noch nicht unterstützt
+    /// </remarks>
     public class ModelHitsphere : ModelSection.IBoundingVolume
     {
         private Matrix world;
@@ -83,20 +83,16 @@ namespace SpaceInvadersRemake.View
             set
             {
                 this.world = value;
-                /*if (InnerSpheres != null)
-                {
-                    foreach (ModelHitsphere sphere in InnerSpheres)
-                    {
-                        sphere.world = value;
-                    }
-                }*/
             }
         }
 
+        /// <summary>
+        /// Überprüft ob sich das Umgebungsvolumen mit einem anderen überschneidet.
+        /// </summary>
+        /// <param name="other">Das andere Umgebungsvolumen</param>
+        /// <returns>Gibt an ob Überschneidung erfolgt</returns>
         public bool Intersects(ModelSection.IBoundingVolume other)
         {
-            //HACK: Innere Kugeln müssen noch betrachtet werden
-
             ModelHitsphere otherSphere = (ModelHitsphere)other;
 
             if (OuterSphere.Transform(World).Intersects(otherSphere.OuterSphere.Transform(otherSphere.World)))

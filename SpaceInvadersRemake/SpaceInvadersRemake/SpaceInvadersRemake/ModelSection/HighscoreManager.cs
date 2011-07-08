@@ -38,36 +38,6 @@ namespace SpaceInvadersRemake.ModelSection
 
             // STST
             NewEntry = NewEntryInHighscore(score, NewEntry);
-
-            //if (highscore.Count < 10) // falls noch nicht 10 Eintäge vorhanden, wird der neue Eintrag einfach eingefügt
-            //{
-            //    NewEntry = new HighscoreEntry("", score);
-            //    highscore.Add(NewEntry);
-
-            //}
-            //else // falls schon alle 10 Einträge vorhanden sind, dann wird überprüft ob die Punktzahl hoch genug ist
-            //{
-            //    for (int i = 0; i < 10; i++)
-            //    {
-            //        if (score > highscore[i].Score)
-            //        {
-            //            highscore.RemoveAt(i);
-            //            NewEntry = new HighscoreEntry("", score);
-            //            highscore.Add(NewEntry);
-            //            break;
-            //        }
-            //    }
-            //}
-
-            //// Sortiert die Highscore-Liste mit einem anonymen Vergleichs-Delegate
-            //highscore.Sort(delegate(HighscoreEntry a, HighscoreEntry b)
-            //               {
-            //                   if (a.Score < b.Score)
-            //                       return -1;
-            //                   else if (a.Score == b.Score)
-            //                       return 0;
-            //                   else return 1;
-            //               });
         }
 
         /// <summary>
@@ -189,20 +159,6 @@ namespace SpaceInvadersRemake.ModelSection
             }
             // </STST>
 
-            //// Ertellt bei jedem Abspeichern eine neue Highscore-Datei
-            //FileStream outputFile = new FileStream(hscFilePath, FileMode.Create, FileAccess.Write);
-            //StreamWriter swOutput = new StreamWriter(outputFile);
-
-            //// Speichert die Highscore-Liste ab
-            //for (int i = 0; i < highscore.Count; i++)
-            //{
-            //    swOutput.WriteLine(highscore[i].Name + " " + highscore[i].Score.ToString());
-            //}
-
-            //// Schließt die Datei
-            //swOutput.Close();
-            //outputFile.Close();
-
             // Verhindert, dass der Eintrag weiter bearbeitet werden kann
             NewEntry = null;
 
@@ -263,40 +219,6 @@ namespace SpaceInvadersRemake.ModelSection
             return hsc;
             // </STST>
 
-            //// neue Highscore-Liste zur Rückgabe
-            //List<HighscoreEntry> hscList = new List<HighscoreEntry>();
-
-            //// temporäre Variablen
-            //int count = 0;
-            //int score = 0;
-            //string line = null;
-            //string name = null;
-            //string[] entryData = null;
-
-            //// Öffne die Highscore-Datei und erstelle ein StreamReader-Objekt zum zeilenwiesen Auslesen
-            //FileStream inputFile = new FileStream(hscFilePath, FileMode.OpenOrCreate, FileAccess.Read);
-            //StreamReader srInput = new StreamReader(inputFile);
-
-            //// Lese nacheinander jede Zeile der Datei ein un wandle sie in einen Highscore-Eintrag um.
-            //// Dabei wird sichergestellt, dass maximal 10 Einträge eingelesen werden.
-            //while (((line = srInput.ReadLine()) != null) && (count < 10))
-            //{
-            //    entryData = line.Split(' ');
-
-            //    name = entryData[0];
-            //    score = Convert.ToInt32(entryData[1]);
-
-            //    hscList.Add(new HighscoreEntry(name, score));
-
-            //    count++;
-            //}
-
-            //// Schließe die Datei
-            //srInput.Close();
-            //inputFile.Close();
-
-            //// Gebe die Liste zurück
-            //return hscList;
         }
     }
 }

@@ -5,7 +5,7 @@
 namespace SpaceInvadersRemake.ModelSection
 {
     /// <summary>
-    /// Diese Klasse stellt ein Speedboost-PowerUps dar. Dieses PowerUps erhöht die Geschwindigkeit des Spielers.
+    /// Diese Klasse stellt ein Speedboost-PowerUp dar. Dieses PowerUp erhöht die Geschwindigkeit des Spielers.
     /// </summary>
     public class Speedboost : PowerUp
     {
@@ -31,7 +31,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler anzuwenden.
         /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUps angewendet werden soll.</param>
+        /// <param name="player">Der Spieler bei dem das PowerUp angewendet werden soll.</param>
         public override void Apply(Player player)
         {
             // Spielergeschwindigkeit erhöhen
@@ -42,7 +42,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// Diese Methode wird über ein <c>PowerUpAction</c>-Delegate in der <c>ActivePowerUp</c>-Klasse 
         /// dazu benutzt den Effekt des PowerUps am Spieler rückgängig zu machen.
         /// </summary>
-        /// <param name="player">Der Spieler bei dem das PowerUps entfernt werden soll.</param>
+        /// <param name="player">Der Spieler bei dem das PowerUp entfernt werden soll.</param>
         public override void Remove(Player player)
         {
             // Normale Geschwindigkeit zurücksetzen
@@ -50,7 +50,7 @@ namespace SpaceInvadersRemake.ModelSection
         }
 
         /// <summary>
-        /// Erstellt ein Speedboost-PowerUps
+        /// Erstellt ein Speedboost-PowerUp
         /// </summary>
         /// <param name="position">Startposition</param>
         /// <param name="velocity">maximale Geschwindigkeit</param>
