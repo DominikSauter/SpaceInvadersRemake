@@ -45,12 +45,14 @@ namespace SpaceInvadersRemake.ModelSection
         {
             if (gameTime.TotalGameTime.TotalMilliseconds >= lastShot)
             {
-                // TODO: Schussrichtung-Berechnung neu überdenken (jetzige Berechnung nicht allgemein gültig)
                 int shots = 3;
-                float distance = 0.2f;
+                float shotDistance = 0.1f;
+                shootingDirection.Normalize();
+                float xDirectionShifting;
                 for (int i = 0; i < shots; i++)
                 {
-                    new Projectile(position, shootingDirection + new Vector2((i - (shots / 2)) * distance, 0.0f), projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
+                    xDirectionShifting = - ((shotDistance * (shots - 1)) / 2) + (i * shotDistance); // Errechnet die Verschiebung des Projektils in X-Richtung
+                    new Projectile(position, new Vector2(shootingDirection.X + xDirectionShifting, shootingDirection.Y - Math.Abs(xDirectionShifting)), projectileType, projectileHitpoints, projectileVelocity, projectileDamage);
                 }
                 lastShot = gameTime.TotalGameTime.TotalMilliseconds + (cooldown * (1 / GameItem.TimeFactor));
 
