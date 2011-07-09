@@ -20,7 +20,8 @@ namespace SpaceInvadersRemake.View
 
         private Texture2D gameBackgroundImage;
         private Texture2D hudBackgroundTexture;
-        private SpriteFont font;
+        private SpriteFont fontText;
+        private SpriteFont fontScore;
         private Texture2D liveIcon;
         private StateMachine.InGameState inGameState;
 
@@ -41,7 +42,8 @@ namespace SpaceInvadersRemake.View
             this.graphics = graphics;
 
             this.inGameState = currentState;
-            this.font = ViewContent.UIContent.Font;
+            this.fontText = ViewContent.UIContent.Font;
+            this.fontScore = ViewContent.UIContent.FontScore;
             this.gameBackgroundImage = ViewContent.UIContent.GameBackgroundImage;
             this.hudBackgroundTexture = ViewContent.UIContent.HUDBackground;
             this.liveIcon = ViewContent.UIContent.LiveIcon;
@@ -78,7 +80,7 @@ namespace SpaceInvadersRemake.View
             Color liveColor;
 
             //Vektor mit Länge/Breite für den String welcher die Punktzahl darstellt
-            Vector2 scoreStringLength = this.font.MeasureString(score.ToString());
+            Vector2 scoreStringLength = this.fontText.MeasureString(score.ToString());
 
             //Zentrierte Y Position der Punktzahl im HUD
             float scoreCenterPosition = (this.hudBackgroundTexture.Height - scoreStringLength.Y) / 2.0f;
@@ -158,7 +160,7 @@ namespace SpaceInvadersRemake.View
             }
 
             //beschriftet den HUD mit der aktuellen Punktzahl
-            spriteBatch.DrawString(this.font, score.ToString(), new Vector2((float)(graphics.PreferredBackBufferWidth - scoreStringLength.X - 20.0f),
+            spriteBatch.DrawString(this.fontScore, score.ToString(), new Vector2((float)(graphics.PreferredBackBufferWidth - scoreStringLength.X - 20.0f),
                 (float)(graphics.PreferredBackBufferHeight - this.hudBackgroundTexture.Height + scoreCenterPosition)), Color.Green);
 
             for (int i = 0; i < powerUpIcons.Count; i++)
@@ -166,7 +168,7 @@ namespace SpaceInvadersRemake.View
                 Texture2D icon = powerUpIcons[i];
                 Rectangle position = new Rectangle(10 , 70 * i, icon.Width, icon.Height);
                 spriteBatch.Draw(icon, position, Color.White);
-                spriteBatch.DrawString(this.font, ((int)powerUps[i].TimeLeft).ToString(), new Vector2(icon.Width * 2, 70 * i), Color.Yellow);
+                spriteBatch.DrawString(this.fontText, ((int)powerUps[i].TimeLeft).ToString(), new Vector2(icon.Width * 2, 70 * i), Color.Yellow);
             }
 
             spriteBatch.End();
