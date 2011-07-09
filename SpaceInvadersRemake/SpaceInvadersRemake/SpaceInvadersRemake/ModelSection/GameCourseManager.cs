@@ -17,14 +17,33 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Die Aliens der aktuellen Welle.
         /// </summary>
-        private LinkedList<IGameItem> currentWave = new LinkedList<IGameItem>();
+        private LinkedList<IGameItem> currentWave;
+
+        /// <summary>
+        /// Die Verzögerungszeit, die vor der Erstellung einer neuen Alien-Welle vergehen soll in Milisekunden.
+        /// </summary>
+        private int waveDelayTime;
+
+        /// <summary>
+        /// Der Zeitpunkt, ab dem die neue Alien-Welle erzeugt werden darf in Milisekunden seit Spielstart.
+        /// </summary>
+        private double nextWaveTime;
+
+        /// <summary>
+        /// Gibt an, ob die Wellen-Verzögerung gerade aktiv ist oder nicht.
+        /// </summary>
+        private bool waveDelayActive;
 
         /// <summary>
         /// Konstruktor; erzeugt eine neue GameItem.GameItemList, sowie ein neues GameCourse-Objekt (in dieser Reihenfolge).
         /// </summary>
         public GameCourseManager()
         {
+            waveDelayTime = 2500;
+            nextWaveTime = 0;
+            waveDelayActive = false;
             GameItem.GameItemList = new LinkedList<IGameItem>();
+            currentWave = new LinkedList<IGameItem>();
             GameItem.TimeFactor = 1.0f; // SlowMotion-Bugfix - TB
             GameCourse = new GameCourse();
         }
@@ -85,9 +104,22 @@ namespace SpaceInvadersRemake.ModelSection
                     item = tempItem;
                 }
 
+                // Alien-Welle tot
                 if (!waveAlive)
                 {
-                    currentWave = GameCourse.NextWave(gameTime);
+                    // Setze Verzögerungszeit
+                    if (!waveDelayActive)
+                    {
+                        nextWaveTime = gameTime.TotalGameTime.TotalMilliseconds + waveDelayTime;
+                        waveDelayActive = true;
+                    }
+
+                    // Erzeuge neue Alien-Welle nach Ablauf der Verzögerungszeit
+                    if (gameTime.TotalGameTime.TotalMilliseconds >= nextWaveTime)
+                    {
+                        currentWave = GameCourse.NextWave(gameTime);
+                        waveDelayActive = false;
+                    }
                 }
             }
 
