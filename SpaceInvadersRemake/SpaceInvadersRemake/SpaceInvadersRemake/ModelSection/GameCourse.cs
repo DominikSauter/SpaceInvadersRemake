@@ -24,9 +24,9 @@ namespace SpaceInvadersRemake.ModelSection
         private Random random;
 
         /// <summary>
-        /// Speichert den Zeitpunkt, an dem das Mutterschiff das letzte mal aufgetaucht ist in Milisekunden seit Spielstart plus einen Cooldown-Wert.
+        /// Speichert den Zeitpunkt, ab dem das Mutterschiff das nächste Mal auftauchen darf in Milisekunden seit Spielstart.
         /// </summary>
-        private double lastMothership;
+        private double nextMothershipTime;
 
         /// <summary>
         /// Die Zeit, die zwischen dem Auftauchen und dem erneuten Auftauchen des Mutterschiffs vergehen muss in Milisekunden.
@@ -34,12 +34,18 @@ namespace SpaceInvadersRemake.ModelSection
         private int mothershipCooldown;
 
         /// <summary>
+        /// Gibt an, ob der Mutterschiff-Cooldown gerade aktiv ist, oder nicht.
+        /// </summary>
+        private bool mothershipCooldownActive;
+
+        /// <summary>
         /// Konstruktor
         /// </summary>
         public GameCourse()
         {
             mothershipCooldown = 30000;
-            lastMothership = -mothershipCooldown;
+            nextMothershipTime = 0;
+            mothershipCooldownActive = false;
             random = new Random();
             WaveCounter = 0;
             InitializeGame();
@@ -145,16 +151,20 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public void SpecialEvent(GameTime gameTime)
         {
-            if (gameTime.TotalGameTime.TotalMilliseconds >= lastMothership)
+            // Bestimmte Zeitpunkt des nächsten Mutterschiff-Auftauchens
+            if (!mothershipCooldownActive)
             {
-                // TODO: Evt. noch andere Wahrscheinlichkeitsberechnung implementieren
-                if (random.Next(10000) <= 6)    // Mutterschiff-Wahrscheinlichkeit etwa 1/30 pro Sekunde
-                {
-                    Vector2[] formation = { GameItemConstants.MothershipPosition };
-                    WaveGenerator.CreateWave(BehaviourEnum.MothershipMovement, formation, DifficultyLevel.EasyDifficulty);
+                nextMothershipTime = gameTime.TotalGameTime.TotalMilliseconds + (mothershipCooldown + random.Next(mothershipCooldown + 1)); // Mutterschiff erscheint in zufälligen Abständen aus dem Intervall [mothershipCooldown, (mothershipCooldown * 2)]
+                mothershipCooldownActive = true;
+            }
 
-                    lastMothership = gameTime.TotalGameTime.TotalMilliseconds + mothershipCooldown;
-                }
+            // Erzeuge Mutterschiff, sobald der vorher bestimmte Zeitpunkt dafür gekommen ist
+            if (gameTime.TotalGameTime.TotalMilliseconds >= nextMothershipTime)
+            {
+                Vector2[] formation = { GameItemConstants.MothershipPosition };
+                WaveGenerator.CreateWave(BehaviourEnum.MothershipMovement, formation, DifficultyLevel.EasyDifficulty);
+
+                mothershipCooldownActive = false;
             }
         }
 
