@@ -22,6 +22,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public BackgroundMusic()
         {
+            //Laden der Anfangslautstärke aus der externen Settingsdatei
             this.Volume = Settings.GameConfig.Default.MasterVolume * Settings.GameConfig.Default.MusicVolume;
             this.Repeat = true;
             this.Playing = false;

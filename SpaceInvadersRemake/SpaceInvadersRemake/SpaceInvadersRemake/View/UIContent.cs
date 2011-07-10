@@ -26,6 +26,12 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
+        public SpriteFont FontSelect
+        {
+            get;
+            set;
+        }
+
         public Texture2D GameBackgroundImage
         {
             get;
