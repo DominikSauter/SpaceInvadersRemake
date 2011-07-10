@@ -31,7 +31,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Erstellt eine Representation eines Projektils.
         /// </summary>
-        /// <param name="projectile">Projektil(typ)</param>
+        /// <param name="projectile">Projektil(Typ)</param>
         /// <param name="texture">Projektiltextur</param>
         /// <param name="graphics">DeviceManager</param>
         /// <param name="effect">BasicEffect</param>
@@ -92,7 +92,7 @@ namespace SpaceInvadersRemake.View
             //Wenn sich die X-Richtung verändert, also das Projektil schräg fliegt soll es auch schräg gezeichnet werden
             if (newPosition.Z > this.position.Z || newPosition.Z < this.position.Z)
             {
-                if (newPosition.X > this.position.X || newPosition.X < this.position.X) //In den konstruktor
+                if (newPosition.X > this.position.X || newPosition.X < this.position.X) 
                 { 
                      //Nach rechts/links drehen abhängig von der Flugrichtung
                      rotate = Matrix.CreateRotationZ(MathHelper.ToRadians((float)(Math.Atan((newPosition.X - this.position.X) / (newPosition.Z - this.position.Z)))));
@@ -127,7 +127,7 @@ namespace SpaceInvadersRemake.View
             {
                 pass.Apply();
                 
-                //Das Primitive Rechteck zeichnen
+                //Das Primitive-Rechteck zeichnen
                 graphics.GraphicsDevice.DrawUserIndexedPrimitives(PrimitiveType.TriangleList, vertices, 0, 4, indices, 0, 2);
             }
         }

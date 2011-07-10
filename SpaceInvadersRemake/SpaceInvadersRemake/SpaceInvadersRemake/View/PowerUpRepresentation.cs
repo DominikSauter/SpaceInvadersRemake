@@ -17,6 +17,7 @@ namespace SpaceInvadersRemake.View
         private Model model;
         private Texture2D texture;
         private Vector3 position;
+
         //Winkel um den das PowerUp Modell immer gedreht wird (in °)
         private float angle;
         private float rotationSpeed;
@@ -24,6 +25,9 @@ namespace SpaceInvadersRemake.View
     
         /// <summary>
         /// Erstellt eine Representation eines PowerUps.
+        /// <param name="graphics">GraphicsDeviceManager</param>
+        /// <param name="powerUp">übergebenes PowerUp-Objekt</param>
+        /// <param name="texture">Textur des PowerUps</param>
         /// </summary>
         public PowerUpRepresentation(PowerUp powerUp, Texture2D texture, GraphicsDeviceManager graphics)
         {
@@ -65,7 +69,7 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet das PowerUp.
         /// </summary>
-        /// <param name="spriteBatch"></param>
+        /// <param name="spriteBatch">spriteBatch</param>
         public override void Draw(SpriteBatch spriteBatch)
         {
             this.angle += rotationSpeed;

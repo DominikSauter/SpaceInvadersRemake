@@ -20,6 +20,8 @@ namespace SpaceInvadersRemake.View
 
         /// <summary>
         /// Initialisiert die Highscoreoberfläche
+        /// <param name="graphics">GraphicsDeviceManager</param>
+        /// <param name="highscoreManager">HighscoreManager-Objekt</param>
         /// </summary>
         public HighscoreUI(HighscoreManager highscoreManager, GraphicsDeviceManager graphics)
         {
@@ -33,6 +35,7 @@ namespace SpaceInvadersRemake.View
 
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
+        /// <param name="spriteBatch">spriteBatch</param>
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
