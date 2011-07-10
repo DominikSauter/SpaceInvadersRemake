@@ -34,7 +34,7 @@ namespace SpaceInvadersRemake.ModelSection
         private int mothershipCooldown;
 
         /// <summary>
-        /// Gibt an, ob der Mutterschiff-Cooldown gerade aktiv ist, oder nicht.
+        /// Gibt an, ob der Mutterschiff-Cooldown gerade aktiv ist oder nicht.
         /// </summary>
         private bool mothershipCooldownActive;
 
@@ -151,7 +151,7 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="gameTime">Spielzeit</param>
         public void SpecialEvent(GameTime gameTime)
         {
-            // Bestimmte Zeitpunkt des nächsten Mutterschiff-Auftauchens
+            // Bestimme Zeitpunkt des nächsten Mutterschiff-Auftauchens
             if (!mothershipCooldownActive)
             {
                 nextMothershipTime = gameTime.TotalGameTime.TotalMilliseconds + (mothershipCooldown + random.Next(mothershipCooldown + 1)); // Mutterschiff erscheint in zufälligen Abständen aus dem Intervall [mothershipCooldown, (mothershipCooldown * 2)]

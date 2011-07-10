@@ -27,7 +27,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Player">
     <Position X="12.5" Y="53" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgQAAAAAAIAABBgAQAIAAAAAAABAAAQDAAAIAAQAEIA=</HashCode>
+      <HashCode>AgQEAAAAAIIABAgAAAIAAAAAAABAAAQDAAAIAAQAAIA=</HashCode>
       <FileName>ModelSection\Player.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -48,7 +48,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.Mothership">
     <Position X="14.5" Y="58.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAEAAAAAAAAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <HashCode>AgQAAEAAAAAAAAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
       <FileName>ModelSection\Mothership.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -69,42 +69,42 @@
   <Class Name="SpaceInvadersRemake.ModelSection.MultiShot">
     <Position X="24.25" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>ModelSection\MultiShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.PiercingShot">
     <Position X="20.75" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>ModelSection\PiercingShot.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Rapidfire">
     <Position X="22.5" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>ModelSection\Rapidfire.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Speedboost">
     <Position X="26" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>ModelSection\Speedboost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.Deflector">
     <Position X="27.75" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>ModelSection\Deflector.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.SlowMotion">
     <Position X="31.25" Y="52.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAABAAAAAAAAAABAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
       <FileName>ModelSection\SlowMotion.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -145,15 +145,22 @@
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.PowerUpGenerator">
     <Position X="25.75" Y="48" Width="2" />
+    <NestedTypes>
+      <Class Name="SpaceInvadersRemake.ModelSection.PowerUpGenerator.AvailablePowerUp" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>ModelSection\PowerUpGenerator.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Class>
+    </NestedTypes>
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAQAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAIAAAIAAAAAAAAAIAAAAQAAAAAACA=</HashCode>
       <FileName>ModelSection\PowerUpGenerator.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.GameItem">
     <Position X="16.5" Y="45.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AwQAAACAAIAgBAAgAABAAAAAAARAAAAEAAAAAAAEAAA=</HashCode>
+      <HashCode>AwQAAACAAIAgBAAgIABAACAAAARAAAAEAAAAAAAEAAA=</HashCode>
       <FileName>ModelSection\GameItem.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.648" />
@@ -175,7 +182,7 @@
   <Class Name="SpaceInvadersRemake.Controller.KeyboardController">
     <Position X="59.25" Y="44.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAABAAAAAAAgABAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAQAAABAAAAAEAgABAAAAgAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Controller\KeyboardController.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -305,7 +312,7 @@
   <Class Name="SpaceInvadersRemake.StateMachine.BreakState">
     <Position X="7.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAEAAAAAAAAAAAAAAMQAAAAAAAAgAAAAA=</HashCode>
+      <HashCode>AAAAAAAgAAAAEAAAAAAAAAAAAAAMQAAAAAAAAgAAAAA=</HashCode>
       <FileName>StateMachine\BreakState.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -409,7 +416,7 @@
   <Class Name="SpaceInvadersRemake.Controller.BlockWaveAI">
     <Position X="65.5" Y="48.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAAAAAAAgABAAAQgAAIAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAEAAAAAAAAAAgABAAAAgAAIAAAAAAAAAAAEEAAAAA=</HashCode>
       <FileName>Controller\BlockWaveAI.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -476,7 +483,7 @@
   <Class Name="SpaceInvadersRemake.ModelSection.HighscoreManager">
     <Position X="25.25" Y="29.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAIAAICAAAAAICAAAAAAAAAAAAAAAAYAAAAAAAAA=</HashCode>
+      <HashCode>QAQAAIAAICAAAAAICAAAAAAAIAAAAAAAAYgAAAAAAAA=</HashCode>
       <FileName>ModelSection\HighscoreManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -512,7 +519,7 @@
   <Class Name="SpaceInvadersRemake.View.ShieldRepresentation">
     <Position X="45.25" Y="9" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAASAQAAAAAAggAAABAIAAGQgAQAigACAAAAAAEQAA=</HashCode>
+      <HashCode>AAAASAAAAAAAAgAAAABAIAAGQgAQAigACAAAAAAEAAA=</HashCode>
       <FileName>View\ShieldRepresentation.cs</FileName>
       <NewMemberFileName>ShieldRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -520,7 +527,7 @@
   <Class Name="SpaceInvadersRemake.View.PowerUpRepresentation">
     <Position X="47.25" Y="9" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAASAAAAAAAAgAAAAAAIAAAAAAQAigAAAAAAAAAgAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAIAAAAAAAAigAAABAAABIgAA=</HashCode>
       <FileName>View\PowerUpRepresentation.cs</FileName>
       <NewMemberFileName>PowerUpRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -528,7 +535,7 @@
   <Class Name="SpaceInvadersRemake.View.ProjectileRepresentation">
     <Position X="49.5" Y="9" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAASAAAAAAAAgAAAAAAIAAAAAAQAgiBAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAASAAAAAAAAgAAAIAAIAAAAAAQAggAAAAAAAAAAAA=</HashCode>
       <FileName>View\ProjectileRepresentation.cs</FileName>
       <NewMemberFileName>ProjectileRepresentation.cs</NewMemberFileName>
     </TypeIdentifier>
@@ -553,7 +560,7 @@
   <Class Name="SpaceInvadersRemake.View.ViewManager">
     <Position X="36.5" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AgYADAEQACCAgAgBABEAAQAAAAAAAAgQAAQAAAQAADI=</HashCode>
+      <HashCode>AgYADAEQASCAgAABABEAAQAAAAAAAAgQAAQAAAQAADI=</HashCode>
       <FileName>View\ViewManager.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -569,7 +576,7 @@
   <Class Name="SpaceInvadersRemake.View.GameUI">
     <Position X="38.75" Y="2.5" Width="2" />
     <TypeIdentifier>
-      <HashCode>CAIAAAAAAAAAAgAAAAAABAAAAAAAAAgAACAAAAAAACA=</HashCode>
+      <HashCode>CAIAAAAAAABgAgAAAAAABCAAAAAAAIgAACQIAAAAACA=</HashCode>
       <FileName>View\GameUI.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -608,7 +615,7 @@
   <Class Name="SpaceInvadersRemake.View.Intro">
     <Position X="54.75" Y="12.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAgAAIIAAAAAAAAAAAggEoAIAAAACAAA=</HashCode>
       <FileName>View\Intro.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -616,7 +623,7 @@
   <Class Name="SpaceInvadersRemake.View.SoundEffects">
     <Position X="57" Y="12.25" Width="2" />
     <TypeIdentifier>
-      <HashCode>AASAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAACAAA=</HashCode>
+      <HashCode>AACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAoAIAAAACAAA=</HashCode>
       <FileName>View\SoundEffects.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -681,21 +688,21 @@
   <Class Name="SpaceInvadersRemake.View.RepresentationContent">
     <Position X="33.75" Y="3.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AoICAAAAAACAAQAEAAAAAAAIIgEAAAggAEyCQAEIIAA=</HashCode>
+      <HashCode>AqLCAAIBAACkAQAEAAAAAAAIIgEAAAgkAEiCQAEIIAA=</HashCode>
       <FileName>View\RepresentationContent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.EffectContent">
     <Position X="29" Y="3.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAggAAAAAAAgAAAAAAAAAAgAJCAQQAAAAAQAAJgAE=</HashCode>
+      <HashCode>CAAAggAAAAAAAgAAAAAAAAAAgAJCAQQAAAAAQAgJgEE=</HashCode>
       <FileName>View\EffectContent.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SpaceInvadersRemake.View.UIContent">
     <Position X="31.25" Y="3.75" Width="2" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAIAgAAAAAAAAAAAAQAAAQAIACCAgAAAAACAAA=</HashCode>
+      <HashCode>QAAAACAIAgAAAAAAIAAAAFQAAAQAIACCAoAAAAACAAA=</HashCode>
       <FileName>View\UIContent.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -716,9 +723,9 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="SpaceInvadersRemake.ModelSection.GameItemConstants">
-    <Position X="13.75" Y="38.25" Width="1.5" />
+    <Position X="14.5" Y="37.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ECAACABiABAABMgAAQAAgAGAAAIAAgQAAAEBCAACAAA=</HashCode>
+      <HashCode>NCAACABiABgQBcgBAYAAgomBAAIACywEQAGdCAAShCA=</HashCode>
       <FileName>ModelSection\GameItemConstants.cs</FileName>
     </TypeIdentifier>
   </Class>
