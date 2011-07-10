@@ -51,6 +51,7 @@ namespace SpaceInvadersRemake.View
 
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
+        /// <param name="spriteBatch">spriteBatch</param>
         /// </summary>
         public void Draw(SpriteBatch spriteBatch)
         {
