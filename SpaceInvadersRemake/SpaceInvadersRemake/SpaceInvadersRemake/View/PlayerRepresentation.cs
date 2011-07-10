@@ -1,9 +1,4 @@
 ﻿//Implementiert von Dodo
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -25,22 +20,17 @@ namespace SpaceInvadersRemake.View
         private Vector3 lastPosition;
         private bool playerMoved;
 
-        /// <summary>
-        /// Referenz auf das PlayerGameItem-Modelobjekt um jegliche Abfragen im Model zu tätigen.
-        /// </summary>
-
-        /// <summary>
-        /// ParticleEmitter der einen Explosionseffekt erzeugt.
-        /// </summary>
-        /// <remarks>
-        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
-        /// </remarks>
+        /*
+         * <WAHL>
+         * Wird benötigt wenn eine Partikel Engine eingebaut wird.
         private Explosion explosion;
+         * */
 
-        /// <summary>
-        /// ParticleEmitter der einen Effekt erzeugt, welcher den Antrieb des Spielerschiffs darstellt.
-        /// </summary>
+        /*
+         * <WAHL>
+         * Wird benötigt wenn eine Partikel Engine eingebaut wird.
         private PlayerShipEngine playerShipEngine;
+         * */
     
         /// <summary>
         /// Erstellt eine Representation der Spielerfigur.
@@ -54,22 +44,27 @@ namespace SpaceInvadersRemake.View
             this.playerMoved = false;
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Forward, Vector3.Up);
-
-            //<WAHL>
-            this.playerShipEngine = null;
-            this.explosion = null;
-            //<WAHL>
         }
 
+        /*
+         * <WAHL>
+         * Muss implementiert werden wegen des Interfaces. Wird später benötigt wenn eine Partikel Engine eingebaut wird.
+         * */
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
         {
             throw new System.NotImplementedException();
         }
 
+        /// <summary>
+        /// Zeichnet das Spielerschiff auf den Bildschirm.
+        /// </summary>
+        /// <param name="spriteBatch">SpriteBatch zum Zeichnen</param>
         public override void Draw(SpriteBatch spriteBatch)
         {
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             Matrix rotation = Matrix.Identity;
+
+            //Je nach Bewegungsrichtung des Spielers wird das Schiff in die entsprechende Richtung geneigt.
             if (currentPosition.X > this.lastPosition.X)
             {
                 playerMoved = true;
@@ -86,6 +81,12 @@ namespace SpaceInvadersRemake.View
             }
             ((ModelHitsphere)GameItem.BoundingVolume).World = this.World;
 
+
+            /*
+             * WICHTIG!
+             * Zurücksetzen des DepthStencils um eine fehlerfreie Kombination von 2D-Sprite und 3D-Model 
+             * zeichnen zu können.
+             * */
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
             foreach (ModelMesh mesh in model.Meshes)

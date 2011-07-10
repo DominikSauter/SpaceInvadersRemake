@@ -1,9 +1,4 @@
-﻿//Implementier von Dodo
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿//Implementiert von Dodo
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
@@ -111,6 +106,10 @@ namespace SpaceInvadersRemake.View
             }
         }
 
+        /// <summary>
+        /// Zeichnet das Video auf den Bildschirm
+        /// </summary>
+        /// <param name="spriteBatch">SpriteBatch zum Zeichnen.</param>
         public void Draw(SpriteBatch spriteBatch)
         {
             Texture2D videoTexture = null;

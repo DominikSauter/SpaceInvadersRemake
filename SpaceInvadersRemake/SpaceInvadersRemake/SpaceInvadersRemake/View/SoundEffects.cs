@@ -1,8 +1,5 @@
 ﻿//Implementiert von Dodo
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
@@ -47,28 +44,45 @@ namespace SpaceInvadersRemake.View
         }
 
         /// <summary>
-        /// Wiedergabe der Soundeffekte
+        /// Wahrheitswert, der festlegt ob ein Effekt wiederholt werden soll.
+        /// true: Effekt wird wiederholt
+        /// false: Effekt wird einmalig wiedergegeben
         /// </summary>
-        public void Play(SoundEffect SoundFX)
-        {
-            this.soundEffects.Add(SoundFX.CreateInstance());
-            this.soundEffects[this.soundEffects.Count - 1].Play();
-        }
-
         public bool Repeat
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Spielt einen Soundeffekt ab.
+        /// </summary>
+        /// <param name="SoundFX">Soundeffekt</param>
+        public void Play(SoundEffect SoundFX)
+        {
+            this.soundEffects.Add(SoundFX.CreateInstance());
+            this.soundEffects[this.soundEffects.Count - 1].Play();
+        }
+
+        /// <summary>
+        /// Spielt eine Hintergrundmusik ab.
+        /// </summary>
+        /// <param name="Background">Hintergrundmusik</param>
         public void Play(Song Background)
         {
         }
 
+        /// <summary>
+        /// Spielt ein Video ab.
+        /// </summary>
+        /// <param name="intro">Introvideo</param>
         public void Play(Video intro)
         {
         }
 
+        /// <summary>
+        /// Stoppt die Soundwiedergabe
+        /// </summary>
         public void Stop()
         {
             foreach (SoundEffectInstance effect in this.soundEffects)

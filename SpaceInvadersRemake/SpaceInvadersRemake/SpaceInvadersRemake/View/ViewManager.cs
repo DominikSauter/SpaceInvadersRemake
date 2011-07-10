@@ -53,18 +53,18 @@ namespace SpaceInvadersRemake.View
                 //erzeugen einer neuen GameUI. powerUpIcons werden auf null gesetzt da Wahl.
                 this.ViewItemList.Add(CreateGameUI(currentState, graphics));
 
+                //initialisieren mit einem SoundEffects-Objekt um Sounds abspielen zu können.
                 EffectPlayer = new SoundEffects();
 
+                //initialisieren eines Randomgenerators um den Aliens zufällige Texturen zuweisen zu können.
                 this.random = new Random();
 
-                /* Vorläufige Matrizen.
-                * Wir müssen noch besprechen wie groß unsre 3D Ebene wird (dementsprechend müssen wir Camera und Projection initialisieren)
-                * */
+                //View und Projection Matrizen für die Sicht auf das Spiel
                 GameItemRepresentation.Camera = Matrix.CreateLookAt(new Vector3(0.0f, 800.0f, 500.0f), new Vector3(0.0f, 0.0f, 80.0f), Vector3.Up);
                 GameItemRepresentation.Projection = Matrix.CreatePerspectiveFieldOfView(MathHelper.ToRadians(60),
                     graphics.PreferredBackBufferWidth / graphics.PreferredBackBufferHeight, 0.1f, 5000.0f);
                 
-                //registrieren an den events [PFLICHT]
+                //registrieren an den events
                 //created
                 Player.Created += CreatePlayer;
                 Alien.Created += CreateAlien;
@@ -72,9 +72,19 @@ namespace SpaceInvadersRemake.View
                 Shield.Created += CreateShield;
                 Projectile.Created += CreateProjectile;
                 PowerUp.Created += CreatePowerUp;
+                
+                //hit
+                Shield.Hit += HitSFX;
+                Player.Hit += HitSFX;
+                Alien.Hit += HitSFX;
+                Mothership.Hit += HitSFX;
+
+                //weaponFired
+                PlayerNormalWeapon.WeaponFired += ShootSFX;
+                EnemyNormalWeapon.WeaponFired += ShootSFX;
 
                 //TODO weitere Waffensounds
-                /* [WAHL]
+                /* <WAHL>
                  * (created)
                  * Miniboss.Created += CreateMiniboss;
                  * 
@@ -86,20 +96,14 @@ namespace SpaceInvadersRemake.View
 
 
                 //TODO Eventuell noch Explosionssounds
-                //destroyed
-                //Alien.Destroyed += ExplosionFX;
-                //Mothership.Destroyed += ExplosionFX;
-                //Shield.Destroyed += ExplosionFX;
+                /* <WAHL>
+                 * destroyed
+                 * Alien.Destroyed += ExplosionFX;
+                 * Mothership.Destroyed += ExplosionFX;
+                 * Shield.Destroyed += ExplosionFX;
+                 * */
 
-                //hit
-                Shield.Hit += HitSFX;
-                Player.Hit += HitSFX;
-                Alien.Hit += HitSFX;
-                Mothership.Hit += HitSFX;
-
-                //weaponFired
-                PlayerNormalWeapon.WeaponFired += ShootSFX;
-                EnemyNormalWeapon.WeaponFired += ShootSFX;
+                
             }
             else if (currentState is StateMachine.IntroState)
             {
@@ -141,12 +145,6 @@ namespace SpaceInvadersRemake.View
         /// Audioplayer um die Soundeffekte wiederzugeben.
         /// </summary>
         public static IMediaplayer EffectPlayer
-        {
-            get;
-            private set;
-        }
-
-        public static IMediaplayer VideoPlayer
         {
             get;
             private set;
@@ -202,10 +200,18 @@ namespace SpaceInvadersRemake.View
         /// <param name="e">Ereignis Argumente</param>
         public void ExplosionFX(object gameItem, EventArgs e)
         {
-            EffectPlayer.Play(ViewContent.EffectContent.ExplosionSound);
+            /*
+             * Solang keine Soundeffekte vorhanden sind, bewirkt diese Methode nichts.
+             * EffectPlayer.Play(ViewContent.EffectContent.ExplosionSound);
+             * */
             //TODO Anbindung der PartikelEngine
         }
 
+        /// <summary>
+        /// Spielt über den EffectPlayer einen Soundeffekt für getroffene Objekte ab
+        /// </summary>
+        /// <param name="gameItem">Ereignissender</param>
+        /// <param name="e">Ereignis Argumente</param>
         public void HitSFX(object gameItem, EventArgs e)
         {
             if (gameItem is Shield)
@@ -277,6 +283,11 @@ namespace SpaceInvadersRemake.View
             EffectPlayer.Play(ViewContent.EffectContent.MothershipSound);
         }
 
+        /*
+         * <WAHL>
+         * 
+         * Wird benötigt wenn eine Boss-Gegner implementiert wird.
+         * 
         /// <summary>
         /// Behandelt ein Created-Event aus Model. Eine <c>MinibossRepresentation</c> wird erstellt,
         /// und in die Liste eingefügt.
@@ -291,6 +302,7 @@ namespace SpaceInvadersRemake.View
             this.ViewItemList.Add(new MinibossRepresentation());
             ((Miniboss)miniboss).BoundingVolume = ViewContent.RepresentationContent.BossHitsphere;
         }
+         * */
 
         /// <summary>
         /// Behandelt ein Created-Event aus Model. Eine <c>ShieldRepresentation</c> wird erstellt,
@@ -339,14 +351,26 @@ namespace SpaceInvadersRemake.View
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
                     color = ViewContent.RepresentationContent.PlayerPiercingShotProjektileColor;
                     break;
+                /*
+                 * <WAHL>
+                 * 
+                 * Wird benötigt wenn eine Mutterschiffwaffe implementiert wird.
+                 * 
                 case ProjectileTypeEnum.MothershipProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileMothershipHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileMothership;
                     color = ViewContent.RepresentationContent.MothershipProjektileColor;
                     break;
+                 * */
+                /*
+                 * <WAHL>
+                 * 
+                 * Wird benötigt wenn ein Boss-Gegner implementiert wird.
+                 * 
                 case ProjectileTypeEnum.MinibossProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileBossHitsphere);
                     texture = ViewContent.RepresentationContent.ProjectileBoss;
                     color = ViewContent.RepresentationContent.BossProjektileColor;
                     break;
+                 * */
             }
 
             ProjectileRepresentation projectileRepresentation = new ProjectileRepresentation(currentProjectile, texture, graphics, effect, color);
@@ -411,6 +435,11 @@ namespace SpaceInvadersRemake.View
             return new MenuUI(((Menu)currentState.Model).Controls, graphics, currentState); 
         }
 
+        /// <summary>
+        /// Erstellt ein CreditsUI Objekt und fügt dieses in die ViewItemList ein.
+        /// </summary>
+        /// <param name="graphics">Handlingobjekt für Grafikeinstellungen</param>
+        /// <returns>CreditsUI-Objekt, welches die Credits Oberfläche darstellt.</returns>
         private CreditsUI CreateCreditsUI(GraphicsDeviceManager graphics)
         {
             return new CreditsUI(graphics);

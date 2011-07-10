@@ -1,9 +1,4 @@
 ﻿//Implementiert von Anji
-using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Linq;
-using System.Text;
 using SpaceInvadersRemake.Settings;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
