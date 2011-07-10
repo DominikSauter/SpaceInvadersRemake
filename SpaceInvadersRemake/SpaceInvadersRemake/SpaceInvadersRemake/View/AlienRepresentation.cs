@@ -51,6 +51,7 @@ namespace SpaceInvadersRemake.View
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Backward, Vector3.Up);
 
+            //zuweisen einer zufälligen Textur, die an Hand von 'randomTexture' vorher im ViewManager ausgewählt wurde
             this.alienTexture = ViewContent.RepresentationContent.AlienTextures[randomTexture];            
 
             //[WAHL]

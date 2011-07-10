@@ -20,6 +20,7 @@ namespace SpaceInvadersRemake.View
         private Texture2D buttonTexture; //property, falls Menu Zentrieren
         private Texture2D selectTexture; //evtl. auch property, falls Menu Zentrieren
         private SpriteFont font;
+        private SpriteFont fontSelect; //[Dodo]
         private Color activeColor; //Farbe für aktive Menü-Elemente
         private Color normalColor;
 
@@ -32,6 +33,7 @@ namespace SpaceInvadersRemake.View
         {
             this.menuControl = menuControl;
             this.font = ViewContent.UIContent.Font;
+            this.fontSelect = ViewContent.UIContent.FontSelect;
             this.buttonTexture = ViewContent.UIContent.MenuButton;
             this.selectTexture = ViewContent.UIContent.SettingsButton; //Der muss noch geändert werden
             this.normalColor = Color.White;
@@ -91,7 +93,7 @@ namespace SpaceInvadersRemake.View
             //Zeichnen eines Select-Buttons
             else if (menuControl is ListSelect) // Anpassung für beliebige ListSelect von Tobias
             {
-                Vector2 selectFontSize = font.MeasureString(((ListSelect)menuControl).SelectedItemText);
+                Vector2 selectFontSize = this.fontSelect.MeasureString(((ListSelect)menuControl).SelectedItemText);
                 Vector2 selectFontCenter = selectFontSize / 2;
 
                 spriteBatch.Begin();
@@ -100,7 +102,7 @@ namespace SpaceInvadersRemake.View
                 spriteBatch.Draw(selectTexture, selectPosition, Color.White);
 
                 //Beschriftung des Select-Feldes
-                spriteBatch.DrawString(font, ((ListSelect)menuControl).SelectedItemText, selectTextCenter, normalColor, 0, selectFontCenter, 1.0f, SpriteEffects.None, 0.5f);
+                spriteBatch.DrawString(this.fontSelect, ((ListSelect)menuControl).SelectedItemText, selectTextCenter, normalColor, 0, selectFontCenter, 1.0f, SpriteEffects.None, 0.5f);
                 if (menuControl.Active)
                 {
                     //Titel des Select-Buttons
