@@ -1,12 +1,8 @@
 ﻿//Implementiert von Dodo
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-
 using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvadersRemake.View
@@ -35,8 +31,8 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Initialisiert die Spieloberfläche
         /// </summary>
-        /// <param name="currentState"></param>
-        /// <param name="graphics"></param>
+        /// <param name="currentState">akuteller State</param>
+        /// <param name="graphics">Handlingobejekt für Grafikeinstellungen</param>
         public GameUI(StateMachine.InGameState currentState, GraphicsDeviceManager graphics)
         {
             this.graphics = graphics;
@@ -59,13 +55,20 @@ namespace SpaceInvadersRemake.View
         /// <summary>
         /// Zeichnet die Spieloberfläche zu einem Zeitpunkt des Spiels.
         /// </summary>
+        /// <param name="spriteBatch">SpriteBatch um auf den Bildschirm zu zeichnen.</param>
         public void Draw(SpriteBatch spriteBatch)
         {
             GameCourseManager gameCourseMngr = (GameCourseManager)this.inGameState.Model;
+
+            //Anzahl an Leben und Punkte aus dem Model
             int lives = gameCourseMngr.GameCourse.Player.Lives;
             int score = gameCourseMngr.GameCourse.Player.Score;
+
+            //List der aktiven PowerUp's
             List<ActivePowerUp> powerUps = gameCourseMngr.GameCourse.Player.ActivePowerUps;
             List<Texture2D> powerUpIcons = getPowerUpIcons(powerUps);
+
+            //Prüfen ob das Schild-PowerUp aktiv ist.
             bool shielded = false;
             if (gameCourseMngr.GameCourse.Player.Hitpoints > GameItemConstants.PlayerHitpoints)
             {
@@ -168,12 +171,17 @@ namespace SpaceInvadersRemake.View
                 Texture2D icon = powerUpIcons[i];
                 Rectangle position = new Rectangle(10 , 70 * i, icon.Width, icon.Height);
                 spriteBatch.Draw(icon, position, Color.White);
-                spriteBatch.DrawString(this.fontText, ((int)powerUps[i].TimeLeft).ToString(), new Vector2(icon.Width * 2, 70 * i), Color.Yellow);
+                spriteBatch.DrawString(this.fontText, ((int)powerUps[i].TimeLeft).ToString(), new Vector2(icon.Width + 20, 70 * i), Color.Yellow);
             }
 
             spriteBatch.End();
         }
 
+        /// <summary>
+        /// Füllt anhand der aktiven PowerUp's die passenden Icons in eine Liste.
+        /// </summary>
+        /// <param name="powerUps">List der aktiven PowerUp's</param>
+        /// <returns>Liste der Icons für die aktiven PowerUp's</returns>
         private List<Texture2D> getPowerUpIcons(List<ActivePowerUp> powerUps)
         {
             List<Texture2D> icons = new List<Texture2D>();

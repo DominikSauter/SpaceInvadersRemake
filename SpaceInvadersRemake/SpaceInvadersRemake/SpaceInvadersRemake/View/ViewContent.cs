@@ -1,8 +1,5 @@
 ﻿//Implementiert von Dodo
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
@@ -17,18 +14,27 @@ namespace SpaceInvadersRemake.View
     /// </summary>
     public static class ViewContent
     {
+        /// <summary>
+        /// Utilityobjekt für alle Models, Texturen, etc., die zum Darstellen der Spielobjekte benötigt werden.
+        /// </summary>
         public static RepresentationContent RepresentationContent
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Utilityobjekt für alle Grafiken und Texturen, die zum Darstellen der Spieloberflächen benötigt werden.
+        /// </summary>
         public static UIContent UIContent
         {
             get;
             set;
         }
 
+        /// <summary>
+        /// Utilityobjekt für alle Grafiken und Texturen, die zum Darstellen von Grafik- und Soundeffekten benötigt werden.
+        /// </summary>
         public static EffectContent EffectContent
         {
             get;
@@ -90,8 +96,13 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.PlayerProjektileColor = new Vector3(0, 255, 0);
             RepresentationContent.AlienProjektileColor = new Vector3(255, 0, 0);
             RepresentationContent.PlayerPiercingShotProjektileColor = new Vector3(0, 234, 255);
+
+            /*
+             * <WAHL>
+             * [Dodo] wollte es nicht löschen
             RepresentationContent.MothershipProjektileColor = new Vector3(255, 0, 3);
             RepresentationContent.BossProjektileColor = new Vector3(255, 0, 0);
+             * */
 
             /*
              * Schleife zum Laden der Alientexturen. Diese sind/müssen mit "AlienTextur#" benannt sein
@@ -102,9 +113,13 @@ namespace SpaceInvadersRemake.View
                 string path = "3D Model Textures/AlienTextur" + texCount.ToString();
                 RepresentationContent.AlienTextures.Add(Content.Load<Texture2D>(path));
             }
-            //<WAHL>
-            //RepresentationContent.BossModel = Content.Load<Model>("3D Models/Minibossschiff");
-            //</WAHL>
+            
+            /*
+             * <WAHL>
+             * Wird benötigt wenn ein Boss-Gegner implementiert wird.
+             * 
+             * RepresentationContent.BossModel = Content.Load<Model>("3D Models/Minibossschiff");
+             * */
 
             //Laden des EffectContents
             //Video
@@ -117,7 +132,6 @@ namespace SpaceInvadersRemake.View
             EffectContent.WeaponEnemy = Content.Load<SoundEffect>("Soundeffects/Laser_Alien_Normal");
             EffectContent.MothershipSound = Content.Load<SoundEffect>("Soundeffects/Mutterschiff");
             EffectContent.ShieldHit = Content.Load<SoundEffect>("Soundeffects/SchildTreffer1");
-            EffectContent.ExplosionSound = Content.Load<SoundEffect>("Soundeffects/Explosion1");
             EffectContent.EnemyHit = Content.Load<SoundEffect>("Soundeffects/Treffer1");
             EffectContent.PlayerHit = Content.Load<SoundEffect>("Soundeffects/Treffer2");
         }
@@ -136,11 +150,13 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.ProjectilePiercingHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectilePiercing);
             RepresentationContent.PowerUpHitsphere = computeBigModelHitsphere(RepresentationContent.PowerUp);
             
-            //<WAHL>
-            //RepresentationContent.BossHitsphere = computeBigModelHitsphere(RepresentationContent.BossModel);
-            //RepresentationContent.ProjectilePiercingHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectilePiercing);
-            //RepresentationContent.ProjectileBossHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileBoss);
-            //</WAHL>
+            /*
+             * <WAHL>
+             * Wird benötigt wenn ein Boss-Gegner implementiert wird.
+             * 
+             * RepresentationContent.BossHitsphere = computeBigModelHitsphere(RepresentationContent.BossModel);
+             * RepresentationContent.ProjectileBossHitsphere = computeBigTextureHitsphere(RepresentationContent.ProjectileBoss);
+             * */
 
         }
 

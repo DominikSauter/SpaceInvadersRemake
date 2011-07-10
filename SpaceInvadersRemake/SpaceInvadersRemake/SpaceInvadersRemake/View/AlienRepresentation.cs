@@ -1,9 +1,4 @@
 ﻿//Implementiert von Dodo
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -28,13 +23,12 @@ namespace SpaceInvadersRemake.View
         //letzte Position des Aliens
         private Vector3 lastPosition;
 
-        /// <summary>
-        /// ParticleEmitter der einen Explosionseffekt erzeugt.
-        /// </summary>
-        /// <remarks>
-        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
-        /// </remarks>
-        private Explosion explosion;
+        /*
+         * <WAHL>
+         * Wird benötigt wenn eine Partikel Engine eingebaut wird.
+         * 
+         * private Explosion explosion;
+         * */
 
         
         /// /// <summary>
@@ -52,11 +46,7 @@ namespace SpaceInvadersRemake.View
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Backward, Vector3.Up);
 
             //zuweisen einer zufälligen Textur, die an Hand von 'randomTexture' vorher im ViewManager ausgewählt wurde
-            this.alienTexture = ViewContent.RepresentationContent.AlienTextures[randomTexture];            
-
-            //[WAHL]
-            this.explosion = null;
-            //[/WAHL]
+            this.alienTexture = ViewContent.RepresentationContent.AlienTextures[randomTexture];
         }
 
         private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)

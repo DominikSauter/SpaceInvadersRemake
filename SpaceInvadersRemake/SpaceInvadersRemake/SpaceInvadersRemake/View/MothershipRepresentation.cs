@@ -1,9 +1,4 @@
 ﻿//Implementiert von Dodo
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
@@ -24,18 +19,17 @@ namespace SpaceInvadersRemake.View
         private Texture2D mothershipTexture;
         private Vector3 lastPosition;
         
-        /// <summary>
-        /// ParticleEmitter der einen Explosionseffekt erzeugt.
-        /// </summary>
-        /// <remarks>
-        /// Wird Anfangs instanziiert aber erst bei Zerstörung des Schiffs gestartet.
-        /// </remarks>
+        /*
+         * <WAHL>
+         * Wird benötigt falls eine Partikel Engine eingebaut wird
         private Explosion explosion;
-        
-        /// <summary>
-        /// ParticleEmitter der einen Effekt erzeugt, welcher den Antrieb des Mutterschiffs darstellt.
-        /// </summary>
+         * */
+
+        /*
+         * <WAHL>
+         * Wird benötigt falls eine Partikel Engine eingebaut wird
         private MothershipEngine mothershipEngine;
+         * */
 
         /// <summary>
         /// Erstellt eine Representation des Mutterschiff-Aliens.
@@ -48,16 +42,16 @@ namespace SpaceInvadersRemake.View
             this.mothershipTexture = ViewContent.RepresentationContent.MothershipTexture;
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(lastPosition, Vector3.Right, Vector3.Up);
-
-            //[WAHL]
-            this.mothershipEngine = null;
-            this.explosion = null;
-            //[/WAHL]
         }
 
+        /// <summary>
+        /// Zeichnet das Mutterschiff auf den Bildschirm
+        /// </summary>
+        /// <param name="spriteBatch">SpriteBatch zum Zeichnen</param>
         public override void Draw(SpriteBatch spriteBatch)
         {
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
+            //Bei jeder Bewegung wird die Worldmatrix neu gesetzt und die Hitsphere angepasst.
             if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X)
             {
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Right, Vector3.Up);
@@ -65,6 +59,11 @@ namespace SpaceInvadersRemake.View
                 this.lastPosition = currentPosition;
             }
 
+            /*
+             * WICHTIG!
+             * Zurücksetzen des DepthStencils um eine fehlerfreie Kombination von 2D-Sprite und 3D-Model 
+             * zeichnen zu können.
+             * */
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
             foreach (ModelMesh mesh in model.Meshes)

@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿//Implementiert von Dodo
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
-    /// Representation einen sichtbaren Gegenstands für den Benutzer, welche auf den Bildschirm gezeichnet werden kann.
+    /// Representation einen sichtbaren Spielobjekts für den Benutzer, welche auf den Bildschirm gezeichnet werden kann.
     /// </summary>
     public abstract class GameItemRepresentation : IView
     {
@@ -30,13 +26,7 @@ namespace SpaceInvadersRemake.View
             get;
             set;
         }
-
-        public ModelSection.IGameItem GameItem
-        {
-            get;
-            protected set;
-        }
-
+        
         /// <summary>
         /// Positionsmatrix, welche die Position des 3D Models im Raum festlegt.
         /// </summary>
@@ -46,11 +36,18 @@ namespace SpaceInvadersRemake.View
             protected set;
         }
 
+        /// <summary>
+        /// Referenz zu einem zugehörigen Spielobjekt im Model
+        /// </summary>
+        public ModelSection.IGameItem GameItem
+        {
+            get;
+            protected set;
+        }
 
         /// <summary>
         /// Zeichnet das Objekt auf den Bildschirm
         /// </summary>
         abstract public void Draw(SpriteBatch spriteBatch);
-
     }
 }

@@ -1,9 +1,4 @@
 ﻿//Implementiert von Dodo
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
 using Microsoft.Xna.Framework.Media;
 using Microsoft.Xna.Framework.Audio;
 using SpaceInvadersRemake.StateMachine;
@@ -94,6 +89,9 @@ namespace SpaceInvadersRemake.View
             this.Playing = false;
         }
 
+        /// <summary>
+        /// Führt die pausierte Hintergrundmusik weiter
+        /// </summary>
         private void Resume()
         {
             MediaPlayer.Resume();
@@ -110,44 +108,51 @@ namespace SpaceInvadersRemake.View
             this.Playing = true;
         }
 
+        /// <summary>
+        /// Updated den Musikplayer. Je nach letztem und aktuellem State muss die Musik weitergeführt, gestoppt, pausiert oder
+        /// ein neues Lied gestartet werden.
+        /// </summary>
+        /// <param name="currentState">aktueller State</param>
         public void Update(State currentState)
         {
             if (lastState == null)
             {
                 lastState = currentState;
             }
-            
+
+                //Wechsel vom Menü ins Spiel
             if (currentState is InGameState && lastState is MainMenuState)
             {
                 Stop();
                 Play(ViewContent.EffectContent.GameSong);
-                lastState = currentState;
             }
+                //Wechsel vom Pausemenü ins Spiel
             else if (currentState is BreakState && lastState is InGameState)
             {
                 Pause();
-                lastState = currentState;
             }
+                //Wechsel vom Spiel ins Pausemenü
             else if (currentState is InGameState && lastState is BreakState)
             {
                 Resume();
-                lastState = currentState;
             }
+                //Wechsel vom Spiel oder dem Pausemenü in den Highscore
             else if (currentState is HighscoreState && (lastState is InGameState || lastState is BreakState))
             {
                 Stop();
-                lastState = currentState;
             }
+                //Spielstart
             else if (currentState is MainMenuState && !this.Playing)
             {
                 Play(ViewContent.EffectContent.MenuSong);
-                lastState = currentState;
             }
+                //Wechsel vom Highscore nach dem Spiel (keine Musik läuft) ins Menü
             else if (currentState is MainMenuState && lastState is HighscoreState && !this.Playing)
             {
                 Play(ViewContent.EffectContent.MenuSong);
-                lastState = currentState;
             }
+
+            lastState = currentState;
         }
     }
 }

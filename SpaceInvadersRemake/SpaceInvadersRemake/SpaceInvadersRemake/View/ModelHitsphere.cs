@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿// Implementiert von Dodo, Tobias
+using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 
-// Implementiert von Dodo, Tobias
 
 namespace SpaceInvadersRemake.View
 {

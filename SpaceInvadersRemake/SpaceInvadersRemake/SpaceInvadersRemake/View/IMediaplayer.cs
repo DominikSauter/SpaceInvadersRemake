@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
+﻿//Implementiert von Dodo
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Media;
+
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
