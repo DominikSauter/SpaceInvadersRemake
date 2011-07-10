@@ -82,16 +82,14 @@ namespace SpaceInvadersRemake.View
                 //weaponFired
                 PlayerNormalWeapon.WeaponFired += ShootSFX;
                 EnemyNormalWeapon.WeaponFired += ShootSFX;
+                PiercingShotWeapon.WeaponFired += ShootSFX;
+                RapidfireWeapon.WeaponFired += ShootSFX;
+                MultiShotWeapon.WeaponFired += ShootSFX;
 
                 //TODO weitere Waffensounds
                 /* <WAHL>
                  * (created)
                  * Miniboss.Created += CreateMiniboss;
-                 * 
-                 * (weaponFired)
-                 * PiercingShotWeapon.WeaponFired += ShootSFX;
-                 * RapidfireWeapon.WeaponFired += ShootSFX;
-                 * MultiShotWeapon.WeaponFired += ShootSFX;
                  * */
 
 
@@ -157,21 +155,24 @@ namespace SpaceInvadersRemake.View
         /// <param name="e">Ereignis Argumente</param>
         public void ShootSFX(object weapon, EventArgs e)
         {
+            /*
+             * Wegen fehlender Sounds wird hier bisher bei allen Spielerwaffen, der selbse Sound abgespielt.
+             * */
             if (weapon is PlayerNormalWeapon)
             {
                 EffectPlayer.Play(ViewContent.EffectContent.WeaponPlayer);
             }
             else if (weapon is PiercingShotWeapon)
             {
-                EffectPlayer.Play(ViewContent.EffectContent.WeaponPiercingshot);
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponPlayer);
             }
             else if (weapon is MultiShotWeapon)
             {
-                EffectPlayer.Play(ViewContent.EffectContent.WeaponMultishot);
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponPlayer);
             }
             else if (weapon is RapidfireWeapon)
             {
-                EffectPlayer.Play(ViewContent.EffectContent.WeaponRapidFire);
+                EffectPlayer.Play(ViewContent.EffectContent.WeaponPlayer);
             }
             else if (weapon is EnemyNormalWeapon)
             {
