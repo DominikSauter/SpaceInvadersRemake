@@ -76,6 +76,8 @@ namespace SpaceInvadersRemake.StateMachine
 
 
             // Erstelle das neue ListSelect
+            //TODO @Tobi Füge zu Sprachauswahl hinweis "Es Erfolgt ein Neustart Löscht aktuellen Spielfortschritt" 
+            //Resource.Warning_Restart (Kannst Text gerne ändern..isn prototyp)
             controls.Add(new ListSelect<string>(Resources.Resource.Label_Language,
                          languageList,
                          activeLanguage,
@@ -88,6 +90,14 @@ namespace SpaceInvadersRemake.StateMachine
                                  //Setze die Sprache auf Deutsch und speichere dies in GameConfig
                                  Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("de-DE");
                                  Settings.GameConfig.Default.Save();
+
+                                 
+                                 //Zuweisen der Sprache aus der Gameconfig
+                                 Resource.Culture = Settings.GameConfig.Default.Language;
+                                 //Neustart des Spiels
+                                 stateManager.State = new IntroState(this.stateManager, this.game);
+                                 //</ck>
+                                 
                               
                              }
                              else if (language.Equals(english))
@@ -96,6 +106,13 @@ namespace SpaceInvadersRemake.StateMachine
                                  //Setze die Sprache auf Englisch und speichere dies in GameConfig
                                  Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("en-US");
                                  Settings.GameConfig.Default.Save();
+
+                                 //Zuweisen der Sprache aus der Gameconfig
+                                 Resource.Culture = Settings.GameConfig.Default.Language;
+                                 
+                                 //Neustart des Spiels
+                                 stateManager.State = new IntroState(this.stateManager, this.game);
+                                 
                                  //</ck>
 
                              }

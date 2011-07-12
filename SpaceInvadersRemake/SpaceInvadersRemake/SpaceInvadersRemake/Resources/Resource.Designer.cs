@@ -289,5 +289,14 @@ namespace SpaceInvadersRemake.Resources {
                 return ResourceManager.GetString("Text_Credits", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Changing Language causes the Game to Restart itself.
+        /// </summary>
+        public static string Warning_Restart {
+            get {
+                return ResourceManager.GetString("Warning_Restart", resourceCulture);
+            }
+        }
     }
 }
