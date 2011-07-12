@@ -204,4 +204,7 @@ Special Thanks to all of you guys!</value>
   <data name="Label_Language" xml:space="preserve">
     <value>Language</value>
   </data>
+  <data name="Warning_Restart" xml:space="preserve">
+    <value>Changing Language causes the Game to Restart itself</value>
+  </data>
 </root>

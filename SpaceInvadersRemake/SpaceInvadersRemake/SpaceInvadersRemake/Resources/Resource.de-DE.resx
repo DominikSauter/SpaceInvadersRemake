@@ -197,4 +197,7 @@ Wir danken einfach allen!</value>
   <data name="Label_Language" xml:space="preserve">
     <value>Sprache</value>
   </data>
+  <data name="Warning_Restart" xml:space="preserve">
+    <value>Ändern der Sprache führt zu einem Neustart des gesammten Spiels</value>
+  </data>
 </root>
