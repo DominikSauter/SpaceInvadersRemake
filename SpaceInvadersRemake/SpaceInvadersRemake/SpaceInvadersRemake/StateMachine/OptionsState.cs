@@ -111,7 +111,7 @@ namespace SpaceInvadersRemake.StateMachine
                                  Resource.Culture = Settings.GameConfig.Default.Language;
                                  
                                  //Neustart des Spiels
-                                 stateManager.State = new IntroState(this.stateManager, this.game);
+                                 stateManager.State = new MainMenuState(this.stateManager, this.game);
                                  
                                  //</ck>
 
