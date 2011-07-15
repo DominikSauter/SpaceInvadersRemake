@@ -18,7 +18,6 @@ namespace SpaceInvadersRemake.View
         //Folgende 3 Felder sind für die Laufschrift in den Credits
         private Vector2 textPos;
         private float textSpeed;
-        private bool textEnd;
     
         /// <summary>
         /// Erzeugt eine Credits Oberfläche, die ein Hintergrundbild und eine Laufschrift enthält.
@@ -34,12 +33,10 @@ namespace SpaceInvadersRemake.View
             
             //Laufgeschwindigkeit des Texts
             this.textSpeed = 1.0f;
-            //bool ob der Text seine endgültige Position erreicht hat
-            textEnd = false;
             //Textinhalt aus einer Resourcedatei
             this.CreditsText = Resource.Text_Credits;
             //Anfangsposition der Laufschrift
-            this.textPos = new Vector2((graphics.PreferredBackBufferWidth - font.MeasureString(this.CreditsText).X) / 4, graphics.PreferredBackBufferHeight);
+            this.textPos = new Vector2(0, graphics.PreferredBackBufferHeight);
         }
 
         /// <summary>
@@ -65,14 +62,11 @@ namespace SpaceInvadersRemake.View
             spriteBatch.End();
 
             //Laufschrift-Aktualisierung
-            if (!this.textEnd)
-            {
-                this.textPos.Y -= this.textSpeed;
-            }
+            this.textPos.Y -= this.textSpeed;
 
-            if (this.textPos.Y < (graphics.PreferredBackBufferHeight - this.font.MeasureString(this.CreditsText).Y) / 2)
+            if (this.textPos.Y < -this.font.MeasureString(this.CreditsText).Y)
             {
-                this.textEnd = true;
+                this.textPos.Y = graphics.PreferredBackBufferHeight;
             }
         }
     }

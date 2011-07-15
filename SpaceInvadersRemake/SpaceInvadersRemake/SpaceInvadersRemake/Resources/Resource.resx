@@ -172,21 +172,99 @@
     <value>VIDEO OPTIONS</value>
   </data>
   <data name="Text_Credits" xml:space="preserve">
-    <value>~~~~~~~~~~~~~~~~~~~~~~~~~
-~ Space Invaders Remake ~
-~~~~~~~~~~~~~~~~~~~~~~~~~
-           ~Alpha~
+    <value>     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     ~  HYPERSPACE PIRATES - ARR  ~
+     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                                             ~Beta~
 
-Game Producing Team
+Entwickler an diesem Projekt waren:
 
-     Anjela Mayer
-     Christian Klotz
-     Dominik Sauter
-     Dominik Schaufelberger
-     Steffen Stehmann
-     Tobias Bast
+          Anjela Mayer
 
-Special Thanks to all of you guys!</value>
+          Christian Klotz
+
+          Dominik Sauter
+
+          Dominik Schaufelberger
+
+          Steffen Stehmann
+
+          Tobias Bast
+
+
+Wir bedanken uns bei den nachfolgenden Personen,
+die uns durch ihre Arbeit sehr geholfen haben unser
+Spiel so zu gestalten wie es aktuell aussieht.
+
+
+Material für das Introvideo:
+
+          Hintergrund-Sternvideo - "Davidbgreensmith"
+
+          3D Model des Piloten - "3dregenerator"
+
+          Texturen - "Dawid Michalczyk"
+
+
+Sounds(www.freesound.org):
+
+          "ljudman"
+
+          "rutgermuller"
+
+          "pempi"
+
+          "DJ chronos"
+
+          "sirplus"
+
+          "Matt_G"
+
+          "room"
+
+          "SomeAudioGuy"
+
+          "CGEffex"
+
+
+Material für das Menü und Spiel:
+
+          "Kevin MacLeod" auf dessen Seite (http://incompetech.com/)
+          wir die Musikstücke gefunden haben.
+
+
+Sounds (www.freesound.org):
+
+          "ejfortin"
+
+          "adcbicycle"
+
+          "smcameron"
+
+          "themfish"
+
+          "THE_bizniss"
+
+
+3D Modelle &amp; Texturen:
+
+          Alienschiffe - "Psionic" (www.psionic3d.co.uk)
+
+          Spielerschiff - "Angryfly" (auf www.turbosquid.com)
+
+          Mutterschiff - "charnel" (auf www.turbosquid.com)
+
+
+Des Weiteren danken wir unseren Projektbetreuern,
+
+          Thomas Engelhardt
+
+          Thorsten Schmidt
+
+
+und für die Unterstützung für das Design des Menüs
+
+          Aleksej Skrypnik</value>
   </data>
   <data name="NoName" xml:space="preserve">
     <value>Chuck Norris</value>
