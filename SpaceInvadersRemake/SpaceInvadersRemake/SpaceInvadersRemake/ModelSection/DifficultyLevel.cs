@@ -8,8 +8,7 @@ namespace SpaceInvadersRemake.ModelSection
     /// Enthält Parameter, die den Schwierigkeitsgrad festlegen.
     /// </summary>
     /// <remarks>
-    /// Die vier Parameter <c>HitpointsMultiplier</c>, <c>VelocityMultiplier</c> (für <c>FormationGenerator</c> relevant), 
-    /// sowie <c>ShootingFrequencyMultiplier</c> und <c>VelocityIncreaseMultiplier</c> (für Controller relevant) bestimmen den Schwierigkeitsgrad.
+    /// Die Parameter <c>ShootingFrequency</c> und <c>VelocityIncrease</c> sind für den Controller relevant.
     /// </remarks>
     public class DifficultyLevel
     {
@@ -17,41 +16,41 @@ namespace SpaceInvadersRemake.ModelSection
         /// Konstruktor
         /// </summary>
         /// <remarks></remarks>
-        /// <param name="hitpointsMultiplier">Lebenspunkte der Gegner</param>
-        /// <param name="shootingFrequencyMultiplier">Schussfrequenz der Gegner</param>
-        /// <param name="velocityIncreaseMultiplier">Geschwindigkeitserhöhung der Gegner</param>
-        /// <param name="damageMultiplier">Schaden der Gegner</param>
-        /// <param name="scoreGainMultiplier">Punktzahl, die die Gegner bei Abschuss geben</param>
-        /// <param name="velocityMultiplier">Startgeschwindigkeit der Gegner</param>
-        public DifficultyLevel(float hitpointsMultiplier, Vector2 velocityMultiplier, float shootingFrequencyMultiplier, Vector2 velocityIncreaseMultiplier, float damageMultiplier, float scoreGainMultiplier)
+        /// <param name="hitpointsMultiplier">Lebenspunkte-Multiplikator der Gegner</param>
+        /// <param name="velocityMultiplier">Startgeschwindigkeits-Multiplikator der Gegner</param>
+        /// <param name="shootingFrequency">Schussfrequenz der Gegner</param>
+        /// <param name="velocityIncrease">Geschwindigkeitserhöhung der Gegner</param>
+        /// <param name="damageMultiplier">Schadens-Multiplikator der Gegner</param>
+        /// <param name="scoreGainMultiplier">Punktzahl-Multiplikator für die Punkte, die die Gegner bei Abschuss geben</param>
+        public DifficultyLevel(float hitpointsMultiplier, Vector2 velocityMultiplier, float shootingFrequency, Vector2 velocityIncrease, float damageMultiplier, float scoreGainMultiplier)
         {
             this.HitpointsMultiplier = hitpointsMultiplier;
             this.VelocityMultiplier = velocityMultiplier;
-            this.ShootingFrequencyMultiplier = shootingFrequencyMultiplier;
-            this.VelocityIncreaseMultiplier = velocityIncreaseMultiplier;
+            this.ShootingFrequency = shootingFrequency;
+            this.VelocityIncrease = velocityIncrease;
             this.DamageMultiplier = damageMultiplier;
             this.ScoreGainMultiplier = scoreGainMultiplier;
         }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Modifikation der Lebenspunkte der Aliens.
+        /// Schwierigkeitsspezifische multiplikative Modifikation der Lebenspunkte der Aliens.
         /// </summary>
         public float HitpointsMultiplier { get; private set; }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Modifikation der Geschwindigkeit der Aliens.
+        /// Schwierigkeitsspezifische multiplikative Modifikation der Geschwindigkeit der Aliens.
         /// </summary>
         public Vector2 VelocityMultiplier { get; private set; }
       
         /// <summary>
-        /// Schwierigkeitsspezifische Modifikation der Schussfrequenz der Aliens.
+        /// Schwierigkeitsspezifische Schussfrequenz der Aliens in Schussanzahl pro Sekunde.
         /// </summary>
-        public float ShootingFrequencyMultiplier { get; private set; }
+        public float ShootingFrequency { get; private set; }
       
         /// <summary>
-        /// Schwierigkeitsspezifische Modifikation der Geschwindigkeitserhöhung der Aliens.
+        /// Schwierigkeitsspezifische Geschwindigkeitserhöhung der Aliens in Erhöhungswert pro Sekunde.
         /// </summary>
-        public Vector2 VelocityIncreaseMultiplier { get; private set; }
+        public Vector2 VelocityIncrease { get; private set; }
 
         /// <summary>
         /// Konfiguration der Parameter für die 1. Schwierigkeitsstufe ("leicht").
@@ -60,7 +59,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new DifficultyLevel(1.0f, new Vector2(1.0f, 1.0f), 1.0f, new Vector2(1.0f, 1.0f), 1.0f, 1.0f);
+                return new DifficultyLevel(1.0f, new Vector2(1.0f, 1.0f), GameItemConstants.AlienShootingFrequency, GameItemConstants.AlienVelocityIncrease, 1.0f, 1.0f);
             }
         }
 
@@ -71,7 +70,10 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new DifficultyLevel(2.0f, new Vector2(1.5f, 1.5f), 2.0f, new Vector2(1.5f, 1.5f), 2.0f, 2.0f);
+                Vector2 velocityIncrease;
+                velocityIncrease.X = 1.5f * GameItemConstants.AlienVelocityIncrease.X;
+                velocityIncrease.Y = 1.5f * GameItemConstants.AlienVelocityIncrease.Y;
+                return new DifficultyLevel(2.0f, new Vector2(1.5f, 1.5f), 2.0f * GameItemConstants.AlienShootingFrequency, velocityIncrease, 2.0f, 2.0f);
             }
         }
 
@@ -82,17 +84,20 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return new DifficultyLevel(3.0f, new Vector2(2.0f, 2.0f), 3.0f, new Vector2(2.0f, 2.0f), 3.0f, 3.0f);
+                Vector2 velocityIncrease;
+                velocityIncrease.X = 2.0f * GameItemConstants.AlienVelocityIncrease.X;
+                velocityIncrease.Y = 2.0f * GameItemConstants.AlienVelocityIncrease.Y;
+                return new DifficultyLevel(3.0f, new Vector2(2.0f, 2.0f), 3.0f * GameItemConstants.AlienShootingFrequency, velocityIncrease, 3.0f, 3.0f);
             }
         }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Modifikation des Kollisionsschadens der Aliens.
+        /// Schwierigkeitsspezifische multiplikative Modifikation des Kollisionsschadens der Aliens.
         /// </summary>
         public float DamageMultiplier { get; private set; }
 
         /// <summary>
-        /// Schwierigkeitsspezifische Modifikation der Punktzahl, die der Spieler durch das Zerstören der Aliens erhält.
+        /// Schwierigkeitsspezifische multiplikative Modifikation der Punktzahl, die der Spieler durch das Zerstören der Aliens erhält.
         /// </summary>
         public float ScoreGainMultiplier { get; private set; }
 
