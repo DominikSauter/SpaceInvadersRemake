@@ -111,12 +111,12 @@ public class ControllerManager : IController
         }
 
         
-        shootingFrequency = desiredController.DifficultyLevel.ShootingFrequencyMultiplier;
+        shootingFrequency = desiredController.DifficultyLevel.ShootingFrequency;
         
 
-        if (desiredController.DifficultyLevel.VelocityIncreaseMultiplier != null)
+        if (desiredController.DifficultyLevel.VelocityIncrease != null)
         {
-             velocityIncrease = desiredController.DifficultyLevel.VelocityIncreaseMultiplier;
+             velocityIncrease = desiredController.DifficultyLevel.VelocityIncrease;
         }
         else
         {
