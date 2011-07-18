@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 3.0f;
+                return 1.0f;
             }
         }
 
