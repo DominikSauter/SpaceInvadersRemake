@@ -169,6 +169,7 @@ namespace SpaceInvadersRemake.Controller
             }
 
             //TODO Entscheide ob richtig
+                //hack gibs was besseres ?
             else 
             {
                 if (KeyPressed(KBconfig.Fire) || KeyPressed(Keys.Enter)) { MenuBack(state); }
