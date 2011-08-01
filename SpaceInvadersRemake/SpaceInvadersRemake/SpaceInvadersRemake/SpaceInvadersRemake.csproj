@@ -260,8 +260,9 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceInvadersRemakeContent\SpaceInvadersRemakeContent.contentproj">
-      <Name>SpaceInvadersRemakeContent</Name>
+      <Name>SpaceInvadersRemakeContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{C2FBBBFC-8CE4-40FC-B174-5EAFC02F19BE}</Project>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

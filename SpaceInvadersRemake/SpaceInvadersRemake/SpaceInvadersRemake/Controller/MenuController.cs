@@ -82,15 +82,18 @@ namespace SpaceInvadersRemake.Controller
            
             //Eingabe des Namens im Hghscore
             if (Controllee is HighscoreManager)
-                HighscoreInput();
-            
+            {
+                HighscoreInput(state);
+              
+            }
+       
         }
 
         /// <summary>
         /// Kümmert sich darum das ein neuer Eintrag im Highscore eingegeben wird
         /// </summary>
         //Implemntiert von Christian (ck)
-        private void HighscoreInput()
+        private void HighscoreInput(State state)
         {
             HighscoreManager highscore = (HighscoreManager)Controllee;
             if (highscore.NewEntry != null)
@@ -164,6 +167,13 @@ namespace SpaceInvadersRemake.Controller
                 }
 
             }
+
+            //TODO Entscheide ob richtig
+            else 
+            {
+                if (KeyPressed(KBconfig.Fire) || KeyPressed(Keys.Enter)) { MenuBack(state); }
+            }
+           
         }
 
         /// <summary>
