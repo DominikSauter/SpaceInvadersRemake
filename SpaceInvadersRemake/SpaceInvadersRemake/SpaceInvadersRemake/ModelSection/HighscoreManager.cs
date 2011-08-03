@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Xml.Serialization;
 using System.Linq;
+using System.Diagnostics;
 
 // Implementiert von Tobias
 
@@ -52,6 +53,9 @@ namespace SpaceInvadersRemake.ModelSection
         // ADDED (by STST): 06.07.2011
         private HighscoreEntry NewEntryInHighscore(int score, HighscoreEntry newEntry)
         {
+            Debug.Assert(score >= 0, "Übergebener Wert kleiner 0!");
+            Debug.Assert(newEntry != null, "Neuer Eintrag ist null-Referenz!");
+
             // Annahmen:
             // - Liste wird in diesem Abschnitt mit Insertion-Sort sortiert.
             // - größte Punktzahl ist erster Eintrag

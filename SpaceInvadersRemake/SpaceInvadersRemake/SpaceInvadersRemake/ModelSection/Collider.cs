@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System;
+using System.Diagnostics;
 
 // Implmentiert von Tobias
 
@@ -18,6 +19,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="collisionPartner2">Kollisionspartner 2</param>
         private static void CheckCollision(IGameItem collisionPartner1, IGameItem collisionPartner2)
         {
+            Debug.Assert(collisionPartner1 != null);
+            Debug.Assert(collisionPartner2 != null);
+
             if ((collisionPartner1.BoundingVolume == null)
                 || (collisionPartner2.BoundingVolume == null))
             {
