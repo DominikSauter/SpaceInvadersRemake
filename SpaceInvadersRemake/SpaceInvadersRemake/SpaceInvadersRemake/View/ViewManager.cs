@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Diagnostics;
 
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
@@ -191,7 +192,7 @@ namespace SpaceInvadersRemake.View
         /// </remarks>
         private void MothershipSFX(object mothership, EventArgs e)
         {
-            System.Diagnostics.Debug.Assert(mothership != null, "Es gibt keine Referenz auf das Mothership-Objekt!");
+            Debug.Assert(mothership != null, "Es gibt keine Referenz auf das Mothership-Objekt!");
             EffectPlayer.Play(ViewContent.EffectContent.MothershipSound);
         }
 
@@ -415,8 +416,8 @@ namespace SpaceInvadersRemake.View
         /// <returns>GameUI-Objekt, welches die Spieleroberfläche darstellt.</returns>
         private GameUI CreateGameUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            System.Diagnostics.Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
-            System.Diagnostics.Debug.Assert(currentState != null, "Es gibt keine Referenz auf den aktuellen State!");
+            Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
+            Debug.Assert(currentState != null, "Es gibt keine Referenz auf den aktuellen State!");
             return new GameUI((StateMachine.InGameState)currentState, graphics);
         }
 
@@ -426,8 +427,8 @@ namespace SpaceInvadersRemake.View
         /// <returns>HighscoreUI-Objekt, welches die Highscoreansicht darstellt.</returns>
         private HighscoreUI CreateHighscoreUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            System.Diagnostics.Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
-            System.Diagnostics.Debug.Assert(currentState != null, "Es gibt keine Referenz auf den aktuellen State!");
+            Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
+            Debug.Assert(currentState != null, "Es gibt keine Referenz auf den aktuellen State!");
             return new HighscoreUI(((HighscoreManager)(currentState.Model)), graphics);
         }
 
@@ -437,8 +438,8 @@ namespace SpaceInvadersRemake.View
         /// <returns>MenuUI-Objekt, welches das Menu darstellt.</returns>
         private MenuUI CreateMenuUI(StateMachine.State currentState, GraphicsDeviceManager graphics)
         {
-            System.Diagnostics.Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
-            System.Diagnostics.Debug.Assert(currentState != null, "Es gibt keine Referenz auf den aktuellen State!");
+            Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
+            Debug.Assert(currentState != null, "Es gibt keine Referenz auf den aktuellen State!");
             //[Anji] Weiterreichen des currentstates an die MenuUI
             return new MenuUI(((Menu)currentState.Model).Controls, graphics, currentState); 
         }
@@ -450,7 +451,7 @@ namespace SpaceInvadersRemake.View
         /// <returns>CreditsUI-Objekt, welches die Credits Oberfläche darstellt.</returns>
         private CreditsUI CreateCreditsUI(GraphicsDeviceManager graphics)
         {
-            System.Diagnostics.Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
+            Debug.Assert(graphics != null, "Es gibt keine Referenz auf den GraphicsDeviceManager!");
             return new CreditsUI(graphics);
         }
 
