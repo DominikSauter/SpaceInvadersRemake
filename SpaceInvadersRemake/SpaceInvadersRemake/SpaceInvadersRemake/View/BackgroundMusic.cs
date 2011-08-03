@@ -76,6 +76,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         private void Stop()
         {
+            System.Diagnostics.Debug.Assert(this.Playing = true, "Der Mediaplayer läuft überhaupt nicht!");
             MediaPlayer.Stop();
             this.Playing = false;
         }
@@ -85,6 +86,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         private void Pause()
         {
+            System.Diagnostics.Debug.Assert(this.Playing = true, "Der Mediaplayer läuft überhaupt nicht!");
             MediaPlayer.Pause();
             this.Playing = false;
         }
@@ -94,6 +96,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         private void Resume()
         {
+            System.Diagnostics.Debug.Assert(this.Playing = false, "Der Mediaplayer ist überhaupt nicht angehalten!");
             MediaPlayer.Resume();
             this.Playing = true;
         }

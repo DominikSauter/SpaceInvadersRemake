@@ -167,6 +167,7 @@ namespace SpaceInvadersRemake.View
         /// <returns>Hitsphere für das 3D Model</returns>
         private static ModelHitsphere computeBigModelHitsphere(Model model3D)
         {
+            System.Diagnostics.Debug.Assert(model3D != null, "Die Referenz auf das 3D Model ist nicht vorhanden!");
             //Hitsphere, welche das gesamte Model umgibt
             BoundingSphere finalSphere = new BoundingSphere(Vector3.Zero, 0.0f);
             BoundingSphere tmpSphere;
@@ -188,6 +189,7 @@ namespace SpaceInvadersRemake.View
         /// <returns>Hitsphere für die 2D Grafik</returns>
         private static ModelHitsphere computeBigTextureHitsphere(Texture2D graphic)
         {
+            System.Diagnostics.Debug.Assert(graphic != null, "Die Referenz auf die 2D Textur ist nicht vorhanden!");
             //Berechnen einer halben Diagonalen der Textur
             Vector2 corner = new Vector2(graphic.Width/2.0f, graphic.Height/2.0f);
             //Konvertierung von 2D in 3D

@@ -184,6 +184,7 @@ namespace SpaceInvadersRemake.View
         /// <returns>Liste der Icons für die aktiven PowerUp's</returns>
         private List<Texture2D> getPowerUpIcons(List<ActivePowerUp> powerUps)
         {
+            System.Diagnostics.Debug.Assert(powerUps != null, "Die Referenz auf die List der Power Ups ist nicht vorhanden!");
             List<Texture2D> icons = new List<Texture2D>();
 
             foreach (ActivePowerUp item in powerUps)
