@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Particle Textures\" />
+    <Folder Include="Videos\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Graphics\Projektil.png">
@@ -358,13 +359,6 @@
       <Name>SpeedUp</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Videos\Intro.wmv">
-      <Name>Intro</Name>
-      <Importer>WmvImporter</Importer>
-      <Processor>VideoProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
