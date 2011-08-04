@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using SpaceInvadersRemake.StateMachine;
+using System.Diagnostics;
 
 // Implementiert von D. Sauter
 
@@ -79,6 +80,9 @@ namespace SpaceInvadersRemake.ModelSection
         /// <param name="state">Weiterreichung des aufrufenden Zustands</param>
         private void UpdateGameCourse(Microsoft.Xna.Framework.GameTime gameTime, SpaceInvadersRemake.StateMachine.State state)
         {
+            Debug.Assert(gameTime != null);
+            Debug.Assert(state != null);
+
             if (GameCourse.Player.Lives <= 0)
             {
                 ((InGameState)state).Exit(GameCourse.Player.Score);
@@ -133,6 +137,8 @@ namespace SpaceInvadersRemake.ModelSection
         /// </summary>
         private void UpdateGameItemList(Microsoft.Xna.Framework.GameTime gameTime)
         {
+            Debug.Assert(gameTime != null);
+
             Collider.CheckAllCollisions(GameItem.GameItemList);
 
             LinkedListNode<IGameItem> tempItem;
