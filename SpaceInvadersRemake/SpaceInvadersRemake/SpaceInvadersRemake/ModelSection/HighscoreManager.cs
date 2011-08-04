@@ -54,7 +54,6 @@ namespace SpaceInvadersRemake.ModelSection
         private HighscoreEntry NewEntryInHighscore(int score, HighscoreEntry newEntry)
         {
             Debug.Assert(score >= 0, "Übergebener Wert kleiner 0!");
-            Debug.Assert(newEntry != null, "Neuer Eintrag ist null-Referenz!");
 
             // Annahmen:
             // - Liste wird in diesem Abschnitt mit Insertion-Sort sortiert.
