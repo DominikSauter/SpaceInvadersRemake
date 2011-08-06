@@ -24,9 +24,12 @@ namespace SpaceInvadersRemake.Controller
         //MothershipController aus Liste von ControllerManager austragen 
        private void Mothership_Destroyed(object sender, EventArgs e)
         {
-            
+            //verhindert das bei mehr als einem Mutterschiffen das eine Anhält wenn das andere Zerstört wird
+            if (sender == this.Controllee) 
+           
+            {
                 this.controllerManager.Controllers.Remove(this);
-
+            }
         }
 
 
