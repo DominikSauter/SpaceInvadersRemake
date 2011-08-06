@@ -45,78 +45,82 @@ namespace SpaceInvadersRemake.StateMachine
             controls.Add(new Button(Resource.Label_Video, new Action(ShowVideoOptions)));
             controls.Add(new Button(Resource.Label_Audio, new Action(ShowAudioOptions)));
 
-            // Hier wird die Sprachauswahl initialisiert
 
-            // Liste von Sprachen anlegen
-            List<string> languageList = new List<string>();
-            string german = Resources.Resource.Language_de_DE;
-            languageList.Add(german);
-            string english = Resources.Resource.Language_en_US;
-            languageList.Add(english);
+            // Hier wird die Sprachauswahl initialisiert, wenn das Optionsmenü nicht aus dem Pausemenü aufgerufen wurde
 
-            
-            
-            //<ck>
-            // Aktive Sprache
-            string activeLanguage;
-
-            // Aktive Sprache auf Deutsch setzen sofern GameConfig CultureInfo auf Deutsch gesetzt ist
-            if (Settings.GameConfig.Default.Language.CompareInfo.Name.Equals("de-DE"))
+            if (!(previousState is BreakState))
             {
-                activeLanguage = german;
-            }
+                // Liste von Sprachen anlegen
+                List<string> languageList = new List<string>();
+                string german = Resources.Resource.Language_de_DE;
+                languageList.Add(german);
+                string english = Resources.Resource.Language_en_US;
+                languageList.Add(english);
 
 
-            //Aktive Sprache auf Englisch setzen sofern GameConfig CultureInfo nicht auf Deutsch gesetzt ist
-            else
-            {
-                activeLanguage = english;
-            }
-            //</ck>
+
+                //<ck>
+                // Aktive Sprache
+                string activeLanguage;
+
+                // Aktive Sprache auf Deutsch setzen sofern GameConfig CultureInfo auf Deutsch gesetzt ist
+                if (Settings.GameConfig.Default.Language.CompareInfo.Name.Equals("de-DE"))
+                {
+                    activeLanguage = german;
+                }
 
 
-            // Erstelle das neue ListSelect
-            //TODO @Tobi Füge zu Sprachauswahl hinweis "Es Erfolgt ein Neustart Löscht aktuellen Spielfortschritt" 
-            //Resource.Warning_Restart (Kannst Text gerne ändern..isn prototyp)
-            controls.Add(new ListSelect<string>(Resources.Resource.Label_Language,
-                         languageList,
-                         activeLanguage,
-                         delegate(string language)
-                         {
-                             //HACK: If-Konstrukt nur gewählt, weil es nur zwei verschieden Sprachen gibt. Bei mehr Sprachen müssen eigene Klassen ähnlich wie Resolution angelegt werden
-                             if (language.Equals(german))
+                //Aktive Sprache auf Englisch setzen sofern GameConfig CultureInfo nicht auf Deutsch gesetzt ist
+                else
+                {
+                    activeLanguage = english;
+                }
+                //</ck>
+
+
+                // Erstelle das neue ListSelect
+                //TODO @Tobi Füge zu Sprachauswahl hinweis "Es Erfolgt ein Neustart Löscht aktuellen Spielfortschritt" 
+                //Resource.Warning_Restart (Kannst Text gerne ändern..isn prototyp)
+                controls.Add(new ListSelect<string>(Resources.Resource.Label_Language,
+                             languageList,
+                             activeLanguage,
+                             delegate(string language)
                              {
-                                 //<ck>
-                                 //Setze die Sprache auf Deutsch und speichere dies in GameConfig
-                                 Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("de-DE");
-                                 Settings.GameConfig.Default.Save();
+                                 //HACK: If-Konstrukt nur gewählt, weil es nur zwei verschieden Sprachen gibt. Bei mehr Sprachen müssen eigene Klassen ähnlich wie Resolution angelegt werden
+                                 if (language.Equals(german))
+                                 {
+                                     //<ck>
+                                     //Setze die Sprache auf Deutsch und speichere dies in GameConfig
+                                     Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("de-DE");
+                                     Settings.GameConfig.Default.Save();
 
-                                 
-                                 //Zuweisen der Sprache aus der Gameconfig
-                                 Resource.Culture = Settings.GameConfig.Default.Language;
-                                 //Neustart des Spiels
-                                 stateManager.State = new IntroState(this.stateManager, this.game);
-                                 //</ck>
-                                 
-                              
-                             }
-                             else if (language.Equals(english))
-                             {
-                                 //<ck>
-                                 //Setze die Sprache auf Englisch und speichere dies in GameConfig
-                                 Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("en-US");
-                                 Settings.GameConfig.Default.Save();
 
-                                 //Zuweisen der Sprache aus der Gameconfig
-                                 Resource.Culture = Settings.GameConfig.Default.Language;
-                                 
-                                 //Neustart des Spiels
-                                 stateManager.State = new MainMenuState(this.stateManager, this.game);
-                                 
-                                 //</ck>
+                                     //Zuweisen der Sprache aus der Gameconfig
+                                     Resource.Culture = Settings.GameConfig.Default.Language;
+                                     //Neustart des Spiels
+                                     stateManager.State = new IntroState(this.stateManager, this.game);
+                                     //</ck>
 
-                             }
-                         }));
+
+                                 }
+                                 else if (language.Equals(english))
+                                 {
+                                     //<ck>
+                                     //Setze die Sprache auf Englisch und speichere dies in GameConfig
+                                     Settings.GameConfig.Default.Language = new System.Globalization.CultureInfo("en-US");
+                                     Settings.GameConfig.Default.Save();
+
+                                     //Zuweisen der Sprache aus der Gameconfig
+                                     Resource.Culture = Settings.GameConfig.Default.Language;
+
+                                     //Neustart des Spiels
+                                     stateManager.State = new MainMenuState(this.stateManager, this.game);
+
+                                     //</ck>
+
+                                 }
+                             }));
+            }
 
             // Neues Menü mit den angelegten Steuerelementen erstellen
             Model = new Menu(controls);
