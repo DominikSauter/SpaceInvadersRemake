@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake.View
         {
             Vector2 framePosition = new Vector2((graphics.PreferredBackBufferWidth - this.frame.Width) / 2, (graphics.PreferredBackBufferHeight - this.frame.Height) / 2);
             Vector2 namePosition = framePosition + new Vector2(20, 100);
-            Vector2 scorePosition = framePosition + new Vector2(frame.Width - 60, 100);
+            Vector2 scorePosition = framePosition + new Vector2(frame.Width - 100, 100);
             Vector2 titlePosition = framePosition + new Vector2(20, 20);
             String writeEnabled = "_";
 
