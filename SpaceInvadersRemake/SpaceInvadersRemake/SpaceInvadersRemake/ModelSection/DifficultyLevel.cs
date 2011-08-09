@@ -71,9 +71,9 @@ namespace SpaceInvadersRemake.ModelSection
             get
             {
                 Vector2 velocityIncrease;
-                velocityIncrease.X = 1.5f * GameItemConstants.AlienVelocityIncrease.X;
-                velocityIncrease.Y = 1.5f * GameItemConstants.AlienVelocityIncrease.Y;
-                return new DifficultyLevel(2.0f, new Vector2(1.5f, 1.5f), 2.0f * GameItemConstants.AlienShootingFrequency, velocityIncrease, 2.0f, 2.0f);
+                velocityIncrease.X = 1.25f * GameItemConstants.AlienVelocityIncrease.X;
+                velocityIncrease.Y = 1.25f * GameItemConstants.AlienVelocityIncrease.Y;
+                return new DifficultyLevel(2.0f, new Vector2(1.125f, 1.125f), 1.5f * GameItemConstants.AlienShootingFrequency, velocityIncrease, 2.0f, 2.0f);
             }
         }
 
@@ -85,9 +85,9 @@ namespace SpaceInvadersRemake.ModelSection
             get
             {
                 Vector2 velocityIncrease;
-                velocityIncrease.X = 2.0f * GameItemConstants.AlienVelocityIncrease.X;
-                velocityIncrease.Y = 2.0f * GameItemConstants.AlienVelocityIncrease.Y;
-                return new DifficultyLevel(3.0f, new Vector2(2.0f, 2.0f), 3.0f * GameItemConstants.AlienShootingFrequency, velocityIncrease, 3.0f, 3.0f);
+                velocityIncrease.X = 1.5f * GameItemConstants.AlienVelocityIncrease.X;
+                velocityIncrease.Y = 1.5f * GameItemConstants.AlienVelocityIncrease.Y;
+                return new DifficultyLevel(3.0f, new Vector2(1.25f, 1.25f), 2.0f * GameItemConstants.AlienShootingFrequency, velocityIncrease, 3.0f, 3.0f);
             }
         }
 
