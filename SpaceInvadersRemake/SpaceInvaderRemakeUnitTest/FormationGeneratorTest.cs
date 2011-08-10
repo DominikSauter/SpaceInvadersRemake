@@ -89,7 +89,8 @@ namespace SpaceInvaderRemakeUnitTest
             LinkedList<IGameItem> actual;
             actual = FormationGenerator.CreateFormation(AI, hitpoints, velocity, formation, damage, scoreGain);
             Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+           //TODO Untere Zeile nach testschreibung unbedingt entfernen !
+            //Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
         }
     }
 }

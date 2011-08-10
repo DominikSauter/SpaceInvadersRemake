@@ -95,6 +95,7 @@ namespace SpaceInvadersRemake.Controller
                 direction += CoordinateConstants.Right;
             }
 
+            
 
 
             this.Controllee.Move(direction, gameTime);
