@@ -78,7 +78,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         private void Stop()
         {
-            Debug.Assert(this.Playing = true, "Der Mediaplayer läuft überhaupt nicht!");
+            Debug.Assert(this.Playing == true , "Der Mediaplayer läuft überhaupt nicht!");
             MediaPlayer.Stop();
             this.Playing = false;
         }
@@ -88,7 +88,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         private void Pause()
         {
-            Debug.Assert(this.Playing = true, "Der Mediaplayer läuft überhaupt nicht!");
+            Debug.Assert(this.Playing == true, "Der Mediaplayer läuft überhaupt nicht!");
             MediaPlayer.Pause();
             this.Playing = false;
         }
@@ -98,7 +98,7 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         private void Resume()
         {
-            Debug.Assert(this.Playing = false, "Der Mediaplayer ist überhaupt nicht angehalten!");
+            Debug.Assert(this.Playing == false, "Der Mediaplayer ist überhaupt nicht angehalten!");
             MediaPlayer.Resume();
             this.Playing = true;
         }
@@ -131,18 +131,18 @@ namespace SpaceInvadersRemake.View
                 Stop();
                 Play(ViewContent.EffectContent.GameSong);
             }
-                //Wechsel vom Pausemenü ins Spiel
+                //Wechsel vom Spiel ins Pausemenü
             else if (currentState is BreakState && lastState is InGameState)
             {
                 Pause();
             }
-                //Wechsel vom Spiel ins Pausemenü
+                //Wechsel vom Pausemenü ins Spiel
             else if (currentState is InGameState && lastState is BreakState)
             {
                 Resume();
             }
                 //Wechsel vom Spiel oder dem Pausemenü in den Highscore
-            else if (currentState is HighscoreState && (lastState is InGameState || lastState is BreakState))
+            else if (currentState is HighscoreState && lastState is InGameState)
             {
                 Stop();
             }
