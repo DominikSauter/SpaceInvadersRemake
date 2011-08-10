@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake.View
         {
             Vector2 framePosition = new Vector2((graphics.PreferredBackBufferWidth - this.frame.Width) / 2, (graphics.PreferredBackBufferHeight - this.frame.Height) / 2);
             Vector2 namePosition = framePosition + new Vector2(20, 100);
-            Vector2 scorePosition = framePosition + new Vector2(frame.Width - 100, 100);
+            Vector2 scorePosition = framePosition + new Vector2(frame.Width - 10, 100);
             Vector2 titlePosition = framePosition + new Vector2(20, 20);
             String writeEnabled = "_";
 
@@ -74,8 +74,9 @@ namespace SpaceInvadersRemake.View
                 }
 
                 //Scores
-                int score = highscoreManager.HighscoreEntries[i].Score;
-                spriteBatch.DrawString(this.font, score.ToString(), scorePosition, Color.White);
+                String score = highscoreManager.HighscoreEntries[i].Score.ToString();
+                float scoreLength = font.MeasureString(score.ToString()).X;
+                spriteBatch.DrawString(this.font, score, new Vector2(scorePosition.X - scoreLength, scorePosition.Y), Color.White);
 
                 namePosition.Y += 30;
                 scorePosition.Y += 30;
