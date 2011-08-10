@@ -196,7 +196,7 @@ namespace SpaceInvadersRemake.ModelSection
             this.Hitpoints = hitpoints;
             this.Damage = damage;
             this.IsAlive = true;
-
+            
             GameItem.GameItemList.AddLast(this);
         }
     }
