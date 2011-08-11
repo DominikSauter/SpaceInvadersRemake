@@ -64,6 +64,7 @@
     <Compile Include="BlockWaveAITest.cs" />
     <Compile Include="FormationGeneratorTest.cs" />
     <Compile Include="KeyboardControllerTest.cs" />
+    <Compile Include="ModelHitsphereTest.cs" />
     <Compile Include="PlaneProjectorTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
