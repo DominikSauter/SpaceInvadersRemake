@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using Microsoft.Xna.Framework;
 using SpaceInvadersRemake.ModelSection;
+using System.Diagnostics;
 
 
 //Implemntiert von Christian (ck)
@@ -48,6 +49,8 @@ namespace SpaceInvadersRemake.Controller
         private static Vector2 changeDirection(Vector2 currentDirection)
         {
 
+           Debug.Assert(currentDirection.Equals(CoordinateConstants.Left) || currentDirection.Equals(CoordinateConstants.Right));
+            
             if (currentDirection == CoordinateConstants.Left)
             {
                 return CoordinateConstants.Right;
