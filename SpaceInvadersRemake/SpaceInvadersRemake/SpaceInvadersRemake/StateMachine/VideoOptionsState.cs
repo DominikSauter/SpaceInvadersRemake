@@ -51,6 +51,11 @@ namespace SpaceInvadersRemake.StateMachine
             List<Resolution> resolutionList = new List<Resolution>();
             foreach (DisplayMode mode in displayModes)
             {
+                // Zu kleine Auflösungen rauswerfen
+                if ((mode.Width < 800) || (mode.Width < 600))
+                {
+                    continue;
+                }
                 resolutionList.Add(new Resolution(mode));
             }
 
