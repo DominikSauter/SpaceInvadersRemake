@@ -106,6 +106,7 @@ namespace SpaceInvaderRemakeUnitTest
 
 
             KeyboardController_Accessor target = new KeyboardController_Accessor(myTestManager, myTestPlayer); // TODO: Initialize to an appropriate value
+            //Nötig zur KeyboardController Erzeugung
             KeyboardController target2 = new KeyboardController(myTestManager, myTestPlayer);
             
             myTestManager.Controllers.Add(target2);
@@ -167,6 +168,8 @@ namespace SpaceInvaderRemakeUnitTest
 
             Assert.AreEqual(expected, target.Controllee.Position);
         }
+
+
 
     }
 }

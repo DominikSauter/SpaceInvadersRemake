@@ -4,6 +4,7 @@ using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Settings;
 using SpaceInvadersRemake.StateMachine;
+using System.Diagnostics;
 
 // Implementiert von Tobias
 
@@ -95,6 +96,8 @@ namespace SpaceInvadersRemake.Controller
         //Implemntiert von Christian (ck)
         private void HighscoreInput(State state)
         {
+            Debug.Assert(state != null);
+            
             HighscoreManager highscore = (HighscoreManager)Controllee;
             if (highscore.NewEntry != null)
             {
@@ -183,6 +186,10 @@ namespace SpaceInvadersRemake.Controller
         /// <param name="state">Der aktuelle State.</param>
         private static void MenuBack(State state)
         {
+
+            Debug.Assert(state != null);
+
+
             if (state is HighscoreState)
             {
                 ((HighscoreState)state).Exit();
