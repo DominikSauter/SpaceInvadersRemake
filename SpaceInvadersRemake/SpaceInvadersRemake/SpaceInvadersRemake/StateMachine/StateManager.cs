@@ -16,13 +16,13 @@ namespace SpaceInvadersRemake.StateMachine
     /// </remarks>
     public class StateManager
     {
-        private Game game;
+        private GameManager game;
 
         /// <summary>
         /// Erstellt einen StateManager.
         /// </summary>
         /// <param name="gameManager">Weiterreichung der Game-Klasse</param>
-        public StateManager(Game gameManager)
+        public StateManager(GameManager gameManager)
         {
             this.game = gameManager;
             MakeFirstState();

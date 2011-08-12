@@ -461,9 +461,9 @@ namespace SpaceInvadersRemake.View
         /// <param name="game">XNA Game Klasse</param>
         /// <param name="gameTime">Spielzeit</param>
         /// <param name="state">aktueller Zustand in dem sich die StateMachine befindet.</param>
-        public void Update(Game game, GameTime gameTime, StateMachine.State state)
+        public void Update(GameManager game, GameTime gameTime, StateMachine.State state)
         {
-            GameManager gameMngr = (GameManager)game;
+            GameManager gameMngr = game;
             
             /*
              * RemoveAll entfernt alle Element die die Bedingung im Delegate erfüllen.

@@ -13,7 +13,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
-        public InGameState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
+        public InGameState(StateManager stateManager, GameManager gameManager)
             : base (stateManager, gameManager)
         {
         }
@@ -70,7 +70,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ViewInitialize()
         {
-            View = new View.ViewManager(this, ((GameManager)this.game).graphics);
+            View = new View.ViewManager(this, this.game.graphics);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
         /// <param name="previousState">Vorheriger State oder null, falls keiner vorhanden oder nicht gespeichert werden soll.</param>
-        public CreditsState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager, State previousState)
+        public CreditsState(StateManager stateManager,GameManager gameManager, State previousState)
             : base(stateManager, gameManager, previousState)
         {
         }
@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ViewInitialize()
         {
-            View = new View.ViewManager(this, ((GameManager)this.game).graphics); //teilimplementiert von Dodo
+            View = new View.ViewManager(this, this.game.graphics); //teilimplementiert von Dodo
         }
     }
 }

@@ -16,7 +16,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
-        public IntroState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
+        public IntroState(StateManager stateManager, GameManager gameManager)
             : base (stateManager, gameManager)
         {
         }
