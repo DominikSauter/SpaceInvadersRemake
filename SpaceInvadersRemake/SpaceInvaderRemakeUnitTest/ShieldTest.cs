@@ -71,21 +71,24 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void IsCollidedWithTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = Vector2.Zero; // TODO: Passenden Wert initialisieren
-            int hitpoints = GameItemConstants.ShieldHitpoints; // TODO: Passenden Wert initialisieren
-            int damage = GameItemConstants.ShieldDamage; // TODO: Passenden Wert initialisieren
-            Shield target = new Shield(position, hitpoints, damage); // TODO: Passenden Wert initialisieren
+            // Schild initialisieren
+            Vector2 position = Vector2.Zero; // Position
+            int hitpoints = GameItemConstants.ShieldHitpoints; // Lebenspunkte
+            int damage = GameItemConstants.ShieldDamage; // Schaden
+            Shield target = new Shield(position, hitpoints, damage); // Schild erstellen
 
+            // Als Kollisionspartner ein Alien erstellen
             IGameItem collisionPartner = new Alien(Vector2.Zero, GameItemConstants.AlienVelocity, GameItemConstants.AlienHitpoints, GameItemConstants.AlienDamage, GameItemConstants.AlienWeapon, GameItemConstants.AlienScoreGain); // TODO: Passenden Wert initialisieren
 
             target.IsCollidedWith(collisionPartner);
 
             Assert.AreEqual(target.Hitpoints, GameItemConstants.ShieldHitpoints - GameItemConstants.AlienDamage);
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }

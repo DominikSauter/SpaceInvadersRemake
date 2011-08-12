@@ -64,6 +64,17 @@ namespace SpaceInvaderRemakeUnitTest
         //
         #endregion
 
+        private Player CreatePlayer()
+        {
+            // Neuen Spieler erzeugen und zurückgeben
+            return new Player(GameItemConstants.PlayerPosition, GameItemConstants.PlayerVelocity, GameItemConstants.PlayerHitpoints, GameItemConstants.PlayerDamage, GameItemConstants.PlayerWeapon, GameItemConstants.PlayerLives);
+        }
+
+        private Player_Accessor CreatePlayer_Accessor()
+        {
+            // Neuen Spieler erzeugen und zurückgeben
+            return new Player_Accessor(GameItemConstants.PlayerPosition, GameItemConstants.PlayerVelocity, GameItemConstants.PlayerHitpoints, GameItemConstants.PlayerDamage, GameItemConstants.PlayerWeapon, GameItemConstants.PlayerLives);
+        }
 
         /// <summary>
         ///Ein Test für "Move"
@@ -74,23 +85,22 @@ namespace SpaceInvaderRemakeUnitTest
             // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = GameItemConstants.PlayerPosition; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.PlayerVelocity; // TODO: Passenden Wert initialisieren
-            int hitpoints = 10; // TODO: Passenden Wert initialisieren
-            int damage = 10; // TODO: Passenden Wert initialisieren
-            Weapon weapon = GameItemConstants.PlayerWeapon; // TODO: Passenden Wert initialisieren
-            int lives = 3; // TODO: Passenden Wert initialisieren
-            Player target = new Player(position, velocity, hitpoints, damage, weapon, lives); // TODO: Passenden Wert initialisieren
-            Vector2 direction = CoordinateConstants.Left; // TODO: Passenden Wert initialisieren
-            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(166667)); // TODO: Passenden Wert initialisieren
-            bool expected = true; // TODO: Passenden Wert initialisieren
-            bool actual;
-            actual = target.Move(direction, gameTime);
-            Assert.AreEqual(expected, actual);
-            //Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+            // Neuen Spieler erzeugen
+            Player target = CreatePlayer();
 
-            // GameItem-Liste leeren
-            GameItem.GameItemList.Clear();
+            // Passende Parameter erzeugen
+            Vector2 direction = CoordinateConstants.Left; 
+            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(166667)); 
+
+            bool expected = true;
+            bool actual;
+
+            actual = target.Move(direction, gameTime);
+
+            Assert.AreEqual(expected, actual);
+
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
 
         /// <summary>
@@ -103,29 +113,28 @@ namespace SpaceInvaderRemakeUnitTest
             // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = GameItemConstants.PlayerPosition + new Vector2(50.0f, 0.0f); // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.PlayerVelocity * 1.5f; // TODO: Passenden Wert initialisieren
-            int hitpoints = 20; // TODO: Passenden Wert initialisieren
-            int damage = 10; // TODO: Passenden Wert initialisieren
-            Weapon weapon = new RapidfireWeapon(); // TODO: Passenden Wert initialisieren
-            int lives = 2; // TODO: Passenden Wert initialisieren
-            Player target = new Player(position, velocity, hitpoints, damage, weapon, lives); // TODO: Passenden Wert initialisieren
+            // Neuen Spieler erzeugen
+            Player target = CreatePlayer();
+            // Die Werte des Spielers etwas verändern
+            target.Weapon = new RapidfireWeapon();
+            target.Hitpoints = 20;
+            target.Velocity *= 1.5f;
+            // PowerUp erzeugen und in die PowerUp-Liste eintragen
             Rapidfire rapidfire = new Rapidfire(Vector2.Zero, Vector2.Zero);
             target.ActivePowerUps.Add(new ActivePowerUp(12.0f, PowerUpEnum.Rapidfire, rapidfire.Apply, rapidfire.Remove));
 
             target.Reset();
 
+            // Überprüfen, ob der Spieler korrekt zurückgesetzt wurde
             Assert.AreEqual(target.Position, GameItemConstants.PlayerPosition);
             Assert.AreEqual(target.Velocity, GameItemConstants.PlayerVelocity);
             Assert.AreEqual((target.Weapon is PlayerNormalWeapon), true);
             Assert.AreEqual(target.Hitpoints, GameItemConstants.PlayerHitpoints);
             Assert.AreEqual(target.IsInvincible, true);
             Assert.AreEqual(target.ActivePowerUps.Count, 0);
-            
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
 
-            // GameItem-Liste leeren
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
 
         /// <summary>
@@ -136,27 +145,21 @@ namespace SpaceInvaderRemakeUnitTest
         {
             // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
+            
+            // Neuen Spieler erzeugen
+            Player target = CreatePlayer();
 
-            Vector2 position = GameItemConstants.PlayerPosition; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.PlayerVelocity; // TODO: Passenden Wert initialisieren
-            int hitpoints = 10; // TODO: Passenden Wert initialisieren
-            int damage = 10; // TODO: Passenden Wert initialisieren
-            Weapon weapon = GameItemConstants.PlayerWeapon; // TODO: Passenden Wert initialisieren
-            int lives = 3; // TODO: Passenden Wert initialisieren
-            Player target = new Player(position, velocity, hitpoints, damage, weapon, lives); // TODO: Passenden Wert initialisieren
-         
+            // Neues PowerUp und ActivePowerUp erzeugen
             MultiShot multiShot = new MultiShot(Vector2.Zero, Vector2.Zero);
-
             ActivePowerUp powerUp = new ActivePowerUp(15.0f, PowerUpEnum.MultiShot, multiShot.Apply, multiShot.Remove); // TODO: Passenden Wert initialisieren
            
 
             target.AddPowerUp(powerUp);
 
             Assert.AreEqual(target.ActivePowerUps.Count, 1);
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
 
-            // GameItem-Liste leeren
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurüksetzen
+            GameItem.GameItemList = null;
         }
 
         /// <summary>
@@ -168,21 +171,18 @@ namespace SpaceInvaderRemakeUnitTest
             // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = GameItemConstants.PlayerPosition; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.PlayerVelocity; // TODO: Passenden Wert initialisieren
-            int hitpoints = 10; // TODO: Passenden Wert initialisieren
-            int damage = 10; // TODO: Passenden Wert initialisieren
-            Weapon weapon = GameItemConstants.PlayerWeapon; // TODO: Passenden Wert initialisieren
-            int lives = 3; // TODO: Passenden Wert initialisieren
-            Player_Accessor target = new Player_Accessor(position, velocity, hitpoints, damage, weapon, lives); // TODO: Passenden Wert initialisieren
+            // Neuen Spieler erzeugen (Accessor, das private Felder manipuliert werden müssen)
+            Player_Accessor target = CreatePlayer_Accessor();
 
+            // Unverwundbarkeits-Timer setzen
             target.invincibleTime = 0.5f;
 
+            // PowerUp hinzufügen
             Speedboost speedboost = new Speedboost(Vector2.Zero, Vector2.Zero);
-
             target.AddPowerUp(new ActivePowerUp(0.5f, PowerUpEnum.Speedboost, speedboost.Apply, speedboost.Remove));
 
-            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(0, 0, 1)); // TODO: Passenden Wert initialisieren
+            // GameTime so anlegen, dass nach Update keine Unverwundbarkeit mehr aktiv sein sollte und das PowerUp ausgelaufen ist
+            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(0, 0, 1));
             
             target.Update(gameTime);
             
@@ -190,10 +190,8 @@ namespace SpaceInvaderRemakeUnitTest
             Assert.AreEqual(target.IsInvincible, false);
             Assert.AreEqual(target.ActivePowerUps.Count, 0);
 
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
-
-            // GameItem-Liste leeren
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
 
         /// <summary>
@@ -204,25 +202,22 @@ namespace SpaceInvaderRemakeUnitTest
         {
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = GameItemConstants.PlayerPosition; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.PlayerVelocity; // TODO: Passenden Wert initialisieren
-            int hitpoints = 10; // TODO: Passenden Wert initialisieren
-            int damage = 10; // TODO: Passenden Wert initialisieren
-            Weapon weapon = GameItemConstants.PlayerWeapon; // TODO: Passenden Wert initialisieren
-            int lives = 3; // TODO: Passenden Wert initialisieren
-            Player_Accessor target = new Player_Accessor(position, velocity, hitpoints, damage, weapon, lives); // TODO: Passenden Wert initialisieren
+            // Neuen Spieler erzeugen (Accessor, das private Felder manipuliert werden müssen)
+            Player_Accessor target = CreatePlayer_Accessor(); 
+            // Anfängliche Unverwundbarkeit ausschalten
             target.invincibleTime = 0.0f;
 
+            // Als Kollisionspartner ein Alien erstellen
             IGameItem collisionPartner = new Alien(Vector2.Zero, GameItemConstants.AlienVelocity, GameItemConstants.AlienHitpoints, GameItemConstants.AlienDamage, GameItemConstants.AlienWeapon, GameItemConstants.AlienScoreGain); // TODO: Passenden Wert initialisieren
             
             target.IsCollidedWith(collisionPartner);
 
 
-            Assert.AreEqual(target.Lives, 2);
+            Assert.AreEqual(target.Lives, GameItemConstants.PlayerLives - 1);
             Assert.AreEqual(target.IsInvincible, true);
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }

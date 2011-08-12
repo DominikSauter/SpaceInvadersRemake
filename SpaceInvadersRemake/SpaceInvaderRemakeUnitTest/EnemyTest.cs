@@ -67,7 +67,7 @@ namespace SpaceInvaderRemakeUnitTest
 
         internal virtual Enemy CreateEnemy()
         {
-            // TODO: Geeignete konkrete Klasse instanziieren
+            // Stellertretend für Gegner ein AlienObjekt erzeugen
             Enemy target = new Alien(Vector2.Zero, GameItemConstants.AlienVelocity, 10, 10, GameItemConstants.AlienWeapon, 10);
             return target;
         }
@@ -76,45 +76,57 @@ namespace SpaceInvaderRemakeUnitTest
         ///Ein Test für "Move", bei dem ein Alien nicht über den Rand kommt
         ///</summary>
         [TestMethod()]
-        public void MoveTestNotOverBorder()
+        public void MoveTest_NotOverBorder()
         {
             // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Enemy target = CreateEnemy(); // TODO: Passenden Wert initialisieren
-            Vector2 direction = CoordinateConstants.Right; // TODO: Passenden Wert initialisieren
-            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(166667)); // TODO: Passenden Wert initialisieren
-            bool expected = true; // TODO: Passenden Wert initialisieren
-            bool actual;
-            actual = target.Move(direction, gameTime);
-            Assert.AreEqual(expected, actual);
-            //Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+            // Neuen Gegner erzeugen
+            Enemy target = CreateEnemy();
 
-            // GameItem-Liste leeren
-            GameItem.GameItemList.Clear();
+            // Passende Parameter initialisieren
+            Vector2 direction = CoordinateConstants.Right;
+            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(166667));
+            
+            bool expected = true; // true erwartet, da Gegner niht über Rand geht
+            bool actual;
+
+            actual = target.Move(direction, gameTime);
+
+            Assert.AreEqual(expected, actual);
+
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
 
         /// <summary>
         ///Ein Test für "Move", bei dem ein Alien über den Rand kommt
         ///</summary>
         [TestMethod()]
-        public void MoveTestOverBorder()
+        public void MoveTest_OverBorder()
         {
             // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Enemy target = CreateEnemy(); // TODO: Passenden Wert initialisieren
+            // Neuen Gegner erstellen
+            Enemy target = CreateEnemy(); 
+            // Gegner an den Rand der Spielebene setzen
             target.Position = new Vector2(CoordinateConstants.RightBorder, 0.0f);
-            Vector2 direction = CoordinateConstants.Right; // TODO: Passenden Wert initialisieren
-            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(166667)); // TODO: Passenden Wert initialisieren
-            bool expected = false; // TODO: Passenden Wert initialisieren
-            bool actual;
-            actual = target.Move(direction, gameTime);
-            Assert.AreEqual(expected, actual);
-            //Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
 
-            // GameItem-Liste leeren
-            GameItem.GameItemList.Clear();
+            // Passende Parameter initialisieren
+            Vector2 direction = CoordinateConstants.Right;
+            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(166667));
+
+            bool expected = false; // false erwartet, da Alien über Rand geht
+            bool actual;
+
+            actual = target.Move(direction, gameTime);
+
+            Assert.AreEqual(expected, actual);
+
+
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }

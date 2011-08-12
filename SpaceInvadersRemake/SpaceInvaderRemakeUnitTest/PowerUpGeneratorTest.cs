@@ -72,23 +72,29 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void GeneratePowerUpTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            int frequency = 1000; // TODO: Passenden Wert initialisieren
+            // Speedboost PowerUp in die Liste eintragen
+            int frequency = 1000; 
             CreatePowerUp create = delegate(Vector2 pos, Vector2 vel)
             {
                 new Speedboost(pos, vel);
-            }; // TODO: Passenden Wert initialisieren
+            }; 
             PowerUpGenerator.AddAvailablePowerUp(PowerUpEnum.Speedboost, frequency, create);
 
-            PowerUpEnum type = PowerUpEnum.Speedboost; // TODO: Passenden Wert initialisieren
-            Vector2 position = Vector2.Zero; // TODO: Passenden Wert initialisieren
+            // Passende Parameter initialisieren
+            PowerUpEnum type = PowerUpEnum.Speedboost; 
+            Vector2 position = Vector2.Zero; 
+
             PowerUpGenerator.GeneratePowerUp(type, position);
 
+            // Überprüfen, ob tatsächlich das gewünschte PowerUp erstellt wurde
             Assert.AreEqual(GameItem.GameItemList.Count, 1);
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            Assert.AreEqual(GameItem.GameItemList.First.Value is Speedboost, true);
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }

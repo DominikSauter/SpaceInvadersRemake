@@ -66,6 +66,8 @@ namespace SpaceInvaderRemakeUnitTest
 
         private Menu_Accessor CreateTestMenu()
         {
+            // Erstellt ein neues Menü mit fünf Einträgen, wovon einer zufällig ausgewählt wird
+
             List<MenuControl> controls = new List<MenuControl>();
 
             controls.Add(new Button("Testbutton1", null));
@@ -90,17 +92,20 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void DownTest()
         {
-            Menu_Accessor target = CreateTestMenu(); // TODO: Passenden Wert initialisieren
+            // Neues Menü erstellen
+            Menu_Accessor target = CreateTestMenu();
 
+            // Den Index vor der Ausführung speichern
             int index_before = target.controls.IndexOf(target.ActiveControl);
 
             target.Down();
 
+            // Den Index nach der Ausführung speichern
             int index_after = target.controls.IndexOf(target.ActiveControl);
 
-            Assert.AreEqual(index_after, (index_before + 1) % target.controls.Count);
+            int expected = (index_before + 1) % target.controls.Count;
 
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            Assert.AreEqual(index_after, expected);
         }
 
         /// <summary>
@@ -109,17 +114,20 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void UpTest()
         {
-            Menu_Accessor target = CreateTestMenu(); // TODO: Passenden Wert initialisieren
+            // Neues Menü erstellen
+            Menu_Accessor target = CreateTestMenu();
 
+            // Den Index vor der Ausführung speichern
             int index_before = target.controls.IndexOf(target.ActiveControl);
 
             target.Up();
 
+            // Den Index nach der Ausführung speichern
             int index_after = target.controls.IndexOf(target.ActiveControl);
 
-            Assert.AreEqual(index_after, (index_before - 1 + target.controls.Count) % target.controls.Count);
+            int expected = (index_before - 1 + target.controls.Count) % target.controls.Count;
 
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            Assert.AreEqual(index_after, expected);
         }
     }
 }

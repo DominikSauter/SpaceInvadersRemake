@@ -65,30 +65,40 @@ namespace SpaceInvaderRemakeUnitTest
         #endregion
 
 
+        private Projectile CreateProjectile()
+        {
+            Vector2 position = new Vector2(0.0f, CoordinateConstants.TopBorder * 2.0f - 1.0f); // Position knapp unter der oberen Grenze
+            Vector2 flightDirection = CoordinateConstants.Up; // Bewegungsrichtung
+            ProjectileTypeEnum projectileType = ProjectileTypeEnum.PlayerNormalProjectile; // Projektiltyp
+            int hitpoints = GameItemConstants.PlayerNormalProjectileHitpoints; // Lebenspunkte
+            Vector2 velocity = GameItemConstants.PlayerNormalProjectileVelocity; // Geschwindigkeit
+            int damage = GameItemConstants.PlayerNormalProjectileDamage; // Schaden
+            // Prijektil erzeugen
+            Projectile target = new Projectile(position, flightDirection, projectileType, hitpoints, velocity, damage);
+            return target;
+        }
+
         /// <summary>
         ///Ein Test für "Update"
         ///</summary>
         [TestMethod()]
         public void UpdateTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = new Vector2(0.0f, CoordinateConstants.TopBorder * 2.0f - 1.0f); // TODO: Passenden Wert initialisieren
-            Vector2 flightDirection = CoordinateConstants.Up; // TODO: Passenden Wert initialisieren
-            ProjectileTypeEnum projectileType = ProjectileTypeEnum.PlayerNormalProjectile; // TODO: Passenden Wert initialisieren
-            int hitpoints = GameItemConstants.PlayerNormalProjectileHitpoints; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.PlayerNormalProjectileVelocity; // TODO: Passenden Wert initialisieren
-            int damage = GameItemConstants.PlayerNormalProjectileDamage; // TODO: Passenden Wert initialisieren
-            Projectile target = new Projectile(position, flightDirection, projectileType, hitpoints, velocity, damage); // TODO: Passenden Wert initialisieren
+            // Projektil erzeugen
+            Projectile target = CreateProjectile();
 
-            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(0, 0, 1)); // TODO: Passenden Wert initialisieren
+            // Passende Parameter initialisieren
+            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(0, 0, 1)); 
             
             target.Update(gameTime);
 
             Assert.AreEqual(target.IsAlive, false);
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
 
         /// <summary>
@@ -97,24 +107,21 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void IsCollidedWithTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = new Vector2(0.0f, CoordinateConstants.TopBorder * 2.0f - 1.0f); // TODO: Passenden Wert initialisieren
-            Vector2 flightDirection = CoordinateConstants.Up; // TODO: Passenden Wert initialisieren
-            ProjectileTypeEnum projectileType = ProjectileTypeEnum.PlayerNormalProjectile; // TODO: Passenden Wert initialisieren
-            int hitpoints = GameItemConstants.PlayerNormalProjectileHitpoints; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.PlayerNormalProjectileVelocity; // TODO: Passenden Wert initialisieren
-            int damage = GameItemConstants.PlayerNormalProjectileDamage; // TODO: Passenden Wert initialisieren
-            Projectile target = new Projectile(position, flightDirection, projectileType, hitpoints, velocity, damage); // TODO: Passenden Wert initialisieren
+            // Projektil erstellen
+            Projectile target = CreateProjectile();
             
+            // Als Kollisionspartner ein Schild erstellen
             IGameItem collisionPartner = new Shield(Vector2.Zero, GameItemConstants.ShieldHitpoints, GameItemConstants.ShieldDamage); // TODO: Passenden Wert initialisieren
 
             target.IsCollidedWith(collisionPartner);
 
             Assert.AreEqual(target.IsAlive, false);
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }

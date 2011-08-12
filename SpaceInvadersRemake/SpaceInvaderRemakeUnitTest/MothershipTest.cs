@@ -71,25 +71,29 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void IsCollidedWithTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = GameItemConstants.MothershipPosition; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.MothershipVelocity; // TODO: Passenden Wert initialisieren
-            int hitpoints = GameItemConstants.MothershipHitpoints; // TODO: Passenden Wert initialisieren
-            int damage = GameItemConstants.MothershipDamage; // TODO: Passenden Wert initialisieren
-            Weapon weapon = null; // TODO: Passenden Wert initialisieren
-            int scoreGain = GameItemConstants.MothershipScoreGain; // TODO: Passenden Wert initialisieren
-            Mothership target = new Mothership(position, velocity, hitpoints, damage, weapon, scoreGain); // TODO: Passenden Wert initialisieren
+            // Mutterschiff initialisieren
+            Vector2 position = GameItemConstants.MothershipPosition; // Position
+            Vector2 velocity = GameItemConstants.MothershipVelocity; // Geschwindigkeit
+            int hitpoints = GameItemConstants.MothershipHitpoints; // Lebenspunkte
+            int damage = GameItemConstants.MothershipDamage; // Schaden
+            Weapon weapon = null; // Waffe
+            int scoreGain = GameItemConstants.MothershipScoreGain; // Punktzahl
+            Mothership target = new Mothership(position, velocity, hitpoints, damage, weapon, scoreGain); // Mutterschiff erzeugen
             
-            
+            // Als Kollisionspartner ein normales Spielerprojektil erzeugen
             IGameItem collisionPartner = new Projectile(GameItemConstants.MothershipPosition, Vector2.Zero, ProjectileTypeEnum.PlayerNormalProjectile, GameItemConstants.PlayerNormalProjectileHitpoints, Vector2.Zero, GameItemConstants.PlayerNormalProjectileDamage); // TODO: Passenden Wert initialisieren
+            
             target.IsCollidedWith(collisionPartner);
 
-            Assert.AreEqual(target.IsAlive, false);
+            int expected = GameItemConstants.MothershipHitpoints - GameItemConstants.PlayerNormalProjectileDamage;
 
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            Assert.AreEqual(target.Hitpoints, expected);
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }
