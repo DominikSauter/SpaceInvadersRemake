@@ -67,7 +67,7 @@ namespace SpaceInvaderRemakeUnitTest
 
         internal virtual PowerUp CreatePowerUp()
         {
-            // TODO: Geeignete konkrete Klasse instanziieren
+            // Stellvertretend für PowerUps ein Speedboost-PowerUp erzeugen, dass knapp über der unteren Grenze ist
             PowerUp target = new Speedboost(new Vector2(0.0f, CoordinateConstants.BottomBorder * 1.25f + 1.0f), GameItemConstants.PowerUpVelocity);
             return target;
         }
@@ -78,18 +78,21 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void UpdateTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            PowerUp target = CreatePowerUp(); // TODO: Passenden Wert initialisieren
-            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(0, 0, 1)); // TODO: Passenden Wert initialisieren
+            // PowerUp erzeugen
+            PowerUp target = CreatePowerUp();
+
+            // Passende Parameter initialisieren
+            GameTime gameTime = new GameTime(new TimeSpan(0, 42, 42), new TimeSpan(0, 0, 1)); 
             
             target.Update(gameTime);
 
             Assert.AreEqual(target.IsAlive, false);
 
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
-
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
 
         /// <summary>
@@ -98,20 +101,24 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void IsCollidedWithTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            PowerUp target = CreatePowerUp(); // TODO: Passenden Wert initialisieren
+            // PowerUp erzeugen
+            PowerUp target = CreatePowerUp();
+
+            // Als Kollisionspartner einen Spieler erzeugen
             IGameItem collisionPartner = new Player(GameItemConstants.PlayerPosition, GameItemConstants.PlayerVelocity, GameItemConstants.PlayerHitpoints, GameItemConstants.PlayerDamage, GameItemConstants.PlayerWeapon, GameItemConstants.PlayerLives); // TODO: Passenden Wert initialisieren
             
             target.IsCollidedWith(collisionPartner);
-
 
             Assert.AreEqual(target.IsAlive, false);
             Assert.AreEqual(((Player)collisionPartner).ActivePowerUps.Count, 1);
 
             //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }

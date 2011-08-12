@@ -71,25 +71,30 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void IsCollidedWithTest()
         {
+            // GameItem-Liste initialisieren
             GameItem.GameItemList = new System.Collections.Generic.LinkedList<IGameItem>();
 
-            Vector2 position = Vector2.Zero; // TODO: Passenden Wert initialisieren
-            Vector2 velocity = GameItemConstants.AlienVelocity; // TODO: Passenden Wert initialisieren
-            int hitpoints = GameItemConstants.AlienHitpoints; // TODO: Passenden Wert initialisieren
-            int damage = GameItemConstants.AlienDamage; // TODO: Passenden Wert initialisieren
-            Weapon weapon = GameItemConstants.AlienWeapon; // TODO: Passenden Wert initialisieren
-            int scoreGain = GameItemConstants.AlienScoreGain; // TODO: Passenden Wert initialisieren
-            Alien target = new Alien(position, velocity, hitpoints, damage, weapon, scoreGain); // TODO: Passenden Wert initialisieren
+            // AlienObjekt für Test initialisieren
+            Vector2 position = Vector2.Zero; // Position
+            Vector2 velocity = GameItemConstants.AlienVelocity; // Geschwindigkeit
+            int hitpoints = GameItemConstants.AlienHitpoints; // Lebenspunkte
+            int damage = GameItemConstants.AlienDamage; // Schaden
+            Weapon weapon = GameItemConstants.AlienWeapon; // Waffe
+            int scoreGain = GameItemConstants.AlienScoreGain; // Punktzahl
+            Alien target = new Alien(position, velocity, hitpoints, damage, weapon, scoreGain); // Alien erstellen
 
+            // Als Kollisionspartner ein normales Spielerprojektil erstellen
             IGameItem collisionPartner = new Projectile(Vector2.Zero, Vector2.Zero, ProjectileTypeEnum.PlayerNormalProjectile, GameItemConstants.PlayerNormalProjectileHitpoints, Vector2.Zero, GameItemConstants.PlayerNormalProjectileDamage); // TODO: Passenden Wert initialisieren
 
             target.IsCollidedWith(collisionPartner);
 
-            Assert.AreEqual(target.IsAlive, false);
+            int expected = GameItemConstants.AlienHitpoints - GameItemConstants.PlayerNormalProjectileDamage;
 
-            //Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            // Für Testerfolg muss überprüft werden, ob dem Alien der korrekte Schadenswert abgezogen wurde
+            Assert.AreEqual(target.Hitpoints, expected);
 
-            GameItem.GameItemList.Clear();
+            // GameItem-Liste wieder zurücksetzen
+            GameItem.GameItemList = null;
         }
     }
 }

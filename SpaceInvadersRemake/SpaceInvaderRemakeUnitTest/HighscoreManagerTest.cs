@@ -70,13 +70,20 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void SaveTest()
         {
-            HighscoreManager target = new HighscoreManager(1000); // TODO: Passenden Wert initialisieren
-            target.NewEntry.Name = "TEST";
-            bool expected = true; // TODO: Passenden Wert initialisieren
+            // Hinweis: Sollte dieser Test fehlschlegen, kann es sein, dass der neue Eintrag nicht mehr 
+            // in die Highscore-Liste passt. Dies muss evtl. überprüft werden.        
+
+            // Neuen Highscore-Manager erzeugen, bei dem ein neuer Eintrag erzeugt werden soll
+            HighscoreManager target = new HighscoreManager(1000); 
+            target.NewEntry.Name = "TEST"; // Namen eintragen
+
+            bool expected = true; 
             bool actual;
+
             actual = target.Save();
+
             Assert.AreEqual(expected, actual);
-            //Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+
         }
     }
 }
