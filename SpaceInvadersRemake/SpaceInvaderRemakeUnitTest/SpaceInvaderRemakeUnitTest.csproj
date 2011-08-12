@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="AlienTest.cs" />
     <Compile Include="BlockWaveAITest.cs" />
+    <Compile Include="ControllerManagerTest.cs" />
     <Compile Include="EnemyTest.cs" />
     <Compile Include="FormationGeneratorTest.cs" />
     <Compile Include="HighscoreManagerTest.cs" />
