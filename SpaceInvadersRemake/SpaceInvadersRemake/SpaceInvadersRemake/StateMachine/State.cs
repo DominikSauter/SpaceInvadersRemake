@@ -67,7 +67,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <summary>
         /// Durchreichung der Game-Klasse
         /// </summary>
-        protected readonly Game game;
+        protected readonly GameManager game;
 
         /// <summary>
         /// Erstellt einen neuen Zustand mit der Berücksichtigung des vorherigen States.
@@ -75,7 +75,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
         /// <param name="previousState">Vorheriger State oder null, falls keiner vorhanden oder nicht gespeichert werden soll.</param>
-        public State(StateManager stateManager, Game gameManager, State previousState)
+        public State(StateManager stateManager, GameManager gameManager, State previousState)
         {
             this.stateManager = stateManager;
             this.previousState = previousState;
@@ -100,7 +100,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
-        public State(StateManager stateManager, Game gameManager)
+        public State(StateManager stateManager, GameManager gameManager)
         {
             this.stateManager = stateManager;
             this.previousState = null;

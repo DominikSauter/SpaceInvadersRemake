@@ -21,7 +21,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
         /// <param name="previousState">Vorheriger State oder null, falls keiner vorhanden oder nicht gespeichert werden soll.</param>
-        public VideoOptionsState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager, State previousState)
+        public VideoOptionsState(StateManager stateManager, GameManager gameManager, State previousState)
             : base (stateManager, gameManager, previousState)
         {
         }

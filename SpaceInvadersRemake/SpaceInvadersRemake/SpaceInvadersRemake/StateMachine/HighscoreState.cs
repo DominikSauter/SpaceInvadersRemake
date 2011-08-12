@@ -15,7 +15,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
-        public HighscoreState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager)
+        public HighscoreState(StateManager stateManager, GameManager gameManager)
             : base (stateManager, gameManager)
         { }
 
@@ -25,7 +25,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// <param name="stateManager">Referenz zum StateManager</param>
         /// <param name="gameManager">Referenz zur XNA-Game-Klasse</param>
         /// <param name="score">im Spiel erreichte Punkte</param>
-        public HighscoreState(StateManager stateManager, Microsoft.Xna.Framework.Game gameManager, int score)
+        public HighscoreState(StateManager stateManager, GameManager gameManager, int score)
             : base(stateManager, gameManager)
         {
             this.score = score;
@@ -64,7 +64,7 @@ namespace SpaceInvadersRemake.StateMachine
         /// </summary>
         protected override void ViewInitialize()
         {
-            View = new View.ViewManager(this, ((GameManager)this.game).graphics); //teilimplementiert von Dodo
+            View = new View.ViewManager(this, this.game.graphics); //teilimplementiert von Dodo
         }
 
         /// <summary>
