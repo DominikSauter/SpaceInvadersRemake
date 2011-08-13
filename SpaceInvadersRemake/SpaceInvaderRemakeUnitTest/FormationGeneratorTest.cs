@@ -1,8 +1,7 @@
-﻿using SpaceInvadersRemake.ModelSection;
+﻿using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using System;
 using Microsoft.Xna.Framework;
-using System.Collections.Generic;
+using SpaceInvadersRemake.ModelSection;
 
 namespace SpaceInvaderRemakeUnitTest
 {
@@ -72,6 +71,8 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void CreateFormationTest()
         {
+            GameItem.GameItemList = new LinkedList<IGameItem>();
+
             BehaviourEnum AI = BehaviourEnum.BlockMovement;
             int hitpoints = 10;
             Vector2 velocity = new Vector2(40.0f, 40.0f);
@@ -88,9 +89,25 @@ namespace SpaceInvaderRemakeUnitTest
             LinkedList<IGameItem> expected = wave;
             LinkedList<IGameItem> actual;
             actual = FormationGenerator.CreateFormation(AI, hitpoints, velocity, formation, damage, scoreGain);
-            Assert.AreEqual(expected, actual);
-           //TODO Untere Zeile nach testschreibung unbedingt entfernen !
-            //Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
+
+
+            LinkedListNode<IGameItem> item2 = expected.First;
+            for (LinkedListNode<IGameItem> item1 = actual.First; item1 != null; item1 = item1.Next)
+            {
+                    Assert.AreEqual(item2.Value.BoundingVolume, item1.Value.BoundingVolume);
+                    Assert.AreEqual(item2.Value.Damage, item1.Value.Damage);
+                    Assert.AreEqual(item2.Value.Hitpoints, item1.Value.Hitpoints);
+                    Assert.AreEqual(item2.Value.IsAlive, item1.Value.IsAlive);
+                    Assert.AreEqual(item2.Value.Position, item1.Value.Position);
+                    Assert.AreEqual(item2.Value.Velocity, item1.Value.Velocity);
+                    Enemy item2Enemy = (Enemy)item2.Value;
+                    Enemy item1Enemy = (Enemy)item1.Value;
+                    Assert.AreEqual(item2Enemy.ScoreGain, item1Enemy.ScoreGain);
+                    Assert.ReferenceEquals(item2Enemy.Weapon, item1Enemy.Weapon);
+                    item2 = item2.Next;
+            }
+
+            GameItem.GameItemList = null;
         }
     }
 }
