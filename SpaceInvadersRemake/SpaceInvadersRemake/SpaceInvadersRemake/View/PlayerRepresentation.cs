@@ -19,6 +19,7 @@ namespace SpaceInvadersRemake.View
         private Texture2D playerTexture;
         private Vector3 lastPosition;
         private bool playerMoved;
+        private int invincibleCount;
 
         /*
          * <WAHL>
@@ -44,6 +45,7 @@ namespace SpaceInvadersRemake.View
             this.playerMoved = false;
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Forward, Vector3.Up);
+            this.invincibleCount = 0;
         }
 
         /*
@@ -63,6 +65,16 @@ namespace SpaceInvadersRemake.View
         {
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             Matrix rotation = Matrix.Identity;
+
+            bool invincible = ((Player)this.GameItem).IsInvincible;
+            if (invincible)
+            {
+                if (this.invincibleCount > 4)
+                {
+                    this.invincibleCount = 0;
+                }
+                this.invincibleCount++;
+            }
 
             //Je nach Bewegungsrichtung des Spielers wird das Schiff in die entsprechende Richtung geneigt.
             if (currentPosition.X > this.lastPosition.X)
@@ -89,21 +101,28 @@ namespace SpaceInvadersRemake.View
              * */
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
-            foreach (ModelMesh mesh in model.Meshes)
-            {
-                foreach (BasicEffect effect in mesh.Effects)
-                {
-                    effect.LightingEnabled = true;
-                    effect.SpecularColor = new Vector3(1.0f, 1.0f, 1.0f);
-                    effect.SpecularPower = 100.0f;
-                    effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
-                    effect.Texture = this.playerTexture;
-                    effect.View = Camera;
-                    effect.Projection = Projection;
-                    effect.World = rotation * this.World;
-                }
 
-                mesh.Draw();
+            if (invincible && this.invincibleCount == 4)
+            {
+            }
+            else
+            {
+                foreach (ModelMesh mesh in model.Meshes)
+                {
+                    foreach (BasicEffect effect in mesh.Effects)
+                    {
+                        effect.LightingEnabled = true;
+                        effect.SpecularColor = new Vector3(1.0f, 1.0f, 1.0f);
+                        effect.SpecularPower = 100.0f;
+                        effect.DiffuseColor = new Vector3(1.0f, 1.0f, 1.0f);
+                        effect.Texture = this.playerTexture;
+                        effect.View = Camera;
+                        effect.Projection = Projection;
+                        effect.World = rotation * this.World;
+                    }
+
+                    mesh.Draw();
+                }
             }
             playerMoved = false;
         }
