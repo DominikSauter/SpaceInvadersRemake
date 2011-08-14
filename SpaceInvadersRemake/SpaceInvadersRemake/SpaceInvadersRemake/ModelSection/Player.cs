@@ -300,8 +300,8 @@ namespace SpaceInvadersRemake.ModelSection
         {
             this.Lives = lives;
 
-            // Spieler für kurze Zeit unverwundbar machen
-            this.invincibleTime = GameItemConstants.PlayerInvincibleTime;
+            // Spieler nicht unverwundbar
+            this.invincibleTime = 0.0f;
 
             //PowerUp-Liste initialisieren
             ActivePowerUps = new List<ActivePowerUp>();

@@ -86,10 +86,6 @@
     <Shadow Include="Test References\SpaceInvadersRemake.accessor" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SpaceInvadersRemake\SpaceInvadersRemakeContent\SpaceInvadersRemakeContent.contentproj">
-      <Project>{C2FBBBFC-8CE4-40FC-B174-5EAFC02F19BE}</Project>
-      <Name>SpaceInvadersRemakeContent %28Content%29</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SpaceInvadersRemake\SpaceInvadersRemake\SpaceInvadersRemake.csproj">
       <Project>{957B13FF-EC8D-4B03-918A-40A1C69AE04E}</Project>
       <Name>SpaceInvadersRemake</Name>
