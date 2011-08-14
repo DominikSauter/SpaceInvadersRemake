@@ -155,5 +155,138 @@ namespace SpaceInvaderRemakeUnitTest
             target.CreateAlien(alien, e);
             Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
         }
+
+        /// <summary>
+        ///Ein Test für "CreateProjectile"
+        ///</summary>
+        [TestMethod()]
+        public void CreateProjectileTest()
+        {
+            State currentState = null; // TODO: Passenden Wert initialisieren
+            GraphicsDeviceManager graphics = null; // TODO: Passenden Wert initialisieren
+            ViewManager target = new ViewManager(currentState, graphics); // TODO: Passenden Wert initialisieren
+            object projectile = null; // TODO: Passenden Wert initialisieren
+            EventArgs e = null; // TODO: Passenden Wert initialisieren
+            target.CreateProjectile(projectile, e);
+            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+
+            //[Anji] Der eigentliche test, der jedoch wegen einem, bis jetzt noch nicht behobenem, Fehler nicht ausführbar ist
+            //GameManager gameMan = new GameManager();
+            ////GraphicsDevice gd = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.HiDef, new PresentationParameters());
+            //StateManager stateManager = new StateManager(gameMan);
+            //State currentState = new InGameState(stateManager, gameMan);
+            //ViewManager target = new ViewManager(currentState, gameMan.graphics);
+            //object projectile = new Projectile(new Vector2(0, 0), new Vector2(0, 1), ProjectileTypeEnum.PlayerNormalProjectile, 10, new Vector2(0, 1), 10);
+            //EventArgs e = new EventArgs();
+            //target.CreateProjectile(projectile, e);
+            ////Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+        }
+
+        /// <summary>
+        ///Ein Test für "CreatePowerUp"
+        ///</summary>
+        [TestMethod()]
+        public void CreatePowerUpTest()
+        {
+            State currentState = null; // TODO: Passenden Wert initialisieren
+            GraphicsDeviceManager graphics = null; // TODO: Passenden Wert initialisieren
+            ViewManager target = new ViewManager(currentState, graphics); // TODO: Passenden Wert initialisieren
+            object powerUp = null; // TODO: Passenden Wert initialisieren
+            EventArgs e = null; // TODO: Passenden Wert initialisieren
+            target.CreatePowerUp(powerUp, e);
+            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+
+            //[Anji] Der eigentliche test, der jedoch wegen einem, bis jetzt noch nicht behobenem, Fehler nicht ausführbar ist
+            //GameManager gameMan = new GameManager();
+            ////GraphicsDevice gd = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.HiDef, new PresentationParameters());
+            //StateManager stateManager = new StateManager(gameMan);
+            //State currentState = new InGameState(stateManager, gameMan);
+            //ViewManager target = new ViewManager(currentState, gameMan.graphics);
+            //Vector2 position = new Vector2(0f, 0f);
+            //Vector2 velocity = new Vector2(1f, 0f);
+            //object powerUp = new PiercingShot(position, velocity);
+            //EventArgs e = new EventArgs();
+            //target.CreatePowerUp(powerUp, e);
+            ////Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+        }
+
+        /// <summary>
+        ///Ein Test für "CreateShield"
+        ///</summary>
+        [TestMethod()]
+        public void CreateShieldTest()
+        {
+            State currentState = null; // TODO: Passenden Wert initialisieren
+            GraphicsDeviceManager graphics = null; // TODO: Passenden Wert initialisieren
+            ViewManager target = new ViewManager(currentState, graphics); // TODO: Passenden Wert initialisieren
+            object shield = null; // TODO: Passenden Wert initialisieren
+            EventArgs e = null; // TODO: Passenden Wert initialisieren
+            target.CreateShield(shield, e);
+            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+
+            //[Anji] Der eigentliche test, der jedoch wegen einem, bis jetzt noch nicht behobenem, Fehler nicht ausführbar ist
+            //GameManager gameMan = new GameManager();
+            ////GraphicsDevice gd = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.HiDef, new PresentationParameters());
+            //StateManager stateManager = new StateManager(gameMan);
+            //State currentState = new InGameState(stateManager, gameMan);
+            //ViewManager target = new ViewManager(currentState, gameMan.graphics);
+            //object shield = new Shield(new Vector2(0, 0), 100, 100);
+            //EventArgs e = new EventArgs();
+            //target.CreateShield(shield, e);
+            ////Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+        }
+
+        /// <summary>
+        ///Ein Test für "HitSFX"
+        ///</summary>
+        [TestMethod()]
+        public void HitSFXTest()
+        {
+            State currentState = null; // TODO: Passenden Wert initialisieren
+            GraphicsDeviceManager graphics = null; // TODO: Passenden Wert initialisieren
+            ViewManager target = new ViewManager(currentState, graphics); // TODO: Passenden Wert initialisieren
+            object gameItem = null; // TODO: Passenden Wert initialisieren
+            EventArgs e = null; // TODO: Passenden Wert initialisieren
+            target.HitSFX(gameItem, e);
+            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+
+            //[Anji] Der eigentliche test, der jedoch wegen einem, bis jetzt noch nicht behobenem, Fehler nicht ausführbar ist
+            //GameManager gameMan = new GameManager();
+            ////GraphicsDevice gd = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.HiDef, new PresentationParameters());
+            //StateManager stateManager = new StateManager(gameMan);
+            //State currentState = new InGameState(stateManager, gameMan);
+            //ViewManager target = new ViewManager(currentState, gameMan.graphics);
+            //object gameItem = new Shield(new Vector2(0, 0), 100, 100);
+            //EventArgs e = new EventArgs();
+            //target.HitSFX(gameItem, e);
+            ////Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+        }
+
+        /// <summary>
+        ///Ein Test für "ShootSFX"
+        ///</summary>
+        [TestMethod()]
+        public void ShootSFXTest()
+        {
+            State currentState = null; // TODO: Passenden Wert initialisieren
+            GraphicsDeviceManager graphics = null; // TODO: Passenden Wert initialisieren
+            ViewManager target = new ViewManager(currentState, graphics); // TODO: Passenden Wert initialisieren
+            object weapon = null; // TODO: Passenden Wert initialisieren
+            EventArgs e = null; // TODO: Passenden Wert initialisieren
+            target.ShootSFX(weapon, e);
+            Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+
+            //[Anji] Der eigentliche test, der jedoch wegen einem, bis jetzt noch nicht behobenem, Fehler nicht ausführbar ist
+            //GameManager gameMan = new GameManager();
+            ////GraphicsDevice gd = new GraphicsDevice(GraphicsAdapter.DefaultAdapter, GraphicsProfile.HiDef, new PresentationParameters());
+            //StateManager stateManager = new StateManager(gameMan);
+            //State currentState = new InGameState(stateManager, gameMan);
+            //ViewManager target = new ViewManager(currentState, gameMan.graphics); 
+            //object weapon = new PlayerNormalWeapon(); 
+            //EventArgs e = new EventArgs(); 
+            //target.ShootSFX(weapon, e);
+            ////Assert.Inconclusive("Eine Methode, die keinen Wert zurückgibt, kann nicht überprüft werden.");
+            
+        }
     }
 }
