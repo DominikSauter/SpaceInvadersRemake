@@ -72,14 +72,16 @@ namespace SpaceInvaderRemakeUnitTest
         [TestMethod()]
         public void IntersectsTest()
         {
+            //äußere Hitsphere, die ein gesamtes Objekt umgibt
             BoundingSphere outerSphere = new BoundingSphere(new Vector3(0, 0, 0), 10.0f);
+            //mit der 'outerSphere' wird eine ModelHitsphere erstellt
             ModelHitsphere target = new ModelHitsphere(outerSphere);
+            //eine weitere ModelHitsphere zum Testen der Kollision wird erstellt
             IBoundingVolume other = new ModelHitsphere(new BoundingSphere(new Vector3(0, 0, 9), 10.0f));
             bool expected = true;
             bool actual;
             actual = target.Intersects(other);
             Assert.AreEqual(expected, actual);
-            //Assert.Inconclusive("Überprüfen Sie die Richtigkeit dieser Testmethode.");
         }
     }
 }
