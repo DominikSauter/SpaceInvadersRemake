@@ -336,7 +336,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 10;
+                return (int)(AlienHitpoints * DifficultyLevel.HardDifficulty.HitpointsMultiplier + 1); // Ein Alien soll bei Kollision sterben
             }
         }
 
@@ -347,7 +347,7 @@ namespace SpaceInvadersRemake.ModelSection
         {
             get
             {
-                return 300;
+                return 180;
             }
         }
 
