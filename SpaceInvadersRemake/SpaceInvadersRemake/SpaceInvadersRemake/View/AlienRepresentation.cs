@@ -62,18 +62,32 @@ namespace SpaceInvadersRemake.View
         {
             //aktuelle Position des des 3D Modells
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
-            if (currentPosition.X > this.lastPosition.X || currentPosition.X < this.lastPosition.X
-                || currentPosition.Z > this.lastPosition.Z || currentPosition.Z < this.lastPosition.Z)
+            Matrix rotation = Matrix.Identity;
+
+            if (currentPosition.Z > this.lastPosition.Z || currentPosition.Z < this.lastPosition.Z)
             {
                 /* Berechnet die neue Position des 3D Modells falls sich diese geändert haben sollte.
                  * 
                  * Falsche Positionierung im 3D-Raum gefixt - TB
                  * */
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up);
-                ((ModelHitsphere)GameItem.BoundingVolume).World = this.World;
                 //Position aktualisieren
                 this.lastPosition = currentPosition;
             }
+                //Je nach Bewegungsrichtung des Spielers wird das Schiff in die entsprechende Richtung geneigt.
+            else if (currentPosition.X > this.lastPosition.X)
+            {
+                this.World = Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up);
+                rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(15));
+                this.lastPosition = currentPosition;
+            }
+            else if (currentPosition.X < this.lastPosition.X)
+            {
+                this.World = Matrix.CreateWorld(currentPosition, Vector3.Backward, Vector3.Up);
+                rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(-15));
+                this.lastPosition = currentPosition;
+            }
+            ((ModelHitsphere)GameItem.BoundingVolume).World = this.World;
 
             /*
              * WICHTIG!
@@ -93,7 +107,7 @@ namespace SpaceInvadersRemake.View
                     effect.Texture = this.alienTexture;
                     effect.View = Camera;
                     effect.Projection = Projection;
-                    effect.World = this.World;
+                    effect.World = rotation * this.World;
                 }
 
                 mesh.Draw();

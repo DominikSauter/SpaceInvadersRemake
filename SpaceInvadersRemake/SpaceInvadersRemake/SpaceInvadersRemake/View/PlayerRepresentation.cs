@@ -81,7 +81,7 @@ namespace SpaceInvadersRemake.View
                 rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(-25));
                 this.lastPosition = currentPosition;
             }
-            else if (currentPosition.X < lastPosition.X)
+            else if (currentPosition.X < this.lastPosition.X)
             {
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
                 rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(25));
