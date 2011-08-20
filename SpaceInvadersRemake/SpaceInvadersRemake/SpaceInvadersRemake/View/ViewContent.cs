@@ -180,6 +180,9 @@ namespace SpaceInvadersRemake.View
                 finalSphere = BoundingSphere.CreateMerged(finalSphere, tmpSphere);
             }
 
+            //Verkleinert die Hitsphere um das Spielerschiff, um genauerer Treffer zu ermöglichen [Dodo - 20.08.2011]
+            finalSphere = new BoundingSphere(finalSphere.Center, finalSphere.Radius * 0.7f);
+
             return new ModelHitsphere(finalSphere);
         }
 

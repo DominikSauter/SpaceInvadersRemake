@@ -18,7 +18,6 @@ namespace SpaceInvadersRemake.View
         private Model model;
         private Texture2D playerTexture;
         private Vector3 lastPosition;
-        private bool playerMoved;
         private int invincibleCount;
 
         /*
@@ -42,7 +41,6 @@ namespace SpaceInvadersRemake.View
             this.model = ViewContent.RepresentationContent.PlayerModel;
             GameItem = playerGameItem;
             this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
-            this.playerMoved = false;
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Forward, Vector3.Up);
             this.invincibleCount = 0;
@@ -69,7 +67,7 @@ namespace SpaceInvadersRemake.View
             bool invincible = ((Player)this.GameItem).IsInvincible;
             if (invincible)
             {
-                if (this.invincibleCount > 4)
+                if (this.invincibleCount > 8)
                 {
                     this.invincibleCount = 0;
                 }
@@ -79,14 +77,12 @@ namespace SpaceInvadersRemake.View
             //Je nach Bewegungsrichtung des Spielers wird das Schiff in die entsprechende Richtung geneigt.
             if (currentPosition.X > this.lastPosition.X)
             {
-                playerMoved = true;
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
                 rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(-25));
                 this.lastPosition = currentPosition;
             }
             else if (currentPosition.X < lastPosition.X)
             {
-                playerMoved = true;
                 this.World = Matrix.CreateWorld(currentPosition, Vector3.Forward, Vector3.Up);
                 rotation = Matrix.CreateRotationZ(MathHelper.ToRadians(25));
                 this.lastPosition = currentPosition;
@@ -102,7 +98,7 @@ namespace SpaceInvadersRemake.View
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
 
-            if (invincible && this.invincibleCount == 4)
+            if (invincible && this.invincibleCount == 8)
             {
             }
             else
@@ -124,7 +120,6 @@ namespace SpaceInvadersRemake.View
                     mesh.Draw();
                 }
             }
-            playerMoved = false;
         }
     }
 }
