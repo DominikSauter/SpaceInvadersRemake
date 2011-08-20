@@ -164,13 +164,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="3D Model Textures\Mutterschiff.bmp">
-      <Name>Mutterschiff</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Graphics\Schild1.png">
       <Name>Schild1</Name>
       <Importer>TextureImporter</Importer>
