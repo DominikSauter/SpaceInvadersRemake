@@ -350,8 +350,8 @@ namespace SpaceInvadersRemake.View
                     texture = ViewContent.RepresentationContent.ProjectileNormal;
                     color = ViewContent.RepresentationContent.AlienProjektileColor;
                     break;
-                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectileNormalHitsphere);
-                    texture = ViewContent.RepresentationContent.ProjectileNormal;
+                case ProjectileTypeEnum.PiercingProjectile: currentProjectile.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.ProjectilePiercingHitsphere);
+                    texture = ViewContent.RepresentationContent.ProjectilePiercing;
                     color = ViewContent.RepresentationContent.PlayerPiercingShotProjektileColor;
                     break;
                 /*
