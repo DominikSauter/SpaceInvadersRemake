@@ -14,24 +14,48 @@ namespace SpaceInvadersRemake.ModelSection
     public class GameCourse
     {
         /// <summary>
-        /// Enthält die GameTime zum Zeitpunkt der Erstellung der letzten Welle.
-        /// </summary>
-        private GameTime waveStartingTime;
-
-        /// <summary>
         /// Objekt um Zufallselemente einzubauen, z.B. zufällige Formationen oder das zufällige Auftauchen eines Mutterschiffs.
         /// </summary>
         private Random random;
 
         /// <summary>
-        /// Speichert den Zeitpunkt, ab dem das Mutterschiff das nächste Mal auftauchen darf in Milisekunden seit Spielstart.
+        /// Gibt die Mindestzeit in Milisekunden bis zum Auftauchen des nächsten Mutterschiffs an, die seit dem Beginn einer Welle oder dem Auftauchen des letzten Mutterschiffs vergehen muss.
         /// </summary>
-        private double nextMothershipTime;
+        /// <remarks>
+        /// Muss kleiner gleich <c>mothershipCooldownMaximum</c> sein.
+        /// </remarks>
+        private int mothershipCooldownMinimum;
 
         /// <summary>
-        /// Die Zeit, die zwischen dem Auftauchen und dem erneuten Auftauchen des Mutterschiffs vergehen muss in Milisekunden.
+        /// Gibt die Maximalzeit in Milisekunden bis zum Auftauchen des nächsten Mutterschiffs an, die seit dem Beginn einer Welle oder dem Auftauchen des letzten Mutterschiffs vergehen darf.
         /// </summary>
-        private int mothershipCooldown;
+        /// <remarks>
+        /// Muss größer gleich <c>mothershipCooldownMinimum</c> sein.
+        /// </remarks>
+        private int mothershipCooldownMaximum;
+
+        /// <summary>
+        /// Gibt die Wahrscheinlichkeit in Prozent an, mit der ein Mutterschiff erscheint.
+        /// </summary>
+        /// <remarks>
+        /// Muss größer gleich 0 und kleiner gleich 100 sein.
+        /// </remarks>
+        private int mothershipProbability;
+
+        /// <summary>
+        /// Gibt die Anzahl potenzieller Mutterschiffe pro Welle an.
+        /// </summary>
+        private int mothershipsPerWave;
+
+        /// <summary>
+        /// Speichert die Anzahl verbleibender potenzieller Mutterschiffe für die aktuelle Welle.
+        /// </summary>
+        private int mothershipsPerWaveRemaining;
+
+        /// <summary>
+        /// Speichert die verbleibende Zeit in Milisekunden bis zum Auftauchen des nächsten Mutterschiffs.
+        /// </summary>
+        private double mothershipCooldownRemaining;
 
         /// <summary>
         /// Gibt an, ob der Mutterschiff-Cooldown gerade aktiv ist oder nicht.
@@ -39,13 +63,26 @@ namespace SpaceInvadersRemake.ModelSection
         private bool mothershipCooldownActive;
 
         /// <summary>
+        /// Speichert die Wellennummer, bei der sich die Mutterschiff-Berechnung gerade befindet.
+        /// </summary>
+        private int mothershipWaveCounter;
+
+        /// <summary>
         /// Konstruktor
         /// </summary>
         public GameCourse()
         {
-            mothershipCooldown = 30000;
-            nextMothershipTime = 0;
+            // Änderbare Werte
+            mothershipCooldownMinimum = 10000;
+            mothershipCooldownMaximum = 60000;
+            mothershipProbability = 25;
+            mothershipsPerWave = 2;
+
+            // Feste Werte
+            mothershipsPerWaveRemaining = mothershipsPerWave;
+            mothershipCooldownRemaining = 0;
             mothershipCooldownActive = false;
+            mothershipWaveCounter = 1;
             random = new Random();
             WaveCounter = 0;
             InitializeGame();
@@ -63,14 +100,11 @@ namespace SpaceInvadersRemake.ModelSection
  
         /// <summary>
         /// Erzeugt eine neue Welle, d.h. eine Liste von Aliens, die durch einen Controller gesteuert werden.
-        /// Die Abfolge der Wellen ist hier anhand des WaveCounters festgelegt. Die Methode setzt außerdem 
-        /// bei jedem Aufruf die <c>waveStartingTime</c> auf die aktuelle <c>gameTime</c>.
+        /// Die Abfolge der Wellen ist hier anhand des WaveCounters festgelegt.
         /// </summary>
         /// <param name="gameTime">Spielzeit</param>
         public LinkedList<IGameItem> NextWave(GameTime gameTime)
         {
-            waveStartingTime = gameTime;
-
             LinkedList<IGameItem> wave = null;
             if (WaveCounter == 0)
             {
@@ -145,26 +179,55 @@ namespace SpaceInvadersRemake.ModelSection
         /// <summary>
         /// Dient zur Erstellung besonderer Ereignisse während einer Welle, z.B. das Auftauchen eines Mutterschiffs.
         /// </summary>
-        /// <remarks>
-        /// Hierfür wird die <c>waveStartingTime</c> benötigt, um Ereignisse zu bestimmten Wellen timen zu können.
-        /// </remarks>
         /// <param name="gameTime">Spielzeit</param>
         public void SpecialEvent(GameTime gameTime)
         {
-            // Bestimme Zeitpunkt des nächsten Mutterschiff-Auftauchens
-            if (!mothershipCooldownActive)
+            // Verringere Cooldown-Zeit
+            if (mothershipCooldownRemaining > 0)
             {
-                nextMothershipTime = gameTime.TotalGameTime.TotalMilliseconds + (mothershipCooldown + random.Next(mothershipCooldown + 1)); // Mutterschiff erscheint in zufälligen Abständen aus dem Intervall [mothershipCooldown, (mothershipCooldown * 2)]
-                mothershipCooldownActive = true;
+                mothershipCooldownRemaining = mothershipCooldownRemaining - gameTime.ElapsedGameTime.TotalMilliseconds;
             }
 
-            // Erzeuge Mutterschiff, sobald der vorher bestimmte Zeitpunkt dafür gekommen ist
-            if (gameTime.TotalGameTime.TotalMilliseconds >= nextMothershipTime)
-            {
-                Vector2[] formation = { GameItemConstants.MothershipPosition };
-                WaveGenerator.CreateWave(BehaviourEnum.MothershipMovement, formation, DifficultyLevel.EasyDifficulty);
 
-                mothershipCooldownActive = false;
+            // Kein Cooldown muss abgewartet werden und es wurden noch nicht alle potenziellen Mutterschiffe berechnet
+            if ((mothershipCooldownRemaining <= 0) && (mothershipWaveCounter <= WaveCounter))
+            {
+
+                // Kein abgelaufener Mutterschiff-Cooldown; berechne ob und wann das nächste Mutterschiff auftaucht
+                if (!mothershipCooldownActive)
+                {
+                    mothershipsPerWaveRemaining--;
+                    // Mutterschiff wird erscheinen; Cooldown wird gesetzt
+                    if (random.Next(101) <= mothershipProbability)
+                    {
+                        mothershipCooldownRemaining = mothershipCooldownMinimum + random.Next(mothershipCooldownMaximum - mothershipCooldownMinimum + 1);
+                        mothershipCooldownActive = true;
+                    }
+                    // Kein Mutterschiff wird erscheinen; sofern alle Mutterschiffe dieser Welle berechnet wurden, wird der Mutterschiff-Wellenzähler erhöht
+                    else
+                    {
+                        if (mothershipsPerWaveRemaining <= 0)
+                        {
+                            mothershipWaveCounter++;
+                            mothershipsPerWaveRemaining = mothershipsPerWave;
+                        }
+                    }
+                }
+
+                // Abgelaufener Mutterschiff-Cooldown; erzeuge Mutterschiff
+                else
+                {
+                    Vector2[] formation = { GameItemConstants.MothershipPosition };
+                    WaveGenerator.CreateWave(BehaviourEnum.MothershipMovement, formation, DifficultyLevel.EasyDifficulty);
+                    mothershipCooldownActive = false;
+
+                    // Sofern alle Mutterschiffe dieser Welle berechnet wurden, wird der Mutterschiff-Wellenzähler erhöht
+                    if (mothershipsPerWaveRemaining <= 0)
+                    {
+                        mothershipWaveCounter++;
+                        mothershipsPerWaveRemaining = mothershipsPerWave;
+                    }
+                }
             }
         }
 
