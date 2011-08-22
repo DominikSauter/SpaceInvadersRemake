@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
-using SpaceInvadersRemake.StateMachine;
 using System.Diagnostics;
+using SpaceInvadersRemake.StateMachine;
 
 // Implementiert von D. Sauter
 
@@ -26,9 +26,9 @@ namespace SpaceInvadersRemake.ModelSection
         private int waveDelayTime;
 
         /// <summary>
-        /// Der Zeitpunkt, ab dem die neue Alien-Welle erzeugt werden darf in Milisekunden seit Spielstart.
+        /// Die restliche Verzögerungszeit in Milisekunden, die noch vergehen muss, bis eine neue Alien-Welle erstellt werden darf.
         /// </summary>
-        private double nextWaveTime;
+        private double waveDelayTimeRemaining;
 
         /// <summary>
         /// Gibt an, ob die Wellen-Verzögerung gerade aktiv ist oder nicht.
@@ -41,7 +41,7 @@ namespace SpaceInvadersRemake.ModelSection
         public GameCourseManager()
         {
             waveDelayTime = 2500;
-            nextWaveTime = 0;
+            waveDelayTimeRemaining = 0;
             waveDelayActive = false;
             GameItem.GameItemList = new LinkedList<IGameItem>();
             currentWave = new LinkedList<IGameItem>();
@@ -111,18 +111,24 @@ namespace SpaceInvadersRemake.ModelSection
                 // Alien-Welle tot
                 if (!waveAlive)
                 {
-                    // Setze Verzögerungszeit
-                    if (!waveDelayActive)
-                    {
-                        nextWaveTime = gameTime.TotalGameTime.TotalMilliseconds + waveDelayTime;
-                        waveDelayActive = true;
-                    }
+                    // Verringere Verzögerungszeit
+                    waveDelayTimeRemaining = waveDelayTimeRemaining - gameTime.ElapsedGameTime.TotalMilliseconds;
 
-                    // Erzeuge neue Alien-Welle nach Ablauf der Verzögerungszeit
-                    if (gameTime.TotalGameTime.TotalMilliseconds >= nextWaveTime)
+                    // Verzögerungszeit ist abgelaufen
+                    if (waveDelayTimeRemaining <= 0)
                     {
-                        currentWave = GameCourse.NextWave(gameTime);
-                        waveDelayActive = false;
+                        // Setze Verzögerungszeit
+                        if (!waveDelayActive)
+                        {
+                            waveDelayTimeRemaining = waveDelayTime;
+                            waveDelayActive = true;
+                        }
+                        // Erzeuge neue Welle
+                        else
+                        {
+                            currentWave = GameCourse.NextWave(gameTime);
+                            waveDelayActive = false;
+                        }
                     }
                 }
             }
