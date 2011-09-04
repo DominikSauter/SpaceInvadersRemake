@@ -1,0 +1,12 @@
+--------------------------------------------------------------------------
+  HYPERSPACE PIRATES: ALIENS ROBBING RUM - PATCHLOG
+--------------------------------------------------------------------------
+
+--------------------------------------------------------------------------
+Patch v1.2.690 (04.09.2011)
+--------------------------------------------------------------------------
+
+- Redesigned mothership appearance based on the game progress of the player
+- Fixed some possible exploits concerning the calculations using TotalGameTime
+ (now using ElapsedGameTime instead)
+- Some minor changes in the Credits
