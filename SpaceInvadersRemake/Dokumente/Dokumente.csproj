@@ -37,7 +37,9 @@
   <PropertyGroup>
     <StartupObject />
   </PropertyGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Dokumente\Patchlog.txt" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="Dokumente\Pflichtenheft %28finale Version%29 v1.6.pdf" />
   </ItemGroup>
