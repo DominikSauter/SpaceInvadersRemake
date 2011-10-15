@@ -176,6 +176,11 @@ public class ControllerManager : IController
             {
                 //TODO hier für neue Eingabemöglichkeit neuen case einfügen.
 
+
+                case SupportedInputEnum.XBoxController:
+                    Controllers.Add(new XBoxController(this, mycontrollee));
+                    break;
+
                 case SupportedInputEnum.Keyboard:
 
                 //Keyboard ist auch default, daher Durchreichung an Default case.
