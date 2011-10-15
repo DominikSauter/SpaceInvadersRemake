@@ -124,6 +124,7 @@
     <Compile Include="Controller\ICommander.cs" />
     <Compile Include="Controller\MenuController.cs" />
     <Compile Include="Controller\MoveDownTestAI.cs" />
+    <Compile Include="Controller\XBoxController.cs" />
     <Compile Include="ModelSection\ListSelect%28abstrakt%29.cs" />
     <Compile Include="ModelSection\GameItemConstants.cs" />
     <Compile Include="ModelSection\IBoundingVolume.cs" />
@@ -133,6 +134,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\XBoxControllerConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>XBoxControllerConfig.settings</DependentUpon>
     </Compile>
     <Compile Include="StateMachine\ControllerDummy.cs" />
     <Compile Include="StateMachine\ModelDummy.cs" />
@@ -309,6 +315,10 @@
       <Generator>PublicSettingsSingleFileGenerator</Generator>
       <LastGenOutput>KeyboardConfig.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Settings\XBoxControllerConfig.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>XBoxControllerConfig.Designer.cs</LastGenOutput>
     </None>
     <None Include="StateMachine\StateMachine.cd" />
   </ItemGroup>

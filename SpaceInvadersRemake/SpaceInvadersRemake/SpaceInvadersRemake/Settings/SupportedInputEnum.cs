@@ -16,15 +16,21 @@ namespace SpaceInvadersRemake.Settings
     /// Sofern ein neuer PlayerController implementiert wurde muss er hier auftauchen.
     /// Zusätzlich muss die Switch Anweisung der CreatePlayer Methode angepasst werden, den neuen Controller zu erzeugen.
     /// <see cref="SpaceInvadersRemake.Controller.ControllerManager.CreatePlayerController"/>
-    /// <seealso cref="SpaceInvadersRemake.Controller.PlayerController"/>
-    /// </para>
+    /// 		<seealso cref="SpaceInvadersRemake.Controller.PlayerController"/>
+    /// 	</para>
     /// </remarks>
     public enum  SupportedInputEnum
     {
         /// <summary>
         /// Eingabe erfolgt über die Tastatur
         /// </summary>
-        Keyboard
+        Keyboard,
+
+
+        /// <summary>
+        /// Eingabe erfolgt über den XBoxController
+        /// </summary>
+        XBoxController
 
 
     }
