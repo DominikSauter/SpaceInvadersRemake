@@ -282,4 +282,10 @@ und für die Unterstützung für das Design des Menüs
   <data name="Warning_Restart" xml:space="preserve">
     <value>Ändern der Sprache führt zu einem Neustart des gesammten Spiels</value>
   </data>
+  <data name="Label_Input" xml:space="preserve">
+    <value>Eingabegerät</value>
+  </data>
+  <data name="Label_Keyboard" xml:space="preserve">
+    <value>Tastatur</value>
+  </data>
 </root>

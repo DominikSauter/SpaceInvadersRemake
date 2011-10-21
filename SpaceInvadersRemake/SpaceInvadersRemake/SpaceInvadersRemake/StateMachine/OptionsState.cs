@@ -46,7 +46,7 @@ namespace SpaceInvadersRemake.StateMachine
             controls.Add(new Button(Resource.Label_Audio, new Action(ShowAudioOptions)));
 
 
-            // Hier wird die Sprachauswahl initialisiert, wenn das Optionsmenü nicht aus dem Pausemenü aufgerufen wurde
+            // Hier wird die Sprachauswahl und Controllerauswahl initialisiert, wenn das Optionsmenü nicht aus dem Pausemenü aufgerufen wurde
 
             if (!(previousState is BreakState))
             {
@@ -120,6 +120,74 @@ namespace SpaceInvadersRemake.StateMachine
 
                                  }
                              }));
+
+
+                //Controller Einstellungen
+                
+                //<ck>
+
+                // Liste von Eingabemöglichkeiten anlegen
+                List<string> controllerList = new List<string>();
+                string xbox = Resources.Resource.Label_XBoxController;
+                controllerList.Add(xbox);
+                string keyboard = Resources.Resource.Label_Keyboard;
+                controllerList.Add(keyboard);
+
+
+
+                
+                // Aktive Eingabemöglichkeit
+                string activeController;
+
+                // Aktive Sprache auf Deutsch setzen sofern GameConfig CultureInfo auf Deutsch gesetzt ist
+                
+                switch(Settings.GameConfig.Default.Input){
+
+                    case SupportedInputEnum.XBoxController:
+
+
+                        activeController = xbox;
+                        break;
+
+
+                    case SupportedInputEnum.Keyboard:
+                        
+                       activeController = keyboard;
+                       break;
+
+                    default:
+                       activeController = keyboard;
+                       break;
+                
+
+                }
+                
+               
+                //</ck>
+
+
+
+
+                controls.Add(new ListSelect<string>(Resources.Resource.Label_Input,
+                             controllerList,
+                             activeController,
+                             delegate(string controller)
+                             {
+                                 if(controller.Equals(xbox))
+                                 {
+                                     Settings.GameConfig.Default.Input = SupportedInputEnum.XBoxController;
+                                     Settings.GameConfig.Default.Save();
+                                 } else if (controller.Equals(keyboard))
+                                 {
+                                     Settings.GameConfig.Default.Input = SupportedInputEnum.Keyboard;
+                                     Settings.GameConfig.Default.Save();
+ 
+                                 }
+                             }));
+ 
+
+
+
             }
 
             // Neues Menü mit den angelegten Steuerelementen erstellen
