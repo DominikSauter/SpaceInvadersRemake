@@ -49,7 +49,15 @@ namespace SpaceInvadersRemake.Controller
             else 
             {
                 //Hack Benötige Kein Controller verbunden State oder ähnliches
-                throw new System.Exception("No XBox Controller found");
+                //throw new System.Exception("No XBox Controller found");
+
+                
+                //Dieser Fall tritt ein wenn keinerlei XBox Controller angeschlossen ist,
+                //somit ist der nächste Controller der angeschlossen wird die Nummer 1
+                myPad = PlayerIndex.One;
+                GamePadConnected = false;
+
+                
             }
             
             
@@ -65,7 +73,7 @@ namespace SpaceInvadersRemake.Controller
 
         //Private Felder
         //Status des GamePads
-        private GamePadState PState;
+        private GamePadState ControllerState;
         private readonly Player myPlayer;
         
         //Gibt an welches GamePad verwended wird
@@ -94,10 +102,14 @@ namespace SpaceInvadersRemake.Controller
         {
             
             
-            PState = GamePad.GetState(myPad);
+            ControllerState = GamePad.GetState(myPad);
             
             //Teste ob Controller angeschlossen ist. 
-            if(!PState.IsConnected)
+            if (ControllerState.IsConnected)
+            {
+                GamePadConnected = true;
+            }
+            else 
             {
                 GamePadConnected = false;
             }
@@ -107,7 +119,7 @@ namespace SpaceInvadersRemake.Controller
             
  
             //Pausemenüaufruf
-            if (GamePadConnected && PState.IsButtonDown(XBox.Back) || MenuController.KeyPressed(Keys.Escape))
+            if (GamePadConnected && ControllerState.IsButtonDown(XBox.Back) || MenuController.KeyPressed(Keys.Escape))
             {
                 if (state is InGameState)
                 {
@@ -118,11 +130,16 @@ namespace SpaceInvadersRemake.Controller
             }
 
             //Ruft Movement und Shooting auf
-            if (GamePadConnected) 
+            if (GamePadConnected)
             {
                 base.Update(game, gameTime, state);
 
-            } //TODO GamePad Disconnected Hinweis oder ähnliches
+            }
+            else 
+            {
+                //Wenn Controller disconnected wird, wird das Pausemenü aufgerufen
+                (state as InGameState).Break();
+            }
             
         }
 
@@ -138,12 +155,12 @@ namespace SpaceInvadersRemake.Controller
             Vector2 direction = Vector2.Zero;
 
 
-            if (PState.IsButtonDown(XBox.Left))
+            if (ControllerState.IsButtonDown(XBox.Left))
             {
                 direction += CoordinateConstants.Left;
             }
 
-            if (PState.IsButtonDown(XBox.Right))
+            if (ControllerState.IsButtonDown(XBox.Right))
             {
                 direction += CoordinateConstants.Right;
             }
@@ -164,14 +181,14 @@ namespace SpaceInvadersRemake.Controller
         {
 
             //Für Normale Waffen hierbei muss Feuertaste losgelassen werden
-            if (PState.IsButtonDown(XBox.Fire))
+            if (ControllerState.IsButtonDown(XBox.Fire))
             {
                 this.Controllee.Shoot(gameTime);
 
             }
 
             //Für schnellfeuer Waffen Feuertaste kann gedrückt bleiben
-            else if (myPlayer.Weapon is RapidfireWeapon && this.PState.IsButtonDown(XBox.Fire))
+            else if (myPlayer.Weapon is RapidfireWeapon && this.ControllerState.IsButtonDown(XBox.Fire))
             {
                 this.myPlayer.Shoot(gameTime);
             }

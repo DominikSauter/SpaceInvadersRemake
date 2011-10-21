@@ -130,7 +130,7 @@
     <Compile Include="ModelSection\IBoundingVolume.cs" />
     <Compile Include="OnOff.cs" />
     <Compile Include="Resolution.cs" />
-    <Compile Include="Resources\Resource.Designer.cs">
+    <Compile Include="Resources\Resource1.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>

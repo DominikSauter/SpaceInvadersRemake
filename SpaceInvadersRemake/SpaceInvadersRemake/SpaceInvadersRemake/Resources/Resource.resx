@@ -288,4 +288,13 @@ und für die Unterstützung für das Design des Menüs
   <data name="Warning_Restart" xml:space="preserve">
     <value>Changing Language causes the Game to Restart itself</value>
   </data>
+  <data name="Label_Input" xml:space="preserve">
+    <value>Input</value>
+  </data>
+  <data name="Label_Keyboard" xml:space="preserve">
+    <value>Keyboard</value>
+  </data>
+  <data name="Label_XBoxController" xml:space="preserve">
+    <value>XBox 360 Pad</value>
+  </data>
 </root>
