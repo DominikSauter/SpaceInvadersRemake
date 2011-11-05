@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Input;
 using SpaceInvadersRemake.ModelSection;
 using SpaceInvadersRemake.Settings;
 using SpaceInvadersRemake.StateMachine;
+using System;
 
 //Implemntiert von Christian (ck)
 namespace SpaceInvadersRemake.Controller
@@ -15,59 +16,124 @@ namespace SpaceInvadersRemake.Controller
     class XBoxController : PlayerController
     {
 
-                /// <summary>
+        /// <summary>
         /// Generiert eine neue Instanz der <see cref="KeyboardController"/> Klasse.
         /// </summary>
-        public XBoxController(ControllerManager controllerManager, IGameItem controllee)
+        public XBoxController(ControllerManager controllerManager, IGameItem controllee, sbyte controllerNumber)
             : base(controllerManager,controllee)
         {
             this.XBox = XBoxControllerConfig.Default;
 
-           //Suche angeschlossenen XBox Controller. Wenn mehrere vorhanden wird kleinster genommen
-            //TODO Schönere Lösung ?
-            if (GamePad.GetState(PlayerIndex.One).IsConnected)
+            if (controllerNumber > 0 && controllerNumber < 5)
             {
-                myPad = PlayerIndex.One;
-                GamePadConnected = true;
 
-            }
-            else if (GamePad.GetState(PlayerIndex.Two).IsConnected) 
-            {
-                myPad = PlayerIndex.Two;
-                GamePadConnected = true;
-            }
-            else if (GamePad.GetState(PlayerIndex.Three).IsConnected) 
-            {
-                myPad = PlayerIndex.Three;
-                GamePadConnected = true;
-            }
-            else if (GamePad.GetState(PlayerIndex.Four).IsConnected)
-            {
-                myPad = PlayerIndex.Four;
-                GamePadConnected = true;
+                /*Switche über controllerNumber um den richtigen XBox Controller auszuwählen,
+               dieser wurde vom Controller Manger vorgegeben*/
+                switch (controllerNumber) 
+                {
+                    case 1:
+                        if (GamePad.GetState(PlayerIndex.One).IsConnected)
+                        {
+                            myPad = PlayerIndex.One;
+                            GamePadConnected = true;
+
+                        }
+                        //else if (GamePad.GetState(PlayerIndex.Two).IsConnected) 
+                        //{
+                        //    myPad = PlayerIndex.Two;
+                        //    GamePadConnected = true;
+                        //}
+                        //else if (GamePad.GetState(PlayerIndex.Three).IsConnected) 
+                        //{
+                        //    myPad = PlayerIndex.Three;
+                        //    GamePadConnected = true;
+                        //}
+                        //else if (GamePad.GetState(PlayerIndex.Four).IsConnected)
+                        //{
+                        //    myPad = PlayerIndex.Four;
+                        //    GamePadConnected = true;
+                        //}
+                        else
+                        {
+
+                            myPad = PlayerIndex.One;
+                            GamePadConnected = false;
+
+
+                        }
+                        break;
+                    case 2:
+                        if (GamePad.GetState(PlayerIndex.Two).IsConnected)
+                        {
+                            myPad = PlayerIndex.Two;
+                            GamePadConnected = true;
+
+                        }
+
+                        else
+                        {
+
+                            myPad = PlayerIndex.Two;
+                            GamePadConnected = false;
+
+
+                        }
+                        break;
+
+                    case 3:
+                        if (GamePad.GetState(PlayerIndex.Three).IsConnected)
+                        {
+                            myPad = PlayerIndex.Three;
+                            GamePadConnected = true;
+
+                        }
+
+                        else
+                        {
+
+                            myPad = PlayerIndex.Three;
+                            GamePadConnected = false;
+
+
+                        }
+                        break;
+
+                    case 4:
+                        if (GamePad.GetState(PlayerIndex.Four).IsConnected)
+                        {
+                            myPad = PlayerIndex.Four;
+                            GamePadConnected = true;
+
+                        }
+
+                        else
+                        {
+
+                            myPad = PlayerIndex.Four;
+                            GamePadConnected = false;
+
+
+                        }
+                        break;
+  
+  
+
+                }
+
+
+
+
+
+                if (this.Controllee is Player)
+                {
+                    myPlayer = (Player)Controllee;
+                }
+
             }
             else 
             {
-                //Hack Benötige Kein Controller verbunden State oder ähnliches
-                //throw new System.Exception("No XBox Controller found");
-
-                
-                //Dieser Fall tritt ein wenn keinerlei XBox Controller angeschlossen ist,
-                //somit ist der nächste Controller der angeschlossen wird die Nummer 1
-                myPad = PlayerIndex.One;
-                GamePadConnected = false;
-
-                
+                throw new ArgumentOutOfRangeException("controllerNumber");
             }
-            
-            
-            
-            if (this.Controllee is Player)
-            {
-                myPlayer = (Player)Controllee;
-            }
-
-
 
         }
 

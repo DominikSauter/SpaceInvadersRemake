@@ -29,5 +29,14 @@
     <Setting Name="FirstRun" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
     </Setting>
+    <Setting Name="Input2" Type="SpaceInvadersRemake.Settings.SupportedInputEnum" Scope="User">
+      <Value Profile="(Default)">XBoxController2</Value>
+    </Setting>
+    <Setting Name="Input3" Type="SpaceInvadersRemake.Settings.SupportedInputEnum" Scope="User">
+      <Value Profile="(Default)">XBoxController3</Value>
+    </Setting>
+    <Setting Name="Input4" Type="SpaceInvadersRemake.Settings.SupportedInputEnum" Scope="User">
+      <Value Profile="(Default)">XBoxController4</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

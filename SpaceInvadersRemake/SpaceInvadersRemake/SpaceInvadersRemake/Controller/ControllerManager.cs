@@ -59,6 +59,11 @@ public class ControllerManager : IController
     public ICollection<ICommander> Controllers { get; set; }
 
     /// <summary>
+    /// Zählt die Anzahl der Mitspieler
+    /// </summary>
+    private sbyte playerNumber = 0;
+
+    /// <summary>
     /// Erlaubt die Ausführung der im Controllers enthalten Spielmechanik.
     /// </summary>
     /// <remarks>
@@ -170,28 +175,11 @@ public class ControllerManager : IController
 
         if (sender is Player)
         {
+            playerNumber++;
             mycontrollee = (IGameItem)sender;
 
-            switch (GameConfig.Default.Input)
-            {
-                //TODO hier für neue Eingabemöglichkeit neuen case einfügen.
+            chooseInput(mycontrollee);
 
-
-                case SupportedInputEnum.XBoxController:
-                    Controllers.Add(new XBoxController(this, mycontrollee));
-                    break;
-
-                case SupportedInputEnum.Keyboard:
-
-                //Keyboard ist auch default, daher Durchreichung an Default case.
-                //Kein break
-
-                default:
-                    Controllers.Add(new KeyboardController(this, mycontrollee));
-                    break;
-
-
-            }
 
 
         }
@@ -203,6 +191,134 @@ public class ControllerManager : IController
      
         
  
+    }
+
+    /// <summary>
+    /// Wählt die richtige Eingabemöglichkeit zu gegebener Spielernummer
+    /// </summary>
+    /// <param name="mycontrollee">The mycontrollee.</param>
+    private void chooseInput(IGameItem mycontrollee)
+    {
+        switch (playerNumber)
+        {
+
+            case 1:
+                switch (GameConfig.Default.Input)
+                {
+                    //TODO hier für neue Eingabemöglichkeit neuen case einfügen.
+
+
+                    case SupportedInputEnum.XBoxController:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 1));
+                        break;
+                    case SupportedInputEnum.XBoxController2:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 2));
+                        break;
+                    case SupportedInputEnum.XBoxController3:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 3));
+                        break;
+
+                    case SupportedInputEnum.XBoxController4:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 4));
+                        break;
+
+
+                    case SupportedInputEnum.Keyboard:
+
+                    //Keyboard ist auch default, daher Durchreichung an Default case.
+                    //Kein break
+
+                    default:
+                        Controllers.Add(new KeyboardController(this, mycontrollee));
+                        break;
+
+                }
+                break;
+
+            case 2:
+
+                switch (GameConfig.Default.Input2)
+                {
+                    //TODO hier für neue Eingabemöglichkeit neuen case einfügen.
+
+
+                    case SupportedInputEnum.XBoxController:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 1));
+                        break;
+                    case SupportedInputEnum.XBoxController2:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 2));
+                        break;
+                    case SupportedInputEnum.XBoxController3:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 3));
+                        break;
+
+                    case SupportedInputEnum.XBoxController4:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 4));
+                        break;
+
+
+
+                }
+                break;
+
+            case 3:
+
+                switch (GameConfig.Default.Input3)
+                {
+
+                    //TODO hier für neue Eingabemöglichkeit neuen case einfügen.
+
+
+                    case SupportedInputEnum.XBoxController:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 1));
+                        break;
+                    case SupportedInputEnum.XBoxController2:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 2));
+                        break;
+                    case SupportedInputEnum.XBoxController3:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 3));
+                        break;
+
+                    case SupportedInputEnum.XBoxController4:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 4));
+                        break;
+
+
+
+
+                }
+                break;
+
+            case 4:
+
+                switch (GameConfig.Default.Input4)
+                {
+                    //TODO hier für neue Eingabemöglichkeit neuen case einfügen.
+
+
+                    case SupportedInputEnum.XBoxController:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 1));
+                        break;
+                    case SupportedInputEnum.XBoxController2:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 2));
+                        break;
+                    case SupportedInputEnum.XBoxController3:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 3));
+                        break;
+
+                    case SupportedInputEnum.XBoxController4:
+                        Controllers.Add(new XBoxController(this, mycontrollee, 4));
+                        break;
+
+
+
+                }
+                break;
+
+
+
+
+        }
     }
 
 

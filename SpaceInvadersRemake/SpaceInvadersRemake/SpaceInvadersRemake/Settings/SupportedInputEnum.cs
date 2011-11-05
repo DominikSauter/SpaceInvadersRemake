@@ -28,10 +28,24 @@ namespace SpaceInvadersRemake.Settings
 
 
         /// <summary>
-        /// Eingabe erfolgt über den XBoxController
+        /// Eingabe erfolgt über den ersten XBoxController
         /// </summary>
-        XBoxController
+        XBoxController,
 
+        /// <summary>
+        /// Eingabe erfolgt über den zweiten XBoxController
+        /// </summary>
+        XBoxController2,
+        
+        /// <summary>
+        /// Eingabe erfolgt über den dritten XBoxController
+        /// </summary>
+        XBoxController3,
+        
+        /// <summary>
+        /// Eingabe erfolgt über den vierten XBoxController
+        /// </summary>
+        XBoxController4
 
     }
 }

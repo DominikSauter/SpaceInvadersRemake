@@ -128,6 +128,7 @@ namespace SpaceInvadersRemake.StateMachine
 
                 // Liste von Eingabemöglichkeiten anlegen
                 List<string> controllerList = new List<string>();
+               
                 string xbox = Resources.Resource.Label_XBoxController;
                 controllerList.Add(xbox);
                 string keyboard = Resources.Resource.Label_Keyboard;
@@ -138,8 +139,13 @@ namespace SpaceInvadersRemake.StateMachine
                 
                 // Aktive Eingabemöglichkeit
                 string activeController;
+                string activeController2;
+                string activeController3;
+                string activeController4;
 
-                // Aktive Sprache auf Deutsch setzen sofern GameConfig CultureInfo auf Deutsch gesetzt ist
+               
+                //TODO Für alle Spieler Auswahlmöglichkeit für Inputs Achtung nur Player 1 darf Keyboard benutzen !
+
                 
                 switch(Settings.GameConfig.Default.Input){
 
