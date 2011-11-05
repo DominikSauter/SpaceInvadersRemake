@@ -130,5 +130,41 @@ namespace SpaceInvadersRemake.Settings {
                 this["FirstRun"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("XBoxController2")]
+        public global::SpaceInvadersRemake.Settings.SupportedInputEnum Input2 {
+            get {
+                return ((global::SpaceInvadersRemake.Settings.SupportedInputEnum)(this["Input2"]));
+            }
+            set {
+                this["Input2"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("XBoxController3")]
+        public global::SpaceInvadersRemake.Settings.SupportedInputEnum Input3 {
+            get {
+                return ((global::SpaceInvadersRemake.Settings.SupportedInputEnum)(this["Input3"]));
+            }
+            set {
+                this["Input3"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("XBoxController4")]
+        public global::SpaceInvadersRemake.Settings.SupportedInputEnum Input4 {
+            get {
+                return ((global::SpaceInvadersRemake.Settings.SupportedInputEnum)(this["Input4"]));
+            }
+            set {
+                this["Input4"] = value;
+            }
+        }
     }
 }

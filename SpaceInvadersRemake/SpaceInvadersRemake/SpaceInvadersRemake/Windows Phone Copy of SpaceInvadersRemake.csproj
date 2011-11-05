@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectGuid>{9316F4C2-98BF-49AD-80BF-50A758FA775A}</ProjectGuid>
+    <ProjectGuid>{93b9feb5-0615-4a3b-96f6-3346ebd13421}</ProjectGuid>
     <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">Xbox 360</Platform>
-    <OutputType>Exe</OutputType>
+    <Platform Condition=" '$(Platform)' == '' ">Windows Phone</Platform>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SpaceInvadersRemake</RootNamespace>
     <AssemblyName>SpaceInvadersRemake</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
-    <XnaPlatform>Xbox 360</XnaPlatform>
-    <XnaProfile>HiDef</XnaProfile>
+    <XnaPlatform>Windows Phone</XnaPlatform>
+    <XnaProfile>Reach</XnaProfile>
     <XnaCrossPlatformGroupID>d1714e96-8cfd-4e6a-97fc-f3a506161d5b</XnaCrossPlatformGroupID>
     <XnaOutputType>Game</XnaOutputType>
     <ApplicationIcon>Game.ico</ApplicationIcon>
@@ -33,12 +33,18 @@
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
+    <XapFilename Condition="$(XnaOutputType)=='Game'">$(AssemblyName).xap</XapFilename>
+    <SilverlightManifestTemplate Condition="$(XnaOutputType)=='Game'">Properties\AppManifest.xml</SilverlightManifestTemplate>
+    <XnaWindowsPhoneManifestTemplate Condition="$(XnaOutputType)=='Game'">Properties\WMAppManifest.xml</XnaWindowsPhoneManifestTemplate>
+    <TileImage Condition="$(XnaOutputType)=='Game'">Background.png</TileImage>
+    <TileTitle Condition="$(XnaOutputType)=='Game'">$(AssemblyName)</TileTitle>
+    <SupportedCultures />
   </PropertyGroup>
   <PropertyGroup>
     <StartupObject>SpaceInvadersRemake.Program</StartupObject>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Xbox 360' ">
-    <OutputPath>bin\Xbox 360\Debug</OutputPath>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|Windows Phone' ">
+    <OutputPath>bin\Windows Phone\Debug</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
@@ -46,19 +52,19 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <DefineConstants>DEBUG;TRACE;XBOX;XBOX360</DefineConstants>
-    <XnaCompressContent>true</XnaCompressContent>
+    <DefineConstants>DEBUG;TRACE;WINDOWS_PHONE</DefineConstants>
+    <XnaCompressContent>false</XnaCompressContent>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Xbox 360' ">
-    <OutputPath>bin\Xbox 360\Release</OutputPath>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|Windows Phone' ">
+    <OutputPath>bin\Windows Phone\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoStdLib>true</NoStdLib>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
-    <DefineConstants>TRACE;XBOX;XBOX360</DefineConstants>
-    <XnaCompressContent>true</XnaCompressContent>
+    <DefineConstants>TRACE;WINDOWS_PHONE</DefineConstants>
+    <XnaCompressContent>false</XnaCompressContent>
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\SpaceInvadersRemakeContent\SpaceInvadersRemakeContent.contentproj">
@@ -82,6 +88,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Settings\XBoxControllerConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>XBoxControllerConfig.settings</DependentUpon>
+    </Compile>
     <Compile Include="StateMachine\ControllerDummy.cs" />
     <Compile Include="StateMachine\ModelDummy.cs" />
     <Compile Include="StateMachine\ViewDummy.cs" />
@@ -102,6 +113,12 @@
     <Compile Include="ModelSection\PowerUpAction.cs" />
     <Compile Include="ModelSection\ProjectileTypeEnum.cs" />
     <Compile Include="ModelSection\PowerUpEnum.cs" />
+    <Compile Include="Settings\GameConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>GameConfig.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings\SupportedInputEnum.cs" />
     <Compile Include="View\RepresentationContent.cs" />
     <Compile Include="View\EffectContent.cs" />
     <Compile Include="View\UIContent.cs" />
@@ -131,6 +148,11 @@
     <Compile Include="View\ModelHitsphere.cs" />
     <Compile Include="ModelSection\MothershipWeapon.cs" />
     <Compile Include="ModelSection\PlayerNormalWeapon.cs" />
+    <Compile Include="Settings\KeyboardConfig.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>KeyboardConfig.settings</DependentUpon>
+    </Compile>
     <Compile Include="StateMachine\AudioOptionsState.cs" />
     <Compile Include="StateMachine\BreakState.cs" />
     <Compile Include="ModelSection\Button.cs" />
@@ -225,12 +247,35 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Background.png">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </None>
     <None Include="ClassDiagram.cd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Controller\Controller.cd" />
     <None Include="Controller\Model - GameItem.cd" />
     <None Include="Controller\Model - Wapon.cd" />
+    <None Include="Properties\AppManifest.xml">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </None>
+    <None Include="Properties\WMAppManifest.xml">
+      <XnaPlatformSpecific>true</XnaPlatformSpecific>
+    </None>
+    <None Include="Settings\GameConfig.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>GameConfig.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Settings\KeyboardConfig.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>KeyboardConfig.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Settings\XBoxControllerConfig.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>XBoxControllerConfig.Designer.cs</LastGenOutput>
+    </None>
     <None Include="StateMachine\StateMachine.cd" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +290,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Xna.Framework">
       <Private>False</Private>
     </Reference>
@@ -281,7 +327,10 @@
     <Reference Include="System.Core">
       <Private>False</Private>
     </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
+    <Reference Include="System.Xaml" />
     <Reference Include="System.Xml">
       <Private>False</Private>
     </Reference>
