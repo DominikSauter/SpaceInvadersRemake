@@ -12,6 +12,15 @@ namespace SpaceInvadersRemake.ModelSection
     public class Player : Ship
     {
         /// <summary>
+        /// Tötet den Spieler (für Präsentationszwecke)
+        /// </summary>
+        public void Kill()
+        {
+            Lives = 1;
+            Destroy();
+        }
+
+        /// <summary>
         /// Gibt an wie lange der Spieler noch unverwundbar ist
         /// </summary>
         private float invincibleTime;
