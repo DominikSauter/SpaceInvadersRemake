@@ -231,7 +231,12 @@ namespace SpaceInvadersRemake.Controller
                 direction += CoordinateConstants.Right;
             }
 
-
+            //TODO NAch PRäsentation entfernen
+            if (ControllerState.IsButtonDown(Buttons.X)) 
+            {
+                (this.Controllee as Player).Kill();
+            }
+            //
 
 
             this.Controllee.Move(direction, gameTime);
