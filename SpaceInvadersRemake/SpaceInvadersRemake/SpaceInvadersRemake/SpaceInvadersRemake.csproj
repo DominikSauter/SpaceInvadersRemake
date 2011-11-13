@@ -176,7 +176,7 @@
     <Compile Include="View\Explosion.cs" />
     <Compile Include="View\MothershipEngine.cs" />
     <Compile Include="View\PlayerShipEngine.cs" />
-    <Compile Include="View\PowerUpGlow.cs" />
+    <Compile Include="View\PowerUpGlitter.cs" />
     <Compile Include="View\IMediaplayer.cs" />
     <Compile Include="View\BackgroundMusic.cs" />
     <Compile Include="Controller\BlockWaveAI.cs" />

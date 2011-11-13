@@ -9,9 +9,9 @@ using Microsoft.Xna.Framework.Graphics;
 namespace SpaceInvadersRemake.View
 {
     /// <summary>
-    /// Objekte dieser Klasse stellen eine Partikel Engine für den Spielerraumschiffsantrieb zur Verfügung.
+    /// Objekte dieser Klasse stellen eine Partikel Engine für einen Glitzereffekt des PowerUps zur Verfügung.
     /// </summary>
-    public class PlayerShipEngine : ParticleEngine
+    public class PowerUpGlitter : ParticleEngine
     {
         private Random random;
         private List<Particle> particles;
@@ -21,6 +21,8 @@ namespace SpaceInvadersRemake.View
         private GraphicsDeviceManager graphics;
         private int index;
         private Vector2 baseScreenSize;
+        private Vector2 scaleFactor;
+
 
         /// <summary>
         /// Position des Partikel Emitters
@@ -31,13 +33,14 @@ namespace SpaceInvadersRemake.View
             set;
         }
 
+
         /// <summary>
-        /// Erstellt eine Partikel Engine für den Raumschiffsantrieb der Spielerfigur.
+        /// Erstellt eine Partikel Engine für einen Glitzereffekt für PowerUps
         /// </summary>
         /// <param name="texture">Grafische Darstellung der Partikel</param>
         /// <param name="location">Position des Partikel Emitters</param>
         /// <param name="size">Größe der dargestellten Partikel</param>
-        public PlayerShipEngine(Texture2D texture, Vector2 location, float size, Color color, GraphicsDeviceManager graphics)
+        public PowerUpGlitter(Texture2D texture, Vector2 location, float size, Color color, GraphicsDeviceManager graphics)
         {
             this.EmitterLocation = location;
             this.texture = texture;
@@ -49,22 +52,22 @@ namespace SpaceInvadersRemake.View
             this.particles = new List<Particle>();
             this.baseScreenSize = new Vector2(800, 600);
 
+            this.scaleFactor = Vector2.One;
         }
-
 
         private Particle GenerateNewParticle()
         {
-            //Velocity von den 3D coordinaten ableiten (wegen richtung)
-            Vector2 velocity = new Vector2((float)(random.Next(-40, 40)) / 240, 0.5f) * size; //Richtungs- und Geschwindigkeitsvektor
-            float sizeParticle = (float)random.NextDouble() * size;
-            int ttl = 20 + random.Next(40);
-            //evtl Liste mit möglichen Farben anlegen und mit random durchwechseln
-            Vector2 position = new Vector2(random.Next(-3, 3), 0) + this.EmitterLocation;
+            //Der "Raum" (2D) in dem glitzer Partikel erzeugt werden können
+            Vector2 glitterSpace = new Vector2((float)random.Next(-15, 15), (float)random.Next(-10, 10));
 
-            return new Particle(this.texture, this.EmitterLocation, velocity, this.color, sizeParticle, ttl);
+            Vector2 position = EmitterLocation + glitterSpace * this.scaleFactor;
+            Vector2 velocity = new Vector2(0, 1f) * this.scaleFactor;
+            float sizeParticle = (float)random.NextDouble() * this.size;
+            int ttl = 10 + random.Next(10);
+
+            return new Particle(this.texture, position, velocity, this.color, sizeParticle, ttl);
 
         }
-
 
         /// <summary>
         /// Updatet die Partikel Engine und erzeugt neue Partikel bzw. löscht Alte.
@@ -74,11 +77,16 @@ namespace SpaceInvadersRemake.View
             //Skalieren relativ zur Auflösung (Originalgröße bei 800x600 Auflösung)
             Vector2 newScreenSize = new Vector2((float)graphics.GraphicsDevice.PresentationParameters.BackBufferWidth, (float)graphics.GraphicsDevice.PresentationParameters.BackBufferHeight);
             Vector2 factor = new Vector2(newScreenSize.X / baseScreenSize.X, newScreenSize.Y / baseScreenSize.Y);
-            this.size *= factor.X;
-            this.baseScreenSize = newScreenSize;
+
+            if (baseScreenSize != newScreenSize)
+            {
+                this.size *= factor.X;
+                this.scaleFactor *= factor;
+                this.baseScreenSize = newScreenSize;
+            }
 
 
-            int particlesPerFrame = 2;
+            int particlesPerFrame = 1;
 
             for (int i = 0; i < particlesPerFrame; i++)
             {
@@ -98,11 +106,6 @@ namespace SpaceInvadersRemake.View
             }
         }
 
-
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="spriteBatch"></param>
         public override void Draw(SpriteBatch spriteBatch)
         {
             Update();

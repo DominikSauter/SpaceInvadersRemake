@@ -17,11 +17,16 @@ namespace SpaceInvadersRemake.View
         private Model model;
         private Texture2D texture;
         private Vector3 position;
+        private Color color;
 
         //Winkel um den das PowerUp Modell immer gedreht wird (in °)
         private float angle;
         private float rotationSpeed;
-        
+
+        /// <summary>
+        /// ParticleEmitter der einen Glitzereffekt erzeugt.
+        /// </summary>
+        private PowerUpGlitter powerUpGlitter;
     
         /// <summary>
         /// Erstellt eine Representation eines PowerUps.
@@ -29,7 +34,7 @@ namespace SpaceInvadersRemake.View
         /// <param name="powerUp">übergebenes PowerUp-Objekt</param>
         /// <param name="texture">Textur des PowerUps</param>
         /// </summary>
-        public PowerUpRepresentation(PowerUp powerUp, Texture2D texture, GraphicsDeviceManager graphics)
+        public PowerUpRepresentation(PowerUp powerUp, Texture2D texture, Color color, GraphicsDeviceManager graphics)
         {
             GameItem = powerUp;
             this.texture = texture;
@@ -42,28 +47,18 @@ namespace SpaceInvadersRemake.View
             this.rotationSpeed = 1.0f;
             this.World = Matrix.CreateWorld(this.position, Vector3.Forward, Vector3.Up);
 
-            //[WAHL]
-            this.PowerUpGlow = null;
-            //[/WAHL]
+            this.powerUpGlitter = (PowerUpGlitter)createParticleEngine(ViewContent.RepresentationContent.GlitterTexture, PlaneProjector.ToScreenCoordinates(position, graphics), 0.2f, color);
+            this.color = color;
+
         }
 
-        /// <summary>
-        /// ParticleEmitter der einen Glitzereffekt erzeugt.
-        /// </summary>
-        public PowerUpGlow PowerUpGlow
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
 
-        private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
+
+        private ParticleEngine createParticleEngine(Texture2D texture, Vector2 location, float size, Color color)
         {
-            throw new System.NotImplementedException();
+            //evtl. velocity von gameitem übergeben
+            this.powerUpGlitter = new PowerUpGlitter(texture, location, size, color, graphics);
+            return powerUpGlitter;
         }
 
         /// <summary>
@@ -100,6 +95,10 @@ namespace SpaceInvadersRemake.View
 
                 mesh.Draw();
             }
+
+            //Glitter
+            powerUpGlitter.EmitterLocation = PlaneProjector.ToScreenCoordinates(currentPosition, graphics);
+            powerUpGlitter.Draw(spriteBatch);
 
         }
     }

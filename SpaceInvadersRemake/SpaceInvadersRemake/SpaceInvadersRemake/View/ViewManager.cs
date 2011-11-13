@@ -394,17 +394,20 @@ namespace SpaceInvadersRemake.View
         {
             Texture2D texture;
             PowerUp PowerUpItem = (PowerUp)powerUp;
+            Color color;
 
             if (powerUp is PiercingShot || powerUp is Rapidfire || powerUp is MultiShot)
             {
                 texture = ViewContent.RepresentationContent.PowerUpTextureWeapon;
+                color = Color.Magenta;
             }
             else //if (powerUp is Speedboost || powerUp is Deflector || powerUp is SlowMotion)
             {
                 texture = ViewContent.RepresentationContent.PowerUpTextureUtility;
+                color = Color.Cyan;
             }
 
-            PowerUpRepresentation powerUpRepresentation = new PowerUpRepresentation(PowerUpItem, texture, graphics);
+            PowerUpRepresentation powerUpRepresentation = new PowerUpRepresentation(PowerUpItem, texture, color, graphics);
             PowerUpItem.BoundingVolume = new ModelHitsphere(ViewContent.RepresentationContent.PowerUpHitsphere);
             this.ViewItemList.Add(powerUpRepresentation);
             ((ModelHitsphere)(PowerUpItem).BoundingVolume).World = powerUpRepresentation.World;

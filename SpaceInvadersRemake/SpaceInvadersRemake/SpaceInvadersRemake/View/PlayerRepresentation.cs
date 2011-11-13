@@ -19,18 +19,15 @@ namespace SpaceInvadersRemake.View
         private Texture2D playerTexture;
         private Vector3 lastPosition;
         private int invincibleCount;
+        private PlayerShipEngine playerShipEngine;
+        //[Anji] Schifftextur während Schild-PowerUp aktiv ist
+        private Texture2D shieldTexture;
 
         /*
          * <WAHL>
          * Wird benötigt wenn eine Partikel Engine eingebaut wird.
         private Explosion explosion;
-         * */
-
-        /*
-         * <WAHL>
-         * Wird benötigt wenn eine Partikel Engine eingebaut wird.
-        private PlayerShipEngine playerShipEngine;
-         * */
+         * */  
     
         /// <summary>
         /// Erstellt eine Representation der Spielerfigur.
@@ -41,18 +38,24 @@ namespace SpaceInvadersRemake.View
             this.model = ViewContent.RepresentationContent.PlayerModel;
             GameItem = playerGameItem;
             this.playerTexture = ViewContent.RepresentationContent.PlayerTexture;
+            this.shieldTexture = ViewContent.RepresentationContent.ShipShieldTexture;
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(this.lastPosition, Vector3.Forward, Vector3.Up);
             this.invincibleCount = 0;
+
+            //[Anji] Schiffs-Antrieb
+            this.playerShipEngine = (PlayerShipEngine)createParticleEngine(ViewContent.RepresentationContent.ShipEngineTexture, PlaneProjector.ToScreenCoordinates(lastPosition, graphics), 0.5f, Color.LightBlue); //new Color(190,195,217));
+        
         }
 
         /*
          * <WAHL>
          * Muss implementiert werden wegen des Interfaces. Wird später benötigt wenn eine Partikel Engine eingebaut wird.
          * */
-        private ParticleEngine createParticleEngine(System.Collections.Generic.List<Texture2D> textures, Vector2 location, float size)
+        private ParticleEngine createParticleEngine(Texture2D texture, Vector2 location, float size, Color color)
         {
-            throw new System.NotImplementedException();
+            this.playerShipEngine = new PlayerShipEngine(texture, location, size, color, graphics);
+            return playerShipEngine;
         }
 
         /// <summary>
@@ -63,6 +66,10 @@ namespace SpaceInvadersRemake.View
         {
             Vector3 currentPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             Matrix rotation = Matrix.Identity;
+
+            //[Anji] ShipEngine
+            playerShipEngine.EmitterLocation = PlaneProjector.ToScreenCoordinates(lastPosition + new Vector3(0, 0, 45), graphics);
+            playerShipEngine.Draw(spriteBatch);
 
             bool invincible = ((Player)this.GameItem).IsInvincible;
             if (invincible)
@@ -97,7 +104,6 @@ namespace SpaceInvadersRemake.View
              * */
             this.graphics.GraphicsDevice.DepthStencilState = DepthStencilState.Default;
 
-
             if (invincible && this.invincibleCount == 8)
             {
             }
@@ -115,6 +121,11 @@ namespace SpaceInvadersRemake.View
                         effect.View = Camera;
                         effect.Projection = Projection;
                         effect.World = rotation * this.World;
+                        //[Anji] Schifftextur ändern wenn Schild-PowerUp aktiv
+                        if (GameItem.Hitpoints > GameItemConstants.PlayerHitpoints)
+                        {
+                            effect.Texture = this.shieldTexture;
+                        }
                     }
 
                     mesh.Draw();
