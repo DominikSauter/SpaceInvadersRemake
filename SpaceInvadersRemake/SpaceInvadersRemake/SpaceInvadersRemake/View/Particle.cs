@@ -16,31 +16,12 @@ namespace SpaceInvadersRemake.View
     public class Particle : IView
     {
         /// <summary>
-        /// Erzeugt einen einzelnen Partikel.
-        /// </summary>
-        /// <param name="texture">Grafische Darstellung</param>
-        /// <param name="position">Aktuelle position</param>
-        /// <param name="velocityMultiplier">Richtung und Bewegungsgeschwindigkeit</param>
-        /// <param name="color">Farbe</param>
-        /// <param name="size">Größe</param>
-        /// <param name="ttl">Lebenszeit</param>
-        public Particle(Texture2D texture, Vector2 position, Vector2 velocity, Color color, float size, int ttl)
-        {
-            throw new System.NotImplementedException();
-        }
-    
-        /// <summary>
         /// Aktuelle Position des Partikels
         /// </summary>
         public Vector2 Position
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -48,13 +29,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public Vector2 Velocity
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -62,13 +38,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public Texture2D Texture
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -76,13 +47,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public Color Color
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -90,13 +56,8 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public float Size
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
 
         /// <summary>
@@ -104,26 +65,52 @@ namespace SpaceInvadersRemake.View
         /// </summary>
         public int TimeToLive
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
+            get;
+            set;
         }
+
+        private GraphicsDeviceManager graphics;
+
+        /// <summary>
+        /// Erzeugt einen einzelnen Partikel.
+        /// </summary>
+        /// <param name="texture">Grafische Darstellung</param>
+        /// <param name="position">Aktuelle position</param>
+        /// <param name="velocity">Richtung und Bewegungsgeschwindigkeit</param>
+        /// <param name="color">Farbe</param>
+        /// <param name="size">Größe</param>
+        /// <param name="ttl">Lebenszeit</param>
+        public Particle(Texture2D texture, Vector2 position, Vector2 velocity, Color color, float size, int ttl)
+        {
+            this.Texture = texture;
+            this.Position = position;
+            this.Velocity = velocity;
+            this.Color = color;
+            this.Size = size;
+            this.TimeToLive = ttl;
+        }
+
+
 
         /// <summary>
         /// Updated die Partikelposition
         /// </summary>
         public void Update()
         {
-            throw new System.NotImplementedException();
+            Position += Velocity;
+            this.TimeToLive--;
+            //evtl. Rotation hinzufügen: angle += angularVelocity
+
         }
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            throw new NotImplementedException();
+
+            Rectangle sourcerectangle = new Rectangle(0, 0, Texture.Width, Texture.Height);
+            Vector2 origin = new Vector2(Texture.Width / 2, Texture.Height / 2);
+
+            spriteBatch.Draw(this.Texture, this.Position, sourcerectangle, this.Color, 0f, origin, this.Size, SpriteEffects.None, 0f);
+
         }
     }
 }

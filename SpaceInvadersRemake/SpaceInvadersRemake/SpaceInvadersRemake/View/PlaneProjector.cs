@@ -26,5 +26,13 @@ namespace SpaceInvadersRemake.View
         {
             return new Vector3(itemPosition2D.X * scaleFactor, 0, -itemPosition2D.Y * scaleFactor);
         }
+
+        //[Anji] Ermittelt perspektivisch passende 2D Koordinaten auf dem Bildschirm aus 3D Raum-Koordinaten.
+        public static Vector2 ToScreenCoordinates(Vector3 coordinates, GraphicsDeviceManager graphics)
+        {
+            Vector3 project = graphics.GraphicsDevice.Viewport.Project(coordinates, GameItemRepresentation.Projection, GameItemRepresentation.Camera, Matrix.Identity);
+            Vector2 screenCoordinates = new Vector2(project.X, project.Y);
+            return screenCoordinates;
+        }
     }
 }

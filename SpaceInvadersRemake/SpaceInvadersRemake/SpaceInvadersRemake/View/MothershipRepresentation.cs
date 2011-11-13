@@ -18,18 +18,14 @@ namespace SpaceInvadersRemake.View
         private Model model;
         private Texture2D mothershipTexture;
         private Vector3 lastPosition;
-        
+        private MothershipEngine mothershipEngine;
+
         /*
          * <WAHL>
          * Wird benötigt falls eine Partikel Engine eingebaut wird
         private Explosion explosion;
          * */
 
-        /*
-         * <WAHL>
-         * Wird benötigt falls eine Partikel Engine eingebaut wird
-        private MothershipEngine mothershipEngine;
-         * */
 
         /// <summary>
         /// Erstellt eine Representation des Mutterschiff-Aliens.
@@ -42,6 +38,18 @@ namespace SpaceInvadersRemake.View
             this.mothershipTexture = ViewContent.RepresentationContent.MothershipTexture;
             this.lastPosition = PlaneProjector.Convert2DTo3D(GameItem.Position);
             this.World = Matrix.CreateWorld(lastPosition, Vector3.Right, Vector3.Up);
+
+            //[Anji] Schiffs-Antrieb
+            this.mothershipEngine = (MothershipEngine)createParticleEngine(ViewContent.RepresentationContent.MothershipEngineTexture, PlaneProjector.ToScreenCoordinates(lastPosition, graphics), 1f, new Color(255, 96, 167));
+      
+        }
+
+
+        //[Anji] Erzeugt eine Partikel Engine für den Schiffsantrieb 
+        private ParticleEngine createParticleEngine(Texture2D texture, Vector2 location, float size, Color color)
+        {
+            this.mothershipEngine = new MothershipEngine(texture, location, size, color, graphics);
+            return mothershipEngine;
         }
 
         /// <summary>
@@ -58,6 +66,10 @@ namespace SpaceInvadersRemake.View
                 ((ModelHitsphere)GameItem.BoundingVolume).World = World;
                 this.lastPosition = currentPosition;
             }
+
+            //[Anji]
+            mothershipEngine.EmitterLocation = PlaneProjector.ToScreenCoordinates(lastPosition + new Vector3(-45, 0, 0), graphics);
+            mothershipEngine.Draw(spriteBatch);
 
             /*
              * WICHTIG!

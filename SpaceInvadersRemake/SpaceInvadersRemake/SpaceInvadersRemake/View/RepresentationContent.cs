@@ -289,5 +289,40 @@ namespace SpaceInvadersRemake.View
             set;
         }
          * */
+
+        //Ship Engine Partikeltextur
+        public Texture2D ShipEngineTexture
+        {
+            get;
+            set;
+        }
+
+        //Mothership Engine Partikeltextur
+        public Texture2D MothershipEngineTexture
+        {
+            get;
+            set;
+        }
+
+        //Explosions Partikeltextur
+        public Texture2D ExplosionTexture
+        {
+            get;
+            set;
+        }
+
+        //Glitzer Partikeltextur
+        public Texture2D GlitterTexture
+        {
+            get;
+            set;
+        }
+
+        //SchildTextur des Spielerschiffs
+        public Texture2D ShipShieldTexture
+        {
+            get;
+            set;
+        }
     }
 }

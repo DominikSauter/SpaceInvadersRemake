@@ -97,6 +97,13 @@ namespace SpaceInvadersRemake.View
             RepresentationContent.PlayerProjektileColor = new Vector3(0, 255, 0);
             RepresentationContent.AlienProjektileColor = new Vector3(255, 0, 0);
             RepresentationContent.PlayerPiercingShotProjektileColor = new Vector3(0, 234, 255);
+            //Partikeltexturen
+            RepresentationContent.ShipEngineTexture = Content.Load<Texture2D>("Particle Textures/ShipEngine");
+            RepresentationContent.GlitterTexture = Content.Load<Texture2D>("Particle Textures/GlitterTexture");
+            RepresentationContent.MothershipEngineTexture = Content.Load<Texture2D>("Particle Textures/MothershipEngine");
+            //Schildtextur
+            RepresentationContent.ShipShieldTexture = Content.Load<Texture2D>("3D Model Textures/spielerShild");
+
 
             /*
              * <WAHL>
