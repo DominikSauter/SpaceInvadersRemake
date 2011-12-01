@@ -134,6 +134,43 @@ namespace SpaceInvadersRemake
             // </STST>
 
             base.Draw(gameTime);
+
+            // Wenn die Screenshot-Taste gedrückt wird (F12) dann mache einen Screenshot
+            if (Controller.MenuController.KeyPressed(Keys.F12))
+            {
+                TakeScreenshot();
+            }
+        }
+
+        /// <summary>
+        /// Speichert einen Screenshot. Dateiname wird aus aktueller Zeit ermittelt.
+        /// </summary>
+        private void TakeScreenshot()
+        {
+            int w = graphics.GraphicsDevice.PresentationParameters.BackBufferWidth;
+            int h = graphics.GraphicsDevice.PresentationParameters.BackBufferHeight;
+            
+            // Erstelle Datei für Screenshot
+            System.DateTime time = System.DateTime.Now;
+            string path = "screenshot_"
+                        + time.Year.ToString() + "-" + time.Month.ToString() + "-" + time.Day.ToString() + "_"
+                        + time.Hour.ToString() + "-" + time.Minute.ToString() + "-" + time.Second.ToString() + ".png";
+
+            System.IO.Stream output = System.IO.File.Open(path, System.IO.FileMode.Create);
+
+            // Erstelle Array zum Kopieren des Backbuffers und eine Ausgabetextur
+            Color[] backbufferData = new Color[w * h];
+            Texture2D screenshotTexture = new Texture2D(graphics.GraphicsDevice, w, h, false, SurfaceFormat.Color);
+
+            // Kopiere Backbuffer in die Ausgabetextur
+            graphics.GraphicsDevice.GetBackBufferData<Color>(backbufferData);
+            screenshotTexture.SetData<Color>(backbufferData);
+
+            // Speichere Textur
+            screenshotTexture.SaveAsPng(output, w, h);
+
+            // Schließe Datei
+            output.Close();
         }
     }
 }
