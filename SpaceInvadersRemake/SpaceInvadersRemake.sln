@@ -120,6 +120,7 @@ Global
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Debug|Windows Phone.ActiveCfg = Debug|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Debug|Windows Phone.Build.0 = Debug|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Debug|x86.ActiveCfg = Debug|Xbox 360
+		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Debug|x86.Build.0 = Debug|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Debug|Xbox 360.ActiveCfg = Debug|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Debug|Xbox 360.Build.0 = Debug|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Debug|Xbox 360.Deploy.0 = Debug|Xbox 360
@@ -130,6 +131,7 @@ Global
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Release|Windows Phone.ActiveCfg = Release|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Release|Windows Phone.Build.0 = Release|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Release|x86.ActiveCfg = Release|Xbox 360
+		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Release|x86.Build.0 = Release|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Release|Xbox 360.ActiveCfg = Release|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Release|Xbox 360.Build.0 = Release|Xbox 360
 		{9316F4C2-98BF-49AD-80BF-50A758FA775A}.Release|Xbox 360.Deploy.0 = Release|Xbox 360
@@ -141,6 +143,7 @@ Global
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Debug|Windows Phone.Build.0 = Debug|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Debug|Windows Phone.Deploy.0 = Debug|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Debug|x86.ActiveCfg = Debug|Windows Phone
+		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Debug|x86.Build.0 = Debug|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Debug|Xbox 360.ActiveCfg = Debug|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Release|Any CPU.ActiveCfg = Release|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Release|Mixed Platforms.ActiveCfg = Release|Windows Phone
@@ -150,6 +153,7 @@ Global
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Release|Windows Phone.Build.0 = Release|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Release|Windows Phone.Deploy.0 = Release|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Release|x86.ActiveCfg = Release|Windows Phone
+		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Release|x86.Build.0 = Release|Windows Phone
 		{93B9FEB5-0615-4A3B-96F6-3346EBD13421}.Release|Xbox 360.ActiveCfg = Release|Windows Phone
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
