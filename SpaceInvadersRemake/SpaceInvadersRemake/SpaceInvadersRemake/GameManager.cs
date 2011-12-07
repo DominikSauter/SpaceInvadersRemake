@@ -149,10 +149,12 @@ namespace SpaceInvadersRemake
         {
             int w = graphics.GraphicsDevice.PresentationParameters.BackBufferWidth;
             int h = graphics.GraphicsDevice.PresentationParameters.BackBufferHeight;
+
+            System.IO.Directory.CreateDirectory("screenshots");
             
             // Erstelle Datei für Screenshot
             System.DateTime time = System.DateTime.Now;
-            string path = "screenshot_"
+            string path = "screenshots\\screenshot_"
                         + time.Year.ToString() + "-" + time.Month.ToString() + "-" + time.Day.ToString() + "_"
                         + time.Hour.ToString() + "-" + time.Minute.ToString() + "-" + time.Second.ToString() + ".png";
 
