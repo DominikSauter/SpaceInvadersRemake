@@ -41,6 +41,7 @@
     <Content Include="Dokumente\Patchlog.txt" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Dokumente\Entwurf - Space Invaders Remake.zip" />
     <None Include="Dokumente\Pflichtenheft %28finale Version%29 v1.6.pdf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
