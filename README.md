@@ -6,6 +6,7 @@ XBox 360 controller support and even an intro video. Its original hosting site i
 ## Ingame Screenshot
 
 ## Design Phase Architecture / Class Diagram
+![](Klassendiagramm.png "Design phase state of the architecture / class diagram.")
 
 ## How to Play
 If you do not want to compile the code yourself, the latest compiled version may be found in the
