@@ -1,4 +1,4 @@
-# Hyperspace Pirates - Aliens Robbing Rum
+# Hyperspace Pirates - Aliens Robbing Rum :space_invader: :beer: :video_game:
 This is a remake of the classical arcade game "Space Invaders" with modern 3D graphics and some special features like power-ups,
 XBox 360 controller support and even an intro video. Its original hosting site is on
 [SourceForge](https://sourceforge.net/projects/studi-invaders/) and this serves as a mirror.
