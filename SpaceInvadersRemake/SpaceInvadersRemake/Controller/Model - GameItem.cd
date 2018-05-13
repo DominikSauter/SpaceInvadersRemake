@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvadersRemake.ModelSection.Alien" Collapsed="true">
+    <Position X="24.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEAAAAAAAAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Alien.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Deflector" Collapsed="true">
+    <Position X="1.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Deflector.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Enemy" Collapsed="true">
+    <Position X="24.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAABAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.GameItem" Collapsed="true">
+    <Position X="15.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AwQAAACAAIAgBAAgAABAAAAAAARAAAAEAAAAAAAEAAA=</HashCode>
+      <FileName>ModelSection\GameItem.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Miniboss" Collapsed="true">
+    <Position X="22" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAEAAAIAABAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Miniboss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Mothership" Collapsed="true">
+    <Position X="26.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAEAAAAAAAAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Mothership.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.MultiShot" Collapsed="true">
+    <Position X="6.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\MultiShot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.PiercingShot" Collapsed="true">
+    <Position X="13" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\PiercingShot.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Player" Collapsed="true">
+    <Position X="19.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAIAABBgAQAIAAAAAAABAAAQDAAAIAAQAEIA=</HashCode>
+      <FileName>ModelSection\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.PowerUp" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAABAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\PowerUp.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Projectile" Collapsed="true">
+    <Position X="28.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgQAAAAAAAABAAEAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Rapidfire" Collapsed="true">
+    <Position X="4" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Rapidfire.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Shield" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAAAAAAAIAAAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Shield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Ship" Collapsed="true">
+    <Position X="23.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\Ship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.SlowMotion" Collapsed="true">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\SlowMotion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.Speedboost" Collapsed="true">
+    <Position X="10.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\Speedboost.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.StaticShield" Collapsed="true">
+    <Position X="15.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAIAABAAAAAAAAIABAAAAABAAAQAAAAAAAAAAIA=</HashCode>
+      <FileName>ModelSection\StaticShield.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

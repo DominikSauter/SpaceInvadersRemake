@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SpaceInvadersRemake.ModelSection.Weapon" Collapsed="true">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAQAAAACAAAAAAAAAACAEAAAQAAAAAIAAAAA=</HashCode>
+      <FileName>ModelSection\Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.EnemyNormalWeapon" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\EnemyNormalWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.MinibossWeapon" Collapsed="true">
+    <Position X="5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\MinibossWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.MothershipWeapon" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\MothershipWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.MultiShotWeapon" Collapsed="true">
+    <Position X="16.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\MultiShotWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.PiercingShotWeapon" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\PiercingShotWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.PlayerNormalWeapon" Collapsed="true">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\PlayerNormalWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.RapidfireWeapon" Collapsed="true">
+    <Position X="9.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\RapidfireWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SpaceInvadersRemake.ModelSection.StaticShieldWeapon" Collapsed="true">
+    <Position X="2.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ModelSection\StaticShieldWeapon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
