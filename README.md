@@ -4,6 +4,7 @@ XBox 360 controller support and even an intro video. Its original hosting site i
 [SourceForge](https://sourceforge.net/projects/studi-invaders/) and this serves as a mirror.
 
 ## Ingame Screenshot
+![](HyperspacePiratesARRScreenshot.png "Incoming alien infinity formation and mothership.")
 
 ## Design Phase Architecture / Class Diagram
 ![](Klassendiagramm.png "Design phase state of the architecture / class diagram.")
